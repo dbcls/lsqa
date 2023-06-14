@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With cabog</title><link>http://qa.lifesciencedb.jp/tags/cabog/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;cabog&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/cabog/" rel="self"></atom:link><language>ja</language><lastBuildDate>Fri, 17 Jun 2011 12:33:34 +0900</lastBuildDate><item><title>Celera WGA Assembler(CABOG)のインストールと使い方</title><link>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9</link><description>&lt;p&gt;ある生物のゲノムをde novo assemblのために454で委託して読みました。&lt;/p&gt;
+&lt;p&gt;CABOGでアセンブルしようとインストールしようとしたのですが、最初にpythonは見つかるがpython.hがないといわれました。
+現在macOS X10.6.7でpython2.7が入っています。&lt;/p&gt;
+&lt;p&gt;Finkを用いてpython2.7-devをインストールしようと思うのですが、Finkをインストールし、
+[sudo apt-get install python2.7-dev]とterminalで打っても[E: Couldn't find package python2.7-dev]
+と出てしまい、完了しません。調べてもわからないので、よろしくお願いします。&lt;/p&gt;
+&lt;p&gt;また使い方に関しても少しREADMEを読みましたが、わからなくなるのは目に見えているので、簡単に教えて頂けると助かります。
+委託業者からは.qual .sff .sff.gz .fastが送られてきています。&lt;/p&gt;
+&lt;p&gt;質問が多くて申し訳ありませんが、よろしくお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pan</dc:creator><pubDate>Fri, 17 Jun 2011 12:33:34 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9</guid><category>cabog</category><category>ngs</category></item></channel></rss>

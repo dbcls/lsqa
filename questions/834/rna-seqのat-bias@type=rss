@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: RNA-seqのAT bias</title><link>http://qa.lifesciencedb.jp/questions/834/rna-seq%E3%81%AEat-bias</link><description>&lt;p&gt;MiSeqを使ってmouse macrophage系細胞のRNA-seqを始めたのですが、出てきたデータの塩基組成がA,T＝32%、G,C＝18%と偏ります。
+原因に心当たりのある方、アドバイス頂けないでしょうか？&lt;/p&gt;
+&lt;p&gt;実験系の概略は以下のとおりです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Total RNA 1 ugを精製&lt;/li&gt;
+&lt;li&gt;TruSeq Stranded mRNA Sample Prep
+   Kitでlibrary構築&lt;/li&gt;
+&lt;li&gt;Sequencing Kit V3
+   (150cycle)でpaired-end readsを取得&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;よろしくお願いいたします。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/834/rna-seq%E3%81%AEat-bias" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 05 Jan 2016 17:58:45 +0900</lastBuildDate><item><title>Answer by suimye</title><link>http://qa.lifesciencedb.jp/questions/834/rna-seq%E3%81%AEat-bias/848</link><description>&lt;p&gt;こんにちは。
+ATバイアスがあるとのことですが、これはfastqcなどの品質評価をみてATバイアスがあったということでしょうか。ライブラリーを作成し直した場合に上手くいったとのことでですが、私は原因を探ってみる方がいいと思います。&lt;br&gt;
+情報が少ないですので、ATrichになった場合と成功した場合の以下の項目はどうなっているでしょうか。&lt;br&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;まずそもそも、失敗時と成功時はstarting materialのtotal RNAは同じlotものを使ったのでしょうか？&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;fastqcなど品質評価のときのアダプターやindexのコンタミ量の違い。&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;失敗時と成功時のlibraryを作成したときのstarting materialの RNA量の違い。&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;失敗時と成功時のlibraryを作成したときのlibrary qPCRの定量結果が極端に多すぎていないか。&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;reference genomeにmappingしたときのmapping効率 &lt;br&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;もう少し検討する項目はあると思いますが、かならず失敗時と成功(?)時は違いがあるはずと存じます。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;ちなみにRNA-seqではありませんが、DNA-seqやChIP-seqのときはDNA sharingとgel extractionの具合で、
+GC-richなshort fragmentが除去されることで、&lt;a href="http://www.nature.com/articles/srep04532"&gt;AT-rich&lt;/a&gt;になることがあります。&lt;/p&gt;
+&lt;p&gt;@suimye&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">suimye</dc:creator><pubDate>Tue, 05 Jan 2016 17:58:45 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/834/rna-seq%E3%81%AEat-bias/848</guid></item><item><title>Answer by junya</title><link>http://qa.lifesciencedb.jp/questions/834/rna-seq%E3%81%AEat-bias/837</link><description>&lt;p&gt;a=32%, t=32%, g=18%, c=18%&lt;/p&gt;
+&lt;p&gt;表記が雑で大変失礼いたしました。ご検討よろしくお願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">junya</dc:creator><pubDate>Wed, 08 Apr 2015 14:06:19 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/834/rna-seq%E3%81%AEat-bias/837</guid></item><item><title>Answer by aki</title><link>http://qa.lifesciencedb.jp/questions/834/rna-seq%E3%81%AEat-bias/836</link><description>&lt;p&gt;ATGCの合計が50%しかないんですが、残りの50%は何なんでしょうか?&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">aki</dc:creator><pubDate>Mon, 06 Apr 2015 18:43:29 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/834/rna-seq%E3%81%AEat-bias/836</guid></item></channel></rss>

@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>すべての質問</title><link>http://qa.lifesciencedb.jp/&amp;type=rss</link><description>質問</description><atom:link href="http://qa.lifesciencedb.jp/" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 30 Sep 2019 04:10:08 +0900</lastBuildDate><item><title>アミノ酸配列でサイトごとに計算される保存度は何を意味しているのか？</title><link>http://qa.lifesciencedb.jp/questions/904/%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E9%85%8D%E5%88%97%E3%81%A7%E3%82%B5%E3%82%A4%E3%83%88%E3%81%94%E3%81%A8%E3%81%AB%E8%A8%88%E7%AE%97%E3%81%95%E3%82%8C%E3%82%8B%E4%BF%9D%E5%AD%98%E5%BA%A6%E3%81%AF%E4%BD%95%E3%82%92%E6%84%8F%E5%91%B3%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%81%AE%E3%81%8B</link><description>&lt;h1&gt;参考書に載っていた内容&lt;/h1&gt;
+&lt;p&gt;・どうして保存度を算出するのか？&lt;/p&gt;
+&lt;p&gt;→アラインメントから構造や機能の情報を抽出するため&lt;/p&gt;
+&lt;p&gt;・サイトごとに計測する理由は？&lt;/p&gt;
+&lt;p&gt;→サイトレベルで情報を抽出する方法により、機能あるいは構造と関連があると推測されるサイトについては、アミノ酸置換などの突然変異導入実験により、その予測の確認を比較的容易に行うことができる。モチーフの同定。&lt;/p&gt;
+&lt;p&gt;・構造とは？&lt;/p&gt;
+&lt;p&gt;→立体構造のこと&lt;/p&gt;
+&lt;p&gt;・機能とは？&lt;/p&gt;
+&lt;p&gt;→タンパク質が折りたたまれ、他のタンパク質等と相互作用を起こすこと。&lt;/p&gt;
+&lt;p&gt;そのため、立体構造が似ていることは同様の機能を有していることを予測することができる。&lt;/p&gt;
+&lt;h1&gt;マルチプルアラインメントされたアミノ酸配列で、サイトごとに保存度を「以下の式」で計算する意義について知りたいです。&lt;/h1&gt;
+&lt;p&gt;保存度は以下の式で計算されるものとします。&lt;/p&gt;
+&lt;p&gt;・Valder氏の保存度算出式(https://gyazo.com/8285e51d7bd7db8d8057bb376e9e454f)&lt;/p&gt;
+&lt;p&gt;・スコアマトリックスにはBlosum62を使用(https://gyazo.com/7c8c0bb28db10ba26d07bdf6e40aed57)&lt;/p&gt;
+&lt;p&gt;・スコアマトリックスの変換式に、写真の変換式を使用(https://gyazo.com/60242cf27db66929a5490dc0ed9b1558)&lt;/p&gt;
+&lt;p&gt;・重み付けにはHenikoff氏の重み付けを使用(https://gyazo.com/7907a5beddc2a1ee6348e310f9a5d78b)&lt;/p&gt;
+&lt;h1&gt;保存度を計算する理由について、私の考察&lt;/h1&gt;
+&lt;p&gt;・完全保存されているサイト(=モチーフ)を発見すること。&lt;/p&gt;
+&lt;p&gt;理由：Valder氏の考案した式によれば、完全保存されているサイトについては、どの配列で比較しても、一意の値に収束するから。反対に、完全保存されていなければ、一意の値に収束することはなく、値にばらつきが見られるから。&lt;/p&gt;
+&lt;h1&gt;考察に対する反論&lt;/h1&gt;
+&lt;p&gt;完全保存されているサイトを発見するためだけであれば、別に保存度が必要ではない。視覚的に完全に保存されているサイトを見つければいい。&lt;/p&gt;
+&lt;h2&gt;よって、私の考察とは異なる目的があるのだろう。という結論にたどり着きました。ご回答いただけると幸いです。&lt;/h2&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">study_bioinfo</dc:creator><pubDate>Mon, 30 Sep 2019 04:10:08 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/904/%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E9%85%8D%E5%88%97%E3%81%A7%E3%82%B5%E3%82%A4%E3%83%88%E3%81%94%E3%81%A8%E3%81%AB%E8%A8%88%E7%AE%97%E3%81%95%E3%82%8C%E3%82%8B%E4%BF%9D%E5%AD%98%E5%BA%A6%E3%81%AF%E4%BD%95%E3%82%92%E6%84%8F%E5%91%B3%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%81%AE%E3%81%8B</guid><category>conservation</category></item><item><title>アミノ酸配列の保存度算出に伴う重み付けスコアの意義について</title><link>http://qa.lifesciencedb.jp/questions/901/%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E9%85%8D%E5%88%97%E3%81%AE%E4%BF%9D%E5%AD%98%E5%BA%A6%E7%AE%97%E5%87%BA%E3%81%AB%E4%BC%B4%E3%81%86%E9%87%8D%E3%81%BF%E4%BB%98%E3%81%91%E3%82%B9%E3%82%B3%E3%82%A2%E3%81%AE%E6%84%8F%E7%BE%A9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;はじめまして、初めて使用させていただきます。よろしくお願いします。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1,疑問点&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;・以下の論文でValder氏の提唱している式(37式)を学びましたが、その式中でHenikoff氏の考案した重み付けがなぜ使用されているのかわからない。
+(参照:https://www.ncbi.nlm.nih.gov/pubmed/12112692)&lt;/p&gt;
+&lt;p&gt;疑問を持った理由&lt;/p&gt;
+&lt;p&gt;→例えば、100本のマルチプルアラインメントされた相同配列のうち、99本が90%程度の一致度を示し、残りの1本が20%程度の一致度を示しているような場合を考える。
+重み付けの計算式によれば、20%の一致度を示す配列の情報を保存度に大きな影響として与えようとしていることがわかる。なぜ、このような計算方法をとる必要があるのか？99本の保存されていると考えられるサイトを以って、全ての配列は90%程度保存されていると判断してはいけないのはなぜか？と考えたため。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;---論文を読み込めない方のために、使用している式について以下に画像をキャプチャしました---&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;1,Valder氏の保存度算出式(https://gyazo.com/8285e51d7bd7db8d8057bb376e9e454f)&lt;/p&gt;
+&lt;p&gt;2,重み付けの計算方法(https://gyazo.com/7907a5beddc2a1ee6348e310f9a5d78b)&lt;/p&gt;
+&lt;p&gt;※iは配列の数を表し、Nは配列の総数を表している。xはポジションのことを表している。&lt;/p&gt;
+&lt;p&gt;→お分かりになる方がいるだろうという希望的観測のもと質問をいたしますので、計算方法の詳細については記述いたしません。必要な場合は追記いたしますので、おしらせください。&lt;/p&gt;
+&lt;p&gt;3,スコア行列から取得したアミノ酸ペアの値に対する計算(https://gyazo.com/60242cf27db66929a5490dc0ed9b1558)&lt;/p&gt;
+&lt;p&gt;4,スコア行列=Blosum62(https://gyazo.com/7c8c0bb28db10ba26d07bdf6e40aed57)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2,私の理解度について&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Valder氏の式については、"加重平均"を計算していることは理解しております。配列ごとに重み付けをした値を分母と分子にとり、
+分子についてはBlosum62のスコア行列から得られた値を配列同士の重み付けの積と、さらに積をとって計算しています。
+分子、分母共に、各項が1を超えることは絶対にないように計算されているので、保存度は0~1の間で算出される。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3,疑問点解決のために模索したこと&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;・Henikoff氏の重み付けを使用する理由は、「taxonomic bias」を逃れるために導入していることを以下の参考文献から学びましたが、このバイアスについて具体例を元に詳しく説明されている文献等々を見つけることができず、具体的に記している文献を知りたいです。
+(参考文献:タンパク質機能解析のためのバイオインフォマティクス P.67)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4,求めている回答&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;・taxonomic biasを理解することが、重み付けを式に組み込む理由として正しいのか？&lt;/p&gt;
+&lt;p&gt;→妥当である場合、taxonomic biasが発生してしまうような場合を、具体例を含んで解説している書籍、論文をご紹介いただきたいです。&lt;/p&gt;
+&lt;p&gt;→妥当でない場合、何を理解することで重み付けをする理由を説明することができるかをご指南いただきたいです。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">study_bioinfo</dc:creator><pubDate>Mon, 16 Sep 2019 01:57:26 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/901/%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E9%85%8D%E5%88%97%E3%81%AE%E4%BF%9D%E5%AD%98%E5%BA%A6%E7%AE%97%E5%87%BA%E3%81%AB%E4%BC%B4%E3%81%86%E9%87%8D%E3%81%BF%E4%BB%98%E3%81%91%E3%82%B9%E3%82%B3%E3%82%A2%E3%81%AE%E6%84%8F%E7%BE%A9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>residue</category><category>scorering</category><category>conservation</category></item><item><title>pyBedtoolsによるベン図の作成</title><link>http://qa.lifesciencedb.jp/questions/900/pybedtools%E3%81%AB%E3%82%88%E3%82%8B%E3%83%99%E3%83%B3%E5%9B%B3%E3%81%AE%E4%BD%9C%E6%88%90</link><description>&lt;p&gt;またお願いします、DRY解析教本にてChip seqの解析を勉強している者です。&lt;/p&gt;
+&lt;p&gt;venn_mpl.py~コマンドを使用してベン図を作成しようとしておりますが、”matplotlib is required to make a Venn diagram with venn_mpl.py”と表示され解析できません。
+Homebrewでmatplotlibをインストールしても同じ結果です。&lt;/p&gt;
+&lt;p&gt;お知恵をお貸し下さい、よろしくお願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Yoda</dc:creator><pubDate>Thu, 01 Nov 2018 06:53:15 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/900/pybedtools%E3%81%AB%E3%82%88%E3%82%8B%E3%83%99%E3%83%B3%E5%9B%B3%E3%81%AE%E4%BD%9C%E6%88%90</guid><category>chip-seq</category></item><item><title>BAMファイルのソートについて</title><link>http://qa.lifesciencedb.jp/questions/898/bam%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%82%BD%E3%83%BC%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;度々失礼します、次世代シークエンサーＤＲＹ解析教本でCHIPseq解析の勉強をしている初心者です。&lt;/p&gt;
+&lt;p&gt;bowtieでマッピング後、samファイルをbamファイルに変換しました。
+次に教科書通り「samtools sort 検体.bam 検体_sorted」というコマンドでソートをしようとしてもできません。そこでネットを参考に「samtools sort -@ 4 検体.bam 検体_sorted」でやってみましたが、検体_sortedファイルは作成されるのですが肝心の検体_sorted.bamファイルは作成されず、次のindex作成に進めず困っています。&lt;/p&gt;
+&lt;p&gt;何度もすいません、ご教授よろしくお願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Yoda</dc:creator><pubDate>Wed, 31 Oct 2018 07:57:48 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/898/bam%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%82%BD%E3%83%BC%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>chip-seq</category></item><item><title>ngsplotdbのインストールについて</title><link>http://qa.lifesciencedb.jp/questions/895/ngsplotdb%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;次世代シークエンサーＤＲＹ解析教本でCHIPseq解析の勉強をしている初心者です。パソコンはMACBOOK PRO（macOS High Sierra）を使用しています。&lt;/p&gt;
+&lt;p&gt;教科書通りGoogle Drivehttps://drive.google.com/drive/folders/0B1PVLadG_dCKNEsybkh5TE9XZ1Eよりngsplotdb_mm9_67_3.00.tar.gzとngsplot_mm9_67_3.00_enhancer.tar.gzをダウンロードしngsplotdb.py install〜というコマンドでインストールをしようとしています。&lt;/p&gt;
+&lt;p&gt;まずパソコンにダウンロードした時点でどうしてもtar.gzファイルがtarファイルに変換（？）されてしまい、gzが抜けてしまいます。
+その後ngsplot.py installコマンドでインストールしようとしても、Downloaded file may be corruptedと表示されインストールすることができません。&lt;/p&gt;
+&lt;p&gt;どなたか解決策がわかるかたお願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Yoda</dc:creator><pubDate>Sat, 20 Oct 2018 02:58:09 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/895/ngsplotdb%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>chip-seq</category></item><item><title>DESeq2でtranscripts IDとGene IDを紐付けする方法</title><link>http://qa.lifesciencedb.jp/questions/892/deseq2%E3%81%A7transcripts-id%E3%81%A8gene-id%E3%82%92%E7%B4%90%E4%BB%98%E3%81%91%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95</link><description>&lt;p&gt;いつもお世話になっています。&lt;/p&gt;
+&lt;p&gt;おかげさまでhisat2 -&amp;gt; stiringTie -&amp;gt; DESeq2まで進みそれらしいデータも取れました。&lt;/p&gt;
+&lt;p&gt;DESeq2ではTranscript_IDでデータが出てきますが、これをGene_IDに紐付けすることができません。
+Mergeなど試してみましたが、data0(O obs)が返されます。解決策をご教示いただければ幸いです。&lt;/p&gt;
+&lt;p&gt;ーーーーー&lt;/p&gt;
+&lt;p&gt;たとえば部分的なファイルを切り出してmergeしてみるとうまく行きます。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;trancript_ID33 &amp;lt;- c("NR_131893","NR_131893")&lt;/p&gt;
+&lt;p&gt;gene_name33 &amp;lt;- c("Porcn", "Porcn")&lt;/p&gt;
+&lt;p&gt;gene_id33 &amp;lt;- c("MSTRG.71262","MSTRG.71262")&lt;/p&gt;
+&lt;p&gt;test33 &amp;lt;- data.frame(trancript_ID33,gene_name33,gene_id33)
+　
+baseMean &amp;lt;- c(53.33436)&lt;/p&gt;
+&lt;p&gt;log2FoldChange &amp;lt;- c(-0.431138)&lt;/p&gt;
+&lt;p&gt;pValue &amp;lt;- c(0.2859373)&lt;/p&gt;
+&lt;p&gt;gene_id_NR &amp;lt;- c("NR_131893")&lt;/p&gt;
+&lt;p&gt;test66 &amp;lt;- data.frame(baseMean,log2FoldChange,pValue,gene_id_NR)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;テスト材料作ってからmerge&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;merge99 &amp;lt;- merge(test33,test66)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;これはうまくできました。&lt;/p&gt;
+&lt;p&gt;全体でMergeするとうまくいかないところなのですが、なんとかする方法はありますでしょうか？
+バイオではなくてRの問題かもしれませんが、ご教示いただけますと幸いです。
+よろしくお願いします。（そもそも根本的に間違っているかもしれません。）&lt;/p&gt;
+&lt;h1&gt;追記：Rでの作業を書きます。&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;library("DESeq2")&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;公式ページに従って入力。transcritp_count_matrix.csvはstringtieで生成&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;countData &amp;lt;- as.matrix(read.csv("transcript_count_matrix.csv", row.names="transcript_id"))&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;合計6未満(N=3で２郡間の比較）の微弱発現を除去&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;countData1 &amp;lt;- countData[apply(countData,1,sum)&amp;gt;6,]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;PHENO_DATA.txtでサンプル割り当て。#PHENO_DATA.txtの中身&lt;/h1&gt;
+&lt;h1&gt;Genotype&lt;/h1&gt;
+&lt;h1&gt;1  WT&lt;/h1&gt;
+&lt;h1&gt;2  WT&lt;/h1&gt;
+&lt;h1&gt;3  WT&lt;/h1&gt;
+&lt;h1&gt;4  KO&lt;/h1&gt;
+&lt;h1&gt;5  KO&lt;/h1&gt;
+&lt;h1&gt;6  KO&lt;/h1&gt;
+&lt;p&gt;colData &amp;lt;- read.csv("PHENO_DATA.txt", sep="t", row.names=1)&lt;/p&gt;
+&lt;h1&gt;確認1&lt;/h1&gt;
+&lt;p&gt;all(rownames(colData) %in% colnames(countData1))&lt;/p&gt;
+&lt;h1&gt;[1] TRUE がでるのでOK&lt;/h1&gt;
+&lt;p&gt;all(rownames(colData) == colnames(countData1))&lt;/p&gt;
+&lt;h1&gt;[1] TRUE がでるのでOK&lt;/h1&gt;
+&lt;h1&gt;DEseq2に流し込み。&lt;/h1&gt;
+&lt;p&gt;dds &amp;lt;- DESeqDataSetFromMatrix(countData = countData1, 
+        colData = colData, design = ~ Genotype)
+dds &amp;lt;- DESeq(dds)
+res &amp;lt;- results(dds)
+res_gene_id$gene_id &amp;lt;- row.names(res)&lt;/p&gt;
+&lt;h1&gt;Gene IDをつけるためrtracklayarうごかす。&lt;/h1&gt;
+&lt;h1&gt;Stringtieでmergeしたファイルをいれる。&lt;/h1&gt;
+&lt;p&gt;library(rtracklayer)
+gtf &amp;lt;- readGFF("stringtie.merge.gtf")&lt;/p&gt;
+&lt;h1&gt;stringtieの場合はtypeがexonかtranscript のようなので、exonにする。&lt;/h1&gt;
+&lt;p&gt;gtf_gene &amp;lt;- subset(gtf, gtf$type == "exon") &lt;/p&gt;
+&lt;h1&gt;紐付けされたリストを取り出しておく。&lt;/h1&gt;
+&lt;p&gt;gtf_gene_1 &amp;lt;- gtf[,c("gene_id","gene_name","transcript_id")]
+colnames(gtf)&lt;/p&gt;
+&lt;p&gt;**#二つの票を合体することで、transcript_IDとgeneIDを紐付けする。ここがうまくいかない&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;DEseq2_result_ref &amp;lt;- merge(DEseq2_result,gtf_gene_1,all=T, sort=F)**&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;CSVへの書き出しで終わるはず。&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;write.csv(DEseq2_result_ref,"DEseq2_result_ref.csv", quote=FALSE, row.names=FALSE)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;参考ページ(どうもありがとうございます。）&lt;/h1&gt;
+&lt;h1&gt;https://ncrna.jp/blog/item/388-deseq2-ggplot2&lt;/h1&gt;
+&lt;h1&gt;http://ccb.jhu.edu/software/stringtie/index.shtml?t=manual&lt;/h1&gt;
+&lt;p&gt;＃https://qiita.com/rouninnomi/items/5441bef2f50780035127&lt;/p&gt;
+&lt;h1&gt;後半文字の大きさがみづらくなってすみません。修正法がわかりませんでした。&lt;/h1&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mikan03</dc:creator><pubDate>Sat, 28 Jul 2018 17:05:55 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/892/deseq2%E3%81%A7transcripts-id%E3%81%A8gene-id%E3%82%92%E7%B4%90%E4%BB%98%E3%81%91%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95</guid><category>deseq2</category><category>stringtie</category></item><item><title>Hisat2がerror</title><link>http://qa.lifesciencedb.jp/questions/885/hisat2%E3%81%8Cerror</link><description>&lt;p&gt;Hisat2のindexを作る作業が動きません。
+このようなエラーがでます。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;$ hisat2-build /Mus_musculus/UCSC/mm10/Sequence/WholeGenomeFasta/genome.fa
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;genome_index&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dyld: Symbol not found:
+__ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Referenced from:
+/usr/local/Cellar/hisat2/2.1.0/bin/hisat2-build-s
+Expected in:
+/usr/lib/libstdc++.6.0.9.dylib  in
+/usr/local/Cellar/hisat2/2.1.0/bin/hisat2-build-s
+Abort trap: 6&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;いろいろ調べて試しましたが、意味がわかりませんでした。問題解決のヒントをご教示いただければ幸いです。
+Brew update doctor upgradeは問題なかったです。&lt;/p&gt;
+&lt;p&gt;configです。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;$ brew config
+HOMEBREW_VERSION: 1.7.0
+ORIGIN: https://github.com/Homebrew/brew
+HEAD: 7e8fb9a0f8ab5e841763ec6c7fefa72a8462b594
+Last commit: 5 days ago
+Core tap ORIGIN: https://github.com/Homebrew/homebrew-core
+Core tap HEAD: fa5253faa1d416851bbd3d957f67f5ccbcb15441
+Core tap last commit: 6 hours ago
+HOMEBREW_PREFIX: /usr/local
+CPU: quad-core 64-bit skylake
+Homebrew Ruby: 2.3.7 =&amp;gt; /usr/local/Homebrew/Library/Homebrew/vendor/portable-ruby/2.3.7/bin/ruby
+Clang: 9.1 build 902
+Git: 2.18.0 =&amp;gt; /usr/local/bin/git
+Curl: 7.54.0 =&amp;gt; /usr/bin/curl
+Java: 10.0.2, 1.8.0_121
+macOS: 10.13.6-x86_64
+CLT: 9.4.1.0.1.1528165917
+Xcode: 9.4.1
+XQuartz: 2.7.11 =&amp;gt; /opt/X11
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;どうぞよろしくお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mikan03</dc:creator><pubDate>Sat, 21 Jul 2018 15:14:13 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/885/hisat2%E3%81%8Cerror</guid><category>hisat2</category><category>dyld</category><category>index</category></item><item><title>Tophatとcufflinksがインストールできない</title><link>http://qa.lifesciencedb.jp/questions/880/tophat%E3%81%A8cufflinks%E3%81%8C%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84</link><description>&lt;p&gt;こんにちは&lt;/p&gt;
+&lt;p&gt;Tophatとcufflinksがインストールできません。
+レベルは初心者なので、わけもわからずやっている状態ですが、
+DRY解析教本を読みながらコツコツやっています。
+いろいろやってみましたが、どうにもなりませんでした。&lt;/p&gt;
+&lt;p&gt;$brew install tophat
+    Error: No available formula with the name "tophat" 
+    ==&amp;gt; Searching for a previously deleted formula (in the last month)...
+    Error: No previously deleted formula found.
+    ==&amp;gt; Searching for similarly named formulae...
+    Error: No similarly named formulae found.
+    ==&amp;gt; Searching taps...
+    ==&amp;gt; Searching taps on GitHub...
+    Error: No formulae found in taps.&lt;/p&gt;
+&lt;p&gt;$ brew install cufflinks
+Error: No available formula with the name "cufflinks" 
+==&amp;gt; Searching for a previously deleted formula (in the last month)...
+Error: No previously deleted formula found.
+==&amp;gt; Searching for similarly named formulae...
+Error: No similarly named formulae found.
+==&amp;gt; Searching taps...
+==&amp;gt; Searching taps on GitHub...
+Error: No formulae found in taps.&lt;/p&gt;
+&lt;p&gt;$brew tap brewsci/science
+    ==&amp;gt; Tapping brewsci/science
+    Cloning into '/usr/local/Homebrew/Library/Taps/brewsci/homebrew-science'...
+    remote: Counting objects: 468, done.
+    remote: Compressing objects: 100% (465/465), done.
+    remote: Total 468 (delta 1), reused 153 (delta 1), pack-reused 0
+    Receiving objects: 100% (468/468), 429.98 KiB | 305.00 KiB/s, done.
+    Resolving deltas: 100% (1/1), done.
+    Error: Invalid formula: /usr/local/Homebrew/Library/Taps/brewsci/homebrew-science/Formula/ome-common.rb
+    uninitialized constant #&amp;lt;class:0x00000001032840c0&amp;gt;::MinimumMacOSRequirement
+    Did you mean?  MaximumMacOSRequirement
+    Error: Invalid formula: /usr/local/Homebrew/Library/Taps/brewsci/homebrew-science/Formula/ome-files.rb
+    uninitialized constant #&amp;lt;class:0x00000001023892a0&amp;gt;::MinimumMacOSRequirement
+    Did you mean?  MaximumMacOSRequirement
+    Error: Invalid formula: /usr/local/Homebrew/Library/Taps/brewsci/homebrew-science/Formula/ome-xml.rb
+    uninitialized constant #&amp;lt;class:0x00000001022e3a08&amp;gt;::MinimumMacOSRequirement
+    Did you mean?  MaximumMacOSRequirement
+    Error: Invalid formula: /usr/local/Homebrew/Library/Taps/brewsci/homebrew-science/Formula/osgearth.rb
+    uninitialized constant #&amp;lt;class:0x0000000103086fe8&amp;gt;::MinimumMacOSRequirement
+    Did you mean?  MaximumMacOSRequirement
+    Error: Cannot tap brewsci/science: invalid syntax in tap!&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ brew config
+HOMEBREW_VERSION: 1.7.0
+ORIGIN: https://github.com/Homebrew/brew
+HEAD: 7e8fb9a0f8ab5e841763ec6c7fefa72a8462b594
+Last commit: 3 days ago
+Core tap ORIGIN: https://github.com/Homebrew/homebrew-core
+Core tap HEAD: ea3fec61c268ccbbe4172a2f1cbfd08760025cf0
+Core tap last commit: 51 minutes ago
+HOMEBREW_PREFIX: /usr/local
+CPU: quad-core 64-bit skylake
+Homebrew Ruby: 2.3.7 =&amp;gt; /usr/local/Homebrew/Library/Homebrew/vendor/portable-ruby/2.3.7/bin/ruby
+Clang: 9.1 build 902
+Git: 2.18.0 =&amp;gt; /usr/local/bin/git
+Curl: 7.54.0 =&amp;gt; /usr/bin/curl
+Java: 10.0.2, 1.8.0_121
+macOS: 10.13.6-x86_64
+CLT: 9.4.1.0.1.1528165917
+Xcode: 9.4.1
+XQuartz: 2.7.11 =&amp;gt; /opt/X11
+
+$ brew list
+bam     eigen       ilmbase     numpy       samtools
+bedtools    fastqc      jpeg        opencv      sqlite
+blast       ffmpeg      lame        openexr     stringtie
+boost       gdbm        libidn2     openssl     tbb
+bowtie      gettext     libpng      python      wget
+bowtie2     git     libtiff     python@2    x264
+bwa     hisat2      libunistring    readline    xvid
+curl        htslib      lmdb        rmtrash     xz
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;brewのupdate, upgrade, doctorはしました。問題なかったです。
+問題を解決するにあたって何を質問したら良いかもわかっていない状態です。&lt;/p&gt;
+&lt;p&gt;どうぞよろしくお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mikan03</dc:creator><pubDate>Thu, 19 Jul 2018 15:29:31 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/880/tophat%E3%81%A8cufflinks%E3%81%8C%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84</guid><category>brew</category><category>tophat</category></item><item><title>ChIP-seqデータの比較について</title><link>http://qa.lifesciencedb.jp/questions/878/chip-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E6%AF%94%E8%BC%83%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;ChIP-seqは定性的であり、定量的な比較はできないと習いました。&lt;/p&gt;
+&lt;p&gt;しかし、論文の図でヒストンアセチル化等のヒストグラムをよく目にします。&lt;/p&gt;
+&lt;p&gt;縦軸がtag densityとなっていますが、このtag densityとは何でしょうか？一種の正規化なのでしょうか？&lt;/p&gt;
+&lt;p&gt;また、この場合tag densityの大小でChIP-seqデータを定量的に比較可能でしょうか？両者を比較してヒストンアセチル化が多い、少ないというのは可能でしょうか？&lt;/p&gt;
+&lt;p&gt;どなたかご存じの方がいましたらよろしくお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">juyoutai4423</dc:creator><pubDate>Thu, 15 Mar 2018 17:30:33 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/878/chip-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E6%AF%94%E8%BC%83%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>chip-seq</category><category>比較</category></item><item><title>公共のChIP-seqデータのデータセット間のピーク比較について</title><link>http://qa.lifesciencedb.jp/questions/876/%E5%85%AC%E5%85%B1%E3%81%AEchip-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E6%AF%94%E8%BC%83%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;ここ数ヶ月でNGSデータ解析について学んでいます。
+現在は主に公共データのChIP-Seqデータのピーク検出や比較を行っています。
+今回新たに利用したいデータセットがあるのですが，その利用について少々悩んでおりますので本サイトに投稿しています。
+詳しい先生方がいらっしゃいましたらご助言頂けると幸いです。&lt;/p&gt;
+&lt;p&gt;質問内容は以下の通りです。&lt;/p&gt;
+&lt;p&gt;異なる機種のIllumina HiSeqを用いて得たSRAデータは互いにデータとして比較することができるのでしょうか。&lt;/p&gt;
+&lt;p&gt;たとえば，公共ゲノムデータベースGEOに公開されている，
+&lt;a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE86164"&gt;GSE86164&lt;/a&gt;：Illumina HiSeq 2500を用いて得たChIP-Seqデータ
+&lt;a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76655"&gt;GSE76655&lt;/a&gt;：Illumina HiSeq 2000を用いて得たChIP-Seqデータ
+&lt;a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE47043"&gt;GSE47043&lt;/a&gt;：Illumina HiSeq 2000を用いて得たChIP-SeqデータとRNA-Seqデータ
+は，FASTQ変換，マッピング，ピーク検出などの処理をした後，ピークコールの違いとして互いのデータを比較できるのでしょうか。
+このように公共ゲノムデータベースのデータセット間での比較について悩んでおります。&lt;/p&gt;
+&lt;p&gt;どうぞよろしくお願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">takebo</dc:creator><pubDate>Fri, 12 Jan 2018 18:25:33 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/876/%E5%85%AC%E5%85%B1%E3%81%AEchip-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E6%AF%94%E8%BC%83%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>rna-seq</category><category>chip-seq</category></item><item><title>非モデル動物におけるtranscriptome referenceを用いた発現量解析</title><link>http://qa.lifesciencedb.jp/questions/874/%E9%9D%9E%E3%83%A2%E3%83%87%E3%83%AB%E5%8B%95%E7%89%A9%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Btranscriptome-reference%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E7%99%BA%E7%8F%BE%E9%87%8F%E8%A7%A3%E6%9E%90</link><description>&lt;p&gt;去年DRY解析教本を読んでMacを買い、色々なサイトで勉強させて頂いているバイオインフォ初心者です。
+この度、かなり行き詰まってしまいましたので、こちらの先生方にご相談させて頂きたく存じます、よろしくお願いいたします。&lt;/p&gt;
+&lt;p&gt;・やりたいこと&lt;/p&gt;
+&lt;p&gt;RNA-seqデータ(HiSeq2000 paired-end read)をtranscriptomeのreferenceにマップして発現量解析。
+最終的にはcummeRubundで各サンプル間の遺伝子発現の違いを表示したいと考えております。&lt;/p&gt;
+&lt;p&gt;・やったこと&lt;/p&gt;
+&lt;p&gt;bowtie2でリードをtranscriptome referenceにマッピング、得られたbamファイルをeXpressで定量しFPKMやTPMを算出。しかし各ライブラリーごとの数値を統合するところで手段を失いました。&lt;/p&gt;
+&lt;p&gt;・問題点&lt;/p&gt;
+&lt;p&gt;解析対象の動物種おけるGTFファイルが存在しないため（ゲノム情報が整理されていない）、genomeをreferenceとした一連のTophat-cufflinks-cuffdiffのワークフローが使えない。また、transcriptomeをreferenceとして発現量解析をするワークフローに関する情報が乏しい。
+以上のことから、何が現在もっとも正確なtranscriptomeをreferenceとした発現量解析なのか自身には判断できない状態になっております。&lt;/p&gt;
+&lt;p&gt;どんな情報でもありがたいです、どなたかアドバイス頂きたく存じます。よろしくお願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">SOCM</dc:creator><pubDate>Wed, 10 Jan 2018 19:14:06 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/874/%E9%9D%9E%E3%83%A2%E3%83%87%E3%83%AB%E5%8B%95%E7%89%A9%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Btranscriptome-reference%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E7%99%BA%E7%8F%BE%E9%87%8F%E8%A7%A3%E6%9E%90</guid><category>express</category><category>reference</category><category>transcriptome</category><category>発現量解析</category></item><item><title>tophatのエラーについて</title><link>http://qa.lifesciencedb.jp/questions/872/tophat%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;dry解析教本という本で自習中の初心者です。大学のMacでは出来たのに家のMacMiniだとエラーが出て、理由が分かりません。&lt;/p&gt;
+&lt;p&gt;SKMac-mini:expression SK$ tophat -p 1 -G Homo_sapiens/NCBI/build37.2/Annotation/Archives/archive-2014-06-02-13-47-29/Genes/genes.gtf -o tophat_results/ERR266337_P5 Homo_sapiens/NCBI/build37.2/Sequence/Bowtie2Index/genome ERR266337_trim.fastq&lt;/p&gt;
+&lt;h2&gt;[2017-10-31 21:32:10] Beginning TopHat run (v2.1.1)&lt;/h2&gt;
+&lt;p&gt;[2017-10-31 21:32:10] Checking for Bowtie
+          Bowtie version:    2.3.3.1
+[2017-10-31 21:32:10] Checking for Bowtie index files (genome)..
+[2017-10-31 21:32:10] Checking for reference FASTA file
+[2017-10-31 21:32:10] Generating SAM header for Homo_sapiens/NCBI/build37.2/Sequence/Bowtie2Index/genome
+Traceback (most recent call last):
+  File "/usr/local/bin/tophat", line 4107, in &amp;lt;module&amp;gt;
+    sys.exit(main())
+  File "/usr/local/bin/tophat", line 3961, in main
+    params.read_params = check_reads_format(params, reads_list)
+  File "/usr/local/bin/tophat", line 1856, in check_reads_format
+    zf = ZReader(f_name, params)
+  File "/usr/local/bin/tophat", line 1809, in &lt;strong&gt;init&lt;/strong&gt;
+    self.file=open(filename)
+IOError: [Errno 2] No such file or directory: 'ERR266337_trim.fastq'&lt;/p&gt;
+&lt;p&gt;ところが今いるexpressionというディレクトリには確かにERR266337_trim.fastqが存在するはずだと思います。&lt;/p&gt;
+&lt;p&gt;SKMac-mini:expression SK$ ls
+ERR266335.fastq             ERR266347.fastq             ERR266351_trim.fastq　
+ERR266335_trim.fastq　           ERR266347.fastq.gz          FastQC
+ERR266337.fastq             ERR266347_trim.fastq　           Homo_sapiens
+ERR266337_trim.fastq　           ERR266349.fastq             Homo_sapiens_NCBI_build37.2.tar.gz
+ERR266338.fastq             ERR266349_trim.fastq　           tophat_results
+ERR266338_trim.fastq　           ERR266351.fastq&lt;/p&gt;
+&lt;p&gt;このエラーはどうして出てきたのでしょう？ご助言がいただければ幸いです。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">SK</dc:creator><pubDate>Tue, 31 Oct 2017 21:59:50 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/872/tophat%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>tophat</category></item><item><title>異なる2系統からF2ゲノムを作成してくれるシミュレーションプログラム</title><link>http://qa.lifesciencedb.jp/questions/867/%E7%95%B0%E3%81%AA%E3%82%8B2%E7%B3%BB%E7%B5%B1%E3%81%8B%E3%82%89f2%E3%82%B2%E3%83%8E%E3%83%A0%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%81%A6%E3%81%8F%E3%82%8C%E3%82%8B%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0</link><description>&lt;p&gt;実験動物等の異なる2系統からF2ゲノムを作成してくれるシミュレーションプログラムを探しています。
+両親のfastqファイルから作成するのでも、vcfから作成するのでもいいです。
+どなたかご存じの方いらっしゃいましたら、ご教授いただけますと助かります。
+目的はlinkage analysisツールを作ったのですが、そのvalidationです。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">myoshi</dc:creator><pubDate>Thu, 05 Oct 2017 00:26:46 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/867/%E7%95%B0%E3%81%AA%E3%82%8B2%E7%B3%BB%E7%B5%B1%E3%81%8B%E3%82%89f2%E3%82%B2%E3%83%8E%E3%83%A0%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%81%A6%E3%81%8F%E3%82%8C%E3%82%8B%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0</guid><category>連鎖解析</category></item><item><title>heminested PCRの省略</title><link>http://qa.lifesciencedb.jp/questions/866/heminested-pcr%E3%81%AE%E7%9C%81%E7%95%A5</link><description>&lt;p&gt;もうひとつ初学者的質問をさせてください。&lt;/p&gt;
+&lt;p&gt;あるウィルス属をouter primer set(sense A, antisense B)で増幅したのち、その中のウィルス種をinner primer set (sense A, antisense C)で検出する手順が文献にのっています。&lt;/p&gt;
+&lt;p&gt;属を検出することに興味がなくて種だけ検出したい場合は(sense A, antisense C)でいきなりPCRしてしまってもよいように思いますが、いかがでしょうか？　antisense BとantisenseCは４ntほどかぶっています。&lt;/p&gt;
+&lt;p&gt;ちなみに1段階目はEx Taq polymeraseの存在下で50μLの反応物を35サイクル(94℃ 30秒　に最初のサイクルだけ2分追加、55℃で30秒、72℃で30秒、最終サイクルに7分追加）。2段階目は、先の2μLにPlaitnum taq polymeraseを加えて、25サイクル（94℃　30秒、最初のサイクルだけ2分追加、55℃で30秒、72℃で30秒、最終サイクルに7分追加）とあります。&lt;/p&gt;
+&lt;p&gt;2段階を省略して1段階だけにできないものかどうか、ご指導お願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">deer</dc:creator><pubDate>Tue, 03 Oct 2017 18:38:19 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/866/heminested-pcr%E3%81%AE%E7%9C%81%E7%95%A5</guid><category>pcr</category><category>nested</category></item><item><title>微妙な変異ウィルスの定量方法</title><link>http://qa.lifesciencedb.jp/questions/865/%E5%BE%AE%E5%A6%99%E3%81%AA%E5%A4%89%E7%95%B0%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%B9%E3%81%AE%E5%AE%9A%E9%87%8F%E6%96%B9%E6%B3%95</link><description>&lt;p&gt;お世話になります。実験科学は素人なのでご指導お願いします。（実験は共同研究機関や外注会社にお願いしています）&lt;/p&gt;
+&lt;p&gt;ウィルス変異株の量（viremia)が病気の重症度と関係があるか調べたいと思っています。&lt;/p&gt;
+&lt;p&gt;たとえば、ある病原性ウイルスに株１、株２、株３の三つがあるとします。
+これらの差異は微妙な点突然変異でアミノ酸の違いもわずかであり、それらの違いを区別するPCR primerはまだ設計されていません。おのおのの検体中で株１、株２、株３の「量的」な違いを調べるにはどうすればよろしいでしょうか？
+PCRベースの実験ではどうすれば可能でしょうか？&lt;/p&gt;
+&lt;p&gt;あるいは、株１，２，３に共通のprimerでPCRしておいて（あるいはPCRはなしで）、イルミナにかけたのち、株１，２，３おのおののReferene 配列にmapされるread数を比較してもいいように思います。しかしウィルス量がlog copy/mLのような絶対的な単位ででないのが信頼度の面でどうかなと思いますのと、mapされたread数の多寡がウィルス量の多寡といえるのか自分でもよくわかりません。統計解析するにしてもRead数の%を独立変数としてよいのかどうか。。。また、検体の数が増えてくると処理やコストが（PCRに比して）たいへんになってくるのでは、と危惧しています。&lt;/p&gt;
+&lt;p&gt;微妙なウィルス変異株の定量方法についてご指導ください。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">deer</dc:creator><pubDate>Sun, 01 Oct 2017 16:18:14 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/865/%E5%BE%AE%E5%A6%99%E3%81%AA%E5%A4%89%E7%95%B0%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%B9%E3%81%AE%E5%AE%9A%E9%87%8F%E6%96%B9%E6%B3%95</guid><category>ウィルス変異株定量</category></item><item><title>TMM正規化法について</title><link>http://qa.lifesciencedb.jp/questions/864/tmm%E6%AD%A3%E8%A6%8F%E5%8C%96%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;次世代シーケンサーからのデータを解析し，発現差異解析を行いたいと思っています。
+Aligned BAMという形式のデータをTMM正規化し，発現差の解析をする場合，データに含まれる遺伝子数がTMM正規化により減ってしまうことはありますか？&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">abcde2017</dc:creator><pubDate>Mon, 11 Sep 2017 15:13:55 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/864/tmm%E6%AD%A3%E8%A6%8F%E5%8C%96%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>rna-seq</category></item><item><title>NCBI GEO ではどのような解析がされているのでしょうか</title><link>http://qa.lifesciencedb.jp/questions/863/ncbi-geo-%E3%81%A7%E3%81%AF%E3%81%A9%E3%81%AE%E3%82%88%E3%81%86%E3%81%AA%E8%A7%A3%E6%9E%90%E3%81%8C%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%81%AE%E3%81%A7%E3%81%97%E3%82%87%E3%81%86%E3%81%8B</link><description>&lt;p&gt;NCBI GEO 初学者です。下記につきどなたか詳細をご存知の方がいらっしゃったらご教示願えないでしょうか。&lt;/p&gt;
+&lt;p&gt;https://goo.gl/wqe5Xd&lt;br&gt;
+上記 URL のように NCBI GEO を検索すると遺伝子が 7 個抽出されます (最後のは該当せず)。"disease state"[FINF] により疾患群と対象群とが比較され、違いのあるものが提示されているようです。問題は、この "発現頻度に違いのある遺伝子" の抽出アルゴリズムが良く分かりません。恐らく fold change などを元に出しているのだと考えますが、説明文を見つけることができませんでした。&lt;/p&gt;
+&lt;p&gt;どうぞ宜しくお願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">sunday</dc:creator><pubDate>Wed, 12 Jul 2017 15:44:09 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/863/ncbi-geo-%E3%81%A7%E3%81%AF%E3%81%A9%E3%81%AE%E3%82%88%E3%81%86%E3%81%AA%E8%A7%A3%E6%9E%90%E3%81%8C%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%81%AE%E3%81%A7%E3%81%97%E3%82%87%E3%81%86%E3%81%8B</guid><category>geo</category><category>ncbi</category></item><item><title>不完全長18Sを用いた系統樹作成に関して</title><link>http://qa.lifesciencedb.jp/questions/862/%E4%B8%8D%E5%AE%8C%E5%85%A8%E9%95%B718s%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E7%B3%BB%E7%B5%B1%E6%A8%B9%E4%BD%9C%E6%88%90%E3%81%AB%E9%96%A2%E3%81%97%E3%81%A6</link><description>&lt;p&gt;18Sの配列を用いた系統樹解析を行う場合に、18Sが完全長でない場合にどのように解析するのが一般的なのでしょうか。&lt;/p&gt;
+&lt;p&gt;現在、自身の持つサンプルの18S配列を用いて近縁種との系統樹を作成しようとしているのですが、自身の持つ18Sが完全長ではなく、短いものだと1.1kb程度となっています。
+当初は系統樹作成にClustalWを用いたマルチプルアライメント+最尤法での系統樹作成を考えていたのですが、配列長が異なるため、グローバルアライメントでアライメントしてしまうClustalWでは不適切なのでは？と疑問を覚えました。
+一般的にはこのような場合どのような形で解析を行うのでしょうか。&lt;/p&gt;
+&lt;p&gt;近縁種の完全長18S配列と特別な処理をせずに解析を実施するのか、それともローカルアライメントにより共通領域を洗い出し、部分領域でのみ比較をして系統樹を作成するのでしょうか。
+ご教授いただけましたら幸甚と存じます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nomat</dc:creator><pubDate>Tue, 06 Jun 2017 11:50:39 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/862/%E4%B8%8D%E5%AE%8C%E5%85%A8%E9%95%B718s%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E7%B3%BB%E7%B5%B1%E6%A8%B9%E4%BD%9C%E6%88%90%E3%81%AB%E9%96%A2%E3%81%97%E3%81%A6</guid><category>不完全長18s</category><category>系統樹</category><category>18s</category></item><item><title>cuffmergeの結果について</title><link>http://qa.lifesciencedb.jp/questions/859/cuffmerge%E3%81%AE%E7%B5%90%E6%9E%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;御世話になります．
+初心者なので、DDBJ Sequence Read Archive (DRA) から取得したRNA-seqのヒトサンプルデータ数名分を解析しております．&lt;/p&gt;
+&lt;p&gt;cufflinksのcuffmergeを実行しました．
+群内における発現量のばらつきを知りたいのですが、mergedファイル内のgenes.fpkm_tracking（isoforms.fpkm_trackingとどちらが適切かわかりませんが）の結果をみると、FPKM_conf_loとFPKM_conf_hiは同じ値になっています．&lt;/p&gt;
+&lt;p&gt;これは、うまくmergeできなかったと解釈すればよいでしょうか．&lt;/p&gt;
+&lt;p&gt;実行コマンドは、cuffmerge -o merged -p 4 -g Homo_sapiens.GRCh38.87.gtf transcripts.gtf.txt　です．&lt;/p&gt;
+&lt;p&gt;どうぞよろしくお願い致します．&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mlck</dc:creator><pubDate>Tue, 21 Mar 2017 17:48:07 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/859/cuffmerge%E3%81%AE%E7%B5%90%E6%9E%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>cufflinks</category></item><item><title>BioMart V0.9を使い倒す　のリンク不具合</title><link>http://qa.lifesciencedb.jp/questions/856/biomart-v0-9%E3%82%92%E4%BD%BF%E3%81%84%E5%80%92%E3%81%99-%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E4%B8%8D%E5%85%B7%E5%90%88</link><description>&lt;p&gt;発現制御解析・可視化＞遺伝子、タンパク質を機能別に分類したい　＞　BioMart V0.9を使い倒す　のリンクですが、クリックするとその下のDavidの使い方　実践編に飛んでしまいます。(Mac OS Sierra, Firefox 50.1.0)
+これは使用環境が不適切なためでしょうか、それともリンク切れ（？）なのでしょうか。&lt;/p&gt;
+&lt;p&gt;よろしくお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">KK</dc:creator><pubDate>Fri, 23 Dec 2016 21:15:42 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/856/biomart-v0-9%E3%82%92%E4%BD%BF%E3%81%84%E5%80%92%E3%81%99-%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E4%B8%8D%E5%85%B7%E5%90%88</guid><category>biomart</category></item><item><title>RNA-seqデータを用いたエンリッチメント解析について</title><link>http://qa.lifesciencedb.jp/questions/851/rna-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E3%82%A8%E3%83%B3%E3%83%AA%E3%83%83%E3%83%81%E3%83%A1%E3%83%B3%E3%83%88%E8%A7%A3%E6%9E%90%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;DAVIDを用いてエンリッチメント解析を行いたいのですが、UploadしたIDが上手く認識されず困っています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自分が持っているID&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;RNA-seqにより得られた発現遺伝子のデータに対して、BLASTXを用いて相同性検索を行い、「GI number」と「RefSeq ID」を得ています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;行った動作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;「GI number」や「RefSeq ID」を用いてDAVIDによるエンリッチメント解析を行いました。『Select Identifier』の項目ではそれぞれ「PROTEIN_GI_ACCESSION」と「REFSEQ_PROTEIN」を選んでいます。2300のIDを用いて調べた結果、認識されるのは232と非常に少ない結果しか得られませんでした。DAVIDに用意されている「Gene ID conversion」を用い、「AFFYMETRIX」のIDに変換を試みましたが、変換されるIDの数が少なく未だ解析できずにいます。BioMartを用いてIDを変換しようとしましたが、現在一時的にサイトが使えなくなっていました。&lt;/p&gt;
+&lt;p&gt;みなさんはRNA-seqから得られたデータを用いてエンリッチメント解析を行う際、どのようにしているのでしょうか？また、自分が行った行動の中で不適切な点があれば、ご教授をお願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lonicera</dc:creator><pubDate>Mon, 15 Aug 2016 10:54:15 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/851/rna-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E3%82%A8%E3%83%B3%E3%83%AA%E3%83%83%E3%83%81%E3%83%A1%E3%83%B3%E3%83%88%E8%A7%A3%E6%9E%90%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>rna-seq</category><category>エンリッチメント解析</category></item><item><title>ホモログの検出について</title><link>http://qa.lifesciencedb.jp/questions/849/%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B0%E3%81%AE%E6%A4%9C%E5%87%BA%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;RNA-seqを用いて研究を行い始めたものです。
+右も左もわからない中、ここでの回答は非常助かっております。&lt;/p&gt;
+&lt;p&gt;現在得られたRNA-seqの発現遺伝子データセットに対して、既存遺伝子のホモログが存在するのかどうかを調べたいと考えています。
+データセットの量が膨大で、どう調べればよいかが分かりません。&lt;/p&gt;
+&lt;p&gt;初歩的な質問ではありますが、ご教授して頂けないでしょうか。
+何卒よろしくお願いいたします。&lt;/p&gt;
+&lt;p&gt;【追記1】他の生物の遺伝子を対象とし、私の対象とする生物の発達過程でどのような発現をしているかを調査したいと考えています。&lt;/p&gt;
+&lt;p&gt;回答ありがとうございました。データセットのアノテーション情報を参考にして遺伝子を絞り、調査してきたいと思います。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lonicera</dc:creator><pubDate>Thu, 14 Jul 2016 18:05:18 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/849/%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B0%E3%81%AE%E6%A4%9C%E5%87%BA%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>rna-seq</category><category>homolog</category></item><item><title>1000人ゲノムデータのvcfファイルからのDAFの計算方法について</title><link>http://qa.lifesciencedb.jp/questions/847/1000%E4%BA%BA%E3%82%B2%E3%83%8E%E3%83%A0%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AEvcf%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8B%E3%82%89%E3%81%AEdaf%E3%81%AE%E8%A8%88%E7%AE%97%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;suimyeです。こんにちは。&lt;br&gt;
+表題の件について、ご存知の方是非ご教授いただきたくpostいたしました。&lt;br&gt;
+1000人ゲノムデータのVCFファイルを使ってDerived Allele Freq.（以後DAF）を計算したいのですが、調べた結果がどうも納得がいかなくてpostしております。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;DAFは、祖先アレル（以後AA）に対して、祖先アレルと一致しないアレルの頻度を計算するものと考えております。&lt;/p&gt;
+&lt;p&gt;例: &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;祖先アレル: G&lt;/p&gt;
+&lt;p&gt;Aさんのアレル: G&lt;/p&gt;
+&lt;p&gt;Bさんのアレル: A &lt;/p&gt;
+&lt;p&gt;Cさんのアレル: G&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Derived Allele: A&lt;/strong&gt; &lt;br&gt;&lt;/p&gt;
+&lt;p&gt;この場合のDAFは、1/3となる。簡単には以上のようなものと思います。&lt;/p&gt;
+&lt;p&gt;次に、1000人ゲノムのデータのVCFファイルを例にすると、&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1    10177    rs367896724    A    AC    100    PASS    AC=2130;AF=0.425319;AN=5008;N
+ S=2504;DP=103152;EAS_AF=0.3363;AMR_AF=0.3602;AFR_AF=0.4909;EUR_AF=0.4056;SAS_AF=0.49
+ 49;AA=A|||;VT=INDEL&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;このデータの場合は、AAがAなので、referenceと同じ塩基であり、Derived Alleleとして2塩基の"AC"がコールされています。ヒトの各地域集団ごとのアレル頻度や、ヒト全体でのアレル頻度はAFまたは~_AFで与えられていますが、これはAlternateであるACのアレル頻度なのでDAFはこの頻度をそのまま使えばよいと思っていました。ところが、&lt;a href="https://www.biostars.org/p/154668/"&gt;Biostar&lt;/a&gt;などの幾つかのpostを見ると、&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Please read the vcf spec first. AF is the alternate allele frequency. AA is the ancestral allele. If both present, you can use it to get the derived allele frequency by flipping AF.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;のようにアレル頻度をフリップして計算しろと書いてあります。このコメントは、そのvariantに祖先アレルがある場合はアレル頻度（AF）の逆、DAF = 1 - AFすれば良いとのことだと思いますが納得できずにいます。&lt;br&gt;
+私の拙い考えですと先にも書きましたように、AF値0.425319はreferenceに対するAlternateなので、variantとしてみつかった&lt;strong&gt;ACのアレル頻度&lt;/strong&gt;を示しており、&lt;strong&gt;DAF=0.425319&lt;/strong&gt;であるように思います。これは間違いなのでしょうか？くだんのBiostarでは、例にとられたVCFの行には祖先アレルはcallされていませんので、referenceとalternateのどちらが祖先アレルなのか分らず、回答者の「AFをフリップしたらDAF」という回答には釈然としない状況です。もしご存知の方いらっしゃいましたらご教示いただけますと幸甚です。&lt;/p&gt;
+&lt;p&gt;@suimye&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">suimye</dc:creator><pubDate>Tue, 05 Jan 2016 17:17:41 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/847/1000%E4%BA%BA%E3%82%B2%E3%83%8E%E3%83%A0%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AEvcf%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8B%E3%82%89%E3%81%AEdaf%E3%81%AE%E8%A8%88%E7%AE%97%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>1000genome</category><category>population_genetics</category><category>daf</category><category>vcf</category><category>af</category></item><item><title>IGVの結果とFPKM値の違いについて</title><link>http://qa.lifesciencedb.jp/questions/845/igv%E3%81%AE%E7%B5%90%E6%9E%9C%E3%81%A8fpkm%E5%80%A4%E3%81%AE%E9%81%95%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;NGSデータ解析の初心者です。
+現在、RNA-seq解析を行っているのですが、Mapping結果をIGVで可視化するとある遺伝子に対してMappingされていることを確認したのですが、その遺伝子の発現量をCuffdiffで計算したところ、FPKM値が0となりました(gene tracking)。
+リードがMappingされているのにFPKM値がなぜ0となるのかわからず困っています。
+何か知見があればご教授ください。よろしくお願い致します。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">K_Yamashita</dc:creator><pubDate>Wed, 25 Nov 2015 23:31:59 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/845/igv%E3%81%AE%E7%B5%90%E6%9E%9C%E3%81%A8fpkm%E5%80%A4%E3%81%AE%E9%81%95%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>rna-seq</category></item><item><title>癌のゲノム解析データベースに対する配列検索</title><link>http://qa.lifesciencedb.jp/questions/842/%E7%99%8C%E3%81%AE%E3%82%B2%E3%83%8E%E3%83%A0%E8%A7%A3%E6%9E%90%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E9%85%8D%E5%88%97%E6%A4%9C%E7%B4%A2</link><description>&lt;p&gt;NCBIなどに蓄積している癌のゲノムデータベースに対してある特別な配列（人にはない配列です）のインテグレーションを調べたいと考えています。
+出来ればすべての癌に対して調べたいのですが、
+難しいなら特定の癌腫に限定しようと思っています。
+どのような手順を踏むのが最短でできますでしょうか？
+全てのゲノム配列をダウンロードするのは、かなり大変な作業だと思いますが、ダウンロードする他ないでしょうか？
+事前の予想では、予めalignmentの取られている配列だと、除外されているのではと考えていますが、現段階では分かりません。&lt;/p&gt;
+&lt;p&gt;上記の質問は具体的ではなかったので、変更させていただきます。
+https://cghub.ucsc.edu/
+上記よりゲノムデータをダウンロードして、Blast等でサーチできる環境を作りたいのですが、具体的にどのような手順を踏むのがベストでしょうか？&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hiroya</dc:creator><pubDate>Sat, 17 Oct 2015 20:01:21 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/842/%E7%99%8C%E3%81%AE%E3%82%B2%E3%83%8E%E3%83%A0%E8%A7%A3%E6%9E%90%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E9%85%8D%E5%88%97%E6%A4%9C%E7%B4%A2</guid><category>癌ゲノム</category></item><item><title>GEO からデータのダウンロード：MAX formatとは？</title><link>http://qa.lifesciencedb.jp/questions/841/geo-%E3%81%8B%E3%82%89%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89-max-format%E3%81%A8%E3%81%AF</link><description>&lt;p&gt;平素お世話になっております。浅学のため記入内容および語彙の不備があるかと思いますが、
+どうか御容赦頂ければと思います。&lt;/p&gt;
+&lt;p&gt;●背景：GEOからRNA-seqのデータを取得&lt;/p&gt;
+&lt;p&gt;NCBI が運営するGEOからRNA-seqのデータを取得したいと考えております。目的とするデータのアクセッション番号はGSE20116です。 配列データとしては6ファイルあるようです（例えばGSM515513）。&lt;/p&gt;
+&lt;p&gt;●質問：MAX formatとは？&lt;/p&gt;
+&lt;p&gt;サンプル GSM515513を見ますと、以下のような記述がありました。&lt;/p&gt;
+&lt;p&gt;Data processing 
+AB WT Pipeline. The reads were aligned to the human hg18 (NCBI Build 36) genome. Alignments are provided in MAX format. A MAX specification file is available on the Series GSE20116 record.&lt;/p&gt;
+&lt;p&gt;上記のMAX formatとは何でしょうか？いろいろ検索してみましたが判然としませんでした。&lt;/p&gt;
+&lt;p&gt;●困っている現状&lt;/p&gt;
+&lt;p&gt;実は背景として、DDBJのftpサーバーから上記サンプルに相当するfastqファイルを取得し、tophatにてhg19へのアライメントを試みた経緯があります。ところが、accepted_hits.bamが 1 MB未満となってしまい、明らかに結果がおかしかったです。海外の掲示板も参照し、似たような事例が散見されましたが、解決できず往生しております。GEO のサイトから、マッピング済みのファイルが得られるなら、取得したいと考えています。MAX format なるものが、tophat に適用出来るかはわかりませんが、そもそもMAX formatがなんなのかすら分からない現状です。&lt;/p&gt;
+&lt;p&gt;些細な点でも構いませんので、どうか御教授頂けないでしょうか？
+お手数をおかけ致しますが、何卒宜しくお願い致します。&lt;/p&gt;
+&lt;p&gt;敬具&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">megu</dc:creator><pubDate>Wed, 02 Sep 2015 16:52:25 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/841/geo-%E3%81%8B%E3%82%89%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89-max-format%E3%81%A8%E3%81%AF</guid><category>geo</category></item><item><title>MacOS X 10.9.5に対するaugustus3.1のインストール時のエラーについて</title><link>http://qa.lifesciencedb.jp/questions/840/macos-x-10-9-5%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8Baugustus3-1%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%99%82%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;お世話になります.
+初歩的な質問で申し訳有りませんが, ご教授いただけると幸いです.&lt;/p&gt;
+&lt;p&gt;ゲノム解読したデータをもとに, Mac OSでab initio遺伝子予測をしようと考えています.
+そこで, MacOS X 10.9.5のPCに対してaugustus3.1のインストールを試みているのですが, makeがうまくいかず, 以下のようなエラーメッセージが表示されます.&lt;/p&gt;
+&lt;p&gt;=======================&lt;/p&gt;
+&lt;p&gt;error: invalid operands to binary expression
+      ('const GBFeature' and 'const GBFeature') &lt;/p&gt;
+&lt;p&gt;error: invalid operands to binary expression ('const OptionListItem'
+      and 'const OptionListItem')&lt;/p&gt;
+&lt;p&gt;error: invalid operands to binary expression
+      ('const GBFeature' and 'const GBFeature')&lt;/p&gt;
+&lt;p&gt;3 warnings and 2 errors generated.
+make: *** [genbank.o] Error 1&lt;/p&gt;
+&lt;p&gt;=======================&lt;/p&gt;
+&lt;p&gt;なにが問題でmakeできないのでしょうか.&lt;/p&gt;
+&lt;p&gt;よろしくお願いいたします.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">fatman_2</dc:creator><pubDate>Sun, 19 Jul 2015 00:25:37 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/840/macos-x-10-9-5%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8Baugustus3-1%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%99%82%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>遺伝子予測</category><category>augustus</category></item><item><title>RNA seqにおけるRを用いたマッピング時のエラーについて</title><link>http://qa.lifesciencedb.jp/questions/835/rna-seq%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Br%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E6%99%82%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;「Rで塩基配列解析」をみながら、RNAseq解析をしようとしています。Rは初心者で、試しに適当なリファレンス配列とクエリー配列（共にfasta形式）を用いてmappingを試みています。リストファイルを作成後、以下のコマンドによりQuasRを起動してマッピングを行おうとしましたが、以下のようにbowtieにおいて、”引数の長さが 0 です　sh: line 1:  9966 Segmentation fault: 11”というエラーが出てしまい困っております。このような場合の解決策をご存知の方はいらっしゃいますか？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;in_f1 &amp;lt;- "mapping1.txt"&lt;/p&gt;
+&lt;p&gt;in_f2 &amp;lt;- "Ala2.fa"&lt;/p&gt;
+&lt;p&gt;library(QuasR)&lt;/p&gt;
+&lt;p&gt;out &amp;lt;- qAlign(in_f1, in_f2)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Creating .fai file for: /Users/ka/Desktop/te/Ala2.fa&lt;/p&gt;
+&lt;p&gt;alignment files missing - need to:
+    create alignment index for the genome
+    create 1 genomic alignment(s)
+will start in ..9s..8s..7s..6s..5s..4s..3s..2s..1s&lt;/p&gt;
+&lt;p&gt;Creating an Rbowtie index for /Users/ka/Desktop/te/Ala2.fa&lt;/p&gt;
+&lt;p&gt;Finished creating index
+Testing the compute nodes...OK
+Loading QuasR on the compute nodes...OK&lt;/p&gt;
+&lt;p&gt;Available cores:
+nodeNames
+ka.biol.sci.u.ac.jp 
+                            1 &lt;/p&gt;
+&lt;p&gt;Performing genomic alignments for 1 samples. 
+See progress in the log file:
+/Users/ka/Desktop/te/QuasR_log_1d53f48759d.txt&lt;/p&gt;
+&lt;p&gt;以下にエラー checkForRemoteErrors(val) : &lt;/p&gt;
+&lt;p&gt;one node produced an error: Error on ka.biol.sci.u.ac.jp processing sample /Users/ka/Desktop/te/Ala1.fa :  引数の長さが 0 です 
+sh: line 1:  9966 Segmentation fault: 11&lt;br&gt;
+&lt;/p&gt;
+&lt;p&gt;'/Library/Frameworks/R.framework/Versions/3.1/Resources/library/Rbowtie/bowtie' &lt;/p&gt;
+&lt;p&gt;'/Users/ka/Desktop/te/Ala2.fa.Rbowtie/bowtieIndex' '/Users/ka/Desktop/te/Ala1.fa' -m 1 --best --strata -v 2 -f -S -p 1 '/var/folders/kg/hrs2ndkn029f978fs1_18s140000gn/T//RtmpF7YdOB/Ala1.fa26e25902bc72.sam' 2&amp;gt;&amp;amp;1&lt;/p&gt;
+&lt;p&gt;下記にsessionInfo()  による情報と使用Macのスペックを示します。どうぞよろしくお願い致します。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;sessionInfo()
+R version 3.1.3 (2015-03-09)
+Platform: x86_64-apple-darwin10.8.0 (64-bit)
+Running under: OS X 10.8.5 (Mountain Lion)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;locale:
+[1] ja_JP.UTF-8/ja_JP.UTF-8/ja_JP.UTF-8/C/ja_JP.UTF-8/ja_JP.UTF-8&lt;/p&gt;
+&lt;p&gt;attached base packages:
+[1] stats4    parallel  stats     graphics  grDevices utils     datasets 
+[8] methods   base   &lt;br&gt;
+&lt;/p&gt;
+&lt;p&gt;other attached packages:
+ [1] GenomicAlignments_1.2.2 Rsamtools_1.18.3     &lt;br&gt;
+ [3] Biostrings_2.34.1       XVector_0.6.0        &lt;br&gt;
+ [5] QuasR_1.6.2             Rbowtie_1.6.0        &lt;br&gt;
+ [7] GenomicRanges_1.18.4    GenomeInfoDb_1.2.4   &lt;br&gt;
+ [9] IRanges_2.0.1           S4Vectors_0.4.0      &lt;br&gt;
+[11] BiocGenerics_0.12.1     BiocInstaller_1.16.2 &lt;br&gt;
+&lt;/p&gt;
+&lt;p&gt;loaded via a namespace (and not attached):
+ [1] AnnotationDbi_1.28.2   base64enc_0.1-2        BatchJobs_1.6       &lt;br&gt;
+ [4] BBmisc_1.9             Biobase_2.26.0         BiocParallel_1.0.3  &lt;br&gt;
+ [7] biomaRt_2.22.0         bitops_1.0-6           brew_1.0-6          &lt;br&gt;
+[10] BSgenome_1.34.1        checkmate_1.5.2        codetools_0.2-11    &lt;br&gt;
+[13] DBI_0.3.1              digest_0.6.8           fail_1.2            &lt;br&gt;
+[16] foreach_1.4.2          GenomicFeatures_1.18.6 grid_3.1.3          &lt;br&gt;
+[19] hwriter_1.3.2          iterators_1.0.7        lattice_0.20-31     &lt;br&gt;
+[22] latticeExtra_0.6-26    RColorBrewer_1.1-2     RCurl_1.95-4.5      &lt;br&gt;
+[25] RSQLite_1.0.0          rtracklayer_1.26.3     sendmailR_1.2-1     &lt;br&gt;
+[28] ShortRead_1.24.0       stringr_0.6.2          tools_3.1.3         &lt;br&gt;
+[31] XML_3.98-1.1           zlibbioc_1.12.0 &lt;/p&gt;
+&lt;p&gt;Mac Proスペック
+プロセッサ  2 x 2.66 GHz 6-Core Intel Xeon
+メモリ  32 GB 1333 MHz DDR3 ECC
+ソフトウェア  OS X 10.8.5（12F45）&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">brown</dc:creator><pubDate>Mon, 06 Apr 2015 17:58:56 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/835/rna-seq%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Br%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E6%99%82%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>r</category><category>rna-seq</category><category>mapping</category></item><item><title>RNA-seqのAT bias</title><link>http://qa.lifesciencedb.jp/questions/834/rna-seq%E3%81%AEat-bias</link><description>&lt;p&gt;MiSeqを使ってmouse macrophage系細胞のRNA-seqを始めたのですが、出てきたデータの塩基組成がA,T＝32%、G,C＝18%と偏ります。
+原因に心当たりのある方、アドバイス頂けないでしょうか？&lt;/p&gt;
+&lt;p&gt;実験系の概略は以下のとおりです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Total RNA 1 ugを精製&lt;/li&gt;
+&lt;li&gt;TruSeq Stranded mRNA Sample Prep
+   Kitでlibrary構築&lt;/li&gt;
+&lt;li&gt;Sequencing Kit V3
+   (150cycle)でpaired-end readsを取得&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;よろしくお願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">junya</dc:creator><pubDate>Mon, 06 Apr 2015 17:38:15 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/834/rna-seq%E3%81%AEat-bias</guid><category>stranded</category><category>rna-seq</category><category>miseq</category></item><item><title>MISOアノテーションについて</title><link>http://qa.lifesciencedb.jp/questions/831/miso%E3%82%A2%E3%83%8E%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;質問させていただきます。&lt;/p&gt;
+&lt;p&gt;現在、選択的スプラシング解析ツール"MISO"を用いた解析を行なっております。&lt;br&gt;
+これについて数点問題があり、どなたかご教示いただければと思った次第です。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;1) &lt;br&gt;
+現在使用しているアノテーションおよびインデックスは、UCSC genome browserよりDLしたgtfファイルを、rnaseqlibに含まれる"gff make annotation.py"というスクリプトを用いて手前でビルドしています。&lt;br&gt;
+この中身を確認した所、過去にASが報告されているisoformに関するエキソンが入っておりませんでした。&lt;br&gt;
+UCSC genome browserよりDLしたgtfには、これらのisoformが含まれていることを確認しています。&lt;br&gt;
+この様な事例をご存知の方がいましたら、原因・対策について教えていただければ幸いです。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;2)&lt;br&gt;
+上記に関する可能性の一つとして、一部のisoformのevent typeによるものが考えられます。&lt;br&gt;
+報告分子のevent typeがALEである可能性があるのですが、gff make annotation.pyによりビルドされたアノテーションにはALE
+のものは含まれません。&lt;br&gt;
+そこで、(MISO Exon-centric annotation ver. 1のように)ALE、AFEを含めたアノテーションをビルドする方法をご存知の方がいましたらご教示いただければ幸いです。&lt;/p&gt;
+&lt;p&gt;以上ご存知の方がいましたら、どうぞよろしくお願い致します。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kent_allow</dc:creator><pubDate>Tue, 17 Feb 2015 17:41:46 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/831/miso%E3%82%A2%E3%83%8E%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>miso</category><category>as</category><category>splicing-junction</category></item></channel></rss>

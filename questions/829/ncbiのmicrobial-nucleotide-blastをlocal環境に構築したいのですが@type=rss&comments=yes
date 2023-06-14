@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: NCBIのMicrobial Nucleotide BLASTをLocal環境に構築したいのですが、</title><link>http://qa.lifesciencedb.jp/questions/829/ncbi%E3%81%AEmicrobial-nucleotide-blast%E3%82%92local%E7%92%B0%E5%A2%83%E3%81%AB%E6%A7%8B%E7%AF%89%E3%81%97%E3%81%9F%E3%81%84%E3%81%AE%E3%81%A7%E3%81%99%E3%81%8C</link><description>&lt;p&gt;&lt;a href="http://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&amp;amp;PAGE_TYPE=BlastHome"&gt;NCBI BLASTのトップページ&lt;/a&gt;に行くと、
+一番上にBLAST Assembled Genomesという項目があると思います。
+Human, Mouseなど代表的な生物種が並んで、最後のMicrobesをクリックすると、Microbial Nucleotide BLAST
+という検索フォームが開きます。&lt;/p&gt;
+&lt;p&gt;Choose Search Setの項目の中のDatabaseとして、「Representative genomes only」と「All genomes」が選べ、
+「All genomes」を選ぶとさらに&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Complete genomes&lt;/li&gt;
+&lt;li&gt;Draft genomes&lt;/li&gt;
+&lt;li&gt;Complete plasmid&lt;/li&gt;
+&lt;li&gt;Complete bacteriophages&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;が選べるようになっています。これらのデータベースをLocal環境にダウンロードしたいのですが、
+&lt;a href="ftp://ftp.ncbi.nlm.nih.gov/blast/db/"&gt;FTPサイト&lt;/a&gt; (ftp://ftp.ncbi.nlm.nih.gov/blast/db/) を見ても、どれがそのデータにあたるのかが分からず、困っています。&lt;/p&gt;
+&lt;p&gt;更新日時と、結果画面で表示される「Included: Archaea (taxid:2157), Bacteria(taxid:2)」という表現から推測して、「refseq_genomic.[数字].tar.gz」というデータベースをtaxidで絞り込んで使用しているようなのですが、
+これをどうBLASTコマンドで再現すればいいかが分かりません。&lt;/p&gt;
+&lt;p&gt;統合TVの「Local BLAST の使い方 2011」シリーズ（全2回）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第1回 導入・準備編 &lt;/li&gt;
+&lt;li&gt;第2回 検索実行・オプション編&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;は拝見したのですが、taxidでの絞り込みはなかったので質問させて頂きました。
+どうぞよろしくお願い致します。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/829/ncbi%E3%81%AEmicrobial-nucleotide-blast%E3%82%92local%E7%92%B0%E5%A2%83%E3%81%AB%E6%A7%8B%E7%AF%89%E3%81%97%E3%81%9F%E3%81%84%E3%81%AE%E3%81%A7%E3%81%99%E3%81%8C" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 24 Feb 2015 16:01:57 +0900</lastBuildDate><item><title>Answer by TY</title><link>http://qa.lifesciencedb.jp/questions/829/ncbi%E3%81%AEmicrobial-nucleotide-blast%E3%82%92local%E7%92%B0%E5%A2%83%E3%81%AB%E6%A7%8B%E7%AF%89%E3%81%97%E3%81%9F%E3%81%84%E3%81%AE%E3%81%A7%E3%81%99%E3%81%8C/832</link><description>&lt;p&gt;ご教授ありがとうございました。返信が遅くなってしまい失礼いたしました。
+複数ご提案頂いたのですが、私の知識が足りず、&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;「NCBI Taxonomyダンプファイルを落とす」ところがわからない&lt;/li&gt;
+&lt;li&gt;GI list取得まではできた&lt;/li&gt;
+&lt;li&gt;Perlはまったく知識がなく、「E-Utilities」がわからない&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;という状況だったのですが、
+Microbial Nucleotide BLASTが指定しているデータベースの場所がわかりましたので、
+それをダウンロードすることで解決することができました。
+ftp://ftp.ncbi.nlm.nih.gov/blast/db/ではなく、
+ftp://ftp.ncbi.nih.gov/genomes/の中にありました。
+書き込んで頂いたことを実行する技量が足りず申し訳ありませんが、お時間を割いてご回答頂いたことに感謝いたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">TY</dc:creator><pubDate>Tue, 24 Feb 2015 16:01:57 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/829/ncbi%E3%81%AEmicrobial-nucleotide-blast%E3%82%92local%E7%92%B0%E5%A2%83%E3%81%AB%E6%A7%8B%E7%AF%89%E3%81%97%E3%81%9F%E3%81%84%E3%81%AE%E3%81%A7%E3%81%99%E3%81%8C/832</guid></item><item><title>Answer by aki</title><link>http://qa.lifesciencedb.jp/questions/829/ncbi%E3%81%AEmicrobial-nucleotide-blast%E3%82%92local%E7%92%B0%E5%A2%83%E3%81%AB%E6%A7%8B%E7%AF%89%E3%81%97%E3%81%9F%E3%81%84%E3%81%AE%E3%81%A7%E3%81%99%E3%81%8C/830</link><description>&lt;p&gt;Taxonomy IDに基いてBLAST検索対象の絞り込みを行うには、まずTaxonomy IDから対応する配列のGenBank IDを得ないといけないと思います。以下の3通りの方法があると思います。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;NCBI Taxonomyダンプファイルを落としてきてローカルにTaxonomyデータベースを構築し、Taxonomy IDの分類群の下位の分類群のTaxonomy IDを全て取得して、それらに対応するGenBank IDを取得する&lt;/li&gt;
+&lt;li&gt;NCBIのウェブサイトで塩基配列を「"refseq"[Filter] AND txid2[Organism:exp]」で検索して、FormatをGI Listにする&lt;/li&gt;
+&lt;li&gt;E-Utilities経由でNCBIの塩基配列を検索してGenBank IDを取得するスクリプトを使う&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;3の場合、私が作成しているスクリプトが使えます。お使いになられる場合は以下のURLから最新版をダウンロードしてインストールしてください(今から使うコマンドに必要なのはPerlとLWPのみです。シェルスクリプトは他にも色々入れてしまうので避けてください)。
+&lt;a href="http://www.claident.org/"&gt;http://www.claident.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;インストール後、以下のようにコマンドを実行すると、バクテリアのGI Listが得られます。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;clretrievegi --keywords='"refseq"[Filter] AND txid2[Organism:exp]' outputfile
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;ここで得られたファイルをblastnの-gilistに与えればいいはずです。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">aki</dc:creator><pubDate>Fri, 13 Feb 2015 02:36:08 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/829/ncbi%E3%81%AEmicrobial-nucleotide-blast%E3%82%92local%E7%92%B0%E5%A2%83%E3%81%AB%E6%A7%8B%E7%AF%89%E3%81%97%E3%81%9F%E3%81%84%E3%81%AE%E3%81%A7%E3%81%99%E3%81%8C/830</guid></item></channel></rss>

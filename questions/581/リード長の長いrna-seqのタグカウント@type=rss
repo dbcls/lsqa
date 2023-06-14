@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: リード長の長いRNA-Seqのタグカウント</title><link>http://qa.lifesciencedb.jp/questions/581/%E3%83%AA%E3%83%BC%E3%83%89%E9%95%B7%E3%81%AE%E9%95%B7%E3%81%84rna-seq%E3%81%AE%E3%82%BF%E3%82%B0%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88</link><description>&lt;p&gt;もしかしたら、常識かもしれないので、
+情報お持ちのかたがおられたら、お願いします。&lt;/p&gt;
+&lt;p&gt;topHatやmapSpliceなど、splicingを考慮したマッパーの結果から、
+遺伝子レベルのタグカウントを計算するうまいやり方など、
+情報お持ちのかたがおられましたら、
+お知らせいただけますと助かります。&lt;/p&gt;
+&lt;h2&gt;以下背景&lt;/h2&gt;
+&lt;p&gt;topHat-cufflinks-cuffdiffや、それに類似のフローが
+デファクトスタンダード的解析であると知りつつ、
+リード長の長いRNA-SeqにedgeR等をかけるやりかたを考えています。&lt;/p&gt;
+&lt;p&gt;edgeRなどのDEG検出用のRパッケージ等は、
+fpkm/rpkmは使わないように推奨しているかと思います。&lt;/p&gt;
+&lt;p&gt;EdgeRのedgeRUsersGuide.pdfより引用
+http://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
+"There are good reasons
+why the NB model is appropriate for the raw count data, but transforming the data using
+RPKM (or FPKM or similar) renders our distributional assumptions invalid and we cannot
+guarantee that our methods will be reliable for such transformed data."&lt;/p&gt;
+&lt;p&gt;35塩基や、50塩基程度であれば、
+BWAやBowtieなどで、splicingを考慮せずに、
+マップしたものを、
+DEGseqパッケージ中のgetGeneExpや、
+BEDtoolsのcoverageBEDなどで、タグカウントすればよかったのですが、
+最近リード長が伸び、150塩基のRNA-Seqなども
+よく見かけるようになったかと思います。
+リード長が伸びるとexon長を超えてしまう場合も
+多々あるので、junctionをまたぐタグの数を無視するには、
+支障が出てきているように思います。&lt;/p&gt;
+&lt;p&gt;topHatが出力するaccepted_hits.bamに対して、&lt;/p&gt;
+&lt;h3&gt;選択肢1&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Step1 BEDtoolsのbamToBedに"-bed12"オプション付でかけBAMをBEDに変換&lt;/li&gt;
+&lt;li&gt;Step2 BEDを入力とするDEGseqのgetGeneExpでタグカウント&lt;/li&gt;
+&lt;li&gt;アノテーション情報は、refFlat.txt&lt;/li&gt;
+&lt;li&gt;=&amp;gt; イントロン領域のタグは計上されない。&lt;/li&gt;
+&lt;li&gt;=&amp;gt; splicing-junctionをまたぐタグがタグカウントに計上されないため、難あり。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;選択肢2&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Step1 coverageBEDに対して、"-abam"でBAM入力で"-splice"オプションを付けて実行。&lt;/li&gt;
+&lt;li&gt;アノテーション情報はrefFlat.bed&lt;/li&gt;
+&lt;li&gt;=&amp;gt; splicing-junctionをまたぐタグはタグカウントに計上されるので良し。&lt;/li&gt;
+&lt;li&gt;=&amp;gt; イントロン領域のタグ(第一イントロンの制御ノンコーディングRNAなど)もカウントされるので難あり。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一応、BioStarやSeqAnswersで上記難点の解決策も探しては見たのですが、
+自分では見つけられませんでした。&lt;/p&gt;
+&lt;p&gt;coverageBEDで、イントロンも含めてカウントした後に、
+全イントロンのタグ数を引くとか、&lt;/p&gt;
+&lt;p&gt;小賢しい手も考えられますが、
+境界のリードなどの扱いで、厳密では無くなる点に難があります。&lt;/p&gt;
+&lt;p&gt;もし、うまい手やら、既存のスクリプトでこんなものがある等、
+関係する情報お知らせいただけますと幸いです。
+直接の解答でなくとも、ご助言ありましたら、お願いします。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/581/%E3%83%AA%E3%83%BC%E3%83%89%E9%95%B7%E3%81%AE%E9%95%B7%E3%81%84rna-seq%E3%81%AE%E3%82%BF%E3%82%B0%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88" rel="self"></atom:link><language>ja</language><lastBuildDate>Fri, 13 Jul 2012 20:24:43 +0900</lastBuildDate><item><title>Answer by suimye</title><link>http://qa.lifesciencedb.jp/questions/581/%E3%83%AA%E3%83%BC%E3%83%89%E9%95%B7%E3%81%AE%E9%95%B7%E3%81%84rna-seq%E3%81%AE%E3%82%BF%E3%82%B0%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88/613</link><description>&lt;p&gt;こんばんは。&lt;br&gt;
+僕は、nob_fjさんが箇条書きなされている方法の中で、５番の方法を使っています。&lt;br&gt;
+Cufflinksを使えば解決すると思うのですが、間違っていたらご指摘していただければと思います。&lt;br&gt; 
+なお、下記は、cuffdiffをつかうため、比較データAとBを仮定します。&lt;br&gt; 
+また、オプションは、pair-end directionalの例を書いていますが、気にしないでください。&lt;br&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;tophatをつかってgenome mappingとjunction mappingをする &lt;br&gt;
+eval tophat --library-type fr-secondstrand -o ./dataA -r 800 -p 10 -G $mouse_ref $mouse_index1 dataA.fastq_1 dataA.fastq_2 
+&lt;br&gt;
+eval tophat --library-type fr-secondstrand -o ./dataB -r 800 -p 10 -G $mouse_ref $mouse_index1 dataB.fastq_1 dataB.fastq_2 
+&lt;br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;フォルダ内にある transcripts.gtfファイル(転写産物ごとのexon intron情報のファイル)をcuffmergeを用いて、統一したjunctionのreference用gtfにする。&lt;br&gt;
+cuffmerge -s $mm9genome assembly.txt &lt;br&gt;
+(assembly.txt内は以下です。) &lt;br&gt;
+[suimye@Brahms testdata]$ cat assembly.txt 
+&lt;br&gt;
+./dataA/transcripts.gtf &lt;br&gt;
+./dataB/transcripts.gtf &lt;br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;cuffmergeの結果、merged.gtfというA、Bのデータに基づく新しいjunction情報がえられますので、&lt;br&gt; こいつにcountingしてやれば、intronデータを過大評価するようにはならないと思います。
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;merged.gtfを用いて、merged.gtfに対するカウンティングをしてやる。&lt;br&gt;
+ cuffdiff  -p 10 --library-type fr-secondstrand  -o ./resCufdiff ./merged.gtf  ./dataA/dataA.bam ./dataB/dataB.bam&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;すると、cuffdiffでは、FPKM値を算出しますが、FPKM値は無視して&lt;br&gt;
+read数だけの行列をcutコマンドで作ってやって、最後は、cuffcompareを&lt;br&gt;
+merged.gtfにかけたやつでannotationしてedgeRやれば大丈夫だと思いますが、&lt;br&gt;
+いかがでしょうか。間違ってたらごめんなさい。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">suimye</dc:creator><pubDate>Fri, 13 Jul 2012 20:24:43 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/581/%E3%83%AA%E3%83%BC%E3%83%89%E9%95%B7%E3%81%AE%E9%95%B7%E3%81%84rna-seq%E3%81%AE%E3%82%BF%E3%82%B0%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88/613</guid></item><item><title>Answer by nob_fj</title><link>http://qa.lifesciencedb.jp/questions/581/%E3%83%AA%E3%83%BC%E3%83%89%E9%95%B7%E3%81%AE%E9%95%B7%E3%81%84rna-seq%E3%81%AE%E3%82%BF%E3%82%B0%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88/612</link><description>&lt;p&gt;自己レスですが、現在までに分かったことを記載します。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;coverageBEDはRNA-Seqのタグカウントには、極めて不向きです。 理由としては、exonと非転写領域、exonとintronの境界のリードをカウントしてしまいます。intron領域のリードもカウントする他、splicing junctionのリードもカウントします。最初にexon+intronをcoverageBEDで数えたあとに、intron領域に張り付いたリードを引くことを試しましたが、intron領域のタグカウント時に、splicing junctionをまたぐ単一リードが複数回カウントされる可能性がある上、この影響は、junctionの数や、exon長などいろいろな要素に影響を受ける為、このカウントのしかたは、厳密性に問題がありすぎます。&lt;/li&gt;
+&lt;li&gt;getGeneExpについて 遺伝子単位での計測には、ほぼ問題ないものの、ゲノム上で重複する遺伝子(例えばAPITD1とAPITD1-CORT)の重複領域のタグを"保守的"に数えないので、解析の目的によっては支障があるかもしれません。無理やり、splicing valiantに別IDをふってカウントすると、variantのある遺伝子の殆どのタグが0になってしまったりします。&lt;/li&gt;
+&lt;li&gt;DESeqのマニュアルで、お勧めされているHTSeqは、splicing junctionをまたぐリードを計上してくれます。しかし、exonをskipするjunctionなども、領域に内に含まれていれば計上されるので、cufflinksのような、splicing junctionに特化した厳密性はないことを考慮する必要がありそうです。また、ゲノム中で重複する遺伝子のカウントは、getGeneExp同様、カウントしてくれません。splicing variant用のカウントには不向きかと。&lt;/li&gt;
+&lt;li&gt;cufflinks2でタグカウント値を出してくれます。まだ詳しく把握できていませんが、ばらつきの情報などもあるようです。これを使うのがやはり最も素直でしょうか。ただ、小数のjunctionをまたぐリードの比率で、比率が大きく変わってしまう点が、検定する側のプログラム(edgeRやらDEseqやら)の前提を満たしているのかが気になります。もし、どこそこにその辺の議論が書いてあるなどの情報ありましたら、お知らせいただけると幸いです。&lt;/li&gt;
+&lt;li&gt;cufflinksなどで、予測されたトランスクリプトや、既知トランスクリプトの領域情報から配列を切り出し、bowtie等でリードをトランスクリプト配列に再マップしてカウントする方法を知人に示唆されました。この方法では、splicing-junctionにマップされずらいなどのバイアスを考えなくても良いので、再マップの実行時間(それほど大したことはないですが)を抜きにすれば一番シンプルかもしれません。トランスクリプトの情報に依存する点と、マッピング時のマルチヒットの扱いには留意が必要だとは思います。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;もし、間違っていたり、関連情報ありましたらコメント等引き続きお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Wed, 11 Jul 2012 21:01:38 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/581/%E3%83%AA%E3%83%BC%E3%83%89%E9%95%B7%E3%81%AE%E9%95%B7%E3%81%84rna-seq%E3%81%AE%E3%82%BF%E3%82%B0%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88/612</guid></item><item><title>Answer by yuifu</title><link>http://qa.lifesciencedb.jp/questions/581/%E3%83%AA%E3%83%BC%E3%83%89%E9%95%B7%E3%81%AE%E9%95%B7%E3%81%84rna-seq%E3%81%AE%E3%82%BF%E3%82%B0%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88/582</link><description>&lt;blockquote&gt;
+&lt;p&gt;同bamをcoverageBEDで"-splice"オプションを付けても、 イントロン領域のタグも含めてカウントしてしまいます。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;coverageBedの -b オプションには遺伝子アノテーションのファイルを指定しているのでしょうか？
+bam を bamToBed -split でBEDに変換してからcoverageBedをかけたら、うまくいきそうな気がします。&lt;/p&gt;
+&lt;p&gt;それでもダメなら、イントロン領域にあるタグ（の部分）を intersectBedで削るとうまく行くかもしれません。
+- mergeBed -i annotation.gff &amp;gt; annotation.merge.bed
+- bamToBed -split -i accepted_hits.bam &amp;gt; accepted_hits.bed
+- intersectBed -a accepted_hits.bed -b annotation.merge.bed &amp;gt; accepted_hits.exon.bed
+- accepted_hits.exon.bed にcoverageBedをかける&lt;/p&gt;
+&lt;p&gt;試してないので、うまく動くか分かりませんが、&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">yuifu</dc:creator><pubDate>Tue, 03 Apr 2012 20:27:47 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/581/%E3%83%AA%E3%83%BC%E3%83%89%E9%95%B7%E3%81%AE%E9%95%B7%E3%81%84rna-seq%E3%81%AE%E3%82%BF%E3%82%B0%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88/582</guid></item></channel></rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: Affymetrix Power Toolsについて</title><link>http://qa.lifesciencedb.jp/questions/629/affymetrix-power-tools%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;Affymetrix Power Toolsについての質問です。
+CELファイルからprobe set IDをマージして、テキストファイルに変換したいのですが、以下のメッセージが出てしまい変換できません。&lt;/p&gt;
+&lt;p&gt;'apt-cel-convert' is not recognized as an internal or external command, operable program or batch file.
+どなたか解決方法を教えて頂けないでしょうか？&lt;/p&gt;
+&lt;p&gt;使用しているAffymetrix Power Toolsは「APT-1.14.2」です。
+英語環境のwindowsを使っています。&lt;/p&gt;
+&lt;p&gt;commandについての知識がありませんので、出来るだけ詳しく教えて頂けたらと思います。
+皆さまのお知恵を貸してください、どうぞよろしくお願いします。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/629/affymetrix-power-tools%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Wed, 07 Nov 2012 14:43:08 +0900</lastBuildDate><item><title>Answer by hub</title><link>http://qa.lifesciencedb.jp/questions/629/affymetrix-power-tools%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/641</link><description>&lt;p&gt;もちろん、すでにそうされているとは思いますが…&lt;/p&gt;
+&lt;p&gt;Affymetrix社に問い合わせてみましたでしょうか？
+http://www.affymetrix.com/jp/products_services/ordering/index.affx&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">hub</dc:creator><pubDate>Wed, 07 Nov 2012 14:43:08 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/629/affymetrix-power-tools%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/641</guid></item><item><title>Comment by WAKAB on ma_ko's 回答</title><link>http://qa.lifesciencedb.jp/questions/629/affymetrix-power-tools%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#632</link><description>&lt;p&gt;こんにちは。
+mokoさんと一緒に研究しているものです。
+ma_koさんにお答えいただいた通りに行ってみたのですが、同じ表示がでてうまく起動しませんでした。
+今は、自分なりにしらべて　R+Bioconductorでなんとかしようとしているのですが、、、&lt;/p&gt;
+&lt;p&gt;もし、他にお思いつかれた解決案がございましたら、教えていただきたく思います。よろしくお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">WAKAB</dc:creator><pubDate>Wed, 03 Oct 2012 13:29:15 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/629/affymetrix-power-tools%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#632</guid></item><item><title>Answer by ma_ko</title><link>http://qa.lifesciencedb.jp/questions/629/affymetrix-power-tools%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/630</link><description>&lt;p&gt;こんにちは、Windows 詳しくないので分かる範囲でだけですが。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;apt-cel-convert があるディレクトリ (フォルダ) まで移動した上で ./apt-cel-convert としてみるとメッセージが変わりませんか?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;"is not recognized as an internal or external command, operable program or batch file." をグーグルなどで検索すると、Windows の PATH 設定の問題かインストールの不成功であるようです。PATH 設定の場合は上に示した1の方法で動くように思います。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ma_ko</dc:creator><pubDate>Sat, 15 Sep 2012 23:20:31 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/629/affymetrix-power-tools%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/630</guid></item></channel></rss>

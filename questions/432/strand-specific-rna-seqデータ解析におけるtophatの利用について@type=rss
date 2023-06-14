@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: strand specific RNA-Seqデータ解析におけるtophatの利用について</title><link>http://qa.lifesciencedb.jp/questions/432/strand-specific-rna-seq%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Btophat%E3%81%AE%E5%88%A9%E7%94%A8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;strand specific RNA-Seqデータ解析におけるtophatの利用について質問させてください。
+現在SOLiD™ Whole Transcriptome Analysis Kitで得られたstrand specific RNA-Seqのデータを解析しております。&lt;/p&gt;
+&lt;p&gt;tophatとcufflinksを用いて発現量について観ようとしているのですが、
+tophatのlibrary-typeをtophatのマニュアル通りに
+&lt;code&gt;--library-type fr-secondstrand&lt;/code&gt;
+と指定すると
+その後cuffcompareをかけたときのClass Codesが
+cが3765
+eが122
+xが10668
+とあまりにもxが多い結果となっています。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;--library-type fr-firststrand&lt;/code&gt;
+で行ってみると
+cが9739
+eが6870
+xが33
+となります。&lt;/p&gt;
+&lt;p&gt;この結果から本当に &lt;code&gt;--library-type fr-secondstrand&lt;/code&gt; をつかっていいものかと思っています。&lt;/p&gt;
+&lt;p&gt;tophatのマニュアルにをよく読むと
+&lt;code&gt;fr-firststrand&lt;/code&gt;はdUTP, NSR, NNSR
+&lt;code&gt;fr-secondstrand&lt;/code&gt;    はLigation, Standard SOLiD
+に適していると書かれています。&lt;/p&gt;
+&lt;p&gt;私は一般的なRNA ligationを用いたstrand specificなRNA-Seqはfirst strandを
+dUTPやNNSRはsecond strandをシーケンスすると思っていたのでが違うのでしょうか？
+それともtophatのマニュアルがまちがえているのでしょうか。&lt;/p&gt;
+&lt;p&gt;以上長文となってしまいましたが質問させていただければと思います。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/432/strand-specific-rna-seq%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Btophat%E3%81%AE%E5%88%A9%E7%94%A8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Sat, 30 Apr 2011 02:53:27 +0900</lastBuildDate><item><title>Answer by snk_u</title><link>http://qa.lifesciencedb.jp/questions/432/strand-specific-rna-seq%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Btophat%E3%81%AE%E5%88%A9%E7%94%A8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/434</link><description>&lt;p&gt;夜分遅くに回答ありがとうございます。&lt;/p&gt;
+&lt;p&gt;やはりTopHatのssRNA-Seqの解析は少し微妙といったところなのでしょうか...&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">snk_u</dc:creator><pubDate>Sat, 30 Apr 2011 02:53:27 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/432/strand-specific-rna-seq%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Btophat%E3%81%AE%E5%88%A9%E7%94%A8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/434</guid></item><item><title>Answer by gaou</title><link>http://qa.lifesciencedb.jp/questions/432/strand-specific-rna-seq%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Btophat%E3%81%AE%E5%88%A9%E7%94%A8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/433</link><description>&lt;p&gt;直接の回答になるわけではないですが、同様の質問がSEQanswersにもありました。
+&lt;a href="http://seqanswers.com/forums/showthread.php?t=10810"&gt;http://seqanswers.com/forums/showthread.php?t=10810&lt;/a&gt;
+どうもTopHatの挙動が微妙なようですね。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">gaou</dc:creator><pubDate>Sat, 30 Apr 2011 02:44:26 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/432/strand-specific-rna-seq%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Btophat%E3%81%AE%E5%88%A9%E7%94%A8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/433</guid></item></channel></rss>

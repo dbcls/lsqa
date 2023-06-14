@@ -1,0 +1,1635 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>すべての質問 - #LSQA</title>
+        <meta name="description" content="質問と回答と私">
+        <meta name="keywords" content="OSQA,CNPROG,forum,community,lifesciencedb.jp,DDBJ,PDBj,DBCLS,Cytoscape,NGS,ngs-field">
+        
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="index.html@type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="../upfiles/favicon.ico" />
+        <link href="../m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="../cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='../m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        <link rel="search" type="application/opensearchdescription+xml" href="../opensearch.xml.html" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="../index.html">
+				<img src="../upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="../account/yahoo/signin/index.html" >ログイン</a>  <a href="../about/index.html" >概要</a>  <a href="../faq/index.html" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="index.html" >質問</a><a id="nav_tags" href="../tags/index.html" >タグ</a><a id="nav_users" href="http://qa.lifesciencedb.jp/users/" >ユーザー</a><a id="nav_badges" href="../badges/index.html" >バッジ</a><a id="nav_unanswered" href="unanswered/index.html" >未回答</a>
+        <a id="nav_ask" href="ask/index.html" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="http://qa.lifesciencedb.jp/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+
+<div class="tabBar">
+    
+
+<div class="headQuestions">
+    
+        
+            
+                
+                    すべての質問
+                
+            
+        
+    
+</div>
+    <a class="feed-icon" style="background-image:url('../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');" href="index.html@type=rss" title="subscribe to question RSS feed"></a>
+    
+<div class="tabsA"><a href="index.html@sort=有効.html" title="最近更新された質問">有効</a><a href="index.html@sort=最新.html" class="on" title="最近尋ねられた質問">最新</a><a href="index.html@sort=ホット.html" title="最近２４時間でもっとも活発な質問">ホット</a><a href="index.html@sort=mostvoted.html" title="もっとも投票された質問">注目の質問</a></div>
+</div>
+<div id="listA">
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  unanswered">
+            <div class="item-count">0</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">6.3k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="とある生物のゲノムを解読しました。
+遺伝子を同定するためにRNA-seqを行いましたが、発現が低い遺伝子や特異的に発現する遺伝子は見逃していると思います。
+そこで、以下のサイトの通りに、RNA-seqで得られたイントロン情報をAUGUSTUSに読み込ませて、RNA-seqでは同定が難しい遺伝子を予測しようとしました。
+http://bioinf.uni-greifswald.de/bioinf/wiki/pmwiki.php?n=IncorporatingRNAseq.Tophat
+5.のイントロン情報の作成まで行い、6.パラメーターの設定は入っていたファイルをコピーし、実際AUGUSTUSを" href="../mark_favorite/701/index.html">AUGUSTUSを使った遺伝子予測</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-12-04 11:45:53.927639">Dec 04 '13 at 11:45</span>
+            <a href="http://qa.lifesciencedb.jp/users/88/pan/">pan</a><span class="score" title="1 信用度">1</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/augustus/index.html" title="タグ付けされた質問をみる 'augustus' タグを利用している" rel="tag">augustus</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  unanswered">
+            <div class="item-count">0</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">3.4k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="私の理解では、リードアーカイブのDRA ERA SRAは、メタデータに関しては同じものを持っているのだと思っていたのですが、
+偶然以下の一致しないケースに遭遇しました。
+ケースバイケースなのかと思いますが、今回は状況から考えるとSRAの方が間違っていそうな気がします。
+DRA/ERA/SRAの全てで間違っているのであれば分かりますが、SRAだけ間違っているように見える点について、
+どういう状況でこういうことが起こるのか、詳しい方がおられましたら、コメントくださると幸いです。
+(更新頻度？同期のタイミング？そもそも同じでない？)
+尚、不整合の件に関しては、以前こちらの質疑(LSQA(SRAへの間" href="../mark_favorite/699/index.html">Entrez SRAとDRA Searchはどちらが正しい？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-11-28 10:44:31.367854">Nov 28 '13 at 10:44</span>
+            <a href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a><span class="score" title="507 信用度">507</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/sra/index.html" title="タグ付けされた質問をみる 'sra' タグを利用している" rel="tag">sra</a>
+            <a href="../tags/era/index.html" title="タグ付けされた質問をみる 'era' タグを利用している" rel="tag">era</a>
+            <a href="../tags/drasearch/index.html" title="タグ付けされた質問をみる 'drasearch' タグを利用している" rel="tag">drasearch</a>
+            <a href="../tags/メタデータ/index.html" title="タグ付けされた質問をみる 'メタデータ' タグを利用している" rel="tag">メタデータ</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">2.2k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="統合TVには日頃大変お世話になっております、生命情報を勉強する学生です。
+下記URLのBioPortalとProtegeに関する金さんの講義ですが、
+PDFの発表資料のリンクが見れません。
+RDFに関する研究をしており、是非拝見したく質問させていただきました。
+どうぞ宜しくお願い致します
+http://togotv.dbcls.jp/20111217.html" href="../vote/697/down/index.html">BioPortalとProtegeに関する発表資料について</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-10-29 15:41:24.107402">Oct 29 '13 at 15:41</span>
+            <a href="http://qa.lifesciencedb.jp/users/133/kota/">kota</a><span class="score" title="11 信用度">11</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/bioportal/index.html" title="タグ付けされた質問をみる 'bioportal' タグを利用している" rel="tag">bioportal</a>
+            <a href="../tags/protege/index.html" title="タグ付けされた質問をみる 'protege' タグを利用している" rel="tag">protege</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">3</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">9.3k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="NGSデータ解析についてご教授いただけると幸いです。
+目的としましては、NGSデータを用いたゲノム解析のために、 Mac 64bits のPC をセットアップし、Linux OS Ubuntuをインストールする予定にしています。
+
+どこのサイトからダウンロードが可能でしょうか？
+またUbuntu64bits用は不具合が生じるとのうわさを耳にしましたが、動作状況
+   など、32bitsの方が良いなど、教えていただけると幸いです
+もし不具合がある場合、64bitsマシンでも32bits用が動作するのでしょうか？
+もしくはその他、お薦めを教えていただけると助かります。
+
+どうぞ宜しくお願いいたしま" href="../vote/698/down/index.html">NGSデータ解析のためにMacにUbuntuをインストールする</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-11-01 15:27:21.704431">Nov 01 '13 at 15:27</span>
+            <a href="http://qa.lifesciencedb.jp/users/132/tomonari/">tomonari</a><span class="score" title="1 信用度">1</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/linux/index.html" title="タグ付けされた質問をみる 'linux' タグを利用している" rel="tag">linux</a>
+            <a href="../tags/mac/index.html" title="タグ付けされた質問をみる 'mac' タグを利用している" rel="tag">mac</a>
+            <a href="../tags/ngs/index.html" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+            <a href="../tags/ubuntu/index.html" title="タグ付けされた質問をみる 'ubuntu' タグを利用している" rel="tag">ubuntu</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">4.0k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="SRAやDRAへの登録エントリー情報などで、明らかな間違いを見つけた場合、
+どこかに訂正依頼を連絡した方が良いのでしょうか。
+直接NCBIやDDBJに聞け！と言われそうな気もしますが、
+同じように間違いを見つけて「まぁ、いいか」と
+してしまう場合も多そうな気がしたので、
+敢えてこちらで質問させていただきました。
+※一応SRA handbookで&quot;correction&quot;を探してみましたが特に記載はありませんでした。
+一例として、こちらにも詳細を記載していますが、
+SRA012435　UCSD-CpgMIP-targeted-bisulfite-sequencing-paired
+DRA Sear" href="../vote/688/down/index.html">SRAへの間違いの訂正from第三者</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-09-10 22:16:51.943423">Sep 10 '13 at 22:16</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/鎖鋸/index.html" title="タグ付けされた質問をみる '鎖鋸' タグを利用している" rel="tag">鎖鋸</a>
+            <a href="../tags/sra/index.html" title="タグ付けされた質問をみる 'sra' タグを利用している" rel="tag">sra</a>
+            <a href="../tags/ncbi/index.html" title="タグ付けされた質問をみる 'ncbi' タグを利用している" rel="tag">ncbi</a>
+            <a href="../tags/drasearch/index.html" title="タグ付けされた質問をみる 'drasearch' タグを利用している" rel="tag">drasearch</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">7.0k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="最近，RDFを書き始めました。セマンティックWebプログラミングの本を読んだり，ググったりはしているのですが，
+調べきれていないこともありそうに思い，また，時代は進歩しているに違いないという思いから，質問させて頂きました。
+１．RDF化に便利なツールについて
+私は疾患や薬に関するデータをRDF化しているのですが，皆さんはどんなツールを使ってRDF化していますか？
+今回はあまり，データ数が多くない表形式のデータなので，こちらを参考にして，Google Refineを使って今はRDF化しています。
+ConverterToRdf
+データが多くなった時には，プログラムで生成させるのが妥当だとも思うので" href="../vote/680/down/index.html">RDF化に便利なツールと疾患・薬のRDF化について</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-07-16 20:17:37.222741">Jul 16 '13 at 20:17</span>
+            <a href="http://qa.lifesciencedb.jp/users/131/maoringo/">Maoringo</a><span class="score" title="1 信用度">1</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/rdf/index.html" title="タグ付けされた質問をみる 'rdf' タグを利用している" rel="tag">rdf</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">5.5k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="植物の研究に携わっております。R-TipsによるGO解析のパッケージがありましたら、お教えいただきたく質問させて頂いております。現在の自分のGO解析の方法は、(1)TAIRの最新のデータベースより、GO番号とそこに帰属（？）されているATH遺伝子を入手して、エクセル表に入れます。(2)自分の研究材料はアラビドプシスではないので、解析したい遺伝子群の予測アミノ酸配列をBLASTPでATH遺伝子に対応をつけます（トップ・ホモロジーの1遺伝子に対応させています。ホモロジーの低いものはスコアーを指標に切っています）。(3)エクセル表中のGO-ATH遺伝子を、自分の遺伝子群（対応がついたATH遺伝子群）" href="../vote/687/down/index.html">R-TipsによるGO解析（遺伝子数の数え上げ）</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-07-31 00:06:03.367826">Jul 31 '13 at 00:06</span>
+            <a href="http://qa.lifesciencedb.jp/users/66/yuifu/">yuifu</a><span class="score" title="51 信用度">51</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/go/index.html" title="タグ付けされた質問をみる 'go' タグを利用している" rel="tag">go</a>
+            <a href="../tags/tair/index.html" title="タグ付けされた質問をみる 'tair' タグを利用している" rel="tag">tair</a>
+            <a href="../tags/r/index.html" title="タグ付けされた質問をみる 'r' タグを利用している" rel="tag">r</a>
+            <a href="../tags/検定/index.html" title="タグ付けされた質問をみる '検定' タグを利用している" rel="tag">検定</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">4.1k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="Galaxyをローカルマシンにインストールしています。ソースコードを取得して、sh run.sh して起動しただけでは、intervalデータ型のヒストリに、display at Ensembl は表示されましたが、display at UCSC main リンクが表示されませんでした。これを表示するにはどのように設定したらよいのでしょうか？" href="../vote/676/down/index.html">Galaxyのinterval型のヒストリにdisplay at UCSCリンクを表示する方法</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-05-25 12:12:12.991487">May 25 '13 at 12:12</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/ucsc/index.html" title="タグ付けされた質問をみる 'ucsc' タグを利用している" rel="tag">ucsc</a>
+            <a href="../tags/galaxy/index.html" title="タグ付けされた質問をみる 'galaxy' タグを利用している" rel="tag">galaxy</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">2.5k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="いつも大変お世話になっております。
+Ensemblのtranscripts idについてお伺いしたいのですが、
+ENST00000254657.3のようにドット３が付いているのは、
+isoformのtranscriptsが何らかの要因で3回情報が更新されている、
+といった意味だとうろ覚えの記憶があるのですがお詳しいかたいらっしゃいますでしょうか。
+ご回答、どうぞよろしくお願い申し上げます。
+suimye" href="../vote/672/down/index.html">ENST00000254657.3のどっと３について</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-05-12 10:50:36.961616">May 12 '13 at 10:50</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/database/index.html" title="タグ付けされた質問をみる 'database' タグを利用している" rel="tag">database</a>
+            <a href="../tags/id/index.html" title="タグ付けされた質問をみる 'id' タグを利用している" rel="tag">id</a>
+            <a href="../tags/ensembl/index.html" title="タグ付けされた質問をみる 'ensembl' タグを利用している" rel="tag">ensembl</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">49k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="いつも参考にさせてもらっています。
+今までAgilentのBioAnalyzerを使って、RNA-seqライブラリ調製前のTotal RNAを流していました。
+今回初めてTapeStationのR6Kで、Total RNAを流してみました。
+ヒトの全血からかなりキレイに取ったはずのTotal RNAが、RINの値が低め（6ぐらい）
+に出ています。以前、BioAanalyzerとTapeStationのRINの計算方法が異なると聞いた
+ことがありますが、実際にTapeStationを使われている方は、どう判断されているのでしょうか？" href="../vote/667/down/index.html">TapeStation でのRNAのRIN数値について</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-04-30 23:04:43.325075">Apr 30 '13 at 23:04</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/tapestation/index.html" title="タグ付けされた質問をみる 'tapestation' タグを利用している" rel="tag">tapestation</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  unanswered">
+            <div class="item-count">0</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">2.3k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="こんにちは。
+ライフサイエンス分野、とくにバイオインフォマティクス分野では、開発されるツールやソフトウェアの多くがオープンソースとなっていますが、「分野で最もソースコードが綺麗なソフトウェア」はなんでしょうか？
+「綺麗なソースコード」の定義は人によって違うかもしれませんが、可読性、保守・改良のしやすさなどが挙げられるかと思います。
+使用言語やソフトウェアの対象、ユーザ数や実用性を問わず、これぞというものがあれば教えていただきたいです。できれば、併せてポイントも。どうぞよろしくおねがいします。
+*追記
+バイオインフォ界隈のコーディング文化みたいなものはあるのか、あればどれくらい共有されているのか" href="../mark_favorite/665/index.html">ライフサイエンス分野で最も綺麗なソースコード</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-04-11 15:29:27.966780">Apr 11 '13 at 15:29</span>
+            <a href="http://qa.lifesciencedb.jp/users/61/inutano/">inutano</a><span class="score" title="16 信用度">16</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/software/index.html" title="タグ付けされた質問をみる 'software' タグを利用している" rel="tag">software</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">2</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">3.1k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="略語/展開形検索サービス「Allie」の検索語は大文字と小文字をどのように区別しているのでしょうか？
+大文字と小文字で入力した結果が異なることから、区別しているように思われます。
+結果を比較すると、
+
+大文字小文字の違いが完全にマッチしている略語
+大文字小文字の違いが完全にマッチしていない略語
+
+があります。
+&quot; 2. 大文字小文字の違いが完全にマッチしていない略語&quot;はどのような場合なのでしょうか？またどのように検索しているのでしょうか？
+詳しく教えていただければ幸いです。" href="../vote/661/down/index.html">略語/展開形検索サービス「Allie」は大文字と小文字をどのように区別しているのでしょうか？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-01-29 22:57:48.286693">Jan 29 '13 at 22:57</span>
+            <a href="http://qa.lifesciencedb.jp/users/96/hkanekane/">hkanekane</a><span class="score" title="21 信用度">21</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/ツール/index.html" title="タグ付けされた質問をみる 'ツール' タグを利用している" rel="tag">ツール</a>
+            <a href="../tags/使い方/index.html" title="タグ付けされた質問をみる '使い方' タグを利用している" rel="tag">使い方</a>
+            <a href="../tags/allie/index.html" title="タグ付けされた質問をみる 'allie' タグを利用している" rel="tag">allie</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  unanswered">
+            <div class="item-count">0</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">7.6k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="The R journal や R News は雑誌スタイルの PDF で発行されていて価値があるものです。これらをオンラインで全文検索する方法はどこかにあるのでしょうか？
+Google で site;journal.r-project.org にキーワードを加えて検索しましたが、それでPDF内部もちゃんともれなく検索できているのかやや不安でした。" href="../mark_favorite/654/index.html">The R journal の記事をダウンロードしないで全文検索する方法はありますか？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2012-12-07 00:45:36.350006">Dec 07 '12 at 00:45</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/r/index.html" title="タグ付けされた質問をみる 'r' タグを利用している" rel="tag">r</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">3.7k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="ローカルでGalaxyをセットアップして、大きなデータ（といってもGA125ペアエンド1ラン程度です）を扱おうと思っているのですが、デフォルトでは、データが同じマシン内なのにHTMLまたはFTPで転送しなくてはならず、これがものすごく遅い（というかおそらく進んでいない）のです。adminならばローカルのファイルを指定して直接いじることができるとのことですが、その方法をご存知の方がいたら教えて頂けないでしょうか？Galaxy wikiなどを見ましたが、答えをみつけられないのでこちらに相談しています。" href="../vote/650/down/index.html">ローカルのGalaxyで大きなファイルをuploadしないで読み込ませる方法</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-05-29 22:36:54.417496">May 29 '13 at 22:36</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/admin/index.html" title="タグ付けされた質問をみる 'admin' タグを利用している" rel="tag">admin</a>
+            <a href="../tags/large_data/index.html" title="タグ付けされた質問をみる 'large_data' タグを利用している" rel="tag">large_data</a>
+            <a href="../tags/local/index.html" title="タグ付けされた質問をみる 'local' タグを利用している" rel="tag">local</a>
+            <a href="../tags/galaxy/index.html" title="タグ付けされた質問をみる 'galaxy' タグを利用している" rel="tag">galaxy</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">32k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="論文のChIP-seq結果をまとめたfigureの解釈に関する質問です。
+自分ではChIP-seqを行ったことがなく、データ処理についての経験がありません。
+具体的にはhistoneのChIP-seqを行い、転写開始点(TSS)前後におけるhistone variantの分布を示したという図について縦軸（normalized reads; RRM）の値をどう解釈してよいのかが分かりません。
+本分からざっくりと意味はわかり、グラフのピークが示す山型を見ればよいと思うのですが、実際にどういう処理をして縦軸がだされたのか、その値は何を意味するのかが理解できません。
+こういうグラフを描くことについての" href="../vote/644/down/index.html">ChIP-seq figureの見かたにつきまして</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-03-11 23:24:17.897090">Mar 11 '13 at 23:24</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/chip-seq/index.html" title="タグ付けされた質問をみる 'chip-seq' タグを利用している" rel="tag">chip-seq</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">6.5k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="いつもお世話になっております。
+最近、次世代シークエンサーを使ったMegacloningという方法を知ったのですが、この他にも単純にDNA配列を読む以外に次世代シークエンサーの使い道はありますか？知っている方がいらっしゃれば教えてください。
+よろしくお願いします。" href="../vote/664/down/index.html">次世代シークエンサーの使い道</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-05-24 00:17:48.031114">May 24 '13 at 00:17</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/次世代シークエンサー/index.html" title="タグ付けされた質問をみる '次世代シークエンサー' タグを利用している" rel="tag">次世代シークエンサー</a>
+            <a href="../tags/使い道/index.html" title="タグ付けされた質問をみる '使い道' タグを利用している" rel="tag">使い道</a>
+            <a href="../tags/ngs/index.html" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">3.1k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="表題の件で、詳しい方におうかがいしたいのですが、
+自前のGalaxyサーバーのサイドバーにあるツールの項目が多くて、
+特に必要としない項目は隠しておこうと思っています。
+この場合は、どのファイルを編集すればよいでしょうか。
+ご存知のかた、いらっしゃいましたらどうぞよろしくお願い申し上げます。 
+" href="../vote/639/down/index.html">Galaxyのサイドバーツールの編集について</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2012-10-24 19:45:10.359206">Oct 24 '12 at 19:45</span>
+            <a href="http://qa.lifesciencedb.jp/users/20/yayamamo/">yayamamo ♦♦</a><span class="score" title="133 信用度">133</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/galaxy/index.html" title="タグ付けされた質問をみる 'galaxy' タグを利用している" rel="tag">galaxy</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">3.8k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="GATKなどでSNPをコールした後、snpEffなどを用いると、既知の変異について、日本、中国などといった地域ごとの頻度を取得することができるかと思います。
+しかし、現在解析している複数家系では、共通して高い頻度で生じている変異が、dbSNP、1000ゲノムなど、既知のDBに登録されていないこともあります。
+コントロールとして、正常検体をたくさん取得しておけばよかったのですが、ほぼ罹患個体のみをサンプリングしたため、これらの変異が疾患の原因なのか、日本人に多く生じる変異なのか判断が難しい状態です。
+せめて、1000ゲノムに登録されている日本人・百数十人には、まったく存在しないSNPであるかどう" href="../vote/635/down/index.html">SNPのアノテーションについて</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2012-10-24 23:08:03.894549">Oct 24 '12 at 23:08</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/snps/index.html" title="タグ付けされた質問をみる 'snps' タグを利用している" rel="tag">snps</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">3.4k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="いつもお世話になっております。
+早速質問なのですが、マウスのセントロメアとペリセントロメアの配列が載っているデータベースもしくは論文をご存知の方がいらっしゃれば教えてください。自分なりに探したのですが分かりませんでした。
+それではよろしくお願いします。" href="../vote/638/down/index.html">セントロメア配列を知りたい</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-05-24 00:22:38.586671">May 24 '13 at 00:22</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/セントロメア/index.html" title="タグ付けされた質問をみる 'セントロメア' タグを利用している" rel="tag">セントロメア</a>
+            <a href="../tags/配列/index.html" title="タグ付けされた質問をみる '配列' タグを利用している" rel="tag">配列</a>
+            <a href="../tags/データベース/index.html" title="タグ付けされた質問をみる 'データベース' タグを利用している" rel="tag">データベース</a>
+            <a href="../tags/database/index.html" title="タグ付けされた質問をみる 'database' タグを利用している" rel="tag">database</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">9.3k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="Affymetrix Power Toolsについての質問です。
+CELファイルからprobe set IDをマージして、テキストファイルに変換したいのですが、以下のメッセージが出てしまい変換できません。
+&#39;apt-cel-convert&#39; is not recognized as an internal or external command, operable program or batch file.
+どなたか解決方法を教えて頂けないでしょうか？
+使用しているAffymetrix Power Toolsは「APT-1.14.2」です。
+英語環境のwindowsを使っています。
+comm" href="../vote/641/down/index.html">Affymetrix Power Toolsについて</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2012-11-07 14:43:08.876550">Nov 07 '12 at 14:43</span>
+            <a href="http://qa.lifesciencedb.jp/users/5/hub/">hub ♦♦</a><span class="score" title="303 信用度">303</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/celfile/index.html" title="タグ付けされた質問をみる 'celfile' タグを利用している" rel="tag">celfile</a>
+            <a href="../tags/affymetrix/index.html" title="タグ付けされた質問をみる 'affymetrix' タグを利用している" rel="tag">affymetrix</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  unanswered">
+            <div class="item-count">0</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">4.5k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="de novo assemblyをしようとした場合、ヘテロなサイト（もしくはインデル）を含む場合（どのようなケースはbubbleと呼ばれていると思いますが）、de Bruijn graphを使ったアセンブラー（soapdenovo, allpath-lgなど）ではどのように処理しているのでしょうか？
+ざっくりとした質問で恐縮ですが何かしら教えていただけると幸いです。" href="../mark_favorite/623/index.html">de Bruijn graphを使ったアセンブラーのヘテロなサイトの取り扱いについて</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2012-10-24 23:12:28.314185">Oct 24 '12 at 23:12</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/bubble/index.html" title="タグ付けされた質問をみる 'bubble' タグを利用している" rel="tag">bubble</a>
+            <a href="../tags/de/index.html" title="タグ付けされた質問をみる 'de' タグを利用している" rel="tag">de</a>
+            <a href="../tags/assembly/index.html" title="タグ付けされた質問をみる 'assembly' タグを利用している" rel="tag">assembly</a>
+            <a href="../tags/bruijn/index.html" title="タグ付けされた質問をみる 'bruijn' タグを利用している" rel="tag">bruijn</a>
+            <a href="../tags/graph/index.html" title="タグ付けされた質問をみる 'graph' タグを利用している" rel="tag">graph</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">1.7k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="シロイヌナズナフロリゲンFTによって活性化するAP1は
+①どの程度の量のFTよって
+②どの程度AP1増加するのか、
+③またAP1の活性が最大になるのはFT発現後どのくらい経過しているのか
+などが知りたいです。論文など漁ってみたのですが見つからなく・・・" href="../vote/622/down/index.html">フロリゲン活性によるAP1の増加</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2012-10-24 23:10:55.566766">Oct 24 '12 at 23:10</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/ftap1/index.html" title="タグ付けされた質問をみる 'ftap1' タグを利用している" rel="tag">ftap1</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">9.1k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="ChEMBLを利用していますが、化合物情報をsdf形式でダウンロードするにはどうすればいいのでしょうか？
+例) CHEMBL1134744  Bioorg. Med. Chem. Lett. (2001) 11:2951-2954" href="../vote/620/down/index.html">ChEMBLでSDFのダウンロードの仕方</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2012-08-30 03:42:27.588947">Aug 30 '12 at 03:42</span>
+            <a href="http://qa.lifesciencedb.jp/users/115/zgmfx20a/">zgmfx20a</a><span class="score" title="11 信用度">11</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/cheminformatics/index.html" title="タグ付けされた質問をみる 'cheminformatics' タグを利用している" rel="tag">cheminformatics</a>
+            <a href="../tags/chemistry/index.html" title="タグ付けされた質問をみる 'chemistry' タグを利用している" rel="tag">chemistry</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">2</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">2.8k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="統合TVに関する問い合せです。
+http://togotv.dbcls.jp/20110223.html?86#p01
+の【ダイジェスト】を利用していたところ、2以降のリンクが日付が間違っているためか、別のテレビ番組に移動してしまうのを見つけましたのでお知らせします。" href="../vote/616/down/index.html">統合TVに関する問い合せ</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2012-08-01 23:59:20.604331">Aug 01 '12 at 23:59</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/統合tv/index.html" title="タグ付けされた質問をみる '統合tv' タグを利用している" rel="tag">統合tv</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">5.3k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="Wikiによるとプロモーター配列は「転写開始に関与する遺伝子の上流配列」とのことのようです。一方で、例えば、Arabidopsisだとftp://ftp.arabidopsis.org/home/tair/Sequences/blast_datasets/TAIR10_blastsets/upstream_sequences/から上流配列を取得できます。論文中では、よく「プロモーター配列のデータセット」などという記述をしています。感覚的には「上流配列とプロモーター配列」は同じ意味で使っているはず、ですが、実は「上流配列」というのは「”転写開始に関与する上流配列（これがプロモーター配列）”、と”" href="../vote/610/down/index.html">上流配列とプロモーター配列って同じ意味？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-03-11 23:26:24.852384">Mar 11 '13 at 23:26</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/プロモーター/index.html" title="タグ付けされた質問をみる 'プロモーター' タグを利用している" rel="tag">プロモーター</a>
+            <a href="../tags/モチーフ/index.html" title="タグ付けされた質問をみる 'モチーフ' タグを利用している" rel="tag">モチーフ</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">3</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">9.4k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="NGSのdata解析の全くの初心者です。
+一本鎖DNA由来のライブラリーをpair-endで読んだ後のBowtieによるMapping時のoptionについて質問です。
+MeDIP-seqの要領で、Illumina Truseqのライブラリーから一本鎖を選択的に精製したライブラリーをPCRで増幅後pair-endのsequenceingを行いました。BowtieでMappingする際、精製したライブラリーのstrandの情報を維持した状態でmappingの結果を得るためには、一つ目（-1）を&quot;Read1&quot;、二つ目 （-2）を ”Read2のreverse complement”として、pair" href="../vote/598/down/index.html">Bowtieのpair-end mappingのオプションについて</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2012-04-24 16:41:56.489451">Apr 24 '12 at 16:41</span>
+            <a href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a><span class="score" title="507 信用度">507</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/bowtie/index.html" title="タグ付けされた質問をみる 'bowtie' タグを利用している" rel="tag">bowtie</a>
+            <a href="../tags/pair-end/index.html" title="タグ付けされた質問をみる 'pair-end' タグを利用している" rel="tag">pair-end</a>
+            <a href="../tags/strand/index.html" title="タグ付けされた質問をみる 'strand' タグを利用している" rel="tag">strand</a>
+            <a href="../tags/illumina/index.html" title="タグ付けされた質問をみる 'illumina' タグを利用している" rel="tag">illumina</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">14k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="NGSのdataやUnixコマンドなどほとんど触ったことがなかった初心者です。
+Excel fileで持っているゲノム領域の情報をBEDフォーマットのfileにしたいのですが、やり方がわかりません。アドバイスいただけましたら幸甚です。
+今、BEDToolsのcoverageBedのスクリプトを実行しようとしているのですが、read countを知りたい領域のBED fileがうまく出来ないために白紙の結果が得られてしまいます。具体的には、chrom　chromStart　chromEnd　name　score　strandの順に並んだExcel fileをタブ区切りテキスト(.txt)で保存し" href="../vote/590/down/index.html">Excel fileからBEDフォーマットのfileを作るには？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-05-24 00:27:49.478970">May 24 '13 at 00:27</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/bedtools/index.html" title="タグ付けされた質問をみる 'bedtools' タグを利用している" rel="tag">bedtools</a>
+            <a href="../tags/excel/index.html" title="タグ付けされた質問をみる 'excel' タグを利用している" rel="tag">excel</a>
+            <a href="../tags/file/index.html" title="タグ付けされた質問をみる 'file' タグを利用している" rel="tag">file</a>
+            <a href="../tags/bed/index.html" title="タグ付けされた質問をみる 'bed' タグを利用している" rel="tag">bed</a>
+            <a href="../tags/ngs/index.html" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  unanswered">
+            <div class="item-count">0</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">2.0k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="もしご存知の方がいらっしゃれば教えていただきたいのですが、
+Bgr(Binary graph formart)ファイルを元のSgrファイルに変換する方法または
+フリーソフトはありませんでしょうか？" href="../mark_favorite/585/index.html">BgrフォーマットのSgrフォーマットへの変換</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2012-04-13 03:19:14.320556">Apr 13 '12 at 03:19</span>
+            <a href="http://qa.lifesciencedb.jp/users/46/tanakky/">Tanakky</a><span class="score" title="121 信用度">121</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/bgr/index.html" title="タグ付けされた質問をみる 'bgr' タグを利用している" rel="tag">bgr</a>
+            <a href="../tags/sgr/index.html" title="タグ付けされた質問をみる 'sgr' タグを利用している" rel="tag">sgr</a>
+            <a href="../tags/変換/index.html" title="タグ付けされた質問をみる '変換' タグを利用している" rel="tag">変換</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">3</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">10k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="もしかしたら、常識かもしれないので、
+情報お持ちのかたがおられたら、お願いします。
+topHatやmapSpliceなど、splicingを考慮したマッパーの結果から、
+遺伝子レベルのタグカウントを計算するうまいやり方など、
+情報お持ちのかたがおられましたら、
+お知らせいただけますと助かります。
+以下背景
+topHat-cufflinks-cuffdiffや、それに類似のフローが
+デファクトスタンダード的解析であると知りつつ、
+リード長の長いRNA-SeqにedgeR等をかけるやりかたを考えています。
+edgeRなどのDEG検出用のRパッケージ等は、
+fpkm/rpkmは使わないように推奨して" href="../vote/612/down/index.html">リード長の長いRNA-Seqのタグカウント</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2012-07-19 21:52:09.096286">Jul 19 '12 at 21:52</span>
+            <a href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a><span class="score" title="507 信用度">507</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/tophat/index.html" title="タグ付けされた質問をみる 'tophat' タグを利用している" rel="tag">tophat</a>
+            <a href="../tags/ngs/index.html" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+            <a href="../tags/rna-seq/index.html" title="タグ付けされた質問をみる 'rna-seq' タグを利用している" rel="tag">rna-seq</a>
+            <a href="../tags/long/index.html" title="タグ付けされた質問をみる 'long' タグを利用している" rel="tag">long</a>
+            <a href="../tags/splicing-junction/index.html" title="タグ付けされた質問をみる 'splicing-junction' タグを利用している" rel="tag">splicing-junction</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">9.4k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="タイトルのままなのですが、、、。
+http://emboss.dbcls.jp/
+にアクセスできません。
+もうサービスは終了したのでしょうか？
+また、
+http://togotv.dbcls.jp/20081129.html#p01
+の番組へのリンクがなくなっているようにも見えます（クリックするといけますが...）、これは上記の事柄と関係しているのでしょうか？" href="../vote/572/down/index.html">DBCLS提供のEMBOSS Explorerにアクセスできないのはたまたま？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-05-14 00:31:12.268049">May 14 '13 at 00:31</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../tags/emboss/index.html" title="タグ付けされた質問をみる 'emboss' タグを利用している" rel="tag">emboss</a>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+    <div class="boxC"><div class="questions-count">
+        202<span style="color:black;font-size:14px;margin-left:5px">質問</span></div><div class="questions-count">
+        324<span style="color:black;font-size:14px;margin-left:5px">回答</span></div><div><p class="nomargin"><strong>最近尋ねられた</strong>質問
+        </p></div></div>
+    
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>ただいまベータテスト運用中です。そのために通知無くコンテンツの変更やサービスの停止変更されることがあります。</h2>
+<p>質問するなら<a href="../index.html">ライフサイエンスQA</a>。</p>
+<p>このページの<a href="index.html@type=rss">RSSフィード</a></p>
+<p><a href="http://twitter.com/lsqa_all">@lsqa_all</a>・<a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a></p>
+     </div>
+</div>
+
+    
+
+
+
+
+    
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>世界に広がるQAサイト</h2>
+<p><a href="http://biostar.stackexchange.com">バイオインフォマティクスのBioStar</a>・ <a href="http://I.SEQanswers.com">新型シーケンサーのSEQanswers</a>・ <a href="http://blueobelisk.shapado.com">オープンデータのBlueObelisk</a>・<a href="http://stackoverflow.com">プログラミングのstackoverflow</a>・ <a href="http://www.semanticoverflow.com">Semantic Overflow</a>・ <a href="http://stats.stackexchange.com/">Statistical Analysis</a>・ <a href="http://cstheory.stackexchange.com/">Theoretical Computer Science</a>・ <a href="http://chiebukuro.yahoo.co.jp/">Yahoo!知恵袋</a>・ <a href="http://okwave.jp/">OKWave</a> <a href="http://ja.wikipedia.org/wiki/Category:Q%26Aサイト">などなど</a></p>
+     </div>
+</div>
+
+    
+
+
+
+    <div class="boxC">
+        <h3 class="subtitle">タグ</h3>
+        <div class="tags" id="recent-tags">
+            
+                <a rel="tag" title="'ngs'タグづけられた質問をみる"  href="../tags/ngs/index.html">ngs</a>
+                <span class="tag-number">&#215; 47</span>
+                <br />
+            
+                <a rel="tag" title="'rna-seq'タグづけられた質問をみる"  href="../tags/rna-seq/index.html">rna-seq</a>
+                <span class="tag-number">&#215; 13</span>
+                <br />
+            
+                <a rel="tag" title="'sra'タグづけられた質問をみる"  href="../tags/sra/index.html">sra</a>
+                <span class="tag-number">&#215; 13</span>
+                <br />
+            
+                <a rel="tag" title="'使い方'タグづけられた質問をみる"  href="../tags/使い方/index.html">使い方</a>
+                <span class="tag-number">&#215; 10</span>
+                <br />
+            
+                <a rel="tag" title="'r'タグづけられた質問をみる"  href="../tags/r/index.html">r</a>
+                <span class="tag-number">&#215; 8</span>
+                <br />
+            
+                <a rel="tag" title="'chip-seq'タグづけられた質問をみる"  href="../tags/chip-seq/index.html">chip-seq</a>
+                <span class="tag-number">&#215; 7</span>
+                <br />
+            
+                <a rel="tag" title="'bowtie'タグづけられた質問をみる"  href="../tags/bowtie/index.html">bowtie</a>
+                <span class="tag-number">&#215; 6</span>
+                <br />
+            
+                <a rel="tag" title="'galaxy'タグづけられた質問をみる"  href="../tags/galaxy/index.html">galaxy</a>
+                <span class="tag-number">&#215; 6</span>
+                <br />
+            
+                <a rel="tag" title="'ncbi'タグづけられた質問をみる"  href="../tags/ncbi/index.html">ncbi</a>
+                <span class="tag-number">&#215; 6</span>
+                <br />
+            
+                <a rel="tag" title="'tophat'タグづけられた質問をみる"  href="../tags/tophat/index.html">tophat</a>
+                <span class="tag-number">&#215; 6</span>
+                <br />
+            
+                <a rel="tag" title="'データベース'タグづけられた質問をみる"  href="../tags/データベース/index.html">データベース</a>
+                <span class="tag-number">&#215; 6</span>
+                <br />
+            
+                <a rel="tag" title="'ucsc'タグづけられた質問をみる"  href="../tags/ucsc/index.html">ucsc</a>
+                <span class="tag-number">&#215; 5</span>
+                <br />
+            
+                <a rel="tag" title="'ensembl'タグづけられた質問をみる"  href="../tags/ensembl/index.html">ensembl</a>
+                <span class="tag-number">&#215; 4</span>
+                <br />
+            
+                <a rel="tag" title="'assembly'タグづけられた質問をみる"  href="../tags/assembly/index.html">assembly</a>
+                <span class="tag-number">&#215; 3</span>
+                <br />
+            
+                <a rel="tag" title="'database'タグづけられた質問をみる"  href="../tags/database/index.html">database</a>
+                <span class="tag-number">&#215; 3</span>
+                <br />
+            
+                <a rel="tag" title="'illumina'タグづけられた質問をみる"  href="../tags/illumina/index.html">illumina</a>
+                <span class="tag-number">&#215; 3</span>
+                <br />
+            
+                <a rel="tag" title="'augustus'タグづけられた質問をみる"  href="../tags/augustus/index.html">augustus</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'drasearch'タグづけられた質問をみる"  href="../tags/drasearch/index.html">drasearch</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'emboss'タグづけられた質問をみる"  href="../tags/emboss/index.html">emboss</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'mac'タグづけられた質問をみる"  href="../tags/mac/index.html">mac</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'rdf'タグづけられた質問をみる"  href="../tags/rdf/index.html">rdf</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'snps'タグづけられた質問をみる"  href="../tags/snps/index.html">snps</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'splicing-junction'タグづけられた質問をみる"  href="../tags/splicing-junction/index.html">splicing-junction</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'ツール'タグづけられた質問をみる"  href="../tags/ツール/index.html">ツール</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'プロモーター'タグづけられた質問をみる"  href="../tags/プロモーター/index.html">プロモーター</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'統合tv'タグづけられた質問をみる"  href="../tags/統合tv/index.html">統合tv</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'admin'タグづけられた質問をみる"  href="../tags/admin/index.html">admin</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'affymetrix'タグづけられた質問をみる"  href="../tags/affymetrix/index.html">affymetrix</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'allie'タグづけられた質問をみる"  href="../tags/allie/index.html">allie</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'bed'タグづけられた質問をみる"  href="../tags/bed/index.html">bed</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'bedtools'タグづけられた質問をみる"  href="../tags/bedtools/index.html">bedtools</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'bgr'タグづけられた質問をみる"  href="../tags/bgr/index.html">bgr</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'bioportal'タグづけられた質問をみる"  href="../tags/bioportal/index.html">bioportal</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'bruijn'タグづけられた質問をみる"  href="../tags/bruijn/index.html">bruijn</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'bubble'タグづけられた質問をみる"  href="../tags/bubble/index.html">bubble</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'celfile'タグづけられた質問をみる"  href="../tags/celfile/index.html">celfile</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'cheminformatics'タグづけられた質問をみる"  href="../tags/cheminformatics/index.html">cheminformatics</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'chemistry'タグづけられた質問をみる"  href="../tags/chemistry/index.html">chemistry</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'de'タグづけられた質問をみる"  href="../tags/de/index.html">de</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'era'タグづけられた質問をみる"  href="../tags/era/index.html">era</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'excel'タグづけられた質問をみる"  href="../tags/excel/index.html">excel</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'file'タグづけられた質問をみる"  href="../tags/file/index.html">file</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'ftap1'タグづけられた質問をみる"  href="../tags/ftap1/index.html">ftap1</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'go'タグづけられた質問をみる"  href="../tags/go/index.html">go</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'graph'タグづけられた質問をみる"  href="../tags/graph/index.html">graph</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'id'タグづけられた質問をみる"  href="../tags/id/index.html">id</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'large_data'タグづけられた質問をみる"  href="../tags/large_data/index.html">large_data</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'linux'タグづけられた質問をみる"  href="../tags/linux/index.html">linux</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'local'タグづけられた質問をみる"  href="../tags/local/index.html">local</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'long'タグづけられた質問をみる"  href="../tags/long/index.html">long</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'pair-end'タグづけられた質問をみる"  href="../tags/pair-end/index.html">pair-end</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'protege'タグづけられた質問をみる"  href="../tags/protege/index.html">protege</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'sgr'タグづけられた質問をみる"  href="../tags/sgr/index.html">sgr</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'software'タグづけられた質問をみる"  href="../tags/software/index.html">software</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'strand'タグづけられた質問をみる"  href="../tags/strand/index.html">strand</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'tair'タグづけられた質問をみる"  href="../tags/tair/index.html">tair</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'tapestation'タグづけられた質問をみる"  href="../tags/tapestation/index.html">tapestation</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'ubuntu'タグづけられた質問をみる"  href="../tags/ubuntu/index.html">ubuntu</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'セントロメア'タグづけられた質問をみる"  href="../tags/セントロメア/index.html">セントロメア</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'メタデータ'タグづけられた質問をみる"  href="../tags/メタデータ/index.html">メタデータ</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'モチーフ'タグづけられた質問をみる"  href="../tags/モチーフ/index.html">モチーフ</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'検定'タグづけられた質問をみる"  href="../tags/検定/index.html">検定</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'鎖鋸'タグづけられた質問をみる"  href="../tags/鎖鋸/index.html">鎖鋸</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'使い道'タグづけられた質問をみる"  href="../tags/使い道/index.html">使い道</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'次世代シークエンサー'タグづけられた質問をみる"  href="../tags/次世代シークエンサー/index.html">次世代シークエンサー</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'配列'タグづけられた質問をみる"  href="../tags/配列/index.html">配列</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'変換'タグづけられた質問をみる"  href="../tags/変換/index.html">変換</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+        </div>
+    </div>
+
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+    <div class="pager"><p class="paginator"><span class="prev"><a href="index.html@sort=最新&amp;page=2.html" title="以前の">&laquo; 以前の</a></span><a class="page" href="index.html@sort=最新&amp;page=1.html" >1</a><a class="page" href="index.html@sort=最新&amp;page=2.html" >2</a><span class="curr this_page">3</span><a class="page" href="index.html@sort=最新&amp;page=4.html" >4</a><a class="page" href="index.html@sort=最新&amp;page=5.html" >5</a>
+                
+            
+        
+    
+        
+          ...
+        
+    
+        
+            
+                
+                     <a class="page" href="http://qa.lifesciencedb.jp/questions/?sort=最新&amp;page=7" >7</a><span class="next"><a href="index.html@sort=最新&amp;page=4.html" title="次のページ">次のページ &raquo;</a></span></p></div>
+    <div class="pagesize"><div class="paginator"><span class="text">ページあたりの投稿数</span><span class="page"><a href="index.html@sort=最新&amp;pagesize=15.html">15</a></span><span class="curr">30</span><span class="page"><a href="index.html@sort=最新&amp;pagesize=50.html">50</a></span></div></div>
+
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="../about/index.html" >概要</a> <span class="link-separator"> |</span> <a href="../faq/index.html" >よくある質問</a> <span class="link-separator"> |</span> <a href="../privacy/index.html" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="../m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+        
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

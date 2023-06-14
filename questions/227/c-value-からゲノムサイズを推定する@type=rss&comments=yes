@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: C-value からゲノムサイズを推定する</title><link>http://qa.lifesciencedb.jp/questions/227/c-value-%E3%81%8B%E3%82%89%E3%82%B2%E3%83%8E%E3%83%A0%E3%82%B5%E3%82%A4%E3%82%BA%E3%82%92%E6%8E%A8%E5%AE%9A%E3%81%99%E3%82%8B</link><description>&lt;p&gt;C-value からゲノムサイズへ変換するための式を，wikipedia に見つけました。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;the mean weight of one nucleotide pair would be 1.0855× 1e-9 pg, and 1 pg of DNA would represent 0.921 × 1e+9 base pairs.（http://en.wikipedia.org/wiki/C-value）&lt;/p&gt;
+&lt;p&gt;genome size (bp) = (0.921 x 1e+9) x DNA content (pg)（http://en.wikipedia.org/wiki/C-value）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;この式ですが，二倍体生物については，下記のような式だと思います。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(haploid) genome size (bp) = (0.921 x 1e+9) x DNA content (pg) / 2&lt;/p&gt;
+&lt;p&gt;diploid genome size (bp) = (0.921 x 1e+9) x DNA content (pg) &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Wikipedia によると，ヒトの女性の C-value は，6.950 pg だそうです。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;diploid human female and male nuclei in G1 phase of the cell cycle should contain 6.950 and 6.829 pg of DNA, respectively.（http://en.wikipedia.org/wiki/C-value）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;このデータを上式に代入すると，&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;haploid genome size (bp) = (0.921 x 1e+9) x 6.950 / 2 = 3.2 Gbp&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;となり，推定値としては悪くない結果になります。&lt;/p&gt;
+&lt;p&gt;・・・と，素人なりに頑張って考えてみたのですが，上のような考え方で間違っていないでしょうか？
+詳しい方がいましたら，教えていただけると嬉しいです。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/227/c-value-%E3%81%8B%E3%82%89%E3%82%B2%E3%83%8E%E3%83%A0%E3%82%B5%E3%82%A4%E3%82%BA%E3%82%92%E6%8E%A8%E5%AE%9A%E3%81%99%E3%82%8B" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 22 May 2023 18:35:15 -0000</lastBuildDate></channel></rss>

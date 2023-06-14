@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With gatk</title><link>http://qa.lifesciencedb.jp/tags/gatk/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;gatk&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/gatk/" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 24 Jan 2012 11:18:16 +0900</lastBuildDate><item><title>個体ごとのSNPsのコール</title><link>http://qa.lifesciencedb.jp/questions/566/%E5%80%8B%E4%BD%93%E3%81%94%E3%81%A8%E3%81%AEsnps%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%AB</link><description>&lt;p&gt;とある遺伝病の原因遺伝子を調べて、リシーケンシングからSNPs解析を行っています。&lt;br&gt;
+SNPsをコールする際、samtoolsであれば、&lt;br&gt;
+ーーーーbam.listーーーーー&lt;br&gt;
+1.bam&lt;br&gt;
+2.bam&lt;br&gt;
+3.bam&lt;br&gt;
+ーーーーーーーーーーーーー&lt;br&gt;
+というようなファイルを準備し、&lt;br&gt;
+&lt;code&gt;samtools mpileup -uf hg19.fa -b bam.list | bcftools view -vcg-&lt;/code&gt;&lt;br&gt;
+とすると個体ごとにSNPsが分けられて出力されます。&lt;br&gt;
+全サンプル混ぜてSNPsを検出するほうが、SNPsの誤判定が起きにくいようなので、できれば1つずつ入力するよりも、併せてSNPsのコールを行いたいと考えています。&lt;br&gt;
+ここからが問題なのですが、GATKを用いると、multi-allelicなSNPsを検出することが可能だということで、GATKでSNPsのコールを行いたいのですが、たとえば次のようにしても、個体ごとにSNPsを分けることができません。&lt;br&gt;
+&lt;code&gt;java -jar  GenomeAnalysisTK.jar -R hg19.fa  -T UnifiedGenotyper -o 1-2-3.vcf  -glm BOTH -I 1.bam -I 2.bam -I 3.bam&lt;/code&gt;  &lt;br&gt;
+GATKで複数のBAMファイルを同時に入力し、各BAMファイルごとに分かれた状態でSNPsを出力することは可能でしょうか？&lt;br&gt;
+宜しくお願い致します。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">kyoshita</dc:creator><pubDate>Tue, 24 Jan 2012 11:18:16 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/566/%E5%80%8B%E4%BD%93%E3%81%94%E3%81%A8%E3%81%AEsnps%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%AB</guid><category>snps</category><category>samtools</category><category>bam</category><category>gatk</category></item></channel></rss>

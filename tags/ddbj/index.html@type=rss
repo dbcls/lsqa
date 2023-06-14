@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With ddbj</title><link>http://qa.lifesciencedb.jp/tags/ddbj/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;ddbj&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/ddbj/" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 01 Apr 2014 15:45:44 +0900</lastBuildDate><item><title>DDBJ pipeline のFTP接続後、queryフォルダが表示されない</title><link>http://qa.lifesciencedb.jp/questions/737/ddbj-pipeline-%E3%81%AEftp%E6%8E%A5%E7%B6%9A%E5%BE%8C-query%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84</link><description>&lt;p&gt;お世話になっております。&lt;/p&gt;
+&lt;p&gt;DDBJ pipeline において、FTPを使ってfastqファイルをuploadするのを目的としています。&lt;/p&gt;
+&lt;p&gt;私はマックを使用しているので、Cyberduckによって接続しました。&lt;/p&gt;
+&lt;p&gt;Pipeline tutorial によりますと、接続後に query フォルダが表示されるようですが、&lt;/p&gt;
+&lt;p&gt;そのようなフォルダが表示されません。&lt;/p&gt;
+&lt;p&gt;このqueryフォルダは、fastqをuploadする場所であるようなので、現在、往生しております。&lt;/p&gt;
+&lt;p&gt;稚拙な質問かも知れませんが、ここ数日困っております。どなたか解決策をご教示頂けないでしょうか。&lt;/p&gt;
+&lt;p&gt;どうか宜しくお願い致します。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">megu</dc:creator><pubDate>Tue, 01 Apr 2014 15:45:44 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/737/ddbj-pipeline-%E3%81%AEftp%E6%8E%A5%E7%B6%9A%E5%BE%8C-query%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84</guid><category>ddbj</category><category>query</category><category>pipeline</category></item><item><title>新型シーケンサーの生データは何年保存するべきでしょうか？</title><link>http://qa.lifesciencedb.jp/questions/359/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AF%E4%BD%95%E5%B9%B4%E4%BF%9D%E5%AD%98%E3%81%99%E3%82%8B%E3%81%B9%E3%81%8D%E3%81%A7%E3%81%97%E3%82%87%E3%81%86%E3%81%8B</link><description>&lt;p&gt;ディスクスペースを節約するのに古いもの使われなかったものを破棄する　超整理法的な態度もあります。テープに書き出すのもままならない大量のアーカイブは新ディスクへと継代でmigrateさせて維持すべきでしょうか？&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">okubo</dc:creator><pubDate>Fri, 25 Feb 2011 17:10:49 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/359/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AF%E4%BD%95%E5%B9%B4%E4%BF%9D%E5%AD%98%E3%81%99%E3%82%8B%E3%81%B9%E3%81%8D%E3%81%A7%E3%81%97%E3%82%87%E3%81%86%E3%81%8B</guid><category>ddbj</category><category>sra</category></item><item><title>新型シーケンサー生データアーカイブはFASTQ形式だけでは困りますか？</title><link>http://qa.lifesciencedb.jp/questions/356/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%81%AFfastq%E5%BD%A2%E5%BC%8F%E3%81%A0%E3%81%91%E3%81%A7%E3%81%AF%E5%9B%B0%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B</link><description>&lt;p&gt;Native vendor file の情報を画像以外すべて保存したSRA-full形式にくらべFastQファイルだけならDDBJ調査で総サイズは29%ですみます。
+コストを考えるとFastQじゃできないことがないといけません。&lt;/p&gt;
+&lt;p&gt;＜補足:DDBJ＞この質問の意図は、DRA継続に際してサイズダウンで良いかをユーザの皆様に問う事です。
+現在SRA-Lite形式もサポートしておりますが、FASTQ形式だけで問題ないでしょうか？(でしたらコスト安で済みます)。
+DRAの運営に際して、次世代シークエンサ利用者の皆様から御意見を頂けますと助かります。宜しくお願い致します。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">okubo</dc:creator><pubDate>Fri, 25 Feb 2011 15:40:16 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/356/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%81%AFfastq%E5%BD%A2%E5%BC%8F%E3%81%A0%E3%81%91%E3%81%A7%E3%81%AF%E5%9B%B0%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B</guid><category>ddbj</category><category>dra</category><category>sra</category><category>ngs</category></item><item><title>新型シーケンサデータ保存にどんな形式がありますか？サイズと欠点を</title><link>http://qa.lifesciencedb.jp/questions/355/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%87%E3%83%BC%E3%82%BF%E4%BF%9D%E5%AD%98%E3%81%AB%E3%81%A9%E3%82%93%E3%81%AA%E5%BD%A2%E5%BC%8F%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B-%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%A8%E6%AC%A0%E7%82%B9%E3%82%92</link><description>&lt;p&gt;DDBJでは native vendor fileから 画像を落とした 標準形 SRAはあまりかさばるので intensityを落としたSRA-liteでミラーしてます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">okubo</dc:creator><pubDate>Fri, 25 Feb 2011 15:13:10 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/355/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%87%E3%83%BC%E3%82%BF%E4%BF%9D%E5%AD%98%E3%81%AB%E3%81%A9%E3%82%93%E3%81%AA%E5%BD%A2%E5%BC%8F%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B-%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%A8%E6%AC%A0%E7%82%B9%E3%82%92</guid><category>ddbj</category><category>dra</category><category>sra</category><category>ngs</category></item><item><title>ディスクの単価あたりの容量の伸び率（１年で何倍）を教えてください。</title><link>http://qa.lifesciencedb.jp/questions/354/%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF%E3%81%AE%E5%8D%98%E4%BE%A1%E3%81%82%E3%81%9F%E3%82%8A%E3%81%AE%E5%AE%B9%E9%87%8F%E3%81%AE%E4%BC%B8%E3%81%B3%E7%8E%87-%EF%BC%91%E5%B9%B4%E3%81%A7%E4%BD%95%E5%80%8D-%E3%82%92%E6%95%99%E3%81%88%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84</link><description>&lt;p&gt;安いディスクを重複させて賢く使う方法も含めてご存知のかたはお教えください　コストの質問への答えでも&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">okubo</dc:creator><pubDate>Fri, 25 Feb 2011 15:08:07 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/354/%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF%E3%81%AE%E5%8D%98%E4%BE%A1%E3%81%82%E3%81%9F%E3%82%8A%E3%81%AE%E5%AE%B9%E9%87%8F%E3%81%AE%E4%BC%B8%E3%81%B3%E7%8E%87-%EF%BC%91%E5%B9%B4%E3%81%A7%E4%BD%95%E5%80%8D-%E3%82%92%E6%95%99%E3%81%88%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84</guid><category>ddbj</category><category>sra</category></item><item><title>シーケンサー出力の伸びの予測ってどのくらいわかってますか？</title><link>http://qa.lifesciencedb.jp/questions/353/%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E5%87%BA%E5%8A%9B%E3%81%AE%E4%BC%B8%E3%81%B3%E3%81%AE%E4%BA%88%E6%B8%AC%E3%81%A3%E3%81%A6%E3%81%A9%E3%81%AE%E3%81%8F%E3%82%89%E3%81%84%E3%82%8F%E3%81%8B%E3%81%A3%E3%81%A6%E3%81%BE%E3%81%99%E3%81%8B</link><description>&lt;p&gt;過去の進歩の歴史を後程アップしておきます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">okubo</dc:creator><pubDate>Fri, 25 Feb 2011 15:05:57 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/353/%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E5%87%BA%E5%8A%9B%E3%81%AE%E4%BC%B8%E3%81%B3%E3%81%AE%E4%BA%88%E6%B8%AC%E3%81%A3%E3%81%A6%E3%81%A9%E3%81%AE%E3%81%8F%E3%82%89%E3%81%84%E3%82%8F%E3%81%8B%E3%81%A3%E3%81%A6%E3%81%BE%E3%81%99%E3%81%8B</guid><category>ddbj</category><category>sra</category><category>ngs</category></item><item><title>ある程度安全なディスク1petaっていくらぐらいですか？</title><link>http://qa.lifesciencedb.jp/questions/350/%E3%81%82%E3%82%8B%E7%A8%8B%E5%BA%A6%E5%AE%89%E5%85%A8%E3%81%AA%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF1peta%E3%81%A3%E3%81%A6%E3%81%84%E3%81%8F%E3%82%89%E3%81%90%E3%82%89%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B</link><description>&lt;p&gt;コストと便益のバランスを考える為に必要な値です。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">okubo</dc:creator><pubDate>Fri, 25 Feb 2011 14:51:06 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/350/%E3%81%82%E3%82%8B%E7%A8%8B%E5%BA%A6%E5%AE%89%E5%85%A8%E3%81%AA%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF1peta%E3%81%A3%E3%81%A6%E3%81%84%E3%81%8F%E3%82%89%E3%81%90%E3%82%89%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B</guid><category>ddbj</category><category>sra</category></item><item><title>新型シーケンサーの生データサイズはどんな風ですか？</title><link>http://qa.lifesciencedb.jp/questions/349/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%AF%E3%81%A9%E3%82%93%E3%81%AA%E9%A2%A8%E3%81%A7%E3%81%99%E3%81%8B</link><description>&lt;p&gt;&lt;img alt="alt text" src="http://farm6.static.flickr.com/5253/5475238349_f91dd0c290_z.jpg"&gt;
+[http://www.flickr.com/photos/59261391@N05/5475238349/][2]
+はしばらく前の議論に使った目安です。　現状はどうなんでしょうか？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Kato Kikuya&lt;/strong&gt; &lt;strong&gt;Impact of the next generation DNA sequencers&lt;/strong&gt; . Int J Clin Exp Med. 2009; 2(2): 193–202.
+Published online 2009 July 8. 
+Comparison of sequencers (January, 2009). It should be noted that the throughput of each sequencer is improving rapidly&lt;/p&gt;
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+
+&lt;/th&gt;
+            &lt;th&gt;
+                ABI 3730xI
+            &lt;/th&gt;
+            &lt;th&gt;
+                Roche GS FLX
+            &lt;/th&gt;
+            &lt;th&gt;
+                Illumina GA
+            &lt;/th&gt;
+            &lt;th&gt;
+                ABI SOLiD
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                Bases/template
+            &lt;/th&gt;
+            &lt;td&gt;
+                ∼1100
+            &lt;/td&gt;
+            &lt;td&gt;
+                ∼400
+            &lt;/td&gt;
+            &lt;td&gt;
+                ∼75
+            &lt;/td&gt;
+            &lt;td&gt;
+                50
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                Templates/run
+            &lt;/th&gt;
+            &lt;td&gt;
+                96
+            &lt;/td&gt;
+            &lt;td&gt;
+                1,000,000
+            &lt;/td&gt;
+            &lt;td&gt;
+                40,000,000
+            &lt;/td&gt;
+            &lt;td&gt;
+                85,000,000
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                Data production/day
+            &lt;/th&gt;
+            &lt;td&gt;
+                1 MB/day
+            &lt;/td&gt;
+            &lt;td&gt;
+                400MB/run/7.5hr
+            &lt;/td&gt;
+            &lt;td&gt;
+                3,000MB/run/6.5 days
+            &lt;/td&gt;
+            &lt;td&gt;
+                4,000MB/run/6 days
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                Maximum samples
+            &lt;/th&gt;
+            &lt;td&gt;
+                96
+            &lt;/td&gt;
+            &lt;td&gt;
+                16 regions/plate
+            &lt;/td&gt;
+            &lt;td&gt;
+                8 channels/flowcell
+            &lt;/td&gt;
+            &lt;td&gt;
+                16chambers/2 slides
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                Sequence reaction
+            &lt;/th&gt;
+            &lt;td&gt;
+                Sanger method
+            &lt;/td&gt;
+            &lt;td&gt;
+                pyrosequencing
+            &lt;/td&gt;
+            &lt;td&gt;
+                Reverse terminator
+            &lt;/td&gt;
+            &lt;td&gt;
+                ligation sequencing
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">okubo</dc:creator><pubDate>Fri, 25 Feb 2011 14:48:49 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/349/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%AF%E3%81%A9%E3%82%93%E3%81%AA%E9%A2%A8%E3%81%A7%E3%81%99%E3%81%8B</guid><category>ddbj</category><category>sra</category><category>ngs</category></item><item><title>新型シーケンサーの生データをアーカイブする目的は？</title><link>http://qa.lifesciencedb.jp/questions/348/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%81%99%E3%82%8B%E7%9B%AE%E7%9A%84%E3%81%AF</link><description>&lt;p&gt;新型シーケンサーの&lt;a href="http://www.ddbj.nig.ac.jp/whatsnew/2011/DRA20110222.html"&gt;生データアーカイブ&lt;/a&gt;は現在NCBI/EBI/DDBJで行っています。NCBIの&lt;a href="http://www.ncbi.nlm.nih.gov/About/news/16feb2011"&gt;ファンドレイズ失敗&lt;/a&gt;で各国で再議論が始まりました。　コストと価値のバランスを考えるために　再利用の目論見　見込み　アーカイブの目的を共有したいと思います。
+現在のアーカイブの様子は&lt;a href="http://sra.dbcls.jp/"&gt;仲里's SRA目次&lt;/a&gt;でよくわかります。
+&lt;a href="http://pathogenomics.bham.ac.uk/hts/hts/stats"&gt;世界中のシーケンサの分布は&lt;/a&gt;James Hadfield (Cancer Research UK, Cambridge) &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">okubo</dc:creator><pubDate>Fri, 25 Feb 2011 14:45:28 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/348/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%81%99%E3%82%8B%E7%9B%AE%E7%9A%84%E3%81%AF</guid><category>ddbj</category><category>sra</category><category>ngs</category></item><item><title>次世代シーケンサのデータ登録についての講習会はありますか？</title><link>http://qa.lifesciencedb.jp/questions/187/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E7%99%BB%E9%8C%B2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E8%AC%9B%E7%BF%92%E4%BC%9A%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B</link><description>&lt;p&gt;DRA　に，次世代シーケンサからのデータ登録を考えております。
+登録する前に，注意事項など，DRA のページを見ましたが，講習会などがあれば参加したいと思います。
+何かご存じありませんか？&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">sanagi</dc:creator><pubDate>Wed, 15 Dec 2010 16:59:52 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/187/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E7%99%BB%E9%8C%B2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E8%AC%9B%E7%BF%92%E4%BC%9A%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B</guid><category>講習会</category><category>dra</category><category>ddbj</category><category>ngs</category></item><item><title>DDBJに登録したデータの公開日を延期したい</title><link>http://qa.lifesciencedb.jp/questions/83/ddbj%E3%81%AB%E7%99%BB%E9%8C%B2%E3%81%97%E3%81%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%85%AC%E9%96%8B%E6%97%A5%E3%82%92%E5%BB%B6%E6%9C%9F%E3%81%97%E3%81%9F%E3%81%84</link><description>&lt;p&gt;DDBJに登録したデータの公開日を延期したいが、どのくらい、先の日付が妥当なのでしょうか。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">sanagi</dc:creator><pubDate>Fri, 26 Nov 2010 15:14:25 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/83/ddbj%E3%81%AB%E7%99%BB%E9%8C%B2%E3%81%97%E3%81%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%85%AC%E9%96%8B%E6%97%A5%E3%82%92%E5%BB%B6%E6%9C%9F%E3%81%97%E3%81%9F%E3%81%84</guid><category>ddbj</category></item><item><title>DDBJの登録方法について</title><link>http://qa.lifesciencedb.jp/questions/82/ddbj%E3%81%AE%E7%99%BB%E9%8C%B2%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;DDBJに塩基配列を登録する場合、どのような登録方法がありますか&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">bavo</dc:creator><pubDate>Fri, 26 Nov 2010 15:11:14 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/82/ddbj%E3%81%AE%E7%99%BB%E9%8C%B2%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>ddbj</category></item><item><title>DDBJ登録後にGenBank登録が必要ですか？</title><link>http://qa.lifesciencedb.jp/questions/27/ddbj%E7%99%BB%E9%8C%B2%E5%BE%8C%E3%81%ABgenbank%E7%99%BB%E9%8C%B2%E3%81%8C%E5%BF%85%E8%A6%81%E3%81%A7%E3%81%99%E3%81%8B</link><description>&lt;p&gt;DDBJ に登録した配列と同じ配列を GenBank に登録する必要はありますか？&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Eli Kaminuma</dc:creator><pubDate>Fri, 12 Nov 2010 12:09:32 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/27/ddbj%E7%99%BB%E9%8C%B2%E5%BE%8C%E3%81%ABgenbank%E7%99%BB%E9%8C%B2%E3%81%8C%E5%BF%85%E8%A6%81%E3%81%A7%E3%81%99%E3%81%8B</guid><category>ddbj</category><category>dbvar</category><category>geo</category><category>cibex</category><category>ncbi</category></item></channel></rss>

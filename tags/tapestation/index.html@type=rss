@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With tapestation</title><link>http://qa.lifesciencedb.jp/tags/tapestation/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;tapestation&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/tapestation/" rel="self"></atom:link><language>ja</language><lastBuildDate>Fri, 19 Apr 2013 16:39:23 +0900</lastBuildDate><item><title>TapeStation でのRNAのRIN数値について</title><link>http://qa.lifesciencedb.jp/questions/666/tapestation-%E3%81%A7%E3%81%AErna%E3%81%AErin%E6%95%B0%E5%80%A4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;いつも参考にさせてもらっています。&lt;/p&gt;
+&lt;p&gt;今までAgilentのBioAnalyzerを使って、RNA-seqライブラリ調製前のTotal RNAを流していました。
+今回初めてTapeStationのR6Kで、Total RNAを流してみました。&lt;/p&gt;
+&lt;p&gt;ヒトの全血からかなりキレイに取ったはずのTotal RNAが、RINの値が低め（6ぐらい）
+に出ています。以前、BioAanalyzerとTapeStationのRINの計算方法が異なると聞いた
+ことがありますが、実際にTapeStationを使われている方は、どう判断されているのでしょうか？&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">だいこん</dc:creator><pubDate>Fri, 19 Apr 2013 16:39:23 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/666/tapestation-%E3%81%A7%E3%81%AErna%E3%81%AErin%E6%95%B0%E5%80%A4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>tapestation</category></item></channel></rss>

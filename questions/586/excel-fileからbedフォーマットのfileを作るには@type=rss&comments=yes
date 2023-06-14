@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: Excel fileからBEDフォーマットのfileを作るには？</title><link>http://qa.lifesciencedb.jp/questions/586/excel-file%E3%81%8B%E3%82%89bed%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%E3%81%AEfile%E3%82%92%E4%BD%9C%E3%82%8B%E3%81%AB%E3%81%AF</link><description>&lt;p&gt;NGSのdataやUnixコマンドなどほとんど触ったことがなかった初心者です。
+Excel fileで持っているゲノム領域の情報をBEDフォーマットのfileにしたいのですが、やり方がわかりません。アドバイスいただけましたら幸甚です。&lt;/p&gt;
+&lt;p&gt;今、BEDToolsのcoverageBedのスクリプトを実行しようとしているのですが、read countを知りたい領域のBED fileがうまく出来ないために白紙の結果が得られてしまいます。具体的には、chrom　chromStart　chromEnd　name　score　strandの順に並んだExcel fileをタブ区切りテキスト(.txt)で保存して名前を.bedに変えて領域のBED fileとして使ってみたのですが、BED fileとして認識されていないようでした。UCSCからとってきた遺伝子領域のBED fileではきちんとcoverageの結果が返ってくるので、.txt fileからBED fileをつくる方法がありそうなのは感じるのですが、どのようにしたらいいかわかりません。
+助けて頂けたら幸いです。&lt;/p&gt;
+&lt;p&gt;ちなみに、以下の内容で領域を設定した場合を例に試しています。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;chrVI    0  270148  NC_001138   0   +
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;よろしくお願いいたします。&lt;/p&gt;
+&lt;p&gt;touran&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/586/excel-file%E3%81%8B%E3%82%89bed%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%E3%81%AEfile%E3%82%92%E4%BD%9C%E3%82%8B%E3%81%AB%E3%81%AF" rel="self"></atom:link><language>ja</language><lastBuildDate>Fri, 13 Apr 2012 20:15:46 +0900</lastBuildDate><item><title>Comment by touran on 38brain's 回答</title><link>http://qa.lifesciencedb.jp/questions/586/excel-file%E3%81%8B%E3%82%89bed%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%E3%81%AEfile%E3%82%92%E4%BD%9C%E3%82%8B%E3%81%AB%E3%81%AF#592</link><description>&lt;p&gt;具体的な対処法を回答くださいましてありがとうございました。エディタを使うだけでいろいろ便利になることがわかり、個人的には非常にためになりました。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">touran</dc:creator><pubDate>Fri, 13 Apr 2012 20:15:46 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/586/excel-file%E3%81%8B%E3%82%89bed%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%E3%81%AEfile%E3%82%92%E4%BD%9C%E3%82%8B%E3%81%AB%E3%81%AF#592</guid></item><item><title>Comment by nob_fj on touran's 回答</title><link>http://qa.lifesciencedb.jp/questions/586/excel-file%E3%81%8B%E3%82%89bed%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%E3%81%AEfile%E3%82%92%E4%BD%9C%E3%82%8B%E3%81%AB%E3%81%AF#591</link><description>&lt;p&gt;お役に立てて何よりです。Mac環境でもCR+LFが改行コードになることがあるのですね。参考になります。私自身はMacユーザでないので、Excel使っているからwinユーザかなと思ってしまいました。
+あと、差し支えなければ質問の閉鎖もお願いします。分からなければこちらご参照ください。
+http://bit.ly/IPM7Me&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Fri, 13 Apr 2012 17:39:58 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/586/excel-file%E3%81%8B%E3%82%89bed%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%E3%81%AEfile%E3%82%92%E4%BD%9C%E3%82%8B%E3%81%AB%E3%81%AF#591</guid></item><item><title>Answer by 38brain</title><link>http://qa.lifesciencedb.jp/questions/586/excel-file%E3%81%8B%E3%82%89bed%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%E3%81%AEfile%E3%82%92%E4%BD%9C%E3%82%8B%E3%81%AB%E3%81%AF/590</link><description>&lt;p&gt;私も改行コードが問題なのではないかと思います。&lt;br&gt;
+Macの場合でしたら簡便な方法として、Excelで保存したテキストファイルを&lt;a href="http://www.mimikaki.net/"&gt;「mi」&lt;/a&gt;などのテキストエディタで開いて、&lt;br&gt;
+文字コードをCR (Mac) からLF (UNIX) に変更後、上書き保存すると使えるようになると思います。&lt;/p&gt;
+&lt;p&gt;あ、すれ違いでちょうど解決したところだったようですね(^ ^);&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">38brain</dc:creator><pubDate>Fri, 13 Apr 2012 17:29:03 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/586/excel-file%E3%81%8B%E3%82%89bed%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%E3%81%AEfile%E3%82%92%E4%BD%9C%E3%82%8B%E3%81%AB%E3%81%AF/590</guid></item><item><title>Comment by touran on nob_fj's 回答</title><link>http://qa.lifesciencedb.jp/questions/586/excel-file%E3%81%8B%E3%82%89bed%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%E3%81%AEfile%E3%82%92%E4%BD%9C%E3%82%8B%E3%81%AB%E3%81%AF#588</link><description>&lt;p&gt;nob_fj ♦さま
+丁寧な回答ありがとうございました。strandの指定はしたりしなかったりしていましたが、結果は同じでしたので、エディタの問題であるというご指摘ごもっともです。
+MacOSXのターミナルを使っているのですが、テキストはテキストエディットを使って編集していました。
+それがいけなかったみたいです。おっしゃる通り、サクラエディタに似た”mi”というものを使って編集したらbed fileとして認識されて、無事カウントを得ることが出来ました。
+大変助かりました。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">touran</dc:creator><pubDate>Fri, 13 Apr 2012 17:25:49 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/586/excel-file%E3%81%8B%E3%82%89bed%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%E3%81%AEfile%E3%82%92%E4%BD%9C%E3%82%8B%E3%81%AB%E3%81%AF#588</guid></item><item><title>Answer by nob_fj</title><link>http://qa.lifesciencedb.jp/questions/586/excel-file%E3%81%8B%E3%82%89bed%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%E3%81%AEfile%E3%82%92%E4%BD%9C%E3%82%8B%E3%81%AB%E3%81%AF/587</link><description>&lt;p&gt;coverageBedを実行する時に-sオプションを付けておりますか？&lt;/p&gt;
+&lt;p&gt;結果が、白紙になる理由は、下の原因では説明がつかないのですが、
+問題の原因は、windows依存の改行コードに由来する可能性があります。&lt;/p&gt;
+&lt;p&gt;質問文中にあるデータをExcelに貼りつけて、もう1行テストレコードを作り、
+"dataFromExcel.bed"という名前で保存して、実行してみました。&lt;/p&gt;
+&lt;p&gt;以下、windowsマシンのcygwin上でインストールしたBEDtoolsでcoverageBedを実行した結果です。
+-aと-bは同じファイルを渡しています。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ cat data/dataFromExcel.bed
+chrVI   0       270148  NC_001138       0       +
+chrVI   100     300     test1   0       +
+$ sed -n "l" data/dataFromExcel.bed
+chrVI\t0\t270148\tNC_001138\t0\t+$
+chrVI\t100\t300\ttest1\t0\t+$
+$ ./BEDTools-Version-2.14.3/bin/coverageBed.exe -a data/dataFromExcel.bed -b data/dataFromExcel.bed
+chrVI   2       270148  270148131.0000000       +
+chrVI   200     200     200t1   1.0000000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;上記の結果は、coverageBedの本来の挙動からするとおかしな結果です。
+上記の結果中のタブ文字(\tに変換)や、windows改行コードに含まれるCR(\rに変換される)などの
+特殊文字を表示してみると以下のようになっています。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ ./BEDTools-Version-2.14.3/bin/coverageBed.exe -a data/dataFromExcel.bed -b data/dataFromExcel.bed | sed -n "l"
+chrVI\t0\t270148\tNC_001138\t0\t+\r\t2\t270148\t270148\t1.0000000$
+chrVI\t100\t300\ttest1\t0\t+\r\t2\t200\t200\t1.0000000$
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;特殊文字の変換前の結果では、上記の"\r"のところから右側しか表示されていないことが分かるでしょうか。&lt;/p&gt;
+&lt;p&gt;windowsのExcelでタブ区切りテキストとしてファイルを保存すると改行コードの中に"\r"という特殊文字が
+入ってしまうのですが、これは、BEDtoolsからすると文字として認識されてしまうので、
+結果、strandの列が"+\r"であるとみなされてしまうのだと思います。この状態で-sオプションを効かせると、
+同じstrandのデータが無いため、結果が0になったりする気がします。(おそらく)&lt;/p&gt;
+&lt;p&gt;以下のsedコマンド操作で、改行文字を置換かけたあと、同じ操作を実行した所、挙動としてまともな結果が得られました。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sed 's/\r//' data/dataFromExcel.bed &amp;gt; data/dataFromExcel.CRrm.bed
+$ ./BEDTools-Version-2.14.3/bin/coverageBed.exe -a data/dataFromExcel.CRrm.bed -b data/dataFromExcel.CRrm.bed
+chrVI   0       270148  NC_001138       0       +       2       270148  2701481.0000000
+chrVI   100     300     test1   0       +       2       200     200     1.0000000
+$ ./BEDTools-Version-2.14.3/bin/coverageBed.exe -a data/dataFromExcel.CRrm.bed -b data/dataFromExcel.CRrm.bed | sed -n "l"
+chrVI\t0\t270148\tNC_001138\t0\t+\t2\t270148\t270148\t1.0000000$
+chrVI\t100\t300\ttest1\t0\t+\t2\t200\t200\t1.0000000$
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;改行コードの変換のしかたについては、上記のsedをcygwin上で実行する他、&lt;/p&gt;
+&lt;p&gt;私は、"&lt;a href="http://sakura-editor.sourceforge.net/download.html"&gt;サクラエディタ&lt;/a&gt;"などのエディタで
+正規表現置換で"\r"を空文字""に変換するなども良く使います。&lt;/p&gt;
+&lt;p&gt;この辺の情報も参考になります。
+&lt;a href="http://oshiete.goo.ne.jp/qa/856844.html"&gt;http://oshiete.goo.ne.jp/qa/856844.html&lt;/a&gt;
+要はCR(キャリッジリターン)を除去できれば良いので選択肢はいろいろあるとは思います。
+試してみてはどうでしょう。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Fri, 13 Apr 2012 13:59:44 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/586/excel-file%E3%81%8B%E3%82%89bed%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%E3%81%AEfile%E3%82%92%E4%BD%9C%E3%82%8B%E3%81%AB%E3%81%AF/587</guid></item></channel></rss>

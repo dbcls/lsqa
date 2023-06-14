@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: 新型シーケンサーの生データをアーカイブする目的は？</title><link>http://qa.lifesciencedb.jp/questions/348/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%81%99%E3%82%8B%E7%9B%AE%E7%9A%84%E3%81%AF</link><description>&lt;p&gt;新型シーケンサーの&lt;a href="http://www.ddbj.nig.ac.jp/whatsnew/2011/DRA20110222.html"&gt;生データアーカイブ&lt;/a&gt;は現在NCBI/EBI/DDBJで行っています。NCBIの&lt;a href="http://www.ncbi.nlm.nih.gov/About/news/16feb2011"&gt;ファンドレイズ失敗&lt;/a&gt;で各国で再議論が始まりました。　コストと価値のバランスを考えるために　再利用の目論見　見込み　アーカイブの目的を共有したいと思います。
+現在のアーカイブの様子は&lt;a href="http://sra.dbcls.jp/"&gt;仲里's SRA目次&lt;/a&gt;でよくわかります。
+&lt;a href="http://pathogenomics.bham.ac.uk/hts/hts/stats"&gt;世界中のシーケンサの分布は&lt;/a&gt;James Hadfield (Cancer Research UK, Cambridge) &lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/348/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%81%99%E3%82%8B%E7%9B%AE%E7%9A%84%E3%81%AF" rel="self"></atom:link><language>ja</language><lastBuildDate>Fri, 25 Feb 2011 18:43:25 +0900</lastBuildDate><item><title>Answer by okubo</title><link>http://qa.lifesciencedb.jp/questions/348/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%81%99%E3%82%8B%E7%9B%AE%E7%9A%84%E3%81%AF/363</link><description>&lt;ol&gt;
+&lt;li&gt;同じ生データからアセンブリやマッピングを別のパラメータやプログラムでやり直す&lt;/li&gt;
+&lt;li&gt;別のデータセットを混ぜて　再アセンブリをやってみる　&lt;/li&gt;
+&lt;li&gt;新アセンブラーの開発時に試験データとして使ってみる
+ 程度のことは思いつきます。
+これならFastQですみます
+intensity つきデータから　fastＱをはかせる部分のプログラムを外部で改良する余地は？　してるひとはいる？
+intensity data も使うようなアセンブリの開発ってあるんでしょうか？&lt;/li&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">okubo</dc:creator><pubDate>Fri, 25 Feb 2011 18:43:25 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/348/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%81%99%E3%82%8B%E7%9B%AE%E7%9A%84%E3%81%AF/363</guid></item><item><title>Answer by okubo</title><link>http://qa.lifesciencedb.jp/questions/348/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%81%99%E3%82%8B%E7%9B%AE%E7%9A%84%E3%81%AF/361</link><description>&lt;p&gt;Genbank/Embl/DDBJの、第一義的な役割は「倉庫」にあると考えています。
+ですので、Nativeを保存することが望ましい。
+イメージファイルがない時点で、pureなNativeとは言えないのですが、可能な限りNativeに近いデータを保存するのが望ましい。
+SRAはNativeを管理しやすいように、ラップし、付加情報を追加したものなので、当面は、SRAで保存するのが、良いように思います。
+より良いラップ形式が出てくれば、それに変えてよいでしょう。　すみお　&lt;/p&gt;
+&lt;p&gt;デジタルアーカイブには常に機器の陳腐化にともない旧ディスクから新ディスクへの移し替えが求められます。　コピーに数か月かかるような事態もすぐそこに来ているようです。このようなコストをよく見積もる必要がありそうだと思います。　OK　&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">okubo</dc:creator><pubDate>Fri, 25 Feb 2011 17:48:27 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/348/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%81%99%E3%82%8B%E7%9B%AE%E7%9A%84%E3%81%AF/361</guid></item></channel></rss>

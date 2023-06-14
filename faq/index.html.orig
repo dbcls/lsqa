@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>FAQ - #LSQA</title>
+        <meta name="description" content="質問と回答と私">
+        <meta name="keywords" content="OSQA,CNPROG,forum,community,lifesciencedb.jp,DDBJ,PDBj,DBCLS,Cytoscape,NGS,ngs-field">
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon.ico" />
+        <link href="/m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='/m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >ログイン</a>  <a href="/about/" >概要</a>  <a href="/faq/" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" href="/questions/" >質問</a><a id="nav_tags" href="/tags/" >タグ</a><a id="nav_users" href="/users/" >ユーザー</a><a id="nav_badges" href="/badges/" >バッジ</a><a id="nav_unanswered" href="/questions/unanswered/" >未回答</a>
+        <a id="nav_ask" href="/questions/ask/" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+        <div id="wrapper">
+            <div id="room">
+                <div id="CAFull">
+                    
+<div class="headNormal">FAQ</div>
+<div class="content">
+<p><strong>よくある質問とその回答 (FAQ)</strong></p>
+<p><strong>どんな質問をするべきなのですか？</strong></p>
+<p>重要な点です。ライフサイエンス研究に関係している質問がふさわしいです。</p>
+<p>くわえて、</p>
+<ul>
+<li>詳細で具体的な内容で、</li>
+<li>明確で簡単な記述で、</li>
+<li>すくなくとも、他の誰かひとりでも興味を持てるような質問</li>
+</ul>
+<p>であるべきです。この点を心がけると、Google などの検索エンジン経由で質問と回答に到達できる人がふえて、ライフサイエンス研究業界全体の調査時間の節約につながることが期待されます。</p>
+<p>質問をするまえに、似た質問があるか検索してみましょう。タイトルやタグから質問や回答を検索できます。</p>
+<p>検索でうまくヒットしないときは、検索語の前後に % 記号をつけてみましょう。通常は前方一致検索ですが、部分一致検索として評価されます。質問検索例：</p>
+<ul>
+<li><a href="http://qa.lifesciencedb.jp/search/?q=%25ユーザー%25&amp;Submit=検索する&amp;t=question">%ユーザー%</a> </li>
+<li><a href="http://qa.lifesciencedb.jp/search/?q=ユーザー&amp;Submit=検索する&amp;t=question">ユーザー</a></li>
+</ul>
+<p><strong>回答するときに避けるべき事はありますか？</strong></p>
+<p>回答と議論の混同を避けるべきです。このサイトを構築するためにつかっている <a href="http://osqa.net">OSQA: Open Source Q&amp;A</a> は<strong>質問と回答</strong>のウェブサイトのためのシステムであり、<strong>議論</strong>するための掲示板システムでは<strong>ありません</strong>。回答しつつ議論をつづけて発散させてしまい、質問と回答の本質を薄めるてしまうような行為は避けましょう。</p>
+<p>派生する議論は<strong>回答</strong>ではなく<strong>コメント</strong>機能で対応するのがよいでしょう。たとえば、回答へのお礼を述べるときにはコメントにするとスマートです。</p>
+<p><strong>質問と回答を更新状況を知るには？</strong></p>
+<p>メールでの通知、RSSフィードとツイッターの三つの方法があります。</p>
+<p>メールでの通知は、自身の質問やコメントについて通知メールが届きます。設定は、ユーザのページの「ユーザーツール」メニュー→「電子メール通知設定」で行えます。</p>
+<p>RSSフィードは、三種類あり、サイト全体、質問ページ、タグページのそれぞれにあります。フィードのリンクは、サイドバーの「このページのRSSフィード」にあります。</p>
+<p>ツイッターは、<a href="http://twitter.com/gaou_ak">gaou_ak</a>さんによる、<a href="http://qa.lifesciencedb.jp/?type=rss">サイト全体のRSSフィード</a>をツイートする<a href="http://twitter.com/lsqa_all">@lsqa_all</a> と <a href="http://qa.lifesciencedb.jp/tags/ngs/?type=rss">ngs タグRSSフィード</a>をツイートする <a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a> があります。</p>
+<p><strong>だれがモデレートしてるのですか？</strong></p>
+<p>端的にいうと、あなたを含むすべてのユーザがおこなっていることになります。</p>
+<p>投票機能によって、質問や回答、コメントを評価することができます。良い内容には上げる評価を、悪い内容には下げる評価を与えることができます。評価を重ねることによって、質問者や回答者を応援することにつながります。</p>
+<p><strong>徳システムはどのように働くの？</strong></p>
+<p>質問や回答を上げ評価したときに、投稿ユーザーはいくらかの徳ポイントを得ます。これらのポイントはコミュニティーからの投稿者への荒い測定値を表しています。さまざまなモデレーション権がこれらポイントに基づいて徐々にユーザに与えられます。</p>
+<p>たとえば、興味深い質問をしたり、役に立つ回答をした場合、その投稿は良い評価で投票されます。その一方で、回答が誤解を招く物だった場合には、その投稿は悪い評価で投票されます。良い評価の投票は 10 ポイントを与え、悪い評価の投票は 2 ポイントを取り上げます。質問や回答あたりの累積されうるのは200ポイントが上限となっています。次のリストは、各モデレーション業に必要な徳のポイント数について示しています：</p>
+<ul>
+<li>コメントをする -&gt;  50</li>
+<li>コメントを削除する -&gt; 2000</li>
+<li>自身の質問を閉鎖する -&gt; 250</li>
+<li>自身の質問を再開する -&gt; 500</li>
+<li>質問のタグを編集する -&gt; 500</li>
+<li>回答を編集する -&gt; 2000</li>
+<li>閉鎖した質問を再開する -&gt; 3000</li>
+<li>コメントを削除する-&gt; 2000</li>
+</ul>
+<p><strong>gravatar とは何ですか？</strong></p>
+<p>gravatar は広く利用されているアバター（ユーザアイコン）です。電子メールアドレスに関連づけられたユニークなアバター画像を活用することができます。gravatar はシンプルな画像を、gravatarプロトコルに対応したウェブサイトのあなたの投稿のとなりに表示します。初期値では、正方形の雪の結晶に似た矩形で単色の画像を表示します。お好みの画像を <a href="gravatar.com">gravatar.com</a> で設定することが可能です。</p>
+<p><strong>登録するために、あたらしくパスワードをつくらないといけませんか？</strong></p>
+<p>いいえ、その必要はありません。OpenID に対応しているので、<a href="http://openid.dbcls.jp">DBCLS OpenID</a> をご利用ならいますぐにログインできます。</p>
+<p><strong>自分の質問や回答を他のひとが編集できるのはなぜですか？</strong></p>
+<p>このサイトは、質問と回答がwikiページのように専門家によって編集可能であれば、知識ベースとして、コンテンツの全般的なクオリティを向上することができる、というアイデアがもとになっています。これはとても意欲的なプロジェクトですが、このアイデアはプログラミング関連QA <a href="http://stackoverflow.com/">Stack overflow</a> や次世代シーケンサー関連QA <a href="http://I.SEQanswers.com/">SEQAnswers</a>などで成功しています。</p>
+<p><strong>まだ質問がありますか？</strong></p>
+<p><a href="/questions/ask/">質問してみましょう</a>！</p>
+</div>
+
+
+                </div>
+                <div id="tail" style="clear:both;">
+                    
+                    
+                </div>
+            </div>
+            <div class="spacer3"></div>
+        </div>
+        
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >概要</a> <span class="link-separator"> |</span> <a href="/faq/" >よくある質問</a> <span class="link-separator"> |</span> <a href="/privacy/" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="/m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+        
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

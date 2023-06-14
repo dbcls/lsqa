@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: IGVの結果とFPKM値の違いについて</title><link>http://qa.lifesciencedb.jp/questions/845/igv%E3%81%AE%E7%B5%90%E6%9E%9C%E3%81%A8fpkm%E5%80%A4%E3%81%AE%E9%81%95%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;NGSデータ解析の初心者です。
+現在、RNA-seq解析を行っているのですが、Mapping結果をIGVで可視化するとある遺伝子に対してMappingされていることを確認したのですが、その遺伝子の発現量をCuffdiffで計算したところ、FPKM値が0となりました(gene tracking)。
+リードがMappingされているのにFPKM値がなぜ0となるのかわからず困っています。
+何か知見があればご教授ください。よろしくお願い致します。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/845/igv%E3%81%AE%E7%B5%90%E6%9E%9C%E3%81%A8fpkm%E5%80%A4%E3%81%AE%E9%81%95%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 05 Jan 2016 15:57:19 +0900</lastBuildDate><item><title>Answer by suimye</title><link>http://qa.lifesciencedb.jp/questions/845/igv%E3%81%AE%E7%B5%90%E6%9E%9C%E3%81%A8fpkm%E5%80%A4%E3%81%AE%E9%81%95%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/846</link><description>&lt;p&gt;こんにちは。IGVで見えているタグがカウントFPKMでカウントされていないとのことですが、&lt;br&gt;
+まず御確認いただきたいのはIGVのreferenceのgenome versionと、ご利用になられているデータの&lt;br&gt;
+mapping時の&lt;strong&gt;genomeのバージョン&lt;/strong&gt;、そして&lt;strong&gt;生物種&lt;/strong&gt;が一致しているかどうかという点だと思います。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;IGVで確認しているデータは&lt;strong&gt;bamファイル&lt;/strong&gt;でしょうか（&lt;strong&gt;bedファイル&lt;/strong&gt;, &lt;strong&gt;tdfファイル&lt;/strong&gt;でしょうか）。&lt;br&gt;
+以上の点で問題が無いようでしたら、今の情報だけではもしかするとcuffdiffをかけたときに、&lt;br&gt;
+データを取り違えているなどの可能性、cuffdiffが途中で止まっていた、ぐらいしかないのではと思います&lt;br&gt;
+ (cuffdiffではlistを渡しているときに取り違えるなどのhuman errorの可能性もあると思います)。&lt;br&gt;
+可能であればpipelineの実行ステップ、programのバージョンを詳細に御記載いただくほうが良いかもしれません。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;@suimye&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">suimye</dc:creator><pubDate>Tue, 05 Jan 2016 15:57:19 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/845/igv%E3%81%AE%E7%B5%90%E6%9E%9C%E3%81%A8fpkm%E5%80%A4%E3%81%AE%E9%81%95%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/846</guid></item></channel></rss>

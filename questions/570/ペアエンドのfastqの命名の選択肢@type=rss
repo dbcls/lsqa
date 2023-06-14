@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: ペアエンドのFASTQの命名の選択肢</title><link>http://qa.lifesciencedb.jp/questions/570/%E3%83%9A%E3%82%A2%E3%82%A8%E3%83%B3%E3%83%89%E3%81%AEfastq%E3%81%AE%E5%91%BD%E5%90%8D%E3%81%AE%E9%81%B8%E6%8A%9E%E8%82%A2</link><description>&lt;p&gt;開発中のツールで、ユーザーから指定されたディレクトリ内の
+ペアエンドのFASTQファイルの
+ペアの1番目と2番目のファイルを自動で認識させたいので、
+ファイル命名のパターンを把握したいと思っています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;どこかにまとまった情報源などあったりしますでしょうか？&lt;/li&gt;
+&lt;li&gt;あるいは、以下の例では対応できない例等ご存知の方はお知らせ願えませんでしょうか。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;認識正規表現パターン1&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;ペア1番目:.*_1.(fastq|fq|txt)&lt;/li&gt;
+&lt;li&gt;ペア2番目:.*_2.(fastq|fq|txt)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;例：DRA/SRA/ERAなどの公開データ&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;ペア1番目:SRR0XXXXX_1.fastq&lt;/li&gt;
+&lt;li&gt;ペア2番目:SRR0XXXXX_2.fastq&lt;/li&gt;
+&lt;li&gt;ペア外:SRR0XXXXX.fastq&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;認識正規表現パターン2&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;ペア1番目:.*_1_sequence.(fastq|fq|txt)&lt;/li&gt;
+&lt;li&gt;ペア2番目:.*_2_sequence.(fastq|fq|txt)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;例：GA時代Illumina/CASAVAの出力と、その亜種&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;ペア1番目:s_1_1_sequence.txt&lt;/li&gt;
+&lt;li&gt;ペア2番目:s_1_2_sequence.txt&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;認識正規表現パターン3&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;ペア1番目:.*_R1_\d\d\d.(fastq|fq|txt)&lt;/li&gt;
+&lt;li&gt;ペア2番目:.*_R2_\d\d\d.(fastq|fq|txt)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;例：最近のIllumina/CASAVAのデマルチプレックス後&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;ペア1番目:SAMPLE1_ATCACG_L002_R1_001.fastq&lt;/li&gt;
+&lt;li&gt;ペア2番目:SAMPLE1_ATCACG_L002_R2_001.fastq&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(余談ですが、LSQA上で'_'を同じ行に書くと、イタリックとみなされてしまい、\_でエスケープする必要があるようですね。)&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/570/%E3%83%9A%E3%82%A2%E3%82%A8%E3%83%B3%E3%83%89%E3%81%AEfastq%E3%81%AE%E5%91%BD%E5%90%8D%E3%81%AE%E9%81%B8%E6%8A%9E%E8%82%A2" rel="self"></atom:link><language>ja</language><lastBuildDate>Wed, 18 Apr 2012 00:16:04 +0900</lastBuildDate><item><title>Answer by nob_fj</title><link>http://qa.lifesciencedb.jp/questions/570/%E3%83%9A%E3%82%A2%E3%82%A8%E3%83%B3%E3%83%89%E3%81%AEfastq%E3%81%AE%E5%91%BD%E5%90%8D%E3%81%AE%E9%81%B8%E6%8A%9E%E8%82%A2/595</link><description>&lt;p&gt;イルミナ社鈴木様より以下のように情報提供いただきました。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---------------------------------------------------------------------------
+
+GA, HiSeq で使っている CASAVA 1.8.2 で demultiplex した結果は以下のルール
+---------------------------------------------------------------------------
+&amp;lt;sample name&amp;gt;_&amp;lt;barcode sequence&amp;gt;_L&amp;lt;lane (0-padded to 3 digits)&amp;gt;_R&amp;lt;read
+number&amp;gt;_&amp;lt;set number (0-padded to 3 digits&amp;gt;.fastq.gz
+
+例
+
+NA10831_ATCACG_L002_R1_001.fastq.gz
+
+Sample name や barcode はサンプルシートで定義します。
+1ファイルは400万配列ごとに gz 圧縮されます。
+1ファイルごとに、Set number が 001, 002 といった形で増えていきます。
+
+Rの次の数字が Read1, Read2 になります。
+Sample name をお客様が決められるようになってしまいましたのでファイル名に関し
+て右端を基準に処理いただくのが良いかと思います。
+
+ご連絡いただいたパターンは、barcode を使わなかった場合に &amp;lt;barcode sequence&amp;gt;
+が NoIndex となったものでございます。
+
+---------------------------------------------------------------------------
+
+MiSeqは以下のルール
+---------------------------------------------------------------------------
+例; s_G1_L001_R1_002.fastq
+
+命名規則
+
+    s_Ga_Lb_Rc_d.fastq.gz とした場合;
+
+Ga : 参照ゲノム番頭 (サンプルシート一番上に出現したゲノムが “G1”とな
+ります)Lb : レーン番号 (MiSeqで現在1レーンみた
+め、必ずL001になります)
+Rc : リード番号 (リード1 は R1, リード2 は R2, インデクスリード は
+I1 か I2 になります。
+     I2 Nextera dual index をお使いになりサンプルシートに2つのインデクス
+を用いる際のみです) 
+d  : タイルグループ番号
+     (現在1から6タイルでとられたデータを "001", 7 から 12タイル目のデー
+タを "002”で分けています)
+
+注意: 末尾の002などは便宜上 FASTQをタイルグループに分けた番号であり、
+インデクス番号ではありません。
+
+      s_G0_ など、0番は基本的に不明 (Undetermined) なものが纏められたものて
+゛す。 
+      I1, I2 --- あいいち、あいに。英大文字の I に数字です。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;これらの情報を受けて以下のように情報をまとめました。&lt;a href="http://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=FASTQ#a00bf04682fb2d66404f99bd62fe58a38"&gt;NGS Surfer's Wiki(fastq) ファイル名 - ペアエンド&lt;/a&gt;
+その他のシーケンサーや過去のIllumina/solexaで例に当てはまらない例をご存知の方がおられましたら、
+引き続きお知らせいただけますと幸いです。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Wed, 18 Apr 2012 00:16:04 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/570/%E3%83%9A%E3%82%A2%E3%82%A8%E3%83%B3%E3%83%89%E3%81%AEfastq%E3%81%AE%E5%91%BD%E5%90%8D%E3%81%AE%E9%81%B8%E6%8A%9E%E8%82%A2/595</guid></item></channel></rss>

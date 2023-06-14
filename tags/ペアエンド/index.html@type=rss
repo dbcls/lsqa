@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With ペアエンド</title><link>http://qa.lifesciencedb.jp/tags/%E3%83%9A%E3%82%A2%E3%82%A8%E3%83%B3%E3%83%89/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;ペアエンド&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/%E3%83%9A%E3%82%A2%E3%82%A8%E3%83%B3%E3%83%89/" rel="self"></atom:link><language>ja</language><lastBuildDate>Fri, 23 Mar 2012 19:56:51 +0900</lastBuildDate><item><title>ペアエンドのFASTQの命名の選択肢</title><link>http://qa.lifesciencedb.jp/questions/570/%E3%83%9A%E3%82%A2%E3%82%A8%E3%83%B3%E3%83%89%E3%81%AEfastq%E3%81%AE%E5%91%BD%E5%90%8D%E3%81%AE%E9%81%B8%E6%8A%9E%E8%82%A2</link><description>&lt;p&gt;開発中のツールで、ユーザーから指定されたディレクトリ内の
+ペアエンドのFASTQファイルの
+ペアの1番目と2番目のファイルを自動で認識させたいので、
+ファイル命名のパターンを把握したいと思っています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;どこかにまとまった情報源などあったりしますでしょうか？&lt;/li&gt;
+&lt;li&gt;あるいは、以下の例では対応できない例等ご存知の方はお知らせ願えませんでしょうか。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;認識正規表現パターン1&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;ペア1番目:.*_1.(fastq|fq|txt)&lt;/li&gt;
+&lt;li&gt;ペア2番目:.*_2.(fastq|fq|txt)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;例：DRA/SRA/ERAなどの公開データ&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;ペア1番目:SRR0XXXXX_1.fastq&lt;/li&gt;
+&lt;li&gt;ペア2番目:SRR0XXXXX_2.fastq&lt;/li&gt;
+&lt;li&gt;ペア外:SRR0XXXXX.fastq&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;認識正規表現パターン2&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;ペア1番目:.*_1_sequence.(fastq|fq|txt)&lt;/li&gt;
+&lt;li&gt;ペア2番目:.*_2_sequence.(fastq|fq|txt)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;例：GA時代Illumina/CASAVAの出力と、その亜種&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;ペア1番目:s_1_1_sequence.txt&lt;/li&gt;
+&lt;li&gt;ペア2番目:s_1_2_sequence.txt&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;認識正規表現パターン3&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;ペア1番目:.*_R1_\d\d\d.(fastq|fq|txt)&lt;/li&gt;
+&lt;li&gt;ペア2番目:.*_R2_\d\d\d.(fastq|fq|txt)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;例：最近のIllumina/CASAVAのデマルチプレックス後&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;ペア1番目:SAMPLE1_ATCACG_L002_R1_001.fastq&lt;/li&gt;
+&lt;li&gt;ペア2番目:SAMPLE1_ATCACG_L002_R2_001.fastq&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(余談ですが、LSQA上で'_'を同じ行に書くと、イタリックとみなされてしまい、\_でエスケープする必要があるようですね。)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Fri, 23 Mar 2012 19:56:51 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/570/%E3%83%9A%E3%82%A2%E3%82%A8%E3%83%B3%E3%83%89%E3%81%AEfastq%E3%81%AE%E5%91%BD%E5%90%8D%E3%81%AE%E9%81%B8%E6%8A%9E%E8%82%A2</guid><category>命名</category><category>ペアエンド</category><category>fastq</category></item></channel></rss>

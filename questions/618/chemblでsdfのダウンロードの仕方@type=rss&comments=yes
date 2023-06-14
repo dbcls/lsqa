@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: ChEMBLでSDFのダウンロードの仕方</title><link>http://qa.lifesciencedb.jp/questions/618/chembl%E3%81%A7sdf%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%AE%E4%BB%95%E6%96%B9</link><description>&lt;p&gt;ChEMBLを利用していますが、化合物情報をsdf形式でダウンロードするにはどうすればいいのでしょうか？&lt;/p&gt;
+&lt;p&gt;例) &lt;a href="https://www.ebi.ac.uk/chembldb/doc/inspect/CHEMBL1134744"&gt;CHEMBL1134744  Bioorg. Med. Chem. Lett. (2001) 11:2951-2954&lt;/a&gt;&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/618/chembl%E3%81%A7sdf%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%AE%E4%BB%95%E6%96%B9" rel="self"></atom:link><language>ja</language><lastBuildDate>Thu, 30 Aug 2012 03:42:27 +0900</lastBuildDate><item><title>Answer by zgmfx20a</title><link>http://qa.lifesciencedb.jp/questions/618/chembl%E3%81%A7sdf%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%AE%E4%BB%95%E6%96%B9/620</link><description>&lt;p&gt;題意に沿わないかもしれませんが、
+ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_14/
+から、chembl_14.sdf.gzを取得するとか
+NCBI pubchemでSOURCEとしてChEMBLで検索しSDFをダウンロードすることが
+できます。後者のほうは正確ではないかもしれませんが複数のSOURCEのAND/ORが
+できるので重宝しています。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">zgmfx20a</dc:creator><pubDate>Thu, 30 Aug 2012 03:42:27 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/618/chembl%E3%81%A7sdf%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%AE%E4%BB%95%E6%96%B9/620</guid></item><item><title>Answer by mn3</title><link>http://qa.lifesciencedb.jp/questions/618/chembl%E3%81%A7sdf%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%AE%E4%BB%95%E6%96%B9/619</link><description>&lt;p&gt;Compound Summaries セクションの各チャートの右側にメニューがあり、そこから操作するとSDFをダウンロードできます。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="操作手順図" src="https://img.skitch.com/20120822-w34qkpgq2e94i47as3xsimj7y.jpg"&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;クリックしてメニューを出す&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Display All Records&lt;/strong&gt; を選択すると化合物の表のあるページに遷移する&lt;/li&gt;
+&lt;li&gt;右上のメニュー "Please select ..." から &lt;strong&gt;Download (SDF)&lt;/strong&gt; を選択する&lt;/li&gt;
+&lt;li&gt;ダウンロードがはじまる&lt;/li&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mn3</dc:creator><pubDate>Fri, 24 Aug 2012 08:48:44 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/618/chembl%E3%81%A7sdf%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%AE%E4%BB%95%E6%96%B9/619</guid></item></channel></rss>

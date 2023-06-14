@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With illumina</title><link>http://qa.lifesciencedb.jp/tags/illumina/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;illumina&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/illumina/" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 07 Jan 2014 17:40:48 +0900</lastBuildDate><item><title>高速シーケンサの出力データ容量について</title><link>http://qa.lifesciencedb.jp/questions/702/%E9%AB%98%E9%80%9F%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E5%87%BA%E5%8A%9B%E3%83%87%E3%83%BC%E3%82%BF%E5%AE%B9%E9%87%8F%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;いつも大変お世話になっております。&lt;/p&gt;
+&lt;p&gt;表題の内容についてお伺いしたいのですが、HiSeq2500では、1runあたり600Gbaseのデータが出力できるとのことで、
+仮に600Gbaseを出力したときのfastqファイルのデータ容量は、大体何Gbyteほどになるでしょうか。&lt;/p&gt;
+&lt;p&gt;貴重なご経験からの情報と存じますが、どうぞよろしくお願い申し上げます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">suimye</dc:creator><pubDate>Tue, 07 Jan 2014 17:40:48 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/702/%E9%AB%98%E9%80%9F%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E5%87%BA%E5%8A%9B%E3%83%87%E3%83%BC%E3%82%BF%E5%AE%B9%E9%87%8F%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>sequencing</category><category>hiseq2500</category><category>illumina</category></item><item><title>Bowtieのpair-end mappingのオプションについて</title><link>http://qa.lifesciencedb.jp/questions/593/bowtie%E3%81%AEpair-end-mapping%E3%81%AE%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;NGSのdata解析の全くの初心者です。
+一本鎖DNA由来のライブラリーをpair-endで読んだ後のBowtieによるMapping時のoptionについて質問です。
+MeDIP-seqの要領で、Illumina Truseqのライブラリーから一本鎖を選択的に精製したライブラリーをPCRで増幅後pair-endのsequenceingを行いました。BowtieでMappingする際、精製したライブラリーのstrandの情報を維持した状態でmappingの結果を得るためには、一つ目（-1）を"Read1"、二つ目 （-2）を ”Read2のreverse complement”として、pair-endのoptionを"--ff"とすれば、Read1とRead2が同じstrandにmapされた結果が得られるのでしょうか？
+Galaxyでは、--ffはSOLID用のoptionとして扱われているような気がしますが、IlluminaのR1とR2rev-compを用いても結果は問題ないのでしょうか？
+ご存知の方で、アドバイス頂けましたら幸甚です。&lt;/p&gt;
+&lt;p&gt;よろしくお願い致します。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">touran</dc:creator><pubDate>Sat, 14 Apr 2012 15:22:26 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/593/bowtie%E3%81%AEpair-end-mapping%E3%81%AE%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>bowtie</category><category>pair-end</category><category>strand</category><category>illumina</category></item><item><title>illumina配列からのpaired-end,mate-pair識別方法</title><link>http://qa.lifesciencedb.jp/questions/229/illumina%E9%85%8D%E5%88%97%E3%81%8B%E3%82%89%E3%81%AEpaired-end-mate-pair%E8%AD%98%E5%88%A5%E6%96%B9%E6%B3%95</link><description>&lt;p&gt;illuminaシーケンスのライブラリを作成する場合、paired-endとmate-pairの２種類の作成方法があるようですが、
+これら２種類のライブラリが混在しているシーケンス群が存在していたとして、補足情報無しで素のシーケンスデータのみでシーケンス仕分けできる方法がありましたら教えて下さい。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.novocraft.com/wiki/tiki-index.php?page=Paired+Read+Modes&amp;amp;structure=Novocraft+Technologies&amp;amp;page_ref_id=74"&gt;novoalignのように、mapping状況から推測して仕分ける&lt;/a&gt;のではなく、解析にかける前処理として仕分けがしたい、というのが目的です。&lt;/p&gt;
+&lt;p&gt;Paired End ライブラリの場合: 
+&lt;a href="http://www.illumina.com/systems/genome_analyzer/paired_end_module.ilmn"&gt;http://www.illumina.com/systems/genome_analyzer/paired_end_module.ilmn&lt;/a&gt;
+&lt;/p&gt;&lt;pre&gt; ---[read1]---&amp;gt;(insert)&amp;lt;===[read2]===
+&lt;/pre&gt;
+Mate Pair ライブラリの場合:
+&lt;a&gt;http://www.illumina.com/technology/mate_pair_sequencing_assay.ilmn&lt;/a&gt;
+&lt;pre&gt; &amp;lt;===[read2]===(long insert)---[read1]---&amp;gt;
+&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;参考にしたページ:&lt;br&gt;
+ 1.  &lt;a&gt;http://biostar.stackexchange.com/questions/789/about-paired-end-sequencing&lt;/a&gt;&lt;br&gt;
+ 2.  &lt;a&gt;http://seqanswers.com/forums/showthread.php?t=7088&lt;/a&gt;&lt;br&gt;
+ 3.  &lt;a&gt;http://seqanswers.com/forums/showthread.php?t=5085&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mya_</dc:creator><pubDate>Fri, 24 Dec 2010 11:18:21 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/229/illumina%E9%85%8D%E5%88%97%E3%81%8B%E3%82%89%E3%81%AEpaired-end-mate-pair%E8%AD%98%E5%88%A5%E6%96%B9%E6%B3%95</guid><category>solexa</category><category>ngs</category><category>sequence</category><category>illumina</category></item></channel></rss>

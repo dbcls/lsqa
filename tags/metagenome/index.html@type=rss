@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With metagenome</title><link>http://qa.lifesciencedb.jp/tags/metagenome/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;metagenome&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/metagenome/" rel="self"></atom:link><language>ja</language><lastBuildDate>Fri, 05 Sep 2014 21:05:17 +0900</lastBuildDate><item><title>ヒトの核酸が混入している場合のカバレッジは？</title><link>http://qa.lifesciencedb.jp/questions/776/%E3%83%92%E3%83%88%E3%81%AE%E6%A0%B8%E9%85%B8%E3%81%8C%E6%B7%B7%E5%85%A5%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AE%E3%82%AB%E3%83%90%E3%83%AC%E3%83%83%E3%82%B8%E3%81%AF</link><description>&lt;p&gt;はじめて質問させていただきます。
+ウィルスに関するメタゲノム解析を計画しています。シーケンシングは外注する予定です。
+ウィルスならゲノムサイズが小さいので、シーケンスカバレッジは1Gで充分なのではと言う人もいます。
+一方、生体材料（臨床検体）中の核酸はほとんどヒト由来でありウィルスはごく微量なので、かなり深く読まないと(例　5Gとか10G)、その中に微量に含まれるウィルスをde novoで連結はできないという話もあります。&lt;/p&gt;
+&lt;p&gt;貴重な検体であり、コストがかかっても、ウィルスがいればそれを見つけたいと思っています。&lt;/p&gt;
+&lt;p&gt;1G, 5G, 10Gとシーケンスカバレッジを上げれば、de novoシーケンスできる確率も上昇するものでしょうか？
+あるいは雑音であるヒト由来のreadも増えるため結局　効果ないでしょうか？&lt;/p&gt;
+&lt;p&gt;ご指導のほどよろしくお願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">deer</dc:creator><pubDate>Fri, 05 Sep 2014 21:05:17 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/776/%E3%83%92%E3%83%88%E3%81%AE%E6%A0%B8%E9%85%B8%E3%81%8C%E6%B7%B7%E5%85%A5%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AE%E3%82%AB%E3%83%90%E3%83%AC%E3%83%83%E3%82%B8%E3%81%AF</guid><category>virus</category><category>metagenome</category></item></channel></rss>

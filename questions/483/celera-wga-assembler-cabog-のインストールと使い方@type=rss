@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: Celera WGA Assembler(CABOG)のインストールと使い方</title><link>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9</link><description>&lt;p&gt;ある生物のゲノムをde novo assemblのために454で委託して読みました。&lt;/p&gt;
+&lt;p&gt;CABOGでアセンブルしようとインストールしようとしたのですが、最初にpythonは見つかるがpython.hがないといわれました。
+現在macOS X10.6.7でpython2.7が入っています。&lt;/p&gt;
+&lt;p&gt;Finkを用いてpython2.7-devをインストールしようと思うのですが、Finkをインストールし、
+[sudo apt-get install python2.7-dev]とterminalで打っても[E: Couldn't find package python2.7-dev]
+と出てしまい、完了しません。調べてもわからないので、よろしくお願いします。&lt;/p&gt;
+&lt;p&gt;また使い方に関しても少しREADMEを読みましたが、わからなくなるのは目に見えているので、簡単に教えて頂けると助かります。
+委託業者からは.qual .sff .sff.gz .fastが送られてきています。&lt;/p&gt;
+&lt;p&gt;質問が多くて申し訳ありませんが、よろしくお願いします。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9" rel="self"></atom:link><language>ja</language><lastBuildDate>Sun, 26 Jun 2011 14:21:19 +0900</lastBuildDate><item><title>Answer by mya_</title><link>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9/504</link><description>&lt;p&gt;runCAパイプラインに必要なプログラムは原則として(このケースの場合) /Users/pan/Desktop/wgs-6.1/Darwin-amd64/bin/に入ります。この中に存在するmerylプログラムで、&lt;br&gt;
+&lt;code&gt;meryl -V　と入力すると&lt;br&gt;
+meryl the Mighty Mer Counter version (no version)&lt;/code&gt;&lt;br&gt;
+という応答が返ってくればk-mer対応版です。&lt;/p&gt;
+&lt;p&gt;別の反応であるか、そもそもそういうプログラムが見当たらないのであれば、コンパイルが失敗しています。　&lt;a href="http://www.q-eng.imat.eng.osaka-cu.ac.jp/~ippei/unix-tips/command.html#l26"&gt;make cleanしてコンパイルをやりなおす&lt;/a&gt;か、違うディレクトリにソース展開して&lt;a href="http://sourceforge.net/apps/mediawiki/wgs-assembler/index.php?title=Version_6.1_Release_Notes"&gt;最初から構築しなおす&lt;/a&gt;のが早いかと思います。
+PATHの設定はしなくてもrunCAは動くはずですが、&lt;a href="http://d.hatena.ne.jp/koseki2/20081201/macportPath"&gt;PATH設定しておけばなにかと便利&lt;/a&gt;でしょう。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mya_</dc:creator><pubDate>Sun, 26 Jun 2011 14:21:19 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9/504</guid></item><item><title>Answer by pan</title><link>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9/499</link><description>&lt;p&gt;sffToCAでsample.frgと.log、.statsを作成しました。以下の様に実行しました。&lt;/p&gt;
+&lt;p&gt;sffToCA \&lt;/p&gt;
+&lt;p&gt;-libraryname sample \&lt;/p&gt;
+&lt;p&gt;-insertsize 3200 900 \&lt;/p&gt;
+&lt;p&gt;-linker flx \&lt;/p&gt;
+&lt;p&gt;-trim chop \&lt;/p&gt;
+&lt;p&gt;-output FJRUAFO.frg \&lt;/p&gt;
+&lt;p&gt;sample.sff.bz \&lt;/p&gt;
+&lt;p&gt;次にRunning WGS Assemblerしたいのですが、
+自分ではきちんとインストールしたつもりでしたが&lt;/p&gt;
+&lt;p&gt;'overmerry' programがみつからないとエラーがでました。
+どこがおかしいのでしょうか？？&lt;/p&gt;
+&lt;p&gt;また何か間違いなどありましたら指摘してください。
+見よう見まねでやってます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pan</dc:creator><pubDate>Tue, 21 Jun 2011 19:31:48 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9/499</guid></item><item><title>Answer by mya_</title><link>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9/494</link><description>&lt;p&gt;CABOG (Celera Assembler with the Best Overlap Graph)というのは独立したプログラムではなく、WGS assemblerに組み込まれている、４５４などのデータを混ぜてアセンブルするパイプラインの名称です。darwin版でうまくいっているのでしたら、wgsそのものをソースからコンパイルしなおす必要はありません。&lt;/p&gt;
+&lt;p&gt;http://bioinformatics.oxfordjournals.org/content/24/24/2818.full&lt;/p&gt;
+&lt;p&gt;４５４を混ぜたexampleは、前述のwgs-assemblerのホームページ内左下のsearchから探せますのでやってみて下さい。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mya_</dc:creator><pubDate>Sun, 19 Jun 2011 19:42:16 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9/494</guid></item></channel></rss>

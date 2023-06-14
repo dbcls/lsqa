@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: DNA解析ソフトについて</title><link>http://qa.lifesciencedb.jp/questions/765/dna%E8%A7%A3%E6%9E%90%E3%82%BD%E3%83%95%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;流域で採取した河川底生動物を次世代シーケンシング解析し，GMYCモデルを用いたDNA種分類法によって種数を評価したいと考えています．&lt;/p&gt;
+&lt;p&gt;シーケンシング解析したのはミトコンドリアDNAのCOI領域で，HCOプライマー側からの一方向のみをシーケンシングしました．
+その結果，合計16万配列（平均塩基長330bp）が得られました．&lt;/p&gt;
+&lt;p&gt;DNA解析を以下の手順で行いたいと考えています．
+クオリティスコアに基づいたフィルタリング，
+リファレンス配列（国際DNAデータベース上の既知の配列）に対するグローバルアライメント，
+進化距離が時間に比例している進化系統樹の作成，
+GMYCモデルによって種の境界年代を推定　→　種数の決定&lt;/p&gt;
+&lt;p&gt;一致度の高い塩基配列をクラスタリングし，OTU数を種多様度の指標とする方法があると思いますが，私の研究ではクラスタリングではなく，種分化する年代を塩基配列の違いから推定するGMYCモデルを用いて種数を推定したいと考えています．&lt;/p&gt;
+&lt;p&gt;現在，クエリの挿入欠損を修正するために，リファレンスに対するアライメントを行っているのですが，ローカルアライメントではなくグローバルアライメントを選択している理由としては，アラインされた配列の5’末端が揃うからです．&lt;/p&gt;
+&lt;p&gt;ソフトウェア「Bowtie」によって，クエリに挿入欠損がうまく入っているのですが，アラインされる配列が16万配列の1割未満と少ないのが現状です．&lt;/p&gt;
+&lt;p&gt;そこで，グローバルアライメントを行うソフトウェアで，リファレンスとクエリ間での最小類似度のパラメータ設定が変更でき，リファレンスを複数インプットしてアライメントできるソフトウェアをご教授いただきたくお願いします．&lt;/p&gt;
+&lt;p&gt;また，OTUクラスタリングの際に配列がアライメントされてから類似度の計算が行われていると思うのですが，そのアライメント結果がファイルとして出力できるかを教えていただきたいです．
+よろしくお願いします．&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/765/dna%E8%A7%A3%E6%9E%90%E3%82%BD%E3%83%95%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 13 May 2014 18:24:47 +0900</lastBuildDate><item><title>Comment by izumi on aki's 回答</title><link>http://qa.lifesciencedb.jp/questions/765/dna%E8%A7%A3%E6%9E%90%E3%82%BD%E3%83%95%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#767</link><description>&lt;p&gt;何度も類似の質問をしてしまい大変申し訳ありません．ご指摘のとおり，クラスタリングによる解析をまずは行ってみたいと思います．ソフトウェアのご紹介まことにありがとうございます&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">izumi</dc:creator><pubDate>Tue, 13 May 2014 18:24:47 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/765/dna%E8%A7%A3%E6%9E%90%E3%82%BD%E3%83%95%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#767</guid></item><item><title>Answer by aki</title><link>http://qa.lifesciencedb.jp/questions/765/dna%E8%A7%A3%E6%9E%90%E3%82%BD%E3%83%95%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/766</link><description>&lt;p&gt;mothurのalign.seqs&lt;/p&gt;
+&lt;p&gt;しかし、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;リファレンスにグローバルアライメントする意味がわからない&lt;/li&gt;
+&lt;li&gt;QVによるフィルタリングで読み間違いが十分除去できると思ってるの?&lt;/li&gt;
+&lt;li&gt;キメラ除去はしないの?&lt;/li&gt;
+&lt;li&gt;昆虫のCOI 330bpぽっちでまともな系統樹推定できると思ってるの?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;とか、ツッコミどころ満載ですね。&lt;/p&gt;
+&lt;p&gt;フツーは先に問題ありそうでもまずスタンダードな解析をやるもんでしょ。それもできない人が頭でっかちな理想を思い描いても、意味ないよ。GMYCやるにしても、まずクラスタリングして数減らしてから。数減らせればグローバルマルチプルアライメントもできる。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">aki</dc:creator><pubDate>Tue, 13 May 2014 17:15:49 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/765/dna%E8%A7%A3%E6%9E%90%E3%82%BD%E3%83%95%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/766</guid></item></channel></rss>

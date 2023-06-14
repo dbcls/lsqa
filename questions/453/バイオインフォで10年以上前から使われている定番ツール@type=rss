@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: バイオインフォで10年以上前から使われている定番ツール</title><link>http://qa.lifesciencedb.jp/questions/453/%E3%83%90%E3%82%A4%E3%82%AA%E3%82%A4%E3%83%B3%E3%83%95%E3%82%A9%E3%81%A710%E5%B9%B4%E4%BB%A5%E4%B8%8A%E5%89%8D%E3%81%8B%E3%82%89%E4%BD%BF%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E5%AE%9A%E7%95%AA%E3%83%84%E3%83%BC%E3%83%AB</link><description>&lt;p&gt;興味としての質問です。
+この界隈で１０年前というとずいぶん大昔というレベルではないか思います。&lt;/p&gt;
+&lt;p&gt;では、その大昔から生き残っている（？）ツールにはどんな物があるのでしょうか？&lt;/p&gt;
+&lt;p&gt;一時期は定番だった[GCG](http://en.wikipedia.org/wiki/GCG_(software) )(ツール群・現在は開発終了)やfasta(相同性検索ツールの方)は大分見かけなくなりました。
+デファクトスタンダードともいえるツールが多いとは思いますが、挙げて頂ければ幸いです。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&amp;amp;PAGE_TYPE=BlastDocs&amp;amp;DOC_TYPE=Download"&gt;BLAST(legacy blast)&lt;/a&gt;  配列相同性検索&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://primer3.sourceforge.net/"&gt;primer3&lt;/a&gt; プライマ配列作成&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Clustal"&gt;clustalw&lt;/a&gt; マルチプルアライメント&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.repeatmasker.org/"&gt;repeatmasker&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/453/%E3%83%90%E3%82%A4%E3%82%AA%E3%82%A4%E3%83%B3%E3%83%95%E3%82%A9%E3%81%A710%E5%B9%B4%E4%BB%A5%E4%B8%8A%E5%89%8D%E3%81%8B%E3%82%89%E4%BD%BF%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E5%AE%9A%E7%95%AA%E3%83%84%E3%83%BC%E3%83%AB" rel="self"></atom:link><language>ja</language><lastBuildDate>Thu, 26 May 2011 11:17:45 +0900</lastBuildDate><item><title>Answer by gaou</title><link>http://qa.lifesciencedb.jp/questions/453/%E3%83%90%E3%82%A4%E3%82%AA%E3%82%A4%E3%83%B3%E3%83%95%E3%82%A9%E3%81%A710%E5%B9%B4%E4%BB%A5%E4%B8%8A%E5%89%8D%E3%81%8B%E3%82%89%E4%BD%BF%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E5%AE%9A%E7%95%AA%E3%83%84%E3%83%BC%E3%83%AB/454</link><description>&lt;p&gt;バージョンは違いますが&lt;a href="http://hmmer.janelia.org/"&gt;HMMER&lt;/a&gt;は欠かせないでしょう。あとは何気にGCG後続の&lt;a href="http://emboss.sourceforge.net/"&gt;EMBOSS&lt;/a&gt;も&lt;a href="http://bioperl.org"&gt;BioPerl&lt;/a&gt;ももう１０年以上使われています。&lt;a href="http://fasta.bioch.virginia.edu/fasta/fasta_list.html"&gt;FASTA&lt;/a&gt;自体は使う事は減りましたが、パッケージ内のssearchは相変わらず良く使います。&lt;/p&gt;
+&lt;p&gt;他にも
+・アセンブリーなら&lt;a href="http://www.phrap.org/phredphrapconsed.html"&gt;Phred/Phrap&lt;/a&gt;、&lt;a href="http://pbil.univ-lyon1.fr/members/duret/cours/inserm210604/exercise4/sim4.html"&gt;SIM4&lt;/a&gt;/&lt;a href="http://pbil.univ-lyon1.fr/cap3.php"&gt;CAP3&lt;/a&gt;（これは生き残っているか微妙かもですが、内部で他のパイプラインで使われているのは良く眼にします）
+・遺伝子予測なら形をかえながら（バージョンや名前） &lt;a href="http://www.cbcb.umd.edu/software/glimmer/"&gt;Glimmer&lt;/a&gt;、&lt;a href="http://genes.mit.edu/GENSCANinfo.html"&gt;Genscan&lt;/a&gt;、&lt;a href="http://www.ebi.ac.uk/~guy/exonerate/"&gt;Exonerate&lt;/a&gt;（&lt;a href="http://www.ebi.ac.uk/Tools/Wise2/"&gt;Genewise&lt;/a&gt;）
+・二次構造予測なら&lt;a href="http://rna.tbi.univie.ac.at/cgi-bin/RNAfold.cgi"&gt;rnafold&lt;/a&gt;
+・系統関係では&lt;a href="http://evolution.genetics.washington.edu/phylip.html"&gt;PHYLIP&lt;/a&gt;や&lt;a href="http://www.megasoftware.net/"&gt;MEGA&lt;/a&gt;など
+・局在予測ではバージョンや名前を変えながら&lt;a href="http://psort.hgc.jp/"&gt;PSORT&lt;/a&gt;
+などなど、逆に既に１０年という時間はこの分野でもそんなに昔ではないのかもしれません。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">gaou</dc:creator><pubDate>Thu, 26 May 2011 11:17:45 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/453/%E3%83%90%E3%82%A4%E3%82%AA%E3%82%A4%E3%83%B3%E3%83%95%E3%82%A9%E3%81%A710%E5%B9%B4%E4%BB%A5%E4%B8%8A%E5%89%8D%E3%81%8B%E3%82%89%E4%BD%BF%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E5%AE%9A%E7%95%AA%E3%83%84%E3%83%BC%E3%83%AB/454</guid></item></channel></rss>

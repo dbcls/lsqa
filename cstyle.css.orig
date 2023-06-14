@@ -1,0 +1,48 @@
+* {
+font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo, 'ＭＳ Ｐゴシック', verdana, sans-serif; 
+}
+
+div#top  {background-color:#eee;}
+div#searchBar {background-color:#eee;}
+div.boxC {background-color:#eee;}
+div#ground {background-color:#eee;}
+
+div.boxC, div.user-about {-webkit-border-radius:7px;-moz-border-radius:7px}
+div#searchBar {-webkit-border-radius:7px;-moz-border-radius:7px;
+-webkit-border-top-right-radius:0px;
+-moz-border-radius-topright:0px;
+}
+
+a#nav_questions, a#nav_tags, a#nav_users, a#nav_badges, a#nav_unanswered, a#nav_ask {
+-webkit-border-top-left-radius:7px;-moz-border-radius-topleft:7px;
+-webkit-border-top-right-radius:7px;-moz-border-radius-topright:7px;
+/* border-width:3px; */
+border-bottom-width:0px;
+border-color:#d5dBe8;
+}
+
+a#nav_ask {
+border-color:#a01B1C;
+}
+
+div#top {
+-webkit-border-bottom-left-radius:7px;-moz-border-radius-bottomleft:7px;
+-webkit-border-bottom-right-radius:7px;-moz-border-radius-bottomright:7px;
+}
+
+div.tabsA a {-webkit-border-radius:4px;-moz-border-radius:4px}
+
+a.medal {
+-webkit-border-top-left-radius:8px;-moz-border-radius-topleft:8px;
+-webkit-border-bottom-right-radius:8px;-moz-border-radius-bottomright:8px;
+}
+
+div.views div.item-count {
+font-weight:normal !important ;
+font-size:10pt !important ;
+color:lightgray;
+}
+
+body {
+background-image: url("");
+}

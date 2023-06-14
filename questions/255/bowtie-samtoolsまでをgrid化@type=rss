@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: bowtie &gt; samtoolsまでをgrid化</title><link>http://qa.lifesciencedb.jp/questions/255/bowtie-samtools%E3%81%BE%E3%81%A7%E3%82%92grid%E5%8C%96</link><description>&lt;p&gt;シェルスクリプトをつかい、染色体を全部束ねたindexに対してbowtieでsamファイルを吐かせ、
+そのあとsamtoolsでbam, bam sort, bam indexを順に作らせています。すべて逐次処理です。&lt;/p&gt;
+&lt;p&gt;Mac OSXを使っているので、どうせならば、xgridで分散処理をしたいのですが、どういうジョブにしたらいいと思いますか？
+gmapにあるように染色体ごとにindexを作成し、それぞれ染色体ごとのbowtieのジョブを走らせるというのは
+魅力的ですが、今までの逐次処理を染色体ごとのgridのジョブにしてしまうと、染色体ごとのbam indexができはずですが、
+最終的なbam indexは一つにまとめたいのです。
+おそらくは、各染色体ごとのbowtieをそれぞれ別個のジョブにしておいて
+&lt;strong&gt;&lt;em&gt;「xgirdのすべてのジョブのidを取得し、それらが終わるのを確認し、」&lt;/em&gt;&lt;/strong&gt;
+という部分をシェルスクリプトで表現できれば、
+あとは、samtoolsですべてのsamファイルをマージ&amp;gt;bam, bam sort, bam indexを順に作らせるように思うのですが。。。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/255/bowtie-samtools%E3%81%BE%E3%81%A7%E3%82%92grid%E5%8C%96" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 18 Jan 2011 11:33:48 +0900</lastBuildDate><item><title>Answer by fumumumu</title><link>http://qa.lifesciencedb.jp/questions/255/bowtie-samtools%E3%81%BE%E3%81%A7%E3%82%92grid%E5%8C%96/266</link><description>&lt;p&gt;最終的に、以下のようになりました。&lt;/p&gt;
+&lt;p&gt;xgrid -h localhost -job list &amp;gt; joblist.txt &lt;/p&gt;&lt;p&gt;
+set -- &lt;code&gt;tr -cd '0-9,' &amp;lt;joblist.txt | tr ',' ' '&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;for jobid in $*; do &lt;/p&gt;&lt;p&gt;
+　while true; do &lt;/p&gt;&lt;p&gt;
+　　jobstatus=&lt;code&gt;xgrid -h localhost -job attributes -id $jobid |grep jobStatus&lt;/code&gt; &lt;/p&gt;&lt;p&gt;
+　　　case $jobstatus in &lt;/p&gt;&lt;p&gt;
+　　　　@Failed@) eval xgrid -h localhost -job restart -id $jobid;; &lt;/p&gt;&lt;p&gt;
+　　　　@Running@ ) sleep 120;; &lt;/p&gt;&lt;p&gt;
+　　　　@Finished@) break;; &lt;/p&gt;&lt;p&gt;
+　　　esac &lt;/p&gt;&lt;p&gt;
+　done &lt;/p&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;done&lt;/p&gt;&lt;p&gt;
+アスタリスクがうまく表示できなかったので@に置き換えました。
+＠をアスタリスクに書き換えてください。
+シングルバッククォートもうまく表示できてないですね。&lt;/p&gt;&lt;p&gt;
+　tr -cd '0-9,' &amp;lt;joblist.txt | tr ',' ' '　と
+　xgrid -h localhost -job attributes -id $jobid |grep jobStatus
+は、それぞれシングルバッククォートでかこむ必要があります。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">fumumumu</dc:creator><pubDate>Tue, 18 Jan 2011 11:33:48 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/255/bowtie-samtools%E3%81%BE%E3%81%A7%E3%82%92grid%E5%8C%96/266</guid></item><item><title>Answer by fumumumu</title><link>http://qa.lifesciencedb.jp/questions/255/bowtie-samtools%E3%81%BE%E3%81%A7%E3%82%92grid%E5%8C%96/265</link><description>&lt;p&gt;どうもありがとうございました。
+予想外にxgrid環境の構築に手間取りました。
+同じ道をたどる人がいるかもしれないので、一応書いておきます。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;xgridでうごかすコマンドおよびデータはsandboxの中でしか動作させられません。
+        なので、bowtieコマンドは例えば/usr/binに。indexesも同様です。私は/var以下に置きました。&lt;/li&gt;
+&lt;li&gt;bowtieが扱うような大規模データ(fasstaファイルなど）は、そのままではxgridはうまく扱えません。
+        データを置いたディレクトリをNFSで共有してやる必要があります。
+        私は、/xgrid-shareというディレクトリをコントローラーに作って、そのディレクトリをNFSでexport、
+        エイジェント側にも作った/xgrid-shareにマウントさせました。さらに/xgrid-share以下はsandboxとして
+        設定してやる必要がありました。 そして、fasstaファイルは、/xgrid-shareに置くようにしました。&lt;/li&gt;
+&lt;li&gt;xgridのjob idは、xgrid -h localhost - job list &amp;gt; joblist.txtでとりだし、set -- &lt;code&gt;tr -cd '0-9,' &amp;lt; joblist.txt | tr ',' ' '&lt;/code&gt; でそれぞれの変数にjob idを格納することができました。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;ここまできたら、mya_さんのアドバイスを参考に、それぞれのjob idのstatusを調べFinishedかどうかで
+判定させてやれば、望み通りのことができそうです。
+いろいろありがとうございます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">fumumumu</dc:creator><pubDate>Mon, 17 Jan 2011 09:49:24 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/255/bowtie-samtools%E3%81%BE%E3%81%A7%E3%82%92grid%E5%8C%96/265</guid></item><item><title>Answer by mya_</title><link>http://qa.lifesciencedb.jp/questions/255/bowtie-samtools%E3%81%BE%E3%81%A7%E3%82%92grid%E5%8C%96/256</link><description>&lt;p&gt;xgridは大昔に囓った程度なので、あまり自信はありませんが、
+xgridに投入したjobのid番号は取得できてそのid番号のstatusも取得できるので、&lt;/p&gt;
+&lt;p&gt;細かいエラートラブルは自分の目で判断して処理する前提で、
+投入したジョブのIDの数とstatus "Finished"の数が一致するまでwhile()sleep()のループで回しておく、というのはどうでしょうか。&lt;/p&gt;
+&lt;p&gt;具体的な実装まではちょっと片手間ではムリです。すいません。&lt;/p&gt;
+&lt;p&gt;参考にしたページ::&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://nnutter.com/2006/05/xgrid-submission-script/"&gt;http://nnutter.com/2006/05/xgrid-submission-script/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://cs.smith.edu/dftwiki/index.php/CSC334_Introduction_to_the_XGrid_at_Smith_College"&gt;http://cs.smith.edu/dftwiki/index.php/CSC334_Introduction_to_the_XGrid_at_Smith_College&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://ogig3.blogspot.com/2009/03/mac-xgrid.html"&gt;http://ogig3.blogspot.com/2009/03/mac-xgrid.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mya_</dc:creator><pubDate>Wed, 12 Jan 2011 11:30:26 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/255/bowtie-samtools%E3%81%BE%E3%81%A7%E3%82%92grid%E5%8C%96/256</guid></item></channel></rss>

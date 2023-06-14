@@ -1,0 +1,841 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>ブログ等サイト上での論文の引用について - #LSQA</title>
+        <meta name="description" content="公開されたブログや、Wikiなどのまとめサイト上で、natureなど全面公開されていない論文の引用を行う際に、
+著作権の侵害にあたらない合法な&quot;引用&quot;の範囲と手続きについて、どなたかお詳しい方がおられたらご教授いただきたいと思います。
+より具体例を示しますと、
+公開されたあるWikiページ上で、Nat Rev Genet. 2009 Jan;10(1):57-63.上のFig2や、Science. 2008 Jun 6;320(5881):1344-9. Epub 2008 May 1.のFig6、Nat Methods. 2008 Jul;5(7):621-8. Epub 2008 May ">
+        <meta name="keywords" content="wiki,著作権,引用,ブログ,情報公開">
+        
+        <link rel="canonical" href="http://qa.lifesciencedb.jp/questions/215/%E3%83%96%E3%83%AD%E3%82%B0%E7%AD%89%E3%82%B5%E3%82%A4%E3%83%88%E4%B8%8A%E3%81%A7%E3%81%AE%E8%AB%96%E6%96%87%E3%81%AE%E5%BC%95%E7%94%A8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/215/%E3%83%96%E3%83%AD%E3%82%B0%E7%AD%89%E3%82%B5%E3%82%A4%E3%83%88%E4%B8%8A%E3%81%A7%E3%81%AE%E8%AB%96%E6%96%87%E3%81%AE%E5%BC%95%E7%94%A8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon.ico" />
+        <link href="/m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='/m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/qa.lifesciencedb.jp/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/qa.lifesciencedb.jp/media/js/wmd/wmd.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/qa.lifesciencedb.jp/media/js/wmd/wmd.css" />
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[プレビューを隠す]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[プレビューを表示する]" : "[プレビューを隠す]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >ログイン</a>  <a href="/about/" >概要</a>  <a href="/faq/" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >質問</a><a id="nav_tags" href="/tags/" >タグ</a><a id="nav_users" href="/users/" >ユーザー</a><a id="nav_badges" href="/badges/" >バッジ</a><a id="nav_unanswered" href="/questions/unanswered/" >未回答</a>
+        <a id="nav_ask" href="/questions/ask/" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/215/%E3%83%96%E3%83%AD%E3%82%B0%E7%AD%89%E3%82%B5%E3%82%A4%E3%83%88%E4%B8%8A%E3%81%A7%E3%81%AE%E8%AB%96%E6%96%87%E3%81%AE%E5%BC%95%E7%94%A8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">ブログ等サイト上での論文の引用について</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-215-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/215/up/" rel="nofollow"> </a>
+<div id="post-215-score" class="post-score"
+    title="現在の投票数">
+    2
+</div>
+<a id="post-215-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/215/down/" rel="nofollow"> </a>
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/215/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>公開されたブログや、Wikiなどのまとめサイト上で、natureなど全面公開されていない論文の引用を行う際に、
+著作権の侵害にあたらない合法な"引用"の範囲と手続きについて、どなたかお詳しい方がおられたらご教授いただきたいと思います。</p>
+<p>より具体例を示しますと、
+<a href="https://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=DNA%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%AC%E3%82%A4%E3%81%A8%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E6%AF%94%E8%BC%83">公開されたあるWikiページ</a>上で、<a href="http://www.ncbi.nlm.nih.gov/pubmed/19015660">Nat Rev Genet. 2009 Jan;10(1):57-63.</a>上の<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2949280/figure/F2/">Fig2</a>や、<a href="http://www.ncbi.nlm.nih.gov/pubmed/18451266">Science. 2008 Jun 6;320(5881):1344-9. Epub 2008 May 1.</a>の<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2951732/figure/F6/">Fig6</a>、<a href="http://www.ncbi.nlm.nih.gov/pubmed/18516045">Nat Methods. 2008 Jul;5(7):621-8. Epub 2008 May 30.</a>の<a href="http://www.nature.com/nmeth/journal/v5/n7/fig_tab/nmeth.1226_F3.html">Fig3</a>などの図と、関係する2行前後の本文を引用して貼り付け、1行程度のコメントを付け加え、引用元をPubMedのリンクを付加した"ハーバード方式"あるいは"バンクーバー方式"の引用書式による引用元を付加しようと考えていますが、これは引用の範囲を逸脱するでしょうか。ページの目的としては、アレイとNGSの比較を行った情報の引用と"まとめ"にあります。</p>
+<p>"引用"に該当するための以下の用件は満たしているように思います。</p>
+<ul>
+<li>引用する分量を抑えなければならない。 </li>
+<li>引用するには目的（必然性）が必要であり、それに必要な量しか引用してはならない。 </li>
+<li>質的にも量的[5]にも、引用先が「主」、引用部分が「従」の関係になければならない。 </li>
+<li>引用を独立してそれだけの作品として使用することはできない。 </li>
+</ul>
+<p>参考サイト</p>
+<ul>
+<li><a href="http://ja.wikipedia.org/wiki/%E5%BC%95%E7%94%A8">著作権の侵害に当たらない引用について説明しているWikipediaのページ</a></li>
+<li><a href="http://ja.wikipedia.org/wiki/%E3%83%8F%E3%83%BC%E3%83%90%E3%83%BC%E3%83%89%E6%96%B9%E5%BC%8F">引用の書式"ハーバード方式"に説明しているWikipediaのページ</a></li>
+<li><a href="http://ja.wikipedia.org/wiki/%E3%83%90%E3%83%B3%E3%82%AF%E3%83%BC%E3%83%90%E3%83%BC%E6%96%B9%E5%BC%8F">引用の書式"バンクーバー方式"に説明しているWikipediaのページ</a></li>
+<li><a href="http://ja.wikisource.org/wiki/著作権法#a32">著作権法第32条</a></li>
+</ul>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/wiki/" class="post-tag"
+                                        title="'wiki'タグのついた質問をみる" rel="tag">wiki</a>
+                                
+                                    <a href="/tags/%E8%91%97%E4%BD%9C%E6%A8%A9/" class="post-tag"
+                                        title="'著作権'タグのついた質問をみる" rel="tag">著作権</a>
+                                
+                                    <a href="/tags/%E5%BC%95%E7%94%A8/" class="post-tag"
+                                        title="'引用'タグのついた質問をみる" rel="tag">引用</a>
+                                
+                                    <a href="/tags/%E3%83%96%E3%83%AD%E3%82%B0/" class="post-tag"
+                                        title="'ブログ'タグのついた質問をみる" rel="tag">ブログ</a>
+                                
+                                    <a href="/tags/%E6%83%85%E5%A0%B1%E5%85%AC%E9%96%8B/" class="post-tag"
+                                        title="'情報公開'タグのついた質問をみる" rel="tag">情報公開</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">                            
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        質問日
+        <strong>Dec 21 '10 at 22:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=32&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+    <p><a href="/users/23/nob_fj/">nob_fj ♦</a><br/>
+    <span class="score" title="507 徳">507</span><span title="8 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="16 バッジ"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="28 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">28</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="/revisions/215/">
+                edited
+                <strong>Dec 22 '10 at 10:48</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/e585686707fd3a61b7096451ebf13012?s=32&amp;d=identicon&amp;r=g" alt="mn3's gravatar image" />
+            <p><a href="/users/2/mn3/">mn3 ♦♦</a><br/>
+            <span class="score" title="515 徳">515</span><span title="4 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="9 バッジ"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="22 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+<div class="comments-container" id="comments-container-215">
+    
+</div>
+<div id="comment-tools-215" class="comment-tools">
+    
+    
+</div>
+<div id="comment-215-form-container" class="comment-form-container">
+    
+</div>
+    
+                        </div>
+                        
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/215/ブログ等サイト上での論文の引用について?sort=登録順" title="最古の回答が最初に表示されます">回答順</a><a href="/questions/215/ブログ等サイト上での論文の引用について?sort=最新" title="最新の回答が最初に表示されます">最新</a><a href="/questions/215/ブログ等サイト上での論文の引用について?sort=投票" class="on" title="もっとも投票された回答が最初に表示されます">支持されている順</a></div>
+                </div>
+                
+  
+                
+                    <a name="216"></a>
+                    <div id="answer-container-216" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-216-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/216/up/" rel="nofollow"> </a>
+<div id="post-216-score" class="post-score"
+    title="現在の投票数">
+    1
+</div>
+<a id="post-216-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/216/down/" rel="nofollow"> </a>
+                                        
+
+
+    
+        <a class="accept-answer on"></a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>実際のページの引用の状態がいま見えないので上記の説明だけから判断すると、引用の要件は満たしているようにみえます。</p>
+<p>該当ページでのコメントから推測するに、雑誌が有料でアクセス制限があることはその著作物を引用するときの引用か無断転載かの判断とは無関係だと思います。そこで問題がありえるとしたら、著作権ではなくて契約の問題になると思います。雑誌の利用規約を確認するか、出版社に問い合わせる必要があることでしょう。</p>
+<p>ブログ等に論文の解説をのせるときに問題視とされる場合<a href="http://d.hatena.ne.jp/popeetheclown/20100707/1278525353">1</a>がありますが、最近では、雑誌によっては図個別に利用許諾をとることが簡単にできるようになっていて、個人のブログでの紹介などの非営利の利用の場合はすぐに利用許諾を得る事ができるようになっています。（@orenoqa さんが<a href="http://qa.lifesciencedb.jp/questions/215/ブログ等サイト上での論文の引用について/219">詳しく解説</a>しています。）</p>
+<p>一般にいえるのは、判断にこまったら権利者に問い合わせるのが一番近道であることを考慮することでしょうか。この場合は出版社に問い合わせるのが良いでしょう。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Dec 22 '10 at 00:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/e585686707fd3a61b7096451ebf13012?s=32&amp;d=identicon&amp;r=g" alt="mn3's gravatar image" />
+    <p><a href="/users/2/mn3/">mn3 ♦♦</a><br/>
+    <span class="score" title="515 徳">515</span><span title="4 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="9 バッジ"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="22 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="/revisions/216/">
+                edited
+                <strong>Dec 22 '10 at 18:03</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-216">
+    
+        <a name="217"></a>
+        <div class="comment" id="comment-217">
+            <div id="post-217-score" class="comment-score"></div>
+            <div class="comment-text"><p>まず問合せを行ってみます。有用な情報のリンクも付けていただいて大変助かりました。</p></div>
+            <div class="comment-info" id="comment-217-info">
+                
+                
+                
+                <span class="comment-age">(Dec 22 '10 at 01:48)</span>
+                <a class="comment-user userinfo" href="/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-216" class="comment-tools">
+    
+    
+</div>
+<div id="comment-216-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="219"></a>
+                    <div id="answer-container-219" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-219-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/219/up/" rel="nofollow"> </a>
+<div id="post-219-score" class="post-score"
+    title="現在の投票数">
+    5
+</div>
+<a id="post-219-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/219/down/" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>最近の雑誌ではオンライン上で図表テキストの再利用許可を取れるようになってきています。
+例えば、Nature系の雑誌では検索結果の下や該当論文ページの右側にある "Rights and permissions" から、Scienceでは論文ページの左側にある "Commercial Reprints and Permissions" のリンクをたどって、図表の使用方法や利用目的を選択していくと必要な利用料金が表示されます。
+非営利での利用の場合は、無料で利用できるものも多いようです。
+ここで登録（無料の場合でも）を行うとライセンス番号が発行されるので、それを表示すれば再利用は可能だと思います。</p>
+<p>また、BMC系、PLoS系の雑誌などは Creative Commons ライセンスを採用していますのでライセンスに従えば再利用可能です。
+いずれにせよ雑誌ごとにポリシーは異なりますのでそれぞれ個別に確認する必要がありますね。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Dec 22 '10 at 12:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/e4d3b55c08487b647cc26e6b601c2242?s=32&amp;d=identicon&amp;r=g" alt="orenoqa's gravatar image" />
+    <p><a href="/users/3/orenoqa/">orenoqa ♦♦</a><br/>
+    <span class="score" title="111 徳">111</span><span title="1 バッジ"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="/revisions/219/">
+                edited
+                <strong>Dec 22 '10 at 17:37</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-219">
+    
+        <a name="220"></a>
+        <div class="comment" id="comment-220">
+            <div id="post-220-score" class="comment-score">2</div>
+            <div class="comment-text"><p>各雑誌の再利用に関するポリシーを日本語でまとめると有用かもしれませんね。</p></div>
+            <div class="comment-info" id="comment-220-info">
+                
+                
+                
+                <span class="comment-age">(Dec 22 '10 at 12:19)</span>
+                <a class="comment-user userinfo" href="/users/3/orenoqa/">orenoqa ♦♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/e4d3b55c08487b647cc26e6b601c2242?s=18&amp;d=identicon&amp;r=g" alt="orenoqa's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="222"></a>
+        <div class="comment" id="comment-222">
+            <div id="post-222-score" class="comment-score"></div>
+            <div class="comment-text"><p>許可の取り方の情報、大変参考になります。
+ポリシーまとめに関しても、可能であれば主要な雑誌に関しては
+個別に方法を記載しようと思います。</p></div>
+            <div class="comment-info" id="comment-222-info">
+                
+                
+                
+                <span class="comment-age">(Dec 22 '10 at 13:27)</span>
+                <a class="comment-user userinfo" href="/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="226"></a>
+        <div class="comment" id="comment-226">
+            <div id="post-226-score" class="comment-score"></div>
+            <div class="comment-text"><p>私もとても参考になりました。
+私は、C.C.を採用しているfigureに限って講義で利用していたりしますが、その他グレーだったりライセンスがいまいち理解できないものは、直接著者や権利者に問い合わせすることが良くあります。逆にとても喜んでもらえるので、こちらとしてもうれしい限りです。</p></div>
+            <div class="comment-info" id="comment-226-info">
+                
+                
+                
+                <span class="comment-age">(Dec 23 '10 at 22:22)</span>
+                <a class="comment-user userinfo" href="/users/28/suimye/">suimye</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/f763b758228ce9395b960221fbf54594?s=18&amp;d=identicon&amp;r=g" alt="suimye's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-219" class="comment-tools">
+    
+    
+</div>
+<div id="comment-219-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="218"></a>
+                    <div id="answer-container-218" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-218-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/218/up/" rel="nofollow"> </a>
+<div id="post-218-score" class="post-score"
+    title="現在の投票数">
+    3
+</div>
+<a id="post-218-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/218/down/" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>引用ではなく転載と判断されるように思います．引用は著作権法により認められている行為ですので著作権者に許諾を得る必要はありませんが，転載の場合は著作権者の許諾が必要です．</p>
+<p>書かれているように，引用とみなされるためには，質的にも量的にも，引用先が 「主」，引用部分が 「従」 の関係にある必要があるのですが，この場合はそれが満たされていないように思います．具体的には，引用物についての論評が目的であるなら引用部分がは「従」とみなされますが，情報の「まとめ」が目的であり1行程度のコメントしかないのなら引用部分が「従」 とは判断されないように思います．</p>
+<p>ちなみに，最初に書いたように，引用は法律に認められている行為ですので「合法な"引用"」という表記はおかしいです．（違法な引用というものはない）．また，無断引用という表記もありえません（引用は無断でしてもよいから）．合法な転載，あるいは，無断転載と表記すべきです．</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Dec 22 '10 at 10:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/48c753386dd2d250fb6e7ee2b1f09ea8?s=32&amp;d=identicon&amp;r=g" alt="ksukeiida's gravatar image" />
+    <p><a href="/users/54/ksukeiida/">ksukeiida</a><br/>
+    <span class="score" title="146 徳">146</span><span title="1 バッジ"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span></p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-218">
+    
+        <a name="221"></a>
+        <div class="comment" id="comment-221">
+            <div id="post-221-score" class="comment-score"></div>
+            <div class="comment-text"><p>ご回答ありがとうございます。
+「主」「従」の関係について、確かにご指摘の通りではないかと思います。
+やはり、許可を取るべきなようですね。</p></div>
+            <div class="comment-info" id="comment-221-info">
+                
+                
+                
+                <span class="comment-age">(Dec 22 '10 at 13:24)</span>
+                <a class="comment-user userinfo" href="/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-218" class="comment-tools">
+    
+    
+</div>
+<div id="comment-218-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/215/answer/" method="post">
+            <div style="clear:both">
+            </div>
+            
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            あなたの回答
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea rows="10" cols="40" name="text" id="editor"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="リアルタイムMarkdown編集プレビューをトグルする">
+                                            プレビューをトグルする
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input type="checkbox" name="wiki" id="id_wiki" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="コミュニティー wikiオプションを選択した場合、質問と回答はポイントを生成せず、作者名は表示されない">
+                                            <label for="id_wiki">コミュニティー wiki</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+                        
+                        </table>  
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>                    
+                </div>
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">この質問をフォローする</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="/questions/215/%E3%83%96%E3%83%AD%E3%82%B0%E7%AD%89%E3%82%B5%E3%82%A4%E3%83%88%E4%B8%8A%E3%81%A7%E3%81%AE%E8%AB%96%E6%96%87%E3%81%AE%E5%BC%95%E7%94%A8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6?type=rss" title="subscribe to answers"></a>
+    回答
+</p><p><a class="feed-icon" style="background-image:url('/m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="/questions/215/%E3%83%96%E3%83%AD%E3%82%B0%E7%AD%89%E3%82%B5%E3%82%A4%E3%83%88%E4%B8%8A%E3%81%A7%E3%81%AE%E8%AB%96%E6%96%87%E3%81%AE%E5%BC%95%E7%94%A8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    回答とコメント
+</p>
+
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>ただいまベータテスト運用中です。そのために通知無くコンテンツの変更やサービスの停止変更されることがあります。</h2>
+<p>質問するなら<a href="http://qa.lifesciencedb.jp">ライフサイエンスQA</a>。</p>
+<p>このページの<a href="?type=rss">RSSフィード</a></p>
+<p><a href="http://twitter.com/lsqa_all">@lsqa_all</a>・<a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a></p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <p>
+		タグ:
+    </p>
+    <p class="tags" >
+        
+        	<a href="/tags/%E5%BC%95%E7%94%A8/" 
+			title="タグ付けされた質問をみる'引用'タグを利用している" 
+			rel="tag">引用</a> <span class="tag-number">&#215;2</span><br/>
+        
+        	<a href="/tags/%E8%91%97%E4%BD%9C%E6%A8%A9/" 
+			title="タグ付けされた質問をみる'著作権'タグを利用している" 
+			rel="tag">著作権</a> <span class="tag-number">&#215;2</span><br/>
+        
+        	<a href="/tags/wiki/" 
+			title="タグ付けされた質問をみる'wiki'タグを利用している" 
+			rel="tag">wiki</a> <span class="tag-number">&#215;1</span><br/>
+        
+        	<a href="/tags/%E3%83%96%E3%83%AD%E3%82%B0/" 
+			title="タグ付けされた質問をみる'ブログ'タグを利用している" 
+			rel="tag">ブログ</a> <span class="tag-number">&#215;1</span><br/>
+        
+        	<a href="/tags/%E6%83%85%E5%A0%B1%E5%85%AC%E9%96%8B/" 
+			title="タグ付けされた質問をみる'情報公開'タグを利用している" 
+			rel="tag">情報公開</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        質問日: <strong title="2010-12-21 22:09:47.433939">Dec 21 '10 at 22:09</strong>
+    </p>
+    <p> 
+     	閲覧数: <strong>26,703 回</strong>
+    </p>
+    <p> 
+        最終更新日: <strong title="2010-12-23 22:22:43.587180">Dec 23 '10 at 22:22</strong>
+    </p>
+</div>
+
+
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>世界に広がるQAサイト</h2>
+<p><a href="http://biostar.stackexchange.com">バイオインフォマティクスのBioStar</a>・ <a href="http://I.SEQanswers.com">新型シーケンサーのSEQanswers</a>・ <a href="http://blueobelisk.shapado.com">オープンデータのBlueObelisk</a>・<a href="http://stackoverflow.com">プログラミングのstackoverflow</a>・ <a href="http://www.semanticoverflow.com">Semantic Overflow</a>・ <a href="http://stats.stackexchange.com/">Statistical Analysis</a>・ <a href="http://cstheory.stackexchange.com/">Theoretical Computer Science</a>・ <a href="http://chiebukuro.yahoo.co.jp/">Yahoo!知恵袋</a>・ <a href="http://okwave.jp/">OKWave</a> <a href="http://ja.wikipedia.org/wiki/Category:Q%26Aサイト">などなど</a></p>
+     </div>
+</div>
+
+<div class="boxC">
+    <h3 class="subtitle">関係した質問</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/383/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E4%B8%AD%E3%81%AE%E5%9B%B3%E3%81%AE%E5%BC%95%E7%94%A8%E6%99%82%E3%81%AE%E9%81%A9%E5%88%87%E3%81%AA%E3%82%AF%E3%83%AC%E3%82%B8%E3%83%83%E3%83%88%E8%A1%A8%E8%A8%98%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">スライド中の図の引用時の適切なクレジット表記について</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >概要</a> <span class="link-separator"> |</span> <a href="/faq/" >よくある質問</a> <span class="link-separator"> |</span> <a href="/privacy/" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="/m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

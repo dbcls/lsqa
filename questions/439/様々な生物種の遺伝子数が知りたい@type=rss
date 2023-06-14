@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: 様々な生物種の遺伝子数が知りたい</title><link>http://qa.lifesciencedb.jp/questions/439/%E6%A7%98%E3%80%85%E3%81%AA%E7%94%9F%E7%89%A9%E7%A8%AE%E3%81%AE%E9%81%BA%E4%BC%9D%E5%AD%90%E6%95%B0%E3%81%8C%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84</link><description>&lt;p&gt;様々な生物種の遺伝子数を調べたいと思っています。&lt;/p&gt;
+&lt;p&gt;できるだけ最新の情報(ゲノム情報など)を反映した
+データベースなどはありますでしょうか。&lt;/p&gt;
+&lt;p&gt;どうぞよろしくお願い致します。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/439/%E6%A7%98%E3%80%85%E3%81%AA%E7%94%9F%E7%89%A9%E7%A8%AE%E3%81%AE%E9%81%BA%E4%BC%9D%E5%AD%90%E6%95%B0%E3%81%8C%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84" rel="self"></atom:link><language>ja</language><lastBuildDate>Fri, 13 May 2011 17:33:53 +0900</lastBuildDate><item><title>Answer by tktym</title><link>http://qa.lifesciencedb.jp/questions/439/%E6%A7%98%E3%80%85%E3%81%AA%E7%94%9F%E7%89%A9%E7%A8%AE%E3%81%AE%E9%81%BA%E4%BC%9D%E5%AD%90%E6%95%B0%E3%81%8C%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84/440</link><description>&lt;h2&gt;KEGG GENES&lt;/h2&gt;
+&lt;p&gt;細かいことは無視した（選択的スプライシングとかいろいろ）ざっくりした値ですが&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.genome.jp/kegg/catalog/org_list.html"&gt;http://www.genome.jp/kegg/catalog/org_list.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;の学名のところをクリックして出てくる XXXX entries が遺伝子数になります。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">tktym</dc:creator><pubDate>Fri, 13 May 2011 17:33:53 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/439/%E6%A7%98%E3%80%85%E3%81%AA%E7%94%9F%E7%89%A9%E7%A8%AE%E3%81%AE%E9%81%BA%E4%BC%9D%E5%AD%90%E6%95%B0%E3%81%8C%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84/440</guid></item></channel></rss>

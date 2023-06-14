@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With xgrid</title><link>http://qa.lifesciencedb.jp/tags/xgrid/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;xgrid&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/xgrid/" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 11 Jan 2011 22:52:43 +0900</lastBuildDate><item><title>bowtie &gt; samtoolsまでをgrid化</title><link>http://qa.lifesciencedb.jp/questions/255/bowtie-samtools%E3%81%BE%E3%81%A7%E3%82%92grid%E5%8C%96</link><description>&lt;p&gt;シェルスクリプトをつかい、染色体を全部束ねたindexに対してbowtieでsamファイルを吐かせ、
+そのあとsamtoolsでbam, bam sort, bam indexを順に作らせています。すべて逐次処理です。&lt;/p&gt;
+&lt;p&gt;Mac OSXを使っているので、どうせならば、xgridで分散処理をしたいのですが、どういうジョブにしたらいいと思いますか？
+gmapにあるように染色体ごとにindexを作成し、それぞれ染色体ごとのbowtieのジョブを走らせるというのは
+魅力的ですが、今までの逐次処理を染色体ごとのgridのジョブにしてしまうと、染色体ごとのbam indexができはずですが、
+最終的なbam indexは一つにまとめたいのです。
+おそらくは、各染色体ごとのbowtieをそれぞれ別個のジョブにしておいて
+&lt;strong&gt;&lt;em&gt;「xgirdのすべてのジョブのidを取得し、それらが終わるのを確認し、」&lt;/em&gt;&lt;/strong&gt;
+という部分をシェルスクリプトで表現できれば、
+あとは、samtoolsですべてのsamファイルをマージ&amp;gt;bam, bam sort, bam indexを順に作らせるように思うのですが。。。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">fumumumu</dc:creator><pubDate>Tue, 11 Jan 2011 22:52:43 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/255/bowtie-samtools%E3%81%BE%E3%81%A7%E3%82%92grid%E5%8C%96</guid><category>bowtie</category><category>xgrid</category><category>ngs</category></item></channel></rss>

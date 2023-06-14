@@ -1,0 +1,738 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>タグリスト - #LSQA</title>
+        <meta name="description" content="質問と回答と私">
+        <meta name="keywords" content="OSQA,CNPROG,forum,community,lifesciencedb.jp,DDBJ,PDBj,DBCLS,Cytoscape,NGS,ngs-field">
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="../upfiles/favicon.ico" />
+        <link href="../m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="../cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='../m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+       <script type="text/javascript">
+       /*<![CDATA[*/
+        $().ready(function(){
+            $("#ipSearchTag").focus();
+
+            var orderby = "";
+            if(orderby != "used" && orderby != "name")
+                orderby = "used";
+            $("#sort_" + orderby).attr('className',"on");
+            $("#type-tag").attr('checked',true);
+
+            Hilite.exact = false;
+            Hilite.elementid = "searchtags";
+            Hilite.debug_referrer = location.href;
+        });
+        /*]]>*/
+        </script>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="../opensearch.xml.html" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="../index.html">
+				<img src="../upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="../account/yahoo/signin/index.html" >ログイン</a>  <a href="../about/index.html" >概要</a>  <a href="../faq/index.html" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" href="../questions/index.html" >質問</a><a id="nav_tags" class="on" href="index.html" >タグ</a><a id="nav_users" href="http://qa.lifesciencedb.jp/users/" >ユーザー</a><a id="nav_badges" href="../badges/index.html" >バッジ</a><a id="nav_unanswered" href="../questions/unanswered/index.html" >未回答</a>
+        <a id="nav_ask" href="../questions/ask/index.html" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="http://qa.lifesciencedb.jp/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+        <div id="wrapper">
+            <div id="room">
+                <div id="CAFull">
+                    
+<!-- Tabs -->
+<div class="tabBar">
+    <div class="headQuestions">タグリスト</div>
+    
+<div class="tabsA"><a href="index.html@sort=名前.html" class="on" title="sorted alphabetically">名前順</a><a href="index.html@sort=used.html" title="sorted by frequency of tag use">人気順</a></div>
+</div>
+<div id="searchtags">
+<p>
+
+
+</p>
+
+<ul class="tagsList tags">
+
+   <li>
+    <a href="virus/index.html" title="タグ付けされた質問をみる'virus'タグを利用している" rel="tag">
+        virus
+    </a>&nbsp;
+    <span class="tag-number">&#215; 2</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="wiki/index.html" title="タグ付けされた質問をみる'wiki'タグを利用している" rel="tag">
+        wiki
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="xgrid/index.html" title="タグ付けされた質問をみる'xgrid'タグを利用している" rel="tag">
+        xgrid
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="xml/index.html" title="タグ付けされた質問をみる'xml'タグを利用している" rel="tag">
+        xml
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="おすすめ/index.html" title="タグ付けされた質問をみる'おすすめ'タグを利用している" rel="tag">
+        おすすめ
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="アイコン/index.html" title="タグ付けされた質問をみる'アイコン'タグを利用している" rel="tag">
+        アイコン
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="アセンブル/index.html" title="タグ付けされた質問をみる'アセンブル'タグを利用している" rel="tag">
+        アセンブル
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="アノテーション/index.html" title="タグ付けされた質問をみる'アノテーション'タグを利用している" rel="tag">
+        アノテーション
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="イラスト/index.html" title="タグ付けされた質問をみる'イラスト'タグを利用している" rel="tag">
+        イラスト
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="インストール/index.html" title="タグ付けされた質問をみる'インストール'タグを利用している" rel="tag">
+        インストール
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="ウィルス変異株定量/index.html" title="タグ付けされた質問をみる'ウィルス変異株定量'タグを利用している" rel="tag">
+        ウィルス変異株定量
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="エンリッチメント解析/index.html" title="タグ付けされた質問をみる'エンリッチメント解析'タグを利用している" rel="tag">
+        エンリッチメント解析
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="キーワード/index.html" title="タグ付けされた質問をみる'キーワード'タグを利用している" rel="tag">
+        キーワード
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="クマムシ/index.html" title="タグ付けされた質問をみる'クマムシ'タグを利用している" rel="tag">
+        クマムシ
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="クレジット/index.html" title="タグ付けされた質問をみる'クレジット'タグを利用している" rel="tag">
+        クレジット
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="ゲノム/index.html" title="タグ付けされた質問をみる'ゲノム'タグを利用している" rel="tag">
+        ゲノム
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="ゲノムインプリンティング/index.html" title="タグ付けされた質問をみる'ゲノムインプリンティング'タグを利用している" rel="tag">
+        ゲノムインプリンティング
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="ゲル抽出/index.html" title="タグ付けされた質問をみる'ゲル抽出'タグを利用している" rel="tag">
+        ゲル抽出
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="コマンド/index.html" title="タグ付けされた質問をみる'コマンド'タグを利用している" rel="tag">
+        コマンド
+    </a>&nbsp;
+    <span class="tag-number">&#215; 2</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="サイト/index.html" title="タグ付けされた質問をみる'サイト'タグを利用している" rel="tag">
+        サイト
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="ストック/index.html" title="タグ付けされた質問をみる'ストック'タグを利用している" rel="tag">
+        ストック
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="ストレージ/index.html" title="タグ付けされた質問をみる'ストレージ'タグを利用している" rel="tag">
+        ストレージ
+    </a>&nbsp;
+    <span class="tag-number">&#215; 2</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="セマンティックweb/index.html" title="タグ付けされた質問をみる'セマンティックweb'タグを利用している" rel="tag">
+        セマンティックweb
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="セントロメア/index.html" title="タグ付けされた質問をみる'セントロメア'タグを利用している" rel="tag">
+        セントロメア
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="タグ/index.html" title="タグ付けされた質問をみる'タグ'タグを利用している" rel="tag">
+        タグ
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="ツール/index.html" title="タグ付けされた質問をみる'ツール'タグを利用している" rel="tag">
+        ツール
+    </a>&nbsp;
+    <span class="tag-number">&#215; 2</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="データベース/index.html" title="タグ付けされた質問をみる'データベース'タグを利用している" rel="tag">
+        データベース
+    </a>&nbsp;
+    <span class="tag-number">&#215; 6</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="ハウスキーピング遺伝子/index.html" title="タグ付けされた質問をみる'ハウスキーピング遺伝子'タグを利用している" rel="tag">
+        ハウスキーピング遺伝子
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="ブログ/index.html" title="タグ付けされた質問をみる'ブログ'タグを利用している" rel="tag">
+        ブログ
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="プライマー/index.html" title="タグ付けされた質問をみる'プライマー'タグを利用している" rel="tag">
+        プライマー
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="プログラミング言語/index.html" title="タグ付けされた質問をみる'プログラミング言語'タグを利用している" rel="tag">
+        プログラミング言語
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="プロモーター/index.html" title="タグ付けされた質問をみる'プロモーター'タグを利用している" rel="tag">
+        プロモーター
+    </a>&nbsp;
+    <span class="tag-number">&#215; 2</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="ペアエンド/index.html" title="タグ付けされた質問をみる'ペアエンド'タグを利用している" rel="tag">
+        ペアエンド
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="ポスター作成/index.html" title="タグ付けされた質問をみる'ポスター作成'タグを利用している" rel="tag">
+        ポスター作成
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="マイクロアレイ/index.html" title="タグ付けされた質問をみる'マイクロアレイ'タグを利用している" rel="tag">
+        マイクロアレイ
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="マウス/index.html" title="タグ付けされた質問をみる'マウス'タグを利用している" rel="tag">
+        マウス
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="メタデータ/index.html" title="タグ付けされた質問をみる'メタデータ'タグを利用している" rel="tag">
+        メタデータ
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="モチーフ/index.html" title="タグ付けされた質問をみる'モチーフ'タグを利用している" rel="tag">
+        モチーフ
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="ライフサイエンスqa/index.html" title="タグ付けされた質問をみる'ライフサイエンスqa'タグを利用している" rel="tag">
+        ライフサイエンスqa
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="ライブラリ/index.html" title="タグ付けされた質問をみる'ライブラリ'タグを利用している" rel="tag">
+        ライブラリ
+    </a>&nbsp;
+    <span class="tag-number">&#215; 2</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="リアルタイムpcr/index.html" title="タグ付けされた質問をみる'リアルタイムpcr'タグを利用している" rel="tag">
+        リアルタイムpcr
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="遺伝子数/index.html" title="タグ付けされた質問をみる'遺伝子数'タグを利用している" rel="tag">
+        遺伝子数
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="遺伝子予測/index.html" title="タグ付けされた質問をみる'遺伝子予測'タグを利用している" rel="tag">
+        遺伝子予測
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="印刷/index.html" title="タグ付けされた質問をみる'印刷'タグを利用している" rel="tag">
+        印刷
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="引用/index.html" title="タグ付けされた質問をみる'引用'タグを利用している" rel="tag">
+        引用
+    </a>&nbsp;
+    <span class="tag-number">&#215; 2</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="可視化/index.html" title="タグ付けされた質問をみる'可視化'タグを利用している" rel="tag">
+        可視化
+    </a>&nbsp;
+    <span class="tag-number">&#215; 2</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="画像/index.html" title="タグ付けされた質問をみる'画像'タグを利用している" rel="tag">
+        画像
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="画像変換/index.html" title="タグ付けされた質問をみる'画像変換'タグを利用している" rel="tag">
+        画像変換
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="解決済み/index.html" title="タグ付けされた質問をみる'解決済み'タグを利用している" rel="tag">
+        解決済み
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="癌ゲノム/index.html" title="タグ付けされた質問をみる'癌ゲノム'タグを利用している" rel="tag">
+        癌ゲノム
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="教科書/index.html" title="タグ付けされた質問をみる'教科書'タグを利用している" rel="tag">
+        教科書
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="系統樹/index.html" title="タグ付けされた質問をみる'系統樹'タグを利用している" rel="tag">
+        系統樹
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="検定/index.html" title="タグ付けされた質問をみる'検定'タグを利用している" rel="tag">
+        検定
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="講習会/index.html" title="タグ付けされた質問をみる'講習会'タグを利用している" rel="tag">
+        講習会
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="鎖鋸/index.html" title="タグ付けされた質問をみる'鎖鋸'タグを利用している" rel="tag">
+        鎖鋸
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="参考書/index.html" title="タグ付けされた質問をみる'参考書'タグを利用している" rel="tag">
+        参考書
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="使い道/index.html" title="タグ付けされた質問をみる'使い道'タグを利用している" rel="tag">
+        使い道
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="使い方/index.html" title="タグ付けされた質問をみる'使い方'タグを利用している" rel="tag">
+        使い方
+    </a>&nbsp;
+    <span class="tag-number">&#215; 10</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="次世代シークエンサー/index.html" title="タグ付けされた質問をみる'次世代シークエンサー'タグを利用している" rel="tag">
+        次世代シークエンサー
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+   <li>
+    <a href="情報公開/index.html" title="タグ付けされた質問をみる'情報公開'タグを利用している" rel="tag">
+        情報公開
+    </a>&nbsp;
+    <span class="tag-number">&#215; 1</span>
+    <br/>
+
+    </li>
+
+</ul>
+
+</div>
+
+
+
+                </div>
+                <div id="tail" style="clear:both;">
+                    
+<div class="pager">
+    <p class="paginator"><span class="prev"><a href="index.html@sort=名前&amp;page=3.html" title="以前の">&laquo; 以前の</a></span><a class="page" href="index.html@sort=名前&amp;page=1.html" >1</a><a class="page" href="index.html@sort=名前&amp;page=2.html" >2</a><a class="page" href="index.html@sort=名前&amp;page=3.html" >3</a><span class="curr this_page">4</span><a class="page" href="index.html@sort=名前&amp;page=5.html" >5</a><span class="next"><a href="index.html@sort=名前&amp;page=5.html" title="次のページ">次のページ &raquo;</a></span></p>
+</div>              
+
+                </div>
+            </div>
+            <div class="spacer3"></div>
+        </div>
+        
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="../about/index.html" >概要</a> <span class="link-separator"> |</span> <a href="../faq/index.html" >よくある質問</a> <span class="link-separator"> |</span> <a href="../privacy/index.html" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="../m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+        
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

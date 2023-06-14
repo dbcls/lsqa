@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: リファレンスについて</title><link>http://qa.lifesciencedb.jp/questions/549/%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;お世話になっております。
+マッピングする際のリファレンスについて質問です。&lt;br&gt;
+一般的にマッピングする際には&lt;br&gt;
+Humanでは&lt;br&gt;
+Ensembl GRCh37&lt;br&gt;
+NCBI 36 37&lt;br&gt;
+UCSC 18 19&lt;br&gt;
+や&lt;br&gt;
+Mouseでは&lt;br&gt;
+Ensemble NCBIM37&lt;br&gt;
+NCBI 37&lt;br&gt;
+UCSC mm9&lt;br&gt;
+があると思いますが、皆さんは主にどれを使われていますでしょうか？ ブラウザではUCSCを使用しているものの、RNAのバリアントはEnsemblが情報が豊富ですし、今後、解析するに当たっては統一したいので迷っております。バージョンにつきましても古い方が枯れているという考え方があるのかも知りたいと思います。RNA-seq解析の時にnovel junctionが同じイントロンで少しずれたのがたくさん出るときにとりあえずtophatでnovelを抑えてマッピングしますときにはRNAのバリアントが多く登録されている方がいいと思い、自分はUCSCよりensembleを使用してnovelありなしで解析しております。&lt;br&gt;
+よろしくお願いいたします。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/549/%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 22 May 2023 18:15:23 -0000</lastBuildDate></channel></rss>

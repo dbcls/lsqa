@@ -1,0 +1,747 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>DNAメチル化の同定方法の違い - #LSQA</title>
+        <meta name="description" content="最近DNAメチル化に関する論文をよく目にしたり、実際にSRAの登録データを触ったりします。
+そこで少し気になったのですが、ハイスループットなDNAメチル化同定には大まかに3つの方法が
+あると思うのですが、
+
+バイサルファイトを使う方法 (例：Bisulfite-Seq)
+免疫沈降を使う方法(例：MeDIP-Seq)
+制限酵素を使う方法(例：HELP-Seq)
+
+これらの方法の違い（長所・短所）はどういったところでしょうか？
+例えばバイサルファイトは非メチル化CpGをUpGに変換するのでBisulfite-Seqは個々のCpGの
+メチル化を同定できるなど(マッピングがちょっと大変そうですが・・・">
+        <meta name="keywords" content="dnaメチル化,ngs">
+        
+        <link rel="canonical" href="../down/index.html" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="../../../questions/234/dnaメチル化の同定方法の違い@type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="../../../upfiles/favicon.ico" />
+        <link href="../../../m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="../../../cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='../../../m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        
+        <script type='text/javascript' src='../../../m/qa.lifesciencedb.jp/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='../../../m/qa.lifesciencedb.jp/media/js/wmd/wmd.js'></script>
+        <link rel="stylesheet" type="text/css" href="../../../m/qa.lifesciencedb.jp/media/js/wmd/wmd.css" />
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[プレビューを隠す]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[プレビューを表示する]" : "[プレビューを隠す]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="../../../opensearch.xml.html" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="../../../index.html">
+				<img src="../../../upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="../../../account/yahoo/signin/index.html" >ログイン</a>  <a href="../../../about/index.html" >概要</a>  <a href="../../../faq/index.html" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="../../../questions/index.html" >質問</a><a id="nav_tags" href="../../../tags/index.html" >タグ</a><a id="nav_users" href="http://qa.lifesciencedb.jp/users/" >ユーザー</a><a id="nav_badges" href="../../../badges/index.html" >バッジ</a><a id="nav_unanswered" href="../../../questions/unanswered/index.html" >未回答</a>
+        <a id="nav_ask" href="../../../questions/ask/index.html" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="http://qa.lifesciencedb.jp/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="../down/index.html">DNAメチル化の同定方法の違い</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-234-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../234/up/index.html" rel="nofollow"> </a>
+<div id="post-234-score" class="post-score"
+    title="現在の投票数">
+    1
+</div>
+<a id="post-234-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../234/down/index.html" rel="nofollow"> </a>
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="../../../mark_favorite/234/index.html" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>最近DNAメチル化に関する論文をよく目にしたり、実際にSRAの登録データを触ったりします。
+そこで少し気になったのですが、ハイスループットなDNAメチル化同定には大まかに3つの方法が
+あると思うのですが、</p>
+<ol>
+<li>バイサルファイトを使う方法 (例：Bisulfite-Seq)</li>
+<li>免疫沈降を使う方法(例：MeDIP-Seq)</li>
+<li>制限酵素を使う方法(例：HELP-Seq)</li>
+</ol>
+<p>これらの方法の違い（長所・短所）はどういったところでしょうか？
+例えばバイサルファイトは非メチル化CpGをUpGに変換するのでBisulfite-Seqは個々のCpGの
+メチル化を同定できるなど(マッピングがちょっと大変そうですが・・・)。
+私はWet実験のラボに属していないため、サンプル調整や費用などの点に特に興味があります。
+ご教授お願いいたします。</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="../../../tags/dnaメチル化/index.html" class="post-tag"
+                                        title="'dnaメチル化'タグのついた質問をみる" rel="tag">dnaメチル化</a>
+                                
+                                    <a href="../../../tags/ngs/index.html" class="post-tag"
+                                        title="'ngs'タグのついた質問をみる" rel="tag">ngs</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">                            
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        質問日
+        <strong>Dec 25 '10 at 15:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/9ecf23319fe5ad016a80e640c0370df9?s=32&amp;d=identicon&amp;r=g" alt="Tanakky's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/46/tanakky/">Tanakky</a><br/>
+    <span class="score" title="121 徳">121</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="3 バッジ"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="8 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span></p>
+</div>
+
+
+                            </div>
+                            
+
+
+<div class="comments-container" id="comments-container-234">
+    
+</div>
+<div id="comment-tools-234" class="comment-tools">
+    
+    
+</div>
+<div id="comment-234-form-container" class="comment-form-container">
+    
+</div>
+    
+                        </div>
+                        
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="../../../questions/234/dnaメチル化の同定方法の違い@sort=登録順.html" title="最古の回答が最初に表示されます">回答順</a><a href="../../../questions/234/dnaメチル化の同定方法の違い@sort=最新.html" title="最新の回答が最初に表示されます">最新</a><a href="../../../questions/234/dnaメチル化の同定方法の違い@sort=投票.html" class="on" title="もっとも投票された回答が最初に表示されます">支持されている順</a></div>
+                </div>
+                
+  
+                
+                    <a name="235"></a>
+                    <div id="answer-container-235" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-235-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../235/up/index.html" rel="nofollow"> </a>
+<div id="post-235-score" class="post-score"
+    title="現在の投票数">
+    5
+</div>
+<a id="post-235-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../235/down/index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>費用は"Bisul-seq &gt; MeDIP-seq &gt; HELP-seq"で、ほぼ、シークエンス解析＝リード数の必要量に依存すると考えます。
+HELP-seq(<a href="http://genomebiology.com/2010/11/4/R36">Genome biology (2010) 4:R36</a>)はシークエンスがうまくいけばGAIIxで1セルで6サンプル（ヒト、マウス：約150万箇所/3-4Gbpゲノム）の比較が可能です。
+直接解析していないので実践的な数値はわかりませんが、Bisul-seqなら単純計算で、
+ {3.3Gbp x 2（両strand）x [希望するリードdepth] } bp （ヒト）が必要になりますので、
+GAIIxなら数セルｘ希望リード数が必要かと思います（間違っていたら訂正してください）。
+サンプル調製法は、入り口が多少違いますが、大体３つとも操作および費用（シークエンス解析費用に比較しての違い）にそれほど大きな差はないと考えてよいかと思います。</p>
+<hr>
+<p>具体的な方法の違いについては以下に纏めました（すみません、長くなりました…）。
+どの方法が適しているかは、ゲノム配列のどの領域に注目するかに依存して変わってくると思いますので、参考までにゲノム全体を解析したい場合の比較について私見を述べました。各方法の中にもvariationがありますので。</p>
+<p>１）バイサルファイトを使う方法：最も詳細なDNAメチル化率データが得られる。１サンプルあたりの解析費用は最も高い。
+長所）理論上すべてのC（CpG配列以外も含む）のメチル化状態を１塩基解像度で、表裏のstrandごとのメチル化状態を解析できる。SNPなどの多型を含む領域ではalleleごとのメチル化状態の違いもみることができる。
+短所）1サンプルを解析するのに必要なリード数が多い。データ量が大きい。リピート配列のマッピング等の問題がある。</p>
+<p>２）免疫沈降を使う方法：全体のメチル化率を大まかにみる。control（Input）はすべてのシトシンがメチル化されている状態と仮定できる。
+長所）理論上すべてのCのメチル化状態を（数百bpの解像度で）解析できる。
+短所）解像度はDNA断片化と抗体による免疫沈降の効率によって数百bp程度。哺乳類ゲノムのCpG配列の偏りのバイアスを受けやすく、シグナル強度は近傍配列のメチルシトシン量の総和として得られる（normalizationが難しい）。mono-/bi-allelicなメチル化は識別できない。シトシンの少ない領域では感度が低い。</p>
+<p>３）制限酵素を使う方法：抜粋された配列のメチル化率をみる。control(HELPの場合メチル化感受性酵素HpaIIに対するメチル化非感受性MspIによるreference)はすべて対象配列がメチル化されていない状態と仮定できる。
+長所）１サンプルあたりの解析に必要なリード数が少ないため、低費用で解析できる。解析対象配列のメチル化状態を認識配列ごとに独立に解析でき、シトシン頻度のバイアスを受けにくい。
+短所）使用する制限酵素配列の認識配列しか解析できない（最初に制限酵素認識配列により解析可能な配列は決まってくる）→数種の制限酵素を組み合わせてより多くのシトシンを解析する方法も提唱されている（controlはとれない）。mono-/bi-allelicなメチル化は識別できない。制限酵素の切断効率に依存。</p>
+<p>私は実際に全行程を扱ったのはHELP-seqだけですし、機器の最新のupdateについていけてないので間違っているところがあったら誰か補完してください（笑）。宜しくお願いします。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Dec 25 '10 at 23:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/a44f06007deed23a28b60037b2107ae9?s=32&amp;d=identicon&amp;r=g" alt="odamame's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/42/odamame/">odamame</a><br/>
+    <span class="score" title="111 徳">111</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 バッジ"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="7 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="http://qa.lifesciencedb.jp/revisions/235/">
+                edited
+                <strong>Dec 27 '10 at 12:51</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/e585686707fd3a61b7096451ebf13012?s=32&amp;d=identicon&amp;r=g" alt="mn3's gravatar image" />
+            <p><a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><br/>
+            <span class="score" title="515 徳">515</span><span title="4 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="9 バッジ"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="22 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-235">
+    
+        <a name="236"></a>
+        <div class="comment" id="comment-236">
+            <div id="post-236-score" class="comment-score"></div>
+            <div class="comment-text"><p>詳細なご説明どうもありがとうございます。
+HELP-Seqは低費用なのがいいですね。特にallelicやSNPに着目しないのであれば、
+複数の細胞種や条件下でメチル化を調べるのに適してそうですね。</p></div>
+            <div class="comment-info" id="comment-236-info">
+                
+                
+                
+                <span class="comment-age">(Dec 26 '10 at 13:49)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/46/tanakky/">Tanakky</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/9ecf23319fe5ad016a80e640c0370df9?s=18&amp;d=identicon&amp;r=g" alt="Tanakky's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-235" class="comment-tools">
+    
+    
+</div>
+<div id="comment-235-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="238"></a>
+                    <div id="answer-container-238" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-238-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="index.html" rel="nofollow"> </a>
+<div id="post-238-score" class="post-score"
+    title="現在の投票数">
+    2
+</div>
+<a id="post-238-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../down/index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Odamameさん、詳しい説明ありがとうございます。Odamameさんの回答に少し補足します。</p>
+<p>HELP-seq(<a href="http://genomebiology.com/2010/11/4/R36">Genome biology (2010) 4:R36</a>)　（正確にはHELP-taggingと呼びます）は最小でそれぞれMspI ライブラリー約２０ミリオン（Reference)、HpaIIライブラリー約５ミリオン（test）のリード数で解析が可能です。また、referenceのMspIは純系マウスでは１系統で一つのデータを、ヒトではSNPs情報を無視できる場合は既存のreferenceを使用することが可能です。HiSeq2000ではインデクッスをつけて１レーンあたり４サンプルが可能です。
+詳しいプロトコールなどは<a href="http://wasp.einstein.yu.edu/index.php/Protocol">こちらのサイト</a>にありますので、参考にしてください。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Dec 27 '10 at 12:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/90b0a92868a22d846ea6ea71d4e5a6a1?s=32&amp;d=identicon&amp;r=g" alt="MasakoSuzuki's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/56/masakosuzuki/">MasakoSuzuki</a><br/>
+    <span class="score" title="31 徳">31</span><span title="3 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="http://qa.lifesciencedb.jp/revisions/238/">
+                edited
+                <strong>Dec 27 '10 at 12:51</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/e585686707fd3a61b7096451ebf13012?s=32&amp;d=identicon&amp;r=g" alt="mn3's gravatar image" />
+            <p><a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><br/>
+            <span class="score" title="515 徳">515</span><span title="4 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="9 バッジ"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="22 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-238">
+    
+        <a name="239"></a>
+        <div class="comment" id="comment-239">
+            <div id="post-239-score" class="comment-score"></div>
+            <div class="comment-text"><p>補足説明ありがとうございます。
+正式名はHELP-taggingというのですね。失礼いたしました。
+プロトコールの詳細が載っているサイトはいいですね。
+エピゲノム関連の研究はここ最近かなり盛んなので、
+こういった情報はありがたいです。</p></div>
+            <div class="comment-info" id="comment-239-info">
+                
+                
+                
+                <span class="comment-age">(Dec 27 '10 at 12:49)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/46/tanakky/">Tanakky</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/9ecf23319fe5ad016a80e640c0370df9?s=18&amp;d=identicon&amp;r=g" alt="Tanakky's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-238" class="comment-tools">
+    
+    
+</div>
+<div id="comment-238-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="http://qa.lifesciencedb.jp/questions/234/answer/" method="post">
+            <div style="clear:both">
+            </div>
+            
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            あなたの回答
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea rows="10" cols="40" name="text" id="editor"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="リアルタイムMarkdown編集プレビューをトグルする">
+                                            プレビューをトグルする
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input type="checkbox" name="wiki" id="id_wiki" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="コミュニティー wikiオプションを選択した場合、質問と回答はポイントを生成せず、作者名は表示されない">
+                                            <label for="id_wiki">コミュニティー wiki</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+                        
+                        </table>  
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>                    
+                </div>
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">この質問をフォローする</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('../../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="../../../questions/234/dnaメチル化の同定方法の違い@type=rss" title="subscribe to answers"></a>
+    回答
+</p><p><a class="feed-icon" style="background-image:url('../../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="../../../questions/234/dnaメチル化の同定方法の違い@type=rss&amp;comments=yes" title="subscribe to comments and answers"></a>
+    回答とコメント
+</p>
+
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>ただいまベータテスト運用中です。そのために通知無くコンテンツの変更やサービスの停止変更されることがあります。</h2>
+<p>質問するなら<a href="../../../index.html">ライフサイエンスQA</a>。</p>
+<p>このページの<a href="../../../questions/234/dnaメチル化の同定方法の違い@type=rss">RSSフィード</a></p>
+<p><a href="http://twitter.com/lsqa_all">@lsqa_all</a>・<a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a></p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <p>
+		タグ:
+    </p>
+    <p class="tags" >
+        
+        	<a href="../../../tags/ngs/index.html" 
+			title="タグ付けされた質問をみる'ngs'タグを利用している" 
+			rel="tag">ngs</a> <span class="tag-number">&#215;47</span><br/>
+        
+        	<a href="../../../tags/dnaメチル化/index.html" 
+			title="タグ付けされた質問をみる'dnaメチル化'タグを利用している" 
+			rel="tag">dnaメチル化</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        質問日: <strong title="2010-12-25 15:54:11.838822">Dec 25 '10 at 15:54</strong>
+    </p>
+    <p> 
+     	閲覧数: <strong>9,456 回</strong>
+    </p>
+    <p> 
+        最終更新日: <strong title="2010-12-27 12:51:49.843736">Dec 27 '10 at 12:51</strong>
+    </p>
+</div>
+
+
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>世界に広がるQAサイト</h2>
+<p><a href="http://biostar.stackexchange.com">バイオインフォマティクスのBioStar</a>・ <a href="http://I.SEQanswers.com">新型シーケンサーのSEQanswers</a>・ <a href="http://blueobelisk.shapado.com">オープンデータのBlueObelisk</a>・<a href="http://stackoverflow.com">プログラミングのstackoverflow</a>・ <a href="http://www.semanticoverflow.com">Semantic Overflow</a>・ <a href="http://stats.stackexchange.com/">Statistical Analysis</a>・ <a href="http://cstheory.stackexchange.com/">Theoretical Computer Science</a>・ <a href="http://chiebukuro.yahoo.co.jp/">Yahoo!知恵袋</a>・ <a href="http://okwave.jp/">OKWave</a> <a href="http://ja.wikipedia.org/wiki/Category:Q%26Aサイト">などなど</a></p>
+     </div>
+</div>
+
+<div class="boxC">
+    <h3 class="subtitle">関係した質問</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="../../810/down/index.html">Trinityのアセンブリ結果の見方</a>
+        </p>
+        
+        <p>
+            <a href="../../499/down/index.html">Celera WGA Assembler(CABOG)のインストールと使い方</a>
+        </p>
+        
+        <p>
+            <a href="../../314/down/index.html">FindPeaksの使い方</a>
+        </p>
+        
+        <p>
+            <a href="../../139/down/index.html">BMB2010 のNGS関連の発表</a>
+        </p>
+        
+        <p>
+            <a href="../../270/down/index.html">Transcriptome analysisとRNASeqの違いについて</a>
+        </p>
+        
+        <p>
+            <a href="../../508/down/index.html">NGSライブラリのPCR増幅</a>
+        </p>
+        
+        <p>
+            <a href="../../750/down/index.html">アライメントについて</a>
+        </p>
+        
+        <p>
+            <a href="../../289/down/index.html">次世代シーケンサのオープンなデータ</a>
+        </p>
+        
+        <p>
+            <a href="../../437/down/index.html">ノンモデル生物のmRNA精製でrRNAのコンタミをなるべく下げたい</a>
+        </p>
+        
+        <p>
+            <a href="../../../mark_favorite/227/index.html">C-value からゲノムサイズを推定する</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="../../../about/index.html" >概要</a> <span class="link-separator"> |</span> <a href="../../../faq/index.html" >よくある質問</a> <span class="link-separator"> |</span> <a href="../../../privacy/index.html" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="../../../m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

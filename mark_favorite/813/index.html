@@ -1,0 +1,741 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Local BLASTのデータベース - #LSQA</title>
+        <meta name="description" content="お世話になります。
+Local BLASTを導入するために統合TVのLocal BLASTの使い方（http://togotv.dbcls.jp/20110420.html）を参考にさせていただいております。
+ご紹介の通りの手順で作業を進めていましたが、データベースを作成できずに困っております。
+まず、データベースとして、ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/ からnr.gzをダウンロードし、解凍しました。
+解凍したファイル（nr）をデータベースにするために、makeblastdb -in nr -dbtype prot -hash_indexを実">
+        <meta name="keywords" content="blast+">
+        
+        <link rel="canonical" href="../../vote/814/down/index.html" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="../../questions/813/local-blastのデータベース@type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="../../upfiles/favicon.ico" />
+        <link href="../../m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="../../cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='../../m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        
+        <script type='text/javascript' src='../../m/qa.lifesciencedb.jp/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='../../m/qa.lifesciencedb.jp/media/js/wmd/wmd.js'></script>
+        <link rel="stylesheet" type="text/css" href="../../m/qa.lifesciencedb.jp/media/js/wmd/wmd.css" />
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[プレビューを隠す]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[プレビューを表示する]" : "[プレビューを隠す]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml.html" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="../../index.html">
+				<img src="../../upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="../../account/yahoo/signin/index.html" >ログイン</a>  <a href="../../about/index.html" >概要</a>  <a href="../../faq/index.html" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="../../questions/index.html" >質問</a><a id="nav_tags" href="../../tags/index.html" >タグ</a><a id="nav_users" href="http://qa.lifesciencedb.jp/users/" >ユーザー</a><a id="nav_badges" href="../../badges/index.html" >バッジ</a><a id="nav_unanswered" href="../../questions/unanswered/index.html" >未回答</a>
+        <a id="nav_ask" href="../../questions/ask/index.html" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="http://qa.lifesciencedb.jp/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="../../vote/814/down/index.html">Local BLASTのデータベース</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-813-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../vote/813/up/index.html" rel="nofollow"> </a>
+<div id="post-813-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-813-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../vote/813/down/index.html" rel="nofollow"> </a>
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="index.html" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>お世話になります。
+Local BLASTを導入するために統合TVのLocal BLASTの使い方（<a href="http://togotv.dbcls.jp/20110420.html">http://togotv.dbcls.jp/20110420.html</a>）を参考にさせていただいております。
+ご紹介の通りの手順で作業を進めていましたが、データベースを作成できずに困っております。</p>
+<p>まず、データベースとして、<a href="ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/">ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/</a> からnr.gzをダウンロードし、解凍しました。
+解凍したファイル（nr）をデータベースにするために、<code>makeblastdb -in nr -dbtype prot -hash_index</code>を実行しました。
+すると、以下に記した文が表示されました。</p>
+<pre><code>Building a new DB, current time: 11/27/2014 11:30:45
+New DB name:   nr
+New DB title:  nr
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+</code></pre>
+<p>しばらくすると、以下の文が何度も繰り返し出現し、最後にvolume: 以下の文が表示され、データベースの作成に失敗しました。</p>
+<pre><code>Error: (1431.1) FASTA-Reader: Warning: FASTA-Reader: Ignoring FASTA modifier(s) found because the input was not expected to have any.
+
+volume: nr.00
+volume: nr.01
+
+file: nr.00.pin
+file: nr.00.phr
+file: nr.00.psq
+file: nr.00.psi
+file: nr.00.psd
+file: nr.00.phi
+file: nr.00.phd
+file: nr.00.pog
+file: nr.01.pin
+file: nr.01.phr
+file: nr.01.psq
+file: nr.01.psi
+file: nr.01.psd
+file: nr.01.phi
+file: nr.01.phd
+file: nr.01.pog
+file: nr.pal
+</code></pre>
+<p>解決策がお分かりになる方がいらっしゃいましたら、ご教授いただければ幸いです。</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="../../tags/blast+/index.html" class="post-tag"
+                                        title="'blast+'タグのついた質問をみる" rel="tag">blast+</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">                            
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        質問日
+        <strong>Nov 27 '14 at 11:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/b1205b99c68b8a353f24c6f88ab47b17?s=32&amp;d=identicon&amp;r=g" alt="sulfuri's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/155/sulfuri/">sulfuri</a><br/>
+    <span class="score" title="1 徳">1</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="http://qa.lifesciencedb.jp/revisions/813/">
+                edited
+                <strong>Jan 05 '15 at 23:47</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/e585686707fd3a61b7096451ebf13012?s=32&amp;d=identicon&amp;r=g" alt="mn3's gravatar image" />
+            <p><a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><br/>
+            <span class="score" title="515 徳">515</span><span title="4 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="9 バッジ"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="22 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+<div class="comments-container" id="comments-container-813">
+    
+</div>
+<div id="comment-tools-813" class="comment-tools">
+    
+    
+</div>
+<div id="comment-813-form-container" class="comment-form-container">
+    
+</div>
+    
+                        </div>
+                        
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="../../questions/813/local-blastのデータベース@sort=登録順.html" title="最古の回答が最初に表示されます">回答順</a><a href="../../questions/813/local-blastのデータベース@sort=最新.html" title="最新の回答が最初に表示されます">最新</a><a href="../../questions/813/local-blastのデータベース@sort=投票.html" class="on" title="もっとも投票された回答が最初に表示されます">支持されている順</a></div>
+                </div>
+                
+  
+                
+                    <a name="814"></a>
+                    <div id="answer-container-814" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-814-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../vote/814/up/index.html" rel="nofollow"> </a>
+<div id="post-814-score" class="post-score"
+    title="現在の投票数">
+    1
+</div>
+<a id="post-814-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../vote/814/down/index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+        <a class="accept-answer on"></a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>エラーの原因はわかりませんが、</p>
+<pre><code>ftp://ftp.ncbi.nih.gov/blast/db/
+</code></pre>
+<p>にそのまま利用可能なnrがあるので、それをダウンロード、展開して使用されてみてはどうですか。</p>
+<p>wget・md5sum・tar・gzipがあり、httpプロキシとか通していないなら以下のコマンドでダウンロードと展開ができるはずです。</p>
+<pre><code>#download
+wget -c ftp://ftp.ncbi.nih.gov/blast/db/nr.??.tar.gz
+wget -c ftp://ftp.ncbi.nih.gov/blast/db/nr.??.tar.gz.md5
+#check files
+for f in nr.??.tar.gz.md5; do md5sum -c $f; done
+#extract files
+for f in nr.??.tar.gz; do tar -xzf $f; done
+#delete files
+rm nr.??.tar.gz nr.??.tar.gz.md5
+</code></pre>
+<p>では。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Dec 01 '14 at 11:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/41bd65dd88b7e8638d26ee6af75d714f?s=32&amp;d=identicon&amp;r=g" alt="aki's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/136/aki/">aki</a><br/>
+    <span class="score" title="86 徳">86</span><span title="1 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span></p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-814">
+    
+        <a name="815"></a>
+        <div class="comment" id="comment-815">
+            <div id="post-815-score" class="comment-score"></div>
+            <div class="comment-text"><p>aki様
+ご回答ありがとうございます。ご指摘の通りフォーマット済みのものを利用しようと思います。
+しかし、別の問題で困っております。
+複数のnrデータベースに対してblastを実行したいのですが、結果が出ませんでした。
+複数のnrデータベースに対してblastを実行する方法がお分かりの方がいらっしゃいましたらご教授いただければ幸いです。
+以下に、問題が生じたまでの過程を説明させていただきます。</p>
+<p>Macを使用しており、対応するコマンドが分からなかったので、コマンドを使用せずにnr.00からnr.26を全てダウンロード、解凍しました。
+展開されたファイルは
+nr.00.phd
+nr.00.phi
+nr.00.phr
+nr.00.pin
+nr.00.pnd
+nr.00.pni
+nr.00.pog
+nr.00.ppd
+nr.00.ppi
+nr.00.psd
+nr.00.psi
+nr.00.psq
+nr.pal
+でした。
+全てのファイルに対してblastを実行したいため、これらのファイルを全て同じフォルダにまとめました。
+最初は以下のコマンドで実行しましたが、
+blastp -db nr -query test.fasta -out test.out
+次のエラーがでました。
+BLAST Database error: Could not find volume or alias file (nr.27) referenced in alias file (/User/blast/db/nr).
+そこで、検索対象のデータベースを１つにして試したところ、成功しました（次のコマンド）。
+blastp -db nr.00 -query test.fasta -out test.out
+しかし、実際にはnr.26までの全てのファイルに対して検索をしたいので、次のコマンドを試しました。
+blastp -db "nr.00 nr.01 nr.02 nr.03 nr.04 nr.05 nr.06 nr.07 nr.08 nr.09 nr.10 nr.11 nr.12 nr.13 nr.14 nr.15 nr.16 nr.17 nr.18 nr.19 nr.20 nr.21 nr.22 nr.23 nr.24 nr.25 nr.26" -query test.fasta -out test.out
+すると、30分たっても結果は出ませんでした。</p></div>
+            <div class="comment-info" id="comment-815-info">
+                
+                
+                
+                <span class="comment-age">(Dec 01 '14 at 18:04)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/155/sulfuri/">sulfuri</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/b1205b99c68b8a353f24c6f88ab47b17?s=18&amp;d=identicon&amp;r=g" alt="sulfuri's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="816"></a>
+        <div class="comment" id="comment-816">
+            <div id="post-816-score" class="comment-score">1</div>
+            <div class="comment-text"><p>nr.27.tar.gzのダウンロードと展開ができていないのではないですか。</p></div>
+            <div class="comment-info" id="comment-816-info">
+                
+                
+                
+                <span class="comment-age">(Dec 01 '14 at 18:32)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/136/aki/">aki</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/41bd65dd88b7e8638d26ee6af75d714f?s=18&amp;d=identicon&amp;r=g" alt="aki's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="817"></a>
+        <div class="comment" id="comment-817">
+            <div id="post-817-score" class="comment-score"></div>
+            <div class="comment-text"><p>aki様</p>
+<p>ご指摘の通りでした。
+無事blastできるようになりました。誠にありがとうございます。
+ところで、結果が出るまでに7分程度は必要のようです。</p>
+<p>高速化するための良い案がありましたら、お教えいただければ幸いです。</p></div>
+            <div class="comment-info" id="comment-817-info">
+                
+                
+                
+                <span class="comment-age">(Dec 01 '14 at 20:05)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/155/sulfuri/">sulfuri</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/b1205b99c68b8a353f24c6f88ab47b17?s=18&amp;d=identicon&amp;r=g" alt="sulfuri's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="818"></a>
+        <div class="comment" id="comment-818">
+            <div id="post-818-score" class="comment-score">1</div>
+            <div class="comment-text"><pre><code>-evalue
+-max_target_seqs
+-num_threads
+</code></pre>
+<p>の値を適当に指定して下さい。</p></div>
+            <div class="comment-info" id="comment-818-info">
+                
+                
+                
+                <span class="comment-age">(Dec 01 '14 at 21:21)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/136/aki/">aki</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/41bd65dd88b7e8638d26ee6af75d714f?s=18&amp;d=identicon&amp;r=g" alt="aki's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="819"></a>
+        <div class="comment" id="comment-819">
+            <div id="post-819-score" class="comment-score"></div>
+            <div class="comment-text"><p>aki様</p>
+<p>ご指摘の通りにコマンドを変更した結果、2倍程早くなりました。</p>
+<p>前回：blastp -db nr -query test.fasta -out test.out </p>
+<p>今回：blastp -db nr -query test.fasta -out test.out -evalue 1e-50 -num_threads 2 -max_target_seqs 5 -outfmt 6 </p>
+<p>aki様、大変お世話になりました。誠にありがとうございました。
+もし、この他にも高速化する方法をご存知の方がいらっしゃいましたらよろしくお願いいたします。</p></div>
+            <div class="comment-info" id="comment-819-info">
+                
+                
+                
+                <span class="comment-age">(Dec 02 '14 at 12:12)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/155/sulfuri/">sulfuri</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/b1205b99c68b8a353f24c6f88ab47b17?s=18&amp;d=identicon&amp;r=g" alt="sulfuri's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="820"></a>
+        <div class="comment not_top_scorer" id="comment-820">
+            <div id="post-820-score" class="comment-score"></div>
+            <div class="comment-text"><p>見逃す確率が上がりますが、</p>
+<pre><code>-word_size
+</code></pre>
+<p>の値を大きくしてみて下さい。デフォルトはBLASTPなら3くらいだったと思います。</p></div>
+            <div class="comment-info" id="comment-820-info">
+                
+                
+                
+                <span class="comment-age">(Dec 03 '14 at 16:00)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/136/aki/">aki</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/41bd65dd88b7e8638d26ee6af75d714f?s=18&amp;d=identicon&amp;r=g" alt="aki's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-814" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="../../vote/814/down/index.html#" class="show-all-comments-link">show all</a>
+    
+    
+</div>
+<div id="comment-814-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="http://qa.lifesciencedb.jp/questions/813/answer/" method="post">
+            <div style="clear:both">
+            </div>
+            
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            あなたの回答
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea rows="10" cols="40" name="text" id="editor"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="リアルタイムMarkdown編集プレビューをトグルする">
+                                            プレビューをトグルする
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input type="checkbox" name="wiki" id="id_wiki" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="コミュニティー wikiオプションを選択した場合、質問と回答はポイントを生成せず、作者名は表示されない">
+                                            <label for="id_wiki">コミュニティー wiki</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+                        
+                        </table>  
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>                    
+                </div>
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">この質問をフォローする</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="../../questions/813/local-blastのデータベース@type=rss" title="subscribe to answers"></a>
+    回答
+</p><p><a class="feed-icon" style="background-image:url('../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="../../questions/813/local-blastのデータベース@type=rss&amp;comments=yes" title="subscribe to comments and answers"></a>
+    回答とコメント
+</p>
+
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>ただいまベータテスト運用中です。そのために通知無くコンテンツの変更やサービスの停止変更されることがあります。</h2>
+<p>質問するなら<a href="../../index.html">ライフサイエンスQA</a>。</p>
+<p>このページの<a href="../../questions/813/local-blastのデータベース@type=rss">RSSフィード</a></p>
+<p><a href="http://twitter.com/lsqa_all">@lsqa_all</a>・<a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a></p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <p>
+		タグ:
+    </p>
+    <p class="tags" >
+        
+        	<a href="../../tags/blast+/index.html" 
+			title="タグ付けされた質問をみる'blast+'タグを利用している" 
+			rel="tag">blast+</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        質問日: <strong title="2014-11-27 11:54:28.235943">Nov 27 '14 at 11:54</strong>
+    </p>
+    <p> 
+     	閲覧数: <strong>23,207 回</strong>
+    </p>
+    <p> 
+        最終更新日: <strong title="2015-01-05 23:49:45.296330">Jan 05 '15 at 23:49</strong>
+    </p>
+</div>
+
+
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>世界に広がるQAサイト</h2>
+<p><a href="http://biostar.stackexchange.com">バイオインフォマティクスのBioStar</a>・ <a href="http://I.SEQanswers.com">新型シーケンサーのSEQanswers</a>・ <a href="http://blueobelisk.shapado.com">オープンデータのBlueObelisk</a>・<a href="http://stackoverflow.com">プログラミングのstackoverflow</a>・ <a href="http://www.semanticoverflow.com">Semantic Overflow</a>・ <a href="http://stats.stackexchange.com/">Statistical Analysis</a>・ <a href="http://cstheory.stackexchange.com/">Theoretical Computer Science</a>・ <a href="http://chiebukuro.yahoo.co.jp/">Yahoo!知恵袋</a>・ <a href="http://okwave.jp/">OKWave</a> <a href="http://ja.wikipedia.org/wiki/Category:Q%26Aサイト">などなど</a></p>
+     </div>
+</div>
+
+<div class="boxC">
+    <h3 class="subtitle">関係した質問</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="../../vote/192/down/index.html">blastでよく使うコマンドはなんですか？</a>
+        </p>
+        
+        <p>
+            <a href="../../vote/75/down/index.html">blast+ でのオプションコマンド　blast で-F F　に当たるものはなんですか？</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="../../about/index.html" >概要</a> <span class="link-separator"> |</span> <a href="../../faq/index.html" >よくある質問</a> <span class="link-separator"> |</span> <a href="../../privacy/index.html" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="../../m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

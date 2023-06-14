@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: 変異解析結果をアミノ酸変異として捕らえる簡便な方法</title><link>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95</link><description>&lt;p&gt;これの意図するとことはいわゆるsamtoolsのpileupのSOAP形式出力（chr19:3298 A C）のような形式を、&lt;br&gt;
+geneX S324R （aGU→cGU）などの形に直し、シノニムの除去やアノテーションを簡便にする方法についてです。&lt;br&gt;
+&lt;br&gt;
+[私ができたこと]&lt;br&gt;
+UCSCのrefgene.txtからexon情報を取り出し、フレームに従って、翻訳して、ポジションごとに&lt;br&gt;
+chromとposition、トリプレッとの3文字と該当する番号、アミノ酸、refseqのIDを記録した&lt;br&gt;
+MySQL DBを作成して、変異によってアミノ酸がどう変わるか判定して使っています。&lt;br&gt;
+これは、実際に自分で解釈する分にはよいのですが他者に簡単に使ってもらえる仕組みでもなく、&lt;br&gt;
+全体の1%位の遺伝子は、deletion RNA editingの下流にエキソンがあり、途中でズレ正しく翻訳できていません。&lt;br&gt;
+ANNOVAも使ってみましたが、これも他者にこれでやってはどうですか？と気軽に進められない程度にはややこしい仕組みです。&lt;br&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;まずは、こういうDBは世に存在しないのだろうか？&lt;/li&gt;
+&lt;li&gt;あったとしてRESTなどで簡便にアクセスできるものなのでしょうか？&lt;/li&gt;
+&lt;li&gt;UCSCでeditingで削られたり、増えたり、置換される塩基の情報はどこかから取ってこれるのでしょうか？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ここからは希望になりますが、&lt;br&gt;
+TogoWSのREST サービスにURLにchrom:position+AAで開けば、&lt;br&gt;
+geneX S324R （aGU→cGU）という結果が返ってくる仕組みがあれば、&lt;br&gt;
+コンピューターに疎い先生方でも何とかなるんじゃないかと思うので、関係の方々がごらんになっておられたら、&lt;br&gt;
+助言などをいただけると幸いです。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95" rel="self"></atom:link><language>ja</language><lastBuildDate>Thu, 23 Dec 2010 17:52:55 +0900</lastBuildDate><item><title>Comment by ma_ko on ma_ko's 回答</title><link>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95#223</link><description>&lt;p&gt;ずっと移 (略) が、手元で動作させたところ、ダイレクトに pileup format をインプットにして動作しました。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;snpEff_core_v1_8.zip &lt;br&gt;
+snpEff_v1_8_hg37.zip &lt;br&gt;
+をダウンロードして、解凍・セットした後に &lt;br&gt;
+    java -Xmx1250m -jar snpEff.jar -p hg37 hoge.pileup &lt;br&gt;
+で Ensembl variant effect predictor のような出力を得られます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ma_ko</dc:creator><pubDate>Thu, 23 Dec 2010 17:52:55 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95#223</guid></item><item><title>Answer by ma_ko</title><link>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95/205</link><description>&lt;p&gt;ちょっと本題とはズレますが、しばらくスレッドを残してもらえるということなので追記です。&lt;br&gt;
+ずっと移動中(略)ですが、変異探索後のランク付けで良く使われているのは以下の2つですね。&lt;br&gt;
+僕自身、本格的に使ってないのでメモ代わりですが…。&lt;br&gt;
+SIFT Home &lt;a href="http://sift.jcvi.org/"&gt;http://sift.jcvi.org/&lt;/a&gt; &lt;br&gt;
+polyphen &lt;a href="http://genetics.bwh.harvard.edu/pph2/bgi.shtml"&gt;http://genetics.bwh.harvard.edu/pph2/bgi.shtml&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;同様の質問が BioStar にもあったので参考までにリンクも残しておきます。&lt;br&gt;
+&lt;a href="http://biostar.stackexchange.com/questions/2155/how-to-check-if-the-iupac-snp-code-changes-translation"&gt;How to check if the IUPAC SNP code changes translation ? - BioStar&lt;/a&gt; &lt;br&gt;&lt;/p&gt;
+&lt;p&gt;こっちも似てるけど、上のが良いような。&lt;br&gt;
+&lt;a href="http://biostar.stackexchange.com/questions/4233/algorithms-predicting-effects-of-snps-aa-substitution-on-protein"&gt;Algorithms predicting effects of SNPs / AA substitution on protein - BioStar&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;こちらは本論ではないですが、お役立ちかな。 &lt;br&gt;
+&lt;a href="http://biostar.stackexchange.com/questions/1134/visualize-effect-of-snp-variant-on-protein-structure"&gt;Visualize effect of SNP variant on protein structure - BioStar&lt;/a&gt;  &lt;br&gt;&lt;/p&gt;
+&lt;p&gt;自力でやる時、UCSC の knownGene と knownGenePep を join してやるとアミノ酸配列も取れるので少し楽になるかもですね。 &lt;br&gt;
+&lt;a href="http://biostar.stackexchange.com/questions/4356/amino-acid-position-in-ucsc-browser"&gt;Amino Acid Position in UCSC browser - BioStar&lt;/a&gt;  &lt;br&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ma_ko</dc:creator><pubDate>Sun, 19 Dec 2010 23:42:27 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95/205</guid></item><item><title>Answer by kiake77</title><link>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95/172</link><description>&lt;p&gt;hacchyさん, mn3 ♦♦さん, ma_ko ♦♦さん 回答ありがとうございました。&lt;br&gt;
+これらの方法で、データの解釈には光明が見えてきました。&lt;br&gt;
+実際に使ってみて利点、弱点など比較できたら、&lt;br&gt;
+せめてもの情報提供という形で書き込みたいと思います。&lt;br&gt;
+当面の「私」の問題は片付きましたが、これだけ有益な情報が集まると、&lt;br&gt;
+閉じるのはまだもったいないかなと思いまして、&lt;br&gt;
+しばらくスレッドは開いたままにさせてください。&lt;br&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">kiake77</dc:creator><pubDate>Sun, 12 Dec 2010 21:43:20 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95/172</guid></item><item><title>Comment by ma_ko on ma_ko's 回答</title><link>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95#171</link><description>&lt;p&gt;ずっと移動 (略) ですが、API script を手元で動作させたところ、ダイレクトに pileup format をインプットして動作しました。&lt;/p&gt;
+&lt;p&gt;&lt;a href="ftp://ftp.ensembl.org/pub/misc-scripts/Variant_effect_predictor_1.0/"&gt;ftp://ftp.ensembl.org/pub/misc-scripts/Variant_effect_predictor_1.0/&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ma_ko</dc:creator><pubDate>Sun, 12 Dec 2010 20:43:03 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95#171</guid></item><item><title>Comment by mn3 on kiake77's 質問</title><link>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95#170</link><description>&lt;p&gt;REST で chrom:position+AA とするのは興味ぶかいインターフェイスですね。TogoWSのほうで検討してみたいと思います。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mn3</dc:creator><pubDate>Sun, 12 Dec 2010 18:53:11 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95#170</guid></item><item><title>Comment by ma_ko on ma_ko's 回答</title><link>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95#164</link><description>&lt;p&gt;ちなみに API 叩くスクリプト版では pileup format をインプットとして扱えるっぽいです。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ma_ko</dc:creator><pubDate>Sun, 12 Dec 2010 12:33:10 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95#164</guid></item><item><title>Answer by ma_ko</title><link>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95/163</link><description>&lt;p&gt;ずっと移動中で (略) ですが、UCSC の RNA editing track は、以下の文献を見る限り、&lt;/p&gt;
+&lt;p&gt;The UCSC Genome Browser database: update 2011 — Nucleic Acids Res  &lt;br&gt;
+&lt;a href="http://nar.oxfordjournals.org/content/early/2010/10/18/nar.gkq963.full"&gt;http://nar.oxfordjournals.org/content/early/2010/10/18/nar.gkq963.full&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;DARNED というデータベースが元になっているようです。&lt;br&gt;
+DARNED &lt;a href="http://darned.ucc.ie/"&gt;http://darned.ucc.ie/&lt;/a&gt;
+&lt;a href="http://bioinformatics.oxfordjournals.org/content/early/2010/06/14/bioinformatics.btq285.abstract"&gt;http://bioinformatics.oxfordjournals.org/content/early/2010/06/14/bioinformatics.btq285.abstract&lt;/a&gt; &lt;br&gt;&lt;/p&gt;
+&lt;p&gt;僕自身、知らなかったことなので勉強になりました。ありがとうです &amp;gt; TbDGC さん &lt;br&gt;
+hacchy さん、フォローありがとう!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ma_ko</dc:creator><pubDate>Sat, 11 Dec 2010 19:55:02 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95/163</guid></item><item><title>Answer by ma_ko</title><link>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95/162</link><description>&lt;p&gt;ずっと移動中できちんと問題を把握してるか自信ないんですが、Intergrated with Galaxy (コマンドラインでも動く、 Java 製)な&lt;/p&gt;
+&lt;p&gt;snpEff: SNP effect predictor &lt;a href="http://snpeff.sourceforge.net/"&gt;http://snpeff.sourceforge.net/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;というのもあります (ちょっと最近のバージョンは未検証…)。&lt;/p&gt;
+&lt;p&gt;これ元々、上で取り上げた Ensembl の SNP Effect Predictor (今は Varinat Effect Predictor と名称が変わっていました) に触発されて開発されたものなので、こちらも良いかもしれません。Sourceforge を見る限りでは、pileup format の入力にも対応したようです。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ma_ko</dc:creator><pubDate>Sat, 11 Dec 2010 19:46:32 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95/162</guid></item><item><title>Answer by hacchy</title><link>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95/161</link><description>&lt;p&gt;SNP Effect Predictor 初めて使ってみました、これは便利ですね！
+Web アプリケーションと API script があるのですね。
+Web アプリケーションだけ使ってみました：&lt;/p&gt;
+&lt;p&gt;こんな感じで，SNP 情報を入力。
+&lt;img alt="alt text" src="/upfiles/ピクチャ_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;すると，こんな感じで SNP の影響を教えてくれる。
+&lt;img alt="alt text" src="/upfiles/ピクチャ_2.png"&gt;&lt;/p&gt;
+&lt;p&gt;あとはリンクを辿って調べてゆくと，NOC2L という遺伝子へのフレームシフト変異であることが分かる。&lt;/p&gt;
+&lt;p&gt;これは使えますね、情報ありがとうございました。　&amp;gt; ma_ko さん&lt;/p&gt;
+&lt;p&gt;今度 API script の方も使ってみようと思いますー&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">hacchy</dc:creator><pubDate>Sat, 11 Dec 2010 14:38:00 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95/161</guid></item><item><title>Answer by ma_ko</title><link>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95/160</link><description>&lt;p&gt;ずっと移動中できちんと問題を把握してるか自信ないんですが Ensembl のSNP Effect Predictor はどうでしょうか？
+&lt;a href="http://www.ensembl.org/tools.html"&gt;http://www.ensembl.org/tools.html&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ma_ko</dc:creator><pubDate>Sat, 11 Dec 2010 14:10:29 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95/160</guid></item><item><title>Answer by hacchy</title><link>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95/159</link><description>&lt;blockquote&gt;
+&lt;p&gt;UCSCでeditingで削られたり、増えたり、置換される塩基の情報はどこかから取ってこれるのでしょうか？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;UCSC からの情報取得に詳しくないので傍観していたのですが、回答者が今のところいないので、分かる範囲で答えてみます。
+UCSC からではなく、Ensembl からであれば、比較的簡単に RNA editing の情報を持って来れます。&lt;/p&gt;
+&lt;p&gt;"Bio::EnsEMBL::SeqEdit" モジュールを使うと、次のように RNA edit 後の mRNA 配列が得られます。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;use Bio::EnsEMBL::SeqEdit;
+use Bio::EnsEMBL::Attribute;
+
+# construct a SeqEdit object using a Transcript attribute
+($attribute) = @{ $translation-&amp;gt;get_all_Attributes('_rna_edit') };
+$seq_edit = Bio::EnsEMBL::SeqEdit( -ATTRIB =&amp;gt; $attribute );
+
+print $seq_edit-&amp;gt;start(),   "\n";
+print $seq_edit-&amp;gt;end(),     "\n";
+print $seq_edit-&amp;gt;alt_seq(), "\n";
+
+# apply the edit to some sequence
+$seq = $transcript-&amp;gt;spliced_seq();
+print "Before modifiction: $seq\n";
+
+$seq_edit-&amp;gt;apply_edit( \$seq );
+print "After modification: $seq\n";
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;こちのらコード、Ensembl API Docs からの転載です。
+より詳細は、&lt;a href="http://uswest.ensembl.org/info/docs/Pdoc/ensembl/index.html"&gt;http://uswest.ensembl.org/info/docs/Pdoc/ensembl/index.html&lt;/a&gt; のページをご参照ください。&lt;/p&gt;
+&lt;p&gt;TbDGC さんの目的には、例えば、&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$refCDS = $transcript-&amp;gt;translatable_seq();
+$seq_edit-&amp;gt;apply_edit( \$refCDS );
+
+# xxx 番目の塩基が A に変わった場合の RNA edit 後の mRNA 配列を取得
+$positionInCDS = xxx;
+$sampleCDS = transcript-&amp;gt;translatable_seq();
+$sampleCDS.substr(xxx, 1) = 'A';
+$seq_edit-&amp;gt;apply_edit( \$sampleCDS );
+
+# Compare $refCDS and $sampleCDS
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;こんなコードで実現できるのではないでしょうか。
+（こちらのコード、未テストです、済みません。）&lt;/p&gt;
+&lt;p&gt;他にもより良い方法はあると思いますが、参考になれば幸いです。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ここからは希望になりますが、
+TogoWSのREST サービスにURLにchrom:position+AAで開けば、
+geneX S324R （aGU→cGU）という結果が返ってくる仕組みがあれば、
+コンピューターに疎い先生方でも何とかなるんじゃないかと思うので、関係の方々がごらんになっておられたら、
+助言などをいただけると幸いです。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;このようなサービスができると、とても素晴らしいと思います。期待してます！&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">hacchy</dc:creator><pubDate>Fri, 10 Dec 2010 20:37:26 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95/159</guid></item></channel></rss>

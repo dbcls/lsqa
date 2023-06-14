@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With fpkm</title><link>http://qa.lifesciencedb.jp/tags/fpkm/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;fpkm&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/fpkm/" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 26 Jan 2015 16:50:51 +0900</lastBuildDate><item><title>RNA-seq で得られるFPKM のグラフの作り方</title><link>http://qa.lifesciencedb.jp/questions/826/rna-seq-%E3%81%A7%E5%BE%97%E3%82%89%E3%82%8C%E3%82%8Bfpkm-%E3%81%AE%E3%82%B0%E3%83%A9%E3%83%95%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9</link><description>&lt;p&gt;いつも勉強させて頂いております。使用している語彙が不適切かもしれませんがどうかご容赦頂きたく思います。&lt;/p&gt;
+&lt;p&gt;お忙しいところ畏れ入りますがご教授頂けますと幸いです。&lt;/p&gt;
+&lt;p&gt;★背景&lt;/p&gt;
+&lt;p&gt;細胞A と細胞B について、Biological triplicates (n=3)　を用意しRNA-sequencing を実施しました。つまり、細胞Aについて3回分のRNA-seqのデータ、細胞Bについて3回分のRNA-seqのデータがあります。  現在、TopHat、Cufflinks, Cuffcompare, Cuffdiff で得られたファイルが手元にあります。 &lt;/p&gt;
+&lt;p&gt;★質問&lt;/p&gt;
+&lt;p&gt;これらのデータを使って、細胞Aと細胞Bに発現する遺伝子（一種類のみ）のFPKMを比較したグラフを書きたいと考えております。
+恥ずかしながら浅学のため、以下の点についてご意見を頂けないでしょうか？&lt;/p&gt;
+&lt;p&gt;① グラフには、Cuffdiff を実行した際に得られる「genes.fpkm_tracking」中のFPKMを使用して宜しいでしょうか？&lt;/p&gt;
+&lt;p&gt;② ①のFPKM でグラフを作成した場合、いわゆるエラーバーには、どのファイルのどの値を用いれば良いのでしょうか？&lt;/p&gt;
+&lt;p&gt;③ それとも各RNA-seq データずつFPKM を算出し、それをエクセル上で平均値、標準偏差を求めてグラフを作成するべきでしょうか？ &lt;/p&gt;
+&lt;p&gt;質問が初歩的で大変申し訳ありません。Cuffdiff は「total reads 数を考量し triplicates をまとめたFPKM」が得られる、と理解しておりますが、そのFPKM でグラフを作るのが適切なことなのかどうか、そしてエラーバーのための値（標準偏差）は？と往生しております。&lt;/p&gt;
+&lt;p&gt;もちろん、そもそも根本的に間違っていることも覚悟しております。その場合、恥ずかしながらいわゆるスタンダードなグラフ作成方法をご教授頂けますと助かります。&lt;/p&gt;
+&lt;p&gt;お手数をおかけ致しますどうか何卒宜しくお願い致します。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ara</dc:creator><pubDate>Mon, 26 Jan 2015 16:50:51 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/826/rna-seq-%E3%81%A7%E5%BE%97%E3%82%89%E3%82%8C%E3%82%8Bfpkm-%E3%81%AE%E3%82%B0%E3%83%A9%E3%83%95%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9</guid><category>fpkm</category></item></channel></rss>

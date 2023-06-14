@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With qa</title><link>http://qa.lifesciencedb.jp/tags/qa/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;qa&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/qa/" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 23 Nov 2010 11:50:25 +0900</lastBuildDate><item><title>BMB2010で紹介してもいいですか？</title><link>http://qa.lifesciencedb.jp/questions/54/bmb2010%E3%81%A7%E7%B4%B9%E4%BB%8B%E3%81%97%E3%81%A6%E3%82%82%E3%81%84%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B</link><description>&lt;p&gt;このQAに関してですが、どうしましょう？
+BMB2010１日目のWorkshopで可能なら紹介したいと思うんですけど。それまでにテスト運用をやめてベータ版運用（？）的にはできませんかね？&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">hub</dc:creator><pubDate>Tue, 23 Nov 2010 11:50:25 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/54/bmb2010%E3%81%A7%E7%B4%B9%E4%BB%8B%E3%81%97%E3%81%A6%E3%82%82%E3%81%84%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B</guid><category>qa</category><category>bmb2010</category></item><item><title>タグって後付けできるのでしょうか？</title><link>http://qa.lifesciencedb.jp/questions/33/%E3%82%BF%E3%82%B0%E3%81%A3%E3%81%A6%E5%BE%8C%E4%BB%98%E3%81%91%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%AE%E3%81%A7%E3%81%97%E3%82%87%E3%81%86%E3%81%8B</link><description>&lt;p&gt;自分がした質問以外でもタグって後付けできるのでしょうか？&lt;/p&gt;
+&lt;p&gt;あと、質問時にタグのリストが並んでいてクリックで追加できる（tdiary方式）と大変良いかと思いますがその辺の変更って難しいでしょうか？インクリメンタルサーチはありますけど、なかなか初心者にはとっつきにくいかと思います。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">gaou</dc:creator><pubDate>Fri, 12 Nov 2010 14:34:52 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/33/%E3%82%BF%E3%82%B0%E3%81%A3%E3%81%A6%E5%BE%8C%E4%BB%98%E3%81%91%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%AE%E3%81%A7%E3%81%97%E3%82%87%E3%81%86%E3%81%8B</guid><category>qa</category><category>使い方</category><category>osqa</category><category>タグ</category></item><item><title>質問していいですか？</title><link>http://qa.lifesciencedb.jp/questions/1/%E8%B3%AA%E5%95%8F%E3%81%97%E3%81%A6%E3%81%84%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B</link><description>&lt;p&gt;初めての質問です。qa.lifesciencedb.jp というサイトを構築してみました。質問していいでしょうか？
+たしか、質問を編集できるんですよ。これ。質問だけでなくて、回答も第三者が編集できるみたいです。wiki のようですね。&lt;/p&gt;
+&lt;p&gt;&lt;a href="/faq/"&gt;よくある質問&lt;/a&gt;によると、&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;どんな質問をするべきなのですか？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;もっとも重要な点です。ライフサイエンス研究に関係している質問がふさわしいです。さらに、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;詳細で具体的な内容で、&lt;/li&gt;
+&lt;li&gt;明確で簡単な記述で、&lt;/li&gt;
+&lt;li&gt;すくなくとも、他の誰かひとりでも興味を持てるような質問であるべきです。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;とのことでした。加えるとしたら、Google などの検索エンジン経由で到達しやすそうなフレーズを織り交ぜることでしょうか。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mn3</dc:creator><pubDate>Wed, 10 Nov 2010 17:08:08 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/1/%E8%B3%AA%E5%95%8F%E3%81%97%E3%81%A6%E3%81%84%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B</guid><category>qa</category><category>sandbox</category><category>dbcls</category></item></channel></rss>

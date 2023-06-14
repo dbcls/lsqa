@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With sam</title><link>http://qa.lifesciencedb.jp/tags/sam/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;sam&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/sam/" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 27 Jan 2014 14:54:32 +0900</lastBuildDate><item><title>SAMファイルのFASTAファイルへの変換について</title><link>http://qa.lifesciencedb.jp/questions/708/sam%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AEfasta%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E5%A4%89%E6%8F%9B%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;お世話になっております．&lt;/p&gt;
+&lt;p&gt;表題の内容についてお聞きしたいことがあります．&lt;/p&gt;
+&lt;p&gt;454GS FLXで得られた底生動物のCOI領域のロングリード（平均300bp・合計16万配列）を，国際DNAデータバンクからダウンロードしたCOI領域（658bp）の配列に対しマッピングを行いました．&lt;/p&gt;
+&lt;p&gt;マッピングツールはBWAを用い，出力されたSAMファイルをFASTA形式のファイルに変換したいと考えています．&lt;/p&gt;
+&lt;p&gt;例）&lt;/p&gt;
+&lt;p&gt;リファレンス配列　 ACGTAAACGTTTACGT &lt;/p&gt;
+&lt;p&gt;クエリ配列　　　　 ACGTAA－CGTT&lt;/p&gt;
+&lt;p&gt;クエリ配列　　　　　 CGTAAACGTT－A&lt;/p&gt;
+&lt;p&gt;クエリ配列　　　　　　 GTAA－CG&lt;/p&gt;
+&lt;p&gt;このようにマッピングされた時，マッピングされた配列の開始位置やギャップ等の情報が反映された下のようなFASTAファイルへの変換は可能でしょうか．&lt;/p&gt;
+&lt;p&gt;＞Query1&lt;/p&gt;
+&lt;p&gt;ACGTAA－CGTT&lt;/p&gt;
+&lt;p&gt;＞Query2&lt;/p&gt;
+&lt;p&gt;－CGTAAACGTT－A&lt;/p&gt;
+&lt;p&gt;＞Query3&lt;/p&gt;
+&lt;p&gt;－－GTAA－CG&lt;/p&gt;
+&lt;p&gt;FASTA形式への変換を行った後，Collapseを行いハプロタイプ数を出し，進化系統樹を作りたいと考えています．&lt;/p&gt;
+&lt;p&gt;SAMをFASTAファイルに変換するソフト，もしくはSAMファイルを用いてCollapse→進化系統樹作成が行えるソフトをご存知でしたらご教授ください．&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">izumi</dc:creator><pubDate>Mon, 27 Jan 2014 14:54:32 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/708/sam%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AEfasta%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E5%A4%89%E6%8F%9B%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>fasta</category><category>fastq</category><category>sam</category><category>ngs</category></item><item><title>FindPeaksの使い方</title><link>http://qa.lifesciencedb.jp/questions/311/findpeaks%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9</link><description>&lt;p&gt;&lt;a href="http://www.bcgsc.ca/platform/bioinfo/software/findpeaks"&gt;FindPeaks&lt;/a&gt; (3-1-9-2)を用いて以下のようなデータ形式のsamファイルを処理したいと思っています。manualでは　&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;time java -jar SeparateElandReads.jar ファイル名 ./　&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;のファイル名のところに、入力するファイル名を打ち込めば染色体ごとの &lt;code&gt;.gz&lt;/code&gt; ファイルが生成すると書いてあるのですが
+&lt;code&gt;.sam&lt;/code&gt; のファイル名を入力してもできません。&lt;/p&gt;
+&lt;p&gt;Finsdpeaksに同封されていたテストファイルではできました。データの形式が違うからできないのでしょうか？よろしければ処理する方法をご教授下さい。
+&lt;/p&gt;&lt;pre&gt;SOLEXA2_90529:1:1:155:301       16      chr21.fa        37858680        85      32M     *       0       0       GACAAATCACAAATATGAATTCAGATCGTCGC        &amp;gt;96=@@@4=@@AB@A?&amp;gt;?A9@&amp;gt;A@@@?&amp;gt;?6&amp;amp;5        MD:Z:1T30
+SOLEXA2_90529:1:1:160:77        0       chr21.fa        34353666        94      32M     *       0       0       TTTCCGTGTATTGTGTGTGGTATATTGGACAC        C0BBBB@BAACCB@&amp;gt;AB?B&amp;gt;?ABABB?&amp;lt;aab9 md:z:32="" .="" .="" .="" &amp;lt;="" pre=""&amp;gt;&lt;p&gt;&lt;/p&gt;&lt;/pre&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">DEF</dc:creator><pubDate>Tue, 08 Feb 2011 22:46:27 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/311/findpeaks%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9</guid><category>sam</category><category>findpeaks</category><category>ngs</category></item></channel></rss>

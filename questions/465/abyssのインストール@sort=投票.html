@@ -1,0 +1,759 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>ABySSのインストール - #LSQA</title>
+        <meta name="description" content="ABySSをインストールしようとしたところエラーが生じました。調べたところgccのバージョンを4.3以上にしなければならず、gmp、mpfr、mpcをインストールしようとしました。gmpとmpfrは多分うまくインストールできたのですが、mpcがうまくインストールできません。
+cd　mpc-0.9 
+./configure --with-mpfr=/Users/------------/Desktop/mpfr-3.0.1
+make
+make check
+すると
+
+5 of 60 tests failed
+make[2]:  [check-TESTS] Error 1
+make[1]:  [ch">
+        <meta name="keywords" content="ngs">
+        
+        <link rel="canonical" href="../../vote/467/down/index.html" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="abyssのインストール@type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="../../upfiles/favicon.ico" />
+        <link href="../../m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="../../cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='../../m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        
+        <script type='text/javascript' src='../../m/qa.lifesciencedb.jp/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='../../m/qa.lifesciencedb.jp/media/js/wmd/wmd.js'></script>
+        <link rel="stylesheet" type="text/css" href="../../m/qa.lifesciencedb.jp/media/js/wmd/wmd.css" />
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[プレビューを隠す]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[プレビューを表示する]" : "[プレビューを隠す]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml.html" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="../../index.html">
+				<img src="../../upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="../../account/yahoo/signin/index.html" >ログイン</a>  <a href="../../about/index.html" >概要</a>  <a href="../../faq/index.html" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="../index.html" >質問</a><a id="nav_tags" href="../../tags/index.html" >タグ</a><a id="nav_users" href="http://qa.lifesciencedb.jp/users/" >ユーザー</a><a id="nav_badges" href="../../badges/index.html" >バッジ</a><a id="nav_unanswered" href="../unanswered/index.html" >未回答</a>
+        <a id="nav_ask" href="../ask/index.html" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="http://qa.lifesciencedb.jp/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="../../vote/467/down/index.html">ABySSのインストール</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-465-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../vote/465/up/index.html" rel="nofollow"> </a>
+<div id="post-465-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-465-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../vote/465/down/index.html" rel="nofollow"> </a>
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="../../mark_favorite/465/index.html" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>ABySSをインストールしようとしたところエラーが生じました。調べたところgccのバージョンを4.3以上にしなければならず、gmp、mpfr、mpcをインストールしようとしました。gmpとmpfrは多分うまくインストールできたのですが、mpcがうまくインストールできません。</p>
+<p>cd　mpc-0.9 <br>
+./configure --with-mpfr=/Users/------------/Desktop/mpfr-3.0.1<br>
+make<br>
+make check<br>
+すると<br>
+</p>
+<p>5 of 60 tests failed</p>
+<p>make[2]: <strong><em> [check-TESTS] Error 1<br>
+make[1]: </em></strong> [check-am] Error 2<br>
+make: *** [check-recursive] Error 1</p>
+<p>というようにエラーが生じてしまいます。</p>
+<p>またこの方法で進んでいってよいのでしょうか？
+ご助言いただけると幸いです。</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="../../tags/ngs/index.html" class="post-tag"
+                                        title="'ngs'タグのついた質問をみる" rel="tag">ngs</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">                            
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        質問日
+        <strong>Jun 01 '11 at 19:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/685e54c9f1d0cbfac2045323d8b36016?s=32&amp;d=identicon&amp;r=g" alt="pan's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/88/pan/">pan</a><br/>
+    <span class="score" title="1 徳">1</span><span title="2 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="6 バッジ"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="7 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span></p>
+</div>
+
+
+                            </div>
+                            
+
+
+<div class="comments-container" id="comments-container-465">
+    
+        <a name="466"></a>
+        <div class="comment" id="comment-466">
+            <div id="post-466-score" class="comment-score"></div>
+            <div class="comment-text"><p>ちなみに
+gmpとmpfrはhttp://blog.chibiegg.net/2009/04/09_11_285.htm
+を参考にして</p>
+<p>mpcは
+http://www.multiprecision.org/mpc/download/mpc-0.9.pdf
+を参考にしました。</p></div>
+            <div class="comment-info" id="comment-466-info">
+                
+                
+                
+                <span class="comment-age">(Jun 01 '11 at 19:28)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/88/pan/">pan</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/685e54c9f1d0cbfac2045323d8b36016?s=18&amp;d=identicon&amp;r=g" alt="pan's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-465" class="comment-tools">
+    
+    
+</div>
+<div id="comment-465-form-container" class="comment-form-container">
+    
+</div>
+    
+                        </div>
+                        
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="abyssのインストール@sort=登録順.html" title="最古の回答が最初に表示されます">回答順</a><a href="abyssのインストール@sort=最新.html" title="最新の回答が最初に表示されます">最新</a><a href="abyssのインストール@sort=投票.html" class="on" title="もっとも投票された回答が最初に表示されます">支持されている順</a></div>
+                </div>
+                
+  
+                
+                    <a name="469"></a>
+                    <div id="answer-container-469" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-469-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../vote/469/up/index.html" rel="nofollow"> </a>
+<div id="post-469-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-469-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../vote/469/down/index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+        <a class="accept-answer on"></a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>ABySSが使いたいだけなのにgcc関連でループするのも何なので、一応インストールできた方法を書いておきます。</p>
+<ol>
+<li><a href="http://hpc.sourceforge.net/">HPC Mac OS X </a>というサイトから、gcc4.6 (gcc-snwleo-intel-bin.tar.gz) を持ってきます。</li>
+<li>このファイル内には、ディレクトリ構成まで丸ごと構築されているデータセットが入っていますのでそのまま展開します。<br>
+/(最上位ディレクトリ)を展開先にしますので、sudoもしくはsu権限で実行してください。<br>また、安全策のために古いファイルを上書きしないようなオプションを付け加えてますので、tarが吐く「対象ディレクトリは既に存在しています」というエラーは無視して下さい。<pre>tar -zxvf gcc-snwleo-intel-bin.tar.gz -C / --keep-old-files</pre></li>
+<li>デフォルトのgccより先に、今回入れたgcc4.6を見に行くようにbashの環境設定を変更します。<br><code>~/.bashrc</code>　というファイルに以下の1行を追加します。<pre>export PATH=/usr/local/bin:$PATH</pre></li>
+<li>上の設定は即時反映ではなく、次回terminalを開いた時に有効になるので、現在作業している環境でも1度だけ設定を行い、gccが4.6を指しているか確認します。<pre>export PATH=/usr/local/bin:$PATH ; gcc -v</pre></li>
+<li><a href="http://www.bcgsc.ca/platform/bioinfo/software/abyss">ABySS 1.2.7</a>をダウンロードして展開します。</li>
+<li><a href="http://code.google.com/p/google-sparsehash/">google sparsehash 1.10</a>もダウンロードして展開します。ABySSとsparsehashのバージョン相性がありそうなので注意して下さい。</li>
+<li>sparsehashを先にインストールします。<pre>cd sparsehash-1.10/ ; ./configure &amp;&amp; make &amp;&amp; sudo make install</pre></li>
+<li>画面に、install -c コマンドのログが表示されていればsparsehashが入っていますので、次の作業に進めます。</li>
+<li>configureの時にABySSの挙動を指定します。詳しくはREADMEを読んで見て下さい。<pre>cd abyss-1.2.7; ./configure --enable-maxk=128</pre></li>
+<li>makeします。make一発だとなぜか上手くいかないので、警告オプションを付加します。<pre>make AM_CXXFLAGS=-Wall &amp;&amp; sudo make install</pre></li>
+<li>abyssが動いてそうなのがチェックできたら、一応終わりです。<pre>/usr/local/bin/abyss --version</pre></li>
+</ol>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Jun 02 '11 at 14:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/0caa48bd66bda2f877dfa2d974a9acc7?s=32&amp;d=identicon&amp;r=g" alt="mya_'s gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/18/mya_/">mya_ ♦</a><br/>
+    <span class="score" title="388 徳">388</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="10 バッジ"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="14 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">14</span></span></p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-469">
+    
+        <a name="470"></a>
+        <div class="comment" id="comment-470">
+            <div id="post-470-score" class="comment-score"></div>
+            <div class="comment-text"><p>abyss実行できました。ありがとうございます。<br>
+　
+  最後にまたいくつか質問させてください。約130万readをアセンブリしたところ、実行後で約140万readと増えて、断片化されています。ABYSS -k25 reads.fa -o contigs.faで実行しました。　
+  また今回454の次世代シークエンスを使って配列を読んだのですが、通常ならnewblerを使うところabyssを使いました。原理的に違う事はわかっていますが、やられた方はあまりいないのでしょうか？？</p></div>
+            <div class="comment-info" id="comment-470-info">
+                
+                
+                
+                <span class="comment-age">(Jun 02 '11 at 16:25)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/88/pan/">pan</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/685e54c9f1d0cbfac2045323d8b36016?s=18&amp;d=identicon&amp;r=g" alt="pan's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="471"></a>
+        <div class="comment" id="comment-471">
+            <div id="post-471-score" class="comment-score"></div>
+            <div class="comment-text"><p>ABySS実行できてよかったですね。K-mer分割型アセンブラだと、読み塩基は間違っていても読んでいる塩基数は正しそうという前提でhash組み合わせしたりしますので、そのへんを改良したアセンブラ(CABOGとか)でないと上手くいかないのかも、しれませんね。別の質問は別のスレッドを立てると後々検索しやすく便利ですよ。</p></div>
+            <div class="comment-info" id="comment-471-info">
+                
+                
+                
+                <span class="comment-age">(Jun 03 '11 at 12:59)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/18/mya_/">mya_ ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/0caa48bd66bda2f877dfa2d974a9acc7?s=18&amp;d=identicon&amp;r=g" alt="mya_'s gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-469" class="comment-tools">
+    
+    
+</div>
+<div id="comment-469-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="467"></a>
+                    <div id="answer-container-467" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-467-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../vote/467/up/index.html" rel="nofollow"> </a>
+<div id="post-467-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-467-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../vote/467/down/index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>パス指定から察するに、Mac OS-Xをお使いかという前提で回答してみます。
+ 使っているマシン(Win/Linux/OS-X)とバージョンを書き込むと、もっと適切な回答が返ってくるのではと思います。</p>
+<p>ネット検索からの情報を見ると、</p>
+<ol>
+<li><a href="http://www.spinics.net/lists/gcchelp/msg27624.html">mpcライブラリを入れるときは、mpfrとgmpのインストール先両方が必要（←この青文字クリックで検索元にジャンプします）</a>に読めます。</li>
+</ol>
+<p>あと、まったく本質的な解決方法ではないかとは思いますが、以下も検討してみてください。</p>
+<ol>
+<li><a href="http://d.hatena.ne.jp/S_Amemiya/20101223/1293102564">MacPortsという便利ツールをつかってGCC一式いれてしまう</a></li>
+<li>makeが通ってたら多少のエラーは無視してABySSが動けばそれで良しとする<br>　(BioPerlとかはこういう割り切りが必要な場合も)　</li>
+</ol>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Jun 02 '11 at 09:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/0caa48bd66bda2f877dfa2d974a9acc7?s=32&amp;d=identicon&amp;r=g" alt="mya_'s gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/18/mya_/">mya_ ♦</a><br/>
+    <span class="score" title="388 徳">388</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="10 バッジ"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="14 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">14</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="http://qa.lifesciencedb.jp/revisions/467/">
+                edited
+                <strong>Jun 02 '11 at 09:08</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-467">
+    
+        <a name="468"></a>
+        <div class="comment" id="comment-468">
+            <div id="post-468-score" class="comment-score"></div>
+            <div class="comment-text"><p>使っているマシンはMac OS X 10.6.7です。mpfrとgmpはインストールして、/usr/lacal/include/のなかにgmp.h, mpf2mpfr.h, mpfr.hが入っている状態です。</p>
+<p>あげられた解決方法でも検証してみます。</p></div>
+            <div class="comment-info" id="comment-468-info">
+                
+                
+                
+                <span class="comment-age">(Jun 02 '11 at 11:59)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/88/pan/">pan</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/685e54c9f1d0cbfac2045323d8b36016?s=18&amp;d=identicon&amp;r=g" alt="pan's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-467" class="comment-tools">
+    
+    
+</div>
+<div id="comment-467-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="http://qa.lifesciencedb.jp/questions/465/answer/" method="post">
+            <div style="clear:both">
+            </div>
+            
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            あなたの回答
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea rows="10" cols="40" name="text" id="editor"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="リアルタイムMarkdown編集プレビューをトグルする">
+                                            プレビューをトグルする
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input type="checkbox" name="wiki" id="id_wiki" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="コミュニティー wikiオプションを選択した場合、質問と回答はポイントを生成せず、作者名は表示されない">
+                                            <label for="id_wiki">コミュニティー wiki</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+                        
+                        </table>  
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>                    
+                </div>
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">この質問をフォローする</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="abyssのインストール@type=rss" title="subscribe to answers"></a>
+    回答
+</p><p><a class="feed-icon" style="background-image:url('../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="abyssのインストール@type=rss&amp;comments=yes" title="subscribe to comments and answers"></a>
+    回答とコメント
+</p>
+
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>ただいまベータテスト運用中です。そのために通知無くコンテンツの変更やサービスの停止変更されることがあります。</h2>
+<p>質問するなら<a href="../../index.html">ライフサイエンスQA</a>。</p>
+<p>このページの<a href="abyssのインストール@type=rss">RSSフィード</a></p>
+<p><a href="http://twitter.com/lsqa_all">@lsqa_all</a>・<a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a></p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <p>
+		タグ:
+    </p>
+    <p class="tags" >
+        
+        	<a href="../../tags/ngs/index.html" 
+			title="タグ付けされた質問をみる'ngs'タグを利用している" 
+			rel="tag">ngs</a> <span class="tag-number">&#215;47</span><br/>
+        
+    </p>
+    <p>
+        質問日: <strong title="2011-06-01 19:26:11.414565">Jun 01 '11 at 19:26</strong>
+    </p>
+    <p> 
+     	閲覧数: <strong>5,042 回</strong>
+    </p>
+    <p> 
+        最終更新日: <strong title="2011-06-03 12:59:12.755799">Jun 03 '11 at 12:59</strong>
+    </p>
+</div>
+
+
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>世界に広がるQAサイト</h2>
+<p><a href="http://biostar.stackexchange.com">バイオインフォマティクスのBioStar</a>・ <a href="http://I.SEQanswers.com">新型シーケンサーのSEQanswers</a>・ <a href="http://blueobelisk.shapado.com">オープンデータのBlueObelisk</a>・<a href="http://stackoverflow.com">プログラミングのstackoverflow</a>・ <a href="http://www.semanticoverflow.com">Semantic Overflow</a>・ <a href="http://stats.stackexchange.com/">Statistical Analysis</a>・ <a href="http://cstheory.stackexchange.com/">Theoretical Computer Science</a>・ <a href="http://chiebukuro.yahoo.co.jp/">Yahoo!知恵袋</a>・ <a href="http://okwave.jp/">OKWave</a> <a href="http://ja.wikipedia.org/wiki/Category:Q%26Aサイト">などなど</a></p>
+     </div>
+</div>
+
+<div class="boxC">
+    <h3 class="subtitle">関係した質問</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="../../vote/810/down/index.html">Trinityのアセンブリ結果の見方</a>
+        </p>
+        
+        <p>
+            <a href="../../vote/499/down/index.html">Celera WGA Assembler(CABOG)のインストールと使い方</a>
+        </p>
+        
+        <p>
+            <a href="../../vote/314/down/index.html">FindPeaksの使い方</a>
+        </p>
+        
+        <p>
+            <a href="../../vote/139/down/index.html">BMB2010 のNGS関連の発表</a>
+        </p>
+        
+        <p>
+            <a href="../../vote/270/down/index.html">Transcriptome analysisとRNASeqの違いについて</a>
+        </p>
+        
+        <p>
+            <a href="../../vote/508/down/index.html">NGSライブラリのPCR増幅</a>
+        </p>
+        
+        <p>
+            <a href="../../vote/750/down/index.html">アライメントについて</a>
+        </p>
+        
+        <p>
+            <a href="../../vote/289/down/index.html">次世代シーケンサのオープンなデータ</a>
+        </p>
+        
+        <p>
+            <a href="../../vote/437/down/index.html">ノンモデル生物のmRNA精製でrRNAのコンタミをなるべく下げたい</a>
+        </p>
+        
+        <p>
+            <a href="../../mark_favorite/227/index.html">C-value からゲノムサイズを推定する</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="../../about/index.html" >概要</a> <span class="link-separator"> |</span> <a href="../../faq/index.html" >よくある質問</a> <span class="link-separator"> |</span> <a href="../../privacy/index.html" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="../../m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

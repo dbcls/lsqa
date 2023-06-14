@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: DRAのexperimentとRun</title><link>http://qa.lifesciencedb.jp/questions/805/dra%E3%81%AEexperiment%E3%81%A8run</link><description>&lt;p&gt;初歩的な質問ですみません。&lt;/p&gt;
+&lt;p&gt;NGSデータの解析の勉強のためFASTQをDRAからとってこようと思っています。&lt;/p&gt;
+&lt;p&gt;しかしたとえばDRA000437というaccessionを開けると
+experimentの配下に６つのfastqが
+runの配下に６つのfastqがあります。&lt;/p&gt;
+&lt;p&gt;これらのうちどちらがNGSの出力なのでしょうか。&lt;/p&gt;
+&lt;p&gt;またDRA000437はDRP000446というSTUDYと関連があるようですが
+DRP000446を開けるとFASTQは６つしかありません。&lt;/p&gt;
+&lt;p&gt;このあたりの関係をおおざっぱにご指導いただけましたら幸いです。&lt;/p&gt;
+&lt;p&gt;DRAハンドブックも見ましたが　よく理解できませんでした。すみません。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/805/dra%E3%81%AEexperiment%E3%81%A8run" rel="self"></atom:link><language>ja</language><lastBuildDate>Fri, 07 Apr 2017 15:09:33 +0900</lastBuildDate><item><title>Answer by moss</title><link>http://qa.lifesciencedb.jp/questions/805/dra%E3%81%AEexperiment%E3%81%A8run/861</link><description>&lt;p&gt;CLCはフラグメントデータも当然サパートされています。
+CLCで取り込む際にpaired-endのチェックを外せばシングルで取り込めますよ。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">moss</dc:creator><pubDate>Fri, 07 Apr 2017 15:09:33 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/805/dra%E3%81%AEexperiment%E3%81%A8run/861</guid></item><item><title>Answer by deer</title><link>http://qa.lifesciencedb.jp/questions/805/dra%E3%81%AEexperiment%E3%81%A8run/822</link><description>&lt;p&gt;ご回答ありがとうございます。&lt;/p&gt;
+&lt;p&gt;ＩＬＬＵＭＩＮＡでも、シングルがあるのですね。&lt;/p&gt;
+&lt;p&gt;ではＣＬＣにインポートする際も、ＩＬＬＵＭＩＮＡと指定はできないですね。。。。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">deer</dc:creator><pubDate>Thu, 04 Dec 2014 18:28:12 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/805/dra%E3%81%AEexperiment%E3%81%A8run/822</guid></item><item><title>Answer by DDBJ</title><link>http://qa.lifesciencedb.jp/questions/805/dra%E3%81%AEexperiment%E3%81%A8run/821</link><description>&lt;pre&gt;Illuminaであっても、singleで読む場合もあります。
+公共DBからSRAデータをダウンロードする際には、そのメタデータも調べてみましょう。
+
+今回の場合、Run "DRR001358" に紐付いている Experiment "DRX000955" に、
+登録者がこのNGSデータを得た時の実験条件が記されています。
+
+例えば、NCBI検索サイトの下記リンクに入り、
+ "Library" の右側にある (more...) をクリックしてみて下さい。
+http://www.ncbi.nlm.nih.gov/sra/?term=DRX000955
+
+下記の内容が示す通り、このSRAは、singleで読んだデータとして登録されています。
+----------------------------------------------------------
+Library: P1-026C  (less...)
+　Strategy: WGS
+　Source: METAGENOMIC
+　Selection: RANDOM
+　Layout: SINGLE　　　　　&amp;lt;--- ここです。
+　Construction protocol: none provided
+Platform: Illumina  (less...)
+　Instrument model: Illumina Genome Analyzer II
+----------------------------------------------------------
+なお、プレフィックスが"DR"で始まるアクセッション番号は、DDBJ centerでの登録受付を意味します。
+
+&lt;/pre&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">DDBJ</dc:creator><pubDate>Thu, 04 Dec 2014 18:02:54 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/805/dra%E3%81%AEexperiment%E3%81%A8run/821</guid></item><item><title>Answer by deer</title><link>http://qa.lifesciencedb.jp/questions/805/dra%E3%81%AEexperiment%E3%81%A8run/808</link><description>&lt;p&gt;すみません。またわからなくなりました。
+http://trace.ddbj.nig.ac.jp/DRASearch/run?acc=DRR001358
+から　DRX000955 というexperimentのfastqをとってきて　bz2を解凍しましたが、
+fastqファイルがひとつしか入っていません。&lt;/p&gt;
+&lt;p&gt;Illuminaをつかったと記載されていますが、であればpaired-endかmate-pairのはず（なのでファイルが２つ）なのではないでしょうか？&lt;/p&gt;
+&lt;p&gt;CLC bioのImportでIlluminaを選んでも、ファイルが２個あるはずだということで　インポートを開始することができません。&lt;/p&gt;
+&lt;p&gt;ひきつづきご指導のほど、お願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">deer</dc:creator><pubDate>Tue, 11 Nov 2014 16:04:42 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/805/dra%E3%81%AEexperiment%E3%81%A8run/808</guid></item><item><title>Answer by deer</title><link>http://qa.lifesciencedb.jp/questions/805/dra%E3%81%AEexperiment%E3%81%A8run/807</link><description>&lt;p&gt;たしかにENAを見るとどんなサンプルか、わかりました。
+ありがとうございました！&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">deer</dc:creator><pubDate>Tue, 11 Nov 2014 15:45:56 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/805/dra%E3%81%AEexperiment%E3%81%A8run/807</guid></item><item><title>Answer by meguchan</title><link>http://qa.lifesciencedb.jp/questions/805/dra%E3%81%AEexperiment%E3%81%A8run/806</link><description>&lt;p&gt;それぞれのexperimentにfastqがあるようですね。こういうときはEBIのENAで見ると外観がつかみやすいです。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.ebi.ac.uk/ena/data/view/DRA000437"&gt;http://www.ebi.ac.uk/ena/data/view/DRA000437&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;そして必要なものをDRAからダウンロードするのです。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">meguchan</dc:creator><pubDate>Tue, 11 Nov 2014 12:30:37 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/805/dra%E3%81%AEexperiment%E3%81%A8run/806</guid></item></channel></rss>

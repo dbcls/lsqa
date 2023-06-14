@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With リアルタイムpcr</title><link>http://qa.lifesciencedb.jp/tags/%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%BF%E3%82%A4%E3%83%A0pcr/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;リアルタイムpcr&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%BF%E3%82%A4%E3%83%A0pcr/" rel="self"></atom:link><language>ja</language><lastBuildDate>Thu, 14 Apr 2011 16:35:11 +0900</lastBuildDate><item><title>b-actin, GapdhのリアルタイムPCR用のプライマー設計</title><link>http://qa.lifesciencedb.jp/questions/410/b-actin-gapdh%E3%81%AE%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%BF%E3%82%A4%E3%83%A0pcr%E7%94%A8%E3%81%AE%E3%83%97%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%BC%E8%A8%AD%E8%A8%88</link><description>&lt;p&gt;マウスのb-actinとGapdhの、リアルタイムPCR用のプライマーを設計したのですが、
+どうしても偽遺伝子を避けることができません。
+（NCBIのPrimer BLASTで確認すると、同じ長さの偽遺伝子がどう頑張っても
+３個は出てしまう）
+B-actinの設計箇所はexon6〜exon7
+Gapdhの設計箇所はexon4〜exon5
+で、イントロンを挟むようにしています。&lt;/p&gt;
+&lt;p&gt;プライマーの長さは20base前後、PCR productsは100-200bpが理想です。
+また、ゲノムについても、Primer BLASTで確認すると同じ長さのものが増えてしまいます。&lt;/p&gt;
+&lt;p&gt;色々試してみましたが、どうしてもうまくいきません。
+この2つの遺伝子のmRNAだけが特異的に増える配列の設計方法、
+あるいはラボで信頼性のある配列を使っている方がいらっしゃいましたら、
+どうかアドバイスをお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">porcine</dc:creator><pubDate>Thu, 14 Apr 2011 16:35:11 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/410/b-actin-gapdh%E3%81%AE%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%BF%E3%82%A4%E3%83%A0pcr%E7%94%A8%E3%81%AE%E3%83%97%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%BC%E8%A8%AD%E8%A8%88</guid><category>プライマー</category><category>リアルタイムpcr</category></item></channel></rss>

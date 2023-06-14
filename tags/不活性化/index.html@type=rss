@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With 不活性化</title><link>http://qa.lifesciencedb.jp/tags/%E4%B8%8D%E6%B4%BB%E6%80%A7%E5%8C%96/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;不活性化&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/%E4%B8%8D%E6%B4%BB%E6%80%A7%E5%8C%96/" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 18 Apr 2011 15:13:15 +0900</lastBuildDate><item><title>DNaseを完全に効かせるにはどうすればよいですか</title><link>http://qa.lifesciencedb.jp/questions/417/dnase%E3%82%92%E5%AE%8C%E5%85%A8%E3%81%AB%E5%8A%B9%E3%81%8B%E3%81%9B%E3%82%8B%E3%81%AB%E3%81%AF%E3%81%A9%E3%81%86%E3%81%99%E3%82%8C%E3%81%B0%E3%82%88%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B</link><description>&lt;p&gt;現在qRT-PCRをやっておりますが、
+DNaseを使用しても、うまくDNAが除去できていないのか、
+ゲノムのバンドが出てしまいます。
+100％DNaseを効かせられる良い条件がありましたら、教えてください。
+どうしても完全に効かせて、mRNAの発現量を定量しなければならない状況下にあります。
+イントロンを挟んだプライマーを設計しておりますが、偽遺伝子が多くあるため、
+どうしても対象外の遺伝子についても、同じ長さのものが増えてきてしまっています。&lt;/p&gt;
+&lt;p&gt;Ni社のDNaseで、不活性化は熱処理で行っております。
+解析材料が微量な細胞（1〜30細胞くらい）なので、mRNAをロスしないために、
+なるべくシンプルな行程による不活性化が良いと考えております。
+（以前はTRIzol LSでやっておりましたが、どうしてもRNAをロスしてしまいます）&lt;/p&gt;
+&lt;p&gt;どうぞよろしくお願い致します。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">porcine</dc:creator><pubDate>Mon, 18 Apr 2011 15:13:15 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/417/dnase%E3%82%92%E5%AE%8C%E5%85%A8%E3%81%AB%E5%8A%B9%E3%81%8B%E3%81%9B%E3%82%8B%E3%81%AB%E3%81%AF%E3%81%A9%E3%81%86%E3%81%99%E3%82%8C%E3%81%B0%E3%82%88%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B</guid><category>dnase</category><category>不活性化</category></item></channel></rss>

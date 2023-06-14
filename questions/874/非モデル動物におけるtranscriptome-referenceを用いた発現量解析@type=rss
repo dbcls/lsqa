@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: 非モデル動物におけるtranscriptome referenceを用いた発現量解析</title><link>http://qa.lifesciencedb.jp/questions/874/%E9%9D%9E%E3%83%A2%E3%83%87%E3%83%AB%E5%8B%95%E7%89%A9%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Btranscriptome-reference%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E7%99%BA%E7%8F%BE%E9%87%8F%E8%A7%A3%E6%9E%90</link><description>&lt;p&gt;去年DRY解析教本を読んでMacを買い、色々なサイトで勉強させて頂いているバイオインフォ初心者です。
+この度、かなり行き詰まってしまいましたので、こちらの先生方にご相談させて頂きたく存じます、よろしくお願いいたします。&lt;/p&gt;
+&lt;p&gt;・やりたいこと&lt;/p&gt;
+&lt;p&gt;RNA-seqデータ(HiSeq2000 paired-end read)をtranscriptomeのreferenceにマップして発現量解析。
+最終的にはcummeRubundで各サンプル間の遺伝子発現の違いを表示したいと考えております。&lt;/p&gt;
+&lt;p&gt;・やったこと&lt;/p&gt;
+&lt;p&gt;bowtie2でリードをtranscriptome referenceにマッピング、得られたbamファイルをeXpressで定量しFPKMやTPMを算出。しかし各ライブラリーごとの数値を統合するところで手段を失いました。&lt;/p&gt;
+&lt;p&gt;・問題点&lt;/p&gt;
+&lt;p&gt;解析対象の動物種おけるGTFファイルが存在しないため（ゲノム情報が整理されていない）、genomeをreferenceとした一連のTophat-cufflinks-cuffdiffのワークフローが使えない。また、transcriptomeをreferenceとして発現量解析をするワークフローに関する情報が乏しい。
+以上のことから、何が現在もっとも正確なtranscriptomeをreferenceとした発現量解析なのか自身には判断できない状態になっております。&lt;/p&gt;
+&lt;p&gt;どんな情報でもありがたいです、どなたかアドバイス頂きたく存じます。よろしくお願いいたします。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/874/%E9%9D%9E%E3%83%A2%E3%83%87%E3%83%AB%E5%8B%95%E7%89%A9%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Btranscriptome-reference%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E7%99%BA%E7%8F%BE%E9%87%8F%E8%A7%A3%E6%9E%90" rel="self"></atom:link><language>ja</language><lastBuildDate>Thu, 11 Jan 2018 09:23:39 +0900</lastBuildDate><item><title>Answer by hub</title><link>http://qa.lifesciencedb.jp/questions/874/%E9%9D%9E%E3%83%A2%E3%83%87%E3%83%AB%E5%8B%95%E7%89%A9%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Btranscriptome-reference%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E7%99%BA%E7%8F%BE%E9%87%8F%E8%A7%A3%E6%9E%90/875</link><description>&lt;p&gt;やりたいのは発現定量でしょうか?
+初心者向けではありませんが、中上級向けに「統合データベース講習会 AJACSadvanced(AJACSa) 三島3」というのを2016年12月に国立遺伝学研究所でやりました。&lt;/p&gt;
+&lt;p&gt;http://dbcls.rois.ac.jp/archives/3274&lt;/p&gt;
+&lt;p&gt;その内容が pitagora-galaxyを使ったデータ解析環境の構築とTrinityによる Transcriptome assemblyということで非モデル生物向けの発現データ解析でした。資料は以下に置いてあります。&lt;/p&gt;
+&lt;p&gt;https://github.com/AJACS-training/AJACSa3&lt;/p&gt;
+&lt;p&gt;ご参考まで。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">hub</dc:creator><pubDate>Thu, 11 Jan 2018 09:23:39 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/874/%E9%9D%9E%E3%83%A2%E3%83%87%E3%83%AB%E5%8B%95%E7%89%A9%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Btranscriptome-reference%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E7%99%BA%E7%8F%BE%E9%87%8F%E8%A7%A3%E6%9E%90/875</guid></item></channel></rss>

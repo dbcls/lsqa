@@ -1,0 +1,662 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>NCBIのMicrobial Nucleotide BLASTをLocal環境に構築したいのですが、 - #LSQA</title>
+        <meta name="description" content="NCBI BLASTのトップページに行くと、
+一番上にBLAST Assembled Genomesという項目があると思います。
+Human, Mouseなど代表的な生物種が並んで、最後のMicrobesをクリックすると、Microbial Nucleotide BLAST
+という検索フォームが開きます。
+Choose Search Setの項目の中のDatabaseとして、「Representative genomes only」と「All genomes」が選べ、
+「All genomes」を選ぶとさらに
+
+Complete genomes
+Draft genomes
+Complete p">
+        <meta name="keywords" content="blast">
+        
+        <link rel="canonical" href="../../832/down/index.html" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="../../../questions/829/ncbiのmicrobial-nucleotide-blastをlocal環境に構築したいのですが@type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="../../../upfiles/favicon.ico" />
+        <link href="../../../m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="../../../cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='../../../m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        
+        <script type='text/javascript' src='../../../m/qa.lifesciencedb.jp/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='../../../m/qa.lifesciencedb.jp/media/js/wmd/wmd.js'></script>
+        <link rel="stylesheet" type="text/css" href="../../../m/qa.lifesciencedb.jp/media/js/wmd/wmd.css" />
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[プレビューを隠す]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[プレビューを表示する]" : "[プレビューを隠す]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="../../../opensearch.xml.html" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="../../../index.html">
+				<img src="../../../upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="../../../account/yahoo/signin/index.html" >ログイン</a>  <a href="../../../about/index.html" >概要</a>  <a href="../../../faq/index.html" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="../../../questions/index.html" >質問</a><a id="nav_tags" href="../../../tags/index.html" >タグ</a><a id="nav_users" href="http://qa.lifesciencedb.jp/users/" >ユーザー</a><a id="nav_badges" href="../../../badges/index.html" >バッジ</a><a id="nav_unanswered" href="../../../questions/unanswered/index.html" >未回答</a>
+        <a id="nav_ask" href="../../../questions/ask/index.html" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="http://qa.lifesciencedb.jp/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="../../832/down/index.html">NCBIのMicrobial Nucleotide BLASTをLocal環境に構築したいのですが、</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-829-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../829/up/index.html" rel="nofollow"> </a>
+<div id="post-829-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-829-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../829/down/index.html" rel="nofollow"> </a>
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="../../../mark_favorite/829/index.html" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p><a href="http://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&amp;PAGE_TYPE=BlastHome">NCBI BLASTのトップページ</a>に行くと、
+一番上にBLAST Assembled Genomesという項目があると思います。
+Human, Mouseなど代表的な生物種が並んで、最後のMicrobesをクリックすると、Microbial Nucleotide BLAST
+という検索フォームが開きます。</p>
+<p>Choose Search Setの項目の中のDatabaseとして、「Representative genomes only」と「All genomes」が選べ、
+「All genomes」を選ぶとさらに</p>
+<ol>
+<li>Complete genomes</li>
+<li>Draft genomes</li>
+<li>Complete plasmid</li>
+<li>Complete bacteriophages</li>
+</ol>
+<p>が選べるようになっています。これらのデータベースをLocal環境にダウンロードしたいのですが、
+<a href="ftp://ftp.ncbi.nlm.nih.gov/blast/db/">FTPサイト</a> (ftp://ftp.ncbi.nlm.nih.gov/blast/db/) を見ても、どれがそのデータにあたるのかが分からず、困っています。</p>
+<p>更新日時と、結果画面で表示される「Included: Archaea (taxid:2157), Bacteria(taxid:2)」という表現から推測して、「refseq_genomic.[数字].tar.gz」というデータベースをtaxidで絞り込んで使用しているようなのですが、
+これをどうBLASTコマンドで再現すればいいかが分かりません。</p>
+<p>統合TVの「Local BLAST の使い方 2011」シリーズ（全2回）</p>
+<ul>
+<li>第1回 導入・準備編 </li>
+<li>第2回 検索実行・オプション編</li>
+</ul>
+<p>は拝見したのですが、taxidでの絞り込みはなかったので質問させて頂きました。
+どうぞよろしくお願い致します。</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="../../../tags/blast/index.html" class="post-tag"
+                                        title="'blast'タグのついた質問をみる" rel="tag">blast</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">                            
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        質問日
+        <strong>Feb 13 '15 at 01:20</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/e20f9bece285291248c7a5cadea99c84?s=32&amp;d=identicon&amp;r=g" alt="TY's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/159/ty/">TY</a><br/>
+    <span class="score" title="1 徳">1</span><span title="1 バッジ"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span></p>
+</div>
+
+
+                            </div>
+                            
+
+
+<div class="comments-container" id="comments-container-829">
+    
+</div>
+<div id="comment-tools-829" class="comment-tools">
+    
+    
+</div>
+<div id="comment-829-form-container" class="comment-form-container">
+    
+</div>
+    
+                        </div>
+                        
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="../../../questions/829/ncbiのmicrobial-nucleotide-blastをlocal環境に構築したいのですが@sort=登録順.html" title="最古の回答が最初に表示されます">回答順</a><a href="../../../questions/829/ncbiのmicrobial-nucleotide-blastをlocal環境に構築したいのですが@sort=最新.html" title="最新の回答が最初に表示されます">最新</a><a href="../../../questions/829/ncbiのmicrobial-nucleotide-blastをlocal環境に構築したいのですが@sort=投票.html" class="on" title="もっとも投票された回答が最初に表示されます">支持されている順</a></div>
+                </div>
+                
+  
+                
+                    <a name="830"></a>
+                    <div id="answer-container-830" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-830-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../up/index.html" rel="nofollow"> </a>
+<div id="post-830-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-830-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Taxonomy IDに基いてBLAST検索対象の絞り込みを行うには、まずTaxonomy IDから対応する配列のGenBank IDを得ないといけないと思います。以下の3通りの方法があると思います。</p>
+<ol>
+<li>NCBI Taxonomyダンプファイルを落としてきてローカルにTaxonomyデータベースを構築し、Taxonomy IDの分類群の下位の分類群のTaxonomy IDを全て取得して、それらに対応するGenBank IDを取得する</li>
+<li>NCBIのウェブサイトで塩基配列を「"refseq"[Filter] AND txid2[Organism:exp]」で検索して、FormatをGI Listにする</li>
+<li>E-Utilities経由でNCBIの塩基配列を検索してGenBank IDを取得するスクリプトを使う</li>
+</ol>
+<p>3の場合、私が作成しているスクリプトが使えます。お使いになられる場合は以下のURLから最新版をダウンロードしてインストールしてください(今から使うコマンドに必要なのはPerlとLWPのみです。シェルスクリプトは他にも色々入れてしまうので避けてください)。
+<a href="http://www.claident.org/">http://www.claident.org/</a></p>
+<p>インストール後、以下のようにコマンドを実行すると、バクテリアのGI Listが得られます。</p>
+<pre><code>clretrievegi --keywords='"refseq"[Filter] AND txid2[Organism:exp]' outputfile
+</code></pre>
+<p>ここで得られたファイルをblastnの-gilistに与えればいいはずです。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Feb 13 '15 at 02:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/41bd65dd88b7e8638d26ee6af75d714f?s=32&amp;d=identicon&amp;r=g" alt="aki's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/136/aki/">aki</a><br/>
+    <span class="score" title="86 徳">86</span><span title="1 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span></p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-830">
+    
+</div>
+<div id="comment-tools-830" class="comment-tools">
+    
+    
+</div>
+<div id="comment-830-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="832"></a>
+                    <div id="answer-container-832" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-832-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../832/up/index.html" rel="nofollow"> </a>
+<div id="post-832-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-832-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../832/down/index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>ご教授ありがとうございました。返信が遅くなってしまい失礼いたしました。
+複数ご提案頂いたのですが、私の知識が足りず、</p>
+<ol>
+<li>「NCBI Taxonomyダンプファイルを落とす」ところがわからない</li>
+<li>GI list取得まではできた</li>
+<li>Perlはまったく知識がなく、「E-Utilities」がわからない</li>
+</ol>
+<p>という状況だったのですが、
+Microbial Nucleotide BLASTが指定しているデータベースの場所がわかりましたので、
+それをダウンロードすることで解決することができました。
+ftp://ftp.ncbi.nlm.nih.gov/blast/db/ではなく、
+ftp://ftp.ncbi.nih.gov/genomes/の中にありました。
+書き込んで頂いたことを実行する技量が足りず申し訳ありませんが、お時間を割いてご回答頂いたことに感謝いたします。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Feb 24 '15 at 16:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/e20f9bece285291248c7a5cadea99c84?s=32&amp;d=identicon&amp;r=g" alt="TY's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/159/ty/">TY</a><br/>
+    <span class="score" title="1 徳">1</span><span title="1 バッジ"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span></p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-832">
+    
+</div>
+<div id="comment-tools-832" class="comment-tools">
+    
+    
+</div>
+<div id="comment-832-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="http://qa.lifesciencedb.jp/questions/829/answer/" method="post">
+            <div style="clear:both">
+            </div>
+            
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            あなたの回答
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea rows="10" cols="40" name="text" id="editor"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="リアルタイムMarkdown編集プレビューをトグルする">
+                                            プレビューをトグルする
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input type="checkbox" name="wiki" id="id_wiki" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="コミュニティー wikiオプションを選択した場合、質問と回答はポイントを生成せず、作者名は表示されない">
+                                            <label for="id_wiki">コミュニティー wiki</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+                        
+                        </table>  
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>                    
+                </div>
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">この質問をフォローする</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('../../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="../../../questions/829/ncbiのmicrobial-nucleotide-blastをlocal環境に構築したいのですが@type=rss" title="subscribe to answers"></a>
+    回答
+</p><p><a class="feed-icon" style="background-image:url('../../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="../../../questions/829/ncbiのmicrobial-nucleotide-blastをlocal環境に構築したいのですが@type=rss&amp;comments=yes" title="subscribe to comments and answers"></a>
+    回答とコメント
+</p>
+
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>ただいまベータテスト運用中です。そのために通知無くコンテンツの変更やサービスの停止変更されることがあります。</h2>
+<p>質問するなら<a href="../../../index.html">ライフサイエンスQA</a>。</p>
+<p>このページの<a href="../../../questions/829/ncbiのmicrobial-nucleotide-blastをlocal環境に構築したいのですが@type=rss">RSSフィード</a></p>
+<p><a href="http://twitter.com/lsqa_all">@lsqa_all</a>・<a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a></p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <p>
+		タグ:
+    </p>
+    <p class="tags" >
+        
+        	<a href="../../../tags/blast/index.html" 
+			title="タグ付けされた質問をみる'blast'タグを利用している" 
+			rel="tag">blast</a> <span class="tag-number">&#215;4</span><br/>
+        
+    </p>
+    <p>
+        質問日: <strong title="2015-02-13 01:20:14.953600">Feb 13 '15 at 01:20</strong>
+    </p>
+    <p> 
+     	閲覧数: <strong>8,439 回</strong>
+    </p>
+    <p> 
+        最終更新日: <strong title="2015-02-24 16:01:57.775684">Feb 24 '15 at 16:01</strong>
+    </p>
+</div>
+
+
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>世界に広がるQAサイト</h2>
+<p><a href="http://biostar.stackexchange.com">バイオインフォマティクスのBioStar</a>・ <a href="http://I.SEQanswers.com">新型シーケンサーのSEQanswers</a>・ <a href="http://blueobelisk.shapado.com">オープンデータのBlueObelisk</a>・<a href="http://stackoverflow.com">プログラミングのstackoverflow</a>・ <a href="http://www.semanticoverflow.com">Semantic Overflow</a>・ <a href="http://stats.stackexchange.com/">Statistical Analysis</a>・ <a href="http://cstheory.stackexchange.com/">Theoretical Computer Science</a>・ <a href="http://chiebukuro.yahoo.co.jp/">Yahoo!知恵袋</a>・ <a href="http://okwave.jp/">OKWave</a> <a href="http://ja.wikipedia.org/wiki/Category:Q%26Aサイト">などなど</a></p>
+     </div>
+</div>
+
+<div class="boxC">
+    <h3 class="subtitle">関係した質問</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="../../535/down/index.html">Blast+のエラーメッセージ</a>
+        </p>
+        
+        <p>
+            <a href="../../192/down/index.html">blastでよく使うコマンドはなんですか？</a>
+        </p>
+        
+        <p>
+            <a href="../../75/down/index.html">blast+ でのオプションコマンド　blast で-F F　に当たるものはなんですか？</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="../../../about/index.html" >概要</a> <span class="link-separator"> |</span> <a href="../../../faq/index.html" >よくある質問</a> <span class="link-separator"> |</span> <a href="../../../privacy/index.html" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="../../../m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

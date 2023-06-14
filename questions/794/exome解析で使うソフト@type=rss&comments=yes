@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: exome解析で使うソフト</title><link>http://qa.lifesciencedb.jp/questions/794/exome%E8%A7%A3%E6%9E%90%E3%81%A7%E4%BD%BF%E3%81%86%E3%82%BD%E3%83%95%E3%83%88</link><description>&lt;p&gt;ある個人のexome解析を行い、変異のリストアップと報告された疾患遺伝子を一覧として出そうと思います。
+この解析を行うのに最適なソフトを教えていただけないでしょうか？
+可能であればフリーがいいのですが、なければ安価ですむもので。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/794/exome%E8%A7%A3%E6%9E%90%E3%81%A7%E4%BD%BF%E3%81%86%E3%82%BD%E3%83%95%E3%83%88" rel="self"></atom:link><language>ja</language><lastBuildDate>Sat, 18 Oct 2014 22:52:41 +0900</lastBuildDate><item><title>Comment by nob_fj on kenken's 回答</title><link>http://qa.lifesciencedb.jp/questions/794/exome%E8%A7%A3%E6%9E%90%E3%81%A7%E4%BD%BF%E3%81%86%E3%82%BD%E3%83%95%E3%83%88#799</link><description>&lt;p&gt;Galaxy自体はDDBJに限らず、いくつかの機関等でホスティングされており、ホスティングする機関のポリシーによって利用規約が異なるかと思います。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.ddbj.nig.ac.jp/wp-content/downloads/ddbjing/28ddbjing_yamaguchi.pdf"&gt;galaxyの一般的な説明も含む資料&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;規約は&lt;a href="http://www.ddbj.nig.ac.jp/ddbjingtop-j.html"&gt;この辺&lt;/a&gt;探すか問い合わせでしょうね。
+短時間でできるかは解析知識や、galaxyコミュニティーの英語の情報を咀嚼できる、能力次第ですかね。
+Maserでの方法なら私でもある程度は反応できますが、ddbj galaxyは直接関わっていないので詳しくは分かりません。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Sat, 18 Oct 2014 22:52:41 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/794/exome%E8%A7%A3%E6%9E%90%E3%81%A7%E4%BD%BF%E3%81%86%E3%82%BD%E3%83%95%E3%83%88#799</guid></item><item><title>Answer by kenken</title><link>http://qa.lifesciencedb.jp/questions/794/exome%E8%A7%A3%E6%9E%90%E3%81%A7%E4%BD%BF%E3%81%86%E3%82%BD%E3%83%95%E3%83%88/796</link><description>&lt;p&gt;ご回答ありがとうございます。&lt;/p&gt;
+&lt;p&gt;Agilent's SureSelect Human All Exon V5 and V5+UTRs kits
+を使ってexomeを50倍を2回読み込みました。&lt;/p&gt;
+&lt;p&gt;このゲノムを使って、既知の病気や感受性遺伝子に関するアノテーションをしていきたいと考えています。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ご参考までに、もし個人情報であるなら、使用許可が下りるかは分かりませんし、セキュリティ認証がかかっているサイトであっても安易にデータをアップロードしても良いかよく検討すべきですが、
+Linuxの知識がなくても利用可能で、かつ無償なWEBサーバ系の選択肢として、&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;とのことですが、
+個人情報であるなら使用許可が降りるかわからないとのことですが、Galaxyというソフトは使用許可が必要なソフトなのでしょうか？
+素人の私でも短期間で解析できますでしょうか？
+データは、SAM形式で保存されています。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">kenken</dc:creator><pubDate>Thu, 09 Oct 2014 02:58:51 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/794/exome%E8%A7%A3%E6%9E%90%E3%81%A7%E4%BD%BF%E3%81%86%E3%82%BD%E3%83%95%E3%83%88/796</guid></item><item><title>Answer by nob_fj</title><link>http://qa.lifesciencedb.jp/questions/794/exome%E8%A7%A3%E6%9E%90%E3%81%A7%E4%BD%BF%E3%81%86%E3%82%BD%E3%83%95%E3%83%88/795</link><description>&lt;p&gt;SNP arrayなどでなく、いわゆるNGSの配列データ解析であることを前提で回答します。&lt;/p&gt;
+&lt;p&gt;個人情報であるかどうかはWEBサーバ系のソフトを使えるかどうかには影響すると思いますが、
+パソコン等で実行するソフトを動かせるかどうかは、kenkenさんがlinuxOSにどの程度の理解があるか、計算機のSPEC、
+入力データが配列ファイルとその書式(fastq形式など)や、
+ヒトゲノムへのマッピング結果の有無と書式(SAM形式,BAM形式や使用したゲノムのバージョン)が分からなければ選択肢をお知らせしようがないとは思います。&lt;/p&gt;
+&lt;p&gt;ご参考までに、もし個人情報であるなら、使用許可が下りるかは分かりませんし、セキュリティ認証がかかっているサイトであっても安易にデータをアップロードしても良いかよく検討すべきですが、
+Linuxの知識がなくても利用可能で、かつ無償なWEBサーバ系の選択肢として、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://p-galaxy.ddbj.nig.ac.jp/"&gt;DDBJ Galaxy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;こちらで以下のセクションのパイプラインを順次実行していくくとになると思います。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NGS: QC and manipulation&lt;/li&gt;
+&lt;li&gt;NGS: Mapping&lt;/li&gt;
+&lt;li&gt;NGS: GATK Tools (beta)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;宣伝ですが同じくWEBサーバ系の解析の選択肢で過去私が解析に関わっていた
+遺伝研のMaserというシステム上で動作するパイプライン群をご紹介いたします。
+(文科省セルイノベーションプログラムで開発され
+文科省Platform for Drug Discoveryで維持・機能拡張されている)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://cell-innovation.nig.ac.jp/wiki2/tiki-index.php?page=P000001190"&gt;BWA, GATK and snpEff + GE (human (hs37d5) only, PE) IN: fastq (paired-end) (max 10)&lt;/a&gt;: 点突然変異と、短い挿入・欠失検出用&lt;/li&gt;
+&lt;li&gt;exome用CNV解析プログラムXHMM用パイプライン: コピー数多系検出用。
+　&lt;a href="http://cell-innovation.nig.ac.jp/wiki2/tiki-index.php?page=All+pipelines+A-Z"&gt;こちら&lt;/a&gt;のパイプライン一覧でXHMMを検索すると出てきます。説明ページは作ってないようです。&lt;/li&gt;
+&lt;li&gt;GATK等で検出したSNVに対して疾病関連情報を付加するパイプライン Add OMIM and ICD10 annotation to snpEff VCF (アノテーション情報が研究者からの利用限定なので一般公開はしていません。研究者であることを明示の上、このパイプラインの利用許可を明示的に連絡する必要があります。)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;その他、それなりに学習に時間はかかるとは思いますが、アカデミアの世界で無償利用可能なLinuxOSベースのツール群を利用した解析チュートリアルは以下などにあります。これは、ご自身のPC上で動かせるので、情報秘匿性は当然高まりますし、個人データであっても利用許可など気にせず利用できるかと思います。(一部ツールの最新版は利用許可を個別申請する必要があったはずです。また研究者等の利用を想定して一般利用を原則許可しないツール・アノテーション情報もあったように記憶しています。)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://genomon.hgc.jp/exome/"&gt;Genomon-exome&lt;/a&gt; 東大 宮野研、京大 小川研公開&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=SAMTOOLS%2CANNOVAR%E3%82%92%E7%94%A8%E3%81%84%E3%81%9Fexome%E8%A7%A3%E6%9E%90%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB"&gt;NGS Surfer's Wiki(SAMTOOLS,ANNOVARを用いたexome解析チュートリアル)&lt;/a&gt; mkodaさん記載&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.slideshare.net/Amelieff/exome"&gt;slideshare(Exomeデータ解析入門)&lt;/a&gt; アメリエフさん記載&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Wed, 08 Oct 2014 06:59:21 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/794/exome%E8%A7%A3%E6%9E%90%E3%81%A7%E4%BD%BF%E3%81%86%E3%82%BD%E3%83%95%E3%83%88/795</guid></item></channel></rss>

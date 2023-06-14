@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With resequence</title><link>http://qa.lifesciencedb.jp/tags/resequence/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;resequence&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/resequence/" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 26 Dec 2011 11:51:36 +0900</lastBuildDate><item><title>リシークエンスの配列作成について</title><link>http://qa.lifesciencedb.jp/questions/552/%E3%83%AA%E3%82%B7%E3%83%BC%E3%82%AF%E3%82%A8%E3%83%B3%E3%82%B9%E3%81%AE%E9%85%8D%E5%88%97%E4%BD%9C%E6%88%90%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;はじめまして。
+現在、次世代シークエンサーを持ちいてリシークエンスを行っているのですが、近縁種のゲノムが解読されているため、de novoアセンブルを行うことなく、マッピングしたのちに何らかの方法で目的のゲノム配列を得られるのではないかと考えています。
+調べたところ、samtoolsのコマンドで、&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;samtools mpileup -uf ecoli.fa srr191810.fq.sort.bam | bcftools view -cg - | vcfutils.pl vcf2fq &amp;gt; cns.fq
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;のようにすると新しいゲノム配列が得られるのですが、vcfutils.plではIN/DELが全く考慮されていないようです。
+何か他にツールをご存知の方がいらっしゃいましたら、教えて頂けませんでしょうか。
+宜しくお願い致します。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">kyoshitake</dc:creator><pubDate>Mon, 26 Dec 2011 11:51:36 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/552/%E3%83%AA%E3%82%B7%E3%83%BC%E3%82%AF%E3%82%A8%E3%83%B3%E3%82%B9%E3%81%AE%E9%85%8D%E5%88%97%E4%BD%9C%E6%88%90%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>samtools</category><category>resequence</category></item></channel></rss>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With conservation</title><link>http://qa.lifesciencedb.jp/tags/conservation/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;conservation&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/conservation/" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 30 Sep 2019 04:10:08 +0900</lastBuildDate><item><title>アミノ酸配列でサイトごとに計算される保存度は何を意味しているのか？</title><link>http://qa.lifesciencedb.jp/questions/904/%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E9%85%8D%E5%88%97%E3%81%A7%E3%82%B5%E3%82%A4%E3%83%88%E3%81%94%E3%81%A8%E3%81%AB%E8%A8%88%E7%AE%97%E3%81%95%E3%82%8C%E3%82%8B%E4%BF%9D%E5%AD%98%E5%BA%A6%E3%81%AF%E4%BD%95%E3%82%92%E6%84%8F%E5%91%B3%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%81%AE%E3%81%8B</link><description>&lt;h1&gt;参考書に載っていた内容&lt;/h1&gt;
+&lt;p&gt;・どうして保存度を算出するのか？&lt;/p&gt;
+&lt;p&gt;→アラインメントから構造や機能の情報を抽出するため&lt;/p&gt;
+&lt;p&gt;・サイトごとに計測する理由は？&lt;/p&gt;
+&lt;p&gt;→サイトレベルで情報を抽出する方法により、機能あるいは構造と関連があると推測されるサイトについては、アミノ酸置換などの突然変異導入実験により、その予測の確認を比較的容易に行うことができる。モチーフの同定。&lt;/p&gt;
+&lt;p&gt;・構造とは？&lt;/p&gt;
+&lt;p&gt;→立体構造のこと&lt;/p&gt;
+&lt;p&gt;・機能とは？&lt;/p&gt;
+&lt;p&gt;→タンパク質が折りたたまれ、他のタンパク質等と相互作用を起こすこと。&lt;/p&gt;
+&lt;p&gt;そのため、立体構造が似ていることは同様の機能を有していることを予測することができる。&lt;/p&gt;
+&lt;h1&gt;マルチプルアラインメントされたアミノ酸配列で、サイトごとに保存度を「以下の式」で計算する意義について知りたいです。&lt;/h1&gt;
+&lt;p&gt;保存度は以下の式で計算されるものとします。&lt;/p&gt;
+&lt;p&gt;・Valder氏の保存度算出式(https://gyazo.com/8285e51d7bd7db8d8057bb376e9e454f)&lt;/p&gt;
+&lt;p&gt;・スコアマトリックスにはBlosum62を使用(https://gyazo.com/7c8c0bb28db10ba26d07bdf6e40aed57)&lt;/p&gt;
+&lt;p&gt;・スコアマトリックスの変換式に、写真の変換式を使用(https://gyazo.com/60242cf27db66929a5490dc0ed9b1558)&lt;/p&gt;
+&lt;p&gt;・重み付けにはHenikoff氏の重み付けを使用(https://gyazo.com/7907a5beddc2a1ee6348e310f9a5d78b)&lt;/p&gt;
+&lt;h1&gt;保存度を計算する理由について、私の考察&lt;/h1&gt;
+&lt;p&gt;・完全保存されているサイト(=モチーフ)を発見すること。&lt;/p&gt;
+&lt;p&gt;理由：Valder氏の考案した式によれば、完全保存されているサイトについては、どの配列で比較しても、一意の値に収束するから。反対に、完全保存されていなければ、一意の値に収束することはなく、値にばらつきが見られるから。&lt;/p&gt;
+&lt;h1&gt;考察に対する反論&lt;/h1&gt;
+&lt;p&gt;完全保存されているサイトを発見するためだけであれば、別に保存度が必要ではない。視覚的に完全に保存されているサイトを見つければいい。&lt;/p&gt;
+&lt;h2&gt;よって、私の考察とは異なる目的があるのだろう。という結論にたどり着きました。ご回答いただけると幸いです。&lt;/h2&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">study_bioinfo</dc:creator><pubDate>Mon, 30 Sep 2019 04:10:08 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/904/%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E9%85%8D%E5%88%97%E3%81%A7%E3%82%B5%E3%82%A4%E3%83%88%E3%81%94%E3%81%A8%E3%81%AB%E8%A8%88%E7%AE%97%E3%81%95%E3%82%8C%E3%82%8B%E4%BF%9D%E5%AD%98%E5%BA%A6%E3%81%AF%E4%BD%95%E3%82%92%E6%84%8F%E5%91%B3%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%81%AE%E3%81%8B</guid><category>conservation</category></item><item><title>アミノ酸配列の保存度算出に伴う重み付けスコアの意義について</title><link>http://qa.lifesciencedb.jp/questions/901/%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E9%85%8D%E5%88%97%E3%81%AE%E4%BF%9D%E5%AD%98%E5%BA%A6%E7%AE%97%E5%87%BA%E3%81%AB%E4%BC%B4%E3%81%86%E9%87%8D%E3%81%BF%E4%BB%98%E3%81%91%E3%82%B9%E3%82%B3%E3%82%A2%E3%81%AE%E6%84%8F%E7%BE%A9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;はじめまして、初めて使用させていただきます。よろしくお願いします。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1,疑問点&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;・以下の論文でValder氏の提唱している式(37式)を学びましたが、その式中でHenikoff氏の考案した重み付けがなぜ使用されているのかわからない。
+(参照:https://www.ncbi.nlm.nih.gov/pubmed/12112692)&lt;/p&gt;
+&lt;p&gt;疑問を持った理由&lt;/p&gt;
+&lt;p&gt;→例えば、100本のマルチプルアラインメントされた相同配列のうち、99本が90%程度の一致度を示し、残りの1本が20%程度の一致度を示しているような場合を考える。
+重み付けの計算式によれば、20%の一致度を示す配列の情報を保存度に大きな影響として与えようとしていることがわかる。なぜ、このような計算方法をとる必要があるのか？99本の保存されていると考えられるサイトを以って、全ての配列は90%程度保存されていると判断してはいけないのはなぜか？と考えたため。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;---論文を読み込めない方のために、使用している式について以下に画像をキャプチャしました---&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;1,Valder氏の保存度算出式(https://gyazo.com/8285e51d7bd7db8d8057bb376e9e454f)&lt;/p&gt;
+&lt;p&gt;2,重み付けの計算方法(https://gyazo.com/7907a5beddc2a1ee6348e310f9a5d78b)&lt;/p&gt;
+&lt;p&gt;※iは配列の数を表し、Nは配列の総数を表している。xはポジションのことを表している。&lt;/p&gt;
+&lt;p&gt;→お分かりになる方がいるだろうという希望的観測のもと質問をいたしますので、計算方法の詳細については記述いたしません。必要な場合は追記いたしますので、おしらせください。&lt;/p&gt;
+&lt;p&gt;3,スコア行列から取得したアミノ酸ペアの値に対する計算(https://gyazo.com/60242cf27db66929a5490dc0ed9b1558)&lt;/p&gt;
+&lt;p&gt;4,スコア行列=Blosum62(https://gyazo.com/7c8c0bb28db10ba26d07bdf6e40aed57)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2,私の理解度について&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Valder氏の式については、"加重平均"を計算していることは理解しております。配列ごとに重み付けをした値を分母と分子にとり、
+分子についてはBlosum62のスコア行列から得られた値を配列同士の重み付けの積と、さらに積をとって計算しています。
+分子、分母共に、各項が1を超えることは絶対にないように計算されているので、保存度は0~1の間で算出される。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3,疑問点解決のために模索したこと&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;・Henikoff氏の重み付けを使用する理由は、「taxonomic bias」を逃れるために導入していることを以下の参考文献から学びましたが、このバイアスについて具体例を元に詳しく説明されている文献等々を見つけることができず、具体的に記している文献を知りたいです。
+(参考文献:タンパク質機能解析のためのバイオインフォマティクス P.67)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4,求めている回答&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;・taxonomic biasを理解することが、重み付けを式に組み込む理由として正しいのか？&lt;/p&gt;
+&lt;p&gt;→妥当である場合、taxonomic biasが発生してしまうような場合を、具体例を含んで解説している書籍、論文をご紹介いただきたいです。&lt;/p&gt;
+&lt;p&gt;→妥当でない場合、何を理解することで重み付けをする理由を説明することができるかをご指南いただきたいです。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">study_bioinfo</dc:creator><pubDate>Mon, 16 Sep 2019 01:57:26 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/901/%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E9%85%8D%E5%88%97%E3%81%AE%E4%BF%9D%E5%AD%98%E5%BA%A6%E7%AE%97%E5%87%BA%E3%81%AB%E4%BC%B4%E3%81%86%E9%87%8D%E3%81%BF%E4%BB%98%E3%81%91%E3%82%B9%E3%82%B3%E3%82%A2%E3%81%AE%E6%84%8F%E7%BE%A9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>residue</category><category>scorering</category><category>conservation</category></item></channel></rss>

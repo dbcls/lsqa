@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: 個体ごとのSNPsのコール</title><link>http://qa.lifesciencedb.jp/questions/566/%E5%80%8B%E4%BD%93%E3%81%94%E3%81%A8%E3%81%AEsnps%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%AB</link><description>&lt;p&gt;とある遺伝病の原因遺伝子を調べて、リシーケンシングからSNPs解析を行っています。&lt;br&gt;
+SNPsをコールする際、samtoolsであれば、&lt;br&gt;
+ーーーーbam.listーーーーー&lt;br&gt;
+1.bam&lt;br&gt;
+2.bam&lt;br&gt;
+3.bam&lt;br&gt;
+ーーーーーーーーーーーーー&lt;br&gt;
+というようなファイルを準備し、&lt;br&gt;
+&lt;code&gt;samtools mpileup -uf hg19.fa -b bam.list | bcftools view -vcg-&lt;/code&gt;&lt;br&gt;
+とすると個体ごとにSNPsが分けられて出力されます。&lt;br&gt;
+全サンプル混ぜてSNPsを検出するほうが、SNPsの誤判定が起きにくいようなので、できれば1つずつ入力するよりも、併せてSNPsのコールを行いたいと考えています。&lt;br&gt;
+ここからが問題なのですが、GATKを用いると、multi-allelicなSNPsを検出することが可能だということで、GATKでSNPsのコールを行いたいのですが、たとえば次のようにしても、個体ごとにSNPsを分けることができません。&lt;br&gt;
+&lt;code&gt;java -jar  GenomeAnalysisTK.jar -R hg19.fa  -T UnifiedGenotyper -o 1-2-3.vcf  -glm BOTH -I 1.bam -I 2.bam -I 3.bam&lt;/code&gt;  &lt;br&gt;
+GATKで複数のBAMファイルを同時に入力し、各BAMファイルごとに分かれた状態でSNPsを出力することは可能でしょうか？&lt;br&gt;
+宜しくお願い致します。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/566/%E5%80%8B%E4%BD%93%E3%81%94%E3%81%A8%E3%81%AEsnps%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%AB" rel="self"></atom:link><language>ja</language><lastBuildDate>Wed, 08 Jan 2014 18:29:16 +0900</lastBuildDate><item><title>Comment by kyoshitake on yamagu's 回答</title><link>http://qa.lifesciencedb.jp/questions/566/%E5%80%8B%E4%BD%93%E3%81%94%E3%81%A8%E3%81%AEsnps%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%AB#707</link><description>&lt;p&gt;質問した当時は分かっていなかったのですが、yamaguさんのご指摘されたとおり、RG行が適切に設定されておらず、全てのBAMで同一のサンプル名を付けていたことが原因でした。
+今は、bwa sampe をかけるときに -r オプションで、
+"@RGtID:sample1tSM:sample1tPL:IlluminatLB:sample1"
+とし、BAMファイルごとに異なる IDを設定しています。&lt;/p&gt;
+&lt;p&gt;レスありがとうございます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">kyoshitake</dc:creator><pubDate>Wed, 08 Jan 2014 18:29:16 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/566/%E5%80%8B%E4%BD%93%E3%81%94%E3%81%A8%E3%81%AEsnps%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%AB#707</guid></item><item><title>Answer by yamagu</title><link>http://qa.lifesciencedb.jp/questions/566/%E5%80%8B%E4%BD%93%E3%81%94%E3%81%A8%E3%81%AEsnps%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%AB/695</link><description>&lt;p&gt;GATKはどのバージョンをお使いでしょうか？
+最新のver2以上でしたら、複数のBAMファイルを指定できませんか？&lt;/p&gt;
+&lt;p&gt;また、各BAMファイル内のサンプル名(@RG行)は、適切に記述されているでしょうか？&lt;/p&gt;
+&lt;p&gt;なお、GATKでは結果は一つのVCFファイルに複数サンプルのGenotypeがまとめて出力されます。
+後でSelectVariantsなどで各サンプルごとに分けることはできると思います(-snオプション)。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">yamagu</dc:creator><pubDate>Fri, 25 Oct 2013 14:05:53 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/566/%E5%80%8B%E4%BD%93%E3%81%94%E3%81%A8%E3%81%AEsnps%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%AB/695</guid></item></channel></rss>

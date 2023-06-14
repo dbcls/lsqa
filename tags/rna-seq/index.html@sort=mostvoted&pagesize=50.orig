@@ -1,0 +1,810 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Questions Tagged With rna-seq - #LSQA</title>
+        <meta name="description" content="質問と回答と私">
+        <meta name="keywords" content="OSQA,CNPROG,forum,community,lifesciencedb.jp,DDBJ,PDBj,DBCLS,Cytoscape,NGS,ngs-field">
+        
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/tags/rna-seq/?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon.ico" />
+        <link href="/m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='/m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >ログイン</a>  <a href="/about/" >概要</a>  <a href="/faq/" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >質問</a><a id="nav_tags" href="/tags/" >タグ</a><a id="nav_users" href="/users/" >ユーザー</a><a id="nav_badges" href="/badges/" >バッジ</a><a id="nav_unanswered" href="/questions/unanswered/" >未回答</a>
+        <a id="nav_ask" href="/questions/ask/" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+
+<div class="tabBar">
+    
+
+<div class="headQuestions">
+    
+        
+            
+                
+                    Questions Tagged With rna-seq
+                
+            
+        
+    
+</div>
+    <a class="feed-icon" style="background-image:url('/m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');" href="/tags/rna-seq/?type=rss" title="subscribe to question RSS feed"></a>
+    
+<div class="tabsA"><a href="/tags/rna-seq/?sort=有効" title="最近更新された質問">有効</a><a href="/tags/rna-seq/?sort=最新" title="最近尋ねられた質問">最新</a><a href="/tags/rna-seq/?sort=ホット" title="最近２４時間でもっとも活発な質問">ホット</a><a href="/tags/rna-seq/?sort=mostvoted" class="on" title="もっとも投票された質問">注目の質問</a></div>
+</div>
+<div id="listA">
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">2</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">3</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">11k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="mRNA-Seqの情報解析で、なぜかrRNAが混入することが多いようですが、
+これを除去するのに使用するrRNA、tRNAの情報はどこから入手するのが一般的でしょうか。
+もし自前で除去スクリプトを作成する必要がある場合は、rRNA、tRNAの座標情報をUCSCのどこかから入手し、
+マッピング結果中のrRNA、tRNAにヒットした結果レコードを除外するなどの
+対応を考えていますが、もっと効率的なツール・方法があったら教えてください。" href="/questions/125/rna-seq%E3%81%AErrna%E3%81%AE%E9%99%A4%E5%8E%BB">RNA-SeqのrRNAの除去</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2010-12-29 14:13:18.799797">Dec 29 '10 at 14:13</span>
+            <a href="/users/23/nob_fj/">nob_fj ♦</a><span class="score" title="507 信用度">507</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/trna/" title="タグ付けされた質問をみる 'trna' タグを利用している" rel="tag">trna</a>
+            <a href="/tags/rrna/" title="タグ付けされた質問をみる 'rrna' タグを利用している" rel="tag">rrna</a>
+            <a href="/tags/filtering/" title="タグ付けされた質問をみる 'filtering' タグを利用している" rel="tag">filtering</a>
+            <a href="/tags/rna-seq/" title="タグ付けされた質問をみる 'rna-seq' タグを利用している" rel="tag">rna-seq</a>
+            <a href="/tags/ngs/" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">8.8k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="今後免疫分野でChip-seqやRNA-seqを施行していく予定にしています。免疫分野ではC57BL/6Jに加えてBlab/cも表現型をみていく上で重要です。そこで質問させていただきたいのですが、Chip-seqやRNA-seqをBalb/cでデータをとった後、リファレンス配列mm9にマッピングすることになると思うのですが、mm9は主にC57BL/6Jから作られているようです。論文によってはC57BL/6JとC57BL/6nでも結構違いがあるようなことを指摘されているくらいですので、実際balb/cとC57BL/6Jではかなり違うような気がするのですが、マッピングはどの程度できるのでしょうか？" href="/questions/340/balb-c%E3%81%A8c57bl-6j%E3%81%A8mm9">Balb/cとC57BL/6Jとmm9</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-05-14 00:34:23.664239">May 14 '13 at 00:34</span>
+            <a href="/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/rna-seq/" title="タグ付けされた質問をみる 'rna-seq' タグを利用している" rel="tag">rna-seq</a>
+            <a href="/tags/chip-seq/" title="タグ付けされた質問をみる 'chip-seq' タグを利用している" rel="tag">chip-seq</a>
+            <a href="/tags/%E3%83%9E%E3%82%A6%E3%82%B9/" title="タグ付けされた質問をみる 'マウス' タグを利用している" rel="tag">マウス</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">5.6k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="36bpのシングルエンドRNA-seqデータを使って解析をしようとしているのですが、
+バージョン1.0.12から追加された--butterfly-searchというオプションを使ったことの
+ある方、または使った時と使わなかった時の比較をされた方はいらっしゃいませんでしょうか？
+36bpなので--segment-length 18でジャンクション同定してもノイズが多くなりそうで、
+そのままbowtieでマッピングしてしまおうと考えていたのですが、Tophatのマニュアルを
+見ていて、このオプションがあることを知ってどうしようか迷っています。
+Tophatの論文にはこのbutterflyのアルゴリ" href="/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">Tophatのbutterflyオプションについて</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2012-03-28 22:01:36.362524">Mar 28 '12 at 22:01</span>
+            <a href="/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/butterfly/" title="タグ付けされた質問をみる 'butterfly' タグを利用している" rel="tag">butterfly</a>
+            <a href="/tags/tophat/" title="タグ付けされた質問をみる 'tophat' タグを利用している" rel="tag">tophat</a>
+            <a href="/tags/rna-seq/" title="タグ付けされた質問をみる 'rna-seq' タグを利用している" rel="tag">rna-seq</a>
+            <a href="/tags/ngs/" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">3</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">10k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="もしかしたら、常識かもしれないので、
+情報お持ちのかたがおられたら、お願いします。
+topHatやmapSpliceなど、splicingを考慮したマッパーの結果から、
+遺伝子レベルのタグカウントを計算するうまいやり方など、
+情報お持ちのかたがおられましたら、
+お知らせいただけますと助かります。
+以下背景
+topHat-cufflinks-cuffdiffや、それに類似のフローが
+デファクトスタンダード的解析であると知りつつ、
+リード長の長いRNA-SeqにedgeR等をかけるやりかたを考えています。
+edgeRなどのDEG検出用のRパッケージ等は、
+fpkm/rpkmは使わないように推奨して" href="/questions/581/%E3%83%AA%E3%83%BC%E3%83%89%E9%95%B7%E3%81%AE%E9%95%B7%E3%81%84rna-seq%E3%81%AE%E3%82%BF%E3%82%B0%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88">リード長の長いRNA-Seqのタグカウント</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2012-07-19 21:52:09.096286">Jul 19 '12 at 21:52</span>
+            <a href="/users/23/nob_fj/">nob_fj ♦</a><span class="score" title="507 信用度">507</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/tophat/" title="タグ付けされた質問をみる 'tophat' タグを利用している" rel="tag">tophat</a>
+            <a href="/tags/ngs/" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+            <a href="/tags/rna-seq/" title="タグ付けされた質問をみる 'rna-seq' タグを利用している" rel="tag">rna-seq</a>
+            <a href="/tags/long/" title="タグ付けされた質問をみる 'long' タグを利用している" rel="tag">long</a>
+            <a href="/tags/splicing-junction/" title="タグ付けされた質問をみる 'splicing-junction' タグを利用している" rel="tag">splicing-junction</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">8.5k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="複製無しの2サンプル間のRPKMの統計処理によって、発現変動遺伝子を検出したいと考えています。
+文献を検索し、Fisher&#39;s exact testをしたいと思っているのですが、エクセルでは計算能力の限界を超えてしまうため
+計算に適したソフトなどを教えて頂けないでしょうか。
+また他のRPKMの比較に適した検定があればそちらのほうも宜しくお願い致します。" href="/questions/780/%E7%99%BA%E7%8F%BE%E5%A4%89%E5%8B%95%E9%81%BA%E4%BC%9D%E5%AD%90%E3%81%AE%E6%A4%9C%E5%AE%9A">発現変動遺伝子の検定</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2014-10-18 23:53:24.922888">Oct 18 '14 at 23:53</span>
+            <a href="/users/23/nob_fj/">nob_fj ♦</a><span class="score" title="507 信用度">507</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/rna-seq/" title="タグ付けされた質問をみる 'rna-seq' タグを利用している" rel="tag">rna-seq</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">7.8k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="初心者です。ご助言お願いいたします。
+Trinityを用いてHiseqのペアエンドデータのde novo アセンブリを行いました。
+コンティグ数やN50やコンティグ長頻度分布をみるとまずまずのコンティグが作成されたように思います。
+しかし、各コンティグが作成されるのに用いられたリード数やcoverage dapthの情報が、出力された複数のファイルのどこにあるかわかりません（パッと見では見当たりません）。
+どうすれば上記の情報を知ることができますでしょうか？
+お助け下さい。" href="/questions/809/trinity%E3%81%AE%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E7%B5%90%E6%9E%9C%E3%81%AE%E8%A6%8B%E6%96%B9">Trinityのアセンブリ結果の見方</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2015-01-05 23:51:50.882909">Jan 05 '15 at 23:51</span>
+            <a href="/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/rna-seq/" title="タグ付けされた質問をみる 'rna-seq' タグを利用している" rel="tag">rna-seq</a>
+            <a href="/tags/assembly/" title="タグ付けされた質問をみる 'assembly' タグを利用している" rel="tag">assembly</a>
+            <a href="/tags/ngs/" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">3</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">5.3k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="MiSeqを使ってmouse macrophage系細胞のRNA-seqを始めたのですが、出てきたデータの塩基組成がA,T＝32%、G,C＝18%と偏ります。
+原因に心当たりのある方、アドバイス頂けないでしょうか？
+実験系の概略は以下のとおりです。
+
+Total RNA 1 ugを精製
+TruSeq Stranded mRNA Sample Prep
+   Kitでlibrary構築
+Sequencing Kit V3
+   (150cycle)でpaired-end readsを取得
+
+よろしくお願いいたします。" href="/questions/834/rna-seq%E3%81%AEat-bias">RNA-seqのAT bias</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2016-01-05 17:58:45.909555">Jan 05 '16 at 17:58</span>
+            <a href="/users/28/suimye/">suimye</a><span class="score" title="296 信用度">296</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/stranded/" title="タグ付けされた質問をみる 'stranded' タグを利用している" rel="tag">stranded</a>
+            <a href="/tags/rna-seq/" title="タグ付けされた質問をみる 'rna-seq' タグを利用している" rel="tag">rna-seq</a>
+            <a href="/tags/miseq/" title="タグ付けされた質問をみる 'miseq' タグを利用している" rel="tag">miseq</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  unanswered">
+            <div class="item-count">0</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">6.5k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="「Rで塩基配列解析」をみながら、RNAseq解析をしようとしています。Rは初心者で、試しに適当なリファレンス配列とクエリー配列（共にfasta形式）を用いてmappingを試みています。リストファイルを作成後、以下のコマンドによりQuasRを起動してマッピングを行おうとしましたが、以下のようにbowtieにおいて、”引数の長さが 0 です　sh: line 1:  9966 Segmentation fault: 11”というエラーが出てしまい困っております。このような場合の解決策をご存知の方はいらっしゃいますか？
+
+in_f1 &amp;lt;- &quot;mapping1.txt&quot;
+in_f2 &amp;lt;-" href="/questions/835/rna-seq%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Br%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E6%99%82%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">RNA seqにおけるRを用いたマッピング時のエラーについて</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2015-04-06 17:58:56.571592">Apr 06 '15 at 17:58</span>
+            <a href="/users/162/brown/">brown</a><span class="score" title="1 信用度">1</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/r/" title="タグ付けされた質問をみる 'r' タグを利用している" rel="tag">r</a>
+            <a href="/tags/rna-seq/" title="タグ付けされた質問をみる 'rna-seq' タグを利用している" rel="tag">rna-seq</a>
+            <a href="/tags/mapping/" title="タグ付けされた質問をみる 'mapping' タグを利用している" rel="tag">mapping</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">7.9k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="NGSデータ解析の初心者です。
+現在、RNA-seq解析を行っているのですが、Mapping結果をIGVで可視化するとある遺伝子に対してMappingされていることを確認したのですが、その遺伝子の発現量をCuffdiffで計算したところ、FPKM値が0となりました(gene tracking)。
+リードがMappingされているのにFPKM値がなぜ0となるのかわからず困っています。
+何か知見があればご教授ください。よろしくお願い致します。" href="/questions/845/igv%E3%81%AE%E7%B5%90%E6%9E%9C%E3%81%A8fpkm%E5%80%A4%E3%81%AE%E9%81%95%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">IGVの結果とFPKM値の違いについて</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2016-01-05 15:57:19.282747">Jan 05 '16 at 15:57</span>
+            <a href="/users/28/suimye/">suimye</a><span class="score" title="296 信用度">296</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/rna-seq/" title="タグ付けされた質問をみる 'rna-seq' タグを利用している" rel="tag">rna-seq</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">5.5k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="RNA-seqを用いて研究を行い始めたものです。
+右も左もわからない中、ここでの回答は非常助かっております。
+現在得られたRNA-seqの発現遺伝子データセットに対して、既存遺伝子のホモログが存在するのかどうかを調べたいと考えています。
+データセットの量が膨大で、どう調べればよいかが分かりません。
+初歩的な質問ではありますが、ご教授して頂けないでしょうか。
+何卒よろしくお願いいたします。
+【追記1】他の生物の遺伝子を対象とし、私の対象とする生物の発達過程でどのような発現をしているかを調査したいと考えています。
+回答ありがとうございました。データセットのアノテーション情報を参考にして遺伝子を絞り" href="/questions/849/%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B0%E3%81%AE%E6%A4%9C%E5%87%BA%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">ホモログの検出について</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2016-07-15 14:03:10.538063">Jul 15 '16 at 14:03</span>
+            <a href="/users/170/lonicera/">lonicera</a><span class="score" title="1 信用度">1</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/rna-seq/" title="タグ付けされた質問をみる 'rna-seq' タグを利用している" rel="tag">rna-seq</a>
+            <a href="/tags/homolog/" title="タグ付けされた質問をみる 'homolog' タグを利用している" rel="tag">homolog</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">5.5k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="DAVIDを用いてエンリッチメント解析を行いたいのですが、UploadしたIDが上手く認識されず困っています。
+
+自分が持っているID
+
+RNA-seqにより得られた発現遺伝子のデータに対して、BLASTXを用いて相同性検索を行い、「GI number」と「RefSeq ID」を得ています。
+
+行った動作
+
+「GI number」や「RefSeq ID」を用いてDAVIDによるエンリッチメント解析を行いました。『Select Identifier』の項目ではそれぞれ「PROTEIN_GI_ACCESSION」と「REFSEQ_PROTEIN」を選んでいます。2300のIDを用いて調べた結果、認" href="/questions/851/rna-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E3%82%A8%E3%83%B3%E3%83%AA%E3%83%83%E3%83%81%E3%83%A1%E3%83%B3%E3%83%88%E8%A7%A3%E6%9E%90%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">RNA-seqデータを用いたエンリッチメント解析について</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2016-08-15 20:46:49.959141">Aug 15 '16 at 20:46</span>
+            <a href="/users/170/lonicera/">lonicera</a><span class="score" title="1 信用度">1</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/rna-seq/" title="タグ付けされた質問をみる 'rna-seq' タグを利用している" rel="tag">rna-seq</a>
+            <a href="/tags/%E3%82%A8%E3%83%B3%E3%83%AA%E3%83%83%E3%83%81%E3%83%A1%E3%83%B3%E3%83%88%E8%A7%A3%E6%9E%90/" title="タグ付けされた質問をみる 'エンリッチメント解析' タグを利用している" rel="tag">エンリッチメント解析</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  unanswered">
+            <div class="item-count">0</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">3.4k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="次世代シーケンサーからのデータを解析し，発現差異解析を行いたいと思っています。
+Aligned BAMという形式のデータをTMM正規化し，発現差の解析をする場合，データに含まれる遺伝子数がTMM正規化により減ってしまうことはありますか？" href="/questions/864/tmm%E6%AD%A3%E8%A6%8F%E5%8C%96%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">TMM正規化法について</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2017-09-11 15:13:55.664418">Sep 11 '17 at 15:13</span>
+            <a href="/users/177/abcde2017/">abcde2017</a><span class="score" title="1 信用度">1</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/rna-seq/" title="タグ付けされた質問をみる 'rna-seq' タグを利用している" rel="tag">rna-seq</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">34k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="ここ数ヶ月でNGSデータ解析について学んでいます。
+現在は主に公共データのChIP-Seqデータのピーク検出や比較を行っています。
+今回新たに利用したいデータセットがあるのですが，その利用について少々悩んでおりますので本サイトに投稿しています。
+詳しい先生方がいらっしゃいましたらご助言頂けると幸いです。
+質問内容は以下の通りです。
+異なる機種のIllumina HiSeqを用いて得たSRAデータは互いにデータとして比較することができるのでしょうか。
+たとえば，公共ゲノムデータベースGEOに公開されている，
+GSE86164：Illumina HiSeq 2500を用いて得たChIP-Seqデー" href="/questions/876/%E5%85%AC%E5%85%B1%E3%81%AEchip-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E6%AF%94%E8%BC%83%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">公共のChIP-seqデータのデータセット間のピーク比較について</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2018-05-01 18:45:03.425732">May 01 '18 at 18:45</span>
+            <a href="/users/181/takebo/">takebo</a><span class="score" title="1 信用度">1</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/rna-seq/" title="タグ付けされた質問をみる 'rna-seq' タグを利用している" rel="tag">rna-seq</a>
+            <a href="/tags/chip-seq/" title="タグ付けされた質問をみる 'chip-seq' タグを利用している" rel="tag">chip-seq</a>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+    <div class="boxC"><div class="questions-count">
+        13<span style="color:black;font-size:14px;margin-left:5px">questions tagged <span class="tag">rna-seq</span></span></div><div class="questions-count">
+        18<span style="color:black;font-size:14px;margin-left:5px">回答</span></div><div><p class="nomargin">
+            もっとも<strong>投票された</strong>質問
+        </p></div></div>
+    
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>ただいまベータテスト運用中です。そのために通知無くコンテンツの変更やサービスの停止変更されることがあります。</h2>
+<p>質問するなら<a href="http://qa.lifesciencedb.jp">ライフサイエンスQA</a>。</p>
+<p>このページの<a href="?type=rss">RSSフィード</a></p>
+<p><a href="http://twitter.com/lsqa_all">@lsqa_all</a>・<a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a></p>
+     </div>
+</div>
+
+    
+
+
+
+
+    
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>世界に広がるQAサイト</h2>
+<p><a href="http://biostar.stackexchange.com">バイオインフォマティクスのBioStar</a>・ <a href="http://I.SEQanswers.com">新型シーケンサーのSEQanswers</a>・ <a href="http://blueobelisk.shapado.com">オープンデータのBlueObelisk</a>・<a href="http://stackoverflow.com">プログラミングのstackoverflow</a>・ <a href="http://www.semanticoverflow.com">Semantic Overflow</a>・ <a href="http://stats.stackexchange.com/">Statistical Analysis</a>・ <a href="http://cstheory.stackexchange.com/">Theoretical Computer Science</a>・ <a href="http://chiebukuro.yahoo.co.jp/">Yahoo!知恵袋</a>・ <a href="http://okwave.jp/">OKWave</a> <a href="http://ja.wikipedia.org/wiki/Category:Q%26Aサイト">などなど</a></p>
+     </div>
+</div>
+
+    
+
+
+
+    <div class="boxC">
+        <h3 class="subtitle">タグ</h3>
+        <div class="tags" id="recent-tags">
+            
+                <a rel="tag" title="'ngs'タグづけられた質問をみる"  href="/tags/ngs/">ngs</a>
+                <span class="tag-number">&#215; 47</span>
+                <br />
+            
+                <a rel="tag" title="'rna-seq'タグづけられた質問をみる"  href="/tags/rna-seq/">rna-seq</a>
+                <span class="tag-number">&#215; 13</span>
+                <br />
+            
+                <a rel="tag" title="'r'タグづけられた質問をみる"  href="/tags/r/">r</a>
+                <span class="tag-number">&#215; 8</span>
+                <br />
+            
+                <a rel="tag" title="'chip-seq'タグづけられた質問をみる"  href="/tags/chip-seq/">chip-seq</a>
+                <span class="tag-number">&#215; 7</span>
+                <br />
+            
+                <a rel="tag" title="'tophat'タグづけられた質問をみる"  href="/tags/tophat/">tophat</a>
+                <span class="tag-number">&#215; 6</span>
+                <br />
+            
+                <a rel="tag" title="'assembly'タグづけられた質問をみる"  href="/tags/assembly/">assembly</a>
+                <span class="tag-number">&#215; 3</span>
+                <br />
+            
+                <a rel="tag" title="'mapping'タグづけられた質問をみる"  href="/tags/mapping/">mapping</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'splicing-junction'タグづけられた質問をみる"  href="/tags/splicing-junction/">splicing-junction</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'butterfly'タグづけられた質問をみる"  href="/tags/butterfly/">butterfly</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'filtering'タグづけられた質問をみる"  href="/tags/filtering/">filtering</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'homolog'タグづけられた質問をみる"  href="/tags/homolog/">homolog</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'long'タグづけられた質問をみる"  href="/tags/long/">long</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'miseq'タグづけられた質問をみる"  href="/tags/miseq/">miseq</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'rrna'タグづけられた質問をみる"  href="/tags/rrna/">rrna</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'stranded'タグづけられた質問をみる"  href="/tags/stranded/">stranded</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'trna'タグづけられた質問をみる"  href="/tags/trna/">trna</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'エンリッチメント解析'タグづけられた質問をみる"  href="/tags/%E3%82%A8%E3%83%B3%E3%83%AA%E3%83%83%E3%83%81%E3%83%A1%E3%83%B3%E3%83%88%E8%A7%A3%E6%9E%90/">エンリッチメント解析</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'マウス'タグづけられた質問をみる"  href="/tags/%E3%83%9E%E3%82%A6%E3%82%B9/">マウス</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+        </div>
+    </div>
+
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+    <div class="pager"></div>
+    <div class="pagesize"><div class="paginator"><span class="text">ページあたりの投稿数</span><span class="page"><a href="/tags/rna-seq/?sort=mostvoted&pagesize=15">15</a></span><span class="page"><a href="/tags/rna-seq/?sort=mostvoted&pagesize=30">30</a></span><span class="curr">50</span></div></div>
+
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >概要</a> <span class="link-separator"> |</span> <a href="/faq/" >よくある質問</a> <span class="link-separator"> |</span> <a href="/privacy/" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="/m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+        
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: Entrez SRAとDRA Searchはどちらが正しい？</title><link>http://qa.lifesciencedb.jp/questions/699/entrez-sra%E3%81%A8dra-search%E3%81%AF%E3%81%A9%E3%81%A1%E3%82%89%E3%81%8C%E6%AD%A3%E3%81%97%E3%81%84</link><description>&lt;p&gt;私の理解では、リードアーカイブのDRA ERA SRAは、メタデータに関しては同じものを持っているのだと思っていたのですが、
+偶然以下の一致しないケースに遭遇しました。&lt;/p&gt;
+&lt;p&gt;ケースバイケースなのかと思いますが、今回は状況から考えるとSRAの方が間違っていそうな気がします。&lt;/p&gt;
+&lt;p&gt;DRA/ERA/SRAの全てで間違っているのであれば分かりますが、SRAだけ間違っているように見える点について、
+どういう状況でこういうことが起こるのか、詳しい方がおられましたら、コメントくださると幸いです。
+(更新頻度？同期のタイミング？そもそも同じでない？)&lt;/p&gt;
+&lt;p&gt;尚、不整合の件に関しては、以前こちらの質疑(&lt;a href="http://qa.lifesciencedb.jp/questions/686/sra%E3%81%B8%E3%81%AE%E9%96%93%E9%81%95%E3%81%84%E3%81%AE%E8%A8%82%E6%AD%A3from%E7%AC%AC%E4%B8%89%E8%80%85"&gt;LSQA(SRAへの間違いの訂正from第三者)&lt;/a&gt;)で情報いただいた、NCBI help deskに連絡しようと思っています。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;2013/11/27 16:00時点の情報だと、以下、Entrez SRAとDRA Search&amp;amp;ENAの検索が一致しなかった件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;あるヒストンのChIPのリードアーカイブ登録データ(SRX000160)について調べていて、
+&lt;a href="http://www.ncbi.nlm.nih.gov/sra/?term=SRX000160"&gt;Entrez SRAのページ&lt;/a&gt;にはランデータ(SRR001437, SRR001447, SRR001461, SRR001462)がリストされ、
+&lt;a href="http://trace.ddbj.nig.ac.jp/DRASearch/experiment?acc=SRX000160"&gt;DRA Searchのページ&lt;/a&gt;だと、&lt;a href="http://trace.ddbj.nig.ac.jp/DRASearch/run?acc=SRR001437"&gt;SRR001437&lt;/a&gt;だけがリストされ、
+その他の三つ(&lt;a href="http://trace.ddbj.nig.ac.jp/DRASearch/run?acc=SRR001447"&gt;SRR001447&lt;/a&gt;, &lt;a href="http://trace.ddbj.nig.ac.jp/DRASearch/run?acc=SRR001461"&gt;SRR001461&lt;/a&gt;, &lt;a href="http://trace.ddbj.nig.ac.jp/DRASearch/run?acc=SRR001462"&gt;SRR001462&lt;/a&gt;)は、&lt;a href="http://trace.ddbj.nig.ac.jp/DRASearch/experiment?acc=SRX000168"&gt;SRX000168&lt;/a&gt;の所属になっているようです。
+&lt;a href="http://www.ebi.ac.uk/ena/data/view/SRX000160"&gt;ENAのページ&lt;/a&gt;もDRA Searchと同じ結果&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;同じく、あるヒストンのChIPのデータ(SRX000154)は&lt;a href="http://www.ncbi.nlm.nih.gov/sra/?term=SRX000154"&gt;Entrez SRAのページ&lt;/a&gt;にはランデータ(SRR001422, SRR001423, SRR001424, SRR001425)がリストされ&lt;a href="http://trace.ddbj.nig.ac.jp/DRASearch/experiment?acc=SRX000154"&gt;DRA Searchのページ&lt;/a&gt;だと、&lt;a href="http://trace.ddbj.nig.ac.jp/DRASearch/run?acc=SRR001425"&gt;SRR001425&lt;/a&gt;だけがリストされ、
+その他の三つ(&lt;a href="http://trace.ddbj.nig.ac.jp/DRASearch/run?acc=SRR001422"&gt;SRR001422&lt;/a&gt;, &lt;a href="http://trace.ddbj.nig.ac.jp/DRASearch/run?acc=SRR001423"&gt;SRR001423&lt;/a&gt;, &lt;a href="http://trace.ddbj.nig.ac.jp/DRASearch/run?acc=SRR001424"&gt;SRR001424&lt;/a&gt;)は、&lt;a href="http://trace.ddbj.nig.ac.jp/DRASearch/experiment?acc=SRX000359"&gt;SRX000359&lt;/a&gt;と&lt;a href="http://trace.ddbj.nig.ac.jp/DRASearch/experiment?acc=SRX000168"&gt;SRX000168&lt;/a&gt;の所属になっているようです。
+&lt;a href="http://www.ebi.ac.uk/ena/data/view/SRX000154"&gt;ENAのページ&lt;/a&gt;もDRA Searchと同じ結果&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/699/entrez-sra%E3%81%A8dra-search%E3%81%AF%E3%81%A9%E3%81%A1%E3%82%89%E3%81%8C%E6%AD%A3%E3%81%97%E3%81%84" rel="self"></atom:link><language>ja</language><lastBuildDate>Thu, 28 Nov 2013 10:44:31 +0900</lastBuildDate><item><title>Comment by nob_fj on nob_fj's 質問</title><link>http://qa.lifesciencedb.jp/questions/699/entrez-sra%E3%81%A8dra-search%E3%81%AF%E3%81%A9%E3%81%A1%E3%82%89%E3%81%8C%E6%AD%A3%E3%81%97%E3%81%84#700</link><description>&lt;p&gt;NCBIから非同期の原因を調べる旨の回答がありました。こちらに投げる質問でもなかったかもしれませんが、また連絡があればこちらにも顛末を記載しようと考えております。お騒がせします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Thu, 28 Nov 2013 10:44:31 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/699/entrez-sra%E3%81%A8dra-search%E3%81%AF%E3%81%A9%E3%81%A1%E3%82%89%E3%81%8C%E6%AD%A3%E3%81%97%E3%81%84#700</guid></item></channel></rss>

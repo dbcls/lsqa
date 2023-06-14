@@ -1,0 +1,2485 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>未回答質問 - #LSQA</title>
+        <meta name="description" content="質問と回答と私">
+        <meta name="keywords" content="OSQA,CNPROG,forum,community,lifesciencedb.jp,DDBJ,PDBj,DBCLS,Cytoscape,NGS,ngs-field">
+        
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="index.html@type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="../../upfiles/favicon.ico" />
+        <link href="../../m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="../../cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='../../m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        <link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml.html" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="../../index.html">
+				<img src="../../upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="../../account/yahoo/signin/index.html" >ログイン</a>  <a href="../../about/index.html" >概要</a>  <a href="../../faq/index.html" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" href="../index.html" >質問</a><a id="nav_tags" href="../../tags/index.html" >タグ</a><a id="nav_users" href="http://qa.lifesciencedb.jp/users/" >ユーザー</a><a id="nav_badges" href="../../badges/index.html" >バッジ</a><a id="nav_unanswered" class="on" href="index.html" >未回答</a>
+        <a id="nav_ask" href="../ask/index.html" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="http://qa.lifesciencedb.jp/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+
+<div class="tabBar">
+    
+
+<div class="headQuestions">
+    
+        
+            
+                
+                    未回答質問
+                
+            
+        
+    
+</div>
+    <a class="feed-icon" style="background-image:url('../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');" href="index.html@type=rss" title="subscribe to question RSS feed"></a>
+    
+<div class="tabsA"><a href="index.html@sort=有効.html" title="最近更新された質問">有効</a><a href="index.html@sort=最新.html" title="最近尋ねられた質問">最新</a><a href="index.html@sort=ホット.html" title="最近２４時間でもっとも活発な質問">ホット</a><a href="index.html@sort=mostvoted.html" class="on" title="もっとも投票された質問">注目の質問</a></div>
+</div>
+<div id="listA">
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">4</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">3</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">49k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="blast + バージョンのローカルブラスト(StandAlone blast)の使用方法を説明する動画を作っています。
+以下にあげるコマンド以外で、よく使うコマンドがありましたら、教えてください。
+いくつか取り入れて動画を作成できたらと思います。
+またもし、誤っているコマンドがありましたら、教えてくださいm(__)m
+追記：みなさんから書いていただいた情報をもとに表を書き換えてみました。もし、お時間ありましたら、チェックしていただければと思います。
+
+
+  説明
+  blast
+  blast+
+ 
+ 
+フォーマット
+  formatdb -i yeast.aa -p T -o T
+  ma" href="../../vote/192/down/index.html">blastでよく使うコマンドはなんですか？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-01-27 09:53:06.866615">Jan 27 '11 at 09:53</span>
+            <a href="http://qa.lifesciencedb.jp/users/19/maoringo/">maoringo</a><span class="score" title="76 信用度">76</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/blast/index.html" title="タグ付けされた質問をみる 'blast' タグを利用している" rel="tag">blast</a>
+            <a href="../../tags/blast+/index.html" title="タグ付けされた質問をみる 'blast+' タグを利用している" rel="tag">blast+</a>
+            <a href="../../tags/コマンド/index.html" title="タグ付けされた質問をみる 'コマンド' タグを利用している" rel="tag">コマンド</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">3</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">7</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">14k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="これの意図するとことはいわゆるsamtoolsのpileupのSOAP形式出力（chr19:3298 A C）のような形式を、
+geneX S324R （aGU→cGU）などの形に直し、シノニムの除去やアノテーションを簡便にする方法についてです。
+
+[私ができたこと]
+UCSCのrefgene.txtからexon情報を取り出し、フレームに従って、翻訳して、ポジションごとに
+chromとposition、トリプレッとの3文字と該当する番号、アミノ酸、refseqのIDを記録した
+MySQL DBを作成して、変異によってアミノ酸がどう変わるか判定して使っています。
+これは、実際に自分で解釈する分に" href="../../vote/172/down/index.html">変異解析結果をアミノ酸変異として捕らえる簡便な方法</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2010-12-23 17:53:34.502722">Dec 23 '10 at 17:53</span>
+            <a href="http://qa.lifesciencedb.jp/users/12/ma_ko/">ma_ko ♦♦</a><span class="score" title="371 信用度">371</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/変異解析/index.html" title="タグ付けされた質問をみる '変異解析' タグを利用している" rel="tag">変異解析</a>
+            <a href="../../tags/ngs/index.html" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+            <a href="../../tags/アノテーション/index.html" title="タグ付けされた質問をみる 'アノテーション' タグを利用している" rel="tag">アノテーション</a>
+            <a href="../../tags/samtools/index.html" title="タグ付けされた質問をみる 'samtools' タグを利用している" rel="tag">samtools</a>
+            <a href="../../tags/sureselect/index.html" title="タグ付けされた質問をみる 'sureselect' タグを利用している" rel="tag">sureselect</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">2</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">6.2k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="de novo transcriptome assemblyプログラムの一つにtrans-ABySSというのがあり、このプログラムの実行時にエラーが出て計算が止まってしまう問題を抱えています。
+trans-ABySSのGoogleディスカッショングループに質問を投げたところ、Blatのところが問題なんじゃないかというコメントがありましたが、このような問題に遭遇した方がもしいらっしゃったら解決法についてご指南いただければ幸いです。" href="../../vote/321/down/index.html">trans-ABySSのエラー（おそらくBlatのところ）</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2012-03-28 22:28:18.626932">Mar 28 '12 at 22:28</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/assembly/index.html" title="タグ付けされた質問をみる 'assembly' タグを利用している" rel="tag">assembly</a>
+            <a href="../../tags/blat/index.html" title="タグ付けされた質問をみる 'blat' タグを利用している" rel="tag">blat</a>
+            <a href="../../tags/trans-abyss/index.html" title="タグ付けされた質問をみる 'trans-abyss' タグを利用している" rel="tag">trans-abyss</a>
+            <a href="../../tags/ngs/index.html" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">2</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">5.0k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="Native vendor file の情報を画像以外すべて保存したSRA-full形式にくらべFastQファイルだけならDDBJ調査で総サイズは29%ですみます。
+コストを考えるとFastQじゃできないことがないといけません。
+＜補足:DDBJ＞この質問の意図は、DRA継続に際してサイズダウンで良いかをユーザの皆様に問う事です。
+現在SRA-Lite形式もサポートしておりますが、FASTQ形式だけで問題ないでしょうか？(でしたらコスト安で済みます)。
+DRAの運営に際して、次世代シークエンサ利用者の皆様から御意見を頂けますと助かります。宜しくお願い致します。" href="../../vote/364/down/index.html">新型シーケンサー生データアーカイブはFASTQ形式だけでは困りますか？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-02-28 14:44:35.804926">Feb 28 '11 at 14:44</span>
+            <a href="http://qa.lifesciencedb.jp/users/76/okubo/">okubo</a><span class="score" title="131 信用度">131</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/ddbj/index.html" title="タグ付けされた質問をみる 'ddbj' タグを利用している" rel="tag">ddbj</a>
+            <a href="../../tags/dra/index.html" title="タグ付けされた質問をみる 'dra' タグを利用している" rel="tag">dra</a>
+            <a href="../../tags/sra/index.html" title="タグ付けされた質問をみる 'sra' タグを利用している" rel="tag">sra</a>
+            <a href="../../tags/ngs/index.html" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">2</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">7</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">13k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="ライフサイエンス分野のイラストをだれでも自由に閲覧・利用できるコンテンツTogo Picture Galleryというものをつくっております。
+http://g86.dbcls.jp/togopic/
+現在、細胞や実験器具など28個のイラストがあります。さらにイラストを増やすため、リクエストを募集致します。
+ライフサイエンス分野のイラストで、作ってほしいものがありましたら、ぜひ書き込んでください。" href="../../vote/380/down/index.html">Togo Picture Galleryのイラストリクエスト募集</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-06-09 17:29:30.208265">Jun 09 '11 at 17:29</span>
+            <a href="http://qa.lifesciencedb.jp/users/5/hub/">hub ♦♦</a><span class="score" title="303 信用度">303</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/画像/index.html" title="タグ付けされた質問をみる '画像' タグを利用している" rel="tag">画像</a>
+            <a href="../../tags/イラスト/index.html" title="タグ付けされた質問をみる 'イラスト' タグを利用している" rel="tag">イラスト</a>
+            <a href="../../tags/募集中/index.html" title="タグ付けされた質問をみる '募集中' タグを利用している" rel="tag">募集中</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">2</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">4.1k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="こういうイラストがTogo picture galleryにあったらいいのに…というのを受け付けます!
+Togo picture galleryについてご存知ない方は、こちらを参考にしてください。 http://g86.dbcls.jp/~togoriv/about_/" href="../../vote/775/down/index.html">Togo picture gallery リクエスト</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2014-09-01 12:00:25.510995">Sep 01 '14 at 12:00</span>
+            <a href="http://qa.lifesciencedb.jp/users/28/suimye/">suimye</a><span class="score" title="296 信用度">296</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/togopic/index.html" title="タグ付けされた質問をみる 'togopic' タグを利用している" rel="tag">togopic</a>
+            <a href="../../tags/dbcls/index.html" title="タグ付けされた質問をみる 'dbcls' タグを利用している" rel="tag">dbcls</a>
+            <a href="../../tags/募集中/index.html" title="タグ付けされた質問をみる '募集中' タグを利用している" rel="tag">募集中</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  unanswered">
+            <div class="item-count">0</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">12k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="illuminaシーケンスのライブラリを作成する場合、paired-endとmate-pairの２種類の作成方法があるようですが、
+これら２種類のライブラリが混在しているシーケンス群が存在していたとして、補足情報無しで素のシーケンスデータのみでシーケンス仕分けできる方法がありましたら教えて下さい。
+novoalignのように、mapping状況から推測して仕分けるのではなく、解析にかける前処理として仕分けがしたい、というのが目的です。
+Paired End ライブラリの場合: 
+http://www.illumina.com/systems/genome_analyzer/paired_end" href="../../mark_favorite/229/index.html">illumina配列からのpaired-end,mate-pair識別方法</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2010-12-24 11:18:48.970531">Dec 24 '10 at 11:18</span>
+            <a href="http://qa.lifesciencedb.jp/users/18/mya_/">mya_ ♦</a><span class="score" title="388 信用度">388</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/solexa/index.html" title="タグ付けされた質問をみる 'solexa' タグを利用している" rel="tag">solexa</a>
+            <a href="../../tags/ngs/index.html" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+            <a href="../../tags/sequence/index.html" title="タグ付けされた質問をみる 'sequence' タグを利用している" rel="tag">sequence</a>
+            <a href="../../tags/illumina/index.html" title="タグ付けされた質問をみる 'illumina' タグを利用している" rel="tag">illumina</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">9.4k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="最近DNAメチル化に関する論文をよく目にしたり、実際にSRAの登録データを触ったりします。
+そこで少し気になったのですが、ハイスループットなDNAメチル化同定には大まかに3つの方法が
+あると思うのですが、
+
+バイサルファイトを使う方法 (例：Bisulfite-Seq)
+免疫沈降を使う方法(例：MeDIP-Seq)
+制限酵素を使う方法(例：HELP-Seq)
+
+これらの方法の違い（長所・短所）はどういったところでしょうか？
+例えばバイサルファイトは非メチル化CpGをUpGに変換するのでBisulfite-Seqは個々のCpGの
+メチル化を同定できるなど(マッピングがちょっと大変そうですが・・・" href="../../vote/238/down/index.html">DNAメチル化の同定方法の違い</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2010-12-27 12:51:49.843736">Dec 27 '10 at 12:51</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/dnaメチル化/index.html" title="タグ付けされた質問をみる 'dnaメチル化' タグを利用している" rel="tag">dnaメチル化</a>
+            <a href="../../tags/ngs/index.html" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">3.2k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="新型シーケンサーの生データアーカイブは現在NCBI/EBI/DDBJで行っています。NCBIのファンドレイズ失敗で各国で再議論が始まりました。　コストと価値のバランスを考えるために　再利用の目論見　見込み　アーカイブの目的を共有したいと思います。
+現在のアーカイブの様子は仲里&#39;s SRA目次でよくわかります。
+世界中のシーケンサの分布はJames Hadfield (Cancer Research UK, Cambridge) " href="../../vote/363/down/index.html">新型シーケンサーの生データをアーカイブする目的は？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-02-27 14:09:06.268514">Feb 27 '11 at 14:09</span>
+            <a href="http://qa.lifesciencedb.jp/users/76/okubo/">okubo</a><span class="score" title="131 信用度">131</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/ddbj/index.html" title="タグ付けされた質問をみる 'ddbj' タグを利用している" rel="tag">ddbj</a>
+            <a href="../../tags/sra/index.html" title="タグ付けされた質問をみる 'sra' タグを利用している" rel="tag">sra</a>
+            <a href="../../tags/ngs/index.html" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">4</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">12k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="
+[http://www.flickr.com/photos/59261391@N05/5475238349/][2]
+はしばらく前の議論に使った目安です。　現状はどうなんでしょうか？
+Kato Kikuya Impact of the next generation DNA sequencers . Int J Clin Exp Med. 2009; 2(2): 193–202.
+Published online 2009 July 8. 
+Comparison of sequencers (January, 2009). It should be noted that the throug" href="../../vote/375/down/index.html">新型シーケンサーの生データサイズはどんな風ですか？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-03-01 13:30:43.226093">Mar 01 '11 at 13:30</span>
+            <a href="http://qa.lifesciencedb.jp/users/76/okubo/">okubo</a><span class="score" title="131 信用度">131</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/ddbj/index.html" title="タグ付けされた質問をみる 'ddbj' タグを利用している" rel="tag">ddbj</a>
+            <a href="../../tags/sra/index.html" title="タグ付けされた質問をみる 'sra' タグを利用している" rel="tag">sra</a>
+            <a href="../../tags/ngs/index.html" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">4.5k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="コストと便益のバランスを考える為に必要な値です。" href="../../vote/352/down/index.html">ある程度安全なディスク1petaっていくらぐらいですか？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-03-01 12:24:43.607435">Mar 01 '11 at 12:24</span>
+            <a href="http://qa.lifesciencedb.jp/users/76/okubo/">okubo</a><span class="score" title="131 信用度">131</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/ddbj/index.html" title="タグ付けされた質問をみる 'ddbj' タグを利用している" rel="tag">ddbj</a>
+            <a href="../../tags/sra/index.html" title="タグ付けされた質問をみる 'sra' タグを利用している" rel="tag">sra</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">13k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="過去の進歩の歴史を後程アップしておきます。" href="../../vote/377/down/index.html">シーケンサー出力の伸びの予測ってどのくらいわかってますか？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-03-01 00:50:02.512790">Mar 01 '11 at 00:50</span>
+            <a href="http://qa.lifesciencedb.jp/users/76/okubo/">okubo</a><span class="score" title="131 信用度">131</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/ddbj/index.html" title="タグ付けされた質問をみる 'ddbj' タグを利用している" rel="tag">ddbj</a>
+            <a href="../../tags/sra/index.html" title="タグ付けされた質問をみる 'sra' タグを利用している" rel="tag">sra</a>
+            <a href="../../tags/ngs/index.html" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">14k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="DDBJでは native vendor fileから 画像を落とした 標準形 SRAはあまりかさばるので intensityを落としたSRA-liteでミラーしてます。" href="../../vote/357/down/index.html">新型シーケンサデータ保存にどんな形式がありますか？サイズと欠点を</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-02-25 22:24:54.559121">Feb 25 '11 at 22:24</span>
+            <a href="http://qa.lifesciencedb.jp/users/12/ma_ko/">ma_ko ♦♦</a><span class="score" title="371 信用度">371</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/ddbj/index.html" title="タグ付けされた質問をみる 'ddbj' タグを利用している" rel="tag">ddbj</a>
+            <a href="../../tags/dra/index.html" title="タグ付けされた質問をみる 'dra' タグを利用している" rel="tag">dra</a>
+            <a href="../../tags/sra/index.html" title="タグ付けされた質問をみる 'sra' タグを利用している" rel="tag">sra</a>
+            <a href="../../tags/ngs/index.html" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">3.6k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="ディスクスペースを節約するのに古いもの使われなかったものを破棄する　超整理法的な態度もあります。テープに書き出すのもままならない大量のアーカイブは新ディスクへと継代でmigrateさせて維持すべきでしょうか？" href="../../vote/441/down/index.html">新型シーケンサーの生データは何年保存するべきでしょうか？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-05-14 02:08:30.784463">May 14 '11 at 02:08</span>
+            <a href="http://qa.lifesciencedb.jp/users/31/hacchy/">hacchy</a><span class="score" title="121 信用度">121</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/ddbj/index.html" title="タグ付けされた質問をみる 'ddbj' タグを利用している" rel="tag">ddbj</a>
+            <a href="../../tags/sra/index.html" title="タグ付けされた質問をみる 'sra' タグを利用している" rel="tag">sra</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">7.2k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="いつも参考にさせていただいています。
+イントラで galaxy と UCSC Genome Browserを構築しているのですが、
+galaxyで作成した複数のBAMデータをUCSC Genome Browser で並べて表示したい(Custom Trackに複数セットしたい)
+のですが、そのような連携のさせかたをご存知の方はいらっしゃいますでしょうか？
+現在並べて表示する方法としては2パターンわかっているのですが、
+もっと簡単に連携できないものかと思案しています。
+パターン１：(bed,bedgraph,wig)
+・galaxyで作成したBAMデータをダウンロードし、UCSC Genome " href="../../vote/386/down/index.html">galaxyの複数のデータ(BAM,bed,bedgraph,wig)をUCSC Genome Browse で並べて表示するには？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-05-29 23:09:39.014708">May 29 '13 at 23:09</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/ucsc/index.html" title="タグ付けされた質問をみる 'ucsc' タグを利用している" rel="tag">ucsc</a>
+            <a href="../../tags/bam/index.html" title="タグ付けされた質問をみる 'bam' タグを利用している" rel="tag">bam</a>
+            <a href="../../tags/galaxy/index.html" title="タグ付けされた質問をみる 'galaxy' タグを利用している" rel="tag">galaxy</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">13k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="現在、NGS現場の会内の有志と協調して、次世代シーケンサーのチュートリアルをwikiにまとめたりしており、
+その一環でマッピング結果の可視化などを行うために、BAMファイルをUCSC Genome Browserでカスタムトラックとして追加する方法についてこちらに記載しているのですが、私の理解が正しければ、BAMファイルや、bigBEDファイルをカスタムトラックとして追加するためには、UCSCのサーバからアクセス可能な場所に
+BAMファイルとBAIファイルをアップロードしなければならず、特に自由に使用可能な公開ファイルサーバなど手元にないwet系の研究者の方などには敷居が高いように思っておりま" href="../../vote/392/down/index.html">UCSC Genome Browserからのファイルアクセスに対応したフリーまたは廉価なBAM置き場はありますか</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2014-03-08 21:05:32.814070">Mar 08 '14 at 21:05</span>
+            <a href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a><span class="score" title="507 信用度">507</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/ucsc/index.html" title="タグ付けされた質問をみる 'ucsc' タグを利用している" rel="tag">ucsc</a>
+            <a href="../../tags/bam/index.html" title="タグ付けされた質問をみる 'bam' タグを利用している" rel="tag">bam</a>
+            <a href="../../tags/ストレージ/index.html" title="タグ付けされた質問をみる 'ストレージ' タグを利用している" rel="tag">ストレージ</a>
+            <a href="../../tags/genome/index.html" title="タグ付けされた質問をみる 'genome' タグを利用している" rel="tag">genome</a>
+            <a href="../../tags/browser/index.html" title="タグ付けされた質問をみる 'browser' タグを利用している" rel="tag">browser</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">5.6k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="ライフサイエンス 新着論文レビュー First authorsっていうサービス　
+natureなども日本語訳をしてるのに無駄じゃないですか？
+いったい何が違うんですか？" href="../../vote/404/down/index.html">First authors ってなぜうけてるの？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-03-28 00:41:45.712691">Mar 28 '11 at 00:41</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/dbcls/index.html" title="タグ付けされた質問をみる 'dbcls' タグを利用している" rel="tag">dbcls</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">7.1k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="興味としての質問です。
+この界隈で１０年前というとずいぶん大昔というレベルではないか思います。
+では、その大昔から生き残っている（？）ツールにはどんな物があるのでしょうか？
+一時期は定番だった[GCG](http://en.wikipedia.org/wiki/GCG_(software) )(ツール群・現在は開発終了)やfasta(相同性検索ツールの方)は大分見かけなくなりました。
+デファクトスタンダードともいえるツールが多いとは思いますが、挙げて頂ければ幸いです。
+
+BLAST(legacy blast)  配列相同性検索
+primer3 プライマ配列作成
+clustalw マルチプルアラ" href="../../vote/454/down/index.html">バイオインフォで10年以上前から使われている定番ツール</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-05-28 10:56:18.755205">May 28 '11 at 10:56</span>
+            <a href="http://qa.lifesciencedb.jp/users/18/mya_/">mya_ ♦</a><span class="score" title="388 信用度">388</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/ツール/index.html" title="タグ付けされた質問をみる 'ツール' タグを利用している" rel="tag">ツール</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  unanswered">
+            <div class="item-count">0</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">3.6k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="数日来twitter上で話題になっていた1000 Genomesのデータですが、
+
+NCBI or EBI にしかデータがない
+アライメントしたものを .bam ファイルで公開
+
+という状態で、例えば99人の日本人データで容量が1.7TBほどもあり、これらはいずれ dbSNP に吸収されるのかもしれませんが, 今のところ whole exome 1179人分は .bam での公開で、ダウンロードが大変困難な状況です。
+関係する研究者がほぼ同じ処理をしてるので、支援するという観点では資する所があると思います。ですので、
+
+日本国内でダウンロードサイトがある
+また1000g の性質から .bam " href="../../mark_favorite/524/index.html">1000Genomesのデータ</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2012-10-24 23:25:41.635662">Oct 24 '12 at 23:25</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/1000genomes/index.html" title="タグ付けされた質問をみる '1000genomes' タグを利用している" rel="tag">1000genomes</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">5.5k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="マウス遺伝子をハウスキーピング遺伝子と注目している組織の特異的遺伝子とに分けてある解析を行うために、全遺伝子の中からハウスキーピング遺伝子だけを抽出したいのですが、ハウスキーピング遺伝子だと定義した遺伝子リストのようなものは存在しますか？
+ご存知の方がいらっしゃれば御教示願います。" href="../../vote/561/down/index.html">ハウスキーピング遺伝子の抽出</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2012-01-16 21:27:46.392935">Jan 16 '12 at 21:27</span>
+            <a href="http://qa.lifesciencedb.jp/users/106/dancing_infobio/">dancing_infobio</a><span class="score" title="23 信用度">23</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/ハウスキーピング遺伝子/index.html" title="タグ付けされた質問をみる 'ハウスキーピング遺伝子' タグを利用している" rel="tag">ハウスキーピング遺伝子</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  unanswered">
+            <div class="item-count">0</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">5.1k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="ゲノムインプリンティングの解析をするにあたり、
+正解データとして、実験的に証明されたインプリンティングの起こる領域のリストを
+手に入れたいと考えています。そこで、これらをまとめたデータベース
+（どのような時に、どの領域で、PatternalかMatternalか）を探していますが、
+この分野で頻繁に使われているデータベースはありますでしょうか？
+Googleで検索するといくらか引っ掛かるのですが、分野外なのでどれを
+使えばいいか迷っています。ご教授お願いいたします。" href="../../mark_favorite/529/index.html">ゲノムインプリンティング領域のデータベース</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2012-03-28 22:03:46.863347">Mar 28 '12 at 22:03</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/ゲノムインプリンティング/index.html" title="タグ付けされた質問をみる 'ゲノムインプリンティング' タグを利用している" rel="tag">ゲノムインプリンティング</a>
+            <a href="../../tags/database/index.html" title="タグ付けされた質問をみる 'database' タグを利用している" rel="tag">database</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">5.6k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="36bpのシングルエンドRNA-seqデータを使って解析をしようとしているのですが、
+バージョン1.0.12から追加された--butterfly-searchというオプションを使ったことの
+ある方、または使った時と使わなかった時の比較をされた方はいらっしゃいませんでしょうか？
+36bpなので--segment-length 18でジャンクション同定してもノイズが多くなりそうで、
+そのままbowtieでマッピングしてしまおうと考えていたのですが、Tophatのマニュアルを
+見ていて、このオプションがあることを知ってどうしようか迷っています。
+Tophatの論文にはこのbutterflyのアルゴリ" href="../../vote/541/down/index.html">Tophatのbutterflyオプションについて</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2012-03-28 22:01:36.362524">Mar 28 '12 at 22:01</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/butterfly/index.html" title="タグ付けされた質問をみる 'butterfly' タグを利用している" rel="tag">butterfly</a>
+            <a href="../../tags/tophat/index.html" title="タグ付けされた質問をみる 'tophat' タグを利用している" rel="tag">tophat</a>
+            <a href="../../tags/rna-seq/index.html" title="タグ付けされた質問をみる 'rna-seq' タグを利用している" rel="tag">rna-seq</a>
+            <a href="../../tags/ngs/index.html" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">7.1k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="はじめまして。
+現在、次世代シークエンサーを持ちいてリシークエンスを行っているのですが、近縁種のゲノムが解読されているため、de novoアセンブルを行うことなく、マッピングしたのちに何らかの方法で目的のゲノム配列を得られるのではないかと考えています。
+調べたところ、samtoolsのコマンドで、
+samtools mpileup -uf ecoli.fa srr191810.fq.sort.bam | bcftools view -cg - | vcfutils.pl vcf2fq &amp;gt; cns.fq
+
+のようにすると新しいゲノム配列が得られるのですが、vcfutils.plではIN/D" href="../../vote/553/down/index.html">リシークエンスの配列作成について</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-05-24 00:28:45.575032">May 24 '13 at 00:28</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/samtools/index.html" title="タグ付けされた質問をみる 'samtools' タグを利用している" rel="tag">samtools</a>
+            <a href="../../tags/resequence/index.html" title="タグ付けされた質問をみる 'resequence' タグを利用している" rel="tag">resequence</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">5.3k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="Wikiによるとプロモーター配列は「転写開始に関与する遺伝子の上流配列」とのことのようです。一方で、例えば、Arabidopsisだとftp://ftp.arabidopsis.org/home/tair/Sequences/blast_datasets/TAIR10_blastsets/upstream_sequences/から上流配列を取得できます。論文中では、よく「プロモーター配列のデータセット」などという記述をしています。感覚的には「上流配列とプロモーター配列」は同じ意味で使っているはず、ですが、実は「上流配列」というのは「”転写開始に関与する上流配列（これがプロモーター配列）”、と”" href="../../vote/610/down/index.html">上流配列とプロモーター配列って同じ意味？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-03-11 23:26:24.852384">Mar 11 '13 at 23:26</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/プロモーター/index.html" title="タグ付けされた質問をみる 'プロモーター' タグを利用している" rel="tag">プロモーター</a>
+            <a href="../../tags/モチーフ/index.html" title="タグ付けされた質問をみる 'モチーフ' タグを利用している" rel="tag">モチーフ</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">6.5k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="いつもお世話になっております。
+最近、次世代シークエンサーを使ったMegacloningという方法を知ったのですが、この他にも単純にDNA配列を読む以外に次世代シークエンサーの使い道はありますか？知っている方がいらっしゃれば教えてください。
+よろしくお願いします。" href="../../vote/664/down/index.html">次世代シークエンサーの使い道</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-05-24 00:17:48.031114">May 24 '13 at 00:17</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/次世代シークエンサー/index.html" title="タグ付けされた質問をみる '次世代シークエンサー' タグを利用している" rel="tag">次世代シークエンサー</a>
+            <a href="../../tags/使い道/index.html" title="タグ付けされた質問をみる '使い道' タグを利用している" rel="tag">使い道</a>
+            <a href="../../tags/ngs/index.html" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">3.7k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="ローカルでGalaxyをセットアップして、大きなデータ（といってもGA125ペアエンド1ラン程度です）を扱おうと思っているのですが、デフォルトでは、データが同じマシン内なのにHTMLまたはFTPで転送しなくてはならず、これがものすごく遅い（というかおそらく進んでいない）のです。adminならばローカルのファイルを指定して直接いじることができるとのことですが、その方法をご存知の方がいたら教えて頂けないでしょうか？Galaxy wikiなどを見ましたが、答えをみつけられないのでこちらに相談しています。" href="../../vote/650/down/index.html">ローカルのGalaxyで大きなファイルをuploadしないで読み込ませる方法</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-05-29 22:36:54.417496">May 29 '13 at 22:36</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/admin/index.html" title="タグ付けされた質問をみる 'admin' タグを利用している" rel="tag">admin</a>
+            <a href="../../tags/large_data/index.html" title="タグ付けされた質問をみる 'large_data' タグを利用している" rel="tag">large_data</a>
+            <a href="../../tags/local/index.html" title="タグ付けされた質問をみる 'local' タグを利用している" rel="tag">local</a>
+            <a href="../../tags/galaxy/index.html" title="タグ付けされた質問をみる 'galaxy' タグを利用している" rel="tag">galaxy</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">4.9k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="いつも大変お世話になっております。
+表題の内容についてお伺いしたいのですが、HiSeq2500では、1runあたり600Gbaseのデータが出力できるとのことで、
+仮に600Gbaseを出力したときのfastqファイルのデータ容量は、大体何Gbyteほどになるでしょうか。
+貴重なご経験からの情報と存じますが、どうぞよろしくお願い申し上げます。" href="../../vote/705/down/index.html">高速シーケンサの出力データ容量について</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2014-01-08 12:59:49.666956">Jan 08 '14 at 12:59</span>
+            <a href="http://qa.lifesciencedb.jp/users/28/suimye/">suimye</a><span class="score" title="296 信用度">296</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/sequencing/index.html" title="タグ付けされた質問をみる 'sequencing' タグを利用している" rel="tag">sequencing</a>
+            <a href="../../tags/hiseq2500/index.html" title="タグ付けされた質問をみる 'hiseq2500' タグを利用している" rel="tag">hiseq2500</a>
+            <a href="../../tags/illumina/index.html" title="タグ付けされた質問をみる 'illumina' タグを利用している" rel="tag">illumina</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  unanswered">
+            <div class="item-count">0</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">4.6k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="suimyeです。こんにちは。
+表題の件について、ご存知の方是非ご教授いただきたくpostいたしました。
+1000人ゲノムデータのVCFファイルを使ってDerived Allele Freq.（以後DAF）を計算したいのですが、調べた結果がどうも納得がいかなくてpostしております。
+DAFは、祖先アレル（以後AA）に対して、祖先アレルと一致しないアレルの頻度を計算するものと考えております。
+例: 
+
+祖先アレル: G
+Aさんのアレル: G
+Bさんのアレル: A 
+Cさんのアレル: G
+
+Derived Allele: A 
+この場合のDAFは、1/3となる。簡単には以上のようなものと思います" href="../../mark_favorite/847/index.html">1000人ゲノムデータのvcfファイルからのDAFの計算方法について</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2016-01-09 15:47:32.881043">Jan 09 '16 at 15:47</span>
+            <a href="http://qa.lifesciencedb.jp/users/28/suimye/">suimye</a><span class="score" title="296 信用度">296</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/1000genome/index.html" title="タグ付けされた質問をみる '1000genome' タグを利用している" rel="tag">1000genome</a>
+            <a href="../../tags/population_genetics/index.html" title="タグ付けされた質問をみる 'population_genetics' タグを利用している" rel="tag">population_genetics</a>
+            <a href="../../tags/daf/index.html" title="タグ付けされた質問をみる 'daf' タグを利用している" rel="tag">daf</a>
+            <a href="../../tags/vcf/index.html" title="タグ付けされた質問をみる 'vcf' タグを利用している" rel="tag">vcf</a>
+            <a href="../../tags/af/index.html" title="タグ付けされた質問をみる 'af' タグを利用している" rel="tag">af</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  unanswered">
+            <div class="item-count">0</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">2.7k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="金属イオン結合部位予測の方法の一つ、CHED  http://ligin.weizmann.ac.il/~lpgerzon/mbs4/mbs.cgi
+の発音の仕方を教えてください。ちなみにCHEDは（Cys, His, Glu, Asp）が金属イオンの近くにあることを
+利用した予測方法のようです。
+私は　シェドかなぁと思っているのですが、正式な読み方をご存知の方がいらしたら、教えてください。" href="../../mark_favorite/73/index.html">CHEDの発音の仕方はなんでしょうか？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2010-11-25 20:05:18.714318">Nov 25 '10 at 20:05</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/ched/index.html" title="タグ付けされた質問をみる 'ched' タグを利用している" rel="tag">ched</a>
+            <a href="../../tags/発音/index.html" title="タグ付けされた質問をみる '発音' タグを利用している" rel="tag">発音</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">3</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">32k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="数千種類のプラスミドを長期保存するにはどのような方法が適しているでしょうか。
+とりあえず下記の３つの方法のメリット・デメリットを書き出してみました。
+（なお、２の大腸菌スタブについては、１のグリセロールストックよりも
+良さそうに思えますが、実際に作製したことがないのでよくわかりません。）
+よい方法やノウハウ等をご教示いただければありがたいです。
+１）大腸菌グリセロールストック
+○簡単につくれる
+○融解しなければ数年間保存可能
+△-80℃で保存しなければならない
+△凍結融解に弱い
+２）大腸菌スタブ
+◎室温で保存可
+○簡単につくれる（？）
+△密閉しないといけない？（96穴プレートは使えるのか？？）" href="../../vote/402/down/index.html">大量のコンストラクトの長期保存</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-03-17 15:59:08.725519">Mar 17 '11 at 15:59</span>
+            <a href="http://qa.lifesciencedb.jp/users/76/okubo/">okubo</a><span class="score" title="131 信用度">131</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/ストック/index.html" title="タグ付けされた質問をみる 'ストック' タグを利用している" rel="tag">ストック</a>
+            <a href="../../tags/ライブラリ/index.html" title="タグ付けされた質問をみる 'ライブラリ' タグを利用している" rel="tag">ライブラリ</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">2.9k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="件についてお尋ねしたいのですが、BMB2010の発表におきまして
+iPad, iPhoneその他ガシェットを効果的に利用していた演者を見かけた方いらっしゃいますか？
+個人的には、デジタルガシェット問わず、講義やプレゼンはかなり工夫する方なので、
+ノウハウに興味があるもので聞いてみようとおもいました。
+ポスター発表、口頭発表どちらでも結構です。
+ちなみに、私の目撃例としては、iPhoneを使ってスライドページめくりを
+なされていた演者がいらっしゃいました。" href="../../vote/224/down/index.html">BMB2010でのガシェットを利用したプレゼン</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2010-12-23 22:12:24.274762">Dec 23 '10 at 22:12</span>
+            <a href="http://qa.lifesciencedb.jp/users/28/suimye/">suimye</a><span class="score" title="296 信用度">296</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/bmb2010/index.html" title="タグ付けされた質問をみる 'bmb2010' タグを利用している" rel="tag">bmb2010</a>
+            <a href="../../tags/gadget/index.html" title="タグ付けされた質問をみる 'gadget' タグを利用している" rel="tag">gadget</a>
+            <a href="../../tags/presentation/index.html" title="タグ付けされた質問をみる 'presentation' タグを利用している" rel="tag">presentation</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  unanswered">
+            <div class="item-count">0</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">10k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="C-value からゲノムサイズへ変換するための式を，wikipedia に見つけました。
+
+the mean weight of one nucleotide pair would be 1.0855× 1e-9 pg, and 1 pg of DNA would represent 0.921 × 1e+9 base pairs.（http://en.wikipedia.org/wiki/C-value）
+genome size (bp) = (0.921 x 1e+9) x DNA content (pg)（http://en.wikipedia.org/wiki/C-value）
+
+こ" href="../../mark_favorite/227/index.html">C-value からゲノムサイズを推定する</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2010-12-24 04:38:28.898095">Dec 24 '10 at 04:38</span>
+            <a href="http://qa.lifesciencedb.jp/users/31/hacchy/">hacchy</a><span class="score" title="121 信用度">121</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/genome/index.html" title="タグ付けされた質問をみる 'genome' タグを利用している" rel="tag">genome</a>
+            <a href="../../tags/ngs/index.html" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">3</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">8.9k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="Bowtieでマッピングをwindowsのcygwin上で行いたいと考えていますが、
+入力の仕方がよくわかりません。
+教えていただけないでしょうか。
+現在までにBowtieのPrebuild indexをダウンロードし、解凍後、
+Bowtie ファイルのindexesに移し、
+またNCBIのSRAファイルをfastqファイルに変換するところまでは行っております。
+どのファイルをどこに配置し、
+またどのようなコマンドを入力したらいいのかが良くわかりません。
+Build 37のゲノムに対して、fastqファイルを複数同時に複数マッピングしたい状況です。
+用いるデータは、基本的には、illumina" href="../../vote/312/down/index.html">Bowtieのコマンド入力の仕方</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-05-29 00:24:04.172641">May 29 '11 at 00:24</span>
+            <a href="http://qa.lifesciencedb.jp/users/18/mya_/">mya_ ♦</a><span class="score" title="388 信用度">388</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/bowtie/index.html" title="タグ付けされた質問をみる 'bowtie' タグを利用している" rel="tag">bowtie</a>
+            <a href="../../tags/ngs/index.html" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">6.7k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="FindPeaks (3-1-9-2)を用いて以下のようなデータ形式のsamファイルを処理したいと思っています。manualでは　
+time java -jar SeparateElandReads.jar ファイル名 ./　
+のファイル名のところに、入力するファイル名を打ち込めば染色体ごとの .gz ファイルが生成すると書いてあるのですが
+.sam のファイル名を入力してもできません。
+Finsdpeaksに同封されていたテストファイルではできました。データの形式が違うからできないのでしょうか？よろしければ処理する方法をご教授下さい。
+SOLEXA2_90529:1:1:155:301   " href="../../vote/314/down/index.html">FindPeaksの使い方</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-02-23 18:55:57.181679">Feb 23 '11 at 18:55</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/sam/index.html" title="タグ付けされた質問をみる 'sam' タグを利用している" rel="tag">sam</a>
+            <a href="../../tags/findpeaks/index.html" title="タグ付けされた質問をみる 'findpeaks' タグを利用している" rel="tag">findpeaks</a>
+            <a href="../../tags/ngs/index.html" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">4</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">3.4k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="現在、ある染色体の配列をfasta形式で持っているのですが、
+これにindelを反映させたいと考えています。
+indelは、例えば、
+1239000base　　ATGGA　　insertion
+1240000base      GT　  deletion
+
+という状態で、エクセル上に保存してあります。
+最終的にfasta形式を変えないまま、数百個のindelを挿入あるいは欠失させたいのですが、
+どのような手段をとったらいいのでしょうか？
+ソフト等の購入費用はありません。。。" href="../../vote/336/down/index.html">indelを配列に反映させる</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-03-04 14:23:11.589761">Mar 04 '11 at 14:23</span>
+            <a href="http://qa.lifesciencedb.jp/users/25/yag_ays/">yag_ays</a><span class="score" title="241 信用度">241</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/配列操作/index.html" title="タグ付けされた質問をみる '配列操作' タグを利用している" rel="tag">配列操作</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">11k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="安いディスクを重複させて賢く使う方法も含めてご存知のかたはお教えください　コストの質問への答えでも" href="../../vote/358/down/index.html">ディスクの単価あたりの容量の伸び率（１年で何倍）を教えてください。</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-02-25 17:52:21.120948">Feb 25 '11 at 17:52</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/ddbj/index.html" title="タグ付けされた質問をみる 'ddbj' タグを利用している" rel="tag">ddbj</a>
+            <a href="../../tags/sra/index.html" title="タグ付けされた質問をみる 'sra' タグを利用している" rel="tag">sra</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">17k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="マウスのb-actinとGapdhの、リアルタイムPCR用のプライマーを設計したのですが、
+どうしても偽遺伝子を避けることができません。
+（NCBIのPrimer BLASTで確認すると、同じ長さの偽遺伝子がどう頑張っても
+３個は出てしまう）
+B-actinの設計箇所はexon6〜exon7
+Gapdhの設計箇所はexon4〜exon5
+で、イントロンを挟むようにしています。
+プライマーの長さは20base前後、PCR productsは100-200bpが理想です。
+また、ゲノムについても、Primer BLASTで確認すると同じ長さのものが増えてしまいます。
+色々試してみましたが、どうして" href="../../vote/411/down/index.html">b-actin, GapdhのリアルタイムPCR用のプライマー設計</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-04-15 14:07:55.534695">Apr 15 '11 at 14:07</span>
+            <a href="http://qa.lifesciencedb.jp/users/83/porcine/">porcine</a><span class="score" title="1 信用度">1</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/プライマー/index.html" title="タグ付けされた質問をみる 'プライマー' タグを利用している" rel="tag">プライマー</a>
+            <a href="../../tags/リアルタイムpcr/index.html" title="タグ付けされた質問をみる 'リアルタイムpcr' タグを利用している" rel="tag">リアルタイムpcr</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  unanswered">
+            <div class="item-count">0</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">2.9k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="次世代シークエンサーのデータを解析ソフトウェア(FindPeaks 4)で解析しています。ピークのFDR解析のオプションとしてMonte Calro FDRとLanderWaterman FDRがあるのですが、そもそもこの二つが通常のFDRと何が違うのか分かりません。ご存知の方いましたら、よろしければ御教授願います。" href="../../mark_favorite/412/index.html">Monte Calro FDRとLanderWaterman FDRの違い</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-04-15 12:31:28.746576">Apr 15 '11 at 12:31</span>
+            <a href="http://qa.lifesciencedb.jp/users/70/def/">DEF</a><span class="score" title="41 信用度">41</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/統計/index.html" title="タグ付けされた質問をみる '統計' タグを利用している" rel="tag">統計</a>
+            <a href="../../tags/fdr/index.html" title="タグ付けされた質問をみる 'fdr' タグを利用している" rel="tag">fdr</a>
+            <a href="../../tags/chipseq/index.html" title="タグ付けされた質問をみる 'chipseq' タグを利用している" rel="tag">chipseq</a>
+            <a href="../../tags/ngs/index.html" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">18k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="現在qRT-PCRをやっておりますが、
+DNaseを使用しても、うまくDNAが除去できていないのか、
+ゲノムのバンドが出てしまいます。
+100％DNaseを効かせられる良い条件がありましたら、教えてください。
+どうしても完全に効かせて、mRNAの発現量を定量しなければならない状況下にあります。
+イントロンを挟んだプライマーを設計しておりますが、偽遺伝子が多くあるため、
+どうしても対象外の遺伝子についても、同じ長さのものが増えてきてしまっています。
+Ni社のDNaseで、不活性化は熱処理で行っております。
+解析材料が微量な細胞（1〜30細胞くらい）なので、mRNAをロスしないために、
+なるべくシ" href="../../vote/445/down/index.html">DNaseを完全に効かせるにはどうすればよいですか</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-05-19 02:40:42.114529">May 19 '11 at 02:40</span>
+            <a href="http://qa.lifesciencedb.jp/users/76/okubo/">okubo</a><span class="score" title="131 信用度">131</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/dnase/index.html" title="タグ付けされた質問をみる 'dnase' タグを利用している" rel="tag">dnase</a>
+            <a href="../../tags/不活性化/index.html" title="タグ付けされた質問をみる '不活性化' タグを利用している" rel="tag">不活性化</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">13k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="NCBIのDigital Differential Display（DDD）を使って、
+マウスの肝臓特異的に発現している遺伝子を探したいのですが、
+EST libraryが出て来ません。
+先週の金曜日にはじめて試してできず、先程もできませんでした。
+ちなみに、ヒトだとちゃんと出て来ます。
+Species→マウス→continue→Pool Aが表示される、
+という流れで操作しております。
+continueの後の画面に、マウスの場合のみEST libraryが出ません。
+NCBIにメールしてみましたが、今のところお返事がありません。
+解決策をご存知の方がいらっしゃいましたら（あるいはメンテナンス" href="../../vote/436/down/index.html">NCBIのDigital Differential Display（mouse）のEST libraryの出し方</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-05-04 05:29:45.489618">May 04 '11 at 05:29</span>
+            <a href="http://qa.lifesciencedb.jp/users/10/eli-kaminuma/">Eli Kaminuma ♦♦</a><span class="score" title="106 信用度">106</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/ncbi/index.html" title="タグ付けされた質問をみる 'ncbi' タグを利用している" rel="tag">ncbi</a>
+            <a href="../../tags/ddd/index.html" title="タグ付けされた質問をみる 'ddd' タグを利用している" rel="tag">ddd</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">8.2k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="Chip-seqデータのマッピングにつきまして質問があります。現在主にBowtieを使用してChip-seqデータのマッピングをしておりますが、オプション設定についてどのようなものが一番いいのか迷っております。
+一つはマルチヒットの扱いで、全部レポートするから、レポートするデータを限定したり、ランダムにマッピングしたりする設定があるかと思いますが一般的にどのような設定が一番いいのでしょうか？自分ではあえてそれらをマッピングしなくても、本当にChip陽性の領域ならば他のリードがマッピングされるはずなのでレポートしなくてもいいような気もします。でも、せっかく一致するなら一つくらいランダムに割り当て" href="../../vote/427/down/index.html">Chip-seqデータのマッピングにおけるマルチヒット/ミスマッチの扱い</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-05-18 22:31:34.091123">May 18 '11 at 22:31</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/bowtie/index.html" title="タグ付けされた質問をみる 'bowtie' タグを利用している" rel="tag">bowtie</a>
+            <a href="../../tags/ngs/index.html" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">4</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">48k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="ノンモデル脊椎動物の次世代シーケンサーを用いたトランスクリプトーム解析を計画しています。現在、totalRNAからmRNAの精製に取り組んでいますが、標準的なI社のoligo-dTセルロースを用いたキットで精製したところ、rRNAのコンタミが38%も出てきてしまいました。同じキットを使って2回精製しても33%で、ほとんど下がりませんでした。他のキットで、rRNAの混入を下げる工夫をしたキットが出ているようですが、お勧めなものを教えていただけませんでしょうか？よろしくお願いいたします。" href="../../vote/437/down/index.html">ノンモデル生物のmRNA精製でrRNAのコンタミをなるべく下げたい</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-07-27 10:20:04.096554">Jul 27 '11 at 10:20</span>
+            <a href="http://qa.lifesciencedb.jp/users/28/suimye/">suimye</a><span class="score" title="296 信用度">296</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/ngs/index.html" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  unanswered">
+            <div class="item-count">0</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">2.6k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="バクテリアの株間のオーソログを推定したいと思っています。
+NCBIにゲノム配列が公開されている20株に、手持ちの40株を加えて、60株間でのオーソログを探す予定です。手持ち40株は全ゲノム配列はわかっていませんが、部分配列から90%程度の数をカバーする遺伝子を推定してあります。そこでオーソログの推定方法なのですが、
+
+基準株を１つ決めて、それに対するBest Reciprocal Hitを、各株のオーソログとみなす
+60株x59株総当たりでBest Reciprocal Hitを調べて、全ペア間でBest Hitのものをオーソログとみなす
+フリーソフトを使って推定する
+
+などの方法を考えていま" href="../../mark_favorite/450/index.html">Orthologの推定に役立つソフトは？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-05-24 00:37:33.238879">May 24 '13 at 00:37</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/orthomcl/index.html" title="タグ付けされた質問をみる 'orthomcl' タグを利用している" rel="tag">orthomcl</a>
+            <a href="../../tags/domclust/index.html" title="タグ付けされた質問をみる 'domclust' タグを利用している" rel="tag">domclust</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">3</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">8.4k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="初めて質問します。
+solexaのreadをde novo assembleして出来たcontigをbwaもしくはbwa-swを用いてmappingしたいと考えています。
+bwaにinputするためには、contigの.fastaファイルを.fastqに変換する必要があると思いますが、そのような変換ツールを知っている方がおられたら教えていただけないでしょうか。調べたのですが調べ方が悪いのか見つかりませんでした。
+具体例
+【変換前（.fasta）】
+＞SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
+【変換後（" href="../../vote/475/down/index.html">fasta2fastq</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-06-05 22:06:34.653045">Jun 05 '11 at 22:06</span>
+            <a href="http://qa.lifesciencedb.jp/users/90/yasugoyasu/">yasugoyasu</a><span class="score" title="26 信用度">26</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/fasta/index.html" title="タグ付けされた質問をみる 'fasta' タグを利用している" rel="tag">fasta</a>
+            <a href="../../tags/fastq/index.html" title="タグ付けされた質問をみる 'fastq' タグを利用している" rel="tag">fastq</a>
+            <a href="../../tags/ngs/index.html" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">6.0k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="今ある菌のde novo assemblを行っています。
+先日454で読んだ配列をABySSでアセンブルして、コンタミのDNAを除きました。
+その後コンソーシアムのある454で読んだESTやSangerで読んだDNA配列と一緒にアセンブルしたいのですがどうしたらよいですか？長さは40bpのもあれば、長くて100kのもあります。平均700bpぐらいだと思います。
+試しにSOAP denovoを使ったところ
+Floating point exceptionとかsegmentation faultのエラーで止まってしまいます。
+ABySS使っても
+Colour-space assembly
+Asse" href="../../vote/487/down/index.html">長い配列と短い配列をアセンブルするには？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-06-18 17:15:12.851144">Jun 18 '11 at 17:15</span>
+            <a href="http://qa.lifesciencedb.jp/users/88/pan/">pan</a><span class="score" title="1 信用度">1</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/アセンブル/index.html" title="タグ付けされた質問をみる 'アセンブル' タグを利用している" rel="tag">アセンブル</a>
+            <a href="../../tags/ngs/index.html" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">5.6k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="ド素人の質問申し訳ありません。
+manualを読みながらtrans-ABySSをインストールしようとしているのですが、
+setupするまでがよくわかりません。
+pythonは最新ver.をインストールして、Perlはmacなのかv5.10.0がもともと入ってPATHも加えてありました。
+そこでmanual通り
+export TRANSABYSS_PATH=/home/user/Desktop/trans-ABySS 
+export PYTHONPATH=.:$PYTHONPATH:$TRANSABYSS_PATH 
+export PERL5LIB=.:$PERL5LIB:$TRANSABYSS" href="../../vote/479/down/index.html">trans-abyssのインストール</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-06-15 20:10:53.746837">Jun 15 '11 at 20:10</span>
+            <a href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a><span class="score" title="507 信用度">507</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/trans-abyss/index.html" title="タグ付けされた質問をみる 'trans-abyss' タグを利用している" rel="tag">trans-abyss</a>
+            <a href="../../tags/ngs/index.html" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">34k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="Rでfastaファイルを読み込む方法としてGeneRパッケージのreadFasta関数がありますが、
+BiostringsパッケージのreadFASTA関数、seqinrパッケージのread.fasta関数などもあり、
+どれを使えばよいのかわかりません。他にも読み込む方法があるかと思いますが、
+Rでfastaファイルを読み込む際におすすめのパッケージ・関数はありますでしょうか？
+追記
+http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html#read_fasta
+Biostringsパッケージにはread.DNAStringSet関数というものもあり、メ" href="../../vote/761/down/index.html">Rでfastaファイルを読み込む際におすすめのパッケージはありますか？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2014-05-04 21:38:14.783997">May 04 '14 at 21:38</span>
+            <a href="http://qa.lifesciencedb.jp/users/72/%E3%81%8B%E3%81%A9%E3%81%9F/">かどた</a><span class="score" title="186 信用度">186</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/fasta/index.html" title="タグ付けされた質問をみる 'fasta' タグを利用している" rel="tag">fasta</a>
+            <a href="../../tags/r/index.html" title="タグ付けされた質問をみる 'r' タグを利用している" rel="tag">r</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">10k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="Blast+を使って、ローカルでBLASTを行っています。
+エラーメッセージが出てしまい、webで検索してみたのですが、
+エラーメッセージの意味がわかりません。
+お分かりの方、教えていただけると幸いです。
+よろしくお願いいたします。
+Error: NCBI C++ Exception:
+    &quot;/am/ncbiapdata/release/blast/src/2.2.25/IntelMAC-universal/c++/GCC401-ReleaseMT--IntelMAC-universal/../src/corelib/ncbiobj.cpp&quot;, line 689: Critical: nc" href="../../vote/535/down/index.html">Blast+のエラーメッセージ</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-05-29 22:44:57.483285">May 29 '13 at 22:44</span>
+            <a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/blast/index.html" title="タグ付けされた質問をみる 'blast' タグを利用している" rel="tag">blast</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  unanswered">
+            <div class="item-count">0</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">4.2k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="ライブラリー作製時のゲル抽出でかなりロスってしまいます。
+1ugスタートで、ゲル抽出後は30-80ngになってしまいます。
+現在行っている方法は、
+2% NuSieve GTG Agaroseで泳動後
+QIAGEN MinElute Gel Extraction Kitで回収
+室温でゲルを溶かし、Elution buf.は60度に温めて使用しています。
+改善点やお薦めの方法がありましたらお願いします。" href="../../mark_favorite/545/index.html">ライブラリー作製時のゲル抽出</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-11-28 14:35:31.954020">Nov 28 '11 at 14:35</span>
+            <a href="http://qa.lifesciencedb.jp/users/12/ma_ko/">ma_ko ♦♦</a><span class="score" title="371 信用度">371</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/ゲル抽出/index.html" title="タグ付けされた質問をみる 'ゲル抽出' タグを利用している" rel="tag">ゲル抽出</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  unanswered">
+            <div class="item-count">0</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">23k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="お世話になっております。
+マッピングする際のリファレンスについて質問です。
+一般的にマッピングする際には
+Humanでは
+Ensembl GRCh37
+NCBI 36 37
+UCSC 18 19
+や
+Mouseでは
+Ensemble NCBIM37
+NCBI 37
+UCSC mm9
+があると思いますが、皆さんは主にどれを使われていますでしょうか？ ブラウザではUCSCを使用しているものの、RNAのバリアントはEnsemblが情報が豊富ですし、今後、解析するに当たっては統一したいので迷っております。バージョンにつきましても古い方が枯れているという考え方があるのかも知りたいと思います。RNA-se" href="../../mark_favorite/549/index.html">リファレンスについて</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-12-02 08:04:19.198099">Dec 02 '11 at 08:04</span>
+            <a href="http://qa.lifesciencedb.jp/users/68/gatapishi/">gatapishi</a><span class="score" title="71 信用度">71</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="../../tags/ucsc/index.html" title="タグ付けされた質問をみる 'ucsc' タグを利用している" rel="tag">ucsc</a>
+            <a href="../../tags/ncbi/index.html" title="タグ付けされた質問をみる 'ncbi' タグを利用している" rel="tag">ncbi</a>
+            <a href="../../tags/reference/index.html" title="タグ付けされた質問をみる 'reference' タグを利用している" rel="tag">reference</a>
+            <a href="../../tags/ensembl/index.html" title="タグ付けされた質問をみる 'ensembl' タグを利用している" rel="tag">ensembl</a>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+    <div class="boxC"><div class="questions-count">
+        112<span style="color:black;font-size:14px;margin-left:5px">個の質問が回答募集中</span></div><div class="questions-count">
+        143<span style="color:black;font-size:14px;margin-left:5px">回答</span></div><div><p class="nomargin">
+            もっとも<strong>投票された</strong>質問
+        </p></div></div>
+    
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>ただいまベータテスト運用中です。そのために通知無くコンテンツの変更やサービスの停止変更されることがあります。</h2>
+<p>質問するなら<a href="../../index.html">ライフサイエンスQA</a>。</p>
+<p>このページの<a href="index.html@type=rss">RSSフィード</a></p>
+<p><a href="http://twitter.com/lsqa_all">@lsqa_all</a>・<a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a></p>
+     </div>
+</div>
+
+    
+
+
+
+
+    
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>世界に広がるQAサイト</h2>
+<p><a href="http://biostar.stackexchange.com">バイオインフォマティクスのBioStar</a>・ <a href="http://I.SEQanswers.com">新型シーケンサーのSEQanswers</a>・ <a href="http://blueobelisk.shapado.com">オープンデータのBlueObelisk</a>・<a href="http://stackoverflow.com">プログラミングのstackoverflow</a>・ <a href="http://www.semanticoverflow.com">Semantic Overflow</a>・ <a href="http://stats.stackexchange.com/">Statistical Analysis</a>・ <a href="http://cstheory.stackexchange.com/">Theoretical Computer Science</a>・ <a href="http://chiebukuro.yahoo.co.jp/">Yahoo!知恵袋</a>・ <a href="http://okwave.jp/">OKWave</a> <a href="http://ja.wikipedia.org/wiki/Category:Q%26Aサイト">などなど</a></p>
+     </div>
+</div>
+
+    
+
+
+
+    <div class="boxC">
+        <h3 class="subtitle">タグ</h3>
+        <div class="tags" id="recent-tags">
+            
+                <a rel="tag" title="'ngs'タグづけられた質問をみる"  href="../../tags/ngs/index.html">ngs</a>
+                <span class="tag-number">&#215; 47</span>
+                <br />
+            
+                <a rel="tag" title="'ddbj'タグづけられた質問をみる"  href="../../tags/ddbj/index.html">ddbj</a>
+                <span class="tag-number">&#215; 13</span>
+                <br />
+            
+                <a rel="tag" title="'rna-seq'タグづけられた質問をみる"  href="../../tags/rna-seq/index.html">rna-seq</a>
+                <span class="tag-number">&#215; 13</span>
+                <br />
+            
+                <a rel="tag" title="'sra'タグづけられた質問をみる"  href="../../tags/sra/index.html">sra</a>
+                <span class="tag-number">&#215; 13</span>
+                <br />
+            
+                <a rel="tag" title="'r'タグづけられた質問をみる"  href="../../tags/r/index.html">r</a>
+                <span class="tag-number">&#215; 8</span>
+                <br />
+            
+                <a rel="tag" title="'bowtie'タグづけられた質問をみる"  href="../../tags/bowtie/index.html">bowtie</a>
+                <span class="tag-number">&#215; 6</span>
+                <br />
+            
+                <a rel="tag" title="'dra'タグづけられた質問をみる"  href="../../tags/dra/index.html">dra</a>
+                <span class="tag-number">&#215; 6</span>
+                <br />
+            
+                <a rel="tag" title="'galaxy'タグづけられた質問をみる"  href="../../tags/galaxy/index.html">galaxy</a>
+                <span class="tag-number">&#215; 6</span>
+                <br />
+            
+                <a rel="tag" title="'ncbi'タグづけられた質問をみる"  href="../../tags/ncbi/index.html">ncbi</a>
+                <span class="tag-number">&#215; 6</span>
+                <br />
+            
+                <a rel="tag" title="'tophat'タグづけられた質問をみる"  href="../../tags/tophat/index.html">tophat</a>
+                <span class="tag-number">&#215; 6</span>
+                <br />
+            
+                <a rel="tag" title="'dbcls'タグづけられた質問をみる"  href="../../tags/dbcls/index.html">dbcls</a>
+                <span class="tag-number">&#215; 5</span>
+                <br />
+            
+                <a rel="tag" title="'ucsc'タグづけられた質問をみる"  href="../../tags/ucsc/index.html">ucsc</a>
+                <span class="tag-number">&#215; 5</span>
+                <br />
+            
+                <a rel="tag" title="'bam'タグづけられた質問をみる"  href="../../tags/bam/index.html">bam</a>
+                <span class="tag-number">&#215; 4</span>
+                <br />
+            
+                <a rel="tag" title="'blast'タグづけられた質問をみる"  href="../../tags/blast/index.html">blast</a>
+                <span class="tag-number">&#215; 4</span>
+                <br />
+            
+                <a rel="tag" title="'bmb2010'タグづけられた質問をみる"  href="../../tags/bmb2010/index.html">bmb2010</a>
+                <span class="tag-number">&#215; 4</span>
+                <br />
+            
+                <a rel="tag" title="'ensembl'タグづけられた質問をみる"  href="../../tags/ensembl/index.html">ensembl</a>
+                <span class="tag-number">&#215; 4</span>
+                <br />
+            
+                <a rel="tag" title="'fasta'タグづけられた質問をみる"  href="../../tags/fasta/index.html">fasta</a>
+                <span class="tag-number">&#215; 4</span>
+                <br />
+            
+                <a rel="tag" title="'fastq'タグづけられた質問をみる"  href="../../tags/fastq/index.html">fastq</a>
+                <span class="tag-number">&#215; 4</span>
+                <br />
+            
+                <a rel="tag" title="'samtools'タグづけられた質問をみる"  href="../../tags/samtools/index.html">samtools</a>
+                <span class="tag-number">&#215; 4</span>
+                <br />
+            
+                <a rel="tag" title="'assembly'タグづけられた質問をみる"  href="../../tags/assembly/index.html">assembly</a>
+                <span class="tag-number">&#215; 3</span>
+                <br />
+            
+                <a rel="tag" title="'blast+'タグづけられた質問をみる"  href="../../tags/blast+/index.html">blast+</a>
+                <span class="tag-number">&#215; 3</span>
+                <br />
+            
+                <a rel="tag" title="'database'タグづけられた質問をみる"  href="../../tags/database/index.html">database</a>
+                <span class="tag-number">&#215; 3</span>
+                <br />
+            
+                <a rel="tag" title="'genome'タグづけられた質問をみる"  href="../../tags/genome/index.html">genome</a>
+                <span class="tag-number">&#215; 3</span>
+                <br />
+            
+                <a rel="tag" title="'illumina'タグづけられた質問をみる"  href="../../tags/illumina/index.html">illumina</a>
+                <span class="tag-number">&#215; 3</span>
+                <br />
+            
+                <a rel="tag" title="'reference'タグづけられた質問をみる"  href="../../tags/reference/index.html">reference</a>
+                <span class="tag-number">&#215; 3</span>
+                <br />
+            
+                <a rel="tag" title="'発音'タグづけられた質問をみる"  href="../../tags/発音/index.html">発音</a>
+                <span class="tag-number">&#215; 3</span>
+                <br />
+            
+                <a rel="tag" title="'募集中'タグづけられた質問をみる"  href="../../tags/募集中/index.html">募集中</a>
+                <span class="tag-number">&#215; 3</span>
+                <br />
+            
+                <a rel="tag" title="'browser'タグづけられた質問をみる"  href="../../tags/browser/index.html">browser</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'findpeaks'タグづけられた質問をみる"  href="../../tags/findpeaks/index.html">findpeaks</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'sam'タグづけられた質問をみる"  href="../../tags/sam/index.html">sam</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'trans-abyss'タグづけられた質問をみる"  href="../../tags/trans-abyss/index.html">trans-abyss</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'コマンド'タグづけられた質問をみる"  href="../../tags/コマンド/index.html">コマンド</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'ストレージ'タグづけられた質問をみる"  href="../../tags/ストレージ/index.html">ストレージ</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'ツール'タグづけられた質問をみる"  href="../../tags/ツール/index.html">ツール</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'プロモーター'タグづけられた質問をみる"  href="../../tags/プロモーター/index.html">プロモーター</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'ライブラリ'タグづけられた質問をみる"  href="../../tags/ライブラリ/index.html">ライブラリ</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'1000genome'タグづけられた質問をみる"  href="../../tags/1000genome/index.html">1000genome</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'1000genomes'タグづけられた質問をみる"  href="../../tags/1000genomes/index.html">1000genomes</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'admin'タグづけられた質問をみる"  href="../../tags/admin/index.html">admin</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'af'タグづけられた質問をみる"  href="../../tags/af/index.html">af</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'blat'タグづけられた質問をみる"  href="../../tags/blat/index.html">blat</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'butterfly'タグづけられた質問をみる"  href="../../tags/butterfly/index.html">butterfly</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'ched'タグづけられた質問をみる"  href="../../tags/ched/index.html">ched</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'chipseq'タグづけられた質問をみる"  href="../../tags/chipseq/index.html">chipseq</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'daf'タグづけられた質問をみる"  href="../../tags/daf/index.html">daf</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'ddd'タグづけられた質問をみる"  href="../../tags/ddd/index.html">ddd</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'dnase'タグづけられた質問をみる"  href="../../tags/dnase/index.html">dnase</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'dnaメチル化'タグづけられた質問をみる"  href="../../tags/dnaメチル化/index.html">dnaメチル化</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'domclust'タグづけられた質問をみる"  href="../../tags/domclust/index.html">domclust</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'fdr'タグづけられた質問をみる"  href="../../tags/fdr/index.html">fdr</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'gadget'タグづけられた質問をみる"  href="../../tags/gadget/index.html">gadget</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'hiseq2500'タグづけられた質問をみる"  href="../../tags/hiseq2500/index.html">hiseq2500</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'large_data'タグづけられた質問をみる"  href="../../tags/large_data/index.html">large_data</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'local'タグづけられた質問をみる"  href="../../tags/local/index.html">local</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'orthomcl'タグづけられた質問をみる"  href="../../tags/orthomcl/index.html">orthomcl</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'population_genetics'タグづけられた質問をみる"  href="../../tags/population_genetics/index.html">population_genetics</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'presentation'タグづけられた質問をみる"  href="../../tags/presentation/index.html">presentation</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'resequence'タグづけられた質問をみる"  href="../../tags/resequence/index.html">resequence</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'sequence'タグづけられた質問をみる"  href="../../tags/sequence/index.html">sequence</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'sequencing'タグづけられた質問をみる"  href="../../tags/sequencing/index.html">sequencing</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'solexa'タグづけられた質問をみる"  href="../../tags/solexa/index.html">solexa</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'sureselect'タグづけられた質問をみる"  href="../../tags/sureselect/index.html">sureselect</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'togopic'タグづけられた質問をみる"  href="../../tags/togopic/index.html">togopic</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'vcf'タグづけられた質問をみる"  href="../../tags/vcf/index.html">vcf</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'アセンブル'タグづけられた質問をみる"  href="../../tags/アセンブル/index.html">アセンブル</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'アノテーション'タグづけられた質問をみる"  href="../../tags/アノテーション/index.html">アノテーション</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'イラスト'タグづけられた質問をみる"  href="../../tags/イラスト/index.html">イラスト</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'ゲノムインプリンティング'タグづけられた質問をみる"  href="../../tags/ゲノムインプリンティング/index.html">ゲノムインプリンティング</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'ゲル抽出'タグづけられた質問をみる"  href="../../tags/ゲル抽出/index.html">ゲル抽出</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'ストック'タグづけられた質問をみる"  href="../../tags/ストック/index.html">ストック</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'ハウスキーピング遺伝子'タグづけられた質問をみる"  href="../../tags/ハウスキーピング遺伝子/index.html">ハウスキーピング遺伝子</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'プライマー'タグづけられた質問をみる"  href="../../tags/プライマー/index.html">プライマー</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'モチーフ'タグづけられた質問をみる"  href="../../tags/モチーフ/index.html">モチーフ</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'リアルタイムpcr'タグづけられた質問をみる"  href="../../tags/リアルタイムpcr/index.html">リアルタイムpcr</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'画像'タグづけられた質問をみる"  href="../../tags/画像/index.html">画像</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'使い道'タグづけられた質問をみる"  href="../../tags/使い道/index.html">使い道</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'次世代シークエンサー'タグづけられた質問をみる"  href="../../tags/次世代シークエンサー/index.html">次世代シークエンサー</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'統計'タグづけられた質問をみる"  href="../../tags/統計/index.html">統計</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'配列操作'タグづけられた質問をみる"  href="../../tags/配列操作/index.html">配列操作</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'不活性化'タグづけられた質問をみる"  href="../../tags/不活性化/index.html">不活性化</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'変異解析'タグづけられた質問をみる"  href="../../tags/変異解析/index.html">変異解析</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+        </div>
+    </div>
+
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+    <div class="pager"><p class="paginator"><span class="curr this_page">1</span><a class="page" href="index.html@sort=mostvoted&amp;page=2.html" >2</a><a class="page" href="index.html@sort=mostvoted&amp;page=3.html" >3</a><span class="next"><a href="index.html@sort=mostvoted&amp;page=2.html" title="次のページ">次のページ &raquo;</a></span></p></div>
+    <div class="pagesize"><div class="paginator"><span class="text">ページあたりの投稿数</span><span class="page"><a href="index.html@sort=mostvoted&amp;pagesize=15.html">15</a></span><span class="page"><a href="index.html@sort=mostvoted&amp;pagesize=30.html">30</a></span><span class="curr">50</span></div></div>
+
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="../../about/index.html" >概要</a> <span class="link-separator"> |</span> <a href="../../faq/index.html" >よくある質問</a> <span class="link-separator"> |</span> <a href="../../privacy/index.html" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="../../m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+        
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

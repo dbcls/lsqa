@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: ヒトの核酸が混入している場合のカバレッジは？</title><link>http://qa.lifesciencedb.jp/questions/776/%E3%83%92%E3%83%88%E3%81%AE%E6%A0%B8%E9%85%B8%E3%81%8C%E6%B7%B7%E5%85%A5%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AE%E3%82%AB%E3%83%90%E3%83%AC%E3%83%83%E3%82%B8%E3%81%AF</link><description>&lt;p&gt;はじめて質問させていただきます。
+ウィルスに関するメタゲノム解析を計画しています。シーケンシングは外注する予定です。
+ウィルスならゲノムサイズが小さいので、シーケンスカバレッジは1Gで充分なのではと言う人もいます。
+一方、生体材料（臨床検体）中の核酸はほとんどヒト由来でありウィルスはごく微量なので、かなり深く読まないと(例　5Gとか10G)、その中に微量に含まれるウィルスをde novoで連結はできないという話もあります。&lt;/p&gt;
+&lt;p&gt;貴重な検体であり、コストがかかっても、ウィルスがいればそれを見つけたいと思っています。&lt;/p&gt;
+&lt;p&gt;1G, 5G, 10Gとシーケンスカバレッジを上げれば、de novoシーケンスできる確率も上昇するものでしょうか？
+あるいは雑音であるヒト由来のreadも増えるため結局　効果ないでしょうか？&lt;/p&gt;
+&lt;p&gt;ご指導のほどよろしくお願いいたします。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/776/%E3%83%92%E3%83%88%E3%81%AE%E6%A0%B8%E9%85%B8%E3%81%8C%E6%B7%B7%E5%85%A5%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AE%E3%82%AB%E3%83%90%E3%83%AC%E3%83%83%E3%82%B8%E3%81%AF" rel="self"></atom:link><language>ja</language><lastBuildDate>Sat, 13 Sep 2014 13:08:36 +0900</lastBuildDate><item><title>Answer by deer</title><link>http://qa.lifesciencedb.jp/questions/776/%E3%83%92%E3%83%88%E3%81%AE%E6%A0%B8%E9%85%B8%E3%81%8C%E6%B7%B7%E5%85%A5%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AE%E3%82%AB%E3%83%90%E3%83%AC%E3%83%83%E3%82%B8%E3%81%AF/778</link><description>&lt;p&gt;大変、詳細かつ貴重なご助言をありがとうございました。&lt;/p&gt;
+&lt;p&gt;お教えいただいたパイプラインを、これから勉強させていただきます。
+（わからないところはまた質問させていただきますので、ご指導ください）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;アセンブルできたcontig配列にもとのリード(アセンブル前の生配列)を マッピングして
+カバレージ(depth of coverage)を見て見れば、 ヒト由来のcontigのカバレージと、ウイルス由来のカバレージでは、 
+分布が明らかに異なるはずなので、区別できる可能性があります。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;このあたり難しくてまだ消化しきれていませんが、同様のテーマでのＲｅａｄデータをさがして、自分でも解析してみます。&lt;/p&gt;
+&lt;p&gt;Metagenomic analysisのtoolサイトをご紹介いただきありがとうございました。&lt;/p&gt;
+&lt;p&gt;今後ともよろしくお願い申し上げます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">deer</dc:creator><pubDate>Sat, 13 Sep 2014 13:08:36 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/776/%E3%83%92%E3%83%88%E3%81%AE%E6%A0%B8%E9%85%B8%E3%81%8C%E6%B7%B7%E5%85%A5%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AE%E3%82%AB%E3%83%90%E3%83%AC%E3%83%83%E3%82%B8%E3%81%AF/778</guid></item><item><title>Answer by nob_fj</title><link>http://qa.lifesciencedb.jp/questions/776/%E3%83%92%E3%83%88%E3%81%AE%E6%A0%B8%E9%85%B8%E3%81%8C%E6%B7%B7%E5%85%A5%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AE%E3%82%AB%E3%83%90%E3%83%AC%E3%83%83%E3%82%B8%E3%81%AF/777</link><description>&lt;p&gt;もう解決されたかもしれませんが、回答無いので、
+メタゲノムは直接触ったことのない一介の技術者が、
+直接的な答えではありませんが、ご参考までに記載してみます。&lt;/p&gt;
+&lt;p&gt;基本的にはシーケンス品質が充分高ければ、ヒト核酸がどれだけ
+多量に含まれていたとしても、配列ファイルをヒトゲノムに
+マップして、マップしたリードを除外した上で、
+ウイルスゲノムのアセンブリなどを試みれば問題ないような気がします。&lt;/p&gt;
+&lt;p&gt;つまり量が少なくて、アセンブリに必要量が確保できないことはあっても、
+(大多数の高品質な)ヒト核酸が邪魔でヒト由来以外の核酸の解析に支障が
+出るということはなさそうな気がします。&lt;/p&gt;
+&lt;p&gt;詳しくないものの注意点としてはヒトゲノムに内在するレトロウイルス
+由来の配列などにターゲットのウイルスの核酸が高い相同性を示すと、
+同じく除外してしまう可能性があるかもしれません。&lt;/p&gt;
+&lt;p&gt;また、最近の並列シーケンサーのデータは品質が高いので、
+経験値の高い外注先に依頼される限り問題ないとは思いますが、&lt;/p&gt;
+&lt;p&gt;量的に以下のような状態だと、ウイルスゲノムのアセンブリなどがうまくいかない
+かもしれません。&lt;/p&gt;
+&lt;p&gt;ヒト配列 &amp;gt; ヒト配列かは不明な低品質ノイズ配列 &amp;gt;&amp;gt; ターゲットのウイルス核酸&lt;/p&gt;
+&lt;p&gt;ヒト配列 &amp;gt; ターゲットウイルス核酸 &amp;gt; ヒト配列かは不明な低品質ノイズ配列&lt;/p&gt;
+&lt;p&gt;の量比関係が成り立つならうまくいきそうな気はします。&lt;/p&gt;
+&lt;p&gt;もしヒト由来とウイルス由来の配列をうまく分離できなかったとしても、
+結果としてアセンブルできたcontig配列にもとのリード(アセンブル前の生配列)を
+マッピングしてカバレージ(depth of coverage)を見て見れば、
+ヒト由来のcontigのカバレージと、ウイルス由来のカバレージでは、
+分布が明らかに異なるはずなので、区別できる可能性があります。
+以前同僚が真核生物配列中のコンタミを検出した手法のご参考情報です。以下の最後の図。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://cell-innovation.nig.ac.jp/wiki2/tiki-index.php?page=P000001425#Result_explanation"&gt;遺伝研Platform for Drug Discovery(Cell
+   Innovationプログラム等で開発されたもの)の公開contig
+   annotationsパイプライン&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;もっとも、以下のサイトにあるツールなどを用いたほうが目的に合致するかもしれません。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://omictools.com/metagenomics-c1218-p1.html"&gt;OMICtools(Metagenomic analysis)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;解析余力があるようでしたら、同様の解析をされている論文の公開データを
+&lt;a href="http://trace.ddbj.nig.ac.jp/DRASearch/"&gt;DRA Search&lt;/a&gt;や&lt;a href="http://sra.dbcls.jp/"&gt;DBCLS SRA&lt;/a&gt;などで探して、そのデータで事前に試すなどしてみては
+いかがでしょうか。ホスト由来のノイズがどの程度含まれるのかの感触は分るかもしれません。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Sat, 13 Sep 2014 04:46:37 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/776/%E3%83%92%E3%83%88%E3%81%AE%E6%A0%B8%E9%85%B8%E3%81%8C%E6%B7%B7%E5%85%A5%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AE%E3%82%AB%E3%83%90%E3%83%AC%E3%83%83%E3%82%B8%E3%81%AF/777</guid></item></channel></rss>

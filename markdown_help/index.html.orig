@@ -1,0 +1,398 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Markdown Help</title>
+        <meta name="description" content="質問と回答と私">
+        <meta name="keywords" content="OSQA,CNPROG,forum,community,lifesciencedb.jp,DDBJ,PDBj,DBCLS,Cytoscape,NGS,ngs-field">
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon.ico" />
+        <link href="/m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='/m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+    <link rel="stylesheet" type="text/css" media="all" href="/m/qa.lifesciencedb.jp/media/style/markdown_help.css" />
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >ログイン</a>  <a href="/about/" >概要</a>  <a href="/faq/" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" href="/questions/" >質問</a><a id="nav_tags" href="/tags/" >タグ</a><a id="nav_users" href="/users/" >ユーザー</a><a id="nav_badges" href="/badges/" >バッジ</a><a id="nav_unanswered" href="/questions/unanswered/" >未回答</a>
+        <a id="nav_ask" href="/questions/ask/" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+        <div id="wrapper">
+            <div id="room">
+                <div id="CAFull">
+                    
+    <div id="main-wrapper"><br /><br />
+        <div id="heading">
+            <h1>Markdown Syntax</h1>
+            <p>This document describes some of the more important parts of Markdown (for writers, that is).  There's a lot more to the syntax than is mentioned here, though.  To get the full syntax documentation, go to John Gruber's <a href="http://daringfireball.net/projects/markdown/syntax" rel="nofollow">Markdown Syntax</a> page</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Headers</h2>
+            <div class="section-description">
+                For top-level headers underline the text with equal signs.  For second-level headers use dashes to underline.
+            </div>
+            <table class="section-example"><tr>
+                <td>
+                    <code>This is an H1</code><br />
+                    <code>============= </code>
+                </td>
+                <td>
+                    <h1>This is an H1</h1>
+                </td>
+            </tr></table>
+            
+            <table class="section-example"><tr>
+                <td>
+                    <code>This is an H2</code><br />
+                    <code>-------------</code>
+                </td>
+                <td>
+                    <h2>This is an H2</h2>
+                </td>
+             </tr></table>
+
+            <div class="section-description">
+                If you would rather, you can prefix headers with a hash (#) symbol instead.  The number of hash symbols indicates the header level.  For example, a single hash indicates a header level of one while two indicates the second header level:
+            </div>
+            <table class="section-example"><tr>
+                <td>
+                    <code># This is an H1</code>
+                </td>
+                <td>
+                    <h1>This is an H1</h1>
+                </td>
+            </tr></table>
+
+            <table class="section-example"><tr>
+                <td>
+                    <code>## This is an H2</code>
+                </td>
+                <td>
+                    <h2>This is an H2</h2>
+                </td>
+            </tr></table>
+
+            <table class="section-example"><tr>
+                <td>
+                    <code>### This is an H3</code>
+                </td>
+                <td>
+                    <h3>This is an H3</h3>
+                </td>
+             </tr></table>
+
+            <div class="section-description">
+                Which you choose is a matter of style.  Whichever you thinks looks better in the text document.  In both cases, the final, fully formatted, document looks the same.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Paragraphs</h2>
+            <div class="section-description">
+                Paragraphs are surrounded by blank lines.
+            </div>
+            <div class="section-example">
+                <code>This is paragraph one.</code>
+            </div><br />
+            <div class="section-example">
+                <code>This is paragraph two.</code>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Links</h2>
+            <div class="section-description">
+                
+                There are two parts to every link.
+                The first is the actual text that the user will see and it is surrounded by brackets.
+                The second is address of the page you wish to link to and it is surrounded in parenthesis.
+                
+            </div>
+            <table class="section-example"><tr>
+                <td>
+                    <code>[link text](http://example.com/)</code>
+                </td>
+                <td>
+                    <a>link text</a>
+                </td>
+            </tr></table>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Formatting</h2>
+            <div class="section-description">
+                To indicate bold text surround the text with two star (*) symbols or two underscore (_) symbols:
+            </div>
+            <table class="section-example"><tr>
+                <td>
+                    <code>**This is bold**</code>
+                </td>
+                <td>
+                    <strong>This is bold</strong>
+                </td>
+            </tr></table>
+            <table class="section-example"><tr>
+                <td>
+                    <code>__This is also bold__</code>
+                 </td>
+                 <td>
+                     <strong>This is also bold</strong>
+                 </td>
+             </tr></table>
+
+            <div class="section-description">
+                To indicate italicized text surround the text with a single star (*) symbol or underscore (_) symbol:
+            </div>
+            <table class="section-example"><tr>
+                <td>
+                    <code>*This is italics*</code>
+                </td>
+                <td>
+                    <i>This is italics</i>
+                </td>
+            </tr></table>
+            <table class="section-example"><tr>
+                <td>
+                    <code>_This is also italics_</code>
+                 </td>
+                 <td>
+                     <i>This is also italics</i>
+                 </td>
+             </tr></table>
+
+            <div class="section-description">
+                To indicate italicized and bold text surround the text with three star (*) symbol or underscore (_) symbol:
+            </div>
+            <table class="section-example"><tr>
+                <td>
+                    <code>***This is bold and italics***</code>
+                </td>
+                <td>
+                    <strong><i>This is bold and italics</i></strong>
+                </td>
+            </tr></table>
+            <table class="section-example"><tr>
+                <td>
+                    <code>___This is also bold and italics___</code>
+                </td>
+                <td>
+                    <strong><i>This is also bold and italics</i></strong>
+                </td>
+            </tr></table>
+        </div>
+
+
+        <div class="section">
+            <h2 class="section-title">Blockquotes</h2>
+            <div class="section-description">
+                To create an indented area use the right angle bracket (&gt;) character before each line to be included in the blockquote.
+            </div>
+            <table class="section-example"><tr>
+                <td>
+                    <code>&gt; This is part of a blockquote.</code><br />
+                    <code>&gt; This is part of the same blockquote.</code>
+                </td>
+                <td>
+                    <p style="padding-left:15px;">This is part of a blockquote.<br />This is part of the same blockquote.</p>
+                </td>
+            </tr></table>
+
+            <div class="section-description">
+                Rather than putting it in front of each line to include in the block quote you can put it at the beginning and end the quote with a newline.
+            </div>
+            <table class="section-example"><tr>
+                <td>
+                    <code>&gt; This is part of a blockquote.</code><br />
+                    <code>This continues the blockquote even though there's no bracket.</code><br /><br />
+                    <code>The blank line ends the blockquote.</code>
+                </td>
+                <td>
+                    <p style="padding-left:15px;">This is part of a blockquote. <br /> This continues the blockquote even though there's no bracket.</p>
+                    <p>The blank line ends the blockquote.</p>
+                </td>
+            </tr></table>
+        </div>
+
+        <div class="section">
+             <h2 class="section-title">Lists</h2>
+             <div class="section-description">
+                 To create a numbered list in Markdown, prefix each item in the list with a number followed by a period and space.  The number you use actually doesn't matter.
+             </div>
+             <table class="section-example"><tr>
+                 <td>
+                    <code>1. Item 1</code><br />
+                    <code>2. Item 2</code><br />
+                    <code>3. Item 3</code>
+                 </td>
+                 <td>
+                    <ol>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ol>
+                 </td>
+             </tr></table>
+
+             <div class="section-description">
+                 To create a bulleted list, prefix each item in the list with a star (*) character.
+             </div>
+             <table class="section-example"><tr>
+                 <td>
+                    <code>* A list item</code><br />
+                    <code>* Another list item</code><br />
+                    <code>* A third list item</code>
+                 </td>
+                 <td>
+                    <ul>
+                        <li>A list item</li>
+                        <li>Another list item</li>
+                        <li>A third list item</li>
+                    </ul>
+                 </td>
+             </tr></table>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">A Lot More</h2>
+            <div class="section-description">There's a lot more to the Markdown syntax than is mentioned here.  But for creative writers, this covers a lot of the necessities.  To find out more about Markdown than you'd ever want to really know, <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank" rel="nofollow">go to the Markdown page where it all started</a>.</div>
+        </div>
+    </div>
+
+
+                </div>
+                <div id="tail" style="clear:both;">
+                    
+                    
+                </div>
+            </div>
+            <div class="spacer3"></div>
+        </div>
+        
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >概要</a> <span class="link-separator"> |</span> <a href="/faq/" >よくある質問</a> <span class="link-separator"> |</span> <a href="/privacy/" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="/m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+        
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,839 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>UCSC Genome Browserからのファイルアクセスに対応したBAM置き場 - #LSQA</title>
+        <meta name="description" content="すでに既出の質問になるのですが、私の場合うまくいかなかったので、再度質問させていただきたく思います。以前に質問されていた内容は以下です。
+以前されていた質問
+Dorpbox の公開アクセスフォルダと、Galaxy の公開ヒストリを試しているのですが、どちらもうまくいきません。具体的には、今回はじめてDropboxを利用するためにフリーのアカウント2GBを作り、そこからカメラアップロード等のフリー容量追加の方法で約3GBの容量を確保しました。
+カメラアップロードでの容量追加
+以下のように2.7GBのBAMファイルを置きました。左クリックして[共有]を使った場合のURLです。
+左クリックから共有
+">
+        <meta name="keywords" content="ucsc,bam,ストレージ,genome,browser">
+        
+        <link rel="canonical" href="../../vote/728/down/index.html" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="ucsc-genome-browserからのファイルアクセスに対応したbam置き場@type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="../../upfiles/favicon.ico" />
+        <link href="../../m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="../../cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='../../m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        
+        <script type='text/javascript' src='../../m/qa.lifesciencedb.jp/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='../../m/qa.lifesciencedb.jp/media/js/wmd/wmd.js'></script>
+        <link rel="stylesheet" type="text/css" href="../../m/qa.lifesciencedb.jp/media/js/wmd/wmd.css" />
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[プレビューを隠す]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[プレビューを表示する]" : "[プレビューを隠す]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml.html" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="../../index.html">
+				<img src="../../upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="../../account/yahoo/signin/index.html" >ログイン</a>  <a href="../../about/index.html" >概要</a>  <a href="../../faq/index.html" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="../index.html" >質問</a><a id="nav_tags" href="../../tags/index.html" >タグ</a><a id="nav_users" href="http://qa.lifesciencedb.jp/users/" >ユーザー</a><a id="nav_badges" href="../../badges/index.html" >バッジ</a><a id="nav_unanswered" href="../unanswered/index.html" >未回答</a>
+        <a id="nav_ask" href="../ask/index.html" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="http://qa.lifesciencedb.jp/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="../../vote/728/down/index.html">UCSC Genome Browserからのファイルアクセスに対応したBAM置き場</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-723-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../vote/723/up/index.html" rel="nofollow"> </a>
+<div id="post-723-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-723-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../vote/723/down/index.html" rel="nofollow"> </a>
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="../../mark_favorite/723/index.html" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>すでに既出の質問になるのですが、私の場合うまくいかなかったので、再度質問させていただきたく思います。以前に質問されていた内容は以下です。
+<a href="../../vote/392/down/index.html">以前されていた質問</a></p>
+<p>Dorpbox の公開アクセスフォルダと、Galaxy の公開ヒストリを試しているのですが、どちらもうまくいきません。具体的には、今回はじめてDropboxを利用するためにフリーのアカウント2GBを作り、そこからカメラアップロード等のフリー容量追加の方法で約3GBの容量を確保しました。
+<a href="https://www.dropbox.com/help/287/ja">カメラアップロードでの容量追加</a></p>
+<p>以下のように2.7GBのBAMファイルを置きました。左クリックして[共有]を使った場合のURLです。
+<a href="https://www.dropbox.com/s/4vn1w95rmqk1521/GRC13290252-48725-D1_post.bam">左クリックから共有</a></p>
+<p>これをUCSC Browserの”Paste URLs or data:”に以下のように貼り付けて[Submit]をクリックしました。</p>
+<blockquote>
+<p>track type=bam name="MyBAM1" bigDataUrl="https://www.dropbox.com/s/4vn1w95rmqk1521/GRC13290252-48725-D1_post.bam"</p>
+</blockquote>
+<p>しかし、以下のエラーが返ってくるだけです。</p>
+<blockquote>
+<p>Error : No Content-Length: returned in header for https://www.dropbox.com/s/4vn1w95rmqk1521/GRC13290252-48725-D1_post.bam, can't proceed, sorry</p>
+</blockquote>
+<p>少し方法を変えて、右クリック、[公開リンクをコピー]から以下のURLを得ました。
+<a href="https://dl.dropboxusercontent.com/u/274315667/GRC13290252-48725-D1_post.bam">右クリックから公開リンクをコピー</a>
+すると今度は別のエラーメッセージとなりました。</p>
+<blockquote>
+<p>Error : unable to fetch 8192 bytes from https://dl.dropboxusercontent.com/u/274315667/GRC13290252-48725-D1_post.bam @0 (got 1 bytes)</p>
+</blockquote>
+<p>情報を求めてUCSC公式の記述を探したところ、以下のように記述がありました。</p>
+<blockquote>
+<p>Problem: I see that Dropbox accepts byte-range requests, but I can't get my data to display. Why?
+（中略）
+Paid Dropbox accounts may not experience this problem.
+<a href="https://genome.ucsc.edu/goldenPath/help/customTrack.html">UCSC公式</a></p>
+</blockquote>
+<p>しかし、思い切って支払ったところで、"may not"と記されているということは、確実にうまくいくとは限らないので、先にGalaxyの方を試みました。先ほどと同じBAMファイルをGalaxyの公開ヒストリに以下のようにアップロードしました。
+<a href="http://galaxy.dbcls.jp/u/ksfk/h/unnamed-history">公開ヒストリ</a></p>
+<p>すでに[display at UCSC main]というリンクが張られているので、それをクリックすると、以下のエラーメッセージが表示されます。</p>
+<blockquote>
+<p>Byte-range request was ignored by server. Expected Partial Content 206</p>
+</blockquote>
+<p>その一方で、Add Custom Tracksに書き込むためのURLは、どうやれば取得できるのか分かりませんでした。もしかするとGoogle Chromeではなく、他のブラウザを使った方がいいのでしょうか？</p>
+<p>大変素人な質問で申し訳ありません。個人で作業をしているもので、環境にもめぐまれておりません。皆様のお知恵をお貸しいただきたく思っております。</p>
+<hr>
+<p>追記で詳しい事情をご説明いたします。nob_fj様からコメントいただいたのですが、BAIファイルの生成の仕方が分からないという問題があって、これについても教えていただきたく思っております。今回のデータは、患者である私自身のexomeシーケンシングの結果です。以下の遺伝子検査会社が、おそらく現在のところ世界で唯一、患者自身からのサンプルを受け取ってシーケンシングしてくれるので、そこからVCF、BAM、FASTA形式のファイルを受けとりました。
+<a href="http://www.dnadtc.com/#exomeTopMargin">DNADTC</a></p>
+<p>このような事情でファイル形式についても勉強しながら作業しているところで、とりあえずテキストファイルとして見ることができる<a href="https://dl.dropboxusercontent.com/u/274315667/GRC13290252-48725-D1_exome.vcf">VCF</a>の中に、私が以前の遺伝子検査で見つかったSCN4Aのc.5468C&gt;G、P1823Rという変異があるかどうかを確認したところ、どうもその付近にそういうcallは含まれていないようなので慌てることになりました。検査会社に問い合わせたところ、BAMファイルをUCSC Genome Browserで見て、coverageが足りているかどうか確認して下さいとのことなので、それに従おうとしている次第です。</p>
+<p>このような事情で、BAIファイルを提供してもらっていないのですが、これはどのようにして生成すればいいのでしょうか？ BAMファイルから生成できるものなのでしょうか？ 個人で使うような低スペックのWindows7上の作業でできるものなのでしょうか？ どの文献を読めばそういう情報が書いてあるかも分からず、書いてあるウェブページを紹介いただくだけでも大変助かります。</p>
+<hr>
+<p>さらに追記いたします。samtoolsというプログラムでBAMからBAIを生成できることを知ったので、Windows版バイナリを探したところ、見つかりました。<a href="http://sourceforge.net/p/samtools/mailman/samtools-help/thread/4DC6AC2D.2060409@integromics.com/">i386 samtools</a> これを用いてBAIファイルを作ることができたので、Galaxy、Dropboxともにもう一度試したのですが、やはり両方うまくいきません。Galaxyの方は、BAIファイルだけを追加でアップロードする際に、ファイル形式にBAIという選択肢がないことが気になったので、念のためBAMファイルを再度アップロードしたのですが、それもうまくいきません。具体的にはBAMのファイル名に_withBAIと追加して、samtools indexを実行し、BAIファイルの生成後に、BAMファイルをアップロードしました。BAIファイルのファイル形式がないということは、BAMファイルをアップロードする際に、指定しなくとも同時にアップロードされるのではないかと思ったからです。</p>
+<p>BAIファイルをアップロードする他の手順があるのでしょうか？</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="../../tags/ucsc/index.html" class="post-tag"
+                                        title="'ucsc'タグのついた質問をみる" rel="tag">ucsc</a>
+                                
+                                    <a href="../../tags/bam/index.html" class="post-tag"
+                                        title="'bam'タグのついた質問をみる" rel="tag">bam</a>
+                                
+                                    <a href="../../tags/ストレージ/index.html" class="post-tag"
+                                        title="'ストレージ'タグのついた質問をみる" rel="tag">ストレージ</a>
+                                
+                                    <a href="../../tags/genome/index.html" class="post-tag"
+                                        title="'genome'タグのついた質問をみる" rel="tag">genome</a>
+                                
+                                    <a href="../../tags/browser/index.html" class="post-tag"
+                                        title="'browser'タグのついた質問をみる" rel="tag">browser</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">                            
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        質問日
+        <strong>Mar 07 '14 at 10:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/d80888126d04e343f9f1a60bac5b34c8?s=32&amp;d=identicon&amp;r=g" alt="ksfk's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/137/ksfk/">ksfk</a><br/>
+    <span class="score" title="1 徳">1</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="http://qa.lifesciencedb.jp/revisions/723/">
+                edited
+                <strong>Mar 07 '14 at 12:21</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+<div class="comments-container" id="comments-container-723">
+    
+        <a name="724"></a>
+        <div class="comment" id="comment-724">
+            <div id="post-724-score" class="comment-score"></div>
+            <div class="comment-text"><p>dropboxの有償アカウントで試したことはないので分らないですが、念のため確認ですが、bamファイルはソート済みで、ソート済みbamに対するindexファイルは作成されていますか？</p></div>
+            <div class="comment-info" id="comment-724-info">
+                
+                
+                
+                <span class="comment-age">(Mar 07 '14 at 10:32)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="725"></a>
+        <div class="comment" id="comment-725">
+            <div id="post-725-score" class="comment-score"></div>
+            <div class="comment-text"><p>おっしゃられているindexファイルというのはBAIファイルと呼ばれているもののことだと思うのですが、実はこれの生成の仕方も分からなくて困っています。詳しい事情を質問に追加して記入いたします。</p></div>
+            <div class="comment-info" id="comment-725-info">
+                
+                
+                
+                <span class="comment-age">(Mar 07 '14 at 10:40)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/137/ksfk/">ksfk</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/d80888126d04e343f9f1a60bac5b34c8?s=18&amp;d=identicon&amp;r=g" alt="ksfk's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="726"></a>
+        <div class="comment" id="comment-726">
+            <div id="post-726-score" class="comment-score"></div>
+            <div class="comment-text"><p>質問の本筋とは関係のないコメントですが、私自身はバイインフォマティクスも取り扱っているIT系技術者で研究者でも、遺伝カウンセラーでもなんでもないので、個人的な見解ですが、ksfk様の質問文に記載されているデータが、テストデータでなく、exomeデータのそのものなのだとすると、公開状態になっているのを今一度考え直したほうが良いように思います。
+私個人とては公開状態を止めることをお奨めします。
+遺伝疾患に関係する多型情報はご自身のみならず、血縁者様の個人情報ともなりえます。
+技術的な点についてはまた、別途コメントします。</p></div>
+            <div class="comment-info" id="comment-726-info">
+                
+                
+                
+                <span class="comment-age">(Mar 07 '14 at 14:47)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="727"></a>
+        <div class="comment" id="comment-727">
+            <div id="post-727-score" class="comment-score"></div>
+            <div class="comment-text"><p>ご心配いただき恐縮です。確かに、仰るとおり私自身のexomeを公開するのはリスクのある行為です。しかし、私にはこうならざるをえない事情があるのです。日本では柳澤桂子さんの「認められぬ病」という書籍で知られているように、少なからず原因が分からないまま確定診断が得られず、放置される患者が存在します。希少疾患ゆえの患者数の少なさと、ゲノムの全領域に渡ってあまりにも多様に原因変異が分布するためです。遺伝子に原因があると特定されたわけではありませんが、私自身もそういった患者の一人だと思っています。理論的、確率的にはどんなに稀な病気、極端な話、世界に一人だけの疾患でもありうるのが現実です。ですから、私自身としては、こう思うのです。exomeを公開することで、少しでも診断に結びつくかもしれない情報を得られて、もしも子孫が私同様に発症したとしても研究が前向きに進むのであれば、私自身の判断で自分のexomeを公開するという行為はかろうじて許されるであろうと。２年前にexomeシーケンシングを受けると決めた時以来、そう割り切ることに致しました。このような事情を飲み込んでいただくのはすぐには困難かもしれませんが、ここは私自身のexomeが公開されているという問題には、なにとぞご寛容に考えていただけるとありがたく思います。</p></div>
+            <div class="comment-info" id="comment-727-info">
+                
+                
+                
+                <span class="comment-age">(Mar 07 '14 at 15:31)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/137/ksfk/">ksfk</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/d80888126d04e343f9f1a60bac5b34c8?s=18&amp;d=identicon&amp;r=g" alt="ksfk's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="729"></a>
+        <div class="comment" id="comment-729">
+            <div id="post-729-score" class="comment-score"></div>
+            <div class="comment-text"><p>ファイル名はfileName.bamとfileName.bam.baiの形式だと過去試した限りは動作しました。fileNameの部分は任意の英数字で大丈夫だとは思います。bamとbaiはセットで名前を統一しておかなければだめだと思います。ただ、今自分もdropboxを再度試してみましたが、過去ううまくいっていた記述でエラーが出ていましたので、dropboxからはうまく通信できなくなったのかも知れませんね。よく調べたわけではないですが。</p></div>
+            <div class="comment-info" id="comment-729-info">
+                
+                
+                
+                <span class="comment-age">(Mar 07 '14 at 16:56)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="730"></a>
+        <div class="comment not_top_scorer" id="comment-730">
+            <div id="post-730-score" class="comment-score"></div>
+            <div class="comment-text"><p>track type=bam bigDataUrl="http://cell-innovation.nig.ac.jp/export/public/ucsc_101201/SRX000350_SRR001356_1000.bam"
+は現在でもうまくいくので、ファイルの問題と、データ置き場の問題を切り分けるために、今試そうとされているデータ置き場に上のSRX000350_SRR001356_1000.bamとSRX000350_SRR001356_1000.bam.baiをダウンロードして参照できるか試してはいかがでしょうか。うまくいくのであれば、データの問題、いかないのであれば、データ置き場の問題。</p></div>
+            <div class="comment-info" id="comment-730-info">
+                
+                
+                
+                <span class="comment-age">(Mar 07 '14 at 17:09)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="731"></a>
+        <div class="comment not_top_scorer" id="comment-731">
+            <div id="post-731-score" class="comment-score"></div>
+            <div class="comment-text"><p>ご回答をいただきまして、ありがとうございます。示していただいたSRX000350_SRR001356_1000.bamで現在試しているところですが、こちらでもDropboxでエラーが出ます。Galaxyの方は[display at UCSC main]をクリックして表示したところエラーが出ず、初めてうまく表示されたようです。このときにBAIファイルをアップロードしなかったので、おそらくBAMをアップロードすると自動でBAIもアップロードされるのではないかと思います。その一方で、sortとindexをほどこしたGRC13290252-48725-D1_post_withBAI_sorted.bamを作って、SRX～ファイルと全く同じようにGalaxyにアップロードしたのですが、こちらは相変わらず"Byte range request was ignored by server"のエラーが表示されます。教えていただいたIGVの方も試してみます。</p></div>
+            <div class="comment-info" id="comment-731-info">
+                
+                
+                
+                <span class="comment-age">(Mar 07 '14 at 18:12)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/137/ksfk/">ksfk</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/d80888126d04e343f9f1a60bac5b34c8?s=18&amp;d=identicon&amp;r=g" alt="ksfk's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-723" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="ucsc-genome-browserからのファイルアクセスに対応したbam置き場@sort=登録順.html#" class="show-all-comments-link">show all</a>
+    
+    
+</div>
+<div id="comment-723-form-container" class="comment-form-container">
+    
+</div>
+    
+                        </div>
+                        
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="ucsc-genome-browserからのファイルアクセスに対応したbam置き場@sort=登録順.html" class="on" title="最古の回答が最初に表示されます">回答順</a><a href="ucsc-genome-browserからのファイルアクセスに対応したbam置き場@sort=最新.html" title="最新の回答が最初に表示されます">最新</a><a href="ucsc-genome-browserからのファイルアクセスに対応したbam置き場@sort=投票.html" title="もっとも投票された回答が最初に表示されます">支持されている順</a></div>
+                </div>
+                
+  
+                
+                    <a name="728"></a>
+                    <div id="answer-container-728" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-728-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../vote/728/up/index.html" rel="nofollow"> </a>
+<div id="post-728-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-728-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../vote/728/down/index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>カバレージをご参照になりたいとの件、私の個人的見解ですが、
+少なくとも、データを公開状態にしてのUCSC Genome browserは第一選択肢ではなく、
+多型解析であれば、windows環境でも動作し、データをローカルなディスクに置いておける(公開しない)
+<a href="http://www.broadinstitute.org/igv/">IGV</a>などを使うのが妥当のような気がします。IGVは多型解析に特化して開発されている印象がありますし、
+世界中の研究者が利用しています。</p>
+<p>また同じくwindows上でも動作する、国内企業の<a href="http://www.mss.co.jp/">三菱スペース・ソフトウエア株式会社</a>が
+開発されている<a href="http://genomejack.net/">GenomeJack</a>も選択肢の一つかと思います。</p>
+<p>Webサーバ系なので、幣所サーバにアップロードする形になりますが、幣所でも<a href="http://cell-innovation.nig.ac.jp/wiki2/tiki-index.php?page=Manual">GenomeExplorer</a>というゲノムブラウザを
+一般利用開放しており、BAMファイルをアップロードくだされば参照することはできますし、
+セキュアなプロトコルで通信を暗号化しており、他のユーザーからはデータ閲覧されないので、
+公開状態でUCSC Genome Browserで閲覧するよりははるかに安心してご利用いただけます。
+SNPモードではSNVだけでなく、挿入、欠損も見ることができます。
+ただし、個人からの利用申請を受理できるかは、私個人の範疇・権限を超えますのでご了承ください。</p>
+<p>注)UCSC Genome Browserも私が過去調べた際は、BASIC認証のセキュアプロトコルでのアクセスも利用可能でした。</p>
+<p>UCSC Genome BrowserでBAMを参照するには、BAMファイルがソート済みかつ、インデックスファイル(.bai)が
+作られおり、bamと同じくアクセスできる場所に配置されている必要があります。
+samtoolsもwindowsで動作します。
+拙文ですが、samtoolsのコマンドでの利用方法を記載しています。
+<a href="http://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=samtools#bam_">NGS Surfer's Wiki(samtools)</a>
+3. bamソート と
+4. bam index作成 を実行します。
+ただ、ブラウザによっては、bamのソートやindex付加を必要としないはずなので、
+まずはそちらを試してはいかがでしょうか。</p>
+<p>Windows環境でsamtools使う場合、
+私ならCygwinをインストールして、windows環境上でUNIX/Linuxライクな動作環境から動作させます。
+試したことは無いですが、コマンドプロンプトから動作させることもできるかもしれません。
+どちらも、それなりにいろいろ調べる必要があると思います。</p>
+<p>尚、ご質問の文案を見た上で、ksfk様のご質問の「カバレージを見る」が、
+<a href="http://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=SAMTOOLS%2CANNOVAR%E3%82%92%E7%94%A8%E3%81%84%E3%81%9Fexome%E8%A7%A3%E6%9E%90%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB#BEDtools_depth_of_coverage_">こちら</a>にmkodaさんが記載されているような特定領域のdepth of coverageの
+正確な数値を調べたいということでなく、ブラウザで何配列カバーしているか
+確認したいという意図だと思いましたのでそのように回答いたしました。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Mar 07 '14 at 15:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=32&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a><br/>
+    <span class="score" title="507 徳">507</span><span title="8 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="16 バッジ"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="28 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">28</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="http://qa.lifesciencedb.jp/revisions/728/">
+                edited
+                <strong>Mar 07 '14 at 15:54</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-728">
+    
+        <a name="733"></a>
+        <div class="comment" id="comment-733">
+            <div id="post-733-score" class="comment-score"></div>
+            <div class="comment-text"><p>ご回答ありがとうございます。IGVで表示することができました。しかし、染色体２本分のトラックが表示されるものと思っていたのが、１トラックしか表示されません。これが染色体１本分しかシーケンシングできていないのか、あるいは、BWAを使ってFASTQファイルからBAMを作り直せば２本分取り出せるのか、どちらなのか悩んでいます。検査会社にも問い合わせているところです。</p></div>
+            <div class="comment-info" id="comment-733-info">
+                
+                
+                
+                <span class="comment-age">(Mar 09 '14 at 07:07)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/137/ksfk/">ksfk</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/d80888126d04e343f9f1a60bac5b34c8?s=18&amp;d=identicon&amp;r=g" alt="ksfk's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="735"></a>
+        <div class="comment" id="comment-735">
+            <div id="post-735-score" class="comment-score"></div>
+            <div class="comment-text"><p>私は多型解析の専門と言える立場に無い点と、データの解釈に踏み込んだ点を遺伝カウンセラーのように発言できる立場にはないという
+前提でご参考程度にコメントいたしますと、
+「染色体２本分のトラックが表示される」の意味するところが良く分りませんが、
+一般的なゲノムブラウザでは、BAMファイル1つにつき、1トラック表示されるのが普通だと思います。
+細かい話をすると、</p>
+<ul>
+<li>IGV(や確かGenomeJackも)1トラックにつき、リードレベルの表示と、カバレージを示す波形表示が1トラックにつき1つずつでます。</li>
+<li>幣所(国立遺伝学研究所)のGenomeExplorerでは、データロード時に順鎖方向と逆鎖方向を別トラックに入れる選択もできます。が、多型解析ではこれらを順鎖/逆鎖を区別しないで利用する場合のほうが普通です。</li>
+</ul>
+<p>おそらく、私の想像ですが、染色体２本分のトラックの意味が、父由来、母由来のそれぞれを意味しているのであれば、
+BWAやBowtieなど私が知る範囲での一般的にexome解析で利用されるマッピングツールは、
+父由来/母由来の染色体を分けてマッピングする能力はありません。ので、結果として出力されるBAMも父由来、母由来両方由来のDNAが、
+1トラックに混在した状態で表示されます。
+多型がヘテロである場合は約50%のリードが変異ありとなります。</p>
+<p>多型の箇所を示すVCFファイルを作成するSNVコールのプログラムも、基本的にはこのパーセンテージや、配列の品質などを考慮して、
+変異がヘテロなのか、ホモなのか、シーケンサー由来などのノイズなのかを判定します(実際にはもっと複雑な計算式を使っていますが)。</p>
+<p>もう一点、別の観点での注意点ですが、マッピング結果のBAMファイルを取得した際の、ヒトゲノムのバージョンはhg19/GRCh37ですかhg18、GRCh36ですか。たぶんないとは思いますがhg38/GRCh38という最新版もあります。これの指定を誤ると、変異の箇所が実際と異なる表示になるので注意が必要です。</p></div>
+            <div class="comment-info" id="comment-735-info">
+                
+                
+                
+                <span class="comment-age">(Mar 09 '14 at 19:47)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="736"></a>
+        <div class="comment" id="comment-736">
+            <div id="post-736-score" class="comment-score"></div>
+            <div class="comment-text"><p>ご指摘いただきありがとうございます。染色体の扱いについて大きな勘違いをしておりました。ヒトゲノムのバージョンがhg19であることは検査会社に確認をとりました。BAMファイルが私のものであることは私のSCN4A変異の位置でカバレージは少ないながらカウントが存在するので、一旦BAMファイルを信頼しようと思います。VCFファイルを自分で作り直すことも見当しましたが、Windows環境で済ませる自信がないので、VCFとBAMの間で10点ほど比較して一致を確認し、VCFファイルについても検査会社から受け取ったものを信頼することにします。アノーテーションの作業に入ろうと思うのですが、AnnovarよりもGene-Talkを使う方向で考えています。現段階で劣性遺伝、人口頻度0.1%未満、Functionalに限っても100点ほどdbSNPに登録のあるSNPがあるので、なんとか効率よく行う方法を探しているところです。</p></div>
+            <div class="comment-info" id="comment-736-info">
+                
+                
+                
+                <span class="comment-age">(Mar 11 '14 at 06:40)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/137/ksfk/">ksfk</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/d80888126d04e343f9f1a60bac5b34c8?s=18&amp;d=identicon&amp;r=g" alt="ksfk's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-728" class="comment-tools">
+    
+    
+</div>
+<div id="comment-728-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="http://qa.lifesciencedb.jp/questions/723/answer/" method="post">
+            <div style="clear:both">
+            </div>
+            
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            あなたの回答
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea rows="10" cols="40" name="text" id="editor"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="リアルタイムMarkdown編集プレビューをトグルする">
+                                            プレビューをトグルする
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input type="checkbox" name="wiki" id="id_wiki" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="コミュニティー wikiオプションを選択した場合、質問と回答はポイントを生成せず、作者名は表示されない">
+                                            <label for="id_wiki">コミュニティー wiki</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+                        
+                        </table>  
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>                    
+                </div>
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">この質問をフォローする</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="ucsc-genome-browserからのファイルアクセスに対応したbam置き場@type=rss" title="subscribe to answers"></a>
+    回答
+</p><p><a class="feed-icon" style="background-image:url('../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="ucsc-genome-browserからのファイルアクセスに対応したbam置き場@type=rss&amp;comments=yes" title="subscribe to comments and answers"></a>
+    回答とコメント
+</p>
+
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>ただいまベータテスト運用中です。そのために通知無くコンテンツの変更やサービスの停止変更されることがあります。</h2>
+<p>質問するなら<a href="../../index.html">ライフサイエンスQA</a>。</p>
+<p>このページの<a href="ucsc-genome-browserからのファイルアクセスに対応したbam置き場@type=rss">RSSフィード</a></p>
+<p><a href="http://twitter.com/lsqa_all">@lsqa_all</a>・<a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a></p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <p>
+		タグ:
+    </p>
+    <p class="tags" >
+        
+        	<a href="../../tags/ucsc/index.html" 
+			title="タグ付けされた質問をみる'ucsc'タグを利用している" 
+			rel="tag">ucsc</a> <span class="tag-number">&#215;5</span><br/>
+        
+        	<a href="../../tags/bam/index.html" 
+			title="タグ付けされた質問をみる'bam'タグを利用している" 
+			rel="tag">bam</a> <span class="tag-number">&#215;4</span><br/>
+        
+        	<a href="../../tags/genome/index.html" 
+			title="タグ付けされた質問をみる'genome'タグを利用している" 
+			rel="tag">genome</a> <span class="tag-number">&#215;3</span><br/>
+        
+        	<a href="../../tags/browser/index.html" 
+			title="タグ付けされた質問をみる'browser'タグを利用している" 
+			rel="tag">browser</a> <span class="tag-number">&#215;2</span><br/>
+        
+        	<a href="../../tags/ストレージ/index.html" 
+			title="タグ付けされた質問をみる'ストレージ'タグを利用している" 
+			rel="tag">ストレージ</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        質問日: <strong title="2014-03-07 10:06:59.980226">Mar 07 '14 at 10:06</strong>
+    </p>
+    <p> 
+     	閲覧数: <strong>17,165 回</strong>
+    </p>
+    <p> 
+        最終更新日: <strong title="2014-03-11 06:40:20.870141">Mar 11 '14 at 06:40</strong>
+    </p>
+</div>
+
+
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>世界に広がるQAサイト</h2>
+<p><a href="http://biostar.stackexchange.com">バイオインフォマティクスのBioStar</a>・ <a href="http://I.SEQanswers.com">新型シーケンサーのSEQanswers</a>・ <a href="http://blueobelisk.shapado.com">オープンデータのBlueObelisk</a>・<a href="http://stackoverflow.com">プログラミングのstackoverflow</a>・ <a href="http://www.semanticoverflow.com">Semantic Overflow</a>・ <a href="http://stats.stackexchange.com/">Statistical Analysis</a>・ <a href="http://cstheory.stackexchange.com/">Theoretical Computer Science</a>・ <a href="http://chiebukuro.yahoo.co.jp/">Yahoo!知恵袋</a>・ <a href="http://okwave.jp/">OKWave</a> <a href="http://ja.wikipedia.org/wiki/Category:Q%26Aサイト">などなど</a></p>
+     </div>
+</div>
+
+<div class="boxC">
+    <h3 class="subtitle">関係した質問</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="../../vote/392/down/index.html">UCSC Genome Browserからのファイルアクセスに対応したフリーまたは廉価なBAM置き場はありますか</a>
+        </p>
+        
+        <p>
+            <a href="../../vote/386/down/index.html">galaxyの複数のデータ(BAM,bed,bedgraph,wig)をUCSC Genome Browse で並べて表示するには？</a>
+        </p>
+        
+        <p>
+            <a href="../../vote/676/down/index.html">Galaxyのinterval型のヒストリにdisplay at UCSCリンクを表示する方法</a>
+        </p>
+        
+        <p>
+            <a href="../../mark_favorite/227/index.html">C-value からゲノムサイズを推定する</a>
+        </p>
+        
+        <p>
+            <a href="../../mark_favorite/549/index.html">リファレンスについて</a>
+        </p>
+        
+        <p>
+            <a href="../../vote/695/down/index.html">個体ごとのSNPsのコール</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="../../about/index.html" >概要</a> <span class="link-separator"> |</span> <a href="../../faq/index.html" >よくある質問</a> <span class="link-separator"> |</span> <a href="../../privacy/index.html" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="../../m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

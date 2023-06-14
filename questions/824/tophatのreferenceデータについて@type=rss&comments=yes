@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: TopHatのreferenceデータについて</title><link>http://qa.lifesciencedb.jp/questions/824/tophat%E3%81%AEreference%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;今回はTophat2 (bowtie2)に使用するgenome indexについて質問があり利用させていただきました。&lt;/p&gt;
+&lt;p&gt;現在TopHat2およびCufflinksを用いたNGSデータ解析を計画しています。&lt;br&gt;
+他のツールの出力と比較する為、annotation及びindexデータは"Ensembl release 72"を使用したいと考えています。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+Q1) そこで質問ですが、旧バージョンのannotation及びgenome indexをiGenome等でDLすることは可能でしょうか？&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+不可能であればEnsembl archiveのFTPサイトよりDLし、bowtie2でbuildしようかとも考えています。&lt;br&gt;
+annotationデータは、FTP内のGTFファイルを、indexデータはDNAのFASTAファイルをbuildして用いようと考えます。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+Q2) そこでさらに質問ですが、indexデータのbuildに当たり、全ゲノムのfaファイルは存在しないのでしょうか。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+今回の目的は全ゲノムを対象とするのですが、FTPサイトを見た所、各染色体別のfaファイルしか準備されていません。&lt;br&gt;
+これらを必要数つなぎ合わせてgenome indexを作成しても良いものでしょうか。&lt;/p&gt;
+&lt;p&gt;基本的な質問となり申し訳ありません。どちらか片方でもお答えくだされば幸いです。&lt;br&gt;
+どうぞよろしくお願い致します。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/824/tophat%E3%81%AEreference%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 22 May 2023 18:14:54 -0000</lastBuildDate></channel></rss>

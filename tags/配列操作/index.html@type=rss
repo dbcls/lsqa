@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With 配列操作</title><link>http://qa.lifesciencedb.jp/tags/%E9%85%8D%E5%88%97%E6%93%8D%E4%BD%9C/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;配列操作&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/%E9%85%8D%E5%88%97%E6%93%8D%E4%BD%9C/" rel="self"></atom:link><language>ja</language><lastBuildDate>Wed, 23 Feb 2011 02:27:40 +0900</lastBuildDate><item><title>indelを配列に反映させる</title><link>http://qa.lifesciencedb.jp/questions/328/indel%E3%82%92%E9%85%8D%E5%88%97%E3%81%AB%E5%8F%8D%E6%98%A0%E3%81%95%E3%81%9B%E3%82%8B</link><description>&lt;p&gt;現在、ある染色体の配列をfasta形式で持っているのですが、
+これにindelを反映させたいと考えています。&lt;/p&gt;
+&lt;p&gt;indelは、例えば、&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1239000base　　ATGGA　　insertion
+1240000base      GT　  deletion
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;という状態で、エクセル上に保存してあります。&lt;/p&gt;
+&lt;p&gt;最終的にfasta形式を変えないまま、数百個のindelを挿入あるいは欠失させたいのですが、
+どのような手段をとったらいいのでしょうか？&lt;/p&gt;
+&lt;p&gt;ソフト等の購入費用はありません。。。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">kenken</dc:creator><pubDate>Wed, 23 Feb 2011 02:27:40 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/328/indel%E3%82%92%E9%85%8D%E5%88%97%E3%81%AB%E5%8F%8D%E6%98%A0%E3%81%95%E3%81%9B%E3%82%8B</guid><category>配列操作</category></item></channel></rss>

@@ -1,0 +1,916 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>BMB2010 のNGS関連の発表 - #LSQA</title>
+        <meta name="description" content="２０１０年１２月７日から開催されるBMB2010（第33回日本分子生物学会年会・第83回日本生化学会大会　合同大会）でのNGSいわゆる新型シーケンサーを利用した発表をリストしたいと思います。下記のリストはどなたでも編集可能の状態（コミュニティーwiki）にしています。情報をお持ちの方はご協力おねがいします。
+
+１２月７日（一日目）
+
+1W20-p-1 DDBJ Sequence Read Archive (DRA) と DRA Annotation Pipeline: 新型シーケンサへの DDBJ の対応
+1W20-p-2 高速シークエンサーによるイネのゲノムワイドSNPの検出とその利用
+1W">
+        <meta name="keywords" content="bmb2010,ngs,第二世代シーケンサー">
+        
+        <link rel="canonical" href="../down/index.html" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="../../../questions/138/bmb2010-のngs関連の発表@type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="../../../upfiles/favicon.ico" />
+        <link href="../../../m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="../../../cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='../../../m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        
+        <script type='text/javascript' src='../../../m/qa.lifesciencedb.jp/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='../../../m/qa.lifesciencedb.jp/media/js/wmd/wmd.js'></script>
+        <link rel="stylesheet" type="text/css" href="../../../m/qa.lifesciencedb.jp/media/js/wmd/wmd.css" />
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[プレビューを隠す]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[プレビューを表示する]" : "[プレビューを隠す]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="../../../opensearch.xml.html" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="../../../index.html">
+				<img src="../../../upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="../../../account/yahoo/signin/index.html" >ログイン</a>  <a href="../../../about/index.html" >概要</a>  <a href="../../../faq/index.html" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="../../../questions/index.html" >質問</a><a id="nav_tags" href="../../../tags/index.html" >タグ</a><a id="nav_users" href="http://qa.lifesciencedb.jp/users/" >ユーザー</a><a id="nav_badges" href="../../../badges/index.html" >バッジ</a><a id="nav_unanswered" href="../../../questions/unanswered/index.html" >未回答</a>
+        <a id="nav_ask" href="../../../questions/ask/index.html" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="http://qa.lifesciencedb.jp/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="../down/index.html">BMB2010 のNGS関連の発表</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-138-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../138/up/index.html" rel="nofollow"> </a>
+<div id="post-138-score" class="post-score"
+    title="現在の投票数">
+    3
+</div>
+<a id="post-138-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../138/down/index.html" rel="nofollow"> </a>
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="../../../mark_favorite/138/index.html" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>２０１０年１２月７日から開催される<a href="http://www.aeplan.co.jp/bmb2010/program/">BMB2010（第33回日本分子生物学会年会・第83回日本生化学会大会　合同大会）</a>でのNGSいわゆる新型シーケンサーを利用した発表をリストしたいと思います。下記のリストはどなたでも編集可能の状態（コミュニティーwiki）にしています。情報をお持ちの方はご協力おねがいします。</p>
+<hr>
+<p>１２月７日（一日目）</p>
+<ol>
+<li>1W20-p-1 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=1W20-p-1&amp;btn_syousai=on">DDBJ Sequence Read Archive (DRA) と DRA Annotation Pipeline: 新型シーケンサへの DDBJ の対応</a></li>
+<li>1W20-p-2 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=1W20-p-2&amp;btn_syousai=on">高速シークエンサーによるイネのゲノムワイドSNPの検出とその利用</a></li>
+<li>1W20-p-3 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=1W20-p-3&amp;btn_syousai=on">全エキソン配列解析による同胞がん罹患症例の原因遺伝子変異の探索</a></li>
+<li>1W20-p-4 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=1W20-p-4&amp;btn_syousai=on">遺伝子発現と ChIP-seq データの統合による転写制御ネットワークの同定</a></li>
+<li>1W20-p-5 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=1W20-p-5&amp;btn_syousai=on">新型DNAシーケンサーからのデータ解析で統合データベースを使い倒すには</a></li>
+<li>1P-0198 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=1P-0198&amp;btn_syousai=on">Characterization of a novel esterase isolated from leaf-branch compost using metagenomic approach</a></li>
+<li>1P-0484 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=1P-0484&amp;btn_syousai=on">細胞移動時の接着斑のターンオーバーにおけるSlingshotファミリーの機能解析</a></li>
+<li>1P-0541 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=1P-0541&amp;btn_syousai=on">次世代シーケンサーを使用した姉妹染色分体間の接着形成に必要な因子の解析</a></li>
+<li>1P-0542 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=1P-0542&amp;btn_syousai=on">Characterization of Smc5/6 Complex in Human Cell Lines</a></li>
+<li>1P-0572 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=1P-0572&amp;btn_syousai=on">DNAトポイソメラーゼIIβの遠位通過部位マッピング法（eTIP-HiC）の開発</a></li>
+<li>1P-0626 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=1P-0626&amp;btn_syousai=on">大腸菌のPhoU変異によるポリリン酸蓄積とゲノム不安定化機構の解析</a></li>
+<li>1P-0678 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=1P-0678&amp;btn_syousai=on">骨芽細胞におけるアンドロゲン受容体高次機能解明</a></li>
+<li>1P-0698 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=1P-0698&amp;btn_syousai=on">DJ-1による転写調節を介したDNA修復との関連性</a></li>
+<li>1P-0709 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=1P-0709&amp;btn_syousai=on">次世代シークエンサーを用いたカニクイザルにおける遺伝子発現解析</a></li>
+<li>1P-0712 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=1P-0712&amp;btn_syousai=on">配列としての遺伝子発現データの解析とその可視化</a></li>
+<li>1P-0713 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=1P-0713&amp;btn_syousai=on">DDBJ Read Annotation Pipeline: 新型シーケンサ由来配列データ解析パイプライン</a></li>
+<li>1P-1035(1T11-8) <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=1T11-8%281P-1035%29&amp;btn_syousai=on">次世代シークエンサーによるパンデミック・インフルエンザウイルスA/H1N1/2009 の多種性解析</a></li>
+<li>1P-1164 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=1P-1164&amp;btn_syousai=on">複数系列の大腸菌の高温適応進化過程におけるゲノム変異解析</a></li>
+<li>1T6-4(2P-1185) Development and exploration of high-throughput nanoCAGE</li>
+</ol>
+<hr>
+<p>１２月８日（二日目）</p>
+<ol>
+<li>2W14-p-2 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2W14-p-2&amp;btn_syousai=on">次世代シーケンサーによるデータドリブン型トランスクリプトーム解析とネットワーク解析の可能性</a></li>
+<li>2W14-p-5 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2W14-p-5&amp;btn_syousai=on">統合DBプロジェクトで見えてきたもの―新センターで解決すべき課題―</a></li>
+<li>2S3-3 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2S3-3&amp;btn_syousai=on">クロマチン標識と転写制御</a></li>
+<li>2S3-4 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2S3-4&amp;btn_syousai=on">Highly sensitive whole-genome bisulfite sequencing for DNA methylome analysis</a></li>
+<li>2P-0091 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-0091&amp;btn_syousai=on">Genome-wide association of Smad2/Smad3 and HNF4α binding sites in HepG2 cells</a></li>
+<li>2P-0096(3T9-12) ChIP-sequence法を用いた血管内皮細胞におけるSmad1/5結合領域の網羅的解析</li>
+<li>2P-0437 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-0437&amp;btn_syousai=on"><em>Geobacillus kaustophilus</em> HTA426の3種のイノシトール脱水素酵素オルソログの発現と機能の解析</a></li>
+<li>2P-0442 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-0442&amp;btn_syousai=on">耐熱性のエタノール生産性<em>Zymomonas mobilis</em>における耐熱性分子機構の解析</a></li>
+<li>2P-0443 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-0443&amp;btn_syousai=on">Characterization of the pyripyropene A biosynthetic gene cluster from <em>Penicillium coprobium</em> and functional analysis</a></li>
+<li>2P-0547(2T8-3) GATA2 occupancies differ from each cell type, which is correlated with epigenetic modifications and gene expression profiles in cell-type specific manner.</li>
+<li>2P-0559(2T12-9) メダカ近交系統の交雑個体をモデルとした対立遺伝子間の不均等な転写量解析</li>
+<li>2P-0560 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-0560&amp;btn_syousai=on">Linking promoters to functional transcripts in small samples with nanoCAGE and CAGEscan</a></li>
+<li>2P-0604 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-0604&amp;btn_syousai=on">Bisulphite Shotgun Sequencing法によるマウス生殖細胞の包括的DNAメチル化解析</a></li>
+<li>2P-0605 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-0605&amp;btn_syousai=on">サブナノグラムからはじめるゲノム網羅的バイサルファイトシークエンシング</a></li>
+<li>2P-0607 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-0607&amp;btn_syousai=on">ヒトがん細胞におけるゲノムワイドなDNAメチル化様式の解析</a></li>
+<li>2P-0638 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-0638&amp;btn_syousai=on">マウス染色体7C snoRNAクラスター領域からのMBII-52バリアント発現プロファイル</a></li>
+<li>2P-0650 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-0650&amp;btn_syousai=on">湯野浜温泉源泉の未培養微生物群から得られた低分子RNAのメタトランスクリプトーム解析</a> #454</li>
+<li>2P-0755 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-0755&amp;btn_syousai=on">線虫<em>C. elegans</em>生殖巣形成リーダー細胞の停止機構の研究</a></li>
+<li>2P-0886 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-0886&amp;btn_syousai=on">脂肪細胞における転写因子p53の新たなエネルギー・細胞内代謝調節機能の探索</a></li>
+<li>2P-0947 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-0947&amp;btn_syousai=on">Investigating disorders of cognition with new technologies</a></li>
+<li>2P-0959 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-0959&amp;btn_syousai=on">Resequencing of dopamine receptor genes <em>DRD1</em> and <em>DRD2</em> as schizophrenia susceptibility genes revealed non-neutral process possibly associated with schizophrenia.</a></li>
+<li>2P-0986 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-0986&amp;btn_syousai=on">ヒト涙液常在菌メタゲノミクスのプロバイオティクス的応用と病理診断の可能性について</a></li>
+<li>2P-1015 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-1015&amp;btn_syousai=on">次世代シークエンサーを用いた16SrDNA配列による網羅的かつ定量的細菌叢解析</a></li>
+<li>2P-1185(1T6-4) Development and exploration of high-throughput nanoCAGE</li>
+<li>2P-1187 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-1187&amp;btn_syousai=on">Development of automatized CAGE cDNA preparation system for HeliScope</a></li>
+<li>2P-1188 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-1188&amp;btn_syousai=on">Development of capture-mRNA-seq protocol on Heliscope sequencing</a></li>
+<li>2P-1189 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-1189&amp;btn_syousai=on">Single molecule sequencing improves quantitative expression profiling with CAGE with reduced RNA amount</a> </li>
+<li>2P-1190 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-1190&amp;btn_syousai=on">Reduction of non-insert sequence reads by LNA oligonucleotide for small RNA deep sequencing</a></li>
+<li>2P-1191 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-1191&amp;btn_syousai=on">Coding/Non-coding RNAプロファイリングの原理と実際</a></li>
+<li>2P-1193 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-1193&amp;btn_syousai=on">Whole genome sequencing of salt-tolerant mutant of rice by next generation sequencing technology</a></li>
+<li>2P-1194 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-1194&amp;btn_syousai=on">Detection of base-substitutions in ENU mouse mutagenesis by next generation sequencers</a></li>
+<li>2P-1196 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-1196&amp;btn_syousai=on">The Soil Transcriptomic Study: How Far We Can Go</a> #illumina</li>
+<li>2P-1197 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-1197&amp;btn_syousai=on">次世代シーケンシングによる新規微生物ゲノム解析におけるアセンブリ手法の比較</a></li>
+<li>2P-1202 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-1202&amp;btn_syousai=on">次世代シーケンサデータを活用するための目次サイトの構築</a></li>
+<li>2P-1203 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-1203&amp;btn_syousai=on">DDBJ Sequence Read Archive / DDBJ Omics Archive</a></li>
+<li>2P-1218 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-1218&amp;btn_syousai=on">レトロウィルスおよびDNA 型トランスポゾンベクターのゲノムワイドな挿入部位の比較解析</a></li>
+<li>2P-1259 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-1259&amp;btn_syousai=on">Truncation of HMGB1 aptamer via <em>in vitro-in silico</em> process and its quantitative application</a></li>
+<li>2P-1261 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-1261&amp;btn_syousai=on">Screening for oligonucleotide sequences of SELEX process using next-generation sequencer.</a></li>
+<li>2P-1278 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=2P-1278&amp;btn_syousai=on">次世代シーケンサを用いた網羅的かつ精度の高い SNP と Indel の同定</a></li>
+<li>2P-1294 次世代シーケンスデータによる”軟体動物におけるダイナックなゲノム構造の進化” の解析</li>
+</ol>
+<hr>
+<p>１２月９日（三日目）</p>
+<ol>
+<li>3W16-6 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3W16-6&amp;btn_syousai=on">動脈硬化誘導刺激に応じて血管内皮細胞で複数遺伝子を同時に転写する装置の同定</a></li>
+<li>3P-0064(3T8-4)  Release of alkaline phosphatase caused by PIGV mutations in patients with Hyperphosphatasia-Mental Retardation syndrome (HPMR), recently found second inherited GPI anchor deficiency.</li>
+<li>3P-0969(<strong>4</strong>T4-11)  Transcriptional Consequences of Genomic Structural Aberrations in Breast Cancer</li>
+<li>3P-1033(3T11-5)  Ikarosにより制御されるT細胞分化とリンパ腫発症に関わる遺伝子プログラム</li>
+<li>3P-0387 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-0387&amp;btn_syousai=on">Genome-wide analysis of thermal adaptation mechanism of <em>Acetobacter pasteurianus</em> SKU1108 using next generation genome sequencer</a></li>
+<li>3P-0551 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-0551&amp;btn_syousai=on">Updated genome information of <em>Lotus japonicus</em> and status of legume comparative genomics</a></li>
+<li>3P-0556 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-0556&amp;btn_syousai=on">ツリミミズゲノムの繰り返し配列解析</a></li>
+<li>3P-0562 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-0562&amp;btn_syousai=on">次世代シークエンサーを用いた植物の大規模なゲノム解析</a></li>
+<li>3P-0563 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-0563&amp;btn_syousai=on">高速シークエンサーを用いたイネ近縁種の比較ゲノム解析</a></li>
+<li>3P-0564 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-0564&amp;btn_syousai=on">次世代シークエンサーRoche FLXを用いたMHCタイピング法の試み</a> #454</li>
+<li>3P-0565 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-0565&amp;btn_syousai=on">SOLiDシステムを用いた日本人BACクローンの解析</a></li>
+<li>3P-0566 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-0566&amp;btn_syousai=on">全ゲノム塩基配列解析による酒米品種「雄町」と「日本晴」間の多型検出</a></li>
+<li>3P-0567 <a href="http://share.ynacom.jp/bmb2010abst/index.php?p_no=3P-0567&amp;btn_syousai=on">次世代シーケンサーを用いたタラバエビ類のトランスクリプトーム解析</a></li>
+<li>3P-0568 <a href="http://share.ynacom.jp/bmb2010abst/index.php?p_no=3P-0568&amp;btn_syousai=on">High throughput sequencing of the Takifugu rubripes and the Oryzias latipes small RNAs</a></li>
+<li>3P-0569 <a href="http://share.ynacom.jp/bmb2010abst/index.php?p_no=3P-0568&amp;btn_syousai=on">和牛（黒毛和種）の全ゲノム解析</a></li>
+<li>3P-0570 <a href="http://share.ynacom.jp/bmb2010abst/index.php?p_no=3P-0568&amp;btn_syousai=on">全ゲノム解析のためのSOLiD4次世代シーケンサシステムの評価</a></li>
+<li>3P-0571 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-0571&amp;btn_syousai=on">SOLiD4を用いた泡盛黒麹菌株の遺伝子比較</a></li>
+<li>3P-0572 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-0572&amp;btn_syousai=on">次世代シーケンサを用いた紅麹菌のゲノム解析</a></li>
+<li>3P-0573 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-0573&amp;btn_syousai=on">次世代シークエンサーを用いたカニクイザルにおけるExome変異検出法の確立</a></li>
+<li>3P-0574 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-0574&amp;btn_syousai=on">次世代シーケンサーのための微生物ゲノム変異解析パイプラインの構築</a></li>
+<li>3P-0577<a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-0574&amp;btn_syousai=on">アピコンプレクサ原虫のオリゴキャップcDNAを用いたゲノムアノテーションの改良とIllumina GAを用いた転写開始点解析</a></li>
+<li>3P-0692 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-0692&amp;btn_syousai=on">大量並列シークエンス技術を用いた<em>Entamoeba invadens</em> 遺伝子の転写開始地点の解析</a></li>
+<li>3P-0693 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-0693&amp;btn_syousai=on">DBTSSを利用した双方向プロモータの解析</a></li>
+<li>3P-0694 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-0694&amp;btn_syousai=on">DNA一次配列からの転写活性化能予測</a></li>
+<li>3P-0711 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-0711&amp;btn_syousai=on">in vitroヌクレオソームポジショニングモデルによる転写因子結合サイトの推定</a></li>
+<li>3P-0740 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-0740&amp;btn_syousai=on">The analysis of chromatin interaction mediated by p53 using next-generation sequencer</a></li>
+<li>3P-0758 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-0758&amp;btn_syousai=on">左右相称動物で進化的に保存されたmiRNAとその起源の解析</a></li>
+<li>3P-0775 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-0775&amp;btn_syousai=on">Small RNomicsにより新規に同定された大腸菌低分子RNA</a></li>
+<li>3P-0804 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-0804&amp;btn_syousai=on">ヒト腸内細菌叢メタゲノム研究と微生物ゲノム解析</a></li>
+<li>3P-0815 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-0815&amp;btn_syousai=on">環境ゲノム資源からの環境改善に役立つ有用タンパク質遺伝子セットの新規情報学的な手法による探索</a></li>
+<li>3P-0912 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-0912&amp;btn_syousai=on">ES specific transcription factors functions with the SWI/SNF chromatin remodeling factor CHD2 in Embryonic stem cells</a></li>
+<li>3P-0972 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-0972&amp;btn_syousai=on">長期培養により形質転換したヒト間葉系幹細胞のトランスクリプト−ム解析</a> #SOLiD</li>
+<li>3P-1138 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=3P-1138&amp;btn_syousai=on">DNAチップの互換性及び評価方法に関する標準化</a></li>
+</ol>
+<hr>
+<p>１２月１０日（四日目）</p>
+<ol>
+<li>4T4-11 Transcriptional Consequences of Genomic Structural Aberrations in Breast Cancer</li>
+<li>4T12-1(4P-0811) A comprehensive survey of 3' animal miRNA modification events and a possible role for 3' adenylation in modulating miRNA targeting effectiveness</li>
+<li>4T19-5(4P-1194) Assessment of several methods for quantitative analysis of microbial composition in human gut microbiota</li>
+<li>4T19-9(4P-1258) Genome-wide transcriptomics of individual promoters in mouse embryonic fibroblast, iPS, and embryonic stem cells</li>
+<li>4S13-5 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4S13-5&amp;btn_syousai=on">CLV3 peptide signaling in meristem maintenance</a></li>
+<li>4W11-8 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4W11-8&amp;btn_syousai=on">"Cistrome" of the TGF-β-Smad signaling pathway</a></li>
+<li>4P-0712 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-0712&amp;btn_syousai=on">低酸素下におけるヒストン修飾酵素を介した遺伝子制御</a></li>
+<li>4P-0781 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-0781&amp;btn_syousai=on">primary piRNA生合成に必須な細胞質顆粒構造体Yb bodyの機能解析</a></li>
+<li>4P-0808 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-0808&amp;btn_syousai=on">微量RNAからの次世代シークエンサーライブラリー構築法の改善</a></li>
+<li>4P-0809 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-0809&amp;btn_syousai=on">腫瘍バイオマーカーとなる低分子RNA探索における次世代シークエンサーの応用と展望</a></li>
+<li>4P-0810 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-0810&amp;btn_syousai=on">Cross-mapping and the identification of editing sites in mature microRNAs in high-throughput sequencing libraries</a></li>
+<li>4P-0812 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-0812&amp;btn_syousai=on"><em>In vitro</em> virus法と高速シーケンサーの融合によるタンパク質間相互作用の高効率な検出</a></li>
+<li>4P-0829 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-0829&amp;btn_syousai=on">ヨコヅナクマムシにおけるアルビノ変異体の極限環境耐性</a></li>
+<li>4P-0831 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-0831&amp;btn_syousai=on">Sequence analysis of the "neural communication system" related genes of salamander</a></li>
+<li>4P-1141 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-1141&amp;btn_syousai=on">ホールエクソンキャプチャーによる歌舞伎メーキャップ症候群の解析</a></li>
+<li>4P-1169 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-1169&amp;btn_syousai=on">枯草菌の縮小ゲノム株の全ゲノム解析</a></li>
+<li>4P-1170 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-1170&amp;btn_syousai=on">微生物ゲノムアノテーションパイプラインMiGAP2010</a></li>
+<li>4P-1171 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-1171&amp;btn_syousai=on">かずさアノテーションスイート：多様なゲノムアノテーションのための協働作業手法とツールの開発</a></li>
+<li>4P-1172 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-1172&amp;btn_syousai=on">文献情報に基づくゲノムリアノテーション</a></li>
+<li>4P-1173 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-1173&amp;btn_syousai=on">DBCLS Galaxy: 生物データ解析，共有，公開のためのウェブフレームワーク</a></li>
+<li>4P-1174 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-1174&amp;btn_syousai=on">KaFTom: A Database for Full-length cDNA and Genome Structures in Tomato.</a></li>
+<li>4P-1179 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-1179&amp;btn_syousai=on">次世代シークエンサーを用いたプラナリア・トランスクリプトーム解析の基盤構築</a></li>
+<li>4P-1180 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-1180&amp;btn_syousai=on">次世代シークエンサを用いた比較トランスクリプトーム向けマイクロアレイの設計</a></li>
+<li>4P-1181 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-1181&amp;btn_syousai=on">次世代シーケンサによるHiCEPピーク（peak:gene）データベース作成法</a></li>
+<li>4P-1182 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-1182&amp;btn_syousai=on">頻出パターン解析の応用による次世代シークエンサ配列からの遺伝子重複同定</a></li>
+<li>4P-1183 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-1183&amp;btn_syousai=on">The FANTOM web resource: update</a></li>
+<li>4P-1184 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-1184&amp;btn_syousai=on">Definition of promotome-transcriptome architecture using CAGEscan</a></li>
+<li>4P-1193  <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-1193&amp;btn_syousai=on">次世代シーケンサーによる油田環境のメタゲノム解析 ～ de　novo　配列アセンブルの試み</a></li>
+<li>4P-1210 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-1210&amp;btn_syousai=on">統合DB-PJにおけるヒトゲノムバリエーションデータベースの開発</a></li>
+<li>4P-1221 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-1221&amp;btn_syousai=on">ZENBU - a system for secured scientific collaborations, data integration and omics visualization</a></li>
+<li>4P-1223 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-1223&amp;btn_syousai=on">次世代シーケンサーから得られた塩基配列の整列プログラムの開発</a></li>
+<li>4P-1224 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-1224&amp;btn_syousai=on">MULTI-GPUsによる高速配列解析環境の構築</a></li>
+<li>4P-1225 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-1225&amp;btn_syousai=on">GenomeTraveler2010: 新型シーケンサ出力配列による配列統合解析ソフトウェア</a></li>
+<li>4P-1226 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-1226&amp;btn_syousai=on">SOLiDのための大容量データに対応した高速ゲノムブラウザの開発</a></li>
+<li>4P-1239 <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-1239&amp;btn_syousai=on">Functional profiling of the E.coli genome during stationary phase by quantitative phenotyping</a></li>
+<li>4P-1274  <a href="http://share.dynacom.jp/bmb2010abst/index.php?p_no=4P-1274&amp;btn_syousai=on">次世代シーケンサーの登場に伴う倫理的・法的・社会的課題（ELSI）</a></li>
+</ol>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="../../../tags/bmb2010/index.html" class="post-tag"
+                                        title="'bmb2010'タグのついた質問をみる" rel="tag">bmb2010</a>
+                                
+                                    <a href="../../../tags/ngs/index.html" class="post-tag"
+                                        title="'ngs'タグのついた質問をみる" rel="tag">ngs</a>
+                                
+                                    <a href="../../../tags/第二世代シーケンサー/index.html" class="post-tag"
+                                        title="'第二世代シーケンサー'タグのついた質問をみる" rel="tag">第二世代シーケンサー</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">                            
+                                
+
+                                
+<div class="community-wiki">
+        This 質問 is marked "community wiki".
+        
+    </div>
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        質問日
+        <strong>Dec 06 '10 at 11:03</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/e585686707fd3a61b7096451ebf13012?s=32&amp;d=identicon&amp;r=g" alt="mn3's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><br/>
+    <span class="score" title="515 徳">515</span><span title="4 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="9 バッジ"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="22 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="http://qa.lifesciencedb.jp/revisions/138/">
+                edited
+                <strong>Dec 10 '10 at 18:29</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/0caa48bd66bda2f877dfa2d974a9acc7?s=32&amp;d=identicon&amp;r=g" alt="mya_'s gravatar image" />
+            <p><a href="http://qa.lifesciencedb.jp/users/18/mya_/">mya_ ♦</a><br/>
+            <span class="score" title="388 徳">388</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="10 バッジ"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="14 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">14</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+<div class="comments-container" id="comments-container-138">
+    
+        <a name="148"></a>
+        <div class="comment" id="comment-148">
+            <div id="post-148-score" class="comment-score"></div>
+            <div class="comment-text"><p>大変たすかります！！</p></div>
+            <div class="comment-info" id="comment-148-info">
+                
+                
+                
+                <span class="comment-age">(Dec 08 '10 at 15:59)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/28/suimye/">suimye</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/f763b758228ce9395b960221fbf54594?s=18&amp;d=identicon&amp;r=g" alt="suimye's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-138" class="comment-tools">
+    
+    
+</div>
+<div id="comment-138-form-container" class="comment-form-container">
+    
+</div>
+    
+                        </div>
+                        
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="../../../questions/138/bmb2010-のngs関連の発表@sort=登録順.html" title="最古の回答が最初に表示されます">回答順</a><a href="../../../questions/138/bmb2010-のngs関連の発表@sort=最新.html" title="最新の回答が最初に表示されます">最新</a><a href="../../../questions/138/bmb2010-のngs関連の発表@sort=投票.html" class="on" title="もっとも投票された回答が最初に表示されます">支持されている順</a></div>
+                </div>
+                
+  
+                
+                    <a name="139"></a>
+                    <div id="answer-container-139" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-139-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="index.html" rel="nofollow"> </a>
+<div id="post-139-score" class="post-score"
+    title="現在の投票数">
+    3
+</div>
+<a id="post-139-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../down/index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+        <a class="accept-answer on"></a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>すべてのNGS関連発表の要旨を抽出した PDF があるのですが、ライセンスがわからないので公開を控えています。BMB参加者のかたには送りますので dritoshi★gmail.com に連絡ください (★ を @ へ変換)</p>
+<p>とりあえず発表番号リストを張っておきます。気合のあるひとはタイトルを入れてくれると誰かが嬉しいかもしれません。適当に元エントリと統合してください。</p>
+<ul>
+<li>1T6-4(2P-1185)</li>
+<li>1T7-6(1P-1165)</li>
+<li>1T7-7(1P-1161)</li>
+<li>1T11-8(1P-1035)</li>
+<li>1W11-4</li>
+<li>1W11-8</li>
+<li>1W20-p-1</li>
+<li>1W20-p-2</li>
+<li>1W20-p-3</li>
+<li>1W20-p-4</li>
+<li>1W20-p-5</li>
+<li>1P-1035(1T11-8)</li>
+<li>1P-1161(1T7-7)</li>
+<li>1P-1164</li>
+<li>1P-1165(1T7-6)</li>
+<li>1P-0198</li>
+<li>1P-0541</li>
+<li>1P-0542</li>
+<li>1P-0572</li>
+<li>1P-0626</li>
+<li>1P-0666(2T12-8)</li>
+<li>1P-0678</li>
+<li>1P-0698</li>
+<li>1P-0709</li>
+<li>1P-0712</li>
+<li>1P-0713</li>
+<li>2T8-3(2P-0547)</li>
+<li>2T12-8(1P-0666)</li>
+<li>2T12-9(2P-0559)</li>
+<li>2S3-3</li>
+<li>2S3-4</li>
+<li>2W14-p-2</li>
+<li>2W14-p-5</li>
+<li>2P-0886</li>
+<li>2P-0947</li>
+<li>2P-0959</li>
+<li>2P-0986</li>
+<li>2P-1015</li>
+<li>2P-1164</li>
+<li>2P-1185(1T6-4)</li>
+<li>2P-1187</li>
+<li>2P-1189</li>
+<li>2P-1190</li>
+<li>2P-1191</li>
+<li>2P-1193</li>
+<li>2P-1194</li>
+<li>2P-1196</li>
+<li>2P-1197</li>
+<li>2P-1202</li>
+<li>2P-1203</li>
+<li>2P-1218</li>
+<li>2P-1259</li>
+<li>2P-1261</li>
+<li>2P-1278</li>
+<li>2P-0091</li>
+<li>2P-0096(3T9-12)</li>
+<li>2P-0437</li>
+<li>2P-0442</li>
+<li>2P-0443</li>
+<li>2P-0547(2T8-3)</li>
+<li>2P-0559(2T12-9)</li>
+<li>2P-0560</li>
+<li>2P-0604</li>
+<li>2P-0605</li>
+<li>2P-0607</li>
+<li>2P-0638</li>
+<li>2P-0650</li>
+<li>2P-0755</li>
+<li>3T8-4(3P-0064)</li>
+<li>3T11-5(3P-1033)</li>
+<li>3W16-6</li>
+<li>3P-0064(3T8-4)</li>
+<li>3P-0969(4T4-11)</li>
+<li>3P-1033(3T11-5)</li>
+<li>3P-1138</li>
+<li>3P-0387</li>
+<li>3P-0551</li>
+<li>3P-0556</li>
+<li>3P-0562</li>
+<li>3P-0563</li>
+<li>3P-0564</li>
+<li>3P-0565</li>
+<li>3P-0566</li>
+<li>3P-0567</li>
+<li>3P-0568</li>
+<li>3P-0569</li>
+<li>3P-0570</li>
+<li>3P-0571</li>
+<li>3P-0572</li>
+<li>3P-0573</li>
+<li>3P-0574</li>
+<li>3P-0577</li>
+<li>3P-0692</li>
+<li>3P-0693</li>
+<li>3P-0694</li>
+<li>3P-0711</li>
+<li>3P-0740</li>
+<li>3P-0758</li>
+<li>3P-0775</li>
+<li>3P-0804</li>
+<li>3P-0815</li>
+<li>3P-0912</li>
+<li>4T12-1(4P-0811)</li>
+<li>4T19-5(4P-1194)</li>
+<li>4T19-9(4P-1258)</li>
+<li>4T4-11(3P-0969)</li>
+<li>4S13-5</li>
+<li>4W11-8</li>
+<li>4P-1141</li>
+<li>4P-1169</li>
+<li>4P-1170</li>
+<li>4P-1171</li>
+<li>4P-1172</li>
+<li>4P-1174</li>
+<li>4P-1179</li>
+<li>4P-1180</li>
+<li>4P-1182</li>
+<li>4P-1183</li>
+<li>4P-1184</li>
+<li>4P-1193</li>
+<li>4P-1194(4T19-5)</li>
+<li>4P-1210</li>
+<li>4P-1221</li>
+<li>4P-1223</li>
+<li>4P-1224</li>
+<li>4P-1225</li>
+<li>4P-1226</li>
+<li>4P-1239</li>
+<li>4P-1258(4T19-9)</li>
+<li>4P-1274</li>
+<li>4P-0712</li>
+<li>4P-0781</li>
+<li>4P-0808</li>
+<li>4P-0809</li>
+<li>4P-0810</li>
+<li>4P-0811(4T12-1)</li>
+<li>4P-0812</li>
+<li>4P-0829</li>
+<li>4P-0831</li>
+</ul>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+<div class="community-wiki">
+        This 回答 is marked "community wiki".
+        
+    </div>
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Dec 06 '10 at 11:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/8cf15712e8fbabc8c619ed4e823b7a80?s=32&amp;d=identicon&amp;r=g" alt="dritoshi's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/11/dritoshi/">dritoshi ♦</a><br/>
+    <span class="score" title="196 徳">196</span><span title="1 バッジ"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="5 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="http://qa.lifesciencedb.jp/revisions/139/">
+                edited
+                <strong>Dec 06 '10 at 12:04</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-139">
+    
+</div>
+<div id="comment-tools-139" class="comment-tools">
+    
+    
+</div>
+<div id="comment-139-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="http://qa.lifesciencedb.jp/questions/138/answer/" method="post">
+            <div style="clear:both">
+            </div>
+            
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            あなたの回答
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea rows="10" cols="40" name="text" id="editor"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="リアルタイムMarkdown編集プレビューをトグルする">
+                                            プレビューをトグルする
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input type="checkbox" name="wiki" id="id_wiki" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="コミュニティー wikiオプションを選択した場合、質問と回答はポイントを生成せず、作者名は表示されない">
+                                            <label for="id_wiki">コミュニティー wiki</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+                        
+                        </table>  
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>                    
+                </div>
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">この質問をフォローする</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('../../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="../../../questions/138/bmb2010-のngs関連の発表@type=rss" title="subscribe to answers"></a>
+    回答
+</p><p><a class="feed-icon" style="background-image:url('../../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="../../../questions/138/bmb2010-のngs関連の発表@type=rss&amp;comments=yes" title="subscribe to comments and answers"></a>
+    回答とコメント
+</p>
+
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>ただいまベータテスト運用中です。そのために通知無くコンテンツの変更やサービスの停止変更されることがあります。</h2>
+<p>質問するなら<a href="../../../index.html">ライフサイエンスQA</a>。</p>
+<p>このページの<a href="../../../questions/138/bmb2010-のngs関連の発表@type=rss">RSSフィード</a></p>
+<p><a href="http://twitter.com/lsqa_all">@lsqa_all</a>・<a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a></p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <p>
+		タグ:
+    </p>
+    <p class="tags" >
+        
+        	<a href="../../../tags/ngs/index.html" 
+			title="タグ付けされた質問をみる'ngs'タグを利用している" 
+			rel="tag">ngs</a> <span class="tag-number">&#215;47</span><br/>
+        
+        	<a href="../../../tags/bmb2010/index.html" 
+			title="タグ付けされた質問をみる'bmb2010'タグを利用している" 
+			rel="tag">bmb2010</a> <span class="tag-number">&#215;4</span><br/>
+        
+        	<a href="../../../tags/第二世代シーケンサー/index.html" 
+			title="タグ付けされた質問をみる'第二世代シーケンサー'タグを利用している" 
+			rel="tag">第二世代シーケンサー</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        質問日: <strong title="2010-12-06 11:03:02.025536">Dec 06 '10 at 11:03</strong>
+    </p>
+    <p> 
+     	閲覧数: <strong>104,145 回</strong>
+    </p>
+    <p> 
+        最終更新日: <strong title="2010-12-10 18:29:08.375246">Dec 10 '10 at 18:29</strong>
+    </p>
+</div>
+
+
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>世界に広がるQAサイト</h2>
+<p><a href="http://biostar.stackexchange.com">バイオインフォマティクスのBioStar</a>・ <a href="http://I.SEQanswers.com">新型シーケンサーのSEQanswers</a>・ <a href="http://blueobelisk.shapado.com">オープンデータのBlueObelisk</a>・<a href="http://stackoverflow.com">プログラミングのstackoverflow</a>・ <a href="http://www.semanticoverflow.com">Semantic Overflow</a>・ <a href="http://stats.stackexchange.com/">Statistical Analysis</a>・ <a href="http://cstheory.stackexchange.com/">Theoretical Computer Science</a>・ <a href="http://chiebukuro.yahoo.co.jp/">Yahoo!知恵袋</a>・ <a href="http://okwave.jp/">OKWave</a> <a href="http://ja.wikipedia.org/wiki/Category:Q%26Aサイト">などなど</a></p>
+     </div>
+</div>
+
+<div class="boxC">
+    <h3 class="subtitle">関係した質問</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="../../107/down/index.html">NGS解析のn次解析の区分けについて</a>
+        </p>
+        
+        <p>
+            <a href="../../499/down/index.html">Celera WGA Assembler(CABOG)のインストールと使い方</a>
+        </p>
+        
+        <p>
+            <a href="../../289/down/index.html">次世代シーケンサのオープンなデータ</a>
+        </p>
+        
+        <p>
+            <a href="../../270/down/index.html">Transcriptome analysisとRNASeqの違いについて</a>
+        </p>
+        
+        <p>
+            <a href="../../508/down/index.html">NGSライブラリのPCR増幅</a>
+        </p>
+        
+        <p>
+            <a href="../../750/down/index.html">アライメントについて</a>
+        </p>
+        
+        <p>
+            <a href="../../314/down/index.html">FindPeaksの使い方</a>
+        </p>
+        
+        <p>
+            <a href="../../437/down/index.html">ノンモデル生物のmRNA精製でrRNAのコンタミをなるべく下げたい</a>
+        </p>
+        
+        <p>
+            <a href="../../77/down/index.html">BMB2010で紹介してもいいですか？</a>
+        </p>
+        
+        <p>
+            <a href="../../810/down/index.html">Trinityのアセンブリ結果の見方</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="../../../about/index.html" >概要</a> <span class="link-separator"> |</span> <a href="../../../faq/index.html" >よくある質問</a> <span class="link-separator"> |</span> <a href="../../../privacy/index.html" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="../../../m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

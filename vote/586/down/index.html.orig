@@ -1,0 +1,793 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Excel fileからBEDフォーマットのfileを作るには？ - #LSQA</title>
+        <meta name="description" content="NGSのdataやUnixコマンドなどほとんど触ったことがなかった初心者です。
+Excel fileで持っているゲノム領域の情報をBEDフォーマットのfileにしたいのですが、やり方がわかりません。アドバイスいただけましたら幸甚です。
+今、BEDToolsのcoverageBedのスクリプトを実行しようとしているのですが、read countを知りたい領域のBED fileがうまく出来ないために白紙の結果が得られてしまいます。具体的には、chrom　chromStart　chromEnd　name　score　strandの順に並んだExcel fileをタブ区切りテキスト(.txt)で保存し">
+        <meta name="keywords" content="bedtools,excel,file,bed,ngs">
+        
+        <link rel="canonical" href="http://qa.lifesciencedb.jp/questions/586/excel-file%E3%81%8B%E3%82%89bed%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%E3%81%AEfile%E3%82%92%E4%BD%9C%E3%82%8B%E3%81%AB%E3%81%AF" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/586/excel-file%E3%81%8B%E3%82%89bed%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%E3%81%AEfile%E3%82%92%E4%BD%9C%E3%82%8B%E3%81%AB%E3%81%AF?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon.ico" />
+        <link href="/m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='/m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/qa.lifesciencedb.jp/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/qa.lifesciencedb.jp/media/js/wmd/wmd.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/qa.lifesciencedb.jp/media/js/wmd/wmd.css" />
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[プレビューを隠す]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[プレビューを表示する]" : "[プレビューを隠す]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >ログイン</a>  <a href="/about/" >概要</a>  <a href="/faq/" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >質問</a><a id="nav_tags" href="/tags/" >タグ</a><a id="nav_users" href="/users/" >ユーザー</a><a id="nav_badges" href="/badges/" >バッジ</a><a id="nav_unanswered" href="/questions/unanswered/" >未回答</a>
+        <a id="nav_ask" href="/questions/ask/" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/586/excel-file%E3%81%8B%E3%82%89bed%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%E3%81%AEfile%E3%82%92%E4%BD%9C%E3%82%8B%E3%81%AB%E3%81%AF">Excel fileからBEDフォーマットのfileを作るには？</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-586-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/586/up/" rel="nofollow"> </a>
+<div id="post-586-score" class="post-score"
+    title="現在の投票数">
+    1
+</div>
+<a id="post-586-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/586/down/" rel="nofollow"> </a>
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/586/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>NGSのdataやUnixコマンドなどほとんど触ったことがなかった初心者です。
+Excel fileで持っているゲノム領域の情報をBEDフォーマットのfileにしたいのですが、やり方がわかりません。アドバイスいただけましたら幸甚です。</p>
+<p>今、BEDToolsのcoverageBedのスクリプトを実行しようとしているのですが、read countを知りたい領域のBED fileがうまく出来ないために白紙の結果が得られてしまいます。具体的には、chrom　chromStart　chromEnd　name　score　strandの順に並んだExcel fileをタブ区切りテキスト(.txt)で保存して名前を.bedに変えて領域のBED fileとして使ってみたのですが、BED fileとして認識されていないようでした。UCSCからとってきた遺伝子領域のBED fileではきちんとcoverageの結果が返ってくるので、.txt fileからBED fileをつくる方法がありそうなのは感じるのですが、どのようにしたらいいかわかりません。
+助けて頂けたら幸いです。</p>
+<p>ちなみに、以下の内容で領域を設定した場合を例に試しています。</p>
+<pre><code>chrVI    0  270148  NC_001138   0   +
+</code></pre>
+<p>よろしくお願いいたします。</p>
+<p>touran</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/bedtools/" class="post-tag"
+                                        title="'bedtools'タグのついた質問をみる" rel="tag">bedtools</a>
+                                
+                                    <a href="/tags/excel/" class="post-tag"
+                                        title="'excel'タグのついた質問をみる" rel="tag">excel</a>
+                                
+                                    <a href="/tags/file/" class="post-tag"
+                                        title="'file'タグのついた質問をみる" rel="tag">file</a>
+                                
+                                    <a href="/tags/bed/" class="post-tag"
+                                        title="'bed'タグのついた質問をみる" rel="tag">bed</a>
+                                
+                                    <a href="/tags/ngs/" class="post-tag"
+                                        title="'ngs'タグのついた質問をみる" rel="tag">ngs</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">                            
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        質問日
+        <strong>Apr 13 '12 at 12:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/3d1fd60002ba9e80972222bf3fce346e?s=32&amp;d=identicon&amp;r=g" alt="touran's gravatar image" />
+    <p><a href="/users/110/touran/">touran</a><br/>
+    <span class="score" title="15 徳">15</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 バッジ"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="/revisions/586/">
+                edited
+                <strong>May 24 '13 at 00:26</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/e585686707fd3a61b7096451ebf13012?s=32&amp;d=identicon&amp;r=g" alt="mn3's gravatar image" />
+            <p><a href="/users/2/mn3/">mn3 ♦♦</a><br/>
+            <span class="score" title="515 徳">515</span><span title="4 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="9 バッジ"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="22 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+<div class="comments-container" id="comments-container-586">
+    
+</div>
+<div id="comment-tools-586" class="comment-tools">
+    
+    
+</div>
+<div id="comment-586-form-container" class="comment-form-container">
+    
+</div>
+    
+                        </div>
+                        
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/586/excel-fileからbedフォーマットのfileを作るには?sort=登録順" title="最古の回答が最初に表示されます">回答順</a><a href="/questions/586/excel-fileからbedフォーマットのfileを作るには?sort=最新" title="最新の回答が最初に表示されます">最新</a><a href="/questions/586/excel-fileからbedフォーマットのfileを作るには?sort=投票" class="on" title="もっとも投票された回答が最初に表示されます">支持されている順</a></div>
+                </div>
+                
+  
+                
+                    <a name="587"></a>
+                    <div id="answer-container-587" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-587-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/587/up/" rel="nofollow"> </a>
+<div id="post-587-score" class="post-score"
+    title="現在の投票数">
+    2
+</div>
+<a id="post-587-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/587/down/" rel="nofollow"> </a>
+                                        
+
+
+    
+        <a class="accept-answer on"></a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>coverageBedを実行する時に-sオプションを付けておりますか？</p>
+<p>結果が、白紙になる理由は、下の原因では説明がつかないのですが、
+問題の原因は、windows依存の改行コードに由来する可能性があります。</p>
+<p>質問文中にあるデータをExcelに貼りつけて、もう1行テストレコードを作り、
+"dataFromExcel.bed"という名前で保存して、実行してみました。</p>
+<p>以下、windowsマシンのcygwin上でインストールしたBEDtoolsでcoverageBedを実行した結果です。
+-aと-bは同じファイルを渡しています。</p>
+<pre><code>$ cat data/dataFromExcel.bed
+chrVI   0       270148  NC_001138       0       +
+chrVI   100     300     test1   0       +
+$ sed -n "l" data/dataFromExcel.bed
+chrVI\t0\t270148\tNC_001138\t0\t+$
+chrVI\t100\t300\ttest1\t0\t+$
+$ ./BEDTools-Version-2.14.3/bin/coverageBed.exe -a data/dataFromExcel.bed -b data/dataFromExcel.bed
+chrVI   2       270148  270148131.0000000       +
+chrVI   200     200     200t1   1.0000000
+</code></pre>
+<p>上記の結果は、coverageBedの本来の挙動からするとおかしな結果です。
+上記の結果中のタブ文字(\tに変換)や、windows改行コードに含まれるCR(\rに変換される)などの
+特殊文字を表示してみると以下のようになっています。</p>
+<pre><code>$ ./BEDTools-Version-2.14.3/bin/coverageBed.exe -a data/dataFromExcel.bed -b data/dataFromExcel.bed | sed -n "l"
+chrVI\t0\t270148\tNC_001138\t0\t+\r\t2\t270148\t270148\t1.0000000$
+chrVI\t100\t300\ttest1\t0\t+\r\t2\t200\t200\t1.0000000$
+</code></pre>
+<p>特殊文字の変換前の結果では、上記の"\r"のところから右側しか表示されていないことが分かるでしょうか。</p>
+<p>windowsのExcelでタブ区切りテキストとしてファイルを保存すると改行コードの中に"\r"という特殊文字が
+入ってしまうのですが、これは、BEDtoolsからすると文字として認識されてしまうので、
+結果、strandの列が"+\r"であるとみなされてしまうのだと思います。この状態で-sオプションを効かせると、
+同じstrandのデータが無いため、結果が0になったりする気がします。(おそらく)</p>
+<p>以下のsedコマンド操作で、改行文字を置換かけたあと、同じ操作を実行した所、挙動としてまともな結果が得られました。</p>
+<pre><code>$ sed 's/\r//' data/dataFromExcel.bed &gt; data/dataFromExcel.CRrm.bed
+$ ./BEDTools-Version-2.14.3/bin/coverageBed.exe -a data/dataFromExcel.CRrm.bed -b data/dataFromExcel.CRrm.bed
+chrVI   0       270148  NC_001138       0       +       2       270148  2701481.0000000
+chrVI   100     300     test1   0       +       2       200     200     1.0000000
+$ ./BEDTools-Version-2.14.3/bin/coverageBed.exe -a data/dataFromExcel.CRrm.bed -b data/dataFromExcel.CRrm.bed | sed -n "l"
+chrVI\t0\t270148\tNC_001138\t0\t+\t2\t270148\t270148\t1.0000000$
+chrVI\t100\t300\ttest1\t0\t+\t2\t200\t200\t1.0000000$
+</code></pre>
+<p>改行コードの変換のしかたについては、上記のsedをcygwin上で実行する他、</p>
+<p>私は、"<a href="http://sakura-editor.sourceforge.net/download.html">サクラエディタ</a>"などのエディタで
+正規表現置換で"\r"を空文字""に変換するなども良く使います。</p>
+<p>この辺の情報も参考になります。
+<a href="http://oshiete.goo.ne.jp/qa/856844.html">http://oshiete.goo.ne.jp/qa/856844.html</a>
+要はCR(キャリッジリターン)を除去できれば良いので選択肢はいろいろあるとは思います。
+試してみてはどうでしょう。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Apr 13 '12 at 13:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=32&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+    <p><a href="/users/23/nob_fj/">nob_fj ♦</a><br/>
+    <span class="score" title="507 徳">507</span><span title="8 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="16 バッジ"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="28 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">28</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="/revisions/587/">
+                edited
+                <strong>May 24 '13 at 00:27</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/e585686707fd3a61b7096451ebf13012?s=32&amp;d=identicon&amp;r=g" alt="mn3's gravatar image" />
+            <p><a href="/users/2/mn3/">mn3 ♦♦</a><br/>
+            <span class="score" title="515 徳">515</span><span title="4 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="9 バッジ"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="22 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-587">
+    
+        <a name="588"></a>
+        <div class="comment" id="comment-588">
+            <div id="post-588-score" class="comment-score"></div>
+            <div class="comment-text"><p>nob_fj ♦さま
+丁寧な回答ありがとうございました。strandの指定はしたりしなかったりしていましたが、結果は同じでしたので、エディタの問題であるというご指摘ごもっともです。
+MacOSXのターミナルを使っているのですが、テキストはテキストエディットを使って編集していました。
+それがいけなかったみたいです。おっしゃる通り、サクラエディタに似た”mi”というものを使って編集したらbed fileとして認識されて、無事カウントを得ることが出来ました。
+大変助かりました。</p></div>
+            <div class="comment-info" id="comment-588-info">
+                
+                
+                
+                <span class="comment-age">(Apr 13 '12 at 17:25)</span>
+                <a class="comment-user userinfo" href="/users/110/touran/">touran</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/3d1fd60002ba9e80972222bf3fce346e?s=18&amp;d=identicon&amp;r=g" alt="touran's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-587" class="comment-tools">
+    
+    
+</div>
+<div id="comment-587-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="590"></a>
+                    <div id="answer-container-590" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-590-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/590/up/" rel="nofollow"> </a>
+<div id="post-590-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-590-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/590/down/" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>私も改行コードが問題なのではないかと思います。<br>
+Macの場合でしたら簡便な方法として、Excelで保存したテキストファイルを<a href="http://www.mimikaki.net/">「mi」</a>などのテキストエディタで開いて、<br>
+文字コードをCR (Mac) からLF (UNIX) に変更後、上書き保存すると使えるようになると思います。</p>
+<p>あ、すれ違いでちょうど解決したところだったようですね(^ ^);</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Apr 13 '12 at 17:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/96937340ff51dd38b6844f522bb86980?s=32&amp;d=identicon&amp;r=g" alt="38brain's gravatar image" />
+    <p><a href="/users/52/38brain/">38brain</a><br/>
+    <span class="score" title="131 徳">131</span><span title="3 バッジ"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="3 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="/revisions/590/">
+                edited
+                <strong>Apr 13 '12 at 17:30</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-590">
+    
+        <a name="592"></a>
+        <div class="comment" id="comment-592">
+            <div id="post-592-score" class="comment-score"></div>
+            <div class="comment-text"><p>具体的な対処法を回答くださいましてありがとうございました。エディタを使うだけでいろいろ便利になることがわかり、個人的には非常にためになりました。</p></div>
+            <div class="comment-info" id="comment-592-info">
+                
+                
+                
+                <span class="comment-age">(Apr 13 '12 at 20:15)</span>
+                <a class="comment-user userinfo" href="/users/110/touran/">touran</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/3d1fd60002ba9e80972222bf3fce346e?s=18&amp;d=identicon&amp;r=g" alt="touran's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-590" class="comment-tools">
+    
+    
+</div>
+<div id="comment-590-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/586/answer/" method="post">
+            <div style="clear:both">
+            </div>
+            
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            あなたの回答
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea rows="10" cols="40" name="text" id="editor"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="リアルタイムMarkdown編集プレビューをトグルする">
+                                            プレビューをトグルする
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input type="checkbox" name="wiki" id="id_wiki" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="コミュニティー wikiオプションを選択した場合、質問と回答はポイントを生成せず、作者名は表示されない">
+                                            <label for="id_wiki">コミュニティー wiki</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+                        
+                        </table>  
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>                    
+                </div>
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">この質問をフォローする</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="/questions/586/excel-file%E3%81%8B%E3%82%89bed%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%E3%81%AEfile%E3%82%92%E4%BD%9C%E3%82%8B%E3%81%AB%E3%81%AF?type=rss" title="subscribe to answers"></a>
+    回答
+</p><p><a class="feed-icon" style="background-image:url('/m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="/questions/586/excel-file%E3%81%8B%E3%82%89bed%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%E3%81%AEfile%E3%82%92%E4%BD%9C%E3%82%8B%E3%81%AB%E3%81%AF?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    回答とコメント
+</p>
+
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>ただいまベータテスト運用中です。そのために通知無くコンテンツの変更やサービスの停止変更されることがあります。</h2>
+<p>質問するなら<a href="http://qa.lifesciencedb.jp">ライフサイエンスQA</a>。</p>
+<p>このページの<a href="?type=rss">RSSフィード</a></p>
+<p><a href="http://twitter.com/lsqa_all">@lsqa_all</a>・<a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a></p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <p>
+		タグ:
+    </p>
+    <p class="tags" >
+        
+        	<a href="/tags/ngs/" 
+			title="タグ付けされた質問をみる'ngs'タグを利用している" 
+			rel="tag">ngs</a> <span class="tag-number">&#215;47</span><br/>
+        
+        	<a href="/tags/bed/" 
+			title="タグ付けされた質問をみる'bed'タグを利用している" 
+			rel="tag">bed</a> <span class="tag-number">&#215;1</span><br/>
+        
+        	<a href="/tags/bedtools/" 
+			title="タグ付けされた質問をみる'bedtools'タグを利用している" 
+			rel="tag">bedtools</a> <span class="tag-number">&#215;1</span><br/>
+        
+        	<a href="/tags/excel/" 
+			title="タグ付けされた質問をみる'excel'タグを利用している" 
+			rel="tag">excel</a> <span class="tag-number">&#215;1</span><br/>
+        
+        	<a href="/tags/file/" 
+			title="タグ付けされた質問をみる'file'タグを利用している" 
+			rel="tag">file</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        質問日: <strong title="2012-04-13 12:24:00.919056">Apr 13 '12 at 12:24</strong>
+    </p>
+    <p> 
+     	閲覧数: <strong>14,598 回</strong>
+    </p>
+    <p> 
+        最終更新日: <strong title="2013-05-24 00:27:49.478970">May 24 '13 at 00:27</strong>
+    </p>
+</div>
+
+
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>世界に広がるQAサイト</h2>
+<p><a href="http://biostar.stackexchange.com">バイオインフォマティクスのBioStar</a>・ <a href="http://I.SEQanswers.com">新型シーケンサーのSEQanswers</a>・ <a href="http://blueobelisk.shapado.com">オープンデータのBlueObelisk</a>・<a href="http://stackoverflow.com">プログラミングのstackoverflow</a>・ <a href="http://www.semanticoverflow.com">Semantic Overflow</a>・ <a href="http://stats.stackexchange.com/">Statistical Analysis</a>・ <a href="http://cstheory.stackexchange.com/">Theoretical Computer Science</a>・ <a href="http://chiebukuro.yahoo.co.jp/">Yahoo!知恵袋</a>・ <a href="http://okwave.jp/">OKWave</a> <a href="http://ja.wikipedia.org/wiki/Category:Q%26Aサイト">などなど</a></p>
+     </div>
+</div>
+
+<div class="boxC">
+    <h3 class="subtitle">関係した質問</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/809/trinity%E3%81%AE%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E7%B5%90%E6%9E%9C%E3%81%AE%E8%A6%8B%E6%96%B9">Trinityのアセンブリ結果の見方</a>
+        </p>
+        
+        <p>
+            <a href="/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9">Celera WGA Assembler(CABOG)のインストールと使い方</a>
+        </p>
+        
+        <p>
+            <a href="/questions/311/findpeaks%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">FindPeaksの使い方</a>
+        </p>
+        
+        <p>
+            <a href="/questions/138/bmb2010-%E3%81%AEngs%E9%96%A2%E9%80%A3%E3%81%AE%E7%99%BA%E8%A1%A8">BMB2010 のNGS関連の発表</a>
+        </p>
+        
+        <p>
+            <a href="/questions/269/transcriptome-analysis%E3%81%A8rnaseq%E3%81%AE%E9%81%95%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">Transcriptome analysisとRNASeqの違いについて</a>
+        </p>
+        
+        <p>
+            <a href="/questions/507/ngs%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%81%AEpcr%E5%A2%97%E5%B9%85">NGSライブラリのPCR増幅</a>
+        </p>
+        
+        <p>
+            <a href="/questions/745/%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">アライメントについて</a>
+        </p>
+        
+        <p>
+            <a href="/questions/179/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF">次世代シーケンサのオープンなデータ</a>
+        </p>
+        
+        <p>
+            <a href="/questions/429/%E3%83%8E%E3%83%B3%E3%83%A2%E3%83%87%E3%83%AB%E7%94%9F%E7%89%A9%E3%81%AEmrna%E7%B2%BE%E8%A3%BD%E3%81%A7rrna%E3%81%AE%E3%82%B3%E3%83%B3%E3%82%BF%E3%83%9F%E3%82%92%E3%81%AA%E3%82%8B%E3%81%B9%E3%81%8F%E4%B8%8B%E3%81%92%E3%81%9F%E3%81%84">ノンモデル生物のmRNA精製でrRNAのコンタミをなるべく下げたい</a>
+        </p>
+        
+        <p>
+            <a href="/questions/227/c-value-%E3%81%8B%E3%82%89%E3%82%B2%E3%83%8E%E3%83%A0%E3%82%B5%E3%82%A4%E3%82%BA%E3%82%92%E6%8E%A8%E5%AE%9A%E3%81%99%E3%82%8B">C-value からゲノムサイズを推定する</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >概要</a> <span class="link-separator"> |</span> <a href="/faq/" >よくある質問</a> <span class="link-separator"> |</span> <a href="/privacy/" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="/m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

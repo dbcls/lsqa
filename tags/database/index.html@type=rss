@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With database</title><link>http://qa.lifesciencedb.jp/tags/database/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;database&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/database/" rel="self"></atom:link><language>ja</language><lastBuildDate>Fri, 10 May 2013 18:28:04 +0900</lastBuildDate><item><title>ENST00000254657.3のどっと３について</title><link>http://qa.lifesciencedb.jp/questions/671/enst00000254657-3%E3%81%AE%E3%81%A9%E3%81%A3%E3%81%A8%EF%BC%93%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;いつも大変お世話になっております。&lt;br&gt;
+Ensemblのtranscripts idについてお伺いしたいのですが、&lt;br&gt;
+ENST00000254657.3のようにドット３が付いているのは、&lt;br&gt;
+&lt;strong&gt;isoformのtranscriptsが何らかの要因で3回情報が更新されている、&lt;/strong&gt;&lt;br&gt;
+といった意味だとうろ覚えの記憶があるのですがお詳しいかたいらっしゃいますでしょうか。&lt;br&gt;
+ご回答、どうぞよろしくお願い申し上げます。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;suimye&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">suimye</dc:creator><pubDate>Fri, 10 May 2013 18:28:04 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/671/enst00000254657-3%E3%81%AE%E3%81%A9%E3%81%A3%E3%81%A8%EF%BC%93%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>database</category><category>id</category><category>ensembl</category></item><item><title>セントロメア配列を知りたい</title><link>http://qa.lifesciencedb.jp/questions/631/%E3%82%BB%E3%83%B3%E3%83%88%E3%83%AD%E3%83%A1%E3%82%A2%E9%85%8D%E5%88%97%E3%82%92%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84</link><description>&lt;p&gt;いつもお世話になっております。
+早速質問なのですが、マウスのセントロメアとペリセントロメアの配列が載っているデータベースもしくは論文をご存知の方がいらっしゃれば教えてください。自分なりに探したのですが分かりませんでした。
+それではよろしくお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">DEF</dc:creator><pubDate>Fri, 21 Sep 2012 14:52:40 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/631/%E3%82%BB%E3%83%B3%E3%83%88%E3%83%AD%E3%83%A1%E3%82%A2%E9%85%8D%E5%88%97%E3%82%92%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84</guid><category>セントロメア</category><category>配列</category><category>データベース</category><category>database</category></item><item><title>ゲノムインプリンティング領域のデータベース</title><link>http://qa.lifesciencedb.jp/questions/529/%E3%82%B2%E3%83%8E%E3%83%A0%E3%82%A4%E3%83%B3%E3%83%97%E3%83%AA%E3%83%B3%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E9%A0%98%E5%9F%9F%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9</link><description>&lt;p&gt;ゲノムインプリンティングの解析をするにあたり、
+正解データとして、実験的に証明されたインプリンティングの起こる領域のリストを
+手に入れたいと考えています。そこで、これらをまとめたデータベース
+（どのような時に、どの領域で、PatternalかMatternalか）を探していますが、
+この分野で頻繁に使われているデータベースはありますでしょうか？
+Googleで検索するといくらか引っ掛かるのですが、分野外なのでどれを
+使えばいいか迷っています。ご教授お願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tanakky</dc:creator><pubDate>Tue, 20 Sep 2011 23:37:35 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/529/%E3%82%B2%E3%83%8E%E3%83%A0%E3%82%A4%E3%83%B3%E3%83%97%E3%83%AA%E3%83%B3%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E9%A0%98%E5%9F%9F%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9</guid><category>ゲノムインプリンティング</category><category>database</category></item></channel></rss>

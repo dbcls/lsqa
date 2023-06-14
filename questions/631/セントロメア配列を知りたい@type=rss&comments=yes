@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: セントロメア配列を知りたい</title><link>http://qa.lifesciencedb.jp/questions/631/%E3%82%BB%E3%83%B3%E3%83%88%E3%83%AD%E3%83%A1%E3%82%A2%E9%85%8D%E5%88%97%E3%82%92%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84</link><description>&lt;p&gt;いつもお世話になっております。
+早速質問なのですが、マウスのセントロメアとペリセントロメアの配列が載っているデータベースもしくは論文をご存知の方がいらっしゃれば教えてください。自分なりに探したのですが分かりませんでした。
+それではよろしくお願いします。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/631/%E3%82%BB%E3%83%B3%E3%83%88%E3%83%AD%E3%83%A1%E3%82%A2%E9%85%8D%E5%88%97%E3%82%92%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84" rel="self"></atom:link><language>ja</language><lastBuildDate>Fri, 24 May 2013 00:21:32 +0900</lastBuildDate><item><title>Comment by mn3 on suimye's 回答</title><link>http://qa.lifesciencedb.jp/questions/631/%E3%82%BB%E3%83%B3%E3%83%88%E3%83%AD%E3%83%A1%E3%82%A2%E9%85%8D%E5%88%97%E3%82%92%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84#675</link><description>&lt;p&gt;&lt;a href="http://togotv.dbcls.jp/20110620.html#p01"&gt;UCSC Table Browserを使い倒す 2011&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mn3</dc:creator><pubDate>Fri, 24 May 2013 00:21:32 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/631/%E3%82%BB%E3%83%B3%E3%83%88%E3%83%AD%E3%83%A1%E3%82%A2%E9%85%8D%E5%88%97%E3%82%92%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84#675</guid></item><item><title>Answer by suimye</title><link>http://qa.lifesciencedb.jp/questions/631/%E3%82%BB%E3%83%B3%E3%83%88%E3%83%AD%E3%83%A1%E3%82%A2%E9%85%8D%E5%88%97%E3%82%92%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84/638</link><description>&lt;p&gt;こんにちは。&lt;br&gt;
+今検索した結果で、自分では試していないのですが、&lt;br&gt;
+UCSCのテーブルブラウザーを利用した方法がございました。&lt;br&gt;
+例は、hg19のセントロメア配列になっています。&lt;br&gt;
+&lt;a href="http://tinyurl.com/9tf7ugb"&gt;http://tinyurl.com/9tf7ugb&lt;/a&gt; &lt;br&gt;
+もしこれでお分かりになられないようでしたら、&lt;br&gt;
+後ほど解説させていただきます。&lt;br&gt;
+また、UCSCのテーブルブラウザーの使い方は、&lt;br&gt;
+私の記憶が確かなら、統合TVに方法が解説されていたように思います。&lt;br&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">suimye</dc:creator><pubDate>Wed, 24 Oct 2012 19:00:38 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/631/%E3%82%BB%E3%83%B3%E3%83%88%E3%83%AD%E3%83%A1%E3%82%A2%E9%85%8D%E5%88%97%E3%82%92%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84/638</guid></item></channel></rss>

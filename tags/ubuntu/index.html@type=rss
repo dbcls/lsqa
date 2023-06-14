@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With ubuntu</title><link>http://qa.lifesciencedb.jp/tags/ubuntu/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;ubuntu&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/ubuntu/" rel="self"></atom:link><language>ja</language><lastBuildDate>Wed, 18 Sep 2013 14:51:36 +0900</lastBuildDate><item><title>NGSデータ解析のためにMacにUbuntuをインストールする</title><link>http://qa.lifesciencedb.jp/questions/690/ngs%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90%E3%81%AE%E3%81%9F%E3%82%81%E3%81%ABmac%E3%81%ABubuntu%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B</link><description>&lt;p&gt;NGSデータ解析についてご教授いただけると幸いです。
+目的としましては、NGSデータを用いたゲノム解析のために、 Mac 64bits のPC をセットアップし、Linux OS Ubuntuをインストールする予定にしています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;どこのサイトからダウンロードが可能でしょうか？&lt;/li&gt;
+&lt;li&gt;またUbuntu64bits用は不具合が生じるとのうわさを耳にしましたが、動作状況
+   など、32bitsの方が良いなど、教えていただけると幸いです&lt;/li&gt;
+&lt;li&gt;もし不具合がある場合、64bitsマシンでも32bits用が動作するのでしょうか？&lt;/li&gt;
+&lt;li&gt;もしくはその他、お薦めを教えていただけると助かります。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;どうぞ宜しくお願いいたします。 &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">tomonari</dc:creator><pubDate>Wed, 18 Sep 2013 14:51:36 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/690/ngs%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90%E3%81%AE%E3%81%9F%E3%82%81%E3%81%ABmac%E3%81%ABubuntu%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B</guid><category>linux</category><category>mac</category><category>ngs</category><category>ubuntu</category></item></channel></rss>

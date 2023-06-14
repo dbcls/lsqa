@@ -1,0 +1,439 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Questions Tagged With ensembl - #LSQA</title>
+        <meta name="description" content="質問と回答と私">
+        <meta name="keywords" content="OSQA,CNPROG,forum,community,lifesciencedb.jp,DDBJ,PDBj,DBCLS,Cytoscape,NGS,ngs-field">
+        
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/tags/ensembl/?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon.ico" />
+        <link href="/m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='/m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >ログイン</a>  <a href="/about/" >概要</a>  <a href="/faq/" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >質問</a><a id="nav_tags" href="/tags/" >タグ</a><a id="nav_users" href="/users/" >ユーザー</a><a id="nav_badges" href="/badges/" >バッジ</a><a id="nav_unanswered" href="/questions/unanswered/" >未回答</a>
+        <a id="nav_ask" href="/questions/ask/" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+
+<div class="tabBar">
+    
+
+<div class="headQuestions">
+    
+        
+            
+                
+                    Questions Tagged With ensembl
+                
+            
+        
+    
+</div>
+    <a class="feed-icon" style="background-image:url('/m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');" href="/tags/ensembl/?type=rss" title="subscribe to question RSS feed"></a>
+    
+<div class="tabsA"><a href="/tags/ensembl/?sort=有効" class="on" title="最近更新された質問">有効</a><a href="/tags/ensembl/?sort=最新" title="最近尋ねられた質問">最新</a><a href="/tags/ensembl/?sort=ホット" title="最近２４時間でもっとも活発な質問">ホット</a><a href="/tags/ensembl/?sort=mostvoted" title="もっとも投票された質問">注目の質問</a></div>
+</div>
+<div id="listA">
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">2.5k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="いつも大変お世話になっております。
+Ensemblのtranscripts idについてお伺いしたいのですが、
+ENST00000254657.3のようにドット３が付いているのは、
+isoformのtranscriptsが何らかの要因で3回情報が更新されている、
+といった意味だとうろ覚えの記憶があるのですがお詳しいかたいらっしゃいますでしょうか。
+ご回答、どうぞよろしくお願い申し上げます。
+suimye" href="/questions/671/enst00000254657-3%E3%81%AE%E3%81%A9%E3%81%A3%E3%81%A8%EF%BC%93%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">ENST00000254657.3のどっと３について</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-05-12 10:50:36.961616">May 12 '13 at 10:50</span>
+            <a href="/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/database/" title="タグ付けされた質問をみる 'database' タグを利用している" rel="tag">database</a>
+            <a href="/tags/id/" title="タグ付けされた質問をみる 'id' タグを利用している" rel="tag">id</a>
+            <a href="/tags/ensembl/" title="タグ付けされた質問をみる 'ensembl' タグを利用している" rel="tag">ensembl</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  unanswered">
+            <div class="item-count">0</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">23k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="お世話になっております。
+マッピングする際のリファレンスについて質問です。
+一般的にマッピングする際には
+Humanでは
+Ensembl GRCh37
+NCBI 36 37
+UCSC 18 19
+や
+Mouseでは
+Ensemble NCBIM37
+NCBI 37
+UCSC mm9
+があると思いますが、皆さんは主にどれを使われていますでしょうか？ ブラウザではUCSCを使用しているものの、RNAのバリアントはEnsemblが情報が豊富ですし、今後、解析するに当たっては統一したいので迷っております。バージョンにつきましても古い方が枯れているという考え方があるのかも知りたいと思います。RNA-se" href="/questions/549/%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">リファレンスについて</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-12-02 08:04:19.198099">Dec 02 '11 at 08:04</span>
+            <a href="/users/68/gatapishi/">gatapishi</a><span class="score" title="71 信用度">71</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/ucsc/" title="タグ付けされた質問をみる 'ucsc' タグを利用している" rel="tag">ucsc</a>
+            <a href="/tags/ncbi/" title="タグ付けされた質問をみる 'ncbi' タグを利用している" rel="tag">ncbi</a>
+            <a href="/tags/reference/" title="タグ付けされた質問をみる 'reference' タグを利用している" rel="tag">reference</a>
+            <a href="/tags/ensembl/" title="タグ付けされた質問をみる 'ensembl' タグを利用している" rel="tag">ensembl</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">3.9k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="現在、chickinとhumanのSwiss-Prot IDとUniProtIDのデータベース（各700遺伝子リスト）を持っています。この中からOrthologous遺伝子を見つけたいと考えています。BioMartで変換できることは分かっているのですが、Swiss-ProtのIDをEnsemble IDに変換する方法が分かりません。BioMart以外でもOrthologous遺伝子の見つけ方をご存知の方がいたら教えてください。よろしくお願いします。" href="/questions/330/orthologous%E9%81%BA%E4%BC%9D%E5%AD%90%E3%81%AE%E6%A4%9C%E7%B4%A2%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">Orthologous遺伝子の検索方法について</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-03-24 15:45:53.442586">Mar 24 '11 at 15:45</span>
+            <a href="/users/28/suimye/">suimye</a><span class="score" title="296 信用度">296</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/biomart/" title="タグ付けされた質問をみる 'biomart' タグを利用している" rel="tag">biomart</a>
+            <a href="/tags/uniprot/" title="タグ付けされた質問をみる 'uniprot' タグを利用している" rel="tag">uniprot</a>
+            <a href="/tags/ensembl/" title="タグ付けされた質問をみる 'ensembl' タグを利用している" rel="tag">ensembl</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">12k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="データを解析する際にPerlとEnsembl APIを組み合わせて使用してみたいと考えております。システム構成としまして
+Macbook pro (SnowLeopard)
+Perl 5.13.9　(perlbrewでインストール済み)
+bioperl 1.6.1インストール済み
+MySQL5.5.8(64bit)をインストール済み（必要ないかもしれませんが）
+DBI はcpanでインストール済み
+まではうまくインストールができているようで、MySQLも起動できます。
+次に必要となる DBD:mysql をcpanを用いまして、インストールしたいとと思うのですがエラーがでました。
+そこで、DB" href="/questions/284/mac%E3%81%A7ensembl-api-%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE-dbd-mysql-%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">MacでEnsembl API を使用する際の DBD::mysql モジュールのインストール</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-02-02 02:21:37.227033">Feb 02 '11 at 02:21</span>
+            <a href="/users/68/gatapishi/">gatapishi</a><span class="score" title="71 信用度">71</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/api/" title="タグ付けされた質問をみる 'api' タグを利用している" rel="tag">api</a>
+            <a href="/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" title="タグ付けされた質問をみる 'インストール' タグを利用している" rel="tag">インストール</a>
+            <a href="/tags/bioperl/" title="タグ付けされた質問をみる 'bioperl' タグを利用している" rel="tag">bioperl</a>
+            <a href="/tags/ensembl/" title="タグ付けされた質問をみる 'ensembl' タグを利用している" rel="tag">ensembl</a>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+    <div class="boxC"><div class="questions-count">
+        4<span style="color:black;font-size:14px;margin-left:5px">questions tagged <span class="tag">ensembl</span></span></div><div class="questions-count">
+        4<span style="color:black;font-size:14px;margin-left:5px">回答</span></div><div><p class="nomargin"><strong>最近更新された</strong>質問
+        </p></div></div>
+    
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>ただいまベータテスト運用中です。そのために通知無くコンテンツの変更やサービスの停止変更されることがあります。</h2>
+<p>質問するなら<a href="http://qa.lifesciencedb.jp">ライフサイエンスQA</a>。</p>
+<p>このページの<a href="?type=rss">RSSフィード</a></p>
+<p><a href="http://twitter.com/lsqa_all">@lsqa_all</a>・<a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a></p>
+     </div>
+</div>
+
+    
+
+
+
+
+    
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>世界に広がるQAサイト</h2>
+<p><a href="http://biostar.stackexchange.com">バイオインフォマティクスのBioStar</a>・ <a href="http://I.SEQanswers.com">新型シーケンサーのSEQanswers</a>・ <a href="http://blueobelisk.shapado.com">オープンデータのBlueObelisk</a>・<a href="http://stackoverflow.com">プログラミングのstackoverflow</a>・ <a href="http://www.semanticoverflow.com">Semantic Overflow</a>・ <a href="http://stats.stackexchange.com/">Statistical Analysis</a>・ <a href="http://cstheory.stackexchange.com/">Theoretical Computer Science</a>・ <a href="http://chiebukuro.yahoo.co.jp/">Yahoo!知恵袋</a>・ <a href="http://okwave.jp/">OKWave</a> <a href="http://ja.wikipedia.org/wiki/Category:Q%26Aサイト">などなど</a></p>
+     </div>
+</div>
+
+    
+
+
+
+    <div class="boxC">
+        <h3 class="subtitle">タグ</h3>
+        <div class="tags" id="recent-tags">
+            
+                <a rel="tag" title="'ncbi'タグづけられた質問をみる"  href="/tags/ncbi/">ncbi</a>
+                <span class="tag-number">&#215; 6</span>
+                <br />
+            
+                <a rel="tag" title="'ucsc'タグづけられた質問をみる"  href="/tags/ucsc/">ucsc</a>
+                <span class="tag-number">&#215; 5</span>
+                <br />
+            
+                <a rel="tag" title="'ensembl'タグづけられた質問をみる"  href="/tags/ensembl/">ensembl</a>
+                <span class="tag-number">&#215; 4</span>
+                <br />
+            
+                <a rel="tag" title="'database'タグづけられた質問をみる"  href="/tags/database/">database</a>
+                <span class="tag-number">&#215; 3</span>
+                <br />
+            
+                <a rel="tag" title="'reference'タグづけられた質問をみる"  href="/tags/reference/">reference</a>
+                <span class="tag-number">&#215; 3</span>
+                <br />
+            
+                <a rel="tag" title="'api'タグづけられた質問をみる"  href="/tags/api/">api</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'biomart'タグづけられた質問をみる"  href="/tags/biomart/">biomart</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'bioperl'タグづけられた質問をみる"  href="/tags/bioperl/">bioperl</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'id'タグづけられた質問をみる"  href="/tags/id/">id</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'uniprot'タグづけられた質問をみる"  href="/tags/uniprot/">uniprot</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'インストール'タグづけられた質問をみる"  href="/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/">インストール</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+        </div>
+    </div>
+
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+    <div class="pager"></div>
+    <div class="pagesize"><div class="paginator"><span class="text">ページあたりの投稿数</span><span class="page"><a href="/tags/ensembl/?sort=有効&pagesize=15">15</a></span><span class="curr">30</span><span class="page"><a href="/tags/ensembl/?sort=有効&pagesize=50">50</a></span></div></div>
+
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >概要</a> <span class="link-separator"> |</span> <a href="/faq/" >よくある質問</a> <span class="link-separator"> |</span> <a href="/privacy/" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="/m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+        
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

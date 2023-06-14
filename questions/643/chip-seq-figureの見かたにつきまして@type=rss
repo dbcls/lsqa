@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: ChIP-seq figureの見かたにつきまして</title><link>http://qa.lifesciencedb.jp/questions/643/chip-seq-figure%E3%81%AE%E8%A6%8B%E3%81%8B%E3%81%9F%E3%81%AB%E3%81%A4%E3%81%8D%E3%81%BE%E3%81%97%E3%81%A6</link><description>&lt;p&gt;論文のChIP-seq結果をまとめたfigureの解釈に関する質問です。
+自分ではChIP-seqを行ったことがなく、データ処理についての経験がありません。&lt;/p&gt;
+&lt;p&gt;具体的にはhistoneのChIP-seqを行い、転写開始点(TSS)前後におけるhistone variantの分布を示したという図について縦軸（normalized reads; RRM）の値をどう解釈してよいのかが分かりません。
+本分からざっくりと意味はわかり、グラフのピークが示す山型を見ればよいと思うのですが、実際にどういう処理をして縦軸がだされたのか、その値は何を意味するのかが理解できません。
+こういうグラフを描くことについての計算方法や解釈を示した論文がありましたらご教示いただけると大変ありがたいです。
+よろしくお願いいたします。&lt;/p&gt;
+&lt;p&gt;以下に具体的な例を挙げました。
+PubMed Centralでfree accessできる論文ですと、&lt;a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125718/"&gt;PMC3125718&lt;/a&gt;の&lt;a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125718/figure/F1/"&gt;Figure 1&lt;/a&gt;のような図です。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/643/chip-seq-figure%E3%81%AE%E8%A6%8B%E3%81%8B%E3%81%9F%E3%81%AB%E3%81%A4%E3%81%8D%E3%81%BE%E3%81%97%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 20 Nov 2012 18:06:54 +0900</lastBuildDate><item><title>Answer by suimye</title><link>http://qa.lifesciencedb.jp/questions/643/chip-seq-figure%E3%81%AE%E8%A6%8B%E3%81%8B%E3%81%9F%E3%81%AB%E3%81%A4%E3%81%8D%E3%81%BE%E3%81%97%E3%81%A6/644</link><description>&lt;p&gt;こんばんは。&lt;br&gt;
+Peak regionのread数分布を一番始めにみた論文はどれなのかは知らないですが、&lt;br&gt;
+とりあえずくだんのFigureの作成の具体的な方法は、&lt;br&gt;
+ 1. ある点(たとえばTSS)を基準としたゲノム領域のセットをつくる（遺伝子1000個のTSSまわり from -2000 to 100）&lt;br&gt;
+ 2. この1000配列にmappingされるreadの数をwindowサイズごとに計算する(ご案内いただいた論文では1bpごとに計算している)。&lt;br&gt;
+ 3. 異なるChIP-Seqごとにtotalリード数が違うので、比較する場合は、totalread数で正規化する。&lt;br&gt;
+3を行うことで、論文のy軸はとても小さな値になっていますよね。&lt;br&gt;
+その様子を図に描いてみました。&lt;br&gt;
+windowサイズのところは、色々工夫ができるので論文によってはsliding windowを overlapでやることで、&lt;br&gt;
+滑らかにしているものもあります。&lt;br&gt;
+図は、いまテキトウにつくってみたものなので、あんまりよろしくないですが、&lt;br&gt;
+直感的な理解にはつながるとおもってつくりました。&lt;br&gt;
+&lt;img alt="alt text" src="/upfiles/test.jpg"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">suimye</dc:creator><pubDate>Tue, 20 Nov 2012 18:06:54 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/643/chip-seq-figure%E3%81%AE%E8%A6%8B%E3%81%8B%E3%81%9F%E3%81%AB%E3%81%A4%E3%81%8D%E3%81%BE%E3%81%97%E3%81%A6/644</guid></item></channel></rss>

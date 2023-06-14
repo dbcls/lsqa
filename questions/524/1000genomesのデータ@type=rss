@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: 1000Genomesのデータ</title><link>http://qa.lifesciencedb.jp/questions/524/1000genomes%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF</link><description>&lt;p&gt;数日来twitter上で話題になっていた1000 Genomesのデータですが、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NCBI or EBI にしかデータがない&lt;/li&gt;
+&lt;li&gt;アライメントしたものを .bam ファイルで公開&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;という状態で、例えば99人の日本人データで容量が1.7TBほどもあり、これらはいずれ dbSNP に吸収されるのかもしれませんが, 今のところ whole exome 1179人分は .bam での公開で、ダウンロードが大変困難な状況です。&lt;/p&gt;
+&lt;p&gt;関係する研究者がほぼ同じ処理をしてるので、支援するという観点では資する所があると思います。ですので、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;日本国内でダウンロードサイトがある&lt;/li&gt;
+&lt;li&gt;また1000g の性質から .bam からさらに変異を取り出した .pileup/.vcf データも入手可にする&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;などの対策はできませんでしょうか？ &lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/524/1000genomes%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 22 May 2023 18:28:49 -0000</lastBuildDate></channel></rss>

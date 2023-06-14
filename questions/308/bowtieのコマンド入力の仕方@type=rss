@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: Bowtieのコマンド入力の仕方</title><link>http://qa.lifesciencedb.jp/questions/308/bowtie%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E5%85%A5%E5%8A%9B%E3%81%AE%E4%BB%95%E6%96%B9</link><description>&lt;p&gt;&lt;a href="http://bowtie-bio.sourceforge.net/index.shtml"&gt;Bowtie&lt;/a&gt;でマッピングをwindowsのcygwin上で行いたいと考えていますが、
+入力の仕方がよくわかりません。
+教えていただけないでしょうか。&lt;/p&gt;
+&lt;p&gt;現在までにBowtieのPrebuild indexをダウンロードし、解凍後、
+Bowtie ファイルのindexesに移し、
+またNCBIのSRAファイルをfastqファイルに変換するところまでは行っております。&lt;/p&gt;
+&lt;p&gt;どのファイルをどこに配置し、
+またどのようなコマンドを入力したらいいのかが良くわかりません。&lt;/p&gt;
+&lt;p&gt;Build 37のゲノムに対して、fastqファイルを複数同時に複数マッピングしたい状況です。
+用いるデータは、基本的には、illumina 100baseのもので、4塩基の違いまで許容することを考えています。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/308/bowtie%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E5%85%A5%E5%8A%9B%E3%81%AE%E4%BB%95%E6%96%B9" rel="self"></atom:link><language>ja</language><lastBuildDate>Wed, 09 Feb 2011 11:53:42 +0900</lastBuildDate><item><title>Answer by Tanakky</title><link>http://qa.lifesciencedb.jp/questions/308/bowtie%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E5%85%A5%E5%8A%9B%E3%81%AE%E4%BB%95%E6%96%B9/312</link><description>&lt;p&gt;少し間違いがありました。&lt;code&gt;-n&lt;/code&gt;オプションは0-3までしか取れないので&lt;code&gt;-n 4&lt;/code&gt;だとエラーが出ると思います。
+index fileが開けない理由としては、以下のことが考えられます。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Index filesのダウンロード、解凍時に何らかのエラーが起こった（ファイルが壊れた。）&lt;/li&gt;
+&lt;li&gt;Bowtieのサイトにあるindexファイルは古いversionで作られたファイルで、最新版bowtieに対応していない。
+（ただbowtieのサイトでは互換性はあるようなことが書いてありましたが・・・）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;1に関してはもう一度ダウンロードをしなおしてやれば解決できます。2の場合はbowtie-buildで自分で
+indexファイルを作成することで解決できます。
+私の手元にあったbowtieはversionが0.12.2でしたが、それではダウンロードしたindex fileでうまくいきました。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tanakky</dc:creator><pubDate>Wed, 09 Feb 2011 11:53:42 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/308/bowtie%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E5%85%A5%E5%8A%9B%E3%81%AE%E4%BB%95%E6%96%B9/312</guid></item><item><title>Answer by dna</title><link>http://qa.lifesciencedb.jp/questions/308/bowtie%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E5%85%A5%E5%8A%9B%E3%81%AE%E4%BB%95%E6%96%B9/310</link><description>&lt;p&gt;ご返信ありがとうございます。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ ./bowtie -n 4 -m 1 -a --best --strata indexes/m_musculus_ncbi37 reads/ERR008125.fastq
+sample.out&lt;/code&gt;
+のようにコマンドを出しましたが、
+Could not open index file と表示されてしまうのですが、
+対処法はありますでしょうか。&lt;/p&gt;
+&lt;p&gt;また、paired endの場合は、Manualを見ますと、
+&lt;code&gt;best&lt;/code&gt;と&lt;code&gt;strata&lt;/code&gt;を抜かして&lt;code&gt;-k&lt;/code&gt;を入力するという解釈でよろしいでしょうか。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">dna</dc:creator><pubDate>Tue, 08 Feb 2011 18:09:45 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/308/bowtie%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E5%85%A5%E5%8A%9B%E3%81%AE%E4%BB%95%E6%96%B9/310</guid></item><item><title>Answer by Tanakky</title><link>http://qa.lifesciencedb.jp/questions/308/bowtie%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E5%85%A5%E5%8A%9B%E3%81%AE%E4%BB%95%E6%96%B9/309</link><description>&lt;p&gt;お持ちのデータはsingle-endと考えてよろしいでしょうか？
+indexファイルもfastqファイルもどこにおいても構いませんが、それぞれ特定のディレクトリ内に
+入れておくとまとまっていていいと思います。（例えば、fastqファイルはreadsというディレクトリにすべていれておくとか）。
+なのでindexファイルをindexes、fastqファイルをreadsというディレクトリに入れておいたと仮定すると、
+&lt;code&gt;$ ./bowtie -n 4 -m 1 -a --best --strata indexes/hg19  reads/sample.fastq sample.out&lt;/code&gt;
+とすればいいと思います。
+"&lt;code&gt;-n&lt;/code&gt;"はシード内ミスマッチ数。
+"&lt;code&gt;-m&lt;/code&gt;"は指定した数より多いマルチヒットがあった場合結果を出さない。&lt;code&gt;-m 1&lt;/code&gt;は２個以上のマルチヒットがあればレポートしない、
+つまりユニークヒットだけ出力するということです。
+"&lt;code&gt;-a --best --strata&lt;/code&gt;"はベストヒットを出すためのおまじないと考えてください。この３つはいつもセットで使うことが多いです。&lt;/p&gt;
+&lt;p&gt;複数同時にマッピングするにはコンピューターのCPU数も考える必要があります。
+もしマルチCPUならばbowtieを２回走らせればいいだけですが、そうでないならば
+一つずつ走らせてやる方がいいと思います。メモリの制限もありますので。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tanakky</dc:creator><pubDate>Tue, 08 Feb 2011 10:44:09 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/308/bowtie%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E5%85%A5%E5%8A%9B%E3%81%AE%E4%BB%95%E6%96%B9/309</guid></item></channel></rss>

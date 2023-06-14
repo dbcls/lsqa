@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: 次世代シーケンサのオープンなデータ</title><link>http://qa.lifesciencedb.jp/questions/179/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF</link><description>&lt;p&gt;超並列シーケンサ(メーカー問わず)によって出された生データが公開されているデータベースなどはありますか？
+データの解析などを通していろいろ勉強してみたいと思っています。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/179/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 25 Jan 2011 12:05:37 +0900</lastBuildDate><item><title>Answer by DDBJ</title><link>http://qa.lifesciencedb.jp/questions/179/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF/289</link><description>&lt;p&gt;DDBJ DRA　でも&lt;b&gt;キーワード検索&lt;/b&gt;が行えるようになりましたので、お知らせします。&lt;br&gt;
+&lt;br&gt;
+　・&lt;a href="http://trace.ddbj.nig.ac.jp/DRASearch/"&gt;http://trace.ddbj.nig.ac.jp/DRASearch/&lt;/a&gt;&lt;br&gt;
+&lt;br&gt;
+"ChIP-Seq" での検索結果は以下の通りです。&lt;br&gt;
+　&lt;a href="http://trace.ddbj.nig.ac.jp/DRASearch/search?query_keyword=ChIP-Seq"&gt;http://trace.ddbj.nig.ac.jp/DRASearch/search?query_keyword=ChIP-Seq&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">DDBJ</dc:creator><pubDate>Tue, 25 Jan 2011 12:05:37 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/179/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF/289</guid></item><item><title>Answer by yag_ays</title><link>http://qa.lifesciencedb.jp/questions/179/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF/245</link><description>&lt;p&gt;CLC Bioが"Next Generation Sequencing example data"として，次世代シーケンサで読まれたデータを幾つか公開しています．本来はCLC Genomics Workbench用のテストデータですが，Raw dataなど幾つか使える物がありそうです．&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.clcbio.com/index.php?id=1290"&gt;http://www.clcbio.com/index.php?id=1290&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Raw dataではRoche/454，Illumina/Solexa，AB/SOLiDと主要なシーケンサからのデータが揃っているほか，RNA-Seqのデータ（CLC Genomics Workbenchで読み込む形式のみ）も公開されています．&lt;/p&gt;
+&lt;p&gt;公開ライセンスはちょっとわかりませんが，個人的にNGS解析の練習などに使う分には問題ないかと思います．
+自分で触ったことがないので期待にそえるデータかどうか分かりませんが，こんなデータもあるということで質問に回答してみました．&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">yag_ays</dc:creator><pubDate>Tue, 28 Dec 2010 16:30:10 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/179/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF/245</guid></item><item><title>Answer by mn3</title><link>http://qa.lifesciencedb.jp/questions/179/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF/240</link><description>&lt;p&gt;SRAのデータアクセスをRでおこなう&lt;a href="http://www.bioconductor.org/help/bioc-views/release/bioc/html/SRAdb.html"&gt;Bioconductorパッケージ SRAdb&lt;/a&gt;というものがあります。&lt;/p&gt;
+&lt;p&gt;これは、SRAのメタデータを格納したSQLiteのファイルをNCIの方が公開していて、それを操作する形になっています。詳しくは&lt;a href="http://www.bioconductor.org/packages/2.7/bioc/vignettes/SRAdb/inst/doc/SRAdb.pdf"&gt;マニュアルのPDF書類&lt;/a&gt;をご覧ください。&lt;/p&gt;
+&lt;p&gt;簡単な操作とコードを例示します：&lt;/p&gt;
+&lt;h3&gt;メタデータのダウンロードと準備、テーブル操作&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;&lt;pre&gt;library(SRAdb)
+sqlfile &amp;lt;- getSRAdbFile() #メタデータをダウンロード
+sra_con &amp;lt;- dbConnect(SQLite(), sqlfile)
+sra_tables &amp;lt;- dbListTables(sra_con) # テーブル名のリストを取得
+dbListFields(sra_con, "study") # "study" テーブルのフィールド名の取得
+sqliteQuickSQL(sra_con, "PRAGMA TABLE_INFO(study)") # "study" テーブルの情報を一覧
+&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;
+&lt;h3&gt;SQLの実行："study"  テーブルから三つのレコードを表示&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;&lt;pre&gt;rs &amp;lt;- dbGetQuery(sra_con, "select * from study limit 3") 
+&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;
+&lt;h3&gt;変換：experimentやrunアクセッションの変換&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;&lt;pre&gt;conversion &amp;lt;- sraConvert(c("SRP001007", "SRP000931"), sra_con = sra_con) &lt;/pre&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;h3&gt;全文検索："run" と "study" テーブルについて文字列 "breast" と "cancer" の含まれるエントリの検索&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;&lt;pre&gt;rs &amp;lt;- getSRA(search_terms = "breast cancer", 
+             out_types = c("run", "study"), sra_con = sra_con) 
+&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;
+&lt;h3&gt;全文検索："submission" が "GEO" のエントリの検索&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;&lt;pre&gt;rs &amp;lt;- getSRA(search_terms = "submission_center: GEO", 
+             out_types = c("submission"), sra_con = sra_con)
+&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;
+&lt;h3&gt;全文検索："study" に Carcinoから始まるワードが含まれるエントリの検索&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;&lt;pre&gt;rs &amp;lt;- getSRA(search_terms = "Carcino*", 
+             out_types = c("study"), sra_con = sra_con)
+&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;
+&lt;h3&gt;fastq：SRR000648とsRR000657のFastqファイルの取得&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;&lt;pre&gt;getFastq(in_acc = c("SRR000648", "SRR000657"),
+         sra_con = sra_con, destdir = getwd())
+&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;
+&lt;h3&gt;IGVでのシーケンスの可視化：hg18 の chr1:1-1000 として表示&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;&lt;pre&gt;exampleBams = file.path(system.file("extdata", package = "SRAdb"), 
+                        dir(system.file("extdata", package = "SRAdb"),
+                        pattern = "bam$"))
+sock &amp;lt;- IGVsocket() 
+IGVgenome(sock, "hg18") 
+IGVload(sock, exampleBams) 
+IGVgoto(sock, "chr1:1-1000") 
+IGVsnapshot(sock)
+&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;
+&lt;h3&gt;SRAエントリの可視化："colon canver"を含むエントリ&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;&lt;pre&gt;acc &amp;lt;- getSRA(search_terms = "colon cancer", 
+              out_types = c("sra"), sra_con = sra_con, acc_only = TRUE)
+g &amp;lt;- entityGraph(acc) 
+attrs &amp;lt;- getDefaultAttrs(list(node = list(fillcolor = "lightblue",
+                                          shape = "ellipse"))) 
+plot(g, attrs = attrs)
+&lt;/pre&gt;
+&lt;img alt="alt text" src="/upfiles/Quartz_2_[*]-1.jpg"&gt;&lt;p&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mn3</dc:creator><pubDate>Mon, 27 Dec 2010 13:56:44 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/179/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF/240</guid></item><item><title>Comment by asurain on mn3's 回答</title><link>http://qa.lifesciencedb.jp/questions/179/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF#186</link><description>&lt;p&gt;フォローありがとうございます。非常にたすかります。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">asurain</dc:creator><pubDate>Wed, 15 Dec 2010 15:59:51 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/179/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF#186</guid></item><item><title>Answer by mn3</title><link>http://qa.lifesciencedb.jp/questions/179/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF/184</link><description>&lt;p&gt;NCBI, EBI, DDBJ でのキーワード検索のリンクを調べてみました。"ChIP-Seq" で検索してみます。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NCBI SRA&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.ncbi.nlm.nih.gov/sra/?term=ChIP-Seq"&gt;http://www.ncbi.nlm.nih.gov/sra/?term=ChIP-Seq&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;EBI SRA&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.ebi.ac.uk/ebisearch/bsearch.ebi?db=sra&amp;amp;t=ChIP-Seq"&gt;http://www.ebi.ac.uk/ebisearch/bsearch.ebi?db=sra&amp;amp;t=ChIP-Seq&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;DDBJ DRA&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://trace.ddbj.nig.ac.jp/DRASearch/"&gt;http://trace.ddbj.nig.ac.jp/DRASearch/&lt;/a&gt; 検索は、OrganismとCenterName、StudyType、Platform のみで任意のキーワード検索は提供していない。&lt;/li&gt;
+&lt;li&gt;2011-01-25 追記：キーワード検索ができたとのこと：&lt;a href="http://qa.lifesciencedb.jp/questions/179/次世代シーケンサのオープンなデータ?page=1#289"&gt;http://qa.lifesciencedb.jp/questions/179/次世代シーケンサのオープンなデータ?page=1#289&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mn3</dc:creator><pubDate>Tue, 14 Dec 2010 15:44:53 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/179/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF/184</guid></item><item><title>Comment by asurain on Tanakky's 回答</title><link>http://qa.lifesciencedb.jp/questions/179/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF#183</link><description>&lt;p&gt;詳しい情報ありがとうございます。迷わずに辿り着くことができました！&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">asurain</dc:creator><pubDate>Tue, 14 Dec 2010 15:13:08 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/179/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF#183</guid></item><item><title>Comment by asurain on thecla's 回答</title><link>http://qa.lifesciencedb.jp/questions/179/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF#182</link><description>&lt;p&gt;SRA、すごくいいですね。こういうのを探していました。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">asurain</dc:creator><pubDate>Tue, 14 Dec 2010 14:57:57 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/179/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF#182</guid></item><item><title>Answer by thecla</title><link>http://qa.lifesciencedb.jp/questions/179/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF/181</link><description>&lt;p&gt;ご所望のデータは、NCBI、EBI、DDBJでSequence Read Archive (SRA) としてアーカイブされています。&lt;/p&gt;
+&lt;p&gt;手前味噌ですが、SRAのデータを整理して、&lt;a href="http://sra.dbcls.jp/"&gt;SRAs (survey of read archives)&lt;/a&gt;というサイトをつくりました。目的別、機器別、生物種別などからデータを検索できるようにしています。
+&lt;a href="http://sra.dbcls.jp/"&gt;http://sra.dbcls.jp/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;本家のDDBJでもデータの検索ができますし、何より日本語でドキュメントがあったりするのでそちらも参照されるとよいと思います。
+&lt;a href="http://trace.ddbj.nig.ac.jp/dra/index.shtml"&gt;http://trace.ddbj.nig.ac.jp/dra/index.shtml&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">thecla</dc:creator><pubDate>Tue, 14 Dec 2010 14:13:12 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/179/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF/181</guid></item><item><title>Answer by Tanakky</title><link>http://qa.lifesciencedb.jp/questions/179/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF/180</link><description>&lt;p&gt;私はよくNCBIの&lt;a href="http://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi"&gt;Sequence Read Archive（以下SRA）&lt;/a&gt;を使います。
+NCBIのトップページの上のボックスから"SRA"を選択して、&lt;a href="http://www.ncbi.nlm.nih.gov/sra/?term=RNA-Seq"&gt;RNA-Seq&lt;/a&gt;とか&lt;a href="http://www.ncbi.nlm.nih.gov/sra/?term=ChIP-Seq"&gt;ChIP-Seq&lt;/a&gt;とかの
+キーワードを入力するとたくさんヒットすると思います。
+また多くの研究者は興味を持った論文からそのデータを取得することが多いとは思いますが、
+通常論文にはSRAのＩＤは書かれていないことが多いです（親切な著者は書いていますが・・・）。
+たぶん&lt;a href="http://www.ncbi.nlm.nih.gov/geo/"&gt;Gene Expression Omnibus(GEO)&lt;/a&gt;のIDが書かれていることが多いでしょう。
+この場合は同様にトップページのボックスから"GEO DataSet"を選び、GEO IDで検索をすると
+ヒットします。GEOに登録されている次世代シーケンサデータはマッピング後のデータ(BEDファイルなど)
+ですが、下の方にSRAのリンクが張ってあるので、それをたどって生データを取得できます。
+また生データも年々容量が増加傾向にあり、ダウンロードに時間がかかります。
+（Asperaというソフトをインストールする必要があります）&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tanakky</dc:creator><pubDate>Tue, 14 Dec 2010 14:09:08 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/179/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF/180</guid></item></channel></rss>

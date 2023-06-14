@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With 癌ゲノム</title><link>http://qa.lifesciencedb.jp/tags/%E7%99%8C%E3%82%B2%E3%83%8E%E3%83%A0/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;癌ゲノム&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/%E7%99%8C%E3%82%B2%E3%83%8E%E3%83%A0/" rel="self"></atom:link><language>ja</language><lastBuildDate>Sat, 17 Oct 2015 20:01:21 +0900</lastBuildDate><item><title>癌のゲノム解析データベースに対する配列検索</title><link>http://qa.lifesciencedb.jp/questions/842/%E7%99%8C%E3%81%AE%E3%82%B2%E3%83%8E%E3%83%A0%E8%A7%A3%E6%9E%90%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E9%85%8D%E5%88%97%E6%A4%9C%E7%B4%A2</link><description>&lt;p&gt;NCBIなどに蓄積している癌のゲノムデータベースに対してある特別な配列（人にはない配列です）のインテグレーションを調べたいと考えています。
+出来ればすべての癌に対して調べたいのですが、
+難しいなら特定の癌腫に限定しようと思っています。
+どのような手順を踏むのが最短でできますでしょうか？
+全てのゲノム配列をダウンロードするのは、かなり大変な作業だと思いますが、ダウンロードする他ないでしょうか？
+事前の予想では、予めalignmentの取られている配列だと、除外されているのではと考えていますが、現段階では分かりません。&lt;/p&gt;
+&lt;p&gt;上記の質問は具体的ではなかったので、変更させていただきます。
+https://cghub.ucsc.edu/
+上記よりゲノムデータをダウンロードして、Blast等でサーチできる環境を作りたいのですが、具体的にどのような手順を踏むのがベストでしょうか？&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hiroya</dc:creator><pubDate>Sat, 17 Oct 2015 20:01:21 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/842/%E7%99%8C%E3%81%AE%E3%82%B2%E3%83%8E%E3%83%A0%E8%A7%A3%E6%9E%90%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E9%85%8D%E5%88%97%E6%A4%9C%E7%B4%A2</guid><category>癌ゲノム</category></item></channel></rss>

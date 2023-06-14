@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: R-TipsによるGO解析（遺伝子数の数え上げ）</title><link>http://qa.lifesciencedb.jp/questions/678/r-tips%E3%81%AB%E3%82%88%E3%82%8Bgo%E8%A7%A3%E6%9E%90-%E9%81%BA%E4%BC%9D%E5%AD%90%E6%95%B0%E3%81%AE%E6%95%B0%E3%81%88%E4%B8%8A%E3%81%92</link><description>&lt;p&gt;植物の研究に携わっております。R-TipsによるGO解析のパッケージがありましたら、お教えいただきたく質問させて頂いております。現在の自分のGO解析の方法は、(1)TAIRの最新のデータベースより、GO番号とそこに帰属（？）されているATH遺伝子を入手して、エクセル表に入れます。(2)自分の研究材料はアラビドプシスではないので、解析したい遺伝子群の予測アミノ酸配列をBLASTPでATH遺伝子に対応をつけます（トップ・ホモロジーの1遺伝子に対応させています。ホモロジーの低いものはスコアーを指標に切っています）。(3)エクセル表中のGO-ATH遺伝子を、自分の遺伝子群（対応がついたATH遺伝子群）中で探し、数え上げます(エクセル関数の式を組んでいます)。(4)Fisherの正確検定を基に、袋の中の赤色と白色の玉の数の確率を求めるやり方で、GO中の遺伝子が有意に自分の遺伝子群中に濃縮されているかどうかを調べます。以上の方法の場合、GO-ATH遺伝子の数が非常に多いので、自分の遺伝子群が1000個程度あると、数え上げの操作で、エクセルの動作が非常に不安定になります。そこで、R-Tipsなど、パソコンで比較的楽に操作できる解析方法が、もしあれば、お教え願えれば、非常に嬉しいです。また、自分の方法が、GO解析として、適切かどうかについても、ご教唆願えれば嬉しいです。よろしくお願いいたします。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/678/r-tips%E3%81%AB%E3%82%88%E3%82%8Bgo%E8%A7%A3%E6%9E%90-%E9%81%BA%E4%BC%9D%E5%AD%90%E6%95%B0%E3%81%AE%E6%95%B0%E3%81%88%E4%B8%8A%E3%81%92" rel="self"></atom:link><language>ja</language><lastBuildDate>Wed, 31 Jul 2013 00:06:03 +0900</lastBuildDate><item><title>Answer by yuifu</title><link>http://qa.lifesciencedb.jp/questions/678/r-tips%E3%81%AB%E3%82%88%E3%82%8Bgo%E8%A7%A3%E6%9E%90-%E9%81%BA%E4%BC%9D%E5%AD%90%E6%95%B0%E3%81%AE%E6%95%B0%E3%81%88%E4%B8%8A%E3%81%92/687</link><description>&lt;p&gt;以下，R-Tips というのは，統計言語Rのことと判断し，回答します．
+（R-Tipsは，Rについて紹介している&lt;a href="http://cse.naro.affrc.go.jp/takezawa/r-tips/r.html"&gt;こちらのサイト&lt;/a&gt;の名前でしょうか）&lt;/p&gt;
+&lt;h2&gt;RでGO解析を行うパッケージ&lt;/h2&gt;
+&lt;p&gt;RでGO解析を行うパッケージはいくつかあります．以下に，生物系のRパッケージのレポジトリである&lt;a href="http://www.bioconductor.org"&gt;Bioconductor&lt;/a&gt;で提供されているパッケージを挙げます（すべてではないかもしれません）．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.bioconductor.org/packages/2.12/bioc/html/topGO.html"&gt;Bioconductor - topGO&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.bioconductor.org/packages/2.12/bioc/html/GOstats.html"&gt;Bioconductor - GOstats&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.bioconductor.org/packages/devel/bioc/html/goseq.html"&gt;Bioconductor - goseq&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;個人的には，topGOが使いやすかったです．&lt;/p&gt;
+&lt;h2&gt;質問者のGO解析の方法について&lt;/h2&gt;
+&lt;p&gt;Fisher's exact test で基本的に問題ないと思われます．また，オーソログ遺伝子からGOアノテーションをひっぱってくる方法も特に問題はないと思います．&lt;/p&gt;
+&lt;p&gt;ただし，多重検定の問題があるため，p-valueに対し，補正が必要になると思います&lt;/p&gt;
+&lt;p&gt;（一方で，多重検定補正は必ずしも重要でないと考える人もいます（&lt;a href="http://www.bioconductor.org/packages/release/bioc/vignettes/topGO/inst/doc/topGO.pdf"&gt;topGOのマニュアル (PDF)&lt;/a&gt;の6.2節を参照）．）&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">yuifu</dc:creator><pubDate>Wed, 31 Jul 2013 00:06:03 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/678/r-tips%E3%81%AB%E3%82%88%E3%82%8Bgo%E8%A7%A3%E6%9E%90-%E9%81%BA%E4%BC%9D%E5%AD%90%E6%95%B0%E3%81%AE%E6%95%B0%E3%81%88%E4%B8%8A%E3%81%92/687</guid></item></channel></rss>

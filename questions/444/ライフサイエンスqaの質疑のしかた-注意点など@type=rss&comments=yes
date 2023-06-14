@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: ライフサイエンスQAの質疑のしかた、注意点など</title><link>http://qa.lifesciencedb.jp/questions/444/%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%82%B9qa%E3%81%AE%E8%B3%AA%E7%96%91%E3%81%AE%E3%81%97%E3%81%8B%E3%81%9F-%E6%B3%A8%E6%84%8F%E7%82%B9%E3%81%AA%E3%81%A9</link><description>&lt;p&gt;&lt;a href="http://qa.lifesciencedb.jp/"&gt;ライフサイエンスQA&lt;/a&gt;の質疑を行う上での注意点はありますか？
+また、質疑の書き方の参考情報はありますか？&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://qa.lifesciencedb.jp/"&gt;ライフサイエンスQA&lt;/a&gt;上の質疑応答について、
+回答とコメントの使い分け、
+質問のクロージングの方法などをご存知ないかたも
+多くおられるのではないかと思っております。&lt;/p&gt;
+&lt;p&gt;ちなみに、コメントをつけるには画面右下の&lt;img alt="alt text" src="/upfiles/lsqa_add_comment.JPG"&gt;ボタンをクリックします。&lt;/p&gt;
+&lt;p&gt;質問の受付を終了するには、有効な回答の左端にあるチェックボタンを押し質問をクロージングします。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="alt text" src="/upfiles/lsqa_close_button.JPG"&gt;&lt;/p&gt;
+&lt;p&gt;使い方は一つではないとは思うのですが、
+2011/05/28-05/29に&lt;a href="http://ngs-field.org/%E7%AC%AC%EF%BC%91%E5%9B%9E%E7%A0%94%E7%A9%B6%E4%BC%9A"&gt;NGS現場の会第一回研究会&lt;/a&gt;の開催時に使い方の一例を紹介するため、
+この質問を、適宜画面キャプチャーしながら作成したHowToページを&lt;a href="https://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%82%B9QA%E3%81%AB%E8%B3%AA%E5%95%8F%E3%81%97%E3%81%A6%E6%9C%89%E8%AD%98%E8%80%85%E3%81%AB%E8%81%9E%E3%81%84%E3%81%A6%E3%81%BF%E3%82%8B&amp;amp;no_bl=y"&gt;こちら&lt;/a&gt;作成しました。&lt;/p&gt;
+&lt;p&gt;尚、上記の操作の目的で自問自答の質問を投げることを
+&lt;a href="http://qa.lifesciencedb.jp/"&gt;ライフサイエンスQA&lt;/a&gt;の管理者様の許可を得て行っております。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/444/%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%82%B9qa%E3%81%AE%E8%B3%AA%E7%96%91%E3%81%AE%E3%81%97%E3%81%8B%E3%81%9F-%E6%B3%A8%E6%84%8F%E7%82%B9%E3%81%AA%E3%81%A9" rel="self"></atom:link><language>ja</language><lastBuildDate>Thu, 19 May 2011 23:37:21 +0900</lastBuildDate><item><title>Answer by nob_fj</title><link>http://qa.lifesciencedb.jp/questions/444/%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%82%B9qa%E3%81%AE%E8%B3%AA%E7%96%91%E3%81%AE%E3%81%97%E3%81%8B%E3%81%9F-%E6%B3%A8%E6%84%8F%E7%82%B9%E3%81%AA%E3%81%A9/448</link><description>&lt;p&gt;何人かの方にご意見いただき、以下の注意点をいただきました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Q&amp;amp;Aをノウハウとして簡潔に残すためには、"質問"に対する直接的な"回答"以外は"コメント"で残した方が良い。&lt;/li&gt;
+&lt;li&gt;他者が回答下さったもので、コメントに変えた方が良いものは回答欄のメニューの"more▼"-"convert to comment"で変換も可能。&lt;/li&gt;
+&lt;li&gt;場合によっては、後で質問を分割するなどした方が良い場合もある。&lt;/li&gt;
+&lt;li&gt;回答者が見当違いな回答をしなくて済むよう、(例えばプログラムの出来ない人に、プログラムを書く方法で回答するなど)ご質問者がどのようなスキルがあるかをある程度記載した方が質疑がスムーズかもしれないそうです。&lt;/li&gt;
+&lt;li&gt;質問者が既に知っている(あるいは、検討済みの)回答をしなくて済むよう、質問する際は、調べた範囲をまとめると良いのではという意見も伺いました。これは、第三者が見たときに、ノウハウとしてより把握しやすい利点もあります。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;※ただし、上記のような堅苦しいルールを気にしすぎて、質問できなくなるのは本末転倒ですので、
+まずは質問、気付いた時に修正というのはいかがでしょうか。後で修正できる仕組みは用意されていますので。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Thu, 19 May 2011 23:37:21 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/444/%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%82%B9qa%E3%81%AE%E8%B3%AA%E7%96%91%E3%81%AE%E3%81%97%E3%81%8B%E3%81%9F-%E6%B3%A8%E6%84%8F%E7%82%B9%E3%81%AA%E3%81%A9/448</guid></item><item><title>Comment by nob_fj on nob_fj's 質問</title><link>http://qa.lifesciencedb.jp/questions/444/%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%82%B9qa%E3%81%AE%E8%B3%AA%E7%96%91%E3%81%AE%E3%81%97%E3%81%8B%E3%81%9F-%E6%B3%A8%E6%84%8F%E7%82%B9%E3%81%AA%E3%81%A9#447</link><description>&lt;p&gt;asurainさんダミー回答のご協力ありがとうございます。質問文を編集して画像ファイルの貼り方、文字脚色のデモをしてみます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Thu, 19 May 2011 11:24:19 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/444/%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%82%B9qa%E3%81%AE%E8%B3%AA%E7%96%91%E3%81%AE%E3%81%97%E3%81%8B%E3%81%9F-%E6%B3%A8%E6%84%8F%E7%82%B9%E3%81%AA%E3%81%A9#447</guid></item><item><title>Comment by asurain on nob_fj's 質問</title><link>http://qa.lifesciencedb.jp/questions/444/%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%82%B9qa%E3%81%AE%E8%B3%AA%E7%96%91%E3%81%AE%E3%81%97%E3%81%8B%E3%81%9F-%E6%B3%A8%E6%84%8F%E7%82%B9%E3%81%AA%E3%81%A9#446</link><description>&lt;p&gt;どうせなら画像ファイルの貼り方や、
+文字脚色の方法も記載してはどうでしょうか？&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">asurain</dc:creator><pubDate>Thu, 19 May 2011 06:22:32 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/444/%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%82%B9qa%E3%81%AE%E8%B3%AA%E7%96%91%E3%81%AE%E3%81%97%E3%81%8B%E3%81%9F-%E6%B3%A8%E6%84%8F%E7%82%B9%E3%81%AA%E3%81%A9#446</guid></item></channel></rss>

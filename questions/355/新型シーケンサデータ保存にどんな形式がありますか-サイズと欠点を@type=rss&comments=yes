@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: 新型シーケンサデータ保存にどんな形式がありますか？サイズと欠点を</title><link>http://qa.lifesciencedb.jp/questions/355/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%87%E3%83%BC%E3%82%BF%E4%BF%9D%E5%AD%98%E3%81%AB%E3%81%A9%E3%82%93%E3%81%AA%E5%BD%A2%E5%BC%8F%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B-%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%A8%E6%AC%A0%E7%82%B9%E3%82%92</link><description>&lt;p&gt;DDBJでは native vendor fileから 画像を落とした 標準形 SRAはあまりかさばるので intensityを落としたSRA-liteでミラーしてます。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/355/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%87%E3%83%BC%E3%82%BF%E4%BF%9D%E5%AD%98%E3%81%AB%E3%81%A9%E3%82%93%E3%81%AA%E5%BD%A2%E5%BC%8F%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B-%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%A8%E6%AC%A0%E7%82%B9%E3%82%92" rel="self"></atom:link><language>ja</language><lastBuildDate>Fri, 25 Feb 2011 15:49:34 +0900</lastBuildDate><item><title>Answer by Eli Kaminuma</title><link>http://qa.lifesciencedb.jp/questions/355/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%87%E3%83%BC%E3%82%BF%E4%BF%9D%E5%AD%98%E3%81%AB%E3%81%A9%E3%82%93%E3%81%AA%E5%BD%A2%E5%BC%8F%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B-%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%A8%E6%AC%A0%E7%82%B9%E3%82%92/357</link><description>&lt;p&gt;DRAではFASTQ形式をサポートしております。特徴は下記を御参照ください。
+&lt;/p&gt;&lt;table border="3"&gt;
+    &lt;caption&gt;ファイル形式 on ftp server&lt;/caption&gt;
+    &lt;tbody&gt;&lt;tr&gt;
+        &lt;th&gt;&lt;/th&gt;&lt;th&gt;FASTQ形式&lt;/th&gt;&lt;th&gt;SRA-Lite形式&lt;/th&gt;&lt;th&gt;SRA形式&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;DRA&lt;/th&gt;&lt;td&gt;○&lt;/td&gt;&lt;td&gt;○&lt;/td&gt;&lt;td&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;ERA&lt;/th&gt;&lt;td&gt;○&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;※※※&lt;/td&gt;
+    &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th&gt;SRA&lt;/th&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;○&lt;/td&gt;&lt;td&gt;○&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;総サイズ(※)&lt;/th&gt;     &lt;td&gt;49TB&lt;/td&gt;&lt;td&gt;95TB&lt;/td&gt;&lt;td&gt;171TB&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;総サイズ比率(※)&lt;/th&gt;&lt;td&gt;0.29&lt;/td&gt;    &lt;td&gt;0.56&lt;/td&gt;   &lt;td&gt;1&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;特徴&lt;/th&gt;&lt;td&gt;配列とQuality Scoreのみ&lt;/td&gt;    &lt;td&gt;SRAの軽量版&lt;/td&gt;   &lt;td&gt;会社独自シーケンサ生出力形式に変換可&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;圧縮&lt;/th&gt;&lt;td&gt;外部(※※)&lt;/td&gt;    &lt;td&gt;内部&lt;/td&gt;   &lt;td&gt;内部&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;欠点&lt;/th&gt;&lt;td&gt;---&lt;/td&gt;  &lt;td&gt;取扱に専用ツール(sra toolkit)が必要  &lt;/td&gt;   &lt;td&gt;取扱に専用ツール(sra toolkit)が必要&lt;br&gt;ファイルサイズ大&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;※2011.2.25時点(調査源:FASTQ:DRA, SRA-Lite,SRA:SRA)&lt;br&gt;
+※※DRAではbz2圧縮のFASTQファイルを提供&lt;br&gt;
+※※※karツール(sra toolkit)展開後の個別ファイル(アーカイブ無)なら有&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Eli Kaminuma</dc:creator><pubDate>Fri, 25 Feb 2011 15:49:34 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/355/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%87%E3%83%BC%E3%82%BF%E4%BF%9D%E5%AD%98%E3%81%AB%E3%81%A9%E3%82%93%E3%81%AA%E5%BD%A2%E5%BC%8F%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B-%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%A8%E6%AC%A0%E7%82%B9%E3%82%92/357</guid></item></channel></rss>

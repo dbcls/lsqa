@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: ホモログの検出について</title><link>http://qa.lifesciencedb.jp/questions/849/%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B0%E3%81%AE%E6%A4%9C%E5%87%BA%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;RNA-seqを用いて研究を行い始めたものです。
+右も左もわからない中、ここでの回答は非常助かっております。&lt;/p&gt;
+&lt;p&gt;現在得られたRNA-seqの発現遺伝子データセットに対して、既存遺伝子のホモログが存在するのかどうかを調べたいと考えています。
+データセットの量が膨大で、どう調べればよいかが分かりません。&lt;/p&gt;
+&lt;p&gt;初歩的な質問ではありますが、ご教授して頂けないでしょうか。
+何卒よろしくお願いいたします。&lt;/p&gt;
+&lt;p&gt;【追記1】他の生物の遺伝子を対象とし、私の対象とする生物の発達過程でどのような発現をしているかを調査したいと考えています。&lt;/p&gt;
+&lt;p&gt;回答ありがとうございました。データセットのアノテーション情報を参考にして遺伝子を絞り、調査してきたいと思います。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/849/%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B0%E3%81%AE%E6%A4%9C%E5%87%BA%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Fri, 15 Jul 2016 09:58:54 +0900</lastBuildDate><item><title>Answer by kaho</title><link>http://qa.lifesciencedb.jp/questions/849/%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B0%E3%81%AE%E6%A4%9C%E5%87%BA%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/850</link><description>&lt;p&gt;まず、「ホモログ」とは何を意味しますか？&lt;br&gt;
+対象とする生物の内部で類似配列を持つものでしょうか？それとも他の生物の遺伝子が対象となる生物でどのような発現をしているか知りたいということでしょうか？&lt;br&gt;
+どちらであれ、まずは通常のRNA-seq解析を行って、その後アノテーション情報やBLASTPの相同性検索の結果を使って調べるという手順になると思います。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">kaho</dc:creator><pubDate>Fri, 15 Jul 2016 09:58:54 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/849/%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B0%E3%81%AE%E6%A4%9C%E5%87%BA%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/850</guid></item></channel></rss>

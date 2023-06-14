@@ -1,0 +1,892 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>MacでEnsembl API を使用する際の DBD::mysql モジュールのインストール - #LSQA</title>
+        <meta name="description" content="データを解析する際にPerlとEnsembl APIを組み合わせて使用してみたいと考えております。システム構成としまして
+Macbook pro (SnowLeopard)
+Perl 5.13.9　(perlbrewでインストール済み)
+bioperl 1.6.1インストール済み
+MySQL5.5.8(64bit)をインストール済み（必要ないかもしれませんが）
+DBI はcpanでインストール済み
+まではうまくインストールができているようで、MySQLも起動できます。
+次に必要となる DBD:mysql をcpanを用いまして、インストールしたいとと思うのですがエラーがでました。
+そこで、DB">
+        <meta name="keywords" content="api,インストール,bioperl,ensembl">
+        
+        <link rel="canonical" href="../../vote/288/down/index.html" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="macでensembl-api-を使用する際の-dbd-mysql-モジュールのインストール@type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="../../upfiles/favicon.ico" />
+        <link href="../../m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="../../cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='../../m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        
+        <script type='text/javascript' src='../../m/qa.lifesciencedb.jp/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='../../m/qa.lifesciencedb.jp/media/js/wmd/wmd.js'></script>
+        <link rel="stylesheet" type="text/css" href="../../m/qa.lifesciencedb.jp/media/js/wmd/wmd.css" />
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[プレビューを隠す]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[プレビューを表示する]" : "[プレビューを隠す]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml.html" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="../../index.html">
+				<img src="../../upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="../../account/yahoo/signin/index.html" >ログイン</a>  <a href="../../about/index.html" >概要</a>  <a href="../../faq/index.html" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="../index.html" >質問</a><a id="nav_tags" href="../../tags/index.html" >タグ</a><a id="nav_users" href="http://qa.lifesciencedb.jp/users/" >ユーザー</a><a id="nav_badges" href="../../badges/index.html" >バッジ</a><a id="nav_unanswered" href="../unanswered/index.html" >未回答</a>
+        <a id="nav_ask" href="../ask/index.html" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="http://qa.lifesciencedb.jp/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="../../vote/288/down/index.html">MacでEnsembl API を使用する際の DBD::mysql モジュールのインストール</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-284-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../vote/284/up/index.html" rel="nofollow"> </a>
+<div id="post-284-score" class="post-score"
+    title="現在の投票数">
+    1
+</div>
+<a id="post-284-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../vote/284/down/index.html" rel="nofollow"> </a>
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="../../mark_favorite/284/index.html" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>データを解析する際にPerlとEnsembl APIを組み合わせて使用してみたいと考えております。システム構成としまして<br>
+Macbook pro (SnowLeopard)<br>
+Perl 5.13.9　(perlbrewでインストール済み)<br>
+bioperl 1.6.1インストール済み<br>
+MySQL5.5.8(64bit)をインストール済み（必要ないかもしれませんが）<br>
+DBI はcpanでインストール済み<br>
+まではうまくインストールができているようで、MySQLも起動できます。<br>
+次に必要となる DBD:mysql をcpanを用いまして、インストールしたいとと思うのですがエラーがでました。<br>
+そこで、DBD-mysql-4.018をソースでダウンロードして、makeするとやはり、cpanのときと同様に</p>
+<blockquote>
+<p>Argument "6.57_05" isn't numeric in numeric ge (&gt;=) at Makefile.PL line 350, &lt;pipe&gt; line 138.<br>
+Using DBI 1.616 (for perl 5.013009 on darwin-2level) installed in /Users/---/perl5/perlbrew/perls/perl-5.13.9/lib/site_perl/5.13.9/darwin-2level/auto/DBI/<br>
+Writing Makefile for DBD::mysql<br>
+Writing MYMETA.yml<br>
+---:DBD-mysql-4.0181 ---$ sudo make<br>
+Skip blib/lib/DBD/mysql.pm (unchanged)<br>
+Skip blib/lib/DBD/mysql/GetInfo.pm (unchanged)<br>
+Skip blib/lib/DBD/mysql/INSTALL.pod (unchanged)<br>
+Skip blib/lib/Bundle/DBD/mysql.pm (unchanged)<br>
+cc -c  -I/Users/---/perl5/perlbrew/perls/perl-5.13.9/lib/site_perl/5.13.9/darwin-2level/auto/DBI -I/usr/local/mysql/include  -Os -g -fno-common<br> &gt;-fno-strict-aliasing -arch x86_64 -DDBD_MYSQL_INSERT_ID_IS_GOOD -g  -fno-common -DPERL_DARWIN -no-cpp-precomp -fno-strict-aliasing -pipe -fstack-protector<br> &gt;-I/usr/local/include -I/opt/local/include -O3   -DVERSION="4.018" -DXS_VERSION="4.018" <br> &gt;"-I/Users/---/perl5/perlbrew/perls/perl-5.13.9/lib/5.13.9/darwin-2level/CORE"   dbdimp.c<br>
+dbdimp.c: In function 'mysql_db_FETCH_attrib':<br>
+dbdimp.c:2447: error: 'sv_undef' undeclared (first use in this function)<br>
+dbdimp.c:2447: error: (Each undeclared identifier is reported only once<br>
+dbdimp.c:2447: error: for each function it appears in.)<br>
+dbdimp.c: In function 'mysql_st_internal_execute41':<br>
+dbdimp.c:3298: warning: format '%d' expects type 'int', but argument 3 has type 'my_ulonglong'<br>
+dbdimp.c: In function 'mysql_describe':<br>
+dbdimp.c:3517: warning: format '%d' expects type 'int', but argument 5 has type 'long unsigned int'<br>
+dbdimp.c:3521: warning: format '%d' expects type 'int', but argument 3 has type 'long unsigned int'<br>
+dbdimp.c: In function 'mysql_st_fetch':<br>
+dbdimp.c:3738: warning: format '%d' expects type 'int', but argument 3 has type 'long int'<br>
+dbdimp.c:3780: warning: format '%08lx' expects type 'long unsigned int', but argument 3 has type 'struct MYSQL_RES <em>'<br>
+dbdimp.c:3782: warning: format '%llu' expects type 'long long unsigned int', but argument 3 has type 'unsigned int'<br>
+dbdimp.c: In function 'mysql_st_FETCH_attrib':<br>
+dbdimp.c:4365: warning: format '%d' expects type 'int', but argument 3 has type 'my_ulonglong'<br>
+dbdimp.c: In function 'mysql_bind_ph':<br>
+dbdimp.c:4571: warning: format '%d' expects type 'int', but argument 3 has type 'IV'<br>
+dbdimp.c:4583: warning: format '%d' expects type 'int', but argument 3 has type 'IV'<br>
+dbdimp.c:4595: warning: format '%d' expects type 'int', but argument 3 has type 'IV'<br>
+dbdimp.c:4609: warning: format '%d' expects type 'int', but argument 3 has type 'IV'<br>
+dbdimp.c:4630: warning: format '%d' expects type 'int', but argument 5 has type 'IV'<br>
+make: </em>** [dbdimp.o] Error 1<br></p>
+</blockquote>
+<p>と表示され、インストールできません。インターネットの情報を頼りにマニュアルで<br>
+</p><pre> #ifndef sv_undef
+ #define sv_undef PL_sv_undef
+ #endif
+</pre>
+として、無理矢理インストールを進めたあと、
+サンプルプログラムの<p></p>
+<blockquote>
+<p>use warnings; <br>use Bio::EnsEMBL::Registry;<br>
+<br>
+my $registry ='Bio::EnsEMBL::Registry';<br>
+$registry-&gt;load_registry_from_db(<br>
+    -host =&gt; 'ensembldb.ensembl.org',<br>
+    -user =&gt; 'anonymous' );<br>
+<br>
+my $slice_adaptor = $registry-&gt;get_adaptor( 'Human', 'Core', 'Slice' ); <br>
+my $slice = $slice_adaptor-&gt;fetch_by_region('chromosome', '12','1000000','1000050');<br>
+my $coord_sys  = $slice-&gt;coord_system()-&gt;name(); <br>
+my $seq_region = $slice-&gt;seq_region_name(); <br>
+my $start  = $slice-&gt;start(); <br>
+my $end = $slice-&gt;end(); <br>
+my $strand = $slice-&gt;strand(); <br>
+my $seq = $slice-&gt;seq(); print "Slice:$coord_sys $seq_region $start-$end($strand)¥n$seq¥n";<br></p>
+</blockquote>
+<p>を実行しますと</p>
+<blockquote>
+<p>Can't load '/Users/---/perl5/perlbrew/perls/perl-5.13.9/lib/site_perl/5.13.9/darwin-2level/auto/DBD/mysql/mysql.bundle' for module DBD::mysql: dlopen(/Users/---/perl5/perlbrew/perls/perl-5.13.9/lib/site_perl/5.13.9/darwin-2level/auto/DBD/mysql/mysql.bundle, 1): Library not loaded: libmysqlclient.16.dylib<br>
+ Referenced from: /Users/---/perl5/perlbrew/perls/perl-5.13.9/lib/site_perl/5.13.9/darwin-2level/auto/DBD/mysql/mysql.bundle<br>
+ Reason: image not found at /Users/---/perl5/perlbrew/perls/perl-5.13.9/lib/5.13.9/darwin-2level/DynaLoader.pm line 200.<br>
+at /Users/---/src/ensembl/modules/Bio/EnsEMBL/DBSQL/StatementHandle.pm line 48<br>
+Compilation failed in require at /Users/---/src/ensembl/modules/Bio/EnsEMBL/DBSQL/StatementHandle.pm line 48.<br>
+BEGIN failed--compilation aborted at /Users/---/src/ensembl/modules/Bio/EnsEMBL/DBSQL/StatementHandle.pm line 48.<br>
+Compilation failed in require at /Users/---/src/ensembl/modules/Bio/EnsEMBL/DBSQL/DBConnection.pm line 68.<br>
+BEGIN failed--compilation aborted at /Users/---/src/ensembl/modules/Bio/EnsEMBL/DBSQL/DBConnection.pm line 68.<br>
+Compilation failed in require at /Users/---/src/ensembl/modules/Bio/EnsEMBL/DBSQL/DBAdaptor.pm line 59.<br>
+BEGIN failed--compilation aborted at /Users/---/src/ensembl/modules/Bio/EnsEMBL/DBSQL/DBAdaptor.pm line 59.<br>
+Compilation failed in require at /Users/---/src/ensembl/modules/Bio/EnsEMBL/Registry.pm line 123.<br>
+BEGIN failed--compilation aborted at /Users/---/src/ensembl/modules/Bio/EnsEMBL/Registry.pm line 123.<br>
+Compilation failed in require at splice.pl line 3.<br>
+BEGIN failed--compilation aborted at splice.pl line 3.<br></p>
+</blockquote>
+<p>とエラーが出て実行できません。いちおうbioperlはもっと古いバージョンが必要と言うことになっておりますが、ubuntuでは
+同様な手続きで Ensembl API が利用できております。いずれにしましても、とりあえずはDBD::mysqlがインストールできない
+ところが困っているところですので直接はbioperl以前の問題ではと考えております。mySQLを32bit版に変更しても同様です。</p>
+<p>どなたか、MacでこのAPIを使用されておられる方がおられましたら、アドバイスをいただきたいと思います。
+ぜひ、よろしくお願いします。</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="../../tags/api/index.html" class="post-tag"
+                                        title="'api'タグのついた質問をみる" rel="tag">api</a>
+                                
+                                    <a href="../../tags/インストール/index.html" class="post-tag"
+                                        title="'インストール'タグのついた質問をみる" rel="tag">インストール</a>
+                                
+                                    <a href="../../tags/bioperl/index.html" class="post-tag"
+                                        title="'bioperl'タグのついた質問をみる" rel="tag">bioperl</a>
+                                
+                                    <a href="../../tags/ensembl/index.html" class="post-tag"
+                                        title="'ensembl'タグのついた質問をみる" rel="tag">ensembl</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">                            
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        質問日
+        <strong>Jan 22 '11 at 15:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/81c9cf7ee1930a403a6a77aa8660e0e6?s=32&amp;d=identicon&amp;r=g" alt="gatapishi's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/68/gatapishi/">gatapishi</a><br/>
+    <span class="score" title="71 徳">71</span><span title="4 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="7 バッジ"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="11 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">11</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="http://qa.lifesciencedb.jp/revisions/284/">
+                edited
+                <strong>Jan 26 '11 at 20:08</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+<div class="comments-container" id="comments-container-284">
+    
+        <a name="287"></a>
+        <div class="comment" id="comment-287">
+            <div id="post-287-score" class="comment-score"></div>
+            <div class="comment-text"><p>エラーメッセージは正確にコピー＆ペーストして提示するほうが回答が得られる可能性がたかまります。質問を再編集してみてください。</p>
+<p>このAPIは使っていないのですがエラーを見る限りでは、" Library not loaded: libmysqlclient.16.dylib" とのことなので、libmysqlclient.16.dylib がロードできていないようですね。libmysqlclient や DBD:mysql のインストールについて確認してみる必要がありますね。</p></div>
+            <div class="comment-info" id="comment-287-info">
+                
+                
+                
+                <span class="comment-age">(Jan 24 '11 at 17:14)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/e585686707fd3a61b7096451ebf13012?s=18&amp;d=identicon&amp;r=g" alt="mn3's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="291"></a>
+        <div class="comment" id="comment-291">
+            <div id="post-291-score" class="comment-score"></div>
+            <div class="comment-text"><p>コメントありがとうございます。
+エラーを全部入力させていただきました。
+いろいろ試行錯誤してみてますが、解決に至ってません・・</p></div>
+            <div class="comment-info" id="comment-291-info">
+                
+                
+                
+                <span class="comment-age">(Jan 26 '11 at 20:09)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/68/gatapishi/">gatapishi</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/81c9cf7ee1930a403a6a77aa8660e0e6?s=18&amp;d=identicon&amp;r=g" alt="gatapishi's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="298"></a>
+        <div class="comment" id="comment-298">
+            <div id="post-298-score" class="comment-score">1</div>
+            <div class="comment-text"><p>環境変数DYLD_FALLBACK_LIBRARY_PATHに、libmysqlclient.16.dylib の実体がいる場所を指定しても駄目でしょうか？</p>
+<p>(bash) export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/mysql/lib/
+  (tcsh) setenv DYLD_FALLBACK_LIBRARY_PATH /usr/local/mysql/lib/</p></div>
+            <div class="comment-info" id="comment-298-info">
+                
+                
+                
+                <span class="comment-age">(Jan 28 '11 at 17:33)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/18/mya_/">mya_ ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/0caa48bd66bda2f877dfa2d974a9acc7?s=18&amp;d=identicon&amp;r=g" alt="mya_'s gravatar image" />
+            </div>
+        </div>
+    
+        <a name="299"></a>
+        <div class="comment" id="comment-299">
+            <div id="post-299-score" class="comment-score">1</div>
+            <div class="comment-text"><p>教えていただきましたとおり、libmysqlclient.16.dylibの場所をfindで検索しましたところ、<br>
+/opt/local/lib/mysql5/mysql/libmysqlclient.16.dylib<br>
+/opt/local/var/macports/software/mysql5/5.1.53_0/opt/local/lib/mysql5/mysql/libmysqlclient.16.dylib<br>
+/usr/local/mysql-5.5.8-osx10.6-x86_64/lib/libmysqlclient.16.dylib<br>
+に存在しました。DYLD_FALLBACK_LIBRARY_PATHでそのうちの一つ<br>
+/usr/local/mysql(mysql-5.5.8-osx10.6-x86_64)/lib<br>
+を指定しましたところ、うまく実行できるようになりました。<br>
+さっそく、いろいろ利用させていただこうと思います。<br>
+ありがとうございました。</p></div>
+            <div class="comment-info" id="comment-299-info">
+                
+                
+                
+                <span class="comment-age">(Jan 29 '11 at 13:35)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/68/gatapishi/">gatapishi</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/81c9cf7ee1930a403a6a77aa8660e0e6?s=18&amp;d=identicon&amp;r=g" alt="gatapishi's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-284" class="comment-tools">
+    
+    
+</div>
+<div id="comment-284-form-container" class="comment-form-container">
+    
+</div>
+    
+                        </div>
+                        
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="macでensembl-api-を使用する際の-dbd-mysql-モジュールのインストール@sort=登録順.html" class="on" title="最古の回答が最初に表示されます">回答順</a><a href="macでensembl-api-を使用する際の-dbd-mysql-モジュールのインストール@sort=最新.html" title="最新の回答が最初に表示されます">最新</a><a href="macでensembl-api-を使用する際の-dbd-mysql-モジュールのインストール@sort=投票.html" title="もっとも投票された回答が最初に表示されます">支持されている順</a></div>
+                </div>
+                
+  
+                
+                    <a name="300"></a>
+                    <div id="answer-container-300" class="answer accepted-answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-300-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../vote/300/up/index.html" rel="nofollow"> </a>
+<div id="post-300-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-300-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../vote/300/down/index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+        <a class="accept-answer on"></a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>libmysqlclient.16.dylib<br>
+が存在するパスを<br>
+DYLD_FALLBACK_LIBRARY_PATH<br>
+で指定することでうまくいきました。<br>
+どうもありがとうございました。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Jan 29 '11 at 13:38</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/81c9cf7ee1930a403a6a77aa8660e0e6?s=32&amp;d=identicon&amp;r=g" alt="gatapishi's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/68/gatapishi/">gatapishi</a><br/>
+    <span class="score" title="71 徳">71</span><span title="4 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="7 バッジ"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="11 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">11</span></span></p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-300">
+    
+        <a name="301"></a>
+        <div class="comment" id="comment-301">
+            <div id="post-301-score" class="comment-score">1</div>
+            <div class="comment-text"><p>実行可能状態になって良かったです。
+環境変数"DYLD_FALLBACK_LIBRARY_PATH"は、他のプログラムが使っている場合もあるので恒久的に使う時は</p>
+<p><code>export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_FALLBACK_LIBRARY_PATH</code></p>
+<p>のようにPATHを付加する形で運用した方がベターです。
+また、DBD::mysqlがインストールできない根本的な問題は、このperlモジュールがアップデートされるのを待つほか無いようです。</p>
+<p>DBD::mysqlに限らず古い仕様のモジュールに「<i>sv-undef</i>」が使われている場合、 perl 5.<strong>13.2</strong>以前であれば「increasing backwards compatibility」機能が使えたようですが、5.13.9だと機能が外されてしまった様子です。
+(⇒<a href="http://www.mail-archive.com/dbi-dev@perl.org/msg05995.html">Perl 5.13.3+ MAY BREAK COMPILED DRIVERS</a> )</p></div>
+            <div class="comment-info" id="comment-301-info">
+                
+                
+                
+                <span class="comment-age">(Jan 31 '11 at 18:25)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/18/mya_/">mya_ ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/0caa48bd66bda2f877dfa2d974a9acc7?s=18&amp;d=identicon&amp;r=g" alt="mya_'s gravatar image" />
+            </div>
+        </div>
+    
+        <a name="302"></a>
+        <div class="comment" id="comment-302">
+            <div id="post-302-score" class="comment-score">1</div>
+            <div class="comment-text"><p>perl 5.<strong>13.2</strong>以前であれば、以下の手順でコンパイルが通るケースもあるようです（でした）。</p>
+<pre><code>perl Makefile.PL POLLUTE=1
+----
+※CPAN shell なら
+o conf
+＃で、makepl_argに何か指定しているならメモっておく※（内容１）とする。
+o conf makepl_arg POLLUTE=1
+# で、POLLUTEモードを有効にする記述を付加する。（内容１）があれば、それも再度加えておく
+o conf commit
+# で、内容を反映させる
+</code></pre></div>
+            <div class="comment-info" id="comment-302-info">
+                
+                
+                
+                <span class="comment-age">(Jan 31 '11 at 18:25)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/18/mya_/">mya_ ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/0caa48bd66bda2f877dfa2d974a9acc7?s=18&amp;d=identicon&amp;r=g" alt="mya_'s gravatar image" />
+            </div>
+        </div>
+    
+        <a name="305"></a>
+        <div class="comment" id="comment-305">
+            <div id="post-305-score" class="comment-score"></div>
+            <div class="comment-text"><p>詳細なコメントをありがとうございます。勉強になります。Perlもバージョンによって随分違うようですね。バージョンの違いまでは把握しきれませんです・・・・</p></div>
+            <div class="comment-info" id="comment-305-info">
+                
+                
+                
+                <span class="comment-age">(Feb 02 '11 at 02:21)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/68/gatapishi/">gatapishi</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/81c9cf7ee1930a403a6a77aa8660e0e6?s=18&amp;d=identicon&amp;r=g" alt="gatapishi's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-300" class="comment-tools">
+    
+    
+</div>
+<div id="comment-300-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="288"></a>
+                    <div id="answer-container-288" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-288-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../vote/288/up/index.html" rel="nofollow"> </a>
+<div id="post-288-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-288-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../vote/288/down/index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>自分の場合はどうやったか記憶が定かではないですが、
+多分、MySQLの何かのファイルが、Macだとubuntuなどとは別のところに置かれているのが原因かと思います（経験的に）。</p>
+<p>CPAN経由でなく、DBD::mysqlのソースを落としてきてインストールしてみてはどうでしょう。</p>
+<p>それでもうまくいかないなら、
+「DBD::mysql Mac」などでググると、perl Makefile.PL するときにいくつかオプション指定している先例が見つかるだろうので
+それを見ながらトライしてもよいかと思います。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Jan 25 '11 at 10:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/caae19d23d1fff746ddf6401a35ae3f0?s=32&amp;d=identicon&amp;r=g" alt="thecla's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/47/thecla/">thecla</a><br/>
+    <span class="score" title="116 徳">116</span><span title="3 バッジ"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="2 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span></p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-288">
+    
+        <a name="292"></a>
+        <div class="comment" id="comment-292">
+            <div id="post-292-score" class="comment-score"></div>
+            <div class="comment-text"><p>コメントどうもありがとうございます。
+ネット上にも苦労されている方から、同じマックでcpanで普通に入っている方までいろいろです。バージョンにもよるのかもしれません。ソースを落としてきてインストールしましたがうまくいかず、前バージョンを試してみてもうまくいきませんでした。とりあえず Linux上ですすめるしかなさそうです。</p></div>
+            <div class="comment-info" id="comment-292-info">
+                
+                
+                
+                <span class="comment-age">(Jan 26 '11 at 20:12)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/68/gatapishi/">gatapishi</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/81c9cf7ee1930a403a6a77aa8660e0e6?s=18&amp;d=identicon&amp;r=g" alt="gatapishi's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-288" class="comment-tools">
+    
+    
+</div>
+<div id="comment-288-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="http://qa.lifesciencedb.jp/questions/284/answer/" method="post">
+            <div style="clear:both">
+            </div>
+            
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            あなたの回答
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea rows="10" cols="40" name="text" id="editor"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="リアルタイムMarkdown編集プレビューをトグルする">
+                                            プレビューをトグルする
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input type="checkbox" name="wiki" id="id_wiki" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="コミュニティー wikiオプションを選択した場合、質問と回答はポイントを生成せず、作者名は表示されない">
+                                            <label for="id_wiki">コミュニティー wiki</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+                        
+                        </table>  
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>                    
+                </div>
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">この質問をフォローする</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="macでensembl-api-を使用する際の-dbd-mysql-モジュールのインストール@type=rss" title="subscribe to answers"></a>
+    回答
+</p><p><a class="feed-icon" style="background-image:url('../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="macでensembl-api-を使用する際の-dbd-mysql-モジュールのインストール@type=rss&amp;comments=yes" title="subscribe to comments and answers"></a>
+    回答とコメント
+</p>
+
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>ただいまベータテスト運用中です。そのために通知無くコンテンツの変更やサービスの停止変更されることがあります。</h2>
+<p>質問するなら<a href="../../index.html">ライフサイエンスQA</a>。</p>
+<p>このページの<a href="macでensembl-api-を使用する際の-dbd-mysql-モジュールのインストール@type=rss">RSSフィード</a></p>
+<p><a href="http://twitter.com/lsqa_all">@lsqa_all</a>・<a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a></p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <p>
+		タグ:
+    </p>
+    <p class="tags" >
+        
+        	<a href="../../tags/ensembl/index.html" 
+			title="タグ付けされた質問をみる'ensembl'タグを利用している" 
+			rel="tag">ensembl</a> <span class="tag-number">&#215;4</span><br/>
+        
+        	<a href="../../tags/api/index.html" 
+			title="タグ付けされた質問をみる'api'タグを利用している" 
+			rel="tag">api</a> <span class="tag-number">&#215;2</span><br/>
+        
+        	<a href="../../tags/bioperl/index.html" 
+			title="タグ付けされた質問をみる'bioperl'タグを利用している" 
+			rel="tag">bioperl</a> <span class="tag-number">&#215;1</span><br/>
+        
+        	<a href="../../tags/インストール/index.html" 
+			title="タグ付けされた質問をみる'インストール'タグを利用している" 
+			rel="tag">インストール</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        質問日: <strong title="2011-01-22 15:30:44.009511">Jan 22 '11 at 15:30</strong>
+    </p>
+    <p> 
+     	閲覧数: <strong>12,705 回</strong>
+    </p>
+    <p> 
+        最終更新日: <strong title="2011-02-02 02:21:37.227033">Feb 02 '11 at 02:21</strong>
+    </p>
+</div>
+
+
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>世界に広がるQAサイト</h2>
+<p><a href="http://biostar.stackexchange.com">バイオインフォマティクスのBioStar</a>・ <a href="http://I.SEQanswers.com">新型シーケンサーのSEQanswers</a>・ <a href="http://blueobelisk.shapado.com">オープンデータのBlueObelisk</a>・<a href="http://stackoverflow.com">プログラミングのstackoverflow</a>・ <a href="http://www.semanticoverflow.com">Semantic Overflow</a>・ <a href="http://stats.stackexchange.com/">Statistical Analysis</a>・ <a href="http://cstheory.stackexchange.com/">Theoretical Computer Science</a>・ <a href="http://chiebukuro.yahoo.co.jp/">Yahoo!知恵袋</a>・ <a href="http://okwave.jp/">OKWave</a> <a href="http://ja.wikipedia.org/wiki/Category:Q%26Aサイト">などなど</a></p>
+     </div>
+</div>
+
+<div class="boxC">
+    <h3 class="subtitle">関係した質問</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="../../vote/295/down/index.html">Rで作製した散布図で現在選択している点だけにラベルをつけたい</a>
+        </p>
+        
+        <p>
+            <a href="../../mark_favorite/549/index.html">リファレンスについて</a>
+        </p>
+        
+        <p>
+            <a href="../../vote/334/down/index.html">Orthologous遺伝子の検索方法について</a>
+        </p>
+        
+        <p>
+            <a href="../../vote/672/down/index.html">ENST00000254657.3のどっと３について</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="../../about/index.html" >概要</a> <span class="link-separator"> |</span> <a href="../../faq/index.html" >よくある質問</a> <span class="link-separator"> |</span> <a href="../../privacy/index.html" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="../../m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

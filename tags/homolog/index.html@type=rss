@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With homolog</title><link>http://qa.lifesciencedb.jp/tags/homolog/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;homolog&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/homolog/" rel="self"></atom:link><language>ja</language><lastBuildDate>Thu, 14 Jul 2016 18:05:18 +0900</lastBuildDate><item><title>ホモログの検出について</title><link>http://qa.lifesciencedb.jp/questions/849/%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B0%E3%81%AE%E6%A4%9C%E5%87%BA%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;RNA-seqを用いて研究を行い始めたものです。
+右も左もわからない中、ここでの回答は非常助かっております。&lt;/p&gt;
+&lt;p&gt;現在得られたRNA-seqの発現遺伝子データセットに対して、既存遺伝子のホモログが存在するのかどうかを調べたいと考えています。
+データセットの量が膨大で、どう調べればよいかが分かりません。&lt;/p&gt;
+&lt;p&gt;初歩的な質問ではありますが、ご教授して頂けないでしょうか。
+何卒よろしくお願いいたします。&lt;/p&gt;
+&lt;p&gt;【追記1】他の生物の遺伝子を対象とし、私の対象とする生物の発達過程でどのような発現をしているかを調査したいと考えています。&lt;/p&gt;
+&lt;p&gt;回答ありがとうございました。データセットのアノテーション情報を参考にして遺伝子を絞り、調査してきたいと思います。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lonicera</dc:creator><pubDate>Thu, 14 Jul 2016 18:05:18 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/849/%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B0%E3%81%AE%E6%A4%9C%E5%87%BA%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>rna-seq</category><category>homolog</category></item></channel></rss>

@@ -1,0 +1,900 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>indelを配列に反映させる - #LSQA</title>
+        <meta name="description" content="現在、ある染色体の配列をfasta形式で持っているのですが、
+これにindelを反映させたいと考えています。
+indelは、例えば、
+1239000base　　ATGGA　　insertion
+1240000base      GT　  deletion
+
+という状態で、エクセル上に保存してあります。
+最終的にfasta形式を変えないまま、数百個のindelを挿入あるいは欠失させたいのですが、
+どのような手段をとったらいいのでしょうか？
+ソフト等の購入費用はありません。。。">
+        <meta name="keywords" content="配列操作">
+        
+        <link rel="canonical" href="../../vote/336/down/index.html" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="indelを配列に反映させる@type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="../../upfiles/favicon.ico" />
+        <link href="../../m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="../../cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='../../m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        
+        <script type='text/javascript' src='../../m/qa.lifesciencedb.jp/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='../../m/qa.lifesciencedb.jp/media/js/wmd/wmd.js'></script>
+        <link rel="stylesheet" type="text/css" href="../../m/qa.lifesciencedb.jp/media/js/wmd/wmd.css" />
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[プレビューを隠す]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[プレビューを表示する]" : "[プレビューを隠す]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml.html" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="../../index.html">
+				<img src="../../upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="../../account/yahoo/signin/index.html" >ログイン</a>  <a href="../../about/index.html" >概要</a>  <a href="../../faq/index.html" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="../index.html" >質問</a><a id="nav_tags" href="../../tags/index.html" >タグ</a><a id="nav_users" href="http://qa.lifesciencedb.jp/users/" >ユーザー</a><a id="nav_badges" href="../../badges/index.html" >バッジ</a><a id="nav_unanswered" href="../unanswered/index.html" >未回答</a>
+        <a id="nav_ask" href="../ask/index.html" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="http://qa.lifesciencedb.jp/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="../../vote/336/down/index.html">indelを配列に反映させる</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-328-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../vote/328/up/index.html" rel="nofollow"> </a>
+<div id="post-328-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-328-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../vote/328/down/index.html" rel="nofollow"> </a>
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="../../mark_favorite/328/index.html" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>現在、ある染色体の配列をfasta形式で持っているのですが、
+これにindelを反映させたいと考えています。</p>
+<p>indelは、例えば、</p>
+<pre><code>1239000base　　ATGGA　　insertion
+1240000base      GT　  deletion
+</code></pre>
+<p>という状態で、エクセル上に保存してあります。</p>
+<p>最終的にfasta形式を変えないまま、数百個のindelを挿入あるいは欠失させたいのですが、
+どのような手段をとったらいいのでしょうか？</p>
+<p>ソフト等の購入費用はありません。。。</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="../../tags/配列操作/index.html" class="post-tag"
+                                        title="'配列操作'タグのついた質問をみる" rel="tag">配列操作</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">                            
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        質問日
+        <strong>Feb 23 '11 at 02:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/22628bf208d0cece0b26c90ab3fd6c55?s=32&amp;d=identicon&amp;r=g" alt="kenken's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/74/kenken/">kenken</a><br/>
+    <span class="score" title="16 徳">16</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 バッジ"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="http://qa.lifesciencedb.jp/revisions/328/">
+                edited
+                <strong>Feb 23 '11 at 09:31</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/3f71cb20d14a9690f0c72cdc2370eb6e?s=32&amp;d=identicon&amp;r=g" alt="ma_ko's gravatar image" />
+            <p><a href="http://qa.lifesciencedb.jp/users/12/ma_ko/">ma_ko ♦♦</a><br/>
+            <span class="score" title="371 徳">371</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="3 バッジ"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="12 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">12</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+<div class="comments-container" id="comments-container-328">
+    
+        <a name="332"></a>
+        <div class="comment" id="comment-332">
+            <div id="post-332-score" class="comment-score"></div>
+            <div class="comment-text"><p>真面目な話として、数百個分の操作なら、手でやるのも検討するといいかもしれません。</p>
+<p>その操作が今回一回きりで、プログラミングの手間やソフトウェアの購入が難しいなら、決して悪くない方法だと思います。今後も同様の操作が繰り返される場合は、プログラミングすることを検討するべきだと思います。</p>
+<p>もしくは、質問として求めている処理をより正確に記述して、これを見た方にプログラミングしてもらうという手があります。その場合は、正確に入力ファイルやパラメータや条件を定義し、出力として期待する型式を定義すると回答が得られる確率が向上します。たとえば、上記の質問では、<code>1239000base</code>がなにを意味しているのか不明なので、期待されている回答が得られにくいかなとおもいます。</p></div>
+            <div class="comment-info" id="comment-332-info">
+                
+                
+                
+                <span class="comment-age">(Feb 23 '11 at 18:55)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/e585686707fd3a61b7096451ebf13012?s=18&amp;d=identicon&amp;r=g" alt="mn3's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-328" class="comment-tools">
+    
+    
+</div>
+<div id="comment-328-form-container" class="comment-form-container">
+    
+</div>
+    
+                        </div>
+                        
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="indelを配列に反映させる@sort=登録順.html" title="最古の回答が最初に表示されます">回答順</a><a href="indelを配列に反映させる@sort=最新.html" title="最新の回答が最初に表示されます">最新</a><a href="indelを配列に反映させる@sort=投票.html" class="on" title="もっとも投票された回答が最初に表示されます">支持されている順</a></div>
+                </div>
+                
+  
+                
+                    <a name="335"></a>
+                    <div id="answer-container-335" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-335-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../vote/335/up/index.html" rel="nofollow"> </a>
+<div id="post-335-score" class="post-score"
+    title="現在の投票数">
+    1
+</div>
+<a id="post-335-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../vote/335/down/index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>塩基配列を弄る系のソフトを簡単に見てみた限りだとkenkenさんの要求する操作ができるものがなかったので，適当にスクリプト書いてみました．こんなものが欲しいという理解でよろしいでしょうか．</p>
+<p>ソースコード　：　<a href="https://gist.github.com/840281">https://gist.github.com/840281</a></p>
+<p>使い方と結果　：　<a href="http://gyazo.com/d055680402948cd245eeaba2b60a373e.png">http://gyazo.com/d055680402948cd245eeaba2b60a373e.png</a></p>
+<p>久しぶりにruby書いたので，ちょっとバグがあるかもしれません．<del>動作保証もできないですが，要望があれば直します．</del></p>
+<p>追記(2011/03/04)：取り敢えず解決された(?)のでしょうか．特に要望も無さそうなので，これで一端終わりにします．ソースコード等は自由に使ってもらって構いませんが，スクリプトの保守管理やbug fixは今後やりません．</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Feb 23 '11 at 20:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/64fb973c47087ece7fb9b45d5b8593a4?s=32&amp;d=identicon&amp;r=g" alt="yag_ays's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/25/yag_ays/">yag_ays</a><br/>
+    <span class="score" title="241 徳">241</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="5 バッジ"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="8 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="http://qa.lifesciencedb.jp/revisions/335/">
+                edited
+                <strong>Mar 04 '11 at 14:23</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-335">
+    
+</div>
+<div id="comment-tools-335" class="comment-tools">
+    
+    
+</div>
+<div id="comment-335-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="338"></a>
+                    <div id="answer-container-338" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-338-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../vote/338/up/index.html" rel="nofollow"> </a>
+<div id="post-338-score" class="post-score"
+    title="現在の投票数">
+    1
+</div>
+<a id="post-338-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../vote/338/down/index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Biostarに似たような質問があったので，リンクを貼っておきます．</p>
+<p><a href="http://biostar.stackexchange.com/questions/2529/how-to-insert-or-delete-nucleoties-at-various-locations-in-large-dna-file">http://biostar.stackexchange.com/questions/2529/how-to-insert-or-delete-nucleoties-at-various-locations-in-large-dna-file</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Feb 24 '11 at 09:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/64fb973c47087ece7fb9b45d5b8593a4?s=32&amp;d=identicon&amp;r=g" alt="yag_ays's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/25/yag_ays/">yag_ays</a><br/>
+    <span class="score" title="241 徳">241</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="5 バッジ"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="8 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span></p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-338">
+    
+</div>
+<div id="comment-tools-338" class="comment-tools">
+    
+    
+</div>
+<div id="comment-338-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="347"></a>
+                    <div id="answer-container-347" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-347-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../vote/347/up/index.html" rel="nofollow"> </a>
+<div id="post-347-score" class="post-score"
+    title="現在の投票数">
+    1
+</div>
+<a id="post-347-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../vote/347/down/index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>わざわざありがとうございます。
+感謝いたします。
+プログラムは初心者なのでよくわからないのですが、
+biorubyは以下のホームページの通りにダウンロードしたらいいんでしょうか。
+過去に何回かcygwinで解析したことがあるのですが、今回は、いまいちよくわかりません。</p>
+<p><a href="http://dev.bioruby.org/ja/?install">http://dev.bioruby.org/ja/?install</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Feb 24 '11 at 19:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/22628bf208d0cece0b26c90ab3fd6c55?s=32&amp;d=identicon&amp;r=g" alt="kenken's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/74/kenken/">kenken</a><br/>
+    <span class="score" title="16 徳">16</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 バッジ"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="http://qa.lifesciencedb.jp/revisions/347/">
+                edited
+                <strong>Feb 25 '11 at 13:40</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/e585686707fd3a61b7096451ebf13012?s=32&amp;d=identicon&amp;r=g" alt="mn3's gravatar image" />
+            <p><a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><br/>
+            <span class="score" title="515 徳">515</span><span title="4 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="9 バッジ"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="22 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-347">
+    
+        <a name="366"></a>
+        <div class="comment" id="comment-366">
+            <div id="post-366-score" class="comment-score"></div>
+            <div class="comment-text"><p>BioRubyを使わなくても良いように，スクリプトを書き換えました．単独で動くので，上記の使い方の項目1.は必要ありません．</p>
+<p>ソースコード　：　<a href="https://gist.github.com/840281">https://gist.github.com/840281</a></p>
+<p>使用例　：　<a href="https://skitch.com/yagays/rt2ma/indel">https://skitch.com/yagays/rt2ma/indel</a></p>
+<p>(ruby 1.8.7とruby 1.9.2p136で動作確認しています)</p></div>
+            <div class="comment-info" id="comment-366-info">
+                
+                
+                
+                <span class="comment-age">(Feb 26 '11 at 05:22)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/25/yag_ays/">yag_ays</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/64fb973c47087ece7fb9b45d5b8593a4?s=18&amp;d=identicon&amp;r=g" alt="yag_ays's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-347" class="comment-tools">
+    
+    
+</div>
+<div id="comment-347-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="336"></a>
+                    <div id="answer-container-336" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-336-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../vote/336/up/index.html" rel="nofollow"> </a>
+<div id="post-336-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-336-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../vote/336/down/index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>参考になるアドバイスありがとうございます。
+使い方と結果と全く同じことを
+cygwin上で行ってみました。
+エラーが出てしまうのですが、私のやり方の問題でしょうか。。。</p>
+<pre>$ ruby indel.rb indels.txt fasta.fasta
+indel.rb:3:in `require': no such file to load -- bio (LoadError)
+        from indel.rb:3
+</pre>
+
+<p>とのことです。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Feb 24 '11 at 00:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/22628bf208d0cece0b26c90ab3fd6c55?s=32&amp;d=identicon&amp;r=g" alt="kenken's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/74/kenken/">kenken</a><br/>
+    <span class="score" title="16 徳">16</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 バッジ"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="http://qa.lifesciencedb.jp/revisions/336/">
+                edited
+                <strong>Feb 25 '11 at 13:41</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/e585686707fd3a61b7096451ebf13012?s=32&amp;d=identicon&amp;r=g" alt="mn3's gravatar image" />
+            <p><a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><br/>
+            <span class="score" title="515 徳">515</span><span title="4 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="9 バッジ"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="22 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-336">
+    
+        <a name="337"></a>
+        <div class="comment" id="comment-337">
+            <div id="post-337-score" class="comment-score"></div>
+            <div class="comment-text"><p>取り敢えずは上のような感じで良さそうですね．スクリプトを少し書き換えたので，使い方を含めて補足します．</p>
+<h3>1．BioRubyというパッケージをインストールします</h3>
+<p>以下のコマンドを実行してください．</p>
+<pre><code>  $ gem install bio
+</code></pre>
+<p>(うまく行かない場合は行頭にsudoを付けて管理者権限になってください)</p>
+<h3>2．以下の3つのファイルを同じフォルダに入れてください</h3>
+<ul>
+<li><strong>indel.rb</strong></li>
+</ul>
+<p>これは <a href="https://gist.github.com/840281">gist: 840281</a> をコピペしたファイル</p>
+<ul>
+<li><strong>indels.txt</strong></li>
+</ul>
+<p>indelの情報が入ったファイルです．タブ区切りのファイルで保存してください（もし違う形式だった場合はExcelの「別名で保存」からtsv形式で保存）</p>
+<ul>
+<li><strong>fasta.fasta</strong></li>
+</ul>
+<p>対象となるFASTAファイルです．</p>
+<h3>3．スクリプトを実行します</h3>
+<p>先ほどファイルを置いたフォルダに移動し，以下のコマンドを実行してください．</p>
+<pre><code> $ ruby indel.rb indels.txt fasta.fasta
+</code></pre>
+<p>もし成功すれば，フォルダ内に「output.fasta」というファルが生成されているハズです．中身を見て，書き換えがうまくいっているか確かめてください．</p>
+<p>以上です．</p></div>
+            <div class="comment-info" id="comment-337-info">
+                
+                
+                
+                <span class="comment-age">(Feb 24 '11 at 04:11)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/25/yag_ays/">yag_ays</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/64fb973c47087ece7fb9b45d5b8593a4?s=18&amp;d=identicon&amp;r=g" alt="yag_ays's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-336" class="comment-tools">
+    
+    
+</div>
+<div id="comment-336-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="http://qa.lifesciencedb.jp/questions/328/answer/" method="post">
+            <div style="clear:both">
+            </div>
+            
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            あなたの回答
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea rows="10" cols="40" name="text" id="editor"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="リアルタイムMarkdown編集プレビューをトグルする">
+                                            プレビューをトグルする
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input type="checkbox" name="wiki" id="id_wiki" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="コミュニティー wikiオプションを選択した場合、質問と回答はポイントを生成せず、作者名は表示されない">
+                                            <label for="id_wiki">コミュニティー wiki</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+                        
+                        </table>  
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>                    
+                </div>
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">この質問をフォローする</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="indelを配列に反映させる@type=rss" title="subscribe to answers"></a>
+    回答
+</p><p><a class="feed-icon" style="background-image:url('../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="indelを配列に反映させる@type=rss&amp;comments=yes" title="subscribe to comments and answers"></a>
+    回答とコメント
+</p>
+
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>ただいまベータテスト運用中です。そのために通知無くコンテンツの変更やサービスの停止変更されることがあります。</h2>
+<p>質問するなら<a href="../../index.html">ライフサイエンスQA</a>。</p>
+<p>このページの<a href="indelを配列に反映させる@type=rss">RSSフィード</a></p>
+<p><a href="http://twitter.com/lsqa_all">@lsqa_all</a>・<a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a></p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <p>
+		タグ:
+    </p>
+    <p class="tags" >
+        
+        	<a href="../../tags/配列操作/index.html" 
+			title="タグ付けされた質問をみる'配列操作'タグを利用している" 
+			rel="tag">配列操作</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        質問日: <strong title="2011-02-23 02:27:40.157300">Feb 23 '11 at 02:27</strong>
+    </p>
+    <p> 
+     	閲覧数: <strong>3,467 回</strong>
+    </p>
+    <p> 
+        最終更新日: <strong title="2011-03-04 14:23:11.589761">Mar 04 '11 at 14:23</strong>
+    </p>
+</div>
+
+
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>世界に広がるQAサイト</h2>
+<p><a href="http://biostar.stackexchange.com">バイオインフォマティクスのBioStar</a>・ <a href="http://I.SEQanswers.com">新型シーケンサーのSEQanswers</a>・ <a href="http://blueobelisk.shapado.com">オープンデータのBlueObelisk</a>・<a href="http://stackoverflow.com">プログラミングのstackoverflow</a>・ <a href="http://www.semanticoverflow.com">Semantic Overflow</a>・ <a href="http://stats.stackexchange.com/">Statistical Analysis</a>・ <a href="http://cstheory.stackexchange.com/">Theoretical Computer Science</a>・ <a href="http://chiebukuro.yahoo.co.jp/">Yahoo!知恵袋</a>・ <a href="http://okwave.jp/">OKWave</a> <a href="http://ja.wikipedia.org/wiki/Category:Q%26Aサイト">などなど</a></p>
+     </div>
+</div>
+
+<div class="boxC">
+    <h3 class="subtitle">関係した質問</h3>
+    <div class="questions-related">
+
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="../../about/index.html" >概要</a> <span class="link-separator"> |</span> <a href="../../faq/index.html" >よくある質問</a> <span class="link-separator"> |</span> <a href="../../privacy/index.html" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="../../m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

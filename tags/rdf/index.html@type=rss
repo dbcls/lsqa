@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With rdf</title><link>http://qa.lifesciencedb.jp/tags/rdf/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;rdf&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/rdf/" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 08 Jul 2013 17:18:13 +0900</lastBuildDate><item><title>RDF化に便利なツールと疾患・薬のRDF化について</title><link>http://qa.lifesciencedb.jp/questions/679/rdf%E5%8C%96%E3%81%AB%E4%BE%BF%E5%88%A9%E3%81%AA%E3%83%84%E3%83%BC%E3%83%AB%E3%81%A8%E7%96%BE%E6%82%A3-%E8%96%AC%E3%81%AErdf%E5%8C%96%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;最近，RDFを書き始めました。セマンティックWebプログラミングの本を読んだり，ググったりはしているのですが，
+調べきれていないこともありそうに思い，また，時代は進歩しているに違いないという思いから，質問させて頂きました。&lt;/p&gt;
+&lt;h2&gt;１．RDF化に便利なツールについて&lt;/h2&gt;
+&lt;p&gt;私は疾患や薬に関するデータをRDF化しているのですが，皆さんはどんなツールを使ってRDF化していますか？
+今回はあまり，データ数が多くない表形式のデータなので，こちらを参考にして，Google Refineを使って今はRDF化しています。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.w3.org/wiki/ConverterToRdf#CSV_.28Comma-Separated_Values.29"&gt;ConverterToRdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;データが多くなった時には，プログラムで生成させるのが妥当だとも思うのですが，
+皆さんが使用している便利なRDF化ツールがありましたら，教えてください。&lt;/p&gt;
+&lt;h2&gt;2. 疾患・創薬のRDFについて&lt;/h2&gt;
+&lt;p&gt;主にprefixとpredicateの検索に関してなのですが，皆さんはprefixやpredicateを主にどこから検索して使用していますか？
+私はBio2RDFを調べたり，今回RDF化したいデータは薬に関するデータなので，&lt;a href="http://drugbank.bio2rdf.org/describe/?url=http%3A%2F%2Fbio2rdf.org%2Fdrugbank%3ADB00060&amp;amp;sid=564"&gt;drugbankの例&lt;/a&gt;を見たりしているのですが，
+有用なサイトを御存知でしたら教えてください。&lt;/p&gt;
+&lt;p&gt;他にもこのサイトを参照にすると便利だよ，であるとか，あなた，これは必須よ！的なサイトがありましたら，教えてください。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Maoringo</dc:creator><pubDate>Mon, 08 Jul 2013 17:18:13 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/679/rdf%E5%8C%96%E3%81%AB%E4%BE%BF%E5%88%A9%E3%81%AA%E3%83%84%E3%83%BC%E3%83%AB%E3%81%A8%E7%96%BE%E6%82%A3-%E8%96%AC%E3%81%AErdf%E5%8C%96%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>rdf</category></item><item><title>セマンティック・ウェブを知ると情報解析の何が変わりますか？</title><link>http://qa.lifesciencedb.jp/questions/80/%E3%82%BB%E3%83%9E%E3%83%B3%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF-%E3%82%A6%E3%82%A7%E3%83%96%E3%82%92%E7%9F%A5%E3%82%8B%E3%81%A8%E6%83%85%E5%A0%B1%E8%A7%A3%E6%9E%90%E3%81%AE%E4%BD%95%E3%81%8C%E5%A4%89%E3%82%8F%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B</link><description>&lt;p&gt;セマンティック・ウェブを使うと、
+(1)情報を取得する側
+(2)情報を公開する側
+にとってどんなメリットがありますか。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Thu, 25 Nov 2010 23:07:54 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/80/%E3%82%BB%E3%83%9E%E3%83%B3%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF-%E3%82%A6%E3%82%A7%E3%83%96%E3%82%92%E7%9F%A5%E3%82%8B%E3%81%A8%E6%83%85%E5%A0%B1%E8%A7%A3%E6%9E%90%E3%81%AE%E4%BD%95%E3%81%8C%E5%A4%89%E3%82%8F%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B</guid><category>xml</category><category>owl</category><category>rdf</category><category>セマンティックweb</category></item></channel></rss>

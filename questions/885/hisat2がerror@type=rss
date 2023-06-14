@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: Hisat2がerror</title><link>http://qa.lifesciencedb.jp/questions/885/hisat2%E3%81%8Cerror</link><description>&lt;p&gt;Hisat2のindexを作る作業が動きません。
+このようなエラーがでます。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;$ hisat2-build /Mus_musculus/UCSC/mm10/Sequence/WholeGenomeFasta/genome.fa
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;genome_index&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dyld: Symbol not found:
+__ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Referenced from:
+/usr/local/Cellar/hisat2/2.1.0/bin/hisat2-build-s
+Expected in:
+/usr/lib/libstdc++.6.0.9.dylib  in
+/usr/local/Cellar/hisat2/2.1.0/bin/hisat2-build-s
+Abort trap: 6&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;いろいろ調べて試しましたが、意味がわかりませんでした。問題解決のヒントをご教示いただければ幸いです。
+Brew update doctor upgradeは問題なかったです。&lt;/p&gt;
+&lt;p&gt;configです。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;$ brew config
+HOMEBREW_VERSION: 1.7.0
+ORIGIN: https://github.com/Homebrew/brew
+HEAD: 7e8fb9a0f8ab5e841763ec6c7fefa72a8462b594
+Last commit: 5 days ago
+Core tap ORIGIN: https://github.com/Homebrew/homebrew-core
+Core tap HEAD: fa5253faa1d416851bbd3d957f67f5ccbcb15441
+Core tap last commit: 6 hours ago
+HOMEBREW_PREFIX: /usr/local
+CPU: quad-core 64-bit skylake
+Homebrew Ruby: 2.3.7 =&amp;gt; /usr/local/Homebrew/Library/Homebrew/vendor/portable-ruby/2.3.7/bin/ruby
+Clang: 9.1 build 902
+Git: 2.18.0 =&amp;gt; /usr/local/bin/git
+Curl: 7.54.0 =&amp;gt; /usr/bin/curl
+Java: 10.0.2, 1.8.0_121
+macOS: 10.13.6-x86_64
+CLT: 9.4.1.0.1.1528165917
+Xcode: 9.4.1
+XQuartz: 2.7.11 =&amp;gt; /opt/X11
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;どうぞよろしくお願いします。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/885/hisat2%E3%81%8Cerror" rel="self"></atom:link><language>ja</language><lastBuildDate>Wed, 25 Jul 2018 13:28:41 +0900</lastBuildDate><item><title>Answer by inutano</title><link>http://qa.lifesciencedb.jp/questions/885/hisat2%E3%81%8Cerror/890</link><description>&lt;p&gt;動いたとのことでよかったです。（ライブラリを直接いじるとシステムに影響がないか心配ですが…）ちなみに、バイナリとはソースコードをコンパイルしたものなので、configure/make は必要ありません。unzip したあと、中に入っている hisat2 を直接実行できます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">inutano</dc:creator><pubDate>Wed, 25 Jul 2018 13:28:41 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/885/hisat2%E3%81%8Cerror/890</guid></item><item><title>Answer by mikan03</title><link>http://qa.lifesciencedb.jp/questions/885/hisat2%E3%81%8Cerror/888</link><description>&lt;p&gt;まずは結論から。 /usr/local/lib/libstdc++.6.0.9.dylib を削除しました。 
+ーーーーーーーーーー
+以下、試したことを記述しておきます。(すみません。ログが流れてしまいましたので、部分的な情報だけです）&lt;/p&gt;
+&lt;p&gt;まず、brew uninstall hisat2をしてトラブル回避。&lt;/p&gt;
+&lt;p&gt;OSX用のバイナリからのビルドも試みましたが、makeがうまくいきませんでした。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;unzip hisat2-2.1.0-OSX_x86_64.zip
+cd hisat2-2.1.0
+ls
+/.configure
+make
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;makeでconfigureが見つからないといわれましたので、
+lsでみてconfig.&lt;strong&gt;というファイルがいろいろあったので、片っ端から/.configu.&lt;/strong&gt;しましたが、特に動きなし。&lt;/p&gt;
+&lt;p&gt;続いて、他のパッケージングソフトでhisat2が入らないかを試す。
+portはできなかったので、
+minicondaをインストール。
+sudo port install miniconda&lt;/p&gt;
+&lt;p&gt;minicondaでHIisat2をインストール
+which hisatでpathは通っているが、anaconda経由になっていた。
+そこでもう一回hisat2でindex構築実行。&lt;/p&gt;
+&lt;p&gt;同じエラー発生。
+hiast2 -hでヘルプはみられる。ということはシステム的な問題？&lt;/p&gt;
+&lt;p&gt;もういちどログ確認。
+内容はあまり理解できませんが
+Expected in: /usr/lib/libstdc++.6.0.9.dylib
+どうやらこいつが悪さをしている？&lt;/p&gt;
+&lt;p&gt;下記参照サイトを元にggplotからlibstdc++.6.0.9.dylibを輸入してみるが.libstdc++.6.dylibしかない。試しに置き換えてみる。
+githubからあたらしくlibstdc++.6.0.9.dylibを取ってきていれてみた。エラーログの内容が変わったが、相変わらず動かない。&lt;/p&gt;
+&lt;p&gt;libstdc++.6.0.9.dylibが消えるかを試したが、消えないことが判明。lsで表示されるのにfile not exist.
+rm optionいろいろ使ってみるが、どれも効果なし。finderからl/usr/local/lib//libstdc++.6.0.9.dylib（不可視ファイル）探してゴミ箱にぽいで消えた。&lt;/p&gt;
+&lt;p&gt;それからindex構築動きました。
+mappingも動いて無事にでました。&lt;/p&gt;
+&lt;p&gt;以下参考にしたサイト。ありがとうございます。&lt;/p&gt;
+&lt;p&gt;https://bioconda.github.io/recipes/hisat2/README.html&lt;/p&gt;
+&lt;p&gt;http://blog.toshihiro-kaneko.tonkotsu.jp/?cid=3&lt;/p&gt;
+&lt;p&gt;https://github.com/phracker/MacOSX-SDKs/blob/master/MacOSX10.7.sdk/usr/lib/libstdc++.6.0.9.dylib&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mikan03</dc:creator><pubDate>Mon, 23 Jul 2018 14:10:30 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/885/hisat2%E3%81%8Cerror/888</guid></item><item><title>Answer by inutano</title><link>http://qa.lifesciencedb.jp/questions/885/hisat2%E3%81%8Cerror/886</link><description>&lt;p&gt;環境がないので検証できないのですが、ひとまず公式のOS X用バイナリを使って動くか検証してみるのはどうでしょう？
+https://ccb.jhu.edu/software/hisat2/index.shtml
+ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/downloads/hisat2-2.1.0-OSX_x86_64.zip&lt;/p&gt;
+&lt;p&gt;マウスのwhole genomeであれば公式でビルド済みのインデックスが配布されているのでそれを使うという手もあるかとおもいます。
+ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/data&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">inutano</dc:creator><pubDate>Sat, 21 Jul 2018 17:45:53 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/885/hisat2%E3%81%8Cerror/886</guid></item></channel></rss>

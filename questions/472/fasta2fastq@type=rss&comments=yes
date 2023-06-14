@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: fasta2fastq</title><link>http://qa.lifesciencedb.jp/questions/472/fasta2fastq</link><description>&lt;p&gt;初めて質問します。
+solexaのreadをde novo assembleして出来たcontigをbwaもしくはbwa-swを用いてmappingしたいと考えています。
+bwaにinputするためには、contigの.fastaファイルを.fastqに変換する必要があると思いますが、そのような変換ツールを知っている方がおられたら教えていただけないでしょうか。調べたのですが調べ方が悪いのか見つかりませんでした。&lt;/p&gt;
+&lt;h1&gt;具体例&lt;/h1&gt;
+&lt;p&gt;【変換前（.fasta）】&lt;/p&gt;
+&lt;p&gt;＞SEQ_ID&lt;/p&gt;
+&lt;p&gt;GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT&lt;/p&gt;
+&lt;p&gt;【変換後（.fastq）】&lt;/p&gt;
+&lt;p&gt;＠SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT&lt;/p&gt;
+&lt;p&gt;＋&lt;/p&gt;
+&lt;p&gt;IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII&lt;/p&gt;
+&lt;p&gt;qualityはphred_score(Phred+33)=40(I)で固定で構いません。&lt;/p&gt;
+&lt;p&gt;ご存知の方がいたら、教えていただけると助かります。
+よろしくお願いします。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/472/fasta2fastq" rel="self"></atom:link><language>ja</language><lastBuildDate>Sun, 05 Jun 2011 22:06:34 +0900</lastBuildDate><item><title>Answer by yasugoyasu</title><link>http://qa.lifesciencedb.jp/questions/472/fasta2fastq/475</link><description>&lt;p&gt;gaouさま、nob_fjさま&lt;/p&gt;
+&lt;p&gt;返信ありがとうござました。
+maqに入っているかもしれないと思い、maqも見たのですが、fq_all2std.plは見落としていました。
+教えていただきありがとうございました。&lt;/p&gt;
+&lt;p&gt;説明不足でしたが、exomeキャプチャーしてきたsequenceをde novo assemblyしてから、referenceにmappingしたものと、単純にsolexaのreadをmappingしたものとでの効率（% on-targetや% read coverage）の比較をしたいと考えていました。
+referenceがない種からどの程度のコーディング情報が取れるかの予備実験です。&lt;/p&gt;
+&lt;p&gt;assemblyしたcontigは24bp~4000bp程度（exome_assembly）で、(i) bwa+bwa-swと(ii) blatの両方を使ったmappingをやろうと思っています。
+blatは最初のmappingまではやり、pslCDnaFilterによるpslのfilteringを行なうと思っていますが、pslCDnaFilterのインストールに手間取っています。
+bwaのmappingは200bpまでとmanualに書かれていますが、bwa-swは最大100kbくらいまではmappingできると書いてあります。
+bwaは通常のmappingで使っていますが、bwa-swはいまだに使った事がありません。&lt;/p&gt;
+&lt;p&gt;bwa+bwa-swとblatによるmappingのどちらがいいか、もしご存知の方がおられたら教えていただけますでしょうか。&lt;/p&gt;
+&lt;p&gt;よろしくお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">yasugoyasu</dc:creator><pubDate>Sun, 05 Jun 2011 22:06:34 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/472/fasta2fastq/475</guid></item><item><title>Answer by nob_fj</title><link>http://qa.lifesciencedb.jp/questions/472/fasta2fastq/474</link><description>&lt;p&gt;&lt;a href="https://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%BF%E3%83%BB%E3%83%91%E3%83%BC%E3%82%B5"&gt;NGS surfer's Wiki(コンバータ・パーサ)&lt;/a&gt; にも記載していますが、
+純粋にFASTAファイルをFASTQに変換するには？という質問に対する質問への回答としては、&lt;/p&gt;
+&lt;h1&gt;MAQというツールをインストールすると付属しているperlスクリプトを使用する。&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;$ head -n 4 input.fa
+&amp;gt;seq1
+ATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATG
+&amp;gt;seq2
+ATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATG
+$ /toolPath/maq-0.7.1/scripts/fq_all2std.pl fa2std -q 40 input.fa &amp;gt; output.fastq
+$ head -n 8 output.fastq
+@seq1
+ATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATG
++
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+@seq2
+ATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATG
++
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;また、&lt;/p&gt;
+&lt;h1&gt;自前でスクリプト書く。&lt;/h1&gt;
+&lt;p&gt;多くのUNIX/LINUX環境では、sed、awkは入っていると思います。cygwinでもたぶん動きます。
+充分テストをしていないので、お勧めはしません。ツール(G-language,BioPerl,maq)などのインストールがどうしても面倒だという場合のみ使用を検討下さい。また、配列行が複数行になることは想定していません。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sed -n "/^&amp;gt;/N;s/^&amp;gt;//;s/\n/\t/p;" input.fa | awk '{qual=$2;gsub(/./,"I",qual);print "@"$1"\n"$2"\n+"$1"\n"qual}' &amp;gt; output2.fastq
+$ head -n 8 output2.fastq
+@seq1
+ATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATG
++seq1
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+@seq2
+ATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATG
++seq2
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;BWAが今回のマッピングに適しているかというgaouさんの指摘は、もっともな気がしますので、ご留意ください。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Sun, 05 Jun 2011 19:03:55 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/472/fasta2fastq/474</guid></item><item><title>Answer by gaou</title><link>http://qa.lifesciencedb.jp/questions/472/fasta2fastq/473</link><description>&lt;p&gt;G-language GAEなら&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;use G;
+my %fasta = readFile('file.fasta', -format=&amp;gt;"fasta");
+for my $key (keys %fasta){
+    print to_fastq($fasta{$key}, -name=&amp;gt;$key);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;BioPerlなら
+&lt;a href="http://www.bioperl.org/wiki/Merging_separate_sequence_and_quality_files_to_FASTQ"&gt;http://www.bioperl.org/wiki/Merging_separate_sequence_and_quality_files_to_FASTQ&lt;/a&gt;
+のようにライブラリ毎にいろいろ書き方はありますが、そもそもBWAのアルゴリズムは長い配列には向かないのでアセンブルする前にshort readのままmappingした方が良いですし、アセンブルしたものがTranscriptならExonerate、ゲノムの一部ならMUMERなどを使った方が良いかと思います。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">gaou</dc:creator><pubDate>Sat, 04 Jun 2011 03:00:19 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/472/fasta2fastq/473</guid></item></channel></rss>

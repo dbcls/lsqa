@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With r</title><link>http://qa.lifesciencedb.jp/tags/r/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;r&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/r/" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 06 Apr 2015 17:58:56 +0900</lastBuildDate><item><title>RNA seqにおけるRを用いたマッピング時のエラーについて</title><link>http://qa.lifesciencedb.jp/questions/835/rna-seq%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Br%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E6%99%82%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;「Rで塩基配列解析」をみながら、RNAseq解析をしようとしています。Rは初心者で、試しに適当なリファレンス配列とクエリー配列（共にfasta形式）を用いてmappingを試みています。リストファイルを作成後、以下のコマンドによりQuasRを起動してマッピングを行おうとしましたが、以下のようにbowtieにおいて、”引数の長さが 0 です　sh: line 1:  9966 Segmentation fault: 11”というエラーが出てしまい困っております。このような場合の解決策をご存知の方はいらっしゃいますか？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;in_f1 &amp;lt;- "mapping1.txt"&lt;/p&gt;
+&lt;p&gt;in_f2 &amp;lt;- "Ala2.fa"&lt;/p&gt;
+&lt;p&gt;library(QuasR)&lt;/p&gt;
+&lt;p&gt;out &amp;lt;- qAlign(in_f1, in_f2)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Creating .fai file for: /Users/ka/Desktop/te/Ala2.fa&lt;/p&gt;
+&lt;p&gt;alignment files missing - need to:
+    create alignment index for the genome
+    create 1 genomic alignment(s)
+will start in ..9s..8s..7s..6s..5s..4s..3s..2s..1s&lt;/p&gt;
+&lt;p&gt;Creating an Rbowtie index for /Users/ka/Desktop/te/Ala2.fa&lt;/p&gt;
+&lt;p&gt;Finished creating index
+Testing the compute nodes...OK
+Loading QuasR on the compute nodes...OK&lt;/p&gt;
+&lt;p&gt;Available cores:
+nodeNames
+ka.biol.sci.u.ac.jp 
+                            1 &lt;/p&gt;
+&lt;p&gt;Performing genomic alignments for 1 samples. 
+See progress in the log file:
+/Users/ka/Desktop/te/QuasR_log_1d53f48759d.txt&lt;/p&gt;
+&lt;p&gt;以下にエラー checkForRemoteErrors(val) : &lt;/p&gt;
+&lt;p&gt;one node produced an error: Error on ka.biol.sci.u.ac.jp processing sample /Users/ka/Desktop/te/Ala1.fa :  引数の長さが 0 です 
+sh: line 1:  9966 Segmentation fault: 11&lt;br&gt;
+&lt;/p&gt;
+&lt;p&gt;'/Library/Frameworks/R.framework/Versions/3.1/Resources/library/Rbowtie/bowtie' &lt;/p&gt;
+&lt;p&gt;'/Users/ka/Desktop/te/Ala2.fa.Rbowtie/bowtieIndex' '/Users/ka/Desktop/te/Ala1.fa' -m 1 --best --strata -v 2 -f -S -p 1 '/var/folders/kg/hrs2ndkn029f978fs1_18s140000gn/T//RtmpF7YdOB/Ala1.fa26e25902bc72.sam' 2&amp;gt;&amp;amp;1&lt;/p&gt;
+&lt;p&gt;下記にsessionInfo()  による情報と使用Macのスペックを示します。どうぞよろしくお願い致します。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;sessionInfo()
+R version 3.1.3 (2015-03-09)
+Platform: x86_64-apple-darwin10.8.0 (64-bit)
+Running under: OS X 10.8.5 (Mountain Lion)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;locale:
+[1] ja_JP.UTF-8/ja_JP.UTF-8/ja_JP.UTF-8/C/ja_JP.UTF-8/ja_JP.UTF-8&lt;/p&gt;
+&lt;p&gt;attached base packages:
+[1] stats4    parallel  stats     graphics  grDevices utils     datasets 
+[8] methods   base   &lt;br&gt;
+&lt;/p&gt;
+&lt;p&gt;other attached packages:
+ [1] GenomicAlignments_1.2.2 Rsamtools_1.18.3     &lt;br&gt;
+ [3] Biostrings_2.34.1       XVector_0.6.0        &lt;br&gt;
+ [5] QuasR_1.6.2             Rbowtie_1.6.0        &lt;br&gt;
+ [7] GenomicRanges_1.18.4    GenomeInfoDb_1.2.4   &lt;br&gt;
+ [9] IRanges_2.0.1           S4Vectors_0.4.0      &lt;br&gt;
+[11] BiocGenerics_0.12.1     BiocInstaller_1.16.2 &lt;br&gt;
+&lt;/p&gt;
+&lt;p&gt;loaded via a namespace (and not attached):
+ [1] AnnotationDbi_1.28.2   base64enc_0.1-2        BatchJobs_1.6       &lt;br&gt;
+ [4] BBmisc_1.9             Biobase_2.26.0         BiocParallel_1.0.3  &lt;br&gt;
+ [7] biomaRt_2.22.0         bitops_1.0-6           brew_1.0-6          &lt;br&gt;
+[10] BSgenome_1.34.1        checkmate_1.5.2        codetools_0.2-11    &lt;br&gt;
+[13] DBI_0.3.1              digest_0.6.8           fail_1.2            &lt;br&gt;
+[16] foreach_1.4.2          GenomicFeatures_1.18.6 grid_3.1.3          &lt;br&gt;
+[19] hwriter_1.3.2          iterators_1.0.7        lattice_0.20-31     &lt;br&gt;
+[22] latticeExtra_0.6-26    RColorBrewer_1.1-2     RCurl_1.95-4.5      &lt;br&gt;
+[25] RSQLite_1.0.0          rtracklayer_1.26.3     sendmailR_1.2-1     &lt;br&gt;
+[28] ShortRead_1.24.0       stringr_0.6.2          tools_3.1.3         &lt;br&gt;
+[31] XML_3.98-1.1           zlibbioc_1.12.0 &lt;/p&gt;
+&lt;p&gt;Mac Proスペック
+プロセッサ  2 x 2.66 GHz 6-Core Intel Xeon
+メモリ  32 GB 1333 MHz DDR3 ECC
+ソフトウェア  OS X 10.8.5（12F45）&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">brown</dc:creator><pubDate>Mon, 06 Apr 2015 17:58:56 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/835/rna-seq%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Br%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E6%99%82%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>r</category><category>rna-seq</category><category>mapping</category></item><item><title>R-TipsによるGO解析（遺伝子数の数え上げ）</title><link>http://qa.lifesciencedb.jp/questions/678/r-tips%E3%81%AB%E3%82%88%E3%82%8Bgo%E8%A7%A3%E6%9E%90-%E9%81%BA%E4%BC%9D%E5%AD%90%E6%95%B0%E3%81%AE%E6%95%B0%E3%81%88%E4%B8%8A%E3%81%92</link><description>&lt;p&gt;植物の研究に携わっております。R-TipsによるGO解析のパッケージがありましたら、お教えいただきたく質問させて頂いております。現在の自分のGO解析の方法は、(1)TAIRの最新のデータベースより、GO番号とそこに帰属（？）されているATH遺伝子を入手して、エクセル表に入れます。(2)自分の研究材料はアラビドプシスではないので、解析したい遺伝子群の予測アミノ酸配列をBLASTPでATH遺伝子に対応をつけます（トップ・ホモロジーの1遺伝子に対応させています。ホモロジーの低いものはスコアーを指標に切っています）。(3)エクセル表中のGO-ATH遺伝子を、自分の遺伝子群（対応がついたATH遺伝子群）中で探し、数え上げます(エクセル関数の式を組んでいます)。(4)Fisherの正確検定を基に、袋の中の赤色と白色の玉の数の確率を求めるやり方で、GO中の遺伝子が有意に自分の遺伝子群中に濃縮されているかどうかを調べます。以上の方法の場合、GO-ATH遺伝子の数が非常に多いので、自分の遺伝子群が1000個程度あると、数え上げの操作で、エクセルの動作が非常に不安定になります。そこで、R-Tipsなど、パソコンで比較的楽に操作できる解析方法が、もしあれば、お教え願えれば、非常に嬉しいです。また、自分の方法が、GO解析として、適切かどうかについても、ご教唆願えれば嬉しいです。よろしくお願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">gakkoh</dc:creator><pubDate>Sat, 08 Jun 2013 11:46:22 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/678/r-tips%E3%81%AB%E3%82%88%E3%82%8Bgo%E8%A7%A3%E6%9E%90-%E9%81%BA%E4%BC%9D%E5%AD%90%E6%95%B0%E3%81%AE%E6%95%B0%E3%81%88%E4%B8%8A%E3%81%92</guid><category>go</category><category>tair</category><category>r</category><category>検定</category></item><item><title>The R journal の記事をダウンロードしないで全文検索する方法はありますか？</title><link>http://qa.lifesciencedb.jp/questions/654/the-r-journal-%E3%81%AE%E8%A8%98%E4%BA%8B%E3%82%92%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%97%E3%81%AA%E3%81%84%E3%81%A7%E5%85%A8%E6%96%87%E6%A4%9C%E7%B4%A2%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B</link><description>&lt;p&gt;&lt;a href="http://journal.r-project.org/"&gt;The R journal&lt;/a&gt; や R News は雑誌スタイルの PDF で発行されていて価値があるものです。これらをオンラインで全文検索する方法はどこかにあるのでしょうか？&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.google.co.jp/search?q=site%3Ajournal.r-project.org+health"&gt;Google で site;journal.r-project.org にキーワードを加えて検索&lt;/a&gt;しましたが、それでPDF内部もちゃんともれなく検索できているのかやや不安でした。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mn3</dc:creator><pubDate>Fri, 07 Dec 2012 00:45:36 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/654/the-r-journal-%E3%81%AE%E8%A8%98%E4%BA%8B%E3%82%92%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%97%E3%81%AA%E3%81%84%E3%81%A7%E5%85%A8%E6%96%87%E6%A4%9C%E7%B4%A2%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B</guid><category>r</category></item><item><title>あるGEO SeriesがSuperSeriesか否かをGEOqueryで判別する方法</title><link>http://qa.lifesciencedb.jp/questions/560/%E3%81%82%E3%82%8Bgeo-series%E3%81%8Csuperseries%E3%81%8B%E5%90%A6%E3%81%8B%E3%82%92geoquery%E3%81%A7%E5%88%A4%E5%88%A5%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95</link><description>&lt;p&gt;あるGEO SeriesがSuperSeries（いくつかのSeriesがまとまったSeries）である場合には，SOFTファイルのSeries_summaryにSuperSeriesであることが記述されます．&lt;/p&gt;
+&lt;p&gt;R/BioConductorにはGEOデータを扱うGEOqueryライブラリがあり，getGEO(gse_id)とすると，そのIDのSOFTファイルを読み込みます．&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(GEOquery)
+gse &amp;lt;- getGEO("GSE20861")
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;このgseの中にSeries_summaryが入っていると思うのですが，どのように探せば良いのでしょうか？&lt;/p&gt;
+&lt;p&gt;（&lt;a href="http://www.ncbi.nlm.nih.gov/projects/geo/query/acc.cgi?acc=GSE20861"&gt;GSE20861&lt;/a&gt;はSuperSeriesの例 ）&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">dancing_infobio</dc:creator><pubDate>Mon, 16 Jan 2012 20:30:31 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/560/%E3%81%82%E3%82%8Bgeo-series%E3%81%8Csuperseries%E3%81%8B%E5%90%A6%E3%81%8B%E3%82%92geoquery%E3%81%A7%E5%88%A4%E5%88%A5%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95</guid><category>bioconductor</category><category>r</category><category>geo</category></item><item><title>Rでfastaファイルを読み込む際におすすめのパッケージはありますか？</title><link>http://qa.lifesciencedb.jp/questions/512/r%E3%81%A7fasta%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80%E9%9A%9B%E3%81%AB%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%81%AE%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B</link><description>&lt;p&gt;Rでfastaファイルを読み込む方法としてGeneRパッケージのreadFasta関数がありますが、
+BiostringsパッケージのreadFASTA関数、seqinrパッケージのread.fasta関数などもあり、
+どれを使えばよいのかわかりません。他にも読み込む方法があるかと思いますが、
+Rでfastaファイルを読み込む際におすすめのパッケージ・関数はありますでしょうか？&lt;/p&gt;
+&lt;p&gt;追記
+&lt;a href="http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html#read_fasta"&gt;http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html#read_fasta&lt;/a&gt;
+Biostringsパッケージにはread.DNAStringSet関数というものもあり、メモリ消費量が少ないとの記述がありました。
+やや脱線してしまいますが、メモリ消費量は読み込みの前後でgc()を実行すればよさそうです。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">wakuteka</dc:creator><pubDate>Sun, 10 Jul 2011 19:49:50 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/512/r%E3%81%A7fasta%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80%E9%9A%9B%E3%81%AB%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%81%AE%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B</guid><category>fasta</category><category>r</category></item><item><title>バイオインフォマティクスに有用なRのパッケージのリスト</title><link>http://qa.lifesciencedb.jp/questions/451/%E3%83%90%E3%82%A4%E3%82%AA%E3%82%A4%E3%83%B3%E3%83%95%E3%82%A9%E3%83%9E%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%81%AB%E6%9C%89%E7%94%A8%E3%81%AAr%E3%81%AE%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E3%83%AA%E3%82%B9%E3%83%88</link><description>&lt;p&gt;パソコンにRをインストールしました。&lt;/p&gt;
+&lt;p&gt;バイオインフォマティクスに役に立つパッケージを追加(インストール)
+しようと思うのですが、どのパッケージをインストールしたら
+よいのかわかりません。&lt;/p&gt;
+&lt;p&gt;どこかWeb siteなどに、バイオインフォマティクスをするのなら
+これはインストールしておくとよい、というようなパッケージの
+リストはないでしょうか。&lt;/p&gt;
+&lt;p&gt;どうぞよろしくお願い致します。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">redgrapefruit</dc:creator><pubDate>Wed, 25 May 2011 02:53:01 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/451/%E3%83%90%E3%82%A4%E3%82%AA%E3%82%A4%E3%83%B3%E3%83%95%E3%82%A9%E3%83%9E%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%81%AB%E6%9C%89%E7%94%A8%E3%81%AAr%E3%81%AE%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E3%83%AA%E3%82%B9%E3%83%88</guid><category>r</category></item><item><title>Rで作製した散布図に2倍の発現量の差を示すラインを引きたい</title><link>http://qa.lifesciencedb.jp/questions/303/r%E3%81%A7%E4%BD%9C%E8%A3%BD%E3%81%97%E3%81%9F%E6%95%A3%E5%B8%83%E5%9B%B3%E3%81%AB2%E5%80%8D%E3%81%AE%E7%99%BA%E7%8F%BE%E9%87%8F%E3%81%AE%E5%B7%AE%E3%82%92%E7%A4%BA%E3%81%99%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%92%E5%BC%95%E3%81%8D%E3%81%9F%E3%81%84</link><description>&lt;p&gt;Rで作製した散布図に、サンプル間で２倍の発現量の差を示す
+ラインを引きたいと思いますが、どうしても方法がわかりません。
+（論文などで散布図上に×2.0と書いてあるライン）
+どうぞ宜しくお願い致します。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Beans</dc:creator><pubDate>Mon, 31 Jan 2011 21:16:47 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/303/r%E3%81%A7%E4%BD%9C%E8%A3%BD%E3%81%97%E3%81%9F%E6%95%A3%E5%B8%83%E5%9B%B3%E3%81%AB2%E5%80%8D%E3%81%AE%E7%99%BA%E7%8F%BE%E9%87%8F%E3%81%AE%E5%B7%AE%E3%82%92%E7%A4%BA%E3%81%99%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%92%E5%BC%95%E3%81%8D%E3%81%9F%E3%81%84</guid><category>r</category></item><item><title>Rで作製した散布図で現在選択している点だけにラベルをつけたい</title><link>http://qa.lifesciencedb.jp/questions/293/r%E3%81%A7%E4%BD%9C%E8%A3%BD%E3%81%97%E3%81%9F%E6%95%A3%E5%B8%83%E5%9B%B3%E3%81%A7%E7%8F%BE%E5%9C%A8%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E7%82%B9%E3%81%A0%E3%81%91%E3%81%AB%E3%83%A9%E3%83%99%E3%83%AB%E3%82%92%E3%81%A4%E3%81%91%E3%81%9F%E3%81%84</link><description>&lt;p&gt;マイクロアレイのデータをRを用いて散布図にしました。
+行いたいことは2つあります。&lt;/p&gt;
+&lt;p&gt;①点を選択すると、その点の情報が出るようにしたい（遺伝子名など）
+②その選択した点にラベルをつけたい&lt;/p&gt;
+&lt;p&gt;上記のことはGeneSpringなど有料ソフトを使えばできると聞きましたが、
+Rを使わなければならない状況にあります。
+また、全ての点にラベルをつける方法はあることは把握しておりますが、
+選択した点のみにしたいのです。
+どうぞ宜しくお願い申し上げます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Beans</dc:creator><pubDate>Wed, 26 Jan 2011 21:22:13 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/293/r%E3%81%A7%E4%BD%9C%E8%A3%BD%E3%81%97%E3%81%9F%E6%95%A3%E5%B8%83%E5%9B%B3%E3%81%A7%E7%8F%BE%E5%9C%A8%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E7%82%B9%E3%81%A0%E3%81%91%E3%81%AB%E3%83%A9%E3%83%99%E3%83%AB%E3%82%92%E3%81%A4%E3%81%91%E3%81%9F%E3%81%84</guid><category>api</category><category>r</category><category>可視化</category></item></channel></rss>

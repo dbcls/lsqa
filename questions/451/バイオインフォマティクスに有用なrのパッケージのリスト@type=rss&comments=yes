@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: バイオインフォマティクスに有用なRのパッケージのリスト</title><link>http://qa.lifesciencedb.jp/questions/451/%E3%83%90%E3%82%A4%E3%82%AA%E3%82%A4%E3%83%B3%E3%83%95%E3%82%A9%E3%83%9E%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%81%AB%E6%9C%89%E7%94%A8%E3%81%AAr%E3%81%AE%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E3%83%AA%E3%82%B9%E3%83%88</link><description>&lt;p&gt;パソコンにRをインストールしました。&lt;/p&gt;
+&lt;p&gt;バイオインフォマティクスに役に立つパッケージを追加(インストール)
+しようと思うのですが、どのパッケージをインストールしたら
+よいのかわかりません。&lt;/p&gt;
+&lt;p&gt;どこかWeb siteなどに、バイオインフォマティクスをするのなら
+これはインストールしておくとよい、というようなパッケージの
+リストはないでしょうか。&lt;/p&gt;
+&lt;p&gt;どうぞよろしくお願い致します。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/451/%E3%83%90%E3%82%A4%E3%82%AA%E3%82%A4%E3%83%B3%E3%83%95%E3%82%A9%E3%83%9E%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%81%AB%E6%9C%89%E7%94%A8%E3%81%AAr%E3%81%AE%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E3%83%AA%E3%82%B9%E3%83%88" rel="self"></atom:link><language>ja</language><lastBuildDate>Fri, 27 May 2011 17:36:39 +0900</lastBuildDate><item><title>Comment by redgrapefruit on dritoshi's 回答</title><link>http://qa.lifesciencedb.jp/questions/451/%E3%83%90%E3%82%A4%E3%82%AA%E3%82%A4%E3%83%B3%E3%83%95%E3%82%A9%E3%83%9E%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%81%AB%E6%9C%89%E7%94%A8%E3%81%AAr%E3%81%AE%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E3%83%AA%E3%82%B9%E3%83%88#455</link><description>&lt;p&gt;ご回答、どうもありがとうございます。
+大変参考になりました。早速やってみようと思います。
+今後ともどうぞよろしくお願い致します。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">redgrapefruit</dc:creator><pubDate>Fri, 27 May 2011 17:36:39 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/451/%E3%83%90%E3%82%A4%E3%82%AA%E3%82%A4%E3%83%B3%E3%83%95%E3%82%A9%E3%83%9E%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%81%AB%E6%9C%89%E7%94%A8%E3%81%AAr%E3%81%AE%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E3%83%AA%E3%82%B9%E3%83%88#455</guid></item><item><title>Answer by dritoshi</title><link>http://qa.lifesciencedb.jp/questions/451/%E3%83%90%E3%82%A4%E3%82%AA%E3%82%A4%E3%83%B3%E3%83%95%E3%82%A9%E3%83%9E%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%81%AB%E6%9C%89%E7%94%A8%E3%81%AAr%E3%81%AE%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E3%83%AA%E3%82%B9%E3%83%88/452</link><description>&lt;p&gt;マイクロアレイ解析、配列解析 (NGS解析) など多くのバイオインフォマティクス解析は、Bioconductor をインストールするとできます。以下のようにインストールします。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;source("http://bioconductor.org/biocLite.R")
+biocLite()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;どんなものがあるかは、以下のURLで見ることができます。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.bioconductor.org/packages/release/bioc/"&gt;http://www.bioconductor.org/packages/release/bioc/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.bioconductor.org/packages/release/data/annotation/"&gt;http://www.bioconductor.org/packages/release/data/annotation/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;いっそ、biocLite(groupName="all")  のようにすべてのパッケージを入れてしまっても良いと思います。4GB程度です。&lt;/p&gt;
+&lt;p&gt;その他に、バイオインフォ、特にオミックスでは、多重検定補正が大事になりますので、qvalue は入れておくとよいと思います。また、CRANにあるものも、&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;packs &amp;lt;- available.packages()
+install.packages(packs[,1])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;のようにすべて入れてしまっても、5GB 程度です。バイオインフォ向けのRの本も数冊出版されているのでそのような本を参考する手もあると思います。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">dritoshi</dc:creator><pubDate>Wed, 25 May 2011 03:23:47 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/451/%E3%83%90%E3%82%A4%E3%82%AA%E3%82%A4%E3%83%B3%E3%83%95%E3%82%A9%E3%83%9E%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%81%AB%E6%9C%89%E7%94%A8%E3%81%AAr%E3%81%AE%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E3%83%AA%E3%82%B9%E3%83%88/452</guid></item></channel></rss>

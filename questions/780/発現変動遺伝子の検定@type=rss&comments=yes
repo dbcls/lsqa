@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: 発現変動遺伝子の検定</title><link>http://qa.lifesciencedb.jp/questions/780/%E7%99%BA%E7%8F%BE%E5%A4%89%E5%8B%95%E9%81%BA%E4%BC%9D%E5%AD%90%E3%81%AE%E6%A4%9C%E5%AE%9A</link><description>&lt;p&gt;複製無しの2サンプル間のRPKMの統計処理によって、発現変動遺伝子を検出したいと考えています。
+文献を検索し、Fisher's exact testをしたいと思っているのですが、エクセルでは計算能力の限界を超えてしまうため
+計算に適したソフトなどを教えて頂けないでしょうか。&lt;/p&gt;
+&lt;p&gt;また他のRPKMの比較に適した検定があればそちらのほうも宜しくお願い致します。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/780/%E7%99%BA%E7%8F%BE%E5%A4%89%E5%8B%95%E9%81%BA%E4%BC%9D%E5%AD%90%E3%81%AE%E6%A4%9C%E5%AE%9A" rel="self"></atom:link><language>ja</language><lastBuildDate>Sat, 13 Sep 2014 18:49:28 +0900</lastBuildDate><item><title>Answer by nob_fj</title><link>http://qa.lifesciencedb.jp/questions/780/%E7%99%BA%E7%8F%BE%E5%A4%89%E5%8B%95%E9%81%BA%E4%BC%9D%E5%AD%90%E3%81%AE%E6%A4%9C%E5%AE%9A/781</link><description>&lt;p&gt;私の記憶違いでなければ、FETで発現変動遺伝子(DEG)を検出する際にRPKMにしてしまうと、
+何本のリードがその数値を支持しているかの情報が失われてしまうため問題がありますので、
+RPKMでなくraw tag countを使うことが推奨されてると思います。
+FETでのDEG検出は以下のR/Bioconductorのパッケージでそれができます。検定の種類(method)でFETを選べば良いです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.bioconductor.org/packages/release/bioc/html/DEGseq.html"&gt;DEGseq&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Rの使い方をご存知か、勉強するおつもりなら、門田先生らの公開されている&lt;a href="http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html"&gt;(Rで)塩基配列解析&lt;/a&gt;で懇切丁寧にやりかたが書いてあります。&lt;/p&gt;
+&lt;p&gt;上にはかなうべくもない拙文ですがDEGseq FETでのDEGの検出のやりかたは&lt;a href="https://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=DEGseq%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB"&gt;こちら&lt;/a&gt;にも記載しています。&lt;/p&gt;
+&lt;p&gt;RPKMとではないですが、同様の概念をFPKMと呼んでDEGの検出を行うので最も人気のあるツールは&lt;a href="http://cufflinks.cbcb.umd.edu/manual.html#cuffdiff"&gt;Cuffdiff&lt;/a&gt;ではないかと思います。&lt;/p&gt;
+&lt;p&gt;パッケージに頼らずご自身でRのfisher.testを実行されても良いと思います。for文でまわせば時間はかかりますが、
+低スペックな計算機でもおそらく暫く待てば結果は返ってくるはずです。&lt;/p&gt;
+&lt;p&gt;Rを学習する時間的な余力がないなどの状況で、かつ非営利利用で、データを遺伝研にあるサーバにアップロードしても差し支えなければ、
+遺伝研Platform for Drug Discovery(Cell Innovationプログラム等で開発されたもの)の
+Maserというシステム上で動作するパイプラインで解析することもできます。
+データは望まなければ公開はされません。これは自分が開発に関わった者なので使い方が良く分らなければ
+ここにコメントくだされば反応できると思います(ただ外部ボランティアとして対応するのでその点ご留意ください)。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://cell-innovation.nig.ac.jp/wiki2/tiki-index.php?page=P000001320"&gt;BWA DEGSeq multi samples differentially expressed gene detection analysis (less than 10 N=1 samples)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;使い方は、以下のパイプラインと類似で、こちらの方がまじめにマニュアルを記載しておりますのでご参考まで。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://cell-innovation.nig.ac.jp/wiki2/tiki-index.php?page=P000001432"&gt;TopHat, HTSeq, DESeq multi samples differentially expressed gene detection analysis (less than 10 N=1 samples)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;DEGseqを使う上で多少癖があると思うのが既知遺伝子アノテーション情報が&lt;a href="http://hgdownload.soe.ucsc.edu/downloads.html"&gt;UCSC Genome Bioinformatics&lt;/a&gt;で公開してる
+RefFlat形式のものを利用する点です。GTF形式の遺伝子アノテーションの方が一般的かと思うので、
+GTFファイルしかお手元にない場合などは以下のパイプラインであらかじめ変換をします。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Gtf-&amp;gt;refFlat (マニュアルはないですが、GTFファイルをアップロードすると選択肢に出てきます。)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;余談ですが、FETだけで実施すると、タグ数の多い発現量が多い and/or 遺伝子長が長い遺伝子で有意差が出やすいので、
+Fold changeなどを組み合わせて用いた方がハズレ遺伝子を引く頻度がいくらか減らせるかもしれません。
+FETの検定はあくまでサンプル間の差の比較なので、N=1では期待する群間の差以外の要因による差の影響は統計処理だけでは避けがたいかとは思います。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Sat, 13 Sep 2014 18:49:28 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/780/%E7%99%BA%E7%8F%BE%E5%A4%89%E5%8B%95%E9%81%BA%E4%BC%9D%E5%AD%90%E3%81%AE%E6%A4%9C%E5%AE%9A/781</guid></item></channel></rss>

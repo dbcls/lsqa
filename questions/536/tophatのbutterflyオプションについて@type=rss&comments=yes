@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: Tophatのbutterflyオプションについて</title><link>http://qa.lifesciencedb.jp/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;36bpのシングルエンドRNA-seqデータを使って解析をしようとしているのですが、
+バージョン1.0.12から追加された--butterfly-searchというオプションを使ったことの
+ある方、または使った時と使わなかった時の比較をされた方はいらっしゃいませんでしょうか？
+36bpなので--segment-length 18でジャンクション同定してもノイズが多くなりそうで、
+そのままbowtieでマッピングしてしまおうと考えていたのですが、Tophatのマニュアルを
+見ていて、このオプションがあることを知ってどうしようか迷っています。
+Tophatの論文にはこのbutterflyのアルゴリズムに関する記述はなく、&lt;a href="http://seqanswers.com/forums/showthread.php?t=7254"&gt;SEQanswersでは
+数百GBものoutputを出すとの報告があり&lt;/a&gt;
+、ラボに大型サーバーがない私では自分で
+このオプションをテストするのが難しい状況です。
+もしお試しになった方がいらっしゃれば、ご教授お願いいたします。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 29 Nov 2011 02:50:12 +0900</lastBuildDate><item><title>Comment by Tanakky on nob_fj's 回答</title><link>http://qa.lifesciencedb.jp/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#548</link><description>&lt;p&gt;ありがとうございます。--segment-length 15の時、大きな違いが出ているようですね。
+セグメント長さ10は短すぎてジャンクション同定ができないのでしょう。
+17で差がでないのはアルゴリズムの詳細がわからないとなんともいえなさそうです。
+精度の問題はありそうですが、この結果は短配列長RNA-seqでジャンクション同定をしたいときの
+指標になりそうで、たいへん助かります。貴重なデータありがとうございます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tanakky</dc:creator><pubDate>Tue, 29 Nov 2011 02:50:12 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#548</guid></item><item><title>Comment by nob_fj on nob_fj's 回答</title><link>http://qa.lifesciencedb.jp/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#547</link><description>&lt;p&gt;6～8追加しました。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Mon, 28 Nov 2011 17:35:27 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#547</guid></item><item><title>Comment by Tanakky on nob_fj's 回答</title><link>http://qa.lifesciencedb.jp/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#543</link><description>&lt;p&gt;解析ありがとうございます。
+もしお手数でなければ
+--segment-length 17 --butterfly-search
+--segment-length 17 --butterfly-search
+で結果はでますでしょうか？&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tanakky</dc:creator><pubDate>Thu, 24 Nov 2011 03:29:10 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#543</guid></item><item><title>Answer by nob_fj</title><link>http://qa.lifesciencedb.jp/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/541</link><description>&lt;p&gt;&lt;a href="http://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=tophat+butterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E6%AF%94%E8%BC%83&amp;amp;no_bl=y"&gt;NGS Sufer's Wiki(tophat butterflyオプションの比較)&lt;/a&gt; にオプションを変えた結果をアップしてみました。&lt;/p&gt;
+&lt;p&gt;butterflyオプションになじみが無いため、オプションの渡し方がおかしいか、入力データ依存とは思いますが、
+試したデータではbutterflyオプションとno-buttterflyに違いはありませんでした。&lt;/p&gt;
+&lt;p&gt;試した選択肢は以下&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;--butterfly-search&lt;/li&gt;
+&lt;li&gt;--no-butterfly-search&lt;/li&gt;
+&lt;li&gt;--segment-length 17&lt;/li&gt;
+&lt;li&gt;--segment-length 10&lt;/li&gt;
+&lt;li&gt;--segment-length 15&lt;/li&gt;
+&lt;li&gt;--segment-length 17 --butterfly-search &lt;/li&gt;
+&lt;li&gt;--segment-length 10 --butterfly-search &lt;/li&gt;
+&lt;li&gt;--segment-length 15 --butterfly-search &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;junctionの数は以下&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;0&lt;/li&gt;
+&lt;li&gt;0&lt;/li&gt;
+&lt;li&gt;308&lt;/li&gt;
+&lt;li&gt;0&lt;/li&gt;
+&lt;li&gt;3&lt;/li&gt;
+&lt;li&gt;306&lt;/li&gt;
+&lt;li&gt;0&lt;/li&gt;
+&lt;li&gt;323&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;詳しくはページをご覧ください。
+使用データは&lt;a href="http://trace.ddbj.nig.ac.jp/DRASearch/run?acc=SRR031811"&gt;SRR031811&lt;/a&gt;。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Tue, 22 Nov 2011 22:52:46 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/541</guid></item><item><title>Comment by Tanakky on Tanakky's 質問</title><link>http://qa.lifesciencedb.jp/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#539</link><description>&lt;p&gt;nob_fjさん。大変助かります。--butterfly-searchを入れたコマンドは途中まで走らせただけですが、その時特にエラー等は出なかったのでこのコマンドで大丈夫だと思います。
+大まかにはマッピング効率の変化、同定ジャンクション数の変化がわかればうれしいです。
+もしbamとjunction.bedの結果がいただけるのであれば、なおうれしいです。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tanakky</dc:creator><pubDate>Sun, 20 Nov 2011 06:01:53 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#539</guid></item><item><title>Comment by nob_fj on Tanakky's 質問</title><link>http://qa.lifesciencedb.jp/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#537</link><description>&lt;p&gt;Tanakkyさんにはお世話になっておりますので、以下試しましょうか。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;tophat -o outdir1 bowtieIndex/hg19.fa query/SRX014531/SRR031811.fastq --butterfly-search
+tophat -o outdir2 bowtieIndex/hg19.fa query/SRX014531/SRR031811.fastq --no-butterfly-search
+tophat -o outdir3 bowtieIndex/hg19.fa query/SRX014531/SRR031811.fastq --segment-length 17
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;SRR031811はおよそ1000万リード35baseのsingle-endのRNA-Seqです。(もっといいデータがあればお知らせ下さい。DRA/SRA/ERAであれば対応します。)
+結果のbamをどこかに配置すれば良いですか？&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Sat, 19 Nov 2011 15:20:00 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#537</guid></item></channel></rss>

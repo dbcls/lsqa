@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With bed</title><link>http://qa.lifesciencedb.jp/tags/bed/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;bed&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/bed/" rel="self"></atom:link><language>ja</language><lastBuildDate>Fri, 13 Apr 2012 12:24:00 +0900</lastBuildDate><item><title>Excel fileからBEDフォーマットのfileを作るには？</title><link>http://qa.lifesciencedb.jp/questions/586/excel-file%E3%81%8B%E3%82%89bed%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%E3%81%AEfile%E3%82%92%E4%BD%9C%E3%82%8B%E3%81%AB%E3%81%AF</link><description>&lt;p&gt;NGSのdataやUnixコマンドなどほとんど触ったことがなかった初心者です。
+Excel fileで持っているゲノム領域の情報をBEDフォーマットのfileにしたいのですが、やり方がわかりません。アドバイスいただけましたら幸甚です。&lt;/p&gt;
+&lt;p&gt;今、BEDToolsのcoverageBedのスクリプトを実行しようとしているのですが、read countを知りたい領域のBED fileがうまく出来ないために白紙の結果が得られてしまいます。具体的には、chrom　chromStart　chromEnd　name　score　strandの順に並んだExcel fileをタブ区切りテキスト(.txt)で保存して名前を.bedに変えて領域のBED fileとして使ってみたのですが、BED fileとして認識されていないようでした。UCSCからとってきた遺伝子領域のBED fileではきちんとcoverageの結果が返ってくるので、.txt fileからBED fileをつくる方法がありそうなのは感じるのですが、どのようにしたらいいかわかりません。
+助けて頂けたら幸いです。&lt;/p&gt;
+&lt;p&gt;ちなみに、以下の内容で領域を設定した場合を例に試しています。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;chrVI    0  270148  NC_001138   0   +
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;よろしくお願いいたします。&lt;/p&gt;
+&lt;p&gt;touran&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">touran</dc:creator><pubDate>Fri, 13 Apr 2012 12:24:00 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/586/excel-file%E3%81%8B%E3%82%89bed%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%E3%81%AEfile%E3%82%92%E4%BD%9C%E3%82%8B%E3%81%AB%E3%81%AF</guid><category>bedtools</category><category>excel</category><category>file</category><category>bed</category><category>ngs</category></item></channel></rss>

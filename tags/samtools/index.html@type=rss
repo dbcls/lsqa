@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With samtools</title><link>http://qa.lifesciencedb.jp/tags/samtools/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;samtools&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/samtools/" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 24 Jan 2012 11:18:16 +0900</lastBuildDate><item><title>個体ごとのSNPsのコール</title><link>http://qa.lifesciencedb.jp/questions/566/%E5%80%8B%E4%BD%93%E3%81%94%E3%81%A8%E3%81%AEsnps%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%AB</link><description>&lt;p&gt;とある遺伝病の原因遺伝子を調べて、リシーケンシングからSNPs解析を行っています。&lt;br&gt;
+SNPsをコールする際、samtoolsであれば、&lt;br&gt;
+ーーーーbam.listーーーーー&lt;br&gt;
+1.bam&lt;br&gt;
+2.bam&lt;br&gt;
+3.bam&lt;br&gt;
+ーーーーーーーーーーーーー&lt;br&gt;
+というようなファイルを準備し、&lt;br&gt;
+&lt;code&gt;samtools mpileup -uf hg19.fa -b bam.list | bcftools view -vcg-&lt;/code&gt;&lt;br&gt;
+とすると個体ごとにSNPsが分けられて出力されます。&lt;br&gt;
+全サンプル混ぜてSNPsを検出するほうが、SNPsの誤判定が起きにくいようなので、できれば1つずつ入力するよりも、併せてSNPsのコールを行いたいと考えています。&lt;br&gt;
+ここからが問題なのですが、GATKを用いると、multi-allelicなSNPsを検出することが可能だということで、GATKでSNPsのコールを行いたいのですが、たとえば次のようにしても、個体ごとにSNPsを分けることができません。&lt;br&gt;
+&lt;code&gt;java -jar  GenomeAnalysisTK.jar -R hg19.fa  -T UnifiedGenotyper -o 1-2-3.vcf  -glm BOTH -I 1.bam -I 2.bam -I 3.bam&lt;/code&gt;  &lt;br&gt;
+GATKで複数のBAMファイルを同時に入力し、各BAMファイルごとに分かれた状態でSNPsを出力することは可能でしょうか？&lt;br&gt;
+宜しくお願い致します。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">kyoshita</dc:creator><pubDate>Tue, 24 Jan 2012 11:18:16 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/566/%E5%80%8B%E4%BD%93%E3%81%94%E3%81%A8%E3%81%AEsnps%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%AB</guid><category>snps</category><category>samtools</category><category>bam</category><category>gatk</category></item><item><title>リシークエンスの配列作成について</title><link>http://qa.lifesciencedb.jp/questions/552/%E3%83%AA%E3%82%B7%E3%83%BC%E3%82%AF%E3%82%A8%E3%83%B3%E3%82%B9%E3%81%AE%E9%85%8D%E5%88%97%E4%BD%9C%E6%88%90%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;はじめまして。
+現在、次世代シークエンサーを持ちいてリシークエンスを行っているのですが、近縁種のゲノムが解読されているため、de novoアセンブルを行うことなく、マッピングしたのちに何らかの方法で目的のゲノム配列を得られるのではないかと考えています。
+調べたところ、samtoolsのコマンドで、&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;samtools mpileup -uf ecoli.fa srr191810.fq.sort.bam | bcftools view -cg - | vcfutils.pl vcf2fq &amp;gt; cns.fq
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;のようにすると新しいゲノム配列が得られるのですが、vcfutils.plではIN/DELが全く考慮されていないようです。
+何か他にツールをご存知の方がいらっしゃいましたら、教えて頂けませんでしょうか。
+宜しくお願い致します。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">kyoshitake</dc:creator><pubDate>Mon, 26 Dec 2011 11:51:36 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/552/%E3%83%AA%E3%82%B7%E3%83%BC%E3%82%AF%E3%82%A8%E3%83%B3%E3%82%B9%E3%81%AE%E9%85%8D%E5%88%97%E4%BD%9C%E6%88%90%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>samtools</category><category>resequence</category></item><item><title>samtoolsの使い方</title><link>http://qa.lifesciencedb.jp/questions/458/samtools%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9</link><description>&lt;p&gt;先日からsamtoolsを使い始めて、わからない点が２つあったので教えて下さい。&lt;/p&gt;
+&lt;p&gt;1、リファレンスゲノム用のindexが作成できない
+samtools faidx ref.fastaとやると
+[fai_build_core] different line length in sequence '(null)'.
+Segmentation fault
+となってしまい作成できない。&lt;/p&gt;
+&lt;p&gt;2、samtools viewのオプションの使い方がわからない。
+mappingされたものとmappingされてないものを
+Samtools view -f p -F P
+で抽出できるようですが、pやPの意味がわからない。また他にもよく使うオプションがあったら教えて下さい。&lt;/p&gt;
+&lt;p&gt;ずっとwetな研究をしてきたので、わかりやすく教えて頂けると幸いです。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pan</dc:creator><pubDate>Tue, 31 May 2011 19:45:22 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/458/samtools%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9</guid><category>使い方</category><category>samtools</category><category>ngs</category></item><item><title>変異解析結果をアミノ酸変異として捕らえる簡便な方法</title><link>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95</link><description>&lt;p&gt;これの意図するとことはいわゆるsamtoolsのpileupのSOAP形式出力（chr19:3298 A C）のような形式を、&lt;br&gt;
+geneX S324R （aGU→cGU）などの形に直し、シノニムの除去やアノテーションを簡便にする方法についてです。&lt;br&gt;
+&lt;br&gt;
+[私ができたこと]&lt;br&gt;
+UCSCのrefgene.txtからexon情報を取り出し、フレームに従って、翻訳して、ポジションごとに&lt;br&gt;
+chromとposition、トリプレッとの3文字と該当する番号、アミノ酸、refseqのIDを記録した&lt;br&gt;
+MySQL DBを作成して、変異によってアミノ酸がどう変わるか判定して使っています。&lt;br&gt;
+これは、実際に自分で解釈する分にはよいのですが他者に簡単に使ってもらえる仕組みでもなく、&lt;br&gt;
+全体の1%位の遺伝子は、deletion RNA editingの下流にエキソンがあり、途中でズレ正しく翻訳できていません。&lt;br&gt;
+ANNOVAも使ってみましたが、これも他者にこれでやってはどうですか？と気軽に進められない程度にはややこしい仕組みです。&lt;br&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;まずは、こういうDBは世に存在しないのだろうか？&lt;/li&gt;
+&lt;li&gt;あったとしてRESTなどで簡便にアクセスできるものなのでしょうか？&lt;/li&gt;
+&lt;li&gt;UCSCでeditingで削られたり、増えたり、置換される塩基の情報はどこかから取ってこれるのでしょうか？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ここからは希望になりますが、&lt;br&gt;
+TogoWSのREST サービスにURLにchrom:position+AAで開けば、&lt;br&gt;
+geneX S324R （aGU→cGU）という結果が返ってくる仕組みがあれば、&lt;br&gt;
+コンピューターに疎い先生方でも何とかなるんじゃないかと思うので、関係の方々がごらんになっておられたら、&lt;br&gt;
+助言などをいただけると幸いです。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">kiake77</dc:creator><pubDate>Wed, 08 Dec 2010 01:29:40 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/145/%E5%A4%89%E7%95%B0%E8%A7%A3%E6%9E%90%E7%B5%90%E6%9E%9C%E3%82%92%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E5%A4%89%E7%95%B0%E3%81%A8%E3%81%97%E3%81%A6%E6%8D%95%E3%82%89%E3%81%88%E3%82%8B%E7%B0%A1%E4%BE%BF%E3%81%AA%E6%96%B9%E6%B3%95</guid><category>変異解析</category><category>ngs</category><category>アノテーション</category><category>samtools</category><category>sureselect</category></item></channel></rss>

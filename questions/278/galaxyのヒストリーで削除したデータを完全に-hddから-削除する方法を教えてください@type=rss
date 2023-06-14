@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: Galaxyのヒストリーで削除したデータを完全に（HDDから）削除する方法を教えてください</title><link>http://qa.lifesciencedb.jp/questions/278/galaxy%E3%81%AE%E3%83%92%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%81%A7%E5%89%8A%E9%99%A4%E3%81%97%E3%81%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E5%AE%8C%E5%85%A8%E3%81%AB-hdd%E3%81%8B%E3%82%89-%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%82%92%E6%95%99%E3%81%88%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84</link><description>&lt;p&gt;Galaxyを手元の環境に構築してデータ解析の準備をしています。&lt;/p&gt;
+&lt;p&gt;こちらのサイトの情報も参考にさせていただいております。ありがとうございます。&lt;/p&gt;
+&lt;p&gt;データの登録・解析をして実験しているのですが、
+削除したデータをHDD上から消す方法が分からず困っております。&lt;/p&gt;
+&lt;p&gt;ヒストリーから削除したデータは削除扱いになるだけで、HDD（**&lt;em&gt;/database/files/000/dataset_&lt;/em&gt;.dat)にはデータが残ったままです。&lt;/p&gt;
+&lt;p&gt;もちろん rmコマンドで削除すれば消えるのですが、Galaxyから（またはGalaxy管理ツール？から）削除する方法がわかりません。&lt;/p&gt;
+&lt;p&gt;どなたか削除方法をご存知の方はいらっしゃいますでしょうか。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/278/galaxy%E3%81%AE%E3%83%92%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%81%A7%E5%89%8A%E9%99%A4%E3%81%97%E3%81%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E5%AE%8C%E5%85%A8%E3%81%AB-hdd%E3%81%8B%E3%82%89-%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%82%92%E6%95%99%E3%81%88%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84" rel="self"></atom:link><language>ja</language><lastBuildDate>Fri, 21 Jan 2011 18:30:37 +0900</lastBuildDate><item><title>Answer by Tsukahara</title><link>http://qa.lifesciencedb.jp/questions/278/galaxy%E3%81%AE%E3%83%92%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%81%A7%E5%89%8A%E9%99%A4%E3%81%97%E3%81%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E5%AE%8C%E5%85%A8%E3%81%AB-hdd%E3%81%8B%E3%82%89-%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%82%92%E6%95%99%E3%81%88%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84/283</link><description>&lt;p&gt;自己解決しました。&lt;/p&gt;
+&lt;p&gt;*/scripts/cleanup_datasets/
+のスクリプトによってデータ削除を行うことができました。&lt;/p&gt;
+&lt;p&gt;削除の手順&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;"history"の削除対象となるデータを"×"で削除する。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;delete＿datasets.sh を実行する。　(※シェルスクリプト内の-d 指定日数より前に 1. を行ったデータに対してdataset.deleted=1にする。　また対象のmetadata＿fileが消える)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;purge＿datasets.sh を実行する。　(※シェルスクリプト内の-d 指定日数より前に 2. を行ったデータに対してdatasetのファイルを削除する)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;2,3を連続して実行する場合は、3の -dの指定は 0でよいです。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tsukahara</dc:creator><pubDate>Fri, 21 Jan 2011 18:30:37 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/278/galaxy%E3%81%AE%E3%83%92%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%81%A7%E5%89%8A%E9%99%A4%E3%81%97%E3%81%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E5%AE%8C%E5%85%A8%E3%81%AB-hdd%E3%81%8B%E3%82%89-%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%82%92%E6%95%99%E3%81%88%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84/283</guid></item></channel></rss>

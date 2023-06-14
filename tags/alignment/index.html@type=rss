@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With alignment</title><link>http://qa.lifesciencedb.jp/tags/alignment/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;alignment&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/alignment/" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 03 Feb 2014 11:52:15 +0900</lastBuildDate><item><title>大量の配列のアライメントについて</title><link>http://qa.lifesciencedb.jp/questions/716/%E5%A4%A7%E9%87%8F%E3%81%AE%E9%85%8D%E5%88%97%E3%81%AE%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;お世話になっております．&lt;/p&gt;
+&lt;p&gt;表題の内容について質問があります．&lt;/p&gt;
+&lt;p&gt;次世代シークエンサーによって得られた大量の配列をアライメントしたいと考えています．
+以下のようなサンプルを用いました．&lt;/p&gt;
+&lt;p&gt;河川底生動物群集サンプル&lt;/p&gt;
+&lt;p&gt;個体数：8,921個体&lt;/p&gt;
+&lt;p&gt;対象とするDNA領域：ミトコンドリアDNAのCOI領域（658塩基長）&lt;/p&gt;
+&lt;p&gt;次世代シークエンサー：GS FLX&lt;/p&gt;
+&lt;p&gt;配列数：165,508配列&lt;/p&gt;
+&lt;p&gt;配列長：40～630塩基長（平均328塩基長）&lt;/p&gt;
+&lt;p&gt;シングルエンドの配列のみです&lt;/p&gt;
+&lt;p&gt;8,921個体を形態同定することによって，流域に生息する底生動物は34分類群（30科，3目，1綱）に分類されました．&lt;/p&gt;
+&lt;p&gt;次に，各分類群から3～10配列ずつを，国際DNAデータベースから無作為にダウンロードしたのち（658塩基長の配列のみ，計180配列），180配列からコンセンサス配列を作成しました．&lt;/p&gt;
+&lt;p&gt;この時，次世代シークエンサーで解析された16万配列にはプライマー配列が含まれているのに対し，DNAデータベースからダウンロードした配列には含まれていなかったので，逆相補鎖になっていないことを確認したあと，作成したコンセンサス配列の5'末端上流側にプライマー配列を加えて，これをリファレンス配列として用いました．&lt;/p&gt;
+&lt;p&gt;次世代シークエンサーで解析された16万配列（クエリ配列）とコンセンサス配列（リファレンス配列）はともにCOI領域であり，底生動物間では遺伝的にあまり離れていないため，マッピングをすることによってアライメントができるものと考えていたのですが，どうも上手くいきません．&lt;/p&gt;
+&lt;p&gt;マッピングソフトはBWAを用い，bwa mem コマンドによってアライメントを行いました．&lt;/p&gt;
+&lt;p&gt;クエリ配列とリファレンス配列はともにプライマー配列を含んでいるので，5'末端が揃ってアライメントされるのが理想なのですが，マッピングの開始位置が揃いません．&lt;/p&gt;
+&lt;p&gt;この時の問題点はもう一つありまして，マッピングされた配列の内いくつかが，リファレンスと一致度の高い一部のみマッピングされているということです．&lt;/p&gt;
+&lt;p&gt;改善策や，16万配列をリファレンス配列に対しアライメントできるソフト等ご存知でしたらご教授ください．
+よろしくお願いします．&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">izumi</dc:creator><pubDate>Mon, 03 Feb 2014 11:52:15 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/716/%E5%A4%A7%E9%87%8F%E3%81%AE%E9%85%8D%E5%88%97%E3%81%AE%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>mapping</category><category>alignment</category><category>ngs</category></item></channel></rss>

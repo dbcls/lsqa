@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: DNaseを完全に効かせるにはどうすればよいですか</title><link>http://qa.lifesciencedb.jp/questions/417/dnase%E3%82%92%E5%AE%8C%E5%85%A8%E3%81%AB%E5%8A%B9%E3%81%8B%E3%81%9B%E3%82%8B%E3%81%AB%E3%81%AF%E3%81%A9%E3%81%86%E3%81%99%E3%82%8C%E3%81%B0%E3%82%88%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B</link><description>&lt;p&gt;現在qRT-PCRをやっておりますが、
+DNaseを使用しても、うまくDNAが除去できていないのか、
+ゲノムのバンドが出てしまいます。
+100％DNaseを効かせられる良い条件がありましたら、教えてください。
+どうしても完全に効かせて、mRNAの発現量を定量しなければならない状況下にあります。
+イントロンを挟んだプライマーを設計しておりますが、偽遺伝子が多くあるため、
+どうしても対象外の遺伝子についても、同じ長さのものが増えてきてしまっています。&lt;/p&gt;
+&lt;p&gt;Ni社のDNaseで、不活性化は熱処理で行っております。
+解析材料が微量な細胞（1〜30細胞くらい）なので、mRNAをロスしないために、
+なるべくシンプルな行程による不活性化が良いと考えております。
+（以前はTRIzol LSでやっておりましたが、どうしてもRNAをロスしてしまいます）&lt;/p&gt;
+&lt;p&gt;どうぞよろしくお願い致します。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/417/dnase%E3%82%92%E5%AE%8C%E5%85%A8%E3%81%AB%E5%8A%B9%E3%81%8B%E3%81%9B%E3%82%8B%E3%81%AB%E3%81%AF%E3%81%A9%E3%81%86%E3%81%99%E3%82%8C%E3%81%B0%E3%82%88%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B" rel="self"></atom:link><language>ja</language><lastBuildDate>Thu, 19 May 2011 02:40:42 +0900</lastBuildDate><item><title>Answer by okubo</title><link>http://qa.lifesciencedb.jp/questions/417/dnase%E3%82%92%E5%AE%8C%E5%85%A8%E3%81%AB%E5%8A%B9%E3%81%8B%E3%81%9B%E3%82%8B%E3%81%AB%E3%81%AF%E3%81%A9%E3%81%86%E3%81%99%E3%82%8C%E3%81%B0%E3%82%88%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B/445</link><description>&lt;p&gt;２０年前の知識だと思って読んでください。
+ゲノムＤＮＡを出発材料にしてＰＣＲ増幅で何も増えないことが確認できるまで練習をしてください。&lt;/p&gt;
+&lt;p&gt;DNase処理して熱処理でと書かれていますが　DNaseI でしたらendosunlease ですから短くなっても短い断片ができるだけです。PCRはたいていかかります。　系から除くには　DNaseIの後で　exonuclease I や　III でオリゴやモノまでかじる必要があります。
+さもないとこれらのＳＳは鋳型として働くでしょう。&lt;/p&gt;
+&lt;p&gt;ゲノムで練習し間違いない条件をつくってから本番に臨んでください。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">okubo</dc:creator><pubDate>Thu, 19 May 2011 02:40:42 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/417/dnase%E3%82%92%E5%AE%8C%E5%85%A8%E3%81%AB%E5%8A%B9%E3%81%8B%E3%81%9B%E3%82%8B%E3%81%AB%E3%81%AF%E3%81%A9%E3%81%86%E3%81%99%E3%82%8C%E3%81%B0%E3%82%88%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B/445</guid></item><item><title>Answer by 38brain</title><link>http://qa.lifesciencedb.jp/questions/417/dnase%E3%82%92%E5%AE%8C%E5%85%A8%E3%81%AB%E5%8A%B9%E3%81%8B%E3%81%9B%E3%82%8B%E3%81%AB%E3%81%AF%E3%81%A9%E3%81%86%E3%81%99%E3%82%8C%E3%81%B0%E3%82%88%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B/418</link><description>&lt;p&gt;書くまでもないことかもしれませんが、ゲノムからは増えない、あるいは増幅長が異なるようにintronを挟むか2つのexonにまたいでプライマーを設計することができるようであればゲノムが多少残っていても問題なくなります。&lt;br&gt;
+この辺の基本的な部分は同じラボの詳しい人に聞いた方が早いかもしれませんね（いないのであればしょうがないですけど）。&lt;br&gt;
+うちではRNAの精製の時にDNase処理を含むQiagenのRNeasy Micro Kitで精製後、さらに逆転写時にQiagenのQuantiTectなんちゃらキットというGenomeを除去しつつ逆転写する試薬を使ってcDNAを作製してます。&lt;br&gt;
+それでも高感度のTaqManなどの結果を見ると100%完全にゲノムの混入をなくすというのは難しいようなので、最初からゲノムの混入を気にせずに済む増幅産物を得られるように設計した方が良いでしょうね。&lt;br&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">38brain</dc:creator><pubDate>Mon, 18 Apr 2011 15:28:02 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/417/dnase%E3%82%92%E5%AE%8C%E5%85%A8%E3%81%AB%E5%8A%B9%E3%81%8B%E3%81%9B%E3%82%8B%E3%81%AB%E3%81%AF%E3%81%A9%E3%81%86%E3%81%99%E3%82%8C%E3%81%B0%E3%82%88%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B/418</guid></item></channel></rss>

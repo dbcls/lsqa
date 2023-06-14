@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: Chip-seqデータのマッピングにおけるマルチヒット/ミスマッチの扱い</title><link>http://qa.lifesciencedb.jp/questions/426/chip-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%9E%E3%83%AB%E3%83%81%E3%83%92%E3%83%83%E3%83%88-%E3%83%9F%E3%82%B9%E3%83%9E%E3%83%83%E3%83%81%E3%81%AE%E6%89%B1%E3%81%84</link><description>&lt;p&gt;Chip-seqデータのマッピングにつきまして質問があります。現在主にBowtieを使用してChip-seqデータのマッピングをしておりますが、オプション設定についてどのようなものが一番いいのか迷っております。&lt;br&gt;&lt;br&gt;
+一つはマルチヒットの扱いで、全部レポートするから、レポートするデータを限定したり、ランダムにマッピングしたりする設定があるかと思いますが一般的にどのような設定が一番いいのでしょうか？自分ではあえてそれらをマッピングしなくても、本当にChip陽性の領域ならば他のリードがマッピングされるはずなのでレポートしなくてもいいような気もします。でも、せっかく一致するなら一つくらいランダムに割り当ててもとかも思います・・・&lt;br&gt;&lt;br&gt;
+ミスマッチに関しましては少ない方が正確だと思いますが、自分では根拠無く、まあこれくらいかとデフォルトのまま2で実行しております。&lt;br&gt;&lt;br&gt;
+&lt;code&gt;-a --best --strata&lt;/code&gt;　の設定などもよさそうという理由で使用しておりますがあまり根拠はありません。結局はマッピング率がそれなりになるように設定してマッピングしているという状況です。
+&lt;br&gt;&lt;br&gt;
+もし、一般的によいとされているような設定がございましたら、ぜひご指導いただきたいと思います。よろしくお願いいたします。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/426/chip-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%9E%E3%83%AB%E3%83%81%E3%83%92%E3%83%83%E3%83%88-%E3%83%9F%E3%82%B9%E3%83%9E%E3%83%83%E3%83%81%E3%81%AE%E6%89%B1%E3%81%84" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 26 Apr 2011 23:52:57 +0900</lastBuildDate><item><title>Comment by gatapishi on kiake77's 回答</title><link>http://qa.lifesciencedb.jp/questions/426/chip-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%9E%E3%83%AB%E3%83%81%E3%83%92%E3%83%83%E3%83%88-%E3%83%9F%E3%82%B9%E3%83%9E%E3%83%83%E3%83%81%E3%81%AE%E6%89%B1%E3%81%84#428</link><description>&lt;p&gt;お返事ありがとうございます。
+自分はマウスのchip-seqデータを使用しています。いろいろ試していますが、あるデータでは-m 1にするとかなりマッピング率が低く、30%くらいになってしまう場合もあります。-mの指定にかなり影響を受けていて-m 2にするだけで15%アップ、なしにするとさらに10%アップして行くという感じです。
+　非特異的なものをカウントどうするか迷うところですが、おっしゃるとおり、どこにマッピングされているかを確認するのはいい方法だと思いました。さっそくやってみようと思います。
+　それにしても、マウスでC57/BL6を使用していて、そのデータをmm9にマッピングしているのに、全てマッピングしてもマッピングできないリードがかなりあるのはどういうことなのでしょう？humanだと多様性がマウスよりありそうでそのせいでマッピングできないリードがあってもいいと思うのですが・・・&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">gatapishi</dc:creator><pubDate>Tue, 26 Apr 2011 23:52:57 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/426/chip-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%9E%E3%83%AB%E3%83%81%E3%83%92%E3%83%83%E3%83%88-%E3%83%9F%E3%82%B9%E3%83%9E%E3%83%83%E3%83%81%E3%81%AE%E6%89%B1%E3%81%84#428</guid></item><item><title>Answer by kiake77</title><link>http://qa.lifesciencedb.jp/questions/426/chip-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%9E%E3%83%AB%E3%83%81%E3%83%92%E3%83%83%E3%83%88-%E3%83%9F%E3%82%B9%E3%83%9E%E3%83%83%E3%83%81%E3%81%AE%E6%89%B1%E3%81%84/427</link><description>&lt;p&gt;一般的に良い設定は分かりませんが、&lt;br&gt;
+大体同じパラメータを用いています。&lt;br&gt;
+「&lt;code&gt;-a --best --strata -m 1 -V 2&lt;/code&gt;」&lt;br&gt;
+ただ、この設定だとリピート配列やゲノム上に頻出の配列に結合する場合、&lt;br&gt;
+かなり落としてしまいますので、&lt;br&gt;
+ターゲットによっても多少考慮して&lt;br&gt;
+humanで80-90%マッピングならまあよし、&lt;br&gt;
+それより落ちるようなら、少し考えます。&lt;br&gt;
+rat, mouseはそれぞれ60-70%であればまあよしとしています。&lt;br&gt;
+上述のマッピング率を切った場合、&lt;br&gt;
+not hitのfastqを取り出して、&lt;br&gt;
+allで再アライメントして、どこら辺にマッピングされるか見て考えます。&lt;br&gt;
+たいていは、TATATATATATAなどの単純反復の非特異的っぽい配列が邪魔をしているだけなのですが……。&lt;br&gt;
+ちなみに、ピークの解析にはMACSを使っています。&lt;br&gt;
+なので、多少ランダムにマッピングされたとしても、&lt;br&gt;
+そこを有意なピークとして拾うことはまずありませんでした。&lt;br&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">kiake77</dc:creator><pubDate>Mon, 25 Apr 2011 00:39:12 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/426/chip-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%9E%E3%83%AB%E3%83%81%E3%83%92%E3%83%83%E3%83%88-%E3%83%9F%E3%82%B9%E3%83%9E%E3%83%83%E3%83%81%E3%81%AE%E6%89%B1%E3%81%84/427</guid></item></channel></rss>

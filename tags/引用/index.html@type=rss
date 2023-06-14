@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With 引用</title><link>http://qa.lifesciencedb.jp/tags/%E5%BC%95%E7%94%A8/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;引用&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/%E5%BC%95%E7%94%A8/" rel="self"></atom:link><language>ja</language><lastBuildDate>Wed, 02 Mar 2011 01:11:52 +0900</lastBuildDate><item><title>スライド中の図の引用時の適切なクレジット表記について</title><link>http://qa.lifesciencedb.jp/questions/383/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E4%B8%AD%E3%81%AE%E5%9B%B3%E3%81%AE%E5%BC%95%E7%94%A8%E6%99%82%E3%81%AE%E9%81%A9%E5%88%87%E3%81%AA%E3%82%AF%E3%83%AC%E3%82%B8%E3%83%83%E3%83%88%E8%A1%A8%E8%A8%98%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;学会発表資料や、講義資料などで使用する第三者が作成された図を使用する際の適切な方法についてお詳しい方がおられましたらご教授いただけますと幸いです。&lt;/p&gt;
+&lt;p&gt;例としてCC-BYでライセンスされた&lt;a href="http://g86.dbcls.jp/togopic/"&gt;Togo Picture Gallery&lt;/a&gt;の図を以下のように使用した場合適切でしょうか。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="alt text" src="/upfiles/Q_TogoPictureGallery2.JPG"&gt;&lt;/p&gt;
+&lt;p&gt;また、CC-BYでライセンスされている場合、クレジット表記すれば改変も許されると理解していますが、
+上図の黒吹き出しで囲まれたような改変した図を引用する場合は、改変した旨が明記される必要がありますでしょうか。&lt;/p&gt;
+&lt;p&gt;さらに、上図ではそれほど違和感は無いかもしれませんが、図の配置等によっては、
+全ての図に対して個別にクレジットを表記した場合、無理が生じる場合も有り得ると思いますが、
+この場合、スライド自身のライセンス表記の後などに&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;"本スライド中の図の一部は© 2011 DBCLS Licensed under CC 表示 2.1 日本 でライセンスされています。"&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;のような表記でまとめてクレジットを表記するなどは許されるものでしょうか。&lt;/p&gt;
+&lt;p&gt;またCC-BYとは離れますが、CC-BYの規定などが明記されていない、WEB上で公開された図を、探してきてスライドに貼りつけ、
+WEBページの(C)を表記したり、引用元のWEBページのURIを記載するような手順は
+学術利用であれば、&lt;a href="http://ja.wikipedia.org/wiki/%E5%BC%95%E7%94%A8"&gt;日本法における著作物の引用&lt;/a&gt;に該当すると考えても良いものでしょうか。&lt;/p&gt;
+&lt;p&gt;参考までに論文中の図を使用する場合は、&lt;a href="http://qa.lifesciencedb.jp/questions/215/%E3%83%96%E3%83%AD%E3%82%B0%E7%AD%89%E3%82%B5%E3%82%A4%E3%83%88%E4%B8%8A%E3%81%A7%E3%81%AE%E8%AB%96%E6%96%87%E3%81%AE%E5%BC%95%E7%94%A8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6"&gt;こちらの質問&lt;/a&gt;を参考に、図表の使用許諾をとる方が好ましいとの回答をいただいています。手順については、拙文ですが&lt;a href="https://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=%E5%9B%B3%E8%A1%A8%E3%81%AE%E4%BD%BF%E7%94%A8%E8%A8%B1%E8%AB%BE%E3%82%92%E5%BE%97%E3%82%8B"&gt;こちらのページ&lt;/a&gt;にも例を記載しています。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Wed, 02 Mar 2011 01:11:52 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/383/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E4%B8%AD%E3%81%AE%E5%9B%B3%E3%81%AE%E5%BC%95%E7%94%A8%E6%99%82%E3%81%AE%E9%81%A9%E5%88%87%E3%81%AA%E3%82%AF%E3%83%AC%E3%82%B8%E3%83%83%E3%83%88%E8%A1%A8%E8%A8%98%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>cc</category><category>著作権</category><category>図</category><category>クレジット</category><category>引用</category></item><item><title>ブログ等サイト上での論文の引用について</title><link>http://qa.lifesciencedb.jp/questions/215/%E3%83%96%E3%83%AD%E3%82%B0%E7%AD%89%E3%82%B5%E3%82%A4%E3%83%88%E4%B8%8A%E3%81%A7%E3%81%AE%E8%AB%96%E6%96%87%E3%81%AE%E5%BC%95%E7%94%A8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;公開されたブログや、Wikiなどのまとめサイト上で、natureなど全面公開されていない論文の引用を行う際に、
+著作権の侵害にあたらない合法な"引用"の範囲と手続きについて、どなたかお詳しい方がおられたらご教授いただきたいと思います。&lt;/p&gt;
+&lt;p&gt;より具体例を示しますと、
+&lt;a href="https://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=DNA%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%AC%E3%82%A4%E3%81%A8%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E6%AF%94%E8%BC%83"&gt;公開されたあるWikiページ&lt;/a&gt;上で、&lt;a href="http://www.ncbi.nlm.nih.gov/pubmed/19015660"&gt;Nat Rev Genet. 2009 Jan;10(1):57-63.&lt;/a&gt;上の&lt;a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2949280/figure/F2/"&gt;Fig2&lt;/a&gt;や、&lt;a href="http://www.ncbi.nlm.nih.gov/pubmed/18451266"&gt;Science. 2008 Jun 6;320(5881):1344-9. Epub 2008 May 1.&lt;/a&gt;の&lt;a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2951732/figure/F6/"&gt;Fig6&lt;/a&gt;、&lt;a href="http://www.ncbi.nlm.nih.gov/pubmed/18516045"&gt;Nat Methods. 2008 Jul;5(7):621-8. Epub 2008 May 30.&lt;/a&gt;の&lt;a href="http://www.nature.com/nmeth/journal/v5/n7/fig_tab/nmeth.1226_F3.html"&gt;Fig3&lt;/a&gt;などの図と、関係する2行前後の本文を引用して貼り付け、1行程度のコメントを付け加え、引用元をPubMedのリンクを付加した"ハーバード方式"あるいは"バンクーバー方式"の引用書式による引用元を付加しようと考えていますが、これは引用の範囲を逸脱するでしょうか。ページの目的としては、アレイとNGSの比較を行った情報の引用と"まとめ"にあります。&lt;/p&gt;
+&lt;p&gt;"引用"に該当するための以下の用件は満たしているように思います。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;引用する分量を抑えなければならない。 &lt;/li&gt;
+&lt;li&gt;引用するには目的（必然性）が必要であり、それに必要な量しか引用してはならない。 &lt;/li&gt;
+&lt;li&gt;質的にも量的[5]にも、引用先が「主」、引用部分が「従」の関係になければならない。 &lt;/li&gt;
+&lt;li&gt;引用を独立してそれだけの作品として使用することはできない。 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;参考サイト&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://ja.wikipedia.org/wiki/%E5%BC%95%E7%94%A8"&gt;著作権の侵害に当たらない引用について説明しているWikipediaのページ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://ja.wikipedia.org/wiki/%E3%83%8F%E3%83%BC%E3%83%90%E3%83%BC%E3%83%89%E6%96%B9%E5%BC%8F"&gt;引用の書式"ハーバード方式"に説明しているWikipediaのページ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://ja.wikipedia.org/wiki/%E3%83%90%E3%83%B3%E3%82%AF%E3%83%BC%E3%83%90%E3%83%BC%E6%96%B9%E5%BC%8F"&gt;引用の書式"バンクーバー方式"に説明しているWikipediaのページ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://ja.wikisource.org/wiki/著作権法#a32"&gt;著作権法第32条&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Tue, 21 Dec 2010 22:09:47 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/215/%E3%83%96%E3%83%AD%E3%82%B0%E7%AD%89%E3%82%B5%E3%82%A4%E3%83%88%E4%B8%8A%E3%81%A7%E3%81%AE%E8%AB%96%E6%96%87%E3%81%AE%E5%BC%95%E7%94%A8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>wiki</category><category>著作権</category><category>引用</category><category>ブログ</category><category>情報公開</category></item></channel></rss>

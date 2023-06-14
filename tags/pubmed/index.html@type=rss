@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With pubmed</title><link>http://qa.lifesciencedb.jp/tags/pubmed/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;pubmed&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/pubmed/" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 20 Jun 2011 01:02:53 +0900</lastBuildDate><item><title>NCBIへのサービスのクエリの自動解釈の誤作動の問題</title><link>http://qa.lifesciencedb.jp/questions/495/ncbi%E3%81%B8%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE%E3%82%AF%E3%82%A8%E3%83%AA%E3%81%AE%E8%87%AA%E5%8B%95%E8%A7%A3%E9%87%88%E3%81%AE%E8%AA%A4%E4%BD%9C%E5%8B%95%E3%81%AE%E5%95%8F%E9%A1%8C</link><description>&lt;p&gt;バッチで、論文タイトルのリストからEntrez &lt;a href="http://www.ncbi.nlm.nih.gov/pubmed"&gt;PubMed&lt;/a&gt;のIDを取得するためにNCBIの&lt;a href="http://www.ncbi.nlm.nih.gov/corehtml/query/static/esearch_help.html"&gt;ESearch&lt;/a&gt;からxml情報を取得しようと
+考えているのですが、以下のように、PubMedのWebサービスでは、ヒットするものが、ESearchでヒットしないものがあります。&lt;/p&gt;
+&lt;p&gt;問題の起こった論文のタイトル
+「The long march: a sample preparation technique that enhances contig length and coverage by high-throughput short-read sequencing.」&lt;/p&gt;
+&lt;p&gt;Entrez PubMed&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;http://www.ncbi.nlm.nih.gov/pubmed?term=The%20Long%20March%3A%20a%20Sample%20Preparation%20Technique%20that%20Enhances%20Contig%20Length%20and%20Coverage%20by%20High%2DThroughput%20Short%2DRead%20Sequencing
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;ESearchでdb=pubmedで検索時&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&amp;amp;term=The%20Long%20March%3A%20a%20Sample%20Preparation%20Technique%20that%20Enhances%20Contig%20Length%20and%20Coverage%20by%20High%2DThroughput%20Short%2DRead%20Sequencing
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;ESearchの結果のxmlを見ると、なぜが、タイトル中の"The Long"だけ"Author"フィールドとみなされているようです。
+特にタグ付けを行っていないこと、かつ、ESearchのみで発生していることで、原因が想像つかないのですが、
+どなたかこのような現象に遭遇された方、対策にお心当たりのあるかたがおられましたらご助言いただけないでしょうか？&lt;/p&gt;
+&lt;p&gt;根本的な解決になるかは分かりませんが、&lt;a href="http://www.ncbi.nlm.nih.gov/books/NBK3827/table/pubmedhelp.T43/?report=objectonly"&gt;stopword&lt;/a&gt;を除去すれば、この件に関しては解決することが分かっておりますが、
+類似の問題が発生しないとも限らないので、そのような場当たり的対応で良いのか分からず困っております。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Mon, 20 Jun 2011 01:02:53 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/495/ncbi%E3%81%B8%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE%E3%82%AF%E3%82%A8%E3%83%AA%E3%81%AE%E8%87%AA%E5%8B%95%E8%A7%A3%E9%87%88%E3%81%AE%E8%AA%A4%E4%BD%9C%E5%8B%95%E3%81%AE%E5%95%8F%E9%A1%8C</guid><category>stopword</category><category>esearch</category><category>pubmed</category><category>ncbi</category><category>urlエンコード</category></item></channel></rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: Blast+のエラーメッセージ</title><link>http://qa.lifesciencedb.jp/questions/534/blast-%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8</link><description>&lt;p&gt;Blast+を使って、ローカルでBLASTを行っています。
+エラーメッセージが出てしまい、webで検索してみたのですが、
+エラーメッセージの意味がわかりません。
+お分かりの方、教えていただけると幸いです。
+よろしくお願いいたします。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Error: NCBI C++ Exception:
+    "/am/ncbiapdata/release/blast/src/2.2.25/IntelMAC-universal/c++/GCC401-ReleaseMT--IntelMAC-universal/../src/corelib/ncbiobj.cpp", line 689: Critical: ncbi::CObject::ThrowNullPointerException() - Attempt to access NULL pointer.
+&lt;/code&gt;&lt;/pre&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/534/blast-%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8" rel="self"></atom:link><language>ja</language><lastBuildDate>Thu, 03 Nov 2011 15:19:18 +0900</lastBuildDate><item><title>Answer by nob_fj</title><link>http://qa.lifesciencedb.jp/questions/534/blast-%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8/535</link><description>&lt;p&gt;特に回答ないので、直接の解答ではないですが、&lt;/p&gt;
+&lt;p&gt;詳しく読んでないですが、こちらに同じエラーの質疑ありますね。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://us.generation-nt.com/answer/bug-644962-ncbi-blast-plus-blastp-critical-ncbi-cobject-thrownullpointerexception-attempt-access-null-pointer-help-205066331.html"&gt;http://us.generation-nt.com/answer/bug-644962-ncbi-blast-plus-blastp-critical-ncbi-cobject-thrownullpointerexception-attempt-access-null-pointer-help-205066331.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;他にもエラーメッセージでgoogleでいくつかヒットしますね。
+質問文編集して調べた範囲の情報を追加してはいかがでしょう。&lt;/p&gt;
+&lt;p&gt;読んでも答えがなさそうなら、入力ファイルを2分割して
+エラーがどちらか一方だけで出るのか、とかやってみてはいかがでしょう。
+どちらかにだけ出るなら、さらに分割していくと、特定の入力レコードがエラー原因だと
+分かったりします。&lt;/p&gt;
+&lt;p&gt;特定の入力依存のエラーなら、開発者にバグレポートした方が親切だと思いますし、
+分割して再現しないようなら、マシンリソースの問題かもしれませんね。
+入力ファイルを別のものに変えても発生するようならインストールが失敗しているかも知れません。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Thu, 03 Nov 2011 15:19:18 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/534/blast-%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8/535</guid></item></channel></rss>

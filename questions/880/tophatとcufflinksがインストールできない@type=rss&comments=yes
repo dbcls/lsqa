@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: Tophatとcufflinksがインストールできない</title><link>http://qa.lifesciencedb.jp/questions/880/tophat%E3%81%A8cufflinks%E3%81%8C%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84</link><description>&lt;p&gt;こんにちは&lt;/p&gt;
+&lt;p&gt;Tophatとcufflinksがインストールできません。
+レベルは初心者なので、わけもわからずやっている状態ですが、
+DRY解析教本を読みながらコツコツやっています。
+いろいろやってみましたが、どうにもなりませんでした。&lt;/p&gt;
+&lt;p&gt;$brew install tophat
+    Error: No available formula with the name "tophat" 
+    ==&amp;gt; Searching for a previously deleted formula (in the last month)...
+    Error: No previously deleted formula found.
+    ==&amp;gt; Searching for similarly named formulae...
+    Error: No similarly named formulae found.
+    ==&amp;gt; Searching taps...
+    ==&amp;gt; Searching taps on GitHub...
+    Error: No formulae found in taps.&lt;/p&gt;
+&lt;p&gt;$ brew install cufflinks
+Error: No available formula with the name "cufflinks" 
+==&amp;gt; Searching for a previously deleted formula (in the last month)...
+Error: No previously deleted formula found.
+==&amp;gt; Searching for similarly named formulae...
+Error: No similarly named formulae found.
+==&amp;gt; Searching taps...
+==&amp;gt; Searching taps on GitHub...
+Error: No formulae found in taps.&lt;/p&gt;
+&lt;p&gt;$brew tap brewsci/science
+    ==&amp;gt; Tapping brewsci/science
+    Cloning into '/usr/local/Homebrew/Library/Taps/brewsci/homebrew-science'...
+    remote: Counting objects: 468, done.
+    remote: Compressing objects: 100% (465/465), done.
+    remote: Total 468 (delta 1), reused 153 (delta 1), pack-reused 0
+    Receiving objects: 100% (468/468), 429.98 KiB | 305.00 KiB/s, done.
+    Resolving deltas: 100% (1/1), done.
+    Error: Invalid formula: /usr/local/Homebrew/Library/Taps/brewsci/homebrew-science/Formula/ome-common.rb
+    uninitialized constant #&amp;lt;class:0x00000001032840c0&amp;gt;::MinimumMacOSRequirement
+    Did you mean?  MaximumMacOSRequirement
+    Error: Invalid formula: /usr/local/Homebrew/Library/Taps/brewsci/homebrew-science/Formula/ome-files.rb
+    uninitialized constant #&amp;lt;class:0x00000001023892a0&amp;gt;::MinimumMacOSRequirement
+    Did you mean?  MaximumMacOSRequirement
+    Error: Invalid formula: /usr/local/Homebrew/Library/Taps/brewsci/homebrew-science/Formula/ome-xml.rb
+    uninitialized constant #&amp;lt;class:0x00000001022e3a08&amp;gt;::MinimumMacOSRequirement
+    Did you mean?  MaximumMacOSRequirement
+    Error: Invalid formula: /usr/local/Homebrew/Library/Taps/brewsci/homebrew-science/Formula/osgearth.rb
+    uninitialized constant #&amp;lt;class:0x0000000103086fe8&amp;gt;::MinimumMacOSRequirement
+    Did you mean?  MaximumMacOSRequirement
+    Error: Cannot tap brewsci/science: invalid syntax in tap!&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ brew config
+HOMEBREW_VERSION: 1.7.0
+ORIGIN: https://github.com/Homebrew/brew
+HEAD: 7e8fb9a0f8ab5e841763ec6c7fefa72a8462b594
+Last commit: 3 days ago
+Core tap ORIGIN: https://github.com/Homebrew/homebrew-core
+Core tap HEAD: ea3fec61c268ccbbe4172a2f1cbfd08760025cf0
+Core tap last commit: 51 minutes ago
+HOMEBREW_PREFIX: /usr/local
+CPU: quad-core 64-bit skylake
+Homebrew Ruby: 2.3.7 =&amp;gt; /usr/local/Homebrew/Library/Homebrew/vendor/portable-ruby/2.3.7/bin/ruby
+Clang: 9.1 build 902
+Git: 2.18.0 =&amp;gt; /usr/local/bin/git
+Curl: 7.54.0 =&amp;gt; /usr/bin/curl
+Java: 10.0.2, 1.8.0_121
+macOS: 10.13.6-x86_64
+CLT: 9.4.1.0.1.1528165917
+Xcode: 9.4.1
+XQuartz: 2.7.11 =&amp;gt; /opt/X11
+
+$ brew list
+bam     eigen       ilmbase     numpy       samtools
+bedtools    fastqc      jpeg        opencv      sqlite
+blast       ffmpeg      lame        openexr     stringtie
+boost       gdbm        libidn2     openssl     tbb
+bowtie      gettext     libpng      python      wget
+bowtie2     git     libtiff     python@2    x264
+bwa     hisat2      libunistring    readline    xvid
+curl        htslib      lmdb        rmtrash     xz
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;brewのupdate, upgrade, doctorはしました。問題なかったです。
+問題を解決するにあたって何を質問したら良いかもわかっていない状態です。&lt;/p&gt;
+&lt;p&gt;どうぞよろしくお願いします。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/880/tophat%E3%81%A8cufflinks%E3%81%8C%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84" rel="self"></atom:link><language>ja</language><lastBuildDate>Sat, 28 Jul 2018 17:17:54 +0900</lastBuildDate><item><title>Comment by mikan03 on hub's 回答</title><link>http://qa.lifesciencedb.jp/questions/880/tophat%E3%81%A8cufflinks%E3%81%8C%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84#893</link><description>&lt;p&gt;自己レスしておきますが、tophatは古いので使わないでくださいと作者の方がいっておられます。hisat2が後継だそうです。結局自分もhisat2にしました。&lt;/p&gt;
+&lt;p&gt;参照サイト
+http://togotv.dbcls.jp/ajacs2018008.html&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mikan03</dc:creator><pubDate>Sat, 28 Jul 2018 17:17:54 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/880/tophat%E3%81%A8cufflinks%E3%81%8C%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84#893</guid></item><item><title>Comment by mikan03 on hub's 回答</title><link>http://qa.lifesciencedb.jp/questions/880/tophat%E3%81%A8cufflinks%E3%81%8C%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84#884</link><description>&lt;p&gt;DRY解析教本114ページにしたがって作業したら動きました。
+which cufflinks
+/usr/local/bin/cufflinks
+私の場合はMacportsで入れたので、sudo port uninstall cufflinks にだけ変更しました。ラボで一人で叫んでいます。小さな一歩ですが頑張ります。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mikan03</dc:creator><pubDate>Thu, 19 Jul 2018 18:29:00 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/880/tophat%E3%81%A8cufflinks%E3%81%8C%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84#884</guid></item><item><title>Comment by mikan03 on hub's 回答</title><link>http://qa.lifesciencedb.jp/questions/880/tophat%E3%81%A8cufflinks%E3%81%8C%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84#883</link><description>&lt;p&gt;連投ですみません。
+もしかして、tophat/cufflinksはちょっと古いから
+HISAT2/StringTie/Ballgown
+のほうが良いという意味でしょうか？
+HISAT2/StringTie/Ballgownはさらに情報がないので、難しそうなのでまずはtophatでやってみます。
+どうぞよろしくお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mikan03</dc:creator><pubDate>Thu, 19 Jul 2018 17:42:48 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/880/tophat%E3%81%A8cufflinks%E3%81%8C%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84#883</guid></item><item><title>Comment by mikan03 on hub's 回答</title><link>http://qa.lifesciencedb.jp/questions/880/tophat%E3%81%A8cufflinks%E3%81%8C%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84#882</link><description>&lt;p&gt;どうもありがとうございました。&lt;/p&gt;
+&lt;p&gt;3日間ずっとMacさわりっぱなしでしたが、わかりませんでした。
+感動しております。&lt;/p&gt;
+&lt;p&gt;パッケージングソフトをmacportsに変えてやってみましたが、tophatは無事に入りました。&lt;/p&gt;
+&lt;p&gt;cufflinksもmacportsで入ったのですが、which cufflinksで反応がないです。
+cufflinksがどこにはいったかも、ちょっとわからないので、PATHが通せないです。
+また、調べてみます。どうもありがとうございました。&lt;/p&gt;
+&lt;p&gt;もし、簡単でしたらまたご教示いただけると助かります。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mikan03</dc:creator><pubDate>Thu, 19 Jul 2018 17:37:50 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/880/tophat%E3%81%A8cufflinks%E3%81%8C%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84#882</guid></item><item><title>Answer by hub</title><link>http://qa.lifesciencedb.jp/questions/880/tophat%E3%81%A8cufflinks%E3%81%8C%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/881</link><description>&lt;p&gt;あなたがペーストされたエラーメッセージ&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;No available formula with the name "tophat" &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;にある通り、tophatという名前のフォーミュラが利用できない、ということです。あなたの設定されたHomebrewでは、Tophatが利用できないようです。&lt;/p&gt;
+&lt;p&gt;TopHatのウェブサイト https://ccb.jhu.edu/software/tophat/index.shtml にも&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Please note that TopHat has entered a low maintenance, low support stage as it is now largely superseded by HISAT2 which provides the same core functionality (i.e. spliced alignment of RNA-Seq reads), in a more accurate and much more efficient way.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;とあるように、別のソフトウェアを利用された方が良いと思います。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">hub</dc:creator><pubDate>Thu, 19 Jul 2018 16:06:11 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/880/tophat%E3%81%A8cufflinks%E3%81%8C%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/881</guid></item></channel></rss>

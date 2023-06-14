@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With cufflinks</title><link>http://qa.lifesciencedb.jp/tags/cufflinks/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;cufflinks&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/cufflinks/" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 21 Mar 2017 17:48:07 +0900</lastBuildDate><item><title>cuffmergeの結果について</title><link>http://qa.lifesciencedb.jp/questions/859/cuffmerge%E3%81%AE%E7%B5%90%E6%9E%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;御世話になります．
+初心者なので、DDBJ Sequence Read Archive (DRA) から取得したRNA-seqのヒトサンプルデータ数名分を解析しております．&lt;/p&gt;
+&lt;p&gt;cufflinksのcuffmergeを実行しました．
+群内における発現量のばらつきを知りたいのですが、mergedファイル内のgenes.fpkm_tracking（isoforms.fpkm_trackingとどちらが適切かわかりませんが）の結果をみると、FPKM_conf_loとFPKM_conf_hiは同じ値になっています．&lt;/p&gt;
+&lt;p&gt;これは、うまくmergeできなかったと解釈すればよいでしょうか．&lt;/p&gt;
+&lt;p&gt;実行コマンドは、cuffmerge -o merged -p 4 -g Homo_sapiens.GRCh38.87.gtf transcripts.gtf.txt　です．&lt;/p&gt;
+&lt;p&gt;どうぞよろしくお願い致します．&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mlck</dc:creator><pubDate>Tue, 21 Mar 2017 17:48:07 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/859/cuffmerge%E3%81%AE%E7%B5%90%E6%9E%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>cufflinks</category></item><item><title>RNA-seq データの定量と可視化の、ツールの組み合わせ</title><link>http://qa.lifesciencedb.jp/questions/751/rna-seq-%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%AE%9A%E9%87%8F%E3%81%A8%E5%8F%AF%E8%A6%96%E5%8C%96%E3%81%AE-%E3%83%84%E3%83%BC%E3%83%AB%E3%81%AE%E7%B5%84%E3%81%BF%E5%90%88%E3%82%8F%E3%81%9B</link><description>&lt;p&gt;たびたび畏れ入ります。
+このサイトのご親切な先生方のおかげで、少しずつ解析方法も学習できましたが、煮詰まってしまいました。質問として不備があるかと思いますが、ご助言を頂けましたら幸いです。&lt;/p&gt;
+&lt;p&gt;Single end reads (length = 50 nt) のRNA-seq data を、mouse genome (GRCm38)にマッピングし、
+mRNAについて定量（rpkm）と可視化（IGVを使用予定）を目的として取り組んでおります。&lt;/p&gt;
+&lt;p&gt;IGVによる可視化はなんとかできそうです。ですが、定量に難儀しております。効率化をはかるため、上記の定量と可視化の両方に使えるアウトプットを作成できればと思います。&lt;/p&gt;
+&lt;p&gt;そこで、考えている解析フローは以下の4つです。どれが良いか、何かご助言を頂戴できませんでしょうか？　&lt;/p&gt;
+&lt;p&gt;① Bowtie  &amp;gt; Cufflinks&lt;/p&gt;
+&lt;p&gt;② TopHat &amp;gt; Cufflinks&lt;/p&gt;
+&lt;p&gt;③ Bowtie  &amp;gt; eXpress&lt;/p&gt;
+&lt;p&gt;④ Bowtie  &amp;gt; RNA-STAR&lt;/p&gt;
+&lt;p&gt;恥ずかしながら、にわか勉強のため、ありえない組み合わせがあるかもしれません。どうかご容赦ください。個人的には①が出来たら嬉しいですが、ツールの組み合わせが適切か自信がありません。ネット上では②の組み合わせを多く拝見し、試しましたが、TopHatの時点でものすごく時間がかかり、事情により途中で断念しました。③と④の組み合わせは英語のサイトで見つけました。③が速そうで期待しておりますが、eXpressはあまり聞いたことがないツールで心配です。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">megu</dc:creator><pubDate>Thu, 10 Apr 2014 19:06:57 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/751/rna-seq-%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%AE%9A%E9%87%8F%E3%81%A8%E5%8F%AF%E8%A6%96%E5%8C%96%E3%81%AE-%E3%83%84%E3%83%BC%E3%83%AB%E3%81%AE%E7%B5%84%E3%81%BF%E5%90%88%E3%82%8F%E3%81%9B</guid><category>bowtie</category><category>rpkm</category><category>express</category><category>cufflinks</category><category>rna-star</category></item><item><title>Cufflinks (binary)が実行できない</title><link>http://qa.lifesciencedb.jp/questions/740/cufflinks-binary-%E3%81%8C%E5%AE%9F%E8%A1%8C%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84</link><description>&lt;p&gt;お世話になっております。&lt;/p&gt;
+&lt;p&gt;Mac OSX10.8 のターミナルをNGS解析に使っている初心者です。&lt;/p&gt;
+&lt;p&gt;Bowtie を使ってReference genomeにマッピング、SAM ファイルやBAM ファイルの作成、IGVによる可視化はなんとか出来るレベルです。現在、リード数の定量をするために、Cufflinks のバイナリ版をダウンロード、解凍しました。ところが実行しようとしても、&lt;/p&gt;
+&lt;p&gt;-bash: cufflinks: command not found&lt;/p&gt;
+&lt;p&gt;となってしまい実行できません。いろんなサイトを参考に調べ、バイナリ版を入手するのが簡単、と書いてありましたが、
+なぜうまく実行できないのか分からず、往生しております。&lt;/p&gt;
+&lt;p&gt;この質問をさせて頂くにあたり、細かい環境を記すべきかと思いますが、
+何をお示しすれば良いのかも分からない初心者レベルです。
+ご迷惑をおかけすると思いますが何か打開策をご教授頂けないでしょうか？
+どうかよろしくお願い致します。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">megu</dc:creator><pubDate>Mon, 07 Apr 2014 23:15:27 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/740/cufflinks-binary-%E3%81%8C%E5%AE%9F%E8%A1%8C%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84</guid><category>cufflinks</category></item></channel></rss>

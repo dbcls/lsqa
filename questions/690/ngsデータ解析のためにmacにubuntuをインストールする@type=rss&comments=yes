@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: NGSデータ解析のためにMacにUbuntuをインストールする</title><link>http://qa.lifesciencedb.jp/questions/690/ngs%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90%E3%81%AE%E3%81%9F%E3%82%81%E3%81%ABmac%E3%81%ABubuntu%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B</link><description>&lt;p&gt;NGSデータ解析についてご教授いただけると幸いです。
+目的としましては、NGSデータを用いたゲノム解析のために、 Mac 64bits のPC をセットアップし、Linux OS Ubuntuをインストールする予定にしています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;どこのサイトからダウンロードが可能でしょうか？&lt;/li&gt;
+&lt;li&gt;またUbuntu64bits用は不具合が生じるとのうわさを耳にしましたが、動作状況
+   など、32bitsの方が良いなど、教えていただけると幸いです&lt;/li&gt;
+&lt;li&gt;もし不具合がある場合、64bitsマシンでも32bits用が動作するのでしょうか？&lt;/li&gt;
+&lt;li&gt;もしくはその他、お薦めを教えていただけると助かります。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;どうぞ宜しくお願いいたします。 &lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/690/ngs%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90%E3%81%AE%E3%81%9F%E3%82%81%E3%81%ABmac%E3%81%ABubuntu%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B" rel="self"></atom:link><language>ja</language><lastBuildDate>Fri, 01 Nov 2013 15:27:21 +0900</lastBuildDate><item><title>Answer by tomonari</title><link>http://qa.lifesciencedb.jp/questions/690/ngs%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90%E3%81%AE%E3%81%9F%E3%82%81%E3%81%ABmac%E3%81%ABubuntu%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B/698</link><description>&lt;p&gt;返信が大変遅くなりました。（コメントの仕方がわからず・・・、ここでお礼とさせていただきます。）&lt;/p&gt;
+&lt;p&gt;mn3さま
+ご回答および質問の編集、誠にありがとうございました。&lt;/p&gt;
+&lt;p&gt;yamamotoさま
+さらに詳細なご説明、ありがとうございます。&lt;/p&gt;
+&lt;p&gt;また息詰まりましたら、ここを活用させていただけたらと思います。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">tomonari</dc:creator><pubDate>Fri, 01 Nov 2013 15:27:21 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/690/ngs%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90%E3%81%AE%E3%81%9F%E3%82%81%E3%81%ABmac%E3%81%ABubuntu%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B/698</guid></item><item><title>Answer by yayamamo</title><link>http://qa.lifesciencedb.jp/questions/690/ngs%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90%E3%81%AE%E3%81%9F%E3%82%81%E3%81%ABmac%E3%81%ABubuntu%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B/692</link><description>&lt;p&gt;mn3さんの回答の補足です。&lt;/p&gt;
+&lt;p&gt;UbuntuをMacで手軽に利用する方法の一つとして、Mac OS X上でVirtualBoxをインストールし、そこにUbuntuを入れるという方法も考えられます。これですと作業自体は非常に簡単で、直ぐに使えるようになります。と思い、実際に手順を以下に書いてみましたが、ステップ数が結構ありましたので、ご参考までに、という形で回答させて頂きます。&lt;/p&gt;
+&lt;p&gt;まず、&lt;a href="https://www.virtualbox.org/wiki/Downloads"&gt;ここ&lt;/a&gt;からOS X hosts用のVirtualBoxをダウンロードしてインストールします。
+本回答を書いている時点のバージョンは4.2.18です。&lt;/p&gt;
+&lt;p&gt;つづいて、&lt;a href="http://www.ubuntu.com/download/desktop"&gt;Ubuntu Desktop&lt;/a&gt;をダウンロードします。
+ここで64/32bitの選択が出来ます。
+実際には以下のいずれかのファイルがダウンロードされます。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ubuntu-...-desktop-amd64.iso (64bitの場合)&lt;/li&gt;
+&lt;li&gt;ubuntu-...-desktop-i386.iso (32bitの場合)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ダウンロードを終えたら、先にインストールしたVirtualBoxを起動します。
+左上の「新規」アイコンをクリックすると、「仮想マシンの作成」というウィンドウが現れるので、そこで「名前」に適当な名称を入力し、「タイプ」を「Linux」、「バージョン」を32bitの場合は「Ubuntu」、64bitの場合は「Ubuntu (64 bit)」にします。&lt;/p&gt;
+&lt;p&gt;「続ける」をクリックするとメモリ容量の設定が求められるので、ご自身のMacのメモリサイズを考慮して決めてください。&lt;/p&gt;
+&lt;p&gt;更に「続ける」をクリックすると「ハードドライブ」の設定になります。これはそのままにして「作成」をクリックします。次の「ハードドライブのファイルタイプ」もそのままにして「続ける」をクリックします。続く「物理ハードドライブにあるストレージ」もそのままにして「続ける」をクリックします。そして「ファイルの場所とサイズ」は適宜設定して頂き、「作成」をクリックします。ひとまずこれで、最初の設定が終わります。&lt;/p&gt;
+&lt;p&gt;すると、VirtualBoxの「Oracle VM VirtualBox マネージャー」のウィンドウの左側に、今作成した仮想マシン名が表示されていると思います。そこで、それをクリックし、上にある「設定」アイコンをクリックします。仮想マシン名がタイトルのウィンドウが現れると思います。そこで「ストレージ」アイコンをクリックし、左側の「ストレージツリー」にある、「空」と右側に表示されているディスクアイコンを選択します。ウィンドウの右側には「属性」と表示され、「CD/DVDドライブ(D):」に続く右側には「IDE セカンダリマスター」が選択されていると思います。更にその右側にディスクアイコンが表示されていると思いますので、それをクリックします。「仮想CD/DVDディスクファイルの選択...」を選択すると、ご自身のMacにあるファイルを選択出来るウィンドウが表示されると思いますので、ここで、先ほどダウンロードしたUbuntuのファイルを指定します。ウィンドウ右下の「OK」をクリックし、先の「Oracle VM VirtualBox マネージャー」のウィンドウの上にある「起動」をクリックすると、仮想マシンが起動します。&lt;/p&gt;
+&lt;p&gt;通常のPCを起動するときと同様な表示が、新たに表示されるウィンドウに表示されると思います。問題が無ければ、しばらくしてUbuntuを実際に当該仮想マシンで利用するためのセットアップ画面がそこに表示されると思います。適宜設定をし終えるとUbuntuが使えるようになります。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">yayamamo</dc:creator><pubDate>Thu, 19 Sep 2013 14:28:54 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/690/ngs%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90%E3%81%AE%E3%81%9F%E3%82%81%E3%81%ABmac%E3%81%ABubuntu%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B/692</guid></item><item><title>Answer by mn3</title><link>http://qa.lifesciencedb.jp/questions/690/ngs%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90%E3%81%AE%E3%81%9F%E3%82%81%E3%81%ABmac%E3%81%ABubuntu%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B/691</link><description>&lt;p&gt;Ubuntuのダウンロードは &lt;a href="http://www.ubuntu.com/download"&gt;http://www.ubuntu.com/download&lt;/a&gt; からできるようです。 &lt;a href="http://kanzmemo.cocolog-nifty.com/blog/2013/04/machddubuntu-13.html"&gt;Mac に Ubuntu 13.04 をインストールした方&lt;/a&gt;がいらっしゃるのでインストールの参考になるかもしれません。ただ、すこし手順が難しすぎるように見えます。不具合については情報を持っていません。&lt;/p&gt;
+&lt;p&gt;NGSのゲノム解析ツールでしたら、Mac OS Xでもおおくは実行可能だと思います。もし、自分が環境をつくる場合なら、CentOSもしくはRHELを使うと思います。そしてマシンはMacではなくAmazon EC2などクラウドを使うことを考えます。また、アカデミアの立場だったら&lt;a href="http://sc.ddbj.nig.ac.jp/index.php"&gt;遺伝研スパコン&lt;/a&gt;などの利用を検討するでしょう。とはいえ、予算の問題で、手元のMacでしか計算できない場合は、それでもまずは、Mac OS Xでできるところまで試すと考えます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mn3</dc:creator><pubDate>Wed, 18 Sep 2013 20:47:24 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/690/ngs%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90%E3%81%AE%E3%81%9F%E3%82%81%E3%81%ABmac%E3%81%ABubuntu%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B/691</guid></item></channel></rss>

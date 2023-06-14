@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With fastq</title><link>http://qa.lifesciencedb.jp/tags/fastq/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;fastq&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/fastq/" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 27 Jan 2014 14:54:32 +0900</lastBuildDate><item><title>SAMファイルのFASTAファイルへの変換について</title><link>http://qa.lifesciencedb.jp/questions/708/sam%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AEfasta%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E5%A4%89%E6%8F%9B%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;お世話になっております．&lt;/p&gt;
+&lt;p&gt;表題の内容についてお聞きしたいことがあります．&lt;/p&gt;
+&lt;p&gt;454GS FLXで得られた底生動物のCOI領域のロングリード（平均300bp・合計16万配列）を，国際DNAデータバンクからダウンロードしたCOI領域（658bp）の配列に対しマッピングを行いました．&lt;/p&gt;
+&lt;p&gt;マッピングツールはBWAを用い，出力されたSAMファイルをFASTA形式のファイルに変換したいと考えています．&lt;/p&gt;
+&lt;p&gt;例）&lt;/p&gt;
+&lt;p&gt;リファレンス配列　 ACGTAAACGTTTACGT &lt;/p&gt;
+&lt;p&gt;クエリ配列　　　　 ACGTAA－CGTT&lt;/p&gt;
+&lt;p&gt;クエリ配列　　　　　 CGTAAACGTT－A&lt;/p&gt;
+&lt;p&gt;クエリ配列　　　　　　 GTAA－CG&lt;/p&gt;
+&lt;p&gt;このようにマッピングされた時，マッピングされた配列の開始位置やギャップ等の情報が反映された下のようなFASTAファイルへの変換は可能でしょうか．&lt;/p&gt;
+&lt;p&gt;＞Query1&lt;/p&gt;
+&lt;p&gt;ACGTAA－CGTT&lt;/p&gt;
+&lt;p&gt;＞Query2&lt;/p&gt;
+&lt;p&gt;－CGTAAACGTT－A&lt;/p&gt;
+&lt;p&gt;＞Query3&lt;/p&gt;
+&lt;p&gt;－－GTAA－CG&lt;/p&gt;
+&lt;p&gt;FASTA形式への変換を行った後，Collapseを行いハプロタイプ数を出し，進化系統樹を作りたいと考えています．&lt;/p&gt;
+&lt;p&gt;SAMをFASTAファイルに変換するソフト，もしくはSAMファイルを用いてCollapse→進化系統樹作成が行えるソフトをご存知でしたらご教授ください．&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">izumi</dc:creator><pubDate>Mon, 27 Jan 2014 14:54:32 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/708/sam%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AEfasta%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E5%A4%89%E6%8F%9B%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>fasta</category><category>fastq</category><category>sam</category><category>ngs</category></item><item><title>ペアエンドのFASTQの命名の選択肢</title><link>http://qa.lifesciencedb.jp/questions/570/%E3%83%9A%E3%82%A2%E3%82%A8%E3%83%B3%E3%83%89%E3%81%AEfastq%E3%81%AE%E5%91%BD%E5%90%8D%E3%81%AE%E9%81%B8%E6%8A%9E%E8%82%A2</link><description>&lt;p&gt;開発中のツールで、ユーザーから指定されたディレクトリ内の
+ペアエンドのFASTQファイルの
+ペアの1番目と2番目のファイルを自動で認識させたいので、
+ファイル命名のパターンを把握したいと思っています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;どこかにまとまった情報源などあったりしますでしょうか？&lt;/li&gt;
+&lt;li&gt;あるいは、以下の例では対応できない例等ご存知の方はお知らせ願えませんでしょうか。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;認識正規表現パターン1&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;ペア1番目:.*_1.(fastq|fq|txt)&lt;/li&gt;
+&lt;li&gt;ペア2番目:.*_2.(fastq|fq|txt)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;例：DRA/SRA/ERAなどの公開データ&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;ペア1番目:SRR0XXXXX_1.fastq&lt;/li&gt;
+&lt;li&gt;ペア2番目:SRR0XXXXX_2.fastq&lt;/li&gt;
+&lt;li&gt;ペア外:SRR0XXXXX.fastq&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;認識正規表現パターン2&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;ペア1番目:.*_1_sequence.(fastq|fq|txt)&lt;/li&gt;
+&lt;li&gt;ペア2番目:.*_2_sequence.(fastq|fq|txt)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;例：GA時代Illumina/CASAVAの出力と、その亜種&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;ペア1番目:s_1_1_sequence.txt&lt;/li&gt;
+&lt;li&gt;ペア2番目:s_1_2_sequence.txt&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;認識正規表現パターン3&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;ペア1番目:.*_R1_\d\d\d.(fastq|fq|txt)&lt;/li&gt;
+&lt;li&gt;ペア2番目:.*_R2_\d\d\d.(fastq|fq|txt)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;例：最近のIllumina/CASAVAのデマルチプレックス後&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;ペア1番目:SAMPLE1_ATCACG_L002_R1_001.fastq&lt;/li&gt;
+&lt;li&gt;ペア2番目:SAMPLE1_ATCACG_L002_R2_001.fastq&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(余談ですが、LSQA上で'_'を同じ行に書くと、イタリックとみなされてしまい、\_でエスケープする必要があるようですね。)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Fri, 23 Mar 2012 19:56:51 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/570/%E3%83%9A%E3%82%A2%E3%82%A8%E3%83%B3%E3%83%89%E3%81%AEfastq%E3%81%AE%E5%91%BD%E5%90%8D%E3%81%AE%E9%81%B8%E6%8A%9E%E8%82%A2</guid><category>命名</category><category>ペアエンド</category><category>fastq</category></item><item><title>fasta2fastq</title><link>http://qa.lifesciencedb.jp/questions/472/fasta2fastq</link><description>&lt;p&gt;初めて質問します。
+solexaのreadをde novo assembleして出来たcontigをbwaもしくはbwa-swを用いてmappingしたいと考えています。
+bwaにinputするためには、contigの.fastaファイルを.fastqに変換する必要があると思いますが、そのような変換ツールを知っている方がおられたら教えていただけないでしょうか。調べたのですが調べ方が悪いのか見つかりませんでした。&lt;/p&gt;
+&lt;h1&gt;具体例&lt;/h1&gt;
+&lt;p&gt;【変換前（.fasta）】&lt;/p&gt;
+&lt;p&gt;＞SEQ_ID&lt;/p&gt;
+&lt;p&gt;GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT&lt;/p&gt;
+&lt;p&gt;【変換後（.fastq）】&lt;/p&gt;
+&lt;p&gt;＠SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT&lt;/p&gt;
+&lt;p&gt;＋&lt;/p&gt;
+&lt;p&gt;IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII&lt;/p&gt;
+&lt;p&gt;qualityはphred_score(Phred+33)=40(I)で固定で構いません。&lt;/p&gt;
+&lt;p&gt;ご存知の方がいたら、教えていただけると助かります。
+よろしくお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">yasugoyasu</dc:creator><pubDate>Sat, 04 Jun 2011 02:35:40 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/472/fasta2fastq</guid><category>fasta</category><category>fastq</category><category>ngs</category></item><item><title>FASTQの発音の仕方？</title><link>http://qa.lifesciencedb.jp/questions/40/fastq%E3%81%AE%E7%99%BA%E9%9F%B3%E3%81%AE%E4%BB%95%E6%96%B9</link><description>&lt;p&gt;質問させていただきます。最近塩基配列フォーマットとして使われている（？）、FASTQってどう発音するのですか？
+「ふぁすときゅー」でいいのでしょうか？「ふぁすとく」と発音されるかたもいたようですが？？&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">hub</dc:creator><pubDate>Sun, 14 Nov 2010 11:01:46 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/40/fastq%E3%81%AE%E7%99%BA%E9%9F%B3%E3%81%AE%E4%BB%95%E6%96%B9</guid><category>fastq</category><category>発音</category></item></channel></rss>

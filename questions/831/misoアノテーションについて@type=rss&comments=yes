@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: MISOアノテーションについて</title><link>http://qa.lifesciencedb.jp/questions/831/miso%E3%82%A2%E3%83%8E%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;質問させていただきます。&lt;/p&gt;
+&lt;p&gt;現在、選択的スプラシング解析ツール"MISO"を用いた解析を行なっております。&lt;br&gt;
+これについて数点問題があり、どなたかご教示いただければと思った次第です。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;1) &lt;br&gt;
+現在使用しているアノテーションおよびインデックスは、UCSC genome browserよりDLしたgtfファイルを、rnaseqlibに含まれる"gff make annotation.py"というスクリプトを用いて手前でビルドしています。&lt;br&gt;
+この中身を確認した所、過去にASが報告されているisoformに関するエキソンが入っておりませんでした。&lt;br&gt;
+UCSC genome browserよりDLしたgtfには、これらのisoformが含まれていることを確認しています。&lt;br&gt;
+この様な事例をご存知の方がいましたら、原因・対策について教えていただければ幸いです。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;2)&lt;br&gt;
+上記に関する可能性の一つとして、一部のisoformのevent typeによるものが考えられます。&lt;br&gt;
+報告分子のevent typeがALEである可能性があるのですが、gff make annotation.pyによりビルドされたアノテーションにはALE
+のものは含まれません。&lt;br&gt;
+そこで、(MISO Exon-centric annotation ver. 1のように)ALE、AFEを含めたアノテーションをビルドする方法をご存知の方がいましたらご教示いただければ幸いです。&lt;/p&gt;
+&lt;p&gt;以上ご存知の方がいましたら、どうぞよろしくお願い致します。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/831/miso%E3%82%A2%E3%83%8E%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 22 May 2023 18:09:27 -0000</lastBuildDate></channel></rss>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: RNA seqにおけるRを用いたマッピング時のエラーについて</title><link>http://qa.lifesciencedb.jp/questions/835/rna-seq%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Br%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E6%99%82%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;「Rで塩基配列解析」をみながら、RNAseq解析をしようとしています。Rは初心者で、試しに適当なリファレンス配列とクエリー配列（共にfasta形式）を用いてmappingを試みています。リストファイルを作成後、以下のコマンドによりQuasRを起動してマッピングを行おうとしましたが、以下のようにbowtieにおいて、”引数の長さが 0 です　sh: line 1:  9966 Segmentation fault: 11”というエラーが出てしまい困っております。このような場合の解決策をご存知の方はいらっしゃいますか？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;in_f1 &amp;lt;- "mapping1.txt"&lt;/p&gt;
+&lt;p&gt;in_f2 &amp;lt;- "Ala2.fa"&lt;/p&gt;
+&lt;p&gt;library(QuasR)&lt;/p&gt;
+&lt;p&gt;out &amp;lt;- qAlign(in_f1, in_f2)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Creating .fai file for: /Users/ka/Desktop/te/Ala2.fa&lt;/p&gt;
+&lt;p&gt;alignment files missing - need to:
+    create alignment index for the genome
+    create 1 genomic alignment(s)
+will start in ..9s..8s..7s..6s..5s..4s..3s..2s..1s&lt;/p&gt;
+&lt;p&gt;Creating an Rbowtie index for /Users/ka/Desktop/te/Ala2.fa&lt;/p&gt;
+&lt;p&gt;Finished creating index
+Testing the compute nodes...OK
+Loading QuasR on the compute nodes...OK&lt;/p&gt;
+&lt;p&gt;Available cores:
+nodeNames
+ka.biol.sci.u.ac.jp 
+                            1 &lt;/p&gt;
+&lt;p&gt;Performing genomic alignments for 1 samples. 
+See progress in the log file:
+/Users/ka/Desktop/te/QuasR_log_1d53f48759d.txt&lt;/p&gt;
+&lt;p&gt;以下にエラー checkForRemoteErrors(val) : &lt;/p&gt;
+&lt;p&gt;one node produced an error: Error on ka.biol.sci.u.ac.jp processing sample /Users/ka/Desktop/te/Ala1.fa :  引数の長さが 0 です 
+sh: line 1:  9966 Segmentation fault: 11&lt;br&gt;
+&lt;/p&gt;
+&lt;p&gt;'/Library/Frameworks/R.framework/Versions/3.1/Resources/library/Rbowtie/bowtie' &lt;/p&gt;
+&lt;p&gt;'/Users/ka/Desktop/te/Ala2.fa.Rbowtie/bowtieIndex' '/Users/ka/Desktop/te/Ala1.fa' -m 1 --best --strata -v 2 -f -S -p 1 '/var/folders/kg/hrs2ndkn029f978fs1_18s140000gn/T//RtmpF7YdOB/Ala1.fa26e25902bc72.sam' 2&amp;gt;&amp;amp;1&lt;/p&gt;
+&lt;p&gt;下記にsessionInfo()  による情報と使用Macのスペックを示します。どうぞよろしくお願い致します。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;sessionInfo()
+R version 3.1.3 (2015-03-09)
+Platform: x86_64-apple-darwin10.8.0 (64-bit)
+Running under: OS X 10.8.5 (Mountain Lion)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;locale:
+[1] ja_JP.UTF-8/ja_JP.UTF-8/ja_JP.UTF-8/C/ja_JP.UTF-8/ja_JP.UTF-8&lt;/p&gt;
+&lt;p&gt;attached base packages:
+[1] stats4    parallel  stats     graphics  grDevices utils     datasets 
+[8] methods   base   &lt;br&gt;
+&lt;/p&gt;
+&lt;p&gt;other attached packages:
+ [1] GenomicAlignments_1.2.2 Rsamtools_1.18.3     &lt;br&gt;
+ [3] Biostrings_2.34.1       XVector_0.6.0        &lt;br&gt;
+ [5] QuasR_1.6.2             Rbowtie_1.6.0        &lt;br&gt;
+ [7] GenomicRanges_1.18.4    GenomeInfoDb_1.2.4   &lt;br&gt;
+ [9] IRanges_2.0.1           S4Vectors_0.4.0      &lt;br&gt;
+[11] BiocGenerics_0.12.1     BiocInstaller_1.16.2 &lt;br&gt;
+&lt;/p&gt;
+&lt;p&gt;loaded via a namespace (and not attached):
+ [1] AnnotationDbi_1.28.2   base64enc_0.1-2        BatchJobs_1.6       &lt;br&gt;
+ [4] BBmisc_1.9             Biobase_2.26.0         BiocParallel_1.0.3  &lt;br&gt;
+ [7] biomaRt_2.22.0         bitops_1.0-6           brew_1.0-6          &lt;br&gt;
+[10] BSgenome_1.34.1        checkmate_1.5.2        codetools_0.2-11    &lt;br&gt;
+[13] DBI_0.3.1              digest_0.6.8           fail_1.2            &lt;br&gt;
+[16] foreach_1.4.2          GenomicFeatures_1.18.6 grid_3.1.3          &lt;br&gt;
+[19] hwriter_1.3.2          iterators_1.0.7        lattice_0.20-31     &lt;br&gt;
+[22] latticeExtra_0.6-26    RColorBrewer_1.1-2     RCurl_1.95-4.5      &lt;br&gt;
+[25] RSQLite_1.0.0          rtracklayer_1.26.3     sendmailR_1.2-1     &lt;br&gt;
+[28] ShortRead_1.24.0       stringr_0.6.2          tools_3.1.3         &lt;br&gt;
+[31] XML_3.98-1.1           zlibbioc_1.12.0 &lt;/p&gt;
+&lt;p&gt;Mac Proスペック
+プロセッサ  2 x 2.66 GHz 6-Core Intel Xeon
+メモリ  32 GB 1333 MHz DDR3 ECC
+ソフトウェア  OS X 10.8.5（12F45）&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/835/rna-seq%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Br%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E6%99%82%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 22 May 2023 18:09:21 -0000</lastBuildDate></channel></rss>

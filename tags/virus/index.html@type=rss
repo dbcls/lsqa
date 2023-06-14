@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With virus</title><link>http://qa.lifesciencedb.jp/tags/virus/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;virus&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/virus/" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 12 Jan 2015 12:23:13 +0900</lastBuildDate><item><title>血清中のRNAウィルスの保存期間</title><link>http://qa.lifesciencedb.jp/questions/825/%E8%A1%80%E6%B8%85%E4%B8%AD%E3%81%AErna%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%B9%E3%81%AE%E4%BF%9D%E5%AD%98%E6%9C%9F%E9%96%93</link><description>&lt;p&gt;場違いな質問場所かもしれませんが、申し訳ありません。&lt;/p&gt;
+&lt;p&gt;ウィルスに関するメタゲノム的な研究をしようとおもっています。&lt;/p&gt;
+&lt;p&gt;血清中のウィルス(ことにＲＮＡウィルス）ですが、冷蔵状態（家庭用冷蔵庫）だと　何時間くらいもちますでしょうか？&lt;/p&gt;
+&lt;p&gt;ウィルス粒子がこわれてくると、血清中のRNAaseで急速に破壊されてしまう印象があるのですが。。&lt;/p&gt;
+&lt;p&gt;というのも、なかなか血清を収集して即座に―80℃で冷凍とはいかないので、どうしても数時間から２４時間程度かかってしまっています。&lt;/p&gt;
+&lt;p&gt;あるいは、なにかウィルス学に適したＭＬやフォーラムなどあればご推薦ください。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">deer</dc:creator><pubDate>Mon, 12 Jan 2015 12:23:13 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/825/%E8%A1%80%E6%B8%85%E4%B8%AD%E3%81%AErna%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%B9%E3%81%AE%E4%BF%9D%E5%AD%98%E6%9C%9F%E9%96%93</guid><category>rna</category><category>virus</category></item><item><title>ヒトの核酸が混入している場合のカバレッジは？</title><link>http://qa.lifesciencedb.jp/questions/776/%E3%83%92%E3%83%88%E3%81%AE%E6%A0%B8%E9%85%B8%E3%81%8C%E6%B7%B7%E5%85%A5%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AE%E3%82%AB%E3%83%90%E3%83%AC%E3%83%83%E3%82%B8%E3%81%AF</link><description>&lt;p&gt;はじめて質問させていただきます。
+ウィルスに関するメタゲノム解析を計画しています。シーケンシングは外注する予定です。
+ウィルスならゲノムサイズが小さいので、シーケンスカバレッジは1Gで充分なのではと言う人もいます。
+一方、生体材料（臨床検体）中の核酸はほとんどヒト由来でありウィルスはごく微量なので、かなり深く読まないと(例　5Gとか10G)、その中に微量に含まれるウィルスをde novoで連結はできないという話もあります。&lt;/p&gt;
+&lt;p&gt;貴重な検体であり、コストがかかっても、ウィルスがいればそれを見つけたいと思っています。&lt;/p&gt;
+&lt;p&gt;1G, 5G, 10Gとシーケンスカバレッジを上げれば、de novoシーケンスできる確率も上昇するものでしょうか？
+あるいは雑音であるヒト由来のreadも増えるため結局　効果ないでしょうか？&lt;/p&gt;
+&lt;p&gt;ご指導のほどよろしくお願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">deer</dc:creator><pubDate>Fri, 05 Sep 2014 21:05:17 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/776/%E3%83%92%E3%83%88%E3%81%AE%E6%A0%B8%E9%85%B8%E3%81%8C%E6%B7%B7%E5%85%A5%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AE%E3%82%AB%E3%83%90%E3%83%AC%E3%83%83%E3%82%B8%E3%81%AF</guid><category>virus</category><category>metagenome</category></item></channel></rss>

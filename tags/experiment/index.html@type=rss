@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With experiment</title><link>http://qa.lifesciencedb.jp/tags/experiment/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;experiment&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/experiment/" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 11 Nov 2014 11:44:42 +0900</lastBuildDate><item><title>DRAのexperimentとRun</title><link>http://qa.lifesciencedb.jp/questions/805/dra%E3%81%AEexperiment%E3%81%A8run</link><description>&lt;p&gt;初歩的な質問ですみません。&lt;/p&gt;
+&lt;p&gt;NGSデータの解析の勉強のためFASTQをDRAからとってこようと思っています。&lt;/p&gt;
+&lt;p&gt;しかしたとえばDRA000437というaccessionを開けると
+experimentの配下に６つのfastqが
+runの配下に６つのfastqがあります。&lt;/p&gt;
+&lt;p&gt;これらのうちどちらがNGSの出力なのでしょうか。&lt;/p&gt;
+&lt;p&gt;またDRA000437はDRP000446というSTUDYと関連があるようですが
+DRP000446を開けるとFASTQは６つしかありません。&lt;/p&gt;
+&lt;p&gt;このあたりの関係をおおざっぱにご指導いただけましたら幸いです。&lt;/p&gt;
+&lt;p&gt;DRAハンドブックも見ましたが　よく理解できませんでした。すみません。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">deer</dc:creator><pubDate>Tue, 11 Nov 2014 11:44:42 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/805/dra%E3%81%AEexperiment%E3%81%A8run</guid><category>dra</category><category>experiment</category><category>run</category></item></channel></rss>

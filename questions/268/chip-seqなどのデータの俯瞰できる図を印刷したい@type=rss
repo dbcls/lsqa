@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: ChIP-seqなどのデータの俯瞰できる図を印刷したい</title><link>http://qa.lifesciencedb.jp/questions/268/chip-seq%E3%81%AA%E3%81%A9%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E4%BF%AF%E7%9E%B0%E3%81%A7%E3%81%8D%E3%82%8B%E5%9B%B3%E3%82%92%E5%8D%B0%E5%88%B7%E3%81%97%E3%81%9F%E3%81%84</link><description>&lt;p&gt;皆様こんにちは。
+表題の件で、お尋ねしたいのですが、
+ChIP-SeqのデータをIGV(Integrative Genomics Viewer)
+などのツールで可視化していて、ふと、実際印刷して繋げて、
+データを眺めたいと思ったのですが、
+私が使っているIGVは、画像ファイルの保存が、
+スクリーンショットをとる機能しかなくて、
+つなげたり貼り付けたりするのには不向きかなと思いました。&lt;/p&gt;
+&lt;p&gt;他の可視化ツールをまだあまり試しておらず、今から
+いろいろインストールしようと思っているのですが、
+皆様のお使いの可視化ツールで、このように画像へ変換して、
+印刷して繋げるのに便利そうなツールがございましたら、
+ご教授いただけますでしょうか。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/268/chip-seq%E3%81%AA%E3%81%A9%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E4%BF%AF%E7%9E%B0%E3%81%A7%E3%81%8D%E3%82%8B%E5%9B%B3%E3%82%92%E5%8D%B0%E5%88%B7%E3%81%97%E3%81%9F%E3%81%84" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 24 Jan 2011 10:33:45 +0900</lastBuildDate><item><title>Answer by mya_</title><link>http://qa.lifesciencedb.jp/questions/268/chip-seq%E3%81%AA%E3%81%A9%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E4%BF%AF%E7%9E%B0%E3%81%A7%E3%81%8D%E3%82%8B%E5%9B%B3%E3%82%92%E5%8D%B0%E5%88%B7%E3%81%97%E3%81%9F%E3%81%84/285</link><description>&lt;p&gt;自分で いくつか 試してみた感触では、ご質問のケースでは
+&lt;a href="http://www.savantbrowser.com/"&gt;Savant Genome Browser&lt;/a&gt;が良いのではないかと思います。
+これは、各エレメント（リファレンス配列、マッピング結果など）毎にPNG形式で出力できますので、後で画像を切り貼りする時に便利そうです。&lt;/p&gt;
+&lt;p&gt;最近のゲノムブラウザは、Java製かweb経由のものがトレンドのようで、OS-X,Windows,Linuxいずれも大きな手直し無しで稼働するように出来ているようです。
+NGSのデータ量は膨大なので、Javaの場合は割り当てるメモリ(ヒープメモリ)を大きめに取らないと動作不具合に陥りやすいので注意して下さい。&lt;/p&gt;
+&lt;p&gt;あと、可視化ツールの先の段階で画像そのものを連結するには&lt;a href="http://hugin.sourceforge.net/"&gt;hugin(Panorama photo stitcher)&lt;/a&gt;が使えるかもしれません。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://www.savantbrowser.com/"&gt;Savant Genome Browser&lt;/a&gt; (出力形式PNG）&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://bioinf.scri.ac.uk/tablet/"&gt;Tablet Next Generation Sequence Assembly Visualization&lt;/a&gt; (出力形式PNG）&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://bioinformatics.zj.cn/magicviewer/"&gt;MagicViewer&lt;/a&gt;（出力形式pdf）&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://genomeview.org/"&gt;GenomeView&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.genoviewer.com/wordpress/"&gt;GenoViewer&lt;/a&gt; （SOLiD csfastaのcolorspaceと塩基配列を並列に表示できます）&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://bamview.sourceforge.net/"&gt;bamview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.sanger.ac.uk/resources/software/lookseq/"&gt;LookSeq&lt;/a&gt;（ウェブベース）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(開発中？)
+ a.&lt;a href="https://cgwb.nci.nih.gov/goldenPath/bamview/documentation/index.html"&gt;Bambino&lt;/a&gt;
+ b.&lt;a href="http://code.google.com/p/gambit-viewer/"&gt;gambit&lt;/a&gt;
+ c.&lt;a href="http://ngsview.sourceforge.net/"&gt;NGSview&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mya_</dc:creator><pubDate>Mon, 24 Jan 2011 10:33:45 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/268/chip-seq%E3%81%AA%E3%81%A9%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E4%BF%AF%E7%9E%B0%E3%81%A7%E3%81%8D%E3%82%8B%E5%9B%B3%E3%82%92%E5%8D%B0%E5%88%B7%E3%81%97%E3%81%9F%E3%81%84/285</guid></item><item><title>Answer by mtothen</title><link>http://qa.lifesciencedb.jp/questions/268/chip-seq%E3%81%AA%E3%81%A9%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E4%BF%AF%E7%9E%B0%E3%81%A7%E3%81%8D%E3%82%8B%E5%9B%B3%E3%82%92%E5%8D%B0%E5%88%B7%E3%81%97%E3%81%9F%E3%81%84/271</link><description>&lt;p&gt;&lt;a href="http://www.bioviz.org/igb/"&gt;Integrated Genome Browser&lt;/a&gt; では Exportを使って、window枠なしの画像が出せます。
+論文用の画像もこれを使っています。
+他のはあまり使っていないので他の方のご意見も待ちたいと思います。
+&lt;a href="http://wiki.transvar.org/confluence/display/igbman/Printing+and+Exporting"&gt;http://wiki.transvar.org/confluence/display/igbman/Printing+and+Exporting&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mtothen</dc:creator><pubDate>Wed, 19 Jan 2011 11:58:17 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/268/chip-seq%E3%81%AA%E3%81%A9%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E4%BF%AF%E7%9E%B0%E3%81%A7%E3%81%8D%E3%82%8B%E5%9B%B3%E3%82%92%E5%8D%B0%E5%88%B7%E3%81%97%E3%81%9F%E3%81%84/271</guid></item></channel></rss>

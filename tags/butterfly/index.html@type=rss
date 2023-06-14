@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With butterfly</title><link>http://qa.lifesciencedb.jp/tags/butterfly/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;butterfly&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/butterfly/" rel="self"></atom:link><language>ja</language><lastBuildDate>Fri, 18 Nov 2011 23:07:36 +0900</lastBuildDate><item><title>Tophatのbutterflyオプションについて</title><link>http://qa.lifesciencedb.jp/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;36bpのシングルエンドRNA-seqデータを使って解析をしようとしているのですが、
+バージョン1.0.12から追加された--butterfly-searchというオプションを使ったことの
+ある方、または使った時と使わなかった時の比較をされた方はいらっしゃいませんでしょうか？
+36bpなので--segment-length 18でジャンクション同定してもノイズが多くなりそうで、
+そのままbowtieでマッピングしてしまおうと考えていたのですが、Tophatのマニュアルを
+見ていて、このオプションがあることを知ってどうしようか迷っています。
+Tophatの論文にはこのbutterflyのアルゴリズムに関する記述はなく、&lt;a href="http://seqanswers.com/forums/showthread.php?t=7254"&gt;SEQanswersでは
+数百GBものoutputを出すとの報告があり&lt;/a&gt;
+、ラボに大型サーバーがない私では自分で
+このオプションをテストするのが難しい状況です。
+もしお試しになった方がいらっしゃれば、ご教授お願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tanakky</dc:creator><pubDate>Fri, 18 Nov 2011 23:07:36 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>butterfly</category><category>tophat</category><category>rna-seq</category><category>ngs</category></item></channel></rss>

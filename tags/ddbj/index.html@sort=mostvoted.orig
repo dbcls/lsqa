@@ -1,0 +1,736 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Questions Tagged With ddbj - #LSQA</title>
+        <meta name="description" content="質問と回答と私">
+        <meta name="keywords" content="OSQA,CNPROG,forum,community,lifesciencedb.jp,DDBJ,PDBj,DBCLS,Cytoscape,NGS,ngs-field">
+        
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/tags/ddbj/?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon.ico" />
+        <link href="/m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='/m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >ログイン</a>  <a href="/about/" >概要</a>  <a href="/faq/" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >質問</a><a id="nav_tags" href="/tags/" >タグ</a><a id="nav_users" href="/users/" >ユーザー</a><a id="nav_badges" href="/badges/" >バッジ</a><a id="nav_unanswered" href="/questions/unanswered/" >未回答</a>
+        <a id="nav_ask" href="/questions/ask/" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+
+<div class="tabBar">
+    
+
+<div class="headQuestions">
+    
+        
+            
+                
+                    Questions Tagged With ddbj
+                
+            
+        
+    
+</div>
+    <a class="feed-icon" style="background-image:url('/m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');" href="/tags/ddbj/?type=rss" title="subscribe to question RSS feed"></a>
+    
+<div class="tabsA"><a href="/tags/ddbj/?sort=有効" title="最近更新された質問">有効</a><a href="/tags/ddbj/?sort=最新" title="最近尋ねられた質問">最新</a><a href="/tags/ddbj/?sort=ホット" title="最近２４時間でもっとも活発な質問">ホット</a><a href="/tags/ddbj/?sort=mostvoted" class="on" title="もっとも投票された質問">注目の質問</a></div>
+</div>
+<div id="listA">
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">2</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">5.0k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="Native vendor file の情報を画像以外すべて保存したSRA-full形式にくらべFastQファイルだけならDDBJ調査で総サイズは29%ですみます。
+コストを考えるとFastQじゃできないことがないといけません。
+＜補足:DDBJ＞この質問の意図は、DRA継続に際してサイズダウンで良いかをユーザの皆様に問う事です。
+現在SRA-Lite形式もサポートしておりますが、FASTQ形式だけで問題ないでしょうか？(でしたらコスト安で済みます)。
+DRAの運営に際して、次世代シークエンサ利用者の皆様から御意見を頂けますと助かります。宜しくお願い致します。" href="/questions/356/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%81%AFfastq%E5%BD%A2%E5%BC%8F%E3%81%A0%E3%81%91%E3%81%A7%E3%81%AF%E5%9B%B0%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B">新型シーケンサー生データアーカイブはFASTQ形式だけでは困りますか？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-02-28 14:44:35.804926">Feb 28 '11 at 14:44</span>
+            <a href="/users/76/okubo/">okubo</a><span class="score" title="131 信用度">131</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/ddbj/" title="タグ付けされた質問をみる 'ddbj' タグを利用している" rel="tag">ddbj</a>
+            <a href="/tags/dra/" title="タグ付けされた質問をみる 'dra' タグを利用している" rel="tag">dra</a>
+            <a href="/tags/sra/" title="タグ付けされた質問をみる 'sra' タグを利用している" rel="tag">sra</a>
+            <a href="/tags/ngs/" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">3</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">7.0k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="DDBJ に登録した配列と同じ配列を GenBank に登録する必要はありますか？" href="/questions/27/ddbj%E7%99%BB%E9%8C%B2%E5%BE%8C%E3%81%ABgenbank%E7%99%BB%E9%8C%B2%E3%81%8C%E5%BF%85%E8%A6%81%E3%81%A7%E3%81%99%E3%81%8B">DDBJ登録後にGenBank登録が必要ですか？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2010-11-25 13:34:49.704601">Nov 25 '10 at 13:34</span>
+            <a href="/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/ddbj/" title="タグ付けされた質問をみる 'ddbj' タグを利用している" rel="tag">ddbj</a>
+            <a href="/tags/dbvar/" title="タグ付けされた質問をみる 'dbvar' タグを利用している" rel="tag">dbvar</a>
+            <a href="/tags/geo/" title="タグ付けされた質問をみる 'geo' タグを利用している" rel="tag">geo</a>
+            <a href="/tags/cibex/" title="タグ付けされた質問をみる 'cibex' タグを利用している" rel="tag">cibex</a>
+            <a href="/tags/ncbi/" title="タグ付けされた質問をみる 'ncbi' タグを利用している" rel="tag">ncbi</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">3.6k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="DDBJに塩基配列を登録する場合、どのような登録方法がありますか" href="/questions/82/ddbj%E3%81%AE%E7%99%BB%E9%8C%B2%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">DDBJの登録方法について</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2010-12-10 16:22:18.121855">Dec 10 '10 at 16:22</span>
+            <a href="/users/16/ddbj/">DDBJ ♦</a><span class="score" title="321 信用度">321</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/ddbj/" title="タグ付けされた質問をみる 'ddbj' タグを利用している" rel="tag">ddbj</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">2.6k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="DDBJに登録したデータの公開日を延期したいが、どのくらい、先の日付が妥当なのでしょうか。" href="/questions/83/ddbj%E3%81%AB%E7%99%BB%E9%8C%B2%E3%81%97%E3%81%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%85%AC%E9%96%8B%E6%97%A5%E3%82%92%E5%BB%B6%E6%9C%9F%E3%81%97%E3%81%9F%E3%81%84">DDBJに登録したデータの公開日を延期したい</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2010-12-19 23:12:48.304390">Dec 19 '10 at 23:12</span>
+            <a href="/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/ddbj/" title="タグ付けされた質問をみる 'ddbj' タグを利用している" rel="tag">ddbj</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">3.7k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="DRA　に，次世代シーケンサからのデータ登録を考えております。
+登録する前に，注意事項など，DRA のページを見ましたが，講習会などがあれば参加したいと思います。
+何かご存じありませんか？" href="/questions/187/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E7%99%BB%E9%8C%B2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E8%AC%9B%E7%BF%92%E4%BC%9A%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B">次世代シーケンサのデータ登録についての講習会はありますか？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-01-14 11:02:25.919184">Jan 14 '11 at 11:02</span>
+            <a href="/users/16/ddbj/">DDBJ ♦</a><span class="score" title="321 信用度">321</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/%E8%AC%9B%E7%BF%92%E4%BC%9A/" title="タグ付けされた質問をみる '講習会' タグを利用している" rel="tag">講習会</a>
+            <a href="/tags/dra/" title="タグ付けされた質問をみる 'dra' タグを利用している" rel="tag">dra</a>
+            <a href="/tags/ddbj/" title="タグ付けされた質問をみる 'ddbj' タグを利用している" rel="tag">ddbj</a>
+            <a href="/tags/ngs/" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">3.2k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="新型シーケンサーの生データアーカイブは現在NCBI/EBI/DDBJで行っています。NCBIのファンドレイズ失敗で各国で再議論が始まりました。　コストと価値のバランスを考えるために　再利用の目論見　見込み　アーカイブの目的を共有したいと思います。
+現在のアーカイブの様子は仲里&#39;s SRA目次でよくわかります。
+世界中のシーケンサの分布はJames Hadfield (Cancer Research UK, Cambridge) " href="/questions/348/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%81%99%E3%82%8B%E7%9B%AE%E7%9A%84%E3%81%AF">新型シーケンサーの生データをアーカイブする目的は？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-02-27 14:09:06.268514">Feb 27 '11 at 14:09</span>
+            <a href="/users/76/okubo/">okubo</a><span class="score" title="131 信用度">131</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/ddbj/" title="タグ付けされた質問をみる 'ddbj' タグを利用している" rel="tag">ddbj</a>
+            <a href="/tags/sra/" title="タグ付けされた質問をみる 'sra' タグを利用している" rel="tag">sra</a>
+            <a href="/tags/ngs/" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">4</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">12k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="
+[http://www.flickr.com/photos/59261391@N05/5475238349/][2]
+はしばらく前の議論に使った目安です。　現状はどうなんでしょうか？
+Kato Kikuya Impact of the next generation DNA sequencers . Int J Clin Exp Med. 2009; 2(2): 193–202.
+Published online 2009 July 8. 
+Comparison of sequencers (January, 2009). It should be noted that the throug" href="/questions/349/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%AF%E3%81%A9%E3%82%93%E3%81%AA%E9%A2%A8%E3%81%A7%E3%81%99%E3%81%8B">新型シーケンサーの生データサイズはどんな風ですか？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-03-01 13:30:43.226093">Mar 01 '11 at 13:30</span>
+            <a href="/users/76/okubo/">okubo</a><span class="score" title="131 信用度">131</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/ddbj/" title="タグ付けされた質問をみる 'ddbj' タグを利用している" rel="tag">ddbj</a>
+            <a href="/tags/sra/" title="タグ付けされた質問をみる 'sra' タグを利用している" rel="tag">sra</a>
+            <a href="/tags/ngs/" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">4.5k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="コストと便益のバランスを考える為に必要な値です。" href="/questions/350/%E3%81%82%E3%82%8B%E7%A8%8B%E5%BA%A6%E5%AE%89%E5%85%A8%E3%81%AA%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF1peta%E3%81%A3%E3%81%A6%E3%81%84%E3%81%8F%E3%82%89%E3%81%90%E3%82%89%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B">ある程度安全なディスク1petaっていくらぐらいですか？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-03-01 12:24:43.607435">Mar 01 '11 at 12:24</span>
+            <a href="/users/76/okubo/">okubo</a><span class="score" title="131 信用度">131</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/ddbj/" title="タグ付けされた質問をみる 'ddbj' タグを利用している" rel="tag">ddbj</a>
+            <a href="/tags/sra/" title="タグ付けされた質問をみる 'sra' タグを利用している" rel="tag">sra</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">13k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="過去の進歩の歴史を後程アップしておきます。" href="/questions/353/%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E5%87%BA%E5%8A%9B%E3%81%AE%E4%BC%B8%E3%81%B3%E3%81%AE%E4%BA%88%E6%B8%AC%E3%81%A3%E3%81%A6%E3%81%A9%E3%81%AE%E3%81%8F%E3%82%89%E3%81%84%E3%82%8F%E3%81%8B%E3%81%A3%E3%81%A6%E3%81%BE%E3%81%99%E3%81%8B">シーケンサー出力の伸びの予測ってどのくらいわかってますか？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-03-01 00:50:02.512790">Mar 01 '11 at 00:50</span>
+            <a href="/users/76/okubo/">okubo</a><span class="score" title="131 信用度">131</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/ddbj/" title="タグ付けされた質問をみる 'ddbj' タグを利用している" rel="tag">ddbj</a>
+            <a href="/tags/sra/" title="タグ付けされた質問をみる 'sra' タグを利用している" rel="tag">sra</a>
+            <a href="/tags/ngs/" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">14k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="DDBJでは native vendor fileから 画像を落とした 標準形 SRAはあまりかさばるので intensityを落としたSRA-liteでミラーしてます。" href="/questions/355/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%87%E3%83%BC%E3%82%BF%E4%BF%9D%E5%AD%98%E3%81%AB%E3%81%A9%E3%82%93%E3%81%AA%E5%BD%A2%E5%BC%8F%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B-%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%A8%E6%AC%A0%E7%82%B9%E3%82%92">新型シーケンサデータ保存にどんな形式がありますか？サイズと欠点を</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-02-25 22:24:54.559121">Feb 25 '11 at 22:24</span>
+            <a href="/users/12/ma_ko/">ma_ko ♦♦</a><span class="score" title="371 信用度">371</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/ddbj/" title="タグ付けされた質問をみる 'ddbj' タグを利用している" rel="tag">ddbj</a>
+            <a href="/tags/dra/" title="タグ付けされた質問をみる 'dra' タグを利用している" rel="tag">dra</a>
+            <a href="/tags/sra/" title="タグ付けされた質問をみる 'sra' タグを利用している" rel="tag">sra</a>
+            <a href="/tags/ngs/" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">3.6k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="ディスクスペースを節約するのに古いもの使われなかったものを破棄する　超整理法的な態度もあります。テープに書き出すのもままならない大量のアーカイブは新ディスクへと継代でmigrateさせて維持すべきでしょうか？" href="/questions/359/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AF%E4%BD%95%E5%B9%B4%E4%BF%9D%E5%AD%98%E3%81%99%E3%82%8B%E3%81%B9%E3%81%8D%E3%81%A7%E3%81%97%E3%82%87%E3%81%86%E3%81%8B">新型シーケンサーの生データは何年保存するべきでしょうか？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-05-14 02:08:30.784463">May 14 '11 at 02:08</span>
+            <a href="/users/31/hacchy/">hacchy</a><span class="score" title="121 信用度">121</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/ddbj/" title="タグ付けされた質問をみる 'ddbj' タグを利用している" rel="tag">ddbj</a>
+            <a href="/tags/sra/" title="タグ付けされた質問をみる 'sra' タグを利用している" rel="tag">sra</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">11k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="安いディスクを重複させて賢く使う方法も含めてご存知のかたはお教えください　コストの質問への答えでも" href="/questions/354/%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF%E3%81%AE%E5%8D%98%E4%BE%A1%E3%81%82%E3%81%9F%E3%82%8A%E3%81%AE%E5%AE%B9%E9%87%8F%E3%81%AE%E4%BC%B8%E3%81%B3%E7%8E%87-%EF%BC%91%E5%B9%B4%E3%81%A7%E4%BD%95%E5%80%8D-%E3%82%92%E6%95%99%E3%81%88%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84">ディスクの単価あたりの容量の伸び率（１年で何倍）を教えてください。</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-02-25 17:52:21.120948">Feb 25 '11 at 17:52</span>
+            <a href="/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/ddbj/" title="タグ付けされた質問をみる 'ddbj' タグを利用している" rel="tag">ddbj</a>
+            <a href="/tags/sra/" title="タグ付けされた質問をみる 'sra' タグを利用している" rel="tag">sra</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">3.2k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="お世話になっております。
+DDBJ pipeline において、FTPを使ってfastqファイルをuploadするのを目的としています。
+私はマックを使用しているので、Cyberduckによって接続しました。
+Pipeline tutorial によりますと、接続後に query フォルダが表示されるようですが、
+そのようなフォルダが表示されません。
+このqueryフォルダは、fastqをuploadする場所であるようなので、現在、往生しております。
+稚拙な質問かも知れませんが、ここ数日困っております。どなたか解決策をご教示頂けないでしょうか。
+どうか宜しくお願い致します。" href="/questions/737/ddbj-pipeline-%E3%81%AEftp%E6%8E%A5%E7%B6%9A%E5%BE%8C-query%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84">DDBJ pipeline のFTP接続後、queryフォルダが表示されない</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2014-04-01 16:15:44.173303">Apr 01 '14 at 16:15</span>
+            <a href="/users/139/megu/">megu</a><span class="score" title="1 信用度">1</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/ddbj/" title="タグ付けされた質問をみる 'ddbj' タグを利用している" rel="tag">ddbj</a>
+            <a href="/tags/query/" title="タグ付けされた質問をみる 'query' タグを利用している" rel="tag">query</a>
+            <a href="/tags/pipeline/" title="タグ付けされた質問をみる 'pipeline' タグを利用している" rel="tag">pipeline</a>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+    <div class="boxC"><div class="questions-count">
+        13<span style="color:black;font-size:14px;margin-left:5px">questions tagged <span class="tag">ddbj</span></span></div><div class="questions-count">
+        23<span style="color:black;font-size:14px;margin-left:5px">回答</span></div><div><p class="nomargin">
+            もっとも<strong>投票された</strong>質問
+        </p></div></div>
+    
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>ただいまベータテスト運用中です。そのために通知無くコンテンツの変更やサービスの停止変更されることがあります。</h2>
+<p>質問するなら<a href="http://qa.lifesciencedb.jp">ライフサイエンスQA</a>。</p>
+<p>このページの<a href="?type=rss">RSSフィード</a></p>
+<p><a href="http://twitter.com/lsqa_all">@lsqa_all</a>・<a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a></p>
+     </div>
+</div>
+
+    
+
+
+
+
+    
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>世界に広がるQAサイト</h2>
+<p><a href="http://biostar.stackexchange.com">バイオインフォマティクスのBioStar</a>・ <a href="http://I.SEQanswers.com">新型シーケンサーのSEQanswers</a>・ <a href="http://blueobelisk.shapado.com">オープンデータのBlueObelisk</a>・<a href="http://stackoverflow.com">プログラミングのstackoverflow</a>・ <a href="http://www.semanticoverflow.com">Semantic Overflow</a>・ <a href="http://stats.stackexchange.com/">Statistical Analysis</a>・ <a href="http://cstheory.stackexchange.com/">Theoretical Computer Science</a>・ <a href="http://chiebukuro.yahoo.co.jp/">Yahoo!知恵袋</a>・ <a href="http://okwave.jp/">OKWave</a> <a href="http://ja.wikipedia.org/wiki/Category:Q%26Aサイト">などなど</a></p>
+     </div>
+</div>
+
+    
+
+
+
+    <div class="boxC">
+        <h3 class="subtitle">タグ</h3>
+        <div class="tags" id="recent-tags">
+            
+                <a rel="tag" title="'ngs'タグづけられた質問をみる"  href="/tags/ngs/">ngs</a>
+                <span class="tag-number">&#215; 47</span>
+                <br />
+            
+                <a rel="tag" title="'ddbj'タグづけられた質問をみる"  href="/tags/ddbj/">ddbj</a>
+                <span class="tag-number">&#215; 13</span>
+                <br />
+            
+                <a rel="tag" title="'sra'タグづけられた質問をみる"  href="/tags/sra/">sra</a>
+                <span class="tag-number">&#215; 13</span>
+                <br />
+            
+                <a rel="tag" title="'dra'タグづけられた質問をみる"  href="/tags/dra/">dra</a>
+                <span class="tag-number">&#215; 6</span>
+                <br />
+            
+                <a rel="tag" title="'geo'タグづけられた質問をみる"  href="/tags/geo/">geo</a>
+                <span class="tag-number">&#215; 6</span>
+                <br />
+            
+                <a rel="tag" title="'ncbi'タグづけられた質問をみる"  href="/tags/ncbi/">ncbi</a>
+                <span class="tag-number">&#215; 6</span>
+                <br />
+            
+                <a rel="tag" title="'cibex'タグづけられた質問をみる"  href="/tags/cibex/">cibex</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'dbvar'タグづけられた質問をみる"  href="/tags/dbvar/">dbvar</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'pipeline'タグづけられた質問をみる"  href="/tags/pipeline/">pipeline</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'query'タグづけられた質問をみる"  href="/tags/query/">query</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'講習会'タグづけられた質問をみる"  href="/tags/%E8%AC%9B%E7%BF%92%E4%BC%9A/">講習会</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+        </div>
+    </div>
+
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+    <div class="pager"></div>
+    <div class="pagesize"><div class="paginator"><span class="text">ページあたりの投稿数</span><span class="page"><a href="/tags/ddbj/?sort=mostvoted&pagesize=15">15</a></span><span class="page"><a href="/tags/ddbj/?sort=mostvoted&pagesize=30">30</a></span><span class="curr">50</span></div></div>
+
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >概要</a> <span class="link-separator"> |</span> <a href="/faq/" >よくある質問</a> <span class="link-separator"> |</span> <a href="/privacy/" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="/m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+        
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

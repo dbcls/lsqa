@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: ChIP-seqデータの比較について</title><link>http://qa.lifesciencedb.jp/questions/878/chip-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E6%AF%94%E8%BC%83%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;ChIP-seqは定性的であり、定量的な比較はできないと習いました。&lt;/p&gt;
+&lt;p&gt;しかし、論文の図でヒストンアセチル化等のヒストグラムをよく目にします。&lt;/p&gt;
+&lt;p&gt;縦軸がtag densityとなっていますが、このtag densityとは何でしょうか？一種の正規化なのでしょうか？&lt;/p&gt;
+&lt;p&gt;また、この場合tag densityの大小でChIP-seqデータを定量的に比較可能でしょうか？両者を比較してヒストンアセチル化が多い、少ないというのは可能でしょうか？&lt;/p&gt;
+&lt;p&gt;どなたかご存じの方がいましたらよろしくお願いします。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/878/chip-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E6%AF%94%E8%BC%83%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 22 May 2023 17:47:51 -0000</lastBuildDate></channel></rss>

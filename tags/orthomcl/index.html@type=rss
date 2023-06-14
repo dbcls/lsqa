@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With orthomcl</title><link>http://qa.lifesciencedb.jp/tags/orthomcl/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;orthomcl&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/orthomcl/" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 24 May 2011 19:17:11 +0900</lastBuildDate><item><title>Orthologの推定に役立つソフトは？</title><link>http://qa.lifesciencedb.jp/questions/450/ortholog%E3%81%AE%E6%8E%A8%E5%AE%9A%E3%81%AB%E5%BD%B9%E7%AB%8B%E3%81%A4%E3%82%BD%E3%83%95%E3%83%88%E3%81%AF</link><description>&lt;p&gt;バクテリアの株間のオーソログを推定したいと思っています。
+NCBIにゲノム配列が公開されている20株に、手持ちの40株を加えて、60株間でのオーソログを探す予定です。手持ち40株は全ゲノム配列はわかっていませんが、部分配列から90%程度の数をカバーする遺伝子を推定してあります。そこでオーソログの推定方法なのですが、&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;基準株を１つ決めて、それに対するBest Reciprocal Hitを、各株のオーソログとみなす&lt;/li&gt;
+&lt;li&gt;60株x59株総当たりでBest Reciprocal Hitを調べて、全ペア間でBest Hitのものをオーソログとみなす&lt;/li&gt;
+&lt;li&gt;フリーソフトを使って推定する&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;などの方法を考えています。フリーソフトとしては、&lt;a href="http://mbgd.genome.ad.jp/domclust/"&gt;DomClust&lt;/a&gt;や&lt;a href="http://orthomcl.org/cgi-bin/OrthoMclWeb.cgi?rm=indx"&gt;OrthoMCL&lt;/a&gt;を調べています。（OrthoMCLは真核生物用なのでしょうか？調べた論文ではバクテリアの遺伝子に対して使っていましたが）&lt;/p&gt;
+&lt;p&gt;オーソログの推定に関して、お勧めの方法やソフトがありましたら、ご紹介ください。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">hesonashi</dc:creator><pubDate>Tue, 24 May 2011 19:17:11 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/450/ortholog%E3%81%AE%E6%8E%A8%E5%AE%9A%E3%81%AB%E5%BD%B9%E7%AB%8B%E3%81%A4%E3%82%BD%E3%83%95%E3%83%88%E3%81%AF</guid><category>orthomcl</category><category>domclust</category></item></channel></rss>

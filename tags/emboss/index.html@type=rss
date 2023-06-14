@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With emboss</title><link>http://qa.lifesciencedb.jp/tags/emboss/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;emboss&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/emboss/" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 26 Mar 2012 17:02:01 +0900</lastBuildDate><item><title>DBCLS提供のEMBOSS Explorerにアクセスできないのはたまたま？</title><link>http://qa.lifesciencedb.jp/questions/571/dbcls%E6%8F%90%E4%BE%9B%E3%81%AEemboss-explorer%E3%81%AB%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E3%81%AE%E3%81%AF%E3%81%9F%E3%81%BE%E3%81%9F%E3%81%BE</link><description>&lt;p&gt;タイトルのままなのですが、、、。
+&lt;a href="http://emboss.dbcls.jp/"&gt;http://emboss.dbcls.jp/&lt;/a&gt;
+にアクセスできません。
+もうサービスは終了したのでしょうか？&lt;/p&gt;
+&lt;p&gt;また、
+&lt;a href="http://togotv.dbcls.jp/20081129.html#p01"&gt;http://togotv.dbcls.jp/20081129.html#p01&lt;/a&gt;
+の番組へのリンクがなくなっているようにも見えます（クリックするといけますが...）、これは上記の事柄と関係しているのでしょうか？&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">かどた</dc:creator><pubDate>Mon, 26 Mar 2012 17:02:01 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/571/dbcls%E6%8F%90%E4%BE%9B%E3%81%AEemboss-explorer%E3%81%AB%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E3%81%AE%E3%81%AF%E3%81%9F%E3%81%BE%E3%81%9F%E3%81%BE</guid><category>emboss</category></item><item><title>EMBOSSのtranseqの転写版ってありますか?</title><link>http://qa.lifesciencedb.jp/questions/151/emboss%E3%81%AEtranseq%E3%81%AE%E8%BB%A2%E5%86%99%E7%89%88%E3%81%A3%E3%81%A6%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B</link><description>&lt;p&gt;MacOSXのTerminalでEMBOSSを使わせていただいています。&lt;/p&gt;
+&lt;p&gt;そこで質問なのですが、EMBOSSのパッケージの中に、&lt;/p&gt;
+&lt;p&gt;「cDNA配列を入力として与えるとその転写産物を出力するコマンド」&lt;/p&gt;
+&lt;p&gt;というのはありますでしょうか。どうぞよろしくお願い致します。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">redgrapefruit</dc:creator><pubDate>Fri, 10 Dec 2010 19:27:36 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/151/emboss%E3%81%AEtranseq%E3%81%AE%E8%BB%A2%E5%86%99%E7%89%88%E3%81%A3%E3%81%A6%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B</guid><category>emboss</category></item></channel></rss>

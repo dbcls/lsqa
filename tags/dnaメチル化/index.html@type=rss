@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With dnaメチル化</title><link>http://qa.lifesciencedb.jp/tags/dna%E3%83%A1%E3%83%81%E3%83%AB%E5%8C%96/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;dnaメチル化&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/dna%E3%83%A1%E3%83%81%E3%83%AB%E5%8C%96/" rel="self"></atom:link><language>ja</language><lastBuildDate>Sat, 25 Dec 2010 15:54:11 +0900</lastBuildDate><item><title>DNAメチル化の同定方法の違い</title><link>http://qa.lifesciencedb.jp/questions/234/dna%E3%83%A1%E3%83%81%E3%83%AB%E5%8C%96%E3%81%AE%E5%90%8C%E5%AE%9A%E6%96%B9%E6%B3%95%E3%81%AE%E9%81%95%E3%81%84</link><description>&lt;p&gt;最近DNAメチル化に関する論文をよく目にしたり、実際にSRAの登録データを触ったりします。
+そこで少し気になったのですが、ハイスループットなDNAメチル化同定には大まかに3つの方法が
+あると思うのですが、&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;バイサルファイトを使う方法 (例：Bisulfite-Seq)&lt;/li&gt;
+&lt;li&gt;免疫沈降を使う方法(例：MeDIP-Seq)&lt;/li&gt;
+&lt;li&gt;制限酵素を使う方法(例：HELP-Seq)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;これらの方法の違い（長所・短所）はどういったところでしょうか？
+例えばバイサルファイトは非メチル化CpGをUpGに変換するのでBisulfite-Seqは個々のCpGの
+メチル化を同定できるなど(マッピングがちょっと大変そうですが・・・)。
+私はWet実験のラボに属していないため、サンプル調整や費用などの点に特に興味があります。
+ご教授お願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tanakky</dc:creator><pubDate>Sat, 25 Dec 2010 15:54:11 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/234/dna%E3%83%A1%E3%83%81%E3%83%AB%E5%8C%96%E3%81%AE%E5%90%8C%E5%AE%9A%E6%96%B9%E6%B3%95%E3%81%AE%E9%81%95%E3%81%84</guid><category>dnaメチル化</category><category>ngs</category></item></channel></rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With residue</title><link>http://qa.lifesciencedb.jp/tags/residue/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;residue&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/residue/" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 16 Sep 2019 01:57:26 +0900</lastBuildDate><item><title>アミノ酸配列の保存度算出に伴う重み付けスコアの意義について</title><link>http://qa.lifesciencedb.jp/questions/901/%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E9%85%8D%E5%88%97%E3%81%AE%E4%BF%9D%E5%AD%98%E5%BA%A6%E7%AE%97%E5%87%BA%E3%81%AB%E4%BC%B4%E3%81%86%E9%87%8D%E3%81%BF%E4%BB%98%E3%81%91%E3%82%B9%E3%82%B3%E3%82%A2%E3%81%AE%E6%84%8F%E7%BE%A9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;はじめまして、初めて使用させていただきます。よろしくお願いします。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1,疑問点&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;・以下の論文でValder氏の提唱している式(37式)を学びましたが、その式中でHenikoff氏の考案した重み付けがなぜ使用されているのかわからない。
+(参照:https://www.ncbi.nlm.nih.gov/pubmed/12112692)&lt;/p&gt;
+&lt;p&gt;疑問を持った理由&lt;/p&gt;
+&lt;p&gt;→例えば、100本のマルチプルアラインメントされた相同配列のうち、99本が90%程度の一致度を示し、残りの1本が20%程度の一致度を示しているような場合を考える。
+重み付けの計算式によれば、20%の一致度を示す配列の情報を保存度に大きな影響として与えようとしていることがわかる。なぜ、このような計算方法をとる必要があるのか？99本の保存されていると考えられるサイトを以って、全ての配列は90%程度保存されていると判断してはいけないのはなぜか？と考えたため。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;---論文を読み込めない方のために、使用している式について以下に画像をキャプチャしました---&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;1,Valder氏の保存度算出式(https://gyazo.com/8285e51d7bd7db8d8057bb376e9e454f)&lt;/p&gt;
+&lt;p&gt;2,重み付けの計算方法(https://gyazo.com/7907a5beddc2a1ee6348e310f9a5d78b)&lt;/p&gt;
+&lt;p&gt;※iは配列の数を表し、Nは配列の総数を表している。xはポジションのことを表している。&lt;/p&gt;
+&lt;p&gt;→お分かりになる方がいるだろうという希望的観測のもと質問をいたしますので、計算方法の詳細については記述いたしません。必要な場合は追記いたしますので、おしらせください。&lt;/p&gt;
+&lt;p&gt;3,スコア行列から取得したアミノ酸ペアの値に対する計算(https://gyazo.com/60242cf27db66929a5490dc0ed9b1558)&lt;/p&gt;
+&lt;p&gt;4,スコア行列=Blosum62(https://gyazo.com/7c8c0bb28db10ba26d07bdf6e40aed57)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2,私の理解度について&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Valder氏の式については、"加重平均"を計算していることは理解しております。配列ごとに重み付けをした値を分母と分子にとり、
+分子についてはBlosum62のスコア行列から得られた値を配列同士の重み付けの積と、さらに積をとって計算しています。
+分子、分母共に、各項が1を超えることは絶対にないように計算されているので、保存度は0~1の間で算出される。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3,疑問点解決のために模索したこと&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;・Henikoff氏の重み付けを使用する理由は、「taxonomic bias」を逃れるために導入していることを以下の参考文献から学びましたが、このバイアスについて具体例を元に詳しく説明されている文献等々を見つけることができず、具体的に記している文献を知りたいです。
+(参考文献:タンパク質機能解析のためのバイオインフォマティクス P.67)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4,求めている回答&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;・taxonomic biasを理解することが、重み付けを式に組み込む理由として正しいのか？&lt;/p&gt;
+&lt;p&gt;→妥当である場合、taxonomic biasが発生してしまうような場合を、具体例を含んで解説している書籍、論文をご紹介いただきたいです。&lt;/p&gt;
+&lt;p&gt;→妥当でない場合、何を理解することで重み付けをする理由を説明することができるかをご指南いただきたいです。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">study_bioinfo</dc:creator><pubDate>Mon, 16 Sep 2019 01:57:26 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/901/%E3%82%A2%E3%83%9F%E3%83%8E%E9%85%B8%E9%85%8D%E5%88%97%E3%81%AE%E4%BF%9D%E5%AD%98%E5%BA%A6%E7%AE%97%E5%87%BA%E3%81%AB%E4%BC%B4%E3%81%86%E9%87%8D%E3%81%BF%E4%BB%98%E3%81%91%E3%82%B9%E3%82%B3%E3%82%A2%E3%81%AE%E6%84%8F%E7%BE%A9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>residue</category><category>scorering</category><category>conservation</category></item></channel></rss>

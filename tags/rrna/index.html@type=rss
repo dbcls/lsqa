@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With rrna</title><link>http://qa.lifesciencedb.jp/tags/rrna/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;rrna&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/rrna/" rel="self"></atom:link><language>ja</language><lastBuildDate>Thu, 02 Dec 2010 21:42:56 +0900</lastBuildDate><item><title>RNA-SeqのrRNAの除去</title><link>http://qa.lifesciencedb.jp/questions/125/rna-seq%E3%81%AErrna%E3%81%AE%E9%99%A4%E5%8E%BB</link><description>&lt;p&gt;mRNA-Seqの情報解析で、なぜかrRNAが混入することが多いようですが、
+これを除去するのに使用するrRNA、tRNAの情報はどこから入手するのが一般的でしょうか。
+もし自前で除去スクリプトを作成する必要がある場合は、rRNA、tRNAの座標情報を&lt;a href="http://genome.ucsc.edu/"&gt;UCSC&lt;/a&gt;のどこかから入手し、
+マッピング結果中のrRNA、tRNAにヒットした結果レコードを除外するなどの
+対応を考えていますが、もっと効率的なツール・方法があったら教えてください。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Thu, 02 Dec 2010 21:42:56 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/125/rna-seq%E3%81%AErrna%E3%81%AE%E9%99%A4%E5%8E%BB</guid><category>trna</category><category>rrna</category><category>filtering</category><category>rna-seq</category><category>ngs</category></item></channel></rss>

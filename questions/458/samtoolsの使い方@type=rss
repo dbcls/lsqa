@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: samtoolsの使い方</title><link>http://qa.lifesciencedb.jp/questions/458/samtools%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9</link><description>&lt;p&gt;先日からsamtoolsを使い始めて、わからない点が２つあったので教えて下さい。&lt;/p&gt;
+&lt;p&gt;1、リファレンスゲノム用のindexが作成できない
+samtools faidx ref.fastaとやると
+[fai_build_core] different line length in sequence '(null)'.
+Segmentation fault
+となってしまい作成できない。&lt;/p&gt;
+&lt;p&gt;2、samtools viewのオプションの使い方がわからない。
+mappingされたものとmappingされてないものを
+Samtools view -f p -F P
+で抽出できるようですが、pやPの意味がわからない。また他にもよく使うオプションがあったら教えて下さい。&lt;/p&gt;
+&lt;p&gt;ずっとwetな研究をしてきたので、わかりやすく教えて頂けると幸いです。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/458/samtools%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 31 May 2011 20:58:50 +0900</lastBuildDate><item><title>Answer by nob_fj</title><link>http://qa.lifesciencedb.jp/questions/458/samtools%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9/460</link><description>&lt;p&gt;予想するに、"ref.fasta"に"&amp;gt;"で始まる配列名が無いのではないかと思います。&lt;/p&gt;
+&lt;p&gt;簡単なfastaファイルと、fastaでないファイルを入力として試しましたが、以下のメッセージが出ました。
+これの3と同じ(言語は違うようですが)メッセージが出ているので、配列名が無いのではないのでしょうか。&lt;/p&gt;
+&lt;p&gt;あまり分かりやすく無いかもしれませんが、こちらも参考に下さい。&lt;a href="https://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=FASTA"&gt;NGS Surfer's WikiのFASTAの説明ページ&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;例1正しいfastaファイル。&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;$ cat tmp1.fasta
+&amp;gt;chr1
+aaaa
+aaaa
+aaa
+$ /toolpath/samtools-0.1.12a/samtools faidx tmp1.fasta
+$ ls tmp1.fasta*
+tmp1.fasta  tmp1.fasta.fai
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1&gt;例2 fastaとしては正しいが、samtoolsのfaidxが許容しない書式。&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;$ cat tmp2.fasta
+&amp;gt;chr1
+aaaa
+aaaaa
+aaa
+$ /toolpath/samtools-0.1.12a/samtools faidx tmp2.fasta
+[fai_build_core] different line length in sequence 'chr1'.
+セグメンテーション違反です
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1&gt;例3 fastaではないファイル。&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;$ cat tmp3.fasta
+aaaa
+aaaa
+aaa
+$ /toolpath/samtools-0.1.12a/samtools faidx tmp3.fasta
+[fai_build_core] different line length in sequence '(null)'.
+セグメンテーション違反です
+&lt;/code&gt;&lt;/pre&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Tue, 31 May 2011 20:58:50 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/458/samtools%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9/460</guid></item></channel></rss>

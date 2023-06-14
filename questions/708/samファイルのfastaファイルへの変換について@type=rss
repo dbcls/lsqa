@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: SAMファイルのFASTAファイルへの変換について</title><link>http://qa.lifesciencedb.jp/questions/708/sam%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AEfasta%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E5%A4%89%E6%8F%9B%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;お世話になっております．&lt;/p&gt;
+&lt;p&gt;表題の内容についてお聞きしたいことがあります．&lt;/p&gt;
+&lt;p&gt;454GS FLXで得られた底生動物のCOI領域のロングリード（平均300bp・合計16万配列）を，国際DNAデータバンクからダウンロードしたCOI領域（658bp）の配列に対しマッピングを行いました．&lt;/p&gt;
+&lt;p&gt;マッピングツールはBWAを用い，出力されたSAMファイルをFASTA形式のファイルに変換したいと考えています．&lt;/p&gt;
+&lt;p&gt;例）&lt;/p&gt;
+&lt;p&gt;リファレンス配列　 ACGTAAACGTTTACGT &lt;/p&gt;
+&lt;p&gt;クエリ配列　　　　 ACGTAA－CGTT&lt;/p&gt;
+&lt;p&gt;クエリ配列　　　　　 CGTAAACGTT－A&lt;/p&gt;
+&lt;p&gt;クエリ配列　　　　　　 GTAA－CG&lt;/p&gt;
+&lt;p&gt;このようにマッピングされた時，マッピングされた配列の開始位置やギャップ等の情報が反映された下のようなFASTAファイルへの変換は可能でしょうか．&lt;/p&gt;
+&lt;p&gt;＞Query1&lt;/p&gt;
+&lt;p&gt;ACGTAA－CGTT&lt;/p&gt;
+&lt;p&gt;＞Query2&lt;/p&gt;
+&lt;p&gt;－CGTAAACGTT－A&lt;/p&gt;
+&lt;p&gt;＞Query3&lt;/p&gt;
+&lt;p&gt;－－GTAA－CG&lt;/p&gt;
+&lt;p&gt;FASTA形式への変換を行った後，Collapseを行いハプロタイプ数を出し，進化系統樹を作りたいと考えています．&lt;/p&gt;
+&lt;p&gt;SAMをFASTAファイルに変換するソフト，もしくはSAMファイルを用いてCollapse→進化系統樹作成が行えるソフトをご存知でしたらご教授ください．&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/708/sam%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AEfasta%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E5%A4%89%E6%8F%9B%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 27 Jan 2014 16:05:20 +0900</lastBuildDate><item><title>Answer by yuifu</title><link>http://qa.lifesciencedb.jp/questions/708/sam%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AEfasta%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E5%A4%89%E6%8F%9B%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/710</link><description>&lt;p&gt;集団遺伝学のラボが作った，&lt;a href="http://www.cmpg.unibe.ch/software/PGDSpider/"&gt;PGDSpider&lt;/a&gt; というGUIツールが便利かもしれません．&lt;br&gt;
+最初に，samtoolsとbcftoolsのパスを設定する必要がありますが．&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">yuifu</dc:creator><pubDate>Mon, 27 Jan 2014 16:05:20 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/708/sam%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AEfasta%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E5%A4%89%E6%8F%9B%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/710</guid></item><item><title>Answer by gaou</title><link>http://qa.lifesciencedb.jp/questions/708/sam%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AEfasta%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E5%A4%89%E6%8F%9B%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/709</link><description>&lt;p&gt;こちらのスクリプトとかいかがでしょう？
+http://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=samtools#mpileup_&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">gaou</dc:creator><pubDate>Mon, 27 Jan 2014 15:37:42 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/708/sam%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AEfasta%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E5%A4%89%E6%8F%9B%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/709</guid></item></channel></rss>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: 高速シーケンサの出力データ容量について</title><link>http://qa.lifesciencedb.jp/questions/702/%E9%AB%98%E9%80%9F%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E5%87%BA%E5%8A%9B%E3%83%87%E3%83%BC%E3%82%BF%E5%AE%B9%E9%87%8F%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;いつも大変お世話になっております。&lt;/p&gt;
+&lt;p&gt;表題の内容についてお伺いしたいのですが、HiSeq2500では、1runあたり600Gbaseのデータが出力できるとのことで、
+仮に600Gbaseを出力したときのfastqファイルのデータ容量は、大体何Gbyteほどになるでしょうか。&lt;/p&gt;
+&lt;p&gt;貴重なご経験からの情報と存じますが、どうぞよろしくお願い申し上げます。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/702/%E9%AB%98%E9%80%9F%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E5%87%BA%E5%8A%9B%E3%83%87%E3%83%BC%E3%82%BF%E5%AE%B9%E9%87%8F%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Wed, 08 Jan 2014 11:33:20 +0900</lastBuildDate><item><title>Answer by nob_fj</title><link>http://qa.lifesciencedb.jp/questions/702/%E9%AB%98%E9%80%9F%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E5%87%BA%E5%8A%9B%E3%83%87%E3%83%BC%E3%82%BF%E5%AE%B9%E9%87%8F%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/705</link><description>&lt;p&gt;DRASearchからたどれるHiSeq2500登録(全1,102件)の内、
+配列ファイルにアクセス可能な(713件の)bz2圧縮時のファイルサイズと塩基数の関係を
+散布図にして、近似直線を描いたところ
+&lt;img alt="alt text" src="http://cell-innovation.nig.ac.jp/wiki/tiki-download_file.php?fileId=372&amp;amp;display"&gt;&lt;/p&gt;
+&lt;p&gt;[ファイルサイズ] = 0.727 x [塩基数] - 6E+07&lt;/p&gt;
+&lt;p&gt;bz2の圧縮率に関しては、網羅的には調べていませんが、
+一例ERR206767を見ると
+&lt;img alt="alt text" src="http://cell-innovation.nig.ac.jp/wiki/tiki-download_file.php?fileId=373&amp;amp;display"&gt;&lt;/p&gt;
+&lt;p&gt;(58.1 / 9.35)[Gbyte/Gbyte] = 6.21&lt;/p&gt;
+&lt;p&gt;なので、非圧縮時の塩基あたりのファイルサイズは以下になります。&lt;/p&gt;
+&lt;p&gt;(58.1 / 9.35)[Gbyte/Gbyte] x 0.727[byte/base] = 4.52[byte/base]&lt;/p&gt;
+&lt;p&gt;なので、600G塩基だと&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;bz2圧縮時は 436Gバイト&lt;/li&gt;
+&lt;li&gt;非圧縮fastqは 2,712Gバイト
+でしょうか。
+(バイト計算は1024でなく1000でやってます。)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;尚、細かい話ですが、以下の3件は散布図描画時に
+大きく外れ値となり、近似直線の算出に悪影響だったので除外しました。
+ERR309932,ERR309933,ERR309934&lt;/p&gt;
+&lt;p&gt;ちなみにご存知とは思いますが、
+塩基あたりのファイルサイズは、
+固定塩基長のイルミナシリーズでは、
+配列IDの長さしだいで、
+1塩基あたり2バイト(塩基+品質情報)+(リードあたりの配列IDのサイズ/リード長)&lt;/p&gt;
+&lt;p&gt;公開データは、生データよりSRR番号が付く分、若干大きくなります。&lt;/p&gt;
+&lt;p&gt;可変長の454や、Ionなどは、長さの分布等によっても変わるはずです。&lt;/p&gt;
+&lt;p&gt;プラットフォームを区別せずに、非圧縮のfastqのサイズ等を見てみたグラフを
+以下に乗せたのでご興味あればご参照ください。
+&lt;a href="http://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=%E9%85%8D%E5%88%97%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%AE%E8%A6%8B%E7%A9%8D%E3%82%82%E3%82%8A"&gt;NGS Surfer's Wiki(配列ファイルサイズの見積もり)&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Wed, 08 Jan 2014 11:33:20 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/702/%E9%AB%98%E9%80%9F%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E5%87%BA%E5%8A%9B%E3%83%87%E3%83%BC%E3%82%BF%E5%AE%B9%E9%87%8F%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/705</guid></item><item><title>Answer by 38brain</title><link>http://qa.lifesciencedb.jp/questions/702/%E9%AB%98%E9%80%9F%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E5%87%BA%E5%8A%9B%E3%83%87%E3%83%BC%E3%82%BF%E5%AE%B9%E9%87%8F%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/703</link><description>&lt;p&gt;gzで圧縮して100bp paired-endの1レーンfastqファイルが35GB程度。&lt;br&gt;
+HiSeq2500は8レーン x 2ありますが、2レーンはcontrolに使用される場合が多いので実質自分のデータは14レーンとすると35GB x 14 = 490GBぐらいですかね。&lt;br&gt;
+圧縮しないと（解凍すると）3倍弱程度の大きさになりますので、14レーン分なら1.5TB弱ぐらいでしょうか。&lt;br&gt;
+アバウトですがご参考まで。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">38brain</dc:creator><pubDate>Tue, 07 Jan 2014 18:41:05 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/702/%E9%AB%98%E9%80%9F%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E5%87%BA%E5%8A%9B%E3%83%87%E3%83%BC%E3%82%BF%E5%AE%B9%E9%87%8F%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/703</guid></item></channel></rss>

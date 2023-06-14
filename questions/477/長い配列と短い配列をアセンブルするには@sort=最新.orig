@@ -1,0 +1,629 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>長い配列と短い配列をアセンブルするには？ - #LSQA</title>
+        <meta name="description" content="今ある菌のde novo assemblを行っています。
+先日454で読んだ配列をABySSでアセンブルして、コンタミのDNAを除きました。
+その後コンソーシアムのある454で読んだESTやSangerで読んだDNA配列と一緒にアセンブルしたいのですがどうしたらよいですか？長さは40bpのもあれば、長くて100kのもあります。平均700bpぐらいだと思います。
+試しにSOAP denovoを使ったところ
+Floating point exceptionとかsegmentation faultのエラーで止まってしまいます。
+ABySS使っても
+Colour-space assembly
+Asse">
+        <meta name="keywords" content="アセンブル,ngs">
+        
+        <link rel="canonical" href="http://qa.lifesciencedb.jp/questions/477/%E9%95%B7%E3%81%84%E9%85%8D%E5%88%97%E3%81%A8%E7%9F%AD%E3%81%84%E9%85%8D%E5%88%97%E3%82%92%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AB%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/477/%E9%95%B7%E3%81%84%E9%85%8D%E5%88%97%E3%81%A8%E7%9F%AD%E3%81%84%E9%85%8D%E5%88%97%E3%82%92%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AB%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon.ico" />
+        <link href="/m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='/m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/qa.lifesciencedb.jp/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/qa.lifesciencedb.jp/media/js/wmd/wmd.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/qa.lifesciencedb.jp/media/js/wmd/wmd.css" />
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[プレビューを隠す]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[プレビューを表示する]" : "[プレビューを隠す]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >ログイン</a>  <a href="/about/" >概要</a>  <a href="/faq/" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >質問</a><a id="nav_tags" href="/tags/" >タグ</a><a id="nav_users" href="/users/" >ユーザー</a><a id="nav_badges" href="/badges/" >バッジ</a><a id="nav_unanswered" href="/questions/unanswered/" >未回答</a>
+        <a id="nav_ask" href="/questions/ask/" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/477/%E9%95%B7%E3%81%84%E9%85%8D%E5%88%97%E3%81%A8%E7%9F%AD%E3%81%84%E9%85%8D%E5%88%97%E3%82%92%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AB%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF">長い配列と短い配列をアセンブルするには？</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-477-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/477/up/" rel="nofollow"> </a>
+<div id="post-477-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-477-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/477/down/" rel="nofollow"> </a>
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/477/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>今ある菌のde novo assemblを行っています。</p>
+<p>先日454で読んだ配列をABySSでアセンブルして、コンタミのDNAを除きました。</p>
+<p>その後コンソーシアムのある454で読んだESTやSangerで読んだDNA配列と一緒にアセンブルしたいのですがどうしたらよいですか？長さは40bpのもあれば、長くて100kのもあります。平均700bpぐらいだと思います。</p>
+<p>試しにSOAP denovoを使ったところ</p>
+<p>Floating point exceptionとかsegmentation faultのエラーで止まってしまいます。</p>
+<p>ABySS使っても</p>
+<p>Colour-space assembly</p>
+<p>Assertion failed: (isdigit(seq[0])), function loadSequences, file AssemblyAlgorithms.cpp, line 79.</p>
+<p>Abort trap
+で止まってしまいます。</p>
+<p>違う原因で止まってしまっているのかも知れませんが、そこも踏まえてご助言いただけると助かります。</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AB/" class="post-tag"
+                                        title="'アセンブル'タグのついた質問をみる" rel="tag">アセンブル</a>
+                                
+                                    <a href="/tags/ngs/" class="post-tag"
+                                        title="'ngs'タグのついた質問をみる" rel="tag">ngs</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">                            
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        質問日
+        <strong>Jun 10 '11 at 19:38</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/685e54c9f1d0cbfac2045323d8b36016?s=32&amp;d=identicon&amp;r=g" alt="pan's gravatar image" />
+    <p><a href="/users/88/pan/">pan</a><br/>
+    <span class="score" title="1 徳">1</span><span title="2 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="6 バッジ"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="7 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span></p>
+</div>
+
+
+                            </div>
+                            
+
+
+<div class="comments-container" id="comments-container-477">
+    
+        <a name="480"></a>
+        <div class="comment" id="comment-480">
+            <div id="post-480-score" class="comment-score"></div>
+            <div class="comment-text"><p>確証はありませんが、SOAP denovoの"segmentation fault"はコンパイルが失敗していたり、バイナリが環境に合っていない可能性もあるような気がするので、実行環境と、バージョンも書いた方が良いかもしれません。
+ABySSの方は入力ファイル依存の問題のような気がするので、ここに入力ファイルの一部でもさらすのが無理なら、ご自分でエラー原因を特定するしかないような気がします。</p></div>
+            <div class="comment-info" id="comment-480-info">
+                
+                
+                
+                <span class="comment-age">(Jun 14 '11 at 13:18)</span>
+                <a class="comment-user userinfo" href="/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-477" class="comment-tools">
+    
+    
+</div>
+<div id="comment-477-form-container" class="comment-form-container">
+    
+</div>
+    
+                        </div>
+                        
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/477/長い配列と短い配列をアセンブルするには?sort=登録順" title="最古の回答が最初に表示されます">回答順</a><a href="/questions/477/長い配列と短い配列をアセンブルするには?sort=最新" class="on" title="最新の回答が最初に表示されます">最新</a><a href="/questions/477/長い配列と短い配列をアセンブルするには?sort=投票" title="もっとも投票された回答が最初に表示されます">支持されている順</a></div>
+                </div>
+                
+  
+                
+                    <a name="487"></a>
+                    <div id="answer-container-487" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-487-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/487/up/" rel="nofollow"> </a>
+<div id="post-487-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-487-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/487/down/" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>454の配列があると言う事は、お近くに454純正アセンブラのnewbler<a href="http://www.454.com/products-solutions/analysis-tools/gs-de-novo-assembler.asp">(gsAssembler)</a>が動く環境があるかと思います。
+newblerは一般的なfasta形式の配列を扱えますので、sffと混ぜてアセンブルされるのが
+ソフトウェア導入でご苦労されるより手っ取り早いのではないでしょうか。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Jun 17 '11 at 23:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/0caa48bd66bda2f877dfa2d974a9acc7?s=32&amp;d=identicon&amp;r=g" alt="mya_'s gravatar image" />
+    <p><a href="/users/18/mya_/">mya_ ♦</a><br/>
+    <span class="score" title="388 徳">388</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="10 バッジ"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="14 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">14</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="/revisions/487/">
+                edited
+                <strong>Jun 17 '11 at 23:47</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-487">
+    
+        <a name="489"></a>
+        <div class="comment" id="comment-489">
+            <div id="post-489-score" class="comment-score"></div>
+            <div class="comment-text"><p>委託で読んでもらったので、newblerは近くにありません。現在CABOGでアセンブルしようと考えています。インストールできないという質問もしているので、よろしくお願いします。</p></div>
+            <div class="comment-info" id="comment-489-info">
+                
+                
+                
+                <span class="comment-age">(Jun 18 '11 at 17:15)</span>
+                <a class="comment-user userinfo" href="/users/88/pan/">pan</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/685e54c9f1d0cbfac2045323d8b36016?s=18&amp;d=identicon&amp;r=g" alt="pan's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-487" class="comment-tools">
+    
+    
+</div>
+<div id="comment-487-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/477/answer/" method="post">
+            <div style="clear:both">
+            </div>
+            
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            あなたの回答
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea rows="10" cols="40" name="text" id="editor"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="リアルタイムMarkdown編集プレビューをトグルする">
+                                            プレビューをトグルする
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input type="checkbox" name="wiki" id="id_wiki" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="コミュニティー wikiオプションを選択した場合、質問と回答はポイントを生成せず、作者名は表示されない">
+                                            <label for="id_wiki">コミュニティー wiki</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+                        
+                        </table>  
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>                    
+                </div>
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">この質問をフォローする</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="/questions/477/%E9%95%B7%E3%81%84%E9%85%8D%E5%88%97%E3%81%A8%E7%9F%AD%E3%81%84%E9%85%8D%E5%88%97%E3%82%92%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AB%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF?type=rss" title="subscribe to answers"></a>
+    回答
+</p><p><a class="feed-icon" style="background-image:url('/m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="/questions/477/%E9%95%B7%E3%81%84%E9%85%8D%E5%88%97%E3%81%A8%E7%9F%AD%E3%81%84%E9%85%8D%E5%88%97%E3%82%92%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AB%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    回答とコメント
+</p>
+
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>ただいまベータテスト運用中です。そのために通知無くコンテンツの変更やサービスの停止変更されることがあります。</h2>
+<p>質問するなら<a href="http://qa.lifesciencedb.jp">ライフサイエンスQA</a>。</p>
+<p>このページの<a href="?type=rss">RSSフィード</a></p>
+<p><a href="http://twitter.com/lsqa_all">@lsqa_all</a>・<a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a></p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <p>
+		タグ:
+    </p>
+    <p class="tags" >
+        
+        	<a href="/tags/ngs/" 
+			title="タグ付けされた質問をみる'ngs'タグを利用している" 
+			rel="tag">ngs</a> <span class="tag-number">&#215;47</span><br/>
+        
+        	<a href="/tags/%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AB/" 
+			title="タグ付けされた質問をみる'アセンブル'タグを利用している" 
+			rel="tag">アセンブル</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        質問日: <strong title="2011-06-10 19:38:52.425621">Jun 10 '11 at 19:38</strong>
+    </p>
+    <p> 
+     	閲覧数: <strong>6,042 回</strong>
+    </p>
+    <p> 
+        最終更新日: <strong title="2011-06-18 17:15:12.851144">Jun 18 '11 at 17:15</strong>
+    </p>
+</div>
+
+
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>世界に広がるQAサイト</h2>
+<p><a href="http://biostar.stackexchange.com">バイオインフォマティクスのBioStar</a>・ <a href="http://I.SEQanswers.com">新型シーケンサーのSEQanswers</a>・ <a href="http://blueobelisk.shapado.com">オープンデータのBlueObelisk</a>・<a href="http://stackoverflow.com">プログラミングのstackoverflow</a>・ <a href="http://www.semanticoverflow.com">Semantic Overflow</a>・ <a href="http://stats.stackexchange.com/">Statistical Analysis</a>・ <a href="http://cstheory.stackexchange.com/">Theoretical Computer Science</a>・ <a href="http://chiebukuro.yahoo.co.jp/">Yahoo!知恵袋</a>・ <a href="http://okwave.jp/">OKWave</a> <a href="http://ja.wikipedia.org/wiki/Category:Q%26Aサイト">などなど</a></p>
+     </div>
+</div>
+
+<div class="boxC">
+    <h3 class="subtitle">関係した質問</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/809/trinity%E3%81%AE%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E7%B5%90%E6%9E%9C%E3%81%AE%E8%A6%8B%E6%96%B9">Trinityのアセンブリ結果の見方</a>
+        </p>
+        
+        <p>
+            <a href="/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9">Celera WGA Assembler(CABOG)のインストールと使い方</a>
+        </p>
+        
+        <p>
+            <a href="/questions/311/findpeaks%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">FindPeaksの使い方</a>
+        </p>
+        
+        <p>
+            <a href="/questions/138/bmb2010-%E3%81%AEngs%E9%96%A2%E9%80%A3%E3%81%AE%E7%99%BA%E8%A1%A8">BMB2010 のNGS関連の発表</a>
+        </p>
+        
+        <p>
+            <a href="/questions/269/transcriptome-analysis%E3%81%A8rnaseq%E3%81%AE%E9%81%95%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">Transcriptome analysisとRNASeqの違いについて</a>
+        </p>
+        
+        <p>
+            <a href="/questions/507/ngs%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%81%AEpcr%E5%A2%97%E5%B9%85">NGSライブラリのPCR増幅</a>
+        </p>
+        
+        <p>
+            <a href="/questions/745/%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">アライメントについて</a>
+        </p>
+        
+        <p>
+            <a href="/questions/179/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF">次世代シーケンサのオープンなデータ</a>
+        </p>
+        
+        <p>
+            <a href="/questions/429/%E3%83%8E%E3%83%B3%E3%83%A2%E3%83%87%E3%83%AB%E7%94%9F%E7%89%A9%E3%81%AEmrna%E7%B2%BE%E8%A3%BD%E3%81%A7rrna%E3%81%AE%E3%82%B3%E3%83%B3%E3%82%BF%E3%83%9F%E3%82%92%E3%81%AA%E3%82%8B%E3%81%B9%E3%81%8F%E4%B8%8B%E3%81%92%E3%81%9F%E3%81%84">ノンモデル生物のmRNA精製でrRNAのコンタミをなるべく下げたい</a>
+        </p>
+        
+        <p>
+            <a href="/questions/227/c-value-%E3%81%8B%E3%82%89%E3%82%B2%E3%83%8E%E3%83%A0%E3%82%B5%E3%82%A4%E3%82%BA%E3%82%92%E6%8E%A8%E5%AE%9A%E3%81%99%E3%82%8B">C-value からゲノムサイズを推定する</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >概要</a> <span class="link-separator"> |</span> <a href="/faq/" >よくある質問</a> <span class="link-separator"> |</span> <a href="/privacy/" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="/m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

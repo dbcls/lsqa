@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With miseq</title><link>http://qa.lifesciencedb.jp/tags/miseq/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;miseq&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/miseq/" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 06 Apr 2015 17:38:15 +0900</lastBuildDate><item><title>RNA-seqのAT bias</title><link>http://qa.lifesciencedb.jp/questions/834/rna-seq%E3%81%AEat-bias</link><description>&lt;p&gt;MiSeqを使ってmouse macrophage系細胞のRNA-seqを始めたのですが、出てきたデータの塩基組成がA,T＝32%、G,C＝18%と偏ります。
+原因に心当たりのある方、アドバイス頂けないでしょうか？&lt;/p&gt;
+&lt;p&gt;実験系の概略は以下のとおりです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Total RNA 1 ugを精製&lt;/li&gt;
+&lt;li&gt;TruSeq Stranded mRNA Sample Prep
+   Kitでlibrary構築&lt;/li&gt;
+&lt;li&gt;Sequencing Kit V3
+   (150cycle)でpaired-end readsを取得&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;よろしくお願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">junya</dc:creator><pubDate>Mon, 06 Apr 2015 17:38:15 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/834/rna-seq%E3%81%AEat-bias</guid><category>stranded</category><category>rna-seq</category><category>miseq</category></item></channel></rss>

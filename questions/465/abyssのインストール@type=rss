@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: ABySSのインストール</title><link>http://qa.lifesciencedb.jp/questions/465/abyss%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB</link><description>&lt;p&gt;ABySSをインストールしようとしたところエラーが生じました。調べたところgccのバージョンを4.3以上にしなければならず、gmp、mpfr、mpcをインストールしようとしました。gmpとmpfrは多分うまくインストールできたのですが、mpcがうまくインストールできません。&lt;/p&gt;
+&lt;p&gt;cd　mpc-0.9 &lt;br&gt;
+./configure --with-mpfr=/Users/------------/Desktop/mpfr-3.0.1&lt;br&gt;
+make&lt;br&gt;
+make check&lt;br&gt;
+すると&lt;br&gt;
+&lt;/p&gt;
+&lt;p&gt;5 of 60 tests failed&lt;/p&gt;
+&lt;p&gt;make[2]: &lt;strong&gt;&lt;em&gt; [check-TESTS] Error 1&lt;br&gt;
+make[1]: &lt;/em&gt;&lt;/strong&gt; [check-am] Error 2&lt;br&gt;
+make: *** [check-recursive] Error 1&lt;/p&gt;
+&lt;p&gt;というようにエラーが生じてしまいます。&lt;/p&gt;
+&lt;p&gt;またこの方法で進んでいってよいのでしょうか？
+ご助言いただけると幸いです。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/465/abyss%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" rel="self"></atom:link><language>ja</language><lastBuildDate>Thu, 02 Jun 2011 14:57:44 +0900</lastBuildDate><item><title>Answer by mya_</title><link>http://qa.lifesciencedb.jp/questions/465/abyss%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/469</link><description>&lt;p&gt;ABySSが使いたいだけなのにgcc関連でループするのも何なので、一応インストールできた方法を書いておきます。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://hpc.sourceforge.net/"&gt;HPC Mac OS X &lt;/a&gt;というサイトから、gcc4.6 (gcc-snwleo-intel-bin.tar.gz) を持ってきます。&lt;/li&gt;
+&lt;li&gt;このファイル内には、ディレクトリ構成まで丸ごと構築されているデータセットが入っていますのでそのまま展開します。&lt;br&gt;
+/(最上位ディレクトリ)を展開先にしますので、sudoもしくはsu権限で実行してください。&lt;br&gt;また、安全策のために古いファイルを上書きしないようなオプションを付け加えてますので、tarが吐く「対象ディレクトリは既に存在しています」というエラーは無視して下さい。&lt;pre&gt;tar -zxvf gcc-snwleo-intel-bin.tar.gz -C / --keep-old-files&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;デフォルトのgccより先に、今回入れたgcc4.6を見に行くようにbashの環境設定を変更します。&lt;br&gt;&lt;code&gt;~/.bashrc&lt;/code&gt;　というファイルに以下の1行を追加します。&lt;pre&gt;export PATH=/usr/local/bin:$PATH&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;上の設定は即時反映ではなく、次回terminalを開いた時に有効になるので、現在作業している環境でも1度だけ設定を行い、gccが4.6を指しているか確認します。&lt;pre&gt;export PATH=/usr/local/bin:$PATH ; gcc -v&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.bcgsc.ca/platform/bioinfo/software/abyss"&gt;ABySS 1.2.7&lt;/a&gt;をダウンロードして展開します。&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://code.google.com/p/google-sparsehash/"&gt;google sparsehash 1.10&lt;/a&gt;もダウンロードして展開します。ABySSとsparsehashのバージョン相性がありそうなので注意して下さい。&lt;/li&gt;
+&lt;li&gt;sparsehashを先にインストールします。&lt;pre&gt;cd sparsehash-1.10/ ; ./configure &amp;amp;&amp;amp; make &amp;amp;&amp;amp; sudo make install&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;画面に、install -c コマンドのログが表示されていればsparsehashが入っていますので、次の作業に進めます。&lt;/li&gt;
+&lt;li&gt;configureの時にABySSの挙動を指定します。詳しくはREADMEを読んで見て下さい。&lt;pre&gt;cd abyss-1.2.7; ./configure --enable-maxk=128&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;makeします。make一発だとなぜか上手くいかないので、警告オプションを付加します。&lt;pre&gt;make AM_CXXFLAGS=-Wall &amp;amp;&amp;amp; sudo make install&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;abyssが動いてそうなのがチェックできたら、一応終わりです。&lt;pre&gt;/usr/local/bin/abyss --version&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mya_</dc:creator><pubDate>Thu, 02 Jun 2011 14:57:44 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/465/abyss%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/469</guid></item><item><title>Answer by mya_</title><link>http://qa.lifesciencedb.jp/questions/465/abyss%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/467</link><description>&lt;p&gt;パス指定から察するに、Mac OS-Xをお使いかという前提で回答してみます。
+ 使っているマシン(Win/Linux/OS-X)とバージョンを書き込むと、もっと適切な回答が返ってくるのではと思います。&lt;/p&gt;
+&lt;p&gt;ネット検索からの情報を見ると、&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://www.spinics.net/lists/gcchelp/msg27624.html"&gt;mpcライブラリを入れるときは、mpfrとgmpのインストール先両方が必要（←この青文字クリックで検索元にジャンプします）&lt;/a&gt;に読めます。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;あと、まったく本質的な解決方法ではないかとは思いますが、以下も検討してみてください。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://d.hatena.ne.jp/S_Amemiya/20101223/1293102564"&gt;MacPortsという便利ツールをつかってGCC一式いれてしまう&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;makeが通ってたら多少のエラーは無視してABySSが動けばそれで良しとする&lt;br&gt;　(BioPerlとかはこういう割り切りが必要な場合も)　&lt;/li&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mya_</dc:creator><pubDate>Thu, 02 Jun 2011 09:06:25 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/465/abyss%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/467</guid></item></channel></rss>

@@ -1,0 +1,1044 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>RNA-SeqのrRNAの除去 - #LSQA</title>
+        <meta name="description" content="mRNA-Seqの情報解析で、なぜかrRNAが混入することが多いようですが、
+これを除去するのに使用するrRNA、tRNAの情報はどこから入手するのが一般的でしょうか。
+もし自前で除去スクリプトを作成する必要がある場合は、rRNA、tRNAの座標情報をUCSCのどこかから入手し、
+マッピング結果中のrRNA、tRNAにヒットした結果レコードを除外するなどの
+対応を考えていますが、もっと効率的なツール・方法があったら教えてください。">
+        <meta name="keywords" content="trna,rrna,filtering,rna-seq,ngs">
+        
+        <link rel="canonical" href="../../133/down/index.html" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="../../../questions/125/rna-seqのrrnaの除去@type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="../../../upfiles/favicon.ico" />
+        <link href="../../../m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="../../../cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='../../../m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        
+        <script type='text/javascript' src='../../../m/qa.lifesciencedb.jp/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='../../../m/qa.lifesciencedb.jp/media/js/wmd/wmd.js'></script>
+        <link rel="stylesheet" type="text/css" href="../../../m/qa.lifesciencedb.jp/media/js/wmd/wmd.css" />
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[プレビューを隠す]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[プレビューを表示する]" : "[プレビューを隠す]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="../../../opensearch.xml.html" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="../../../index.html">
+				<img src="../../../upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="../../../account/yahoo/signin/index.html" >ログイン</a>  <a href="../../../about/index.html" >概要</a>  <a href="../../../faq/index.html" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="../../../questions/index.html" >質問</a><a id="nav_tags" href="../../../tags/index.html" >タグ</a><a id="nav_users" href="http://qa.lifesciencedb.jp/users/" >ユーザー</a><a id="nav_badges" href="../../../badges/index.html" >バッジ</a><a id="nav_unanswered" href="../../../questions/unanswered/index.html" >未回答</a>
+        <a id="nav_ask" href="../../../questions/ask/index.html" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="http://qa.lifesciencedb.jp/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="../../133/down/index.html">RNA-SeqのrRNAの除去</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-125-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../125/up/index.html" rel="nofollow"> </a>
+<div id="post-125-score" class="post-score"
+    title="現在の投票数">
+    2
+</div>
+<a id="post-125-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../125/down/index.html" rel="nofollow"> </a>
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="../../../mark_favorite/125/index.html" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>mRNA-Seqの情報解析で、なぜかrRNAが混入することが多いようですが、
+これを除去するのに使用するrRNA、tRNAの情報はどこから入手するのが一般的でしょうか。
+もし自前で除去スクリプトを作成する必要がある場合は、rRNA、tRNAの座標情報を<a href="http://genome.ucsc.edu/">UCSC</a>のどこかから入手し、
+マッピング結果中のrRNA、tRNAにヒットした結果レコードを除外するなどの
+対応を考えていますが、もっと効率的なツール・方法があったら教えてください。</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="../../../tags/trna/index.html" class="post-tag"
+                                        title="'trna'タグのついた質問をみる" rel="tag">trna</a>
+                                
+                                    <a href="../../../tags/rrna/index.html" class="post-tag"
+                                        title="'rrna'タグのついた質問をみる" rel="tag">rrna</a>
+                                
+                                    <a href="../../../tags/filtering/index.html" class="post-tag"
+                                        title="'filtering'タグのついた質問をみる" rel="tag">filtering</a>
+                                
+                                    <a href="../../../tags/rna-seq/index.html" class="post-tag"
+                                        title="'rna-seq'タグのついた質問をみる" rel="tag">rna-seq</a>
+                                
+                                    <a href="../../../tags/ngs/index.html" class="post-tag"
+                                        title="'ngs'タグのついた質問をみる" rel="tag">ngs</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">                            
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        質問日
+        <strong>Dec 02 '10 at 21:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=32&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a><br/>
+    <span class="score" title="507 徳">507</span><span title="8 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="16 バッジ"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="28 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">28</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="http://qa.lifesciencedb.jp/revisions/125/">
+                edited
+                <strong>Dec 04 '10 at 13:20</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/e585686707fd3a61b7096451ebf13012?s=32&amp;d=identicon&amp;r=g" alt="mn3's gravatar image" />
+            <p><a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><br/>
+            <span class="score" title="515 徳">515</span><span title="4 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="9 バッジ"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="22 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+<div class="comments-container" id="comments-container-125">
+    
+</div>
+<div id="comment-tools-125" class="comment-tools">
+    
+    
+</div>
+<div id="comment-125-form-container" class="comment-form-container">
+    
+</div>
+    
+                        </div>
+                        
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="../../../questions/125/rna-seqのrrnaの除去@sort=登録順.html" title="最古の回答が最初に表示されます">回答順</a><a href="../../../questions/125/rna-seqのrrnaの除去@sort=最新.html" title="最新の回答が最初に表示されます">最新</a><a href="../../../questions/125/rna-seqのrrnaの除去@sort=投票.html" class="on" title="もっとも投票された回答が最初に表示されます">支持されている順</a></div>
+                </div>
+                
+  
+                
+                    <a name="129"></a>
+                    <div id="answer-container-129" class="answer accepted-answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-129-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../129/up/index.html" rel="nofollow"> </a>
+<div id="post-129-score" class="post-score"
+    title="現在の投票数">
+    1
+</div>
+<a id="post-129-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../129/down/index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+        <a class="accept-answer on"></a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>良く調べたら、<a href="http://seqanswers.com/forums/showthread.php?t=5947">同じ質問がSEQAnswersにもありました</a>。
+こちらの回答では、<a href="http://code.google.com/p/bedtools/">BEDtools</a>を使用するようですが、あらかじめBED形式のrRNA,tRNA座標情報を用意しておく必要があるようです。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Dec 02 '10 at 22:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=32&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a><br/>
+    <span class="score" title="507 徳">507</span><span title="8 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="16 バッジ"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="28 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">28</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="http://qa.lifesciencedb.jp/revisions/129/">
+                edited
+                <strong>Dec 03 '10 at 17:58</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/e585686707fd3a61b7096451ebf13012?s=32&amp;d=identicon&amp;r=g" alt="mn3's gravatar image" />
+            <p><a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><br/>
+            <span class="score" title="515 徳">515</span><span title="4 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="9 バッジ"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="22 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-129">
+    
+        <a name="130"></a>
+        <div class="comment" id="comment-130">
+            <div id="post-130-score" class="comment-score"></div>
+            <div class="comment-text"><p>どちらがやりやすいか検討してから対応を行ってみます。</p></div>
+            <div class="comment-info" id="comment-130-info">
+                
+                
+                
+                <span class="comment-age">(Dec 02 '10 at 22:41)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="134"></a>
+        <div class="comment" id="comment-134">
+            <div id="post-134-score" class="comment-score"></div>
+            <div class="comment-text"><p>tRNAの座標に関しては、<a href="http://genome.ucsc.edu/cgi-bin/hgTables?command=start">UCSCのTable browser</a>でgroup="Genes and Gene Prediction Tracks"のtrack="tRNA Genes"からBEDフォーマットで入出できそうです。
+rRNAがどこにあるかはまだ分かっていません。</p></div>
+            <div class="comment-info" id="comment-134-info">
+                
+                
+                
+                <span class="comment-age">(Dec 03 '10 at 17:29)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="150"></a>
+        <div class="comment" id="comment-150">
+            <div id="post-150-score" class="comment-score"></div>
+            <div class="comment-text"><p>hacchyさんgaouさんからいただいたヒントを元に、
+BAMファイル中のrRNA、tRNAを除去する方法が分かりました。
+以下のwikiにまとめてあります。</p>
+<p><a href="https://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=rRNA%2CtRNA%E9%99%A4%E5%8E%BBforBAM%E3%83%95%E3%83%AD%E3%83%BC">rRNA,tRNA除去forBAMフロー</a> </p>
+<p><a href="https://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=rRNA%2CtRNA%E3%81%AE%E5%BA%A7%E6%A8%99%E6%83%85%E5%A0%B1%E3%82%92BED%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%E3%81%A7UCSC+Table+Browser%E3%81%8B%E3%82%89%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B&amp;no_bl=y">rRNA,tRNAの座標情報をBEDフォーマットでUCSC Table Browserから取得する</a> </p></div>
+            <div class="comment-info" id="comment-150-info">
+                
+                
+                
+                <span class="comment-age">(Dec 08 '10 at 20:25)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="247"></a>
+        <div class="comment" id="comment-247">
+            <div id="post-247-score" class="comment-score"></div>
+            <div class="comment-text"><p>私自身が確認したわけではないですが、cufflinksを使用したフローでもTopHatが出力するSAMを上記処理でフィルタリング可能という話を聞きましたので、質問は一旦閉じさせていただきます。もし間違っていたら、質問の再開をお願いします。</p></div>
+            <div class="comment-info" id="comment-247-info">
+                
+                
+                
+                <span class="comment-age">(Dec 29 '10 at 14:13)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-129" class="comment-tools">
+    
+    
+</div>
+<div id="comment-129-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="127"></a>
+                    <div id="answer-container-127" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-127-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="index.html" rel="nofollow"> </a>
+<div id="post-127-score" class="post-score"
+    title="現在の投票数">
+    1
+</div>
+<a id="post-127-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../down/index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>生物種はマウスでしょうか？
+一般的かどうかは分かりませんが，私は <a href="http://uswest.ensembl.org/info/docs/api/index.html">Ensembl API</a> を使ってアノテーションの取得をしています。
+<a href="http://uswest.ensembl.org/index.html">Ensembl Genome Browser</a> にある全てのアノテーションを柔軟に取得することができるので，tRNA の位置情報を取得したり，その配列を取得したり，mRNA-seq データから遺伝子ごとの RPKM を計算するときに必須なエキソンの位置を取得したり，という処理を短いコードで書けるので，愛用してます。</p>
+<p>ヒト/マウスであればアノテーションはある程度しっかりしていると思いますが，Ensembl 生物種の中にも tRNA のアノテーションが足りなかったりする場合もあるようです。そのような場合は，<a href="http://searchlauncher.bcm.tmc.edu/seq-search/Options/trna-se.html">tRNA-SE</a> などを自前で動かして，ncRNA 領域の予測を行うと良いそうです。
+また，Ensembl にないような生物種は，GenBank ファイルか GFF ファイルがある場合が多く，BioPerl ベースのパーサを作って情報を取得しています。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Dec 02 '10 at 22:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/71de27b19711bd3e48833d533d24f544?s=32&amp;d=identicon&amp;r=g" alt="hacchy's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/31/hacchy/">hacchy</a><br/>
+    <span class="score" title="121 徳">121</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 バッジ"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="6 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="http://qa.lifesciencedb.jp/revisions/127/">
+                edited
+                <strong>Dec 04 '10 at 13:18</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/e585686707fd3a61b7096451ebf13012?s=32&amp;d=identicon&amp;r=g" alt="mn3's gravatar image" />
+            <p><a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><br/>
+            <span class="score" title="515 徳">515</span><span title="4 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="9 バッジ"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="22 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-127">
+    
+        <a name="128"></a>
+        <div class="comment" id="comment-128">
+            <div id="post-128-score" class="comment-score"></div>
+            <div class="comment-text"><p>生物種はヒトなので、Ensembl APIを試してみます。
+できたらやり方をwikiにアップしようと思います。</p></div>
+            <div class="comment-info" id="comment-128-info">
+                
+                
+                
+                <span class="comment-age">(Dec 02 '10 at 22:32)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="135"></a>
+        <div class="comment" id="comment-135">
+            <div id="post-135-score" class="comment-score"></div>
+            <div class="comment-text"><p>申し訳ないですが、Ensembl APIですが、サーバ環境が直接外に出られないので、ちょっと敷居が高そうです。ローカルにデータをもって来てMySQL dbを構築する手もありますが、このためだけに行うにはちょっと作業負荷が高そうなので、他の方法を探したいと思います。</p></div>
+            <div class="comment-info" id="comment-135-info">
+                
+                
+                
+                <span class="comment-age">(Dec 03 '10 at 17:31)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-127" class="comment-tools">
+    
+    
+</div>
+<div id="comment-127-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="133"></a>
+                    <div id="answer-container-133" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-133-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../133/up/index.html" rel="nofollow"> </a>
+<div id="post-133-score" class="post-score"
+    title="現在の投票数">
+    1
+</div>
+<a id="post-133-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../133/down/index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>私はお手軽にはとりあえず<a href="http://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=Cufflinks">Cufflinks</a>かけてしまって、予測されたtranscriptに対して<a href="http://www.repeatmasker.org/">RepeatMasker</a>かけちゃったりしています。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Dec 03 '10 at 12:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/495f4f8bd33f7d83a4ef4b05b7d0392a?s=32&amp;d=identicon&amp;r=g" alt="gaou's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/14/gaou/">gaou ♦♦</a><br/>
+    <span class="score" title="221 徳">221</span><span title="2 バッジ"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="5 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="http://qa.lifesciencedb.jp/revisions/133/">
+                edited
+                <strong>Dec 04 '10 at 13:19</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/e585686707fd3a61b7096451ebf13012?s=32&amp;d=identicon&amp;r=g" alt="mn3's gravatar image" />
+            <p><a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><br/>
+            <span class="score" title="515 徳">515</span><span title="4 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="9 バッジ"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="22 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-133">
+    
+        <a name="136"></a>
+        <div class="comment" id="comment-136">
+            <div id="post-136-score" class="comment-score"></div>
+            <div class="comment-text"><p>素人質問で申し訳ないですが、RepeatMaskerにかける際の、クエリとリファレンスはどうなるのでしょうか。<br>
+クエリ-&gt;ヒットのあった遺伝子の配列?<br>
+リファレンス-&gt;rRNA,tRNAの配列リスト?<br>
+でしょうか。</p></div>
+            <div class="comment-info" id="comment-136-info">
+                
+                
+                
+                <span class="comment-age">(Dec 03 '10 at 17:36)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="137"></a>
+        <div class="comment" id="comment-137">
+            <div id="post-137-score" class="comment-score"></div>
+            <div class="comment-text"><p>クエリはcufflinksをかけたあと、gtfの座標をもとに簡単なスクリプトでtranscriptのfastaファイルを作って使っています。Repeatmaskerのリファレンスは普通にRepbaseで、いろんなものがヒットしますが、RNAに該当するものだけを除去する（こちらも簡単なスクリプト、というかgrep）ようにしています。</p></div>
+            <div class="comment-info" id="comment-137-info">
+                
+                
+                
+                <span class="comment-age">(Dec 03 '10 at 17:50)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/14/gaou/">gaou ♦♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/495f4f8bd33f7d83a4ef4b05b7d0392a?s=18&amp;d=identicon&amp;r=g" alt="gaou's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="143"></a>
+        <div class="comment" id="comment-143">
+            <div id="post-143-score" class="comment-score"></div>
+            <div class="comment-text"><p>gaouさん もしご存知でしたら
+Repbaseから直接取得したわけではないのですが、
+UCSCのTable browserで
+"Variation and Repeats"のカテゴリに"RepeatMasker"という
+トラックがあり、このカラムの
+"repClass"のカラムが以下のような構成になっており、
+このうちtRNA,rRNAのもののみ抜き出せば、
+gaouさんのフィルタリング対象と同じになるのではないかと
+思いますが、違いますでしょうか。</p></div>
+            <div class="comment-info" id="comment-143-info">
+                
+                
+                
+                <span class="comment-age">(Dec 07 '10 at 22:55)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="144"></a>
+        <div class="comment" id="comment-144">
+            <div id="post-144-score" class="comment-score"></div>
+            <div class="comment-text"><pre>$ awk '{print $12}' allFieldsFromSelectedTable.txt | sort | uniq -c  
+ 461751 DNA  
+   1881 DNA?  
+1498690 LINE  
+     51 LINE?  
+ 717656 LTR  
+    122 LTR?  
+ 371543 Low_complexity  
+   3733 Other  
+   2236 RC  
+    729 RNA  
+1793723 SINE  
+    425 SINE?  
+   9566 Satellite  
+ 417913 Simple_repeat  
+   7036 Unknown  
+     97 Unknown?  
+   1769 rRNA  
+      1 repClass  
+   1340 scRNA  
+   4386 snRNA  
+   1481 srpRNA  
+   2002 tRNA
+</pre></div>
+            <div class="comment-info" id="comment-144-info">
+                
+                
+                
+                <span class="comment-age">(Dec 07 '10 at 22:55)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="146"></a>
+        <div class="comment" id="comment-146">
+            <div id="post-146-score" class="comment-score"></div>
+            <div class="comment-text"><p>基本的にはそうだと思います。汎用的に使うためにはRepeatMasker自前でかけた方が楽かとは思いますが。</p></div>
+            <div class="comment-info" id="comment-146-info">
+                
+                
+                
+                <span class="comment-age">(Dec 08 '10 at 02:33)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/14/gaou/">gaou ♦♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/495f4f8bd33f7d83a4ef4b05b7d0392a?s=18&amp;d=identicon&amp;r=g" alt="gaou's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="147"></a>
+        <div class="comment not_top_scorer" id="comment-147">
+            <div id="post-147-score" class="comment-score"></div>
+            <div class="comment-text"><p>UCSCのアノテーションがない生物種でも、RepeatMaskerベースの方法論であれば、ゲノムが決定しており、マッピング出来さえすれば、その情報を使用して、<br>
+1.genomeからマップされた箇所の配列切り出し<br>
+2.切り出した配列へ、Repbaseでリピートマスク<br>
+3.ヒットしたリピートがrRNA,tRNAのもののみ、除外<br>
+というステップがとれるという理解でよいでしょうか。<br>
+今回の対象が、ヒトなので、
+まずはUCSCアノテーションに依存した配列ベースの情報を介さない
+座標ベースのやり方でまずは試してみたいと考えております。</p></div>
+            <div class="comment-info" id="comment-147-info">
+                
+                
+                
+                <span class="comment-age">(Dec 08 '10 at 11:30)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="149"></a>
+        <div class="comment not_top_scorer" id="comment-149">
+            <div id="post-149-score" class="comment-score"></div>
+            <div class="comment-text"><p>教えていただいて恐縮ですが、現在cufflinksはまだ導入できておらず、
+cufflinksベースの解析フローが出来たら再度gaouさんのフローを試してみる予定です。対応には暫くお時間いただきたいと思います。<br>
+現在のBioConductorのDEGseqを使用した既知遺伝子アノテーションをベースとしたスプライスジャンクションを考慮しない解析フローの場合は、アノテーション済みのUCSCから取得したリピートの座標情報を使用して
+BEDtoolsを使用するやり方の方が相性は良さそうです。</p></div>
+            <div class="comment-info" id="comment-149-info">
+                
+                
+                
+                <span class="comment-age">(Dec 08 '10 at 16:44)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-133" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="../../133/down/index.html#" class="show-all-comments-link">show all</a>
+    
+    
+</div>
+<div id="comment-133-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="http://qa.lifesciencedb.jp/questions/125/answer/" method="post">
+            <div style="clear:both">
+            </div>
+            
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            あなたの回答
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea rows="10" cols="40" name="text" id="editor"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="リアルタイムMarkdown編集プレビューをトグルする">
+                                            プレビューをトグルする
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input type="checkbox" name="wiki" id="id_wiki" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="コミュニティー wikiオプションを選択した場合、質問と回答はポイントを生成せず、作者名は表示されない">
+                                            <label for="id_wiki">コミュニティー wiki</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+                        
+                        </table>  
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>                    
+                </div>
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">この質問をフォローする</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('../../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="../../../questions/125/rna-seqのrrnaの除去@type=rss" title="subscribe to answers"></a>
+    回答
+</p><p><a class="feed-icon" style="background-image:url('../../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="../../../questions/125/rna-seqのrrnaの除去@type=rss&amp;comments=yes" title="subscribe to comments and answers"></a>
+    回答とコメント
+</p>
+
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>ただいまベータテスト運用中です。そのために通知無くコンテンツの変更やサービスの停止変更されることがあります。</h2>
+<p>質問するなら<a href="../../../index.html">ライフサイエンスQA</a>。</p>
+<p>このページの<a href="../../../questions/125/rna-seqのrrnaの除去@type=rss">RSSフィード</a></p>
+<p><a href="http://twitter.com/lsqa_all">@lsqa_all</a>・<a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a></p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <p>
+		タグ:
+    </p>
+    <p class="tags" >
+        
+        	<a href="../../../tags/ngs/index.html" 
+			title="タグ付けされた質問をみる'ngs'タグを利用している" 
+			rel="tag">ngs</a> <span class="tag-number">&#215;47</span><br/>
+        
+        	<a href="../../../tags/rna-seq/index.html" 
+			title="タグ付けされた質問をみる'rna-seq'タグを利用している" 
+			rel="tag">rna-seq</a> <span class="tag-number">&#215;13</span><br/>
+        
+        	<a href="../../../tags/filtering/index.html" 
+			title="タグ付けされた質問をみる'filtering'タグを利用している" 
+			rel="tag">filtering</a> <span class="tag-number">&#215;1</span><br/>
+        
+        	<a href="../../../tags/rrna/index.html" 
+			title="タグ付けされた質問をみる'rrna'タグを利用している" 
+			rel="tag">rrna</a> <span class="tag-number">&#215;1</span><br/>
+        
+        	<a href="../../../tags/trna/index.html" 
+			title="タグ付けされた質問をみる'trna'タグを利用している" 
+			rel="tag">trna</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        質問日: <strong title="2010-12-02 21:42:56.141265">Dec 02 '10 at 21:42</strong>
+    </p>
+    <p> 
+     	閲覧数: <strong>11,889 回</strong>
+    </p>
+    <p> 
+        最終更新日: <strong title="2010-12-29 14:13:18.799797">Dec 29 '10 at 14:13</strong>
+    </p>
+</div>
+
+
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>世界に広がるQAサイト</h2>
+<p><a href="http://biostar.stackexchange.com">バイオインフォマティクスのBioStar</a>・ <a href="http://I.SEQanswers.com">新型シーケンサーのSEQanswers</a>・ <a href="http://blueobelisk.shapado.com">オープンデータのBlueObelisk</a>・<a href="http://stackoverflow.com">プログラミングのstackoverflow</a>・ <a href="http://www.semanticoverflow.com">Semantic Overflow</a>・ <a href="http://stats.stackexchange.com/">Statistical Analysis</a>・ <a href="http://cstheory.stackexchange.com/">Theoretical Computer Science</a>・ <a href="http://chiebukuro.yahoo.co.jp/">Yahoo!知恵袋</a>・ <a href="http://okwave.jp/">OKWave</a> <a href="http://ja.wikipedia.org/wiki/Category:Q%26Aサイト">などなど</a></p>
+     </div>
+</div>
+
+<div class="boxC">
+    <h3 class="subtitle">関係した質問</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="../../810/down/index.html">Trinityのアセンブリ結果の見方</a>
+        </p>
+        
+        <p>
+            <a href="../../612/down/index.html">リード長の長いRNA-Seqのタグカウント</a>
+        </p>
+        
+        <p>
+            <a href="../../541/down/index.html">Tophatのbutterflyオプションについて</a>
+        </p>
+        
+        <p>
+            <a href="../../139/down/index.html">BMB2010 のNGS関連の発表</a>
+        </p>
+        
+        <p>
+            <a href="../../314/down/index.html">FindPeaksの使い方</a>
+        </p>
+        
+        <p>
+            <a href="../../270/down/index.html">Transcriptome analysisとRNASeqの違いについて</a>
+        </p>
+        
+        <p>
+            <a href="../../750/down/index.html">アライメントについて</a>
+        </p>
+        
+        <p>
+            <a href="../../508/down/index.html">NGSライブラリのPCR増幅</a>
+        </p>
+        
+        <p>
+            <a href="../../499/down/index.html">Celera WGA Assembler(CABOG)のインストールと使い方</a>
+        </p>
+        
+        <p>
+            <a href="../../../mark_favorite/227/index.html">C-value からゲノムサイズを推定する</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="../../../about/index.html" >概要</a> <span class="link-separator"> |</span> <a href="../../../faq/index.html" >よくある質問</a> <span class="link-separator"> |</span> <a href="../../../privacy/index.html" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="../../../m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

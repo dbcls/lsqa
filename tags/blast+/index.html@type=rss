@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With blast+</title><link>http://qa.lifesciencedb.jp/tags/blast+/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;blast+&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/blast+/" rel="self"></atom:link><language>ja</language><lastBuildDate>Thu, 27 Nov 2014 11:54:28 +0900</lastBuildDate><item><title>Local BLASTのデータベース</title><link>http://qa.lifesciencedb.jp/questions/813/local-blast%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9</link><description>&lt;p&gt;お世話になります。
+Local BLASTを導入するために統合TVのLocal BLASTの使い方（&lt;a href="http://togotv.dbcls.jp/20110420.html"&gt;http://togotv.dbcls.jp/20110420.html&lt;/a&gt;）を参考にさせていただいております。
+ご紹介の通りの手順で作業を進めていましたが、データベースを作成できずに困っております。&lt;/p&gt;
+&lt;p&gt;まず、データベースとして、&lt;a href="ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/"&gt;ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/&lt;/a&gt; からnr.gzをダウンロードし、解凍しました。
+解凍したファイル（nr）をデータベースにするために、&lt;code&gt;makeblastdb -in nr -dbtype prot -hash_index&lt;/code&gt;を実行しました。
+すると、以下に記した文が表示されました。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Building a new DB, current time: 11/27/2014 11:30:45
+New DB name:   nr
+New DB title:  nr
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;しばらくすると、以下の文が何度も繰り返し出現し、最後にvolume: 以下の文が表示され、データベースの作成に失敗しました。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Error: (1431.1) FASTA-Reader: Warning: FASTA-Reader: Ignoring FASTA modifier(s) found because the input was not expected to have any.
+
+volume: nr.00
+volume: nr.01
+
+file: nr.00.pin
+file: nr.00.phr
+file: nr.00.psq
+file: nr.00.psi
+file: nr.00.psd
+file: nr.00.phi
+file: nr.00.phd
+file: nr.00.pog
+file: nr.01.pin
+file: nr.01.phr
+file: nr.01.psq
+file: nr.01.psi
+file: nr.01.psd
+file: nr.01.phi
+file: nr.01.phd
+file: nr.01.pog
+file: nr.pal
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;解決策がお分かりになる方がいらっしゃいましたら、ご教授いただければ幸いです。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">sulfuri</dc:creator><pubDate>Thu, 27 Nov 2014 11:54:28 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/813/local-blast%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9</guid><category>blast+</category></item><item><title>blastでよく使うコマンドはなんですか？</title><link>http://qa.lifesciencedb.jp/questions/189/blast%E3%81%A7%E3%82%88%E3%81%8F%E4%BD%BF%E3%81%86%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AF%E3%81%AA%E3%82%93%E3%81%A7%E3%81%99%E3%81%8B</link><description>&lt;p&gt;blast + バージョンのローカルブラスト(StandAlone blast)の使用方法を説明する動画を作っています。
+以下にあげるコマンド以外で、よく使うコマンドがありましたら、教えてください。
+いくつか取り入れて動画を作成できたらと思います。
+またもし、誤っているコマンドがありましたら、教えてくださいm(__)m&lt;/p&gt;
+&lt;p&gt;追記：みなさんから書いていただいた情報をもとに表を書き換えてみました。もし、お時間ありましたら、チェックしていただければと思います。&lt;/p&gt;
+&lt;table align="center" border="4" width="0"&gt;
+&lt;tbody&gt;&lt;tr&gt;
+  &lt;th&gt;説明&lt;/th&gt;
+  &lt;th&gt;blast&lt;/th&gt;
+  &lt;th&gt;blast+&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;tr align="center"&gt;
+&lt;td&gt;フォーマット&lt;/td&gt;
+  &lt;td&gt;formatdb -i yeast.aa -p T -o T&lt;/td&gt;
+  &lt;td&gt;makeblastdb -in yeast.aa -dbtype prot -hash_index&lt;/td&gt;&lt;/tr&gt;
+&lt;tr align="center"&gt;
+&lt;td&gt;検索(核酸)&lt;/td&gt;
+  &lt;td&gt;blastall -p blastn -d yeast.nt -i test.txt -o test.out&lt;/td&gt;
+  &lt;td&gt;blastn -db yeast.nt -query test.txt  -out test.out&lt;/td&gt;&lt;/tr&gt;&lt;tr align="center"&gt;
+&lt;/tr&gt;&lt;tr align="center"&gt;
+&lt;td&gt;検索(アミノ酸)&lt;/td&gt;
+  &lt;td&gt;blastall -p blastp -d yeast.aa -i test.txt -o test.out&lt;/td&gt;
+  &lt;td&gt;blastp -db yeast.aa -query test.txt  -out test.out&lt;/td&gt;&lt;/tr&gt;&lt;tr align="center"&gt;
+&lt;/tr&gt;&lt;tr align="center"&gt;
+&lt;td&gt;検索(核酸から翻訳したアミノ酸)&lt;/td&gt;
+  &lt;td&gt;blastall -p tblastx -d yeast.nt -i test.txt -o test.out&lt;/td&gt;
+  &lt;td&gt;tblastx -db yeast.nt -query test.txt  -out test.out&lt;/td&gt;&lt;/tr&gt;&lt;tr align="center"&gt;
+&lt;td&gt;複数のデータベースをまとめて検索&lt;/td&gt;
+  &lt;td&gt;-blastall -p blastn -d "database1 database2"&lt;/td&gt;
+  &lt;td&gt;blastn -db "database1 database2" &lt;/td&gt;&lt;/tr&gt;&lt;tr align="center"&gt;
+&lt;td&gt;出力アラインメント数&lt;/td&gt;
+  &lt;td&gt;-b 数字&lt;/td&gt;
+  &lt;td&gt;-num_alignments 数字 &lt;/td&gt;&lt;/tr&gt;&lt;tr align="center"&gt;
+&lt;td&gt;E-valueの閾値を指定&lt;/td&gt;
+  &lt;td&gt;-e 0.1&lt;/td&gt;
+  &lt;td&gt;-evalue 0.1 &lt;/td&gt;&lt;/tr&gt;&lt;tr align="center"&gt;
+&lt;td&gt;低複雑度領域（フィルタ）のマスク&lt;/td&gt;
+  &lt;td&gt;-F F&lt;/td&gt;
+  &lt;td&gt;-seg yes(デフォルトが逆)&lt;/td&gt;&lt;/tr&gt;&lt;tr align="center"&gt;
+&lt;td&gt;検索結果リスト出力数&lt;/td&gt;
+  &lt;td&gt;-v 数字&lt;/td&gt;
+  &lt;td&gt;-num_descriptions　数字&lt;/td&gt;&lt;/tr&gt;&lt;tr align="center"&gt;
+&lt;td&gt;タブ区切りテキストで出力&lt;/td&gt;
+  &lt;td&gt;-m 9&lt;/td&gt;
+  &lt;td&gt;-outfmt 6 &lt;/td&gt;&lt;/tr&gt;&lt;tr align="center"&gt;
+&lt;td&gt;HTML形式で出力&lt;/td&gt;
+  &lt;td&gt;-T T&lt;/td&gt;
+  &lt;td&gt;　test.html -html&lt;/td&gt;&lt;/tr&gt;&lt;tr align="center"&gt;
+&lt;td&gt;使用するCPU数を調節&lt;/td&gt;
+  &lt;td&gt;-a 2&lt;/td&gt;
+  &lt;td&gt;-num_threads 2&lt;/td&gt;&lt;/tr&gt;&lt;tr align="center"&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;p&gt;よろしくお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">maoringo</dc:creator><pubDate>Thu, 16 Dec 2010 09:53:53 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/189/blast%E3%81%A7%E3%82%88%E3%81%8F%E4%BD%BF%E3%81%86%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AF%E3%81%AA%E3%82%93%E3%81%A7%E3%81%99%E3%81%8B</guid><category>blast</category><category>blast+</category><category>コマンド</category></item><item><title>blast+ でのオプションコマンド　blast で-F F　に当たるものはなんですか？</title><link>http://qa.lifesciencedb.jp/questions/74/blast-%E3%81%A7%E3%81%AE%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89-blast-%E3%81%A7-f-f-%E3%81%AB%E5%BD%93%E3%81%9F%E3%82%8B%E3%82%82%E3%81%AE%E3%81%AF%E3%81%AA%E3%82%93%E3%81%A7%E3%81%99%E3%81%8B</link><description>&lt;p&gt;blastのコマンドで　-F F（低複雑度領域（フィルタ）のマスクをオフにする。）に
+blast+で当たるものをご存知の方がいらしたら教えてください。
+-soft_maskingかと思ったのですが、ちょっと違いそうなのです。
+よろしくお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">maoringo</dc:creator><pubDate>Thu, 25 Nov 2010 16:45:36 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/74/blast-%E3%81%A7%E3%81%AE%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89-blast-%E3%81%A7-f-f-%E3%81%AB%E5%BD%93%E3%81%9F%E3%82%8B%E3%82%82%E3%81%AE%E3%81%AF%E3%81%AA%E3%82%93%E3%81%A7%E3%81%99%E3%81%8B</guid><category>blast</category><category>blast+</category></item></channel></rss>

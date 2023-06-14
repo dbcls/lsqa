@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: 公共のChIP-seqデータのデータセット間のピーク比較について</title><link>http://qa.lifesciencedb.jp/questions/876/%E5%85%AC%E5%85%B1%E3%81%AEchip-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E6%AF%94%E8%BC%83%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;ここ数ヶ月でNGSデータ解析について学んでいます。
+現在は主に公共データのChIP-Seqデータのピーク検出や比較を行っています。
+今回新たに利用したいデータセットがあるのですが，その利用について少々悩んでおりますので本サイトに投稿しています。
+詳しい先生方がいらっしゃいましたらご助言頂けると幸いです。&lt;/p&gt;
+&lt;p&gt;質問内容は以下の通りです。&lt;/p&gt;
+&lt;p&gt;異なる機種のIllumina HiSeqを用いて得たSRAデータは互いにデータとして比較することができるのでしょうか。&lt;/p&gt;
+&lt;p&gt;たとえば，公共ゲノムデータベースGEOに公開されている，
+&lt;a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE86164"&gt;GSE86164&lt;/a&gt;：Illumina HiSeq 2500を用いて得たChIP-Seqデータ
+&lt;a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76655"&gt;GSE76655&lt;/a&gt;：Illumina HiSeq 2000を用いて得たChIP-Seqデータ
+&lt;a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE47043"&gt;GSE47043&lt;/a&gt;：Illumina HiSeq 2000を用いて得たChIP-SeqデータとRNA-Seqデータ
+は，FASTQ変換，マッピング，ピーク検出などの処理をした後，ピークコールの違いとして互いのデータを比較できるのでしょうか。
+このように公共ゲノムデータベースのデータセット間での比較について悩んでおります。&lt;/p&gt;
+&lt;p&gt;どうぞよろしくお願いいたします。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/876/%E5%85%AC%E5%85%B1%E3%81%AEchip-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E6%AF%94%E8%BC%83%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 05 Mar 2018 14:36:04 +0900</lastBuildDate><item><title>Answer by inutano</title><link>http://qa.lifesciencedb.jp/questions/876/%E5%85%AC%E5%85%B1%E3%81%AEchip-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E6%AF%94%E8%BC%83%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/877</link><description>&lt;p&gt;シーケンサーの機種だけでなく、その他の実験条件を揃えたデータ同士でなければ「比較できる」とは厳密に言えないとは思いますが、ピークの違いをブラウズすることは技術的には可能です。&lt;/p&gt;
+&lt;p&gt;たとえば同じ転写因子を対象にしたpublicなChIP-Seqデータが複数あり、ピークコール後のデータを比較して差があったとき、その原因がシーケンサーの機種の違い (=リード数やリード長、ベースコール精度) に依存するものなのか、それともサンプルの違いによるものかは、該当する領域にmapされたリードの数や精度、総リード数に著しい違いがないか、などを鑑みて判断することになると思います。&lt;/p&gt;
+&lt;p&gt;手前味噌ですが、公共のChIP-Seqデータを全て同じワークフローpeak callして比較する ChIP-Atlas というウェブサービスを作っています。peak browserを使えばゲノムブラウザでピークの比較ができます。また、ピークコール時のマップ率やピーク数などの情報も個別の実験ごとに見ることができます(例: &lt;a href="http://chip-atlas.org/view?id=SRX018625"&gt;http://chip-atlas.org/view?id=SRX018625&lt;/a&gt;)。ぜひ使ってみてください。
+&lt;a href="http://chip-atlas.org/"&gt;http://chip-atlas.org/&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">inutano</dc:creator><pubDate>Mon, 05 Mar 2018 14:36:04 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/876/%E5%85%AC%E5%85%B1%E3%81%AEchip-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E6%AF%94%E8%BC%83%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/877</guid></item></channel></rss>

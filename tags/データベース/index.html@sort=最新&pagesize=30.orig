@@ -1,0 +1,511 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Questions Tagged With データベース - #LSQA</title>
+        <meta name="description" content="質問と回答と私">
+        <meta name="keywords" content="OSQA,CNPROG,forum,community,lifesciencedb.jp,DDBJ,PDBj,DBCLS,Cytoscape,NGS,ngs-field">
+        
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/tags/データベース/?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon.ico" />
+        <link href="/m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='/m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >ログイン</a>  <a href="/about/" >概要</a>  <a href="/faq/" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >質問</a><a id="nav_tags" href="/tags/" >タグ</a><a id="nav_users" href="/users/" >ユーザー</a><a id="nav_badges" href="/badges/" >バッジ</a><a id="nav_unanswered" href="/questions/unanswered/" >未回答</a>
+        <a id="nav_ask" href="/questions/ask/" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+
+<div class="tabBar">
+    
+
+<div class="headQuestions">
+    
+        
+            
+                
+                    Questions Tagged With データベース
+                
+            
+        
+    
+</div>
+    <a class="feed-icon" style="background-image:url('/m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');" href="/tags/データベース/?type=rss" title="subscribe to question RSS feed"></a>
+    
+<div class="tabsA"><a href="/tags/データベース/?sort=有効" title="最近更新された質問">有効</a><a href="/tags/データベース/?sort=最新" class="on" title="最近尋ねられた質問">最新</a><a href="/tags/データベース/?sort=ホット" title="最近２４時間でもっとも活発な質問">ホット</a><a href="/tags/データベース/?sort=mostvoted" title="もっとも投票された質問">注目の質問</a></div>
+</div>
+<div id="listA">
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">3.9k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="これまで実験生物ばかりをやってきたのですが、別の視点を取り入れてみようと　
+最近バイオインフォマティクスの勉強をしています。
+GEOなどのデータベースに沢山の発現解析データがあり、これまで自分が実験で得た発見との照合などをしながら
+少しずつ自分の研究にバイオインフォマティクスを取り入れていっております。
+そこで、すごく初歩的な質問をするようでお恥ずかしいのですが、
+GEOなどのデータベースから自分の実験結果をサポートするグラフを新たに作成して論文を発表する場合
+(元論文ではハイライトされてなく再解析によって新規に得られたデータである場合)、
+元の論文を引用して論文を書けば問題ないのでしょうか？" href="/questions/768/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AB%E3%81%82%E3%82%8B%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%86%8D%E8%A7%A3%E6%9E%90">データベースにあるデータの再解析</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2014-07-14 19:33:54.112041">Jul 14 '14 at 19:33</span>
+            <a href="/users/141/genetics1127/">genetics1127</a><span class="score" title="11 信用度">11</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9/" title="タグ付けされた質問をみる 'データベース' タグを利用している" rel="tag">データベース</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">3.4k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="いつもお世話になっております。
+早速質問なのですが、マウスのセントロメアとペリセントロメアの配列が載っているデータベースもしくは論文をご存知の方がいらっしゃれば教えてください。自分なりに探したのですが分かりませんでした。
+それではよろしくお願いします。" href="/questions/631/%E3%82%BB%E3%83%B3%E3%83%88%E3%83%AD%E3%83%A1%E3%82%A2%E9%85%8D%E5%88%97%E3%82%92%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84">セントロメア配列を知りたい</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-05-24 00:22:38.586671">May 24 '13 at 00:22</span>
+            <a href="/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/%E3%82%BB%E3%83%B3%E3%83%88%E3%83%AD%E3%83%A1%E3%82%A2/" title="タグ付けされた質問をみる 'セントロメア' タグを利用している" rel="tag">セントロメア</a>
+            <a href="/tags/%E9%85%8D%E5%88%97/" title="タグ付けされた質問をみる '配列' タグを利用している" rel="tag">配列</a>
+            <a href="/tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9/" title="タグ付けされた質問をみる 'データベース' タグを利用している" rel="tag">データベース</a>
+            <a href="/tags/database/" title="タグ付けされた質問をみる 'database' タグを利用している" rel="tag">database</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">9.1k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="TogoDBで画像を含むデータベースを作ることを検討しています。
+そこで質問したいのですが、
+
+TogoDBで画像を含むデータベースを作ることは可能ですか？
+TogoDBへファイルのアップロードが出来るのはCSVファイルに限られているのでしょうか？画像ファイルのアップロードも可能ですか？ 
+
+よろしくお願い致します。" href="/questions/517/togodb%E3%81%A7%E7%94%BB%E5%83%8F%E3%82%92%E5%90%AB%E3%82%80%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E3%82%92%E4%BD%9C%E3%82%8B%E3%81%AB%E3%81%AF%E3%81%A9%E3%81%86%E3%81%97%E3%81%9F%E3%82%89%E8%89%AF%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B">TogoDBで画像を含むデータベースを作るにはどうしたら良いですか？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-10-30 23:35:24.536890">Oct 30 '11 at 23:35</span>
+            <a href="/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/%E4%BD%BF%E3%81%84%E6%96%B9/" title="タグ付けされた質問をみる '使い方' タグを利用している" rel="tag">使い方</a>
+            <a href="/tags/togodb/" title="タグ付けされた質問をみる 'togodb' タグを利用している" rel="tag">togodb</a>
+            <a href="/tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9/" title="タグ付けされた質問をみる 'データベース' タグを利用している" rel="tag">データベース</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">6.4k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="（オフラインで受けた質問が有益だったので、ここでshareしたいと思います）
+論文でマイクロアレイを使って実験、結果を出しているのに、NCBI GEO や EBI ArrayExpressのIDも明記されておらず、またその論文のsupplemental materialとしても添付されていない論文のマイクロアレイデータってどこかにデータベース化されているのでしょうか？されているとしたら、上記のGEOやArrayExpressでどうやって検索したらよいのでしょうか？" href="/questions/195/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%AC%E3%82%A4%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%9C%A8%E3%82%8A%E5%87%A6">マイクロアレイデータの在り処？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2010-12-21 11:29:11.106325">Dec 21 '10 at 11:29</span>
+            <a href="/users/5/hub/">hub ♦♦</a><span class="score" title="303 信用度">303</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/arrayexpress/" title="タグ付けされた質問をみる 'arrayexpress' タグを利用している" rel="tag">arrayexpress</a>
+            <a href="/tags/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%AC%E3%82%A4/" title="タグ付けされた質問をみる 'マイクロアレイ' タグを利用している" rel="tag">マイクロアレイ</a>
+            <a href="/tags/geo/" title="タグ付けされた質問をみる 'geo' タグを利用している" rel="tag">geo</a>
+            <a href="/tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9/" title="タグ付けされた質問をみる 'データベース' タグを利用している" rel="tag">データベース</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">2</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">6</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">14k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="超並列シーケンサ(メーカー問わず)によって出された生データが公開されているデータベースなどはありますか？
+データの解析などを通していろいろ勉強してみたいと思っています。" href="/questions/179/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF">次世代シーケンサのオープンなデータ</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-01-26 01:55:58.965223">Jan 26 '11 at 01:55</span>
+            <a href="/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/bioconductor/" title="タグ付けされた質問をみる 'bioconductor' タグを利用している" rel="tag">bioconductor</a>
+            <a href="/tags/sra/" title="タグ付けされた質問をみる 'sra' タグを利用している" rel="tag">sra</a>
+            <a href="/tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9/" title="タグ付けされた質問をみる 'データベース' タグを利用している" rel="tag">データベース</a>
+            <a href="/tags/ngs/" title="タグ付けされた質問をみる 'ngs' タグを利用している" rel="tag">ngs</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">2</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">5</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">40k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="各種転写因子結合配列を（主にヒト、マウスで）ゲノムワイドに調べる方法を教えてください。
+以前、少しだけTRANSFACを見てみたのですが、web上では１箇所ずつしか調べられないこと、各パラメーターをどの程度重要視すべきかという点がわからず、結局データベース全体を利用するのは有料であることから、利用は保留にしていました。
+利用可能な転写因子結合配列のデータベースの実践的な使用方法、データベース以外を用いた方法（あれば）、またそれらが効果的に使用されている参考文献などありましたら指摘していただけると幸いです。どうぞよろしくお願い致します。" href="/questions/165/%E8%BB%A2%E5%86%99%E5%9B%A0%E5%AD%90%E7%B5%90%E5%90%88%E9%85%8D%E5%88%97%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">転写因子結合配列のデータベースについて</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2010-12-20 11:20:15.393821">Dec 20 '10 at 11:20</span>
+            <a href="/users/42/odamame/">odamame</a><span class="score" title="111 信用度">111</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/%E8%BB%A2%E5%86%99%E5%9B%A0%E5%AD%90/" title="タグ付けされた質問をみる '転写因子' タグを利用している" rel="tag">転写因子</a>
+            <a href="/tags/%E3%82%B2%E3%83%8E%E3%83%A0/" title="タグ付けされた質問をみる 'ゲノム' タグを利用している" rel="tag">ゲノム</a>
+            <a href="/tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9/" title="タグ付けされた質問をみる 'データベース' タグを利用している" rel="tag">データベース</a>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+    <div class="boxC"><div class="questions-count">
+        6<span style="color:black;font-size:14px;margin-left:5px">questions tagged <span class="tag">データベース</span></span></div><div class="questions-count">
+        17<span style="color:black;font-size:14px;margin-left:5px">回答</span></div><div><p class="nomargin"><strong>最近尋ねられた</strong>質問
+        </p></div></div>
+    
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>ただいまベータテスト運用中です。そのために通知無くコンテンツの変更やサービスの停止変更されることがあります。</h2>
+<p>質問するなら<a href="http://qa.lifesciencedb.jp">ライフサイエンスQA</a>。</p>
+<p>このページの<a href="?type=rss">RSSフィード</a></p>
+<p><a href="http://twitter.com/lsqa_all">@lsqa_all</a>・<a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a></p>
+     </div>
+</div>
+
+    
+
+
+
+
+    
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>世界に広がるQAサイト</h2>
+<p><a href="http://biostar.stackexchange.com">バイオインフォマティクスのBioStar</a>・ <a href="http://I.SEQanswers.com">新型シーケンサーのSEQanswers</a>・ <a href="http://blueobelisk.shapado.com">オープンデータのBlueObelisk</a>・<a href="http://stackoverflow.com">プログラミングのstackoverflow</a>・ <a href="http://www.semanticoverflow.com">Semantic Overflow</a>・ <a href="http://stats.stackexchange.com/">Statistical Analysis</a>・ <a href="http://cstheory.stackexchange.com/">Theoretical Computer Science</a>・ <a href="http://chiebukuro.yahoo.co.jp/">Yahoo!知恵袋</a>・ <a href="http://okwave.jp/">OKWave</a> <a href="http://ja.wikipedia.org/wiki/Category:Q%26Aサイト">などなど</a></p>
+     </div>
+</div>
+
+    
+
+
+
+    <div class="boxC">
+        <h3 class="subtitle">タグ</h3>
+        <div class="tags" id="recent-tags">
+            
+                <a rel="tag" title="'ngs'タグづけられた質問をみる"  href="/tags/ngs/">ngs</a>
+                <span class="tag-number">&#215; 47</span>
+                <br />
+            
+                <a rel="tag" title="'sra'タグづけられた質問をみる"  href="/tags/sra/">sra</a>
+                <span class="tag-number">&#215; 13</span>
+                <br />
+            
+                <a rel="tag" title="'使い方'タグづけられた質問をみる"  href="/tags/%E4%BD%BF%E3%81%84%E6%96%B9/">使い方</a>
+                <span class="tag-number">&#215; 10</span>
+                <br />
+            
+                <a rel="tag" title="'geo'タグづけられた質問をみる"  href="/tags/geo/">geo</a>
+                <span class="tag-number">&#215; 6</span>
+                <br />
+            
+                <a rel="tag" title="'データベース'タグづけられた質問をみる"  href="/tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9/">データベース</a>
+                <span class="tag-number">&#215; 6</span>
+                <br />
+            
+                <a rel="tag" title="'database'タグづけられた質問をみる"  href="/tags/database/">database</a>
+                <span class="tag-number">&#215; 3</span>
+                <br />
+            
+                <a rel="tag" title="'転写因子'タグづけられた質問をみる"  href="/tags/%E8%BB%A2%E5%86%99%E5%9B%A0%E5%AD%90/">転写因子</a>
+                <span class="tag-number">&#215; 3</span>
+                <br />
+            
+                <a rel="tag" title="'bioconductor'タグづけられた質問をみる"  href="/tags/bioconductor/">bioconductor</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'togodb'タグづけられた質問をみる"  href="/tags/togodb/">togodb</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'arrayexpress'タグづけられた質問をみる"  href="/tags/arrayexpress/">arrayexpress</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'ゲノム'タグづけられた質問をみる"  href="/tags/%E3%82%B2%E3%83%8E%E3%83%A0/">ゲノム</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'セントロメア'タグづけられた質問をみる"  href="/tags/%E3%82%BB%E3%83%B3%E3%83%88%E3%83%AD%E3%83%A1%E3%82%A2/">セントロメア</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'マイクロアレイ'タグづけられた質問をみる"  href="/tags/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%AC%E3%82%A4/">マイクロアレイ</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'配列'タグづけられた質問をみる"  href="/tags/%E9%85%8D%E5%88%97/">配列</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+        </div>
+    </div>
+
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+    <div class="pager"></div>
+    <div class="pagesize"><div class="paginator"><span class="text">ページあたりの投稿数</span><span class="page"><a href="/tags/データベース/?sort=最新&pagesize=15">15</a></span><span class="curr">30</span><span class="page"><a href="/tags/データベース/?sort=最新&pagesize=50">50</a></span></div></div>
+
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >概要</a> <span class="link-separator"> |</span> <a href="/faq/" >よくある質問</a> <span class="link-separator"> |</span> <a href="/privacy/" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="/m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+        
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

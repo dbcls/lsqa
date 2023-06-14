@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With 印刷</title><link>http://qa.lifesciencedb.jp/tags/%E5%8D%B0%E5%88%B7/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;印刷&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/%E5%8D%B0%E5%88%B7/" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 18 Jan 2011 16:29:12 +0900</lastBuildDate><item><title>ChIP-seqなどのデータの俯瞰できる図を印刷したい</title><link>http://qa.lifesciencedb.jp/questions/268/chip-seq%E3%81%AA%E3%81%A9%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E4%BF%AF%E7%9E%B0%E3%81%A7%E3%81%8D%E3%82%8B%E5%9B%B3%E3%82%92%E5%8D%B0%E5%88%B7%E3%81%97%E3%81%9F%E3%81%84</link><description>&lt;p&gt;皆様こんにちは。
+表題の件で、お尋ねしたいのですが、
+ChIP-SeqのデータをIGV(Integrative Genomics Viewer)
+などのツールで可視化していて、ふと、実際印刷して繋げて、
+データを眺めたいと思ったのですが、
+私が使っているIGVは、画像ファイルの保存が、
+スクリーンショットをとる機能しかなくて、
+つなげたり貼り付けたりするのには不向きかなと思いました。&lt;/p&gt;
+&lt;p&gt;他の可視化ツールをまだあまり試しておらず、今から
+いろいろインストールしようと思っているのですが、
+皆様のお使いの可視化ツールで、このように画像へ変換して、
+印刷して繋げるのに便利そうなツールがございましたら、
+ご教授いただけますでしょうか。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">suimye</dc:creator><pubDate>Tue, 18 Jan 2011 16:29:12 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/268/chip-seq%E3%81%AA%E3%81%A9%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E4%BF%AF%E7%9E%B0%E3%81%A7%E3%81%8D%E3%82%8B%E5%9B%B3%E3%82%92%E5%8D%B0%E5%88%B7%E3%81%97%E3%81%9F%E3%81%84</guid><category>可視化</category><category>印刷</category><category>画像変換</category><category>ngs</category></item></channel></rss>

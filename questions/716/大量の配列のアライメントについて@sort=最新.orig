@@ -1,0 +1,844 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>大量の配列のアライメントについて - #LSQA</title>
+        <meta name="description" content="お世話になっております．
+表題の内容について質問があります．
+次世代シークエンサーによって得られた大量の配列をアライメントしたいと考えています．
+以下のようなサンプルを用いました．
+河川底生動物群集サンプル
+個体数：8,921個体
+対象とするDNA領域：ミトコンドリアDNAのCOI領域（658塩基長）
+次世代シークエンサー：GS FLX
+配列数：165,508配列
+配列長：40～630塩基長（平均328塩基長）
+シングルエンドの配列のみです
+8,921個体を形態同定することによって，流域に生息する底生動物は34分類群（30科，3目，1綱）に分類されました．
+次に，各分類群から3～10配列ずつを">
+        <meta name="keywords" content="mapping,alignment,ngs">
+        
+        <link rel="canonical" href="http://qa.lifesciencedb.jp/questions/716/%E5%A4%A7%E9%87%8F%E3%81%AE%E9%85%8D%E5%88%97%E3%81%AE%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/716/%E5%A4%A7%E9%87%8F%E3%81%AE%E9%85%8D%E5%88%97%E3%81%AE%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon.ico" />
+        <link href="/m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='/m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/qa.lifesciencedb.jp/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/qa.lifesciencedb.jp/media/js/wmd/wmd.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/qa.lifesciencedb.jp/media/js/wmd/wmd.css" />
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[プレビューを隠す]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[プレビューを表示する]" : "[プレビューを隠す]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >ログイン</a>  <a href="/about/" >概要</a>  <a href="/faq/" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >質問</a><a id="nav_tags" href="/tags/" >タグ</a><a id="nav_users" href="/users/" >ユーザー</a><a id="nav_badges" href="/badges/" >バッジ</a><a id="nav_unanswered" href="/questions/unanswered/" >未回答</a>
+        <a id="nav_ask" href="/questions/ask/" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/716/%E5%A4%A7%E9%87%8F%E3%81%AE%E9%85%8D%E5%88%97%E3%81%AE%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">大量の配列のアライメントについて</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-716-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/716/up/" rel="nofollow"> </a>
+<div id="post-716-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-716-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/716/down/" rel="nofollow"> </a>
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/716/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>お世話になっております．</p>
+<p>表題の内容について質問があります．</p>
+<p>次世代シークエンサーによって得られた大量の配列をアライメントしたいと考えています．
+以下のようなサンプルを用いました．</p>
+<p>河川底生動物群集サンプル</p>
+<p>個体数：8,921個体</p>
+<p>対象とするDNA領域：ミトコンドリアDNAのCOI領域（658塩基長）</p>
+<p>次世代シークエンサー：GS FLX</p>
+<p>配列数：165,508配列</p>
+<p>配列長：40～630塩基長（平均328塩基長）</p>
+<p>シングルエンドの配列のみです</p>
+<p>8,921個体を形態同定することによって，流域に生息する底生動物は34分類群（30科，3目，1綱）に分類されました．</p>
+<p>次に，各分類群から3～10配列ずつを，国際DNAデータベースから無作為にダウンロードしたのち（658塩基長の配列のみ，計180配列），180配列からコンセンサス配列を作成しました．</p>
+<p>この時，次世代シークエンサーで解析された16万配列にはプライマー配列が含まれているのに対し，DNAデータベースからダウンロードした配列には含まれていなかったので，逆相補鎖になっていないことを確認したあと，作成したコンセンサス配列の5'末端上流側にプライマー配列を加えて，これをリファレンス配列として用いました．</p>
+<p>次世代シークエンサーで解析された16万配列（クエリ配列）とコンセンサス配列（リファレンス配列）はともにCOI領域であり，底生動物間では遺伝的にあまり離れていないため，マッピングをすることによってアライメントができるものと考えていたのですが，どうも上手くいきません．</p>
+<p>マッピングソフトはBWAを用い，bwa mem コマンドによってアライメントを行いました．</p>
+<p>クエリ配列とリファレンス配列はともにプライマー配列を含んでいるので，5'末端が揃ってアライメントされるのが理想なのですが，マッピングの開始位置が揃いません．</p>
+<p>この時の問題点はもう一つありまして，マッピングされた配列の内いくつかが，リファレンスと一致度の高い一部のみマッピングされているということです．</p>
+<p>改善策や，16万配列をリファレンス配列に対しアライメントできるソフト等ご存知でしたらご教授ください．
+よろしくお願いします．</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/mapping/" class="post-tag"
+                                        title="'mapping'タグのついた質問をみる" rel="tag">mapping</a>
+                                
+                                    <a href="/tags/alignment/" class="post-tag"
+                                        title="'alignment'タグのついた質問をみる" rel="tag">alignment</a>
+                                
+                                    <a href="/tags/ngs/" class="post-tag"
+                                        title="'ngs'タグのついた質問をみる" rel="tag">ngs</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">                            
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        質問日
+        <strong>Feb 03 '14 at 11:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/b80b73039e24bde1079af7221c824d14?s=32&amp;d=identicon&amp;r=g" alt="izumi's gravatar image" />
+    <p><a href="/users/135/izumi/">izumi</a><br/>
+    <span class="score" title="11 徳">11</span><span title="2 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="4 バッジ"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="6 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="/revisions/716/">
+                edited
+                <strong>Feb 03 '14 at 11:53</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+<div class="comments-container" id="comments-container-716">
+    
+</div>
+<div id="comment-tools-716" class="comment-tools">
+    
+    
+</div>
+<div id="comment-716-form-container" class="comment-form-container">
+    
+</div>
+    
+                        </div>
+                        
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/716/大量の配列のアライメントについて?sort=登録順" title="最古の回答が最初に表示されます">回答順</a><a href="/questions/716/大量の配列のアライメントについて?sort=最新" class="on" title="最新の回答が最初に表示されます">最新</a><a href="/questions/716/大量の配列のアライメントについて?sort=投票" title="もっとも投票された回答が最初に表示されます">支持されている順</a></div>
+                </div>
+                
+  
+                
+                    <a name="752"></a>
+                    <div id="answer-container-752" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-752-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/752/up/" rel="nofollow"> </a>
+<div id="post-752-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-752-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/752/down/" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>コメントありがとうございます．global alignmentによって開始位置のずれは解消されました．しかし，クエリ配列の16万配列の内，リファレンス配列に対してalignmentされた配列数が1割にも満たない結果となり，困っています．よろしければ「アライメントについて」の質問の閲覧とアドバイスをいただけたらと思います．</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Apr 11 '14 at 18:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/b80b73039e24bde1079af7221c824d14?s=32&amp;d=identicon&amp;r=g" alt="izumi's gravatar image" />
+    <p><a href="/users/135/izumi/">izumi</a><br/>
+    <span class="score" title="11 徳">11</span><span title="2 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="4 バッジ"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="6 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span></p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-752">
+    
+</div>
+<div id="comment-tools-752" class="comment-tools">
+    
+    
+</div>
+<div id="comment-752-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="722"></a>
+                    <div id="answer-container-722" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-722-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/722/up/" rel="nofollow"> </a>
+<div id="post-722-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-722-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/722/down/" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>調べ物をしていたら別の方法を見つけたのでコメントしておきます。</p>
+<p>SAMからAFG (AMOS Message File)に変換するコマンドがAMOSの最新版(gitで取ってくるやつ)に含まれています。
+samtoafgです。
+これを使ってまずSAMをAFGにします。</p>
+<p>次に、AFGをPhrapのACEに変換します。
+これはamos2aceで可能です。
+これもAMOSに含まれています。</p>
+<p>最後に、ace2fastaContigs.plを使うことで、各コンティグに対応するリードをアラインされた形でFASTAに出力できます。
+コンティグごとに別ファイルになるとのこと。
+ダウンロードは以下からできます。
+http://nebc.nerc.ac.uk/tools/code-corner/scripts/sequence-formatting-and-other-text-manipulation#-ace2fastacontigs-pl</p>
+<p>全て正常に動作するかどうかまで確認しておりませんが、うまくいったらコメント願います。</p>
+<p>では。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Feb 14 '14 at 19:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/41bd65dd88b7e8638d26ee6af75d714f?s=32&amp;d=identicon&amp;r=g" alt="aki's gravatar image" />
+    <p><a href="/users/136/aki/">aki</a><br/>
+    <span class="score" title="86 徳">86</span><span title="1 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span></p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-722">
+    
+</div>
+<div id="comment-tools-722" class="comment-tools">
+    
+    
+</div>
+<div id="comment-722-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="717"></a>
+                    <div id="answer-container-717" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-717-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/717/up/" rel="nofollow"> </a>
+<div id="post-717-score" class="post-score"
+    title="現在の投票数">
+    1
+</div>
+<a id="post-717-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/717/down/" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>マッピングの開始位置が揃わないのは、インデルがあるか、もしくはFLXの読み間違いで人工的なインデルが入っているからではないでしょうか。COIのタンパクコード領域であれば、フレームシフトはめったにないでしょうから、1～2塩基のズレであれば読み間違いでしょう。その程度のことはあるという前提で、パイプラインを構築して下さいとしか言いようがないですね。</p>
+<p>BWAはglobal alignmentではなく、BLASTのようにlocal alignmentを返すので、global alignmentしてくれる物が欲しいということですよね。AMOSに入っているAMOScmpはどうでしょうか。MUMmerというソフトでマッピングしてくれます。BWAほど高速ではないですが、16万程度なら何とかなるでしょう。</p>
+<p>別の方法としては、UCLUSTやCD-HITなどで97%程度一致する配列をクラスタリングし、クラスタごとの代表配列を抜き出してから、MUSCLEやMAFFTで多重整列することです。97%以上一致するような配列は、読み間違いで微妙に違っているだけで同種の配列とみなし、除くわけですね。</p>
+<p>なお、最終目的を述べてどんなパイプラインにするのがよいかを尋ねる方が、素早く目的を達成できるでしょう。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Feb 03 '14 at 17:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/41bd65dd88b7e8638d26ee6af75d714f?s=32&amp;d=identicon&amp;r=g" alt="aki's gravatar image" />
+    <p><a href="/users/136/aki/">aki</a><br/>
+    <span class="score" title="86 徳">86</span><span title="1 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span></p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-717">
+    
+        <a name="718"></a>
+        <div class="comment" id="comment-718">
+            <div id="post-718-score" class="comment-score"></div>
+            <div class="comment-text"><p>回答ありがとうございます．
+アライメントを行ったあとは，以前質問しました「SAMファイルのFASTAファイルへの変換について」という質問文中にありますように，SAMファイルをFASTA形式に変換した後，Collapseを行いハプロタイプ数を出し，進化系統樹を作りたいと考えています．
+開始位置が揃わないのは，30塩基~ずれが大きいと200塩基もズレています．global alignmentであれば改善されるかもしれないので，ご紹介いただいたソフトを試してみたいと思います．</p></div>
+            <div class="comment-info" id="comment-718-info">
+                
+                
+                
+                <span class="comment-age">(Feb 03 '14 at 17:47)</span>
+                <a class="comment-user userinfo" href="/users/135/izumi/">izumi</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/b80b73039e24bde1079af7221c824d14?s=18&amp;d=identicon&amp;r=g" alt="izumi's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="719"></a>
+        <div class="comment" id="comment-719">
+            <div id="post-719-score" class="comment-score"></div>
+            <div class="comment-text"><p>開始位置が揃わないのは、local alignmentだから一見揃っていないように見えるって話でしたか。それなら、global alignmentで改善するかもしれません。ただ、最終目的を考えるとあんまり良い手には思えませんね。そもそもCOIの600塩基そこそこでまともな系統樹は得られません。河川底生動物群集だと、カワゲラ、カゲロウ、トビケラ、ユスリカ、ヘビトンボ、ヨコエビなどでしょうが、目間は変異が飽和していると思います。目ごとに別々にやるとしても、目内でも飽和している可能性がかなり高いですね。群集系統学的解析を行うのであれば、距離行列にした方がいいかもしれません。</p></div>
+            <div class="comment-info" id="comment-719-info">
+                
+                
+                
+                <span class="comment-age">(Feb 03 '14 at 17:58)</span>
+                <a class="comment-user userinfo" href="/users/136/aki/">aki</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/41bd65dd88b7e8638d26ee6af75d714f?s=18&amp;d=identicon&amp;r=g" alt="aki's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="720"></a>
+        <div class="comment" id="comment-720">
+            <div id="post-720-score" class="comment-score"></div>
+            <div class="comment-text"><p>すいません説明不足でした．一見揃っていないように見える配列もありますし，5'末端からズレている配列もあります．カゲロウの進化系統樹を作っている論文があったので，目ごとで系統樹を作ろうと考えていたのですが，距離行列についても考慮していきたいと思います．返答ありがとうございます．</p></div>
+            <div class="comment-info" id="comment-720-info">
+                
+                
+                
+                <span class="comment-age">(Feb 03 '14 at 18:48)</span>
+                <a class="comment-user userinfo" href="/users/135/izumi/">izumi</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/b80b73039e24bde1079af7221c824d14?s=18&amp;d=identicon&amp;r=g" alt="izumi's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="721"></a>
+        <div class="comment" id="comment-721">
+            <div id="post-721-score" class="comment-score"></div>
+            <div class="comment-text"><p>一応コマンドを書いておきます。</p>
+<h1>マッピングする配列のファイルを.afg形式で用意</h1>
+<p>toAmos -s reads.fasta -q reads.fasta.qual -o mapping.afg</p>
+<h1>リファレンス配列を.fasta形式で用意</h1>
+<p>cp reference.fasta mapping.1con</p>
+<h1>マッピングの実行</h1>
+<p>AMOScmp mapping</p>
+<h1>アライメントデータを保存(multiFASTAではない)</h1>
+<p>make-consensus -a -b mapping.bnk -e 0.5 &gt; alignment.txt</p></div>
+            <div class="comment-info" id="comment-721-info">
+                
+                
+                
+                <span class="comment-age">(Feb 04 '14 at 15:04)</span>
+                <a class="comment-user userinfo" href="/users/136/aki/">aki</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/41bd65dd88b7e8638d26ee6af75d714f?s=18&amp;d=identicon&amp;r=g" alt="aki's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-717" class="comment-tools">
+    
+    
+</div>
+<div id="comment-717-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/716/answer/" method="post">
+            <div style="clear:both">
+            </div>
+            
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            あなたの回答
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea rows="10" cols="40" name="text" id="editor"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="リアルタイムMarkdown編集プレビューをトグルする">
+                                            プレビューをトグルする
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input type="checkbox" name="wiki" id="id_wiki" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="コミュニティー wikiオプションを選択した場合、質問と回答はポイントを生成せず、作者名は表示されない">
+                                            <label for="id_wiki">コミュニティー wiki</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+                        
+                        </table>  
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>                    
+                </div>
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">この質問をフォローする</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="/questions/716/%E5%A4%A7%E9%87%8F%E3%81%AE%E9%85%8D%E5%88%97%E3%81%AE%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6?type=rss" title="subscribe to answers"></a>
+    回答
+</p><p><a class="feed-icon" style="background-image:url('/m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="/questions/716/%E5%A4%A7%E9%87%8F%E3%81%AE%E9%85%8D%E5%88%97%E3%81%AE%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    回答とコメント
+</p>
+
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>ただいまベータテスト運用中です。そのために通知無くコンテンツの変更やサービスの停止変更されることがあります。</h2>
+<p>質問するなら<a href="http://qa.lifesciencedb.jp">ライフサイエンスQA</a>。</p>
+<p>このページの<a href="?type=rss">RSSフィード</a></p>
+<p><a href="http://twitter.com/lsqa_all">@lsqa_all</a>・<a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a></p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <p>
+		タグ:
+    </p>
+    <p class="tags" >
+        
+        	<a href="/tags/ngs/" 
+			title="タグ付けされた質問をみる'ngs'タグを利用している" 
+			rel="tag">ngs</a> <span class="tag-number">&#215;47</span><br/>
+        
+        	<a href="/tags/mapping/" 
+			title="タグ付けされた質問をみる'mapping'タグを利用している" 
+			rel="tag">mapping</a> <span class="tag-number">&#215;2</span><br/>
+        
+        	<a href="/tags/alignment/" 
+			title="タグ付けされた質問をみる'alignment'タグを利用している" 
+			rel="tag">alignment</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        質問日: <strong title="2014-02-03 11:52:15.081501">Feb 03 '14 at 11:52</strong>
+    </p>
+    <p> 
+     	閲覧数: <strong>11,550 回</strong>
+    </p>
+    <p> 
+        最終更新日: <strong title="2014-04-11 18:27:23.589358">Apr 11 '14 at 18:27</strong>
+    </p>
+</div>
+
+
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>世界に広がるQAサイト</h2>
+<p><a href="http://biostar.stackexchange.com">バイオインフォマティクスのBioStar</a>・ <a href="http://I.SEQanswers.com">新型シーケンサーのSEQanswers</a>・ <a href="http://blueobelisk.shapado.com">オープンデータのBlueObelisk</a>・<a href="http://stackoverflow.com">プログラミングのstackoverflow</a>・ <a href="http://www.semanticoverflow.com">Semantic Overflow</a>・ <a href="http://stats.stackexchange.com/">Statistical Analysis</a>・ <a href="http://cstheory.stackexchange.com/">Theoretical Computer Science</a>・ <a href="http://chiebukuro.yahoo.co.jp/">Yahoo!知恵袋</a>・ <a href="http://okwave.jp/">OKWave</a> <a href="http://ja.wikipedia.org/wiki/Category:Q%26Aサイト">などなど</a></p>
+     </div>
+</div>
+
+<div class="boxC">
+    <h3 class="subtitle">関係した質問</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/809/trinity%E3%81%AE%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E7%B5%90%E6%9E%9C%E3%81%AE%E8%A6%8B%E6%96%B9">Trinityのアセンブリ結果の見方</a>
+        </p>
+        
+        <p>
+            <a href="/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9">Celera WGA Assembler(CABOG)のインストールと使い方</a>
+        </p>
+        
+        <p>
+            <a href="/questions/311/findpeaks%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">FindPeaksの使い方</a>
+        </p>
+        
+        <p>
+            <a href="/questions/138/bmb2010-%E3%81%AEngs%E9%96%A2%E9%80%A3%E3%81%AE%E7%99%BA%E8%A1%A8">BMB2010 のNGS関連の発表</a>
+        </p>
+        
+        <p>
+            <a href="/questions/269/transcriptome-analysis%E3%81%A8rnaseq%E3%81%AE%E9%81%95%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">Transcriptome analysisとRNASeqの違いについて</a>
+        </p>
+        
+        <p>
+            <a href="/questions/507/ngs%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%81%AEpcr%E5%A2%97%E5%B9%85">NGSライブラリのPCR増幅</a>
+        </p>
+        
+        <p>
+            <a href="/questions/745/%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">アライメントについて</a>
+        </p>
+        
+        <p>
+            <a href="/questions/179/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AA%E3%83%87%E3%83%BC%E3%82%BF">次世代シーケンサのオープンなデータ</a>
+        </p>
+        
+        <p>
+            <a href="/questions/429/%E3%83%8E%E3%83%B3%E3%83%A2%E3%83%87%E3%83%AB%E7%94%9F%E7%89%A9%E3%81%AEmrna%E7%B2%BE%E8%A3%BD%E3%81%A7rrna%E3%81%AE%E3%82%B3%E3%83%B3%E3%82%BF%E3%83%9F%E3%82%92%E3%81%AA%E3%82%8B%E3%81%B9%E3%81%8F%E4%B8%8B%E3%81%92%E3%81%9F%E3%81%84">ノンモデル生物のmRNA精製でrRNAのコンタミをなるべく下げたい</a>
+        </p>
+        
+        <p>
+            <a href="/questions/227/c-value-%E3%81%8B%E3%82%89%E3%82%B2%E3%83%8E%E3%83%A0%E3%82%B5%E3%82%A4%E3%82%BA%E3%82%92%E6%8E%A8%E5%AE%9A%E3%81%99%E3%82%8B">C-value からゲノムサイズを推定する</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >概要</a> <span class="link-separator"> |</span> <a href="/faq/" >よくある質問</a> <span class="link-separator"> |</span> <a href="/privacy/" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="/m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

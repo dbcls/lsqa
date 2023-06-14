@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With ストック</title><link>http://qa.lifesciencedb.jp/tags/%E3%82%B9%E3%83%88%E3%83%83%E3%82%AF/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;ストック&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/%E3%82%B9%E3%83%88%E3%83%83%E3%82%AF/" rel="self"></atom:link><language>ja</language><lastBuildDate>Wed, 15 Dec 2010 14:38:57 +0900</lastBuildDate><item><title>大量のコンストラクトの長期保存</title><link>http://qa.lifesciencedb.jp/questions/185/%E5%A4%A7%E9%87%8F%E3%81%AE%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%83%88%E3%81%AE%E9%95%B7%E6%9C%9F%E4%BF%9D%E5%AD%98</link><description>&lt;p&gt;数千種類のプラスミドを長期保存するにはどのような方法が適しているでしょうか。&lt;br&gt;
+とりあえず下記の３つの方法のメリット・デメリットを書き出してみました。&lt;br&gt;
+（なお、２の大腸菌スタブについては、１のグリセロールストックよりも&lt;br&gt;
+良さそうに思えますが、実際に作製したことがないのでよくわかりません。）&lt;br&gt;
+よい方法やノウハウ等をご教示いただければありがたいです。&lt;/p&gt;
+&lt;p&gt;１）大腸菌グリセロールストック&lt;br&gt;
+○簡単につくれる&lt;br&gt;
+○融解しなければ数年間保存可能&lt;br&gt;
+△-80℃で保存しなければならない&lt;br&gt;
+△凍結融解に弱い&lt;/p&gt;
+&lt;p&gt;２）大腸菌スタブ&lt;br&gt;
+◎室温で保存可&lt;br&gt;
+○簡単につくれる（？）&lt;br&gt;
+△密閉しないといけない？（96穴プレートは使えるのか？？）&lt;br&gt;
+？保存期間は大腸菌グリセロールストックと同等以上か&lt;/p&gt;
+&lt;p&gt;３）プラスミドDNAを抽出して保存&lt;br&gt;
+◎-30℃で安定して保存可能&lt;br&gt;
+×プラスミド抽出のコストと手間がかかる&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">meso</dc:creator><pubDate>Wed, 15 Dec 2010 14:38:57 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/185/%E5%A4%A7%E9%87%8F%E3%81%AE%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%83%88%E3%81%AE%E9%95%B7%E6%9C%9F%E4%BF%9D%E5%AD%98</guid><category>ストック</category><category>ライブラリ</category></item></channel></rss>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: BMB2010で紹介してもいいですか？</title><link>http://qa.lifesciencedb.jp/questions/54/bmb2010%E3%81%A7%E7%B4%B9%E4%BB%8B%E3%81%97%E3%81%A6%E3%82%82%E3%81%84%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B</link><description>&lt;p&gt;このQAに関してですが、どうしましょう？
+BMB2010１日目のWorkshopで可能なら紹介したいと思うんですけど。それまでにテスト運用をやめてベータ版運用（？）的にはできませんかね？&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/54/bmb2010%E3%81%A7%E7%B4%B9%E4%BB%8B%E3%81%97%E3%81%A6%E3%82%82%E3%81%84%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B" rel="self"></atom:link><language>ja</language><lastBuildDate>Thu, 25 Nov 2010 18:42:42 +0900</lastBuildDate><item><title>Answer by hub</title><link>http://qa.lifesciencedb.jp/questions/54/bmb2010%E3%81%A7%E7%B4%B9%E4%BB%8B%E3%81%97%E3%81%A6%E3%82%82%E3%81%84%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B/77</link><description>&lt;p&gt;もちろん、いいんじゃないでしょうか？
+是非紹介してきて「眼」の数を増やしましょう！
+もちろん、質問する人や回答する人も増えて欲しいですが。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">hub</dc:creator><pubDate>Thu, 25 Nov 2010 18:42:42 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/54/bmb2010%E3%81%A7%E7%B4%B9%E4%BB%8B%E3%81%97%E3%81%A6%E3%82%82%E3%81%84%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B/77</guid></item><item><title>Answer by dritoshi</title><link>http://qa.lifesciencedb.jp/questions/54/bmb2010%E3%81%A7%E7%B4%B9%E4%BB%8B%E3%81%97%E3%81%A6%E3%82%82%E3%81%84%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B/76</link><description>&lt;p&gt;q-bio.jp 2010 で紹介しても構いませんか? beta 公開の範囲がよくわからないので聞いてみました。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">dritoshi</dc:creator><pubDate>Thu, 25 Nov 2010 17:33:56 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/54/bmb2010%E3%81%A7%E7%B4%B9%E4%BB%8B%E3%81%97%E3%81%A6%E3%82%82%E3%81%84%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B/76</guid></item><item><title>Answer by hub</title><link>http://qa.lifesciencedb.jp/questions/54/bmb2010%E3%81%A7%E7%B4%B9%E4%BB%8B%E3%81%97%E3%81%A6%E3%82%82%E3%81%84%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B/59</link><description>&lt;p&gt;私はそんなに厳しく考えていなくて、一般公開には今のレベルで十分じゃないでしょうか？
+いくつかの質問が例として上がっていればそれでいいんじゃないかと。
+日本語メッセージのほぼ完成、FAQと概要の完成
+あたりはおいおいやっていけばいいですし、使い方は統合TVをつくるようにしますんで。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">hub</dc:creator><pubDate>Wed, 24 Nov 2010 12:37:51 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/54/bmb2010%E3%81%A7%E7%B4%B9%E4%BB%8B%E3%81%97%E3%81%A6%E3%82%82%E3%81%84%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B/59</guid></item><item><title>Answer by mn3</title><link>http://qa.lifesciencedb.jp/questions/54/bmb2010%E3%81%A7%E7%B4%B9%E4%BB%8B%E3%81%97%E3%81%A6%E3%82%82%E3%81%84%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B/56</link><description>&lt;p&gt;それはよいですね。そこにむけていきましょう。&lt;/p&gt;
+&lt;p&gt;そこで、hub さんの、テスト運用の終わりとベータ運用の要件のだいたいのイメージはありますか？あればお聞かせください。
+TODOリスト的な物で結構です。&lt;/p&gt;
+&lt;p&gt;β開始要件には、たとえば次のことを考えています：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;日本語メッセージのほぼ完成&lt;/li&gt;
+&lt;li&gt;FAQと概要の完成&lt;/li&gt;
+&lt;li&gt;運用体制の方向付け&lt;/li&gt;
+&lt;li&gt;サイトデザインの方向付け、CSSの更新など&lt;/li&gt;
+&lt;li&gt;プロモーション戦略の確定&lt;/li&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mn3</dc:creator><pubDate>Tue, 23 Nov 2010 21:57:03 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/54/bmb2010%E3%81%A7%E7%B4%B9%E4%BB%8B%E3%81%97%E3%81%A6%E3%82%82%E3%81%84%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B/56</guid></item></channel></rss>

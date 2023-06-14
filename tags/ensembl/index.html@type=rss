@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With ensembl</title><link>http://qa.lifesciencedb.jp/tags/ensembl/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;ensembl&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/ensembl/" rel="self"></atom:link><language>ja</language><lastBuildDate>Fri, 10 May 2013 18:28:04 +0900</lastBuildDate><item><title>ENST00000254657.3のどっと３について</title><link>http://qa.lifesciencedb.jp/questions/671/enst00000254657-3%E3%81%AE%E3%81%A9%E3%81%A3%E3%81%A8%EF%BC%93%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;いつも大変お世話になっております。&lt;br&gt;
+Ensemblのtranscripts idについてお伺いしたいのですが、&lt;br&gt;
+ENST00000254657.3のようにドット３が付いているのは、&lt;br&gt;
+&lt;strong&gt;isoformのtranscriptsが何らかの要因で3回情報が更新されている、&lt;/strong&gt;&lt;br&gt;
+といった意味だとうろ覚えの記憶があるのですがお詳しいかたいらっしゃいますでしょうか。&lt;br&gt;
+ご回答、どうぞよろしくお願い申し上げます。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;suimye&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">suimye</dc:creator><pubDate>Fri, 10 May 2013 18:28:04 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/671/enst00000254657-3%E3%81%AE%E3%81%A9%E3%81%A3%E3%81%A8%EF%BC%93%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>database</category><category>id</category><category>ensembl</category></item><item><title>リファレンスについて</title><link>http://qa.lifesciencedb.jp/questions/549/%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;お世話になっております。
+マッピングする際のリファレンスについて質問です。&lt;br&gt;
+一般的にマッピングする際には&lt;br&gt;
+Humanでは&lt;br&gt;
+Ensembl GRCh37&lt;br&gt;
+NCBI 36 37&lt;br&gt;
+UCSC 18 19&lt;br&gt;
+や&lt;br&gt;
+Mouseでは&lt;br&gt;
+Ensemble NCBIM37&lt;br&gt;
+NCBI 37&lt;br&gt;
+UCSC mm9&lt;br&gt;
+があると思いますが、皆さんは主にどれを使われていますでしょうか？ ブラウザではUCSCを使用しているものの、RNAのバリアントはEnsemblが情報が豊富ですし、今後、解析するに当たっては統一したいので迷っております。バージョンにつきましても古い方が枯れているという考え方があるのかも知りたいと思います。RNA-seq解析の時にnovel junctionが同じイントロンで少しずれたのがたくさん出るときにとりあえずtophatでnovelを抑えてマッピングしますときにはRNAのバリアントが多く登録されている方がいいと思い、自分はUCSCよりensembleを使用してnovelありなしで解析しております。&lt;br&gt;
+よろしくお願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">gatapishi</dc:creator><pubDate>Fri, 02 Dec 2011 08:04:19 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/549/%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>ucsc</category><category>ncbi</category><category>reference</category><category>ensembl</category></item><item><title>Orthologous遺伝子の検索方法について</title><link>http://qa.lifesciencedb.jp/questions/330/orthologous%E9%81%BA%E4%BC%9D%E5%AD%90%E3%81%AE%E6%A4%9C%E7%B4%A2%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;現在、chickinとhumanのSwiss-Prot IDとUniProtIDのデータベース（各700遺伝子リスト）を持っています。この中からOrthologous遺伝子を見つけたいと考えています。BioMartで変換できることは分かっているのですが、Swiss-ProtのIDをEnsemble IDに変換する方法が分かりません。BioMart以外でもOrthologous遺伝子の見つけ方をご存知の方がいたら教えてください。よろしくお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">subhjap</dc:creator><pubDate>Wed, 23 Feb 2011 18:24:19 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/330/orthologous%E9%81%BA%E4%BC%9D%E5%AD%90%E3%81%AE%E6%A4%9C%E7%B4%A2%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>biomart</category><category>uniprot</category><category>ensembl</category></item><item><title>MacでEnsembl API を使用する際の DBD::mysql モジュールのインストール</title><link>http://qa.lifesciencedb.jp/questions/284/mac%E3%81%A7ensembl-api-%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE-dbd-mysql-%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB</link><description>&lt;p&gt;データを解析する際にPerlとEnsembl APIを組み合わせて使用してみたいと考えております。システム構成としまして&lt;br&gt;
+Macbook pro (SnowLeopard)&lt;br&gt;
+Perl 5.13.9　(perlbrewでインストール済み)&lt;br&gt;
+bioperl 1.6.1インストール済み&lt;br&gt;
+MySQL5.5.8(64bit)をインストール済み（必要ないかもしれませんが）&lt;br&gt;
+DBI はcpanでインストール済み&lt;br&gt;
+まではうまくインストールができているようで、MySQLも起動できます。&lt;br&gt;
+次に必要となる DBD:mysql をcpanを用いまして、インストールしたいとと思うのですがエラーがでました。&lt;br&gt;
+そこで、DBD-mysql-4.018をソースでダウンロードして、makeするとやはり、cpanのときと同様に&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Argument "6.57_05" isn't numeric in numeric ge (&amp;gt;=) at Makefile.PL line 350, &amp;lt;pipe&amp;gt; line 138.&lt;br&gt;
+Using DBI 1.616 (for perl 5.013009 on darwin-2level) installed in /Users/---/perl5/perlbrew/perls/perl-5.13.9/lib/site_perl/5.13.9/darwin-2level/auto/DBI/&lt;br&gt;
+Writing Makefile for DBD::mysql&lt;br&gt;
+Writing MYMETA.yml&lt;br&gt;
+---:DBD-mysql-4.0181 ---$ sudo make&lt;br&gt;
+Skip blib/lib/DBD/mysql.pm (unchanged)&lt;br&gt;
+Skip blib/lib/DBD/mysql/GetInfo.pm (unchanged)&lt;br&gt;
+Skip blib/lib/DBD/mysql/INSTALL.pod (unchanged)&lt;br&gt;
+Skip blib/lib/Bundle/DBD/mysql.pm (unchanged)&lt;br&gt;
+cc -c  -I/Users/---/perl5/perlbrew/perls/perl-5.13.9/lib/site_perl/5.13.9/darwin-2level/auto/DBI -I/usr/local/mysql/include  -Os -g -fno-common&lt;br&gt; &amp;gt;-fno-strict-aliasing -arch x86_64 -DDBD_MYSQL_INSERT_ID_IS_GOOD -g  -fno-common -DPERL_DARWIN -no-cpp-precomp -fno-strict-aliasing -pipe -fstack-protector&lt;br&gt; &amp;gt;-I/usr/local/include -I/opt/local/include -O3   -DVERSION="4.018" -DXS_VERSION="4.018" &lt;br&gt; &amp;gt;"-I/Users/---/perl5/perlbrew/perls/perl-5.13.9/lib/5.13.9/darwin-2level/CORE"   dbdimp.c&lt;br&gt;
+dbdimp.c: In function 'mysql_db_FETCH_attrib':&lt;br&gt;
+dbdimp.c:2447: error: 'sv_undef' undeclared (first use in this function)&lt;br&gt;
+dbdimp.c:2447: error: (Each undeclared identifier is reported only once&lt;br&gt;
+dbdimp.c:2447: error: for each function it appears in.)&lt;br&gt;
+dbdimp.c: In function 'mysql_st_internal_execute41':&lt;br&gt;
+dbdimp.c:3298: warning: format '%d' expects type 'int', but argument 3 has type 'my_ulonglong'&lt;br&gt;
+dbdimp.c: In function 'mysql_describe':&lt;br&gt;
+dbdimp.c:3517: warning: format '%d' expects type 'int', but argument 5 has type 'long unsigned int'&lt;br&gt;
+dbdimp.c:3521: warning: format '%d' expects type 'int', but argument 3 has type 'long unsigned int'&lt;br&gt;
+dbdimp.c: In function 'mysql_st_fetch':&lt;br&gt;
+dbdimp.c:3738: warning: format '%d' expects type 'int', but argument 3 has type 'long int'&lt;br&gt;
+dbdimp.c:3780: warning: format '%08lx' expects type 'long unsigned int', but argument 3 has type 'struct MYSQL_RES &lt;em&gt;'&lt;br&gt;
+dbdimp.c:3782: warning: format '%llu' expects type 'long long unsigned int', but argument 3 has type 'unsigned int'&lt;br&gt;
+dbdimp.c: In function 'mysql_st_FETCH_attrib':&lt;br&gt;
+dbdimp.c:4365: warning: format '%d' expects type 'int', but argument 3 has type 'my_ulonglong'&lt;br&gt;
+dbdimp.c: In function 'mysql_bind_ph':&lt;br&gt;
+dbdimp.c:4571: warning: format '%d' expects type 'int', but argument 3 has type 'IV'&lt;br&gt;
+dbdimp.c:4583: warning: format '%d' expects type 'int', but argument 3 has type 'IV'&lt;br&gt;
+dbdimp.c:4595: warning: format '%d' expects type 'int', but argument 3 has type 'IV'&lt;br&gt;
+dbdimp.c:4609: warning: format '%d' expects type 'int', but argument 3 has type 'IV'&lt;br&gt;
+dbdimp.c:4630: warning: format '%d' expects type 'int', but argument 5 has type 'IV'&lt;br&gt;
+make: &lt;/em&gt;** [dbdimp.o] Error 1&lt;br&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;と表示され、インストールできません。インターネットの情報を頼りにマニュアルで&lt;br&gt;
+&lt;/p&gt;&lt;pre&gt; #ifndef sv_undef
+ #define sv_undef PL_sv_undef
+ #endif
+&lt;/pre&gt;
+として、無理矢理インストールを進めたあと、
+サンプルプログラムの&lt;p&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;use warnings; &lt;br&gt;use Bio::EnsEMBL::Registry;&lt;br&gt;
+&lt;br&gt;
+my $registry ='Bio::EnsEMBL::Registry';&lt;br&gt;
+$registry-&amp;gt;load_registry_from_db(&lt;br&gt;
+    -host =&amp;gt; 'ensembldb.ensembl.org',&lt;br&gt;
+    -user =&amp;gt; 'anonymous' );&lt;br&gt;
+&lt;br&gt;
+my $slice_adaptor = $registry-&amp;gt;get_adaptor( 'Human', 'Core', 'Slice' ); &lt;br&gt;
+my $slice = $slice_adaptor-&amp;gt;fetch_by_region('chromosome', '12','1000000','1000050');&lt;br&gt;
+my $coord_sys  = $slice-&amp;gt;coord_system()-&amp;gt;name(); &lt;br&gt;
+my $seq_region = $slice-&amp;gt;seq_region_name(); &lt;br&gt;
+my $start  = $slice-&amp;gt;start(); &lt;br&gt;
+my $end = $slice-&amp;gt;end(); &lt;br&gt;
+my $strand = $slice-&amp;gt;strand(); &lt;br&gt;
+my $seq = $slice-&amp;gt;seq(); print "Slice:$coord_sys $seq_region $start-$end($strand)¥n$seq¥n";&lt;br&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;を実行しますと&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Can't load '/Users/---/perl5/perlbrew/perls/perl-5.13.9/lib/site_perl/5.13.9/darwin-2level/auto/DBD/mysql/mysql.bundle' for module DBD::mysql: dlopen(/Users/---/perl5/perlbrew/perls/perl-5.13.9/lib/site_perl/5.13.9/darwin-2level/auto/DBD/mysql/mysql.bundle, 1): Library not loaded: libmysqlclient.16.dylib&lt;br&gt;
+ Referenced from: /Users/---/perl5/perlbrew/perls/perl-5.13.9/lib/site_perl/5.13.9/darwin-2level/auto/DBD/mysql/mysql.bundle&lt;br&gt;
+ Reason: image not found at /Users/---/perl5/perlbrew/perls/perl-5.13.9/lib/5.13.9/darwin-2level/DynaLoader.pm line 200.&lt;br&gt;
+at /Users/---/src/ensembl/modules/Bio/EnsEMBL/DBSQL/StatementHandle.pm line 48&lt;br&gt;
+Compilation failed in require at /Users/---/src/ensembl/modules/Bio/EnsEMBL/DBSQL/StatementHandle.pm line 48.&lt;br&gt;
+BEGIN failed--compilation aborted at /Users/---/src/ensembl/modules/Bio/EnsEMBL/DBSQL/StatementHandle.pm line 48.&lt;br&gt;
+Compilation failed in require at /Users/---/src/ensembl/modules/Bio/EnsEMBL/DBSQL/DBConnection.pm line 68.&lt;br&gt;
+BEGIN failed--compilation aborted at /Users/---/src/ensembl/modules/Bio/EnsEMBL/DBSQL/DBConnection.pm line 68.&lt;br&gt;
+Compilation failed in require at /Users/---/src/ensembl/modules/Bio/EnsEMBL/DBSQL/DBAdaptor.pm line 59.&lt;br&gt;
+BEGIN failed--compilation aborted at /Users/---/src/ensembl/modules/Bio/EnsEMBL/DBSQL/DBAdaptor.pm line 59.&lt;br&gt;
+Compilation failed in require at /Users/---/src/ensembl/modules/Bio/EnsEMBL/Registry.pm line 123.&lt;br&gt;
+BEGIN failed--compilation aborted at /Users/---/src/ensembl/modules/Bio/EnsEMBL/Registry.pm line 123.&lt;br&gt;
+Compilation failed in require at splice.pl line 3.&lt;br&gt;
+BEGIN failed--compilation aborted at splice.pl line 3.&lt;br&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;とエラーが出て実行できません。いちおうbioperlはもっと古いバージョンが必要と言うことになっておりますが、ubuntuでは
+同様な手続きで Ensembl API が利用できております。いずれにしましても、とりあえずはDBD::mysqlがインストールできない
+ところが困っているところですので直接はbioperl以前の問題ではと考えております。mySQLを32bit版に変更しても同様です。&lt;/p&gt;
+&lt;p&gt;どなたか、MacでこのAPIを使用されておられる方がおられましたら、アドバイスをいただきたいと思います。
+ぜひ、よろしくお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">gatapishi</dc:creator><pubDate>Sat, 22 Jan 2011 15:30:44 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/284/mac%E3%81%A7ensembl-api-%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE-dbd-mysql-%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB</guid><category>api</category><category>インストール</category><category>bioperl</category><category>ensembl</category></item></channel></rss>

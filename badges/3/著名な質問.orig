@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>著名な質問 - バッジ - #LSQA</title>
+        <meta name="description" content="質問と回答と私">
+        <meta name="keywords" content="OSQA,CNPROG,forum,community,lifesciencedb.jp,DDBJ,PDBj,DBCLS,Cytoscape,NGS,ngs-field">
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon.ico" />
+        <link href="/m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='/m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+       <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_badges").attr('className',"on");
+        });
+         
+        </script>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >ログイン</a>  <a href="/about/" >概要</a>  <a href="/faq/" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" href="/questions/" >質問</a><a id="nav_tags" href="/tags/" >タグ</a><a id="nav_users" href="/users/" >ユーザー</a><a id="nav_badges" href="/badges/" >バッジ</a><a id="nav_unanswered" href="/questions/unanswered/" >未回答</a>
+        <a id="nav_ask" href="/questions/ask/" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+        <div id="wrapper">
+            <div id="room">
+                <div id="CAFull">
+                    
+<div id="main-bar" class="headNormal">
+	バッジ
+</div>
+<div id="main-body" style="width:100%;margin-bottom:20px">
+    <p>
+        <a href="/badges/3/%E8%91%97%E5%90%8D%E3%81%AA%E8%B3%AA%E5%95%8F" title=" : 10000 回読まれた質問をした" class="medal"><span class="badge1">&#9679;</span>&nbsp;著名な質問</a> 10000 回読まれた質問をした
+    </p>
+    <div>
+        
+        <p style="float:left"><span class="count">74</span>
+        <strong>ユーザーはバッジを授与されています：</strong></p>
+        
+    </div>
+    <div id="award-list" style="clear:both;margin-left:20px;line-height:25px;">
+        
+        <p style="width:220px;float:left"><a href="/users/23/nob_fj/">nob_fj ♦</a><span class="score" title="507 信用度">507</span><span title="8 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="16 バッジ"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="28 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">28</span></span>
+<span class="tag-number"> &#215; 8</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/5/hub/">hub ♦♦</a><span class="score" title="303 信用度">303</span><span title="5 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="9 バッジ"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="16 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">16</span></span>
+<span class="tag-number"> &#215; 5</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/76/okubo/">okubo</a><span class="score" title="131 信用度">131</span><span title="5 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="9 バッジ"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="13 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">13</span></span>
+<span class="tag-number"> &#215; 5</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span><span title="4 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="9 バッジ"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="22 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span>
+<span class="tag-number"> &#215; 4</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/68/gatapishi/">gatapishi</a><span class="score" title="71 信用度">71</span><span title="4 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="7 バッジ"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="11 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">11</span></span>
+<span class="tag-number"> &#215; 4</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/83/porcine/">porcine</a><span class="score" title="1 信用度">1</span><span title="3 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="5 バッジ"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="7 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span>
+<span class="tag-number"> &#215; 3</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/19/maoringo/">maoringo</a><span class="score" title="76 信用度">76</span><span title="2 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="4 バッジ"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="6 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span>
+<span class="tag-number"> &#215; 2</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/41/redgrapefruit/">redgrapefruit</a><span class="score" title="60 信用度">60</span><span title="2 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="3 バッジ"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="6 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span>
+<span class="tag-number"> &#215; 2</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/70/def/">DEF</a><span class="score" title="41 信用度">41</span><span title="2 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="6 バッジ"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="8 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span>
+<span class="tag-number"> &#215; 2</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/88/pan/">pan</a><span class="score" title="1 信用度">1</span><span title="2 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="6 バッジ"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="7 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span>
+<span class="tag-number"> &#215; 2</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/135/izumi/">izumi</a><span class="score" title="11 信用度">11</span><span title="2 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="4 バッジ"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="6 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span>
+<span class="tag-number"> &#215; 2</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/149/ara/">ara</a><span class="score" title="1 信用度">1</span><span title="2 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="3 バッジ"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="3 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span>
+<span class="tag-number"> &#215; 2</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/10/eli-kaminuma/">Eli Kaminuma ♦♦</a><span class="score" title="106 信用度">106</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/12/ma_ko/">ma_ko ♦♦</a><span class="score" title="371 信用度">371</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="3 バッジ"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="12 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">12</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/13/sanagi/">sanagi ♦</a><span class="score" title="41 信用度">41</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 バッジ"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/18/mya_/">mya_ ♦</a><span class="score" title="388 信用度">388</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="10 バッジ"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="14 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">14</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/21/wakuteka/">wakuteka ♦</a><span class="score" title="1 信用度">1</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/25/yag_ays/">yag_ays</a><span class="score" title="241 信用度">241</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="5 バッジ"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="8 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/26/meso/">meso</a><span class="score" title="176 信用度">176</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="3 バッジ"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="5 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/28/suimye/">suimye</a><span class="score" title="296 信用度">296</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="8 バッジ"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="15 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">15</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/31/hacchy/">hacchy</a><span class="score" title="121 信用度">121</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 バッジ"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="6 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/35/takakoron/">takakoron ♦</a><span class="score" title="31 信用度">31</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/38/kiake77/">kiake77</a><span class="score" title="126 信用度">126</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="6 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/42/odamame/">odamame</a><span class="score" title="111 信用度">111</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 バッジ"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="7 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/45/asurain/">asurain</a><span class="score" title="101 信用度">101</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 バッジ"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="5 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/46/tanakky/">Tanakky</a><span class="score" title="121 信用度">121</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="3 バッジ"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="8 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/53/riv7/">riv7</a><span class="score" title="31 信用度">31</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/60/fumumumu/">fumumumu</a><span class="score" title="121 信用度">121</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="6 バッジ"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="7 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/66/yuifu/">yuifu</a><span class="score" title="51 信用度">51</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/69/beans/">Beans</a><span class="score" title="31 信用度">31</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 バッジ"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/71/dna/">dna</a><span class="score" title="1 信用度">1</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/72/%E3%81%8B%E3%81%A9%E3%81%9F/">かどた</a><span class="score" title="186 信用度">186</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="4 バッジ"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="10 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">10</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/74/kenken/">kenken</a><span class="score" title="16 信用度">16</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 バッジ"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/84/sghr/">sghr</a><span class="score" title="1 信用度">1</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/85/snk_u/">snk_u</a><span class="score" title="1 信用度">1</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/87/%E3%81%A0%E3%81%84%E3%81%93%E3%82%93/">だいこん</a><span class="score" title="1 信用度">1</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/97/iem616/">iem616</a><span class="score" title="1 信用度">1</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/110/touran/">touran</a><span class="score" title="15 信用度">15</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 バッジ"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/121/ts/">TS</a><span class="score" title="11 信用度">11</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/137/ksfk/">ksfk</a><span class="score" title="1 信用度">1</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/139/megu/">megu</a><span class="score" title="1 信用度">1</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="4 バッジ"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="4 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/155/sulfuri/">sulfuri</a><span class="score" title="1 信用度">1</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/181/takebo/">takebo</a><span class="score" title="1 信用度">1</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/183/mikan03/">mikan03</a><span class="score" title="3 信用度">3</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="3 バッジ"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="5 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+        <p style="width:220px;float:left"><a href="/users/184/yoda/">Yoda</a><span class="score" title="1 信用度">1</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="3 バッジ"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="4 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span>
+<span class="tag-number"> &#215; 1</span></p>
+        
+    </div>
+
+</div>
+
+
+                </div>
+                <div id="tail" style="clear:both;">
+                    
+                    
+                </div>
+            </div>
+            <div class="spacer3"></div>
+        </div>
+        
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >概要</a> <span class="link-separator"> |</span> <a href="/faq/" >よくある質問</a> <span class="link-separator"> |</span> <a href="/privacy/" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="/m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+        
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

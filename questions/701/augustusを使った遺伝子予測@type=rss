@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: AUGUSTUSを使った遺伝子予測</title><link>http://qa.lifesciencedb.jp/questions/701/augustus%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E9%81%BA%E4%BC%9D%E5%AD%90%E4%BA%88%E6%B8%AC</link><description>&lt;p&gt;とある生物のゲノムを解読しました。
+遺伝子を同定するためにRNA-seqを行いましたが、発現が低い遺伝子や特異的に発現する遺伝子は見逃していると思います。&lt;/p&gt;
+&lt;p&gt;そこで、以下のサイトの通りに、RNA-seqで得られたイントロン情報をAUGUSTUSに読み込ませて、RNA-seqでは同定が難しい遺伝子を予測しようとしました。&lt;/p&gt;
+&lt;p&gt;http://bioinf.uni-greifswald.de/bioinf/wiki/pmwiki.php?n=IncorporatingRNAseq.Tophat&lt;/p&gt;
+&lt;p&gt;5.のイントロン情報の作成まで行い、6.パラメーターの設定は入っていたファイルをコピーし、実際AUGUSTUSを実行してみると、途中まではきちんと予測してくれるのですが、ある程度進むと「Segmentation fault」で中断されてしまいます。&lt;/p&gt;
+&lt;p&gt;上記の方法は（１）のように実行していますが、諦めてイントロン情報を入れない（２）の方法ならば最後まで実行されるので、入れたイントロン情報か設定が悪いのかと思っていますが、何が原因なのか分かりません。アドバイス等いただけましたら幸甚です。&lt;/p&gt;
+&lt;p&gt;（１）augustus --species=...... --extrinsicCfgFile=extrinsic.cfg --alternatives-from-evidence=true --hintsfile=hints.gff --allow_hinted_splicesites=atac --introns=on --genemodel=complete genome.fa &amp;gt; aug1.out&lt;/p&gt;
+&lt;p&gt;（２）augustus --species=....... --genemodel=complete genome.fa &amp;gt; aug1.out&lt;/p&gt;
+&lt;p&gt;また、CufflinksやAUGUSTUS以外に遺伝子予測するのに、オススメのプログラム等ありましたら教えて下さい。&lt;/p&gt;
+&lt;p&gt;よろしくお願いします。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/701/augustus%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E9%81%BA%E4%BC%9D%E5%AD%90%E4%BA%88%E6%B8%AC" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 22 May 2023 18:26:16 -0000</lastBuildDate></channel></rss>

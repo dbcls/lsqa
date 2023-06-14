@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: ChIP-seq figureの見かたにつきまして</title><link>http://qa.lifesciencedb.jp/questions/643/chip-seq-figure%E3%81%AE%E8%A6%8B%E3%81%8B%E3%81%9F%E3%81%AB%E3%81%A4%E3%81%8D%E3%81%BE%E3%81%97%E3%81%A6</link><description>&lt;p&gt;論文のChIP-seq結果をまとめたfigureの解釈に関する質問です。
+自分ではChIP-seqを行ったことがなく、データ処理についての経験がありません。&lt;/p&gt;
+&lt;p&gt;具体的にはhistoneのChIP-seqを行い、転写開始点(TSS)前後におけるhistone variantの分布を示したという図について縦軸（normalized reads; RRM）の値をどう解釈してよいのかが分かりません。
+本分からざっくりと意味はわかり、グラフのピークが示す山型を見ればよいと思うのですが、実際にどういう処理をして縦軸がだされたのか、その値は何を意味するのかが理解できません。
+こういうグラフを描くことについての計算方法や解釈を示した論文がありましたらご教示いただけると大変ありがたいです。
+よろしくお願いいたします。&lt;/p&gt;
+&lt;p&gt;以下に具体的な例を挙げました。
+PubMed Centralでfree accessできる論文ですと、&lt;a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125718/"&gt;PMC3125718&lt;/a&gt;の&lt;a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125718/figure/F1/"&gt;Figure 1&lt;/a&gt;のような図です。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/643/chip-seq-figure%E3%81%AE%E8%A6%8B%E3%81%8B%E3%81%9F%E3%81%AB%E3%81%A4%E3%81%8D%E3%81%BE%E3%81%97%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Thu, 29 Nov 2012 15:28:27 +0900</lastBuildDate><item><title>Comment by suimye on suimye's 回答</title><link>http://qa.lifesciencedb.jp/questions/643/chip-seq-figure%E3%81%AE%E8%A6%8B%E3%81%8B%E3%81%9F%E3%81%AB%E3%81%A4%E3%81%8D%E3%81%BE%E3%81%97%E3%81%A6#653</link><description>&lt;p&gt;TSさん、こんにちは。&lt;/p&gt;
+&lt;h2&gt;&amp;gt;High遺伝子1000個のうち、0.21個がTSS直上にピークを示す遺伝子である。 &lt;br&gt;&lt;/h2&gt;
+&lt;p&gt;というのは間違いで、&lt;br&gt;
+私の例だと、&lt;br&gt;&lt;/p&gt;
+&lt;h2&gt;1000個の遺伝子のあるゲノム領域をみると、合計で0.21個のread数&lt;br&gt;&lt;/h2&gt;
+&lt;p&gt;がみられる、となります。&lt;br&gt;
+（当然、1000個の遺伝子というのは私が適当に仮定した数字で、通常TSS領域でしたら、２万~数万領域となると思います。）&lt;br&gt;
+これでも少ないと思われると思いますし、0.21個のreadというのはおかしいと思われると思います。&lt;br&gt;
+このX=0.21というのは、全リード数だけでなく、実際は分母に何らかの定数があって、&lt;br&gt;
+0.21という小さな値になっているのだと思います。&lt;br&gt;
+値の詳細はその正規化係数によるのですが、正確には書いてなければわかりません。&lt;br&gt;
+たとえば、window sizeをtotal read数とともに分母にもってきて割り算しているかもしれませんね。&lt;br&gt;
+（はじめにwindow sizeを1bpと書きましたが間違いかもしれません。）&lt;br&gt;
+&lt;br&gt;
+この分布は、TSS付近の「ゲノム領域とread数の相関」をみているといっても良いと思います。&lt;br&gt;
+実際、y軸をcorrelationと表現する文献もあります &lt;a href="http://tinyurl.com/d5qlw9j"&gt;Quandt K. Genomics&lt;/a&gt; 。&lt;br&gt;
+y軸の値がread数を代表していることは間違いないですが、&lt;br&gt;
+少ない数がかならずしも小さな分布をみているとはかぎりません。&lt;br&gt;
+そもそもクロマチン免疫沈降で、ある目的領域のゲノム断片が効率よく沈降すること、&lt;br&gt;
+沈降したゲノムが、プール内からシーケンサーへサンプルロードされる割合、&lt;br&gt;
+正常なクラスタ形成から、readとしてよまれる確率を考えると蓄積するリードの数を考えると&lt;br&gt;
+どの程度で有意とされるかは難しい考え方です。&lt;br&gt;
+window内の1bpあたりの平均read数が１であっても、readのゲノムへのmappingのランダム化などを&lt;br&gt;
+行った場合の期待値をみれば、決して少ない数字とは限らないことが分かると思います。&lt;br&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">suimye</dc:creator><pubDate>Thu, 29 Nov 2012 15:28:27 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/643/chip-seq-figure%E3%81%AE%E8%A6%8B%E3%81%8B%E3%81%9F%E3%81%AB%E3%81%A4%E3%81%8D%E3%81%BE%E3%81%97%E3%81%A6#653</guid></item><item><title>Comment by TS on suimye's 回答</title><link>http://qa.lifesciencedb.jp/questions/643/chip-seq-figure%E3%81%AE%E8%A6%8B%E3%81%8B%E3%81%9F%E3%81%AB%E3%81%A4%E3%81%8D%E3%81%BE%E3%81%97%E3%81%A6#648</link><description>&lt;p&gt;suimye様、 &lt;/p&gt;
+&lt;p&gt;ご回答ありがとうございました。
+おかげさまでpeak regionのread数分布の作り方は理解することができました。
+以下の用に解釈したのですが、正しいでしょうか。 &lt;/p&gt;
+&lt;p&gt;例に挙げた論文のFigure1-aでHighの赤いラインはTSSの少し上流でy軸の値がほぼ1E-8です。 
+Supplement figureにH2A.Zの総tag数は2.1E+7とあります。 &lt;/p&gt;
+&lt;p&gt;ということは、Highに分類される遺伝子のTSS直上にmappingされるリード数をXとすると、 X/2.1E+7=1E-8で、X=0.21 High遺伝子1000個のうち、0.21個がTSS直上にピークを示す遺伝子である。 ということでしょうか？&lt;/p&gt;
+&lt;p&gt;確かに黒のsilentや青のmediumのラインと比べれば確かに差はありますが、すごくまれな現象を観察している印象を受けてしまいます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">TS</dc:creator><pubDate>Tue, 20 Nov 2012 22:17:07 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/643/chip-seq-figure%E3%81%AE%E8%A6%8B%E3%81%8B%E3%81%9F%E3%81%AB%E3%81%A4%E3%81%8D%E3%81%BE%E3%81%97%E3%81%A6#648</guid></item><item><title>Answer by suimye</title><link>http://qa.lifesciencedb.jp/questions/643/chip-seq-figure%E3%81%AE%E8%A6%8B%E3%81%8B%E3%81%9F%E3%81%AB%E3%81%A4%E3%81%8D%E3%81%BE%E3%81%97%E3%81%A6/644</link><description>&lt;p&gt;こんばんは。&lt;br&gt;
+Peak regionのread数分布を一番始めにみた論文はどれなのかは知らないですが、&lt;br&gt;
+とりあえずくだんのFigureの作成の具体的な方法は、&lt;br&gt;
+ 1. ある点(たとえばTSS)を基準としたゲノム領域のセットをつくる（遺伝子1000個のTSSまわり from -2000 to 100）&lt;br&gt;
+ 2. この1000配列にmappingされるreadの数をwindowサイズごとに計算する(ご案内いただいた論文では1bpごとに計算している)。&lt;br&gt;
+ 3. 異なるChIP-Seqごとにtotalリード数が違うので、比較する場合は、totalread数で正規化する。&lt;br&gt;
+3を行うことで、論文のy軸はとても小さな値になっていますよね。&lt;br&gt;
+その様子を図に描いてみました。&lt;br&gt;
+windowサイズのところは、色々工夫ができるので論文によってはsliding windowを overlapでやることで、&lt;br&gt;
+滑らかにしているものもあります。&lt;br&gt;
+図は、いまテキトウにつくってみたものなので、あんまりよろしくないですが、&lt;br&gt;
+直感的な理解にはつながるとおもってつくりました。&lt;br&gt;
+&lt;img alt="alt text" src="/upfiles/test.jpg"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">suimye</dc:creator><pubDate>Tue, 20 Nov 2012 18:06:54 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/643/chip-seq-figure%E3%81%AE%E8%A6%8B%E3%81%8B%E3%81%9F%E3%81%AB%E3%81%A4%E3%81%8D%E3%81%BE%E3%81%97%E3%81%A6/644</guid></item></channel></rss>

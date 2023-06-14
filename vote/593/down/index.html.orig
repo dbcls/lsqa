@@ -1,0 +1,964 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Bowtieのpair-end mappingのオプションについて - #LSQA</title>
+        <meta name="description" content="NGSのdata解析の全くの初心者です。
+一本鎖DNA由来のライブラリーをpair-endで読んだ後のBowtieによるMapping時のoptionについて質問です。
+MeDIP-seqの要領で、Illumina Truseqのライブラリーから一本鎖を選択的に精製したライブラリーをPCRで増幅後pair-endのsequenceingを行いました。BowtieでMappingする際、精製したライブラリーのstrandの情報を維持した状態でmappingの結果を得るためには、一つ目（-1）を&quot;Read1&quot;、二つ目 （-2）を ”Read2のreverse complement”として、pair">
+        <meta name="keywords" content="bowtie,pair-end,strand,illumina">
+        
+        <link rel="canonical" href="http://qa.lifesciencedb.jp/questions/593/bowtie%E3%81%AEpair-end-mapping%E3%81%AE%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/593/bowtie%E3%81%AEpair-end-mapping%E3%81%AE%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon.ico" />
+        <link href="/m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='/m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/qa.lifesciencedb.jp/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/qa.lifesciencedb.jp/media/js/wmd/wmd.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/qa.lifesciencedb.jp/media/js/wmd/wmd.css" />
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[プレビューを隠す]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[プレビューを表示する]" : "[プレビューを隠す]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >ログイン</a>  <a href="/about/" >概要</a>  <a href="/faq/" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >質問</a><a id="nav_tags" href="/tags/" >タグ</a><a id="nav_users" href="/users/" >ユーザー</a><a id="nav_badges" href="/badges/" >バッジ</a><a id="nav_unanswered" href="/questions/unanswered/" >未回答</a>
+        <a id="nav_ask" href="/questions/ask/" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/593/bowtie%E3%81%AEpair-end-mapping%E3%81%AE%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">Bowtieのpair-end mappingのオプションについて</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-593-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/593/up/" rel="nofollow"> </a>
+<div id="post-593-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-593-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/593/down/" rel="nofollow"> </a>
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/593/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>NGSのdata解析の全くの初心者です。
+一本鎖DNA由来のライブラリーをpair-endで読んだ後のBowtieによるMapping時のoptionについて質問です。
+MeDIP-seqの要領で、Illumina Truseqのライブラリーから一本鎖を選択的に精製したライブラリーをPCRで増幅後pair-endのsequenceingを行いました。BowtieでMappingする際、精製したライブラリーのstrandの情報を維持した状態でmappingの結果を得るためには、一つ目（-1）を"Read1"、二つ目 （-2）を ”Read2のreverse complement”として、pair-endのoptionを"--ff"とすれば、Read1とRead2が同じstrandにmapされた結果が得られるのでしょうか？
+Galaxyでは、--ffはSOLID用のoptionとして扱われているような気がしますが、IlluminaのR1とR2rev-compを用いても結果は問題ないのでしょうか？
+ご存知の方で、アドバイス頂けましたら幸甚です。</p>
+<p>よろしくお願い致します。</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/bowtie/" class="post-tag"
+                                        title="'bowtie'タグのついた質問をみる" rel="tag">bowtie</a>
+                                
+                                    <a href="/tags/pair-end/" class="post-tag"
+                                        title="'pair-end'タグのついた質問をみる" rel="tag">pair-end</a>
+                                
+                                    <a href="/tags/strand/" class="post-tag"
+                                        title="'strand'タグのついた質問をみる" rel="tag">strand</a>
+                                
+                                    <a href="/tags/illumina/" class="post-tag"
+                                        title="'illumina'タグのついた質問をみる" rel="tag">illumina</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">                            
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        質問日
+        <strong>Apr 14 '12 at 15:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/3d1fd60002ba9e80972222bf3fce346e?s=32&amp;d=identicon&amp;r=g" alt="touran's gravatar image" />
+    <p><a href="/users/110/touran/">touran</a><br/>
+    <span class="score" title="15 徳">15</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 バッジ"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span></p>
+</div>
+
+
+                            </div>
+                            
+
+
+<div class="comments-container" id="comments-container-593">
+    
+</div>
+<div id="comment-tools-593" class="comment-tools">
+    
+    
+</div>
+<div id="comment-593-form-container" class="comment-form-container">
+    
+</div>
+    
+                        </div>
+                        
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/593/bowtieのpair-end-mappingのオプションについて?sort=登録順" title="最古の回答が最初に表示されます">回答順</a><a href="/questions/593/bowtieのpair-end-mappingのオプションについて?sort=最新" title="最新の回答が最初に表示されます">最新</a><a href="/questions/593/bowtieのpair-end-mappingのオプションについて?sort=投票" class="on" title="もっとも投票された回答が最初に表示されます">支持されている順</a></div>
+                </div>
+                
+  
+                
+                    <a name="601"></a>
+                    <div id="answer-container-601" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-601-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/601/up/" rel="nofollow"> </a>
+<div id="post-601-score" class="post-score"
+    title="現在の投票数">
+    1
+</div>
+<a id="post-601-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/601/down/" rel="nofollow"> </a>
+                                        
+
+
+    
+        <a class="accept-answer on"></a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>適当な解答の罪滅ぼしに、自分でも同じことしてみました。結果、ffは機能しているように見えます。
+何か、別の原因があるのではないでしょうか？</p>
+<p>以下の処理で実行しているのは、この場合はRNA-Seqの公開ペアデータを使用していますが、
+本質的にはtouran様のデータと変わらないように思います。</p>
+<p>やったことは、以下の3データセットそれぞれに対し</p>
+<ol>
+<li>"リード1そのまま"-"リード2そのまま"のペア</li>
+<li>"リード1そのまま"-"リード2の逆鎖"のペア</li>
+<li>"リード1逆鎖"-"リード2そのまま"のペア</li>
+</ol>
+<p>それぞれ、fr/rf/ffの各オプションを試しています。</p>
+<pre><code># 頭から10,000エントリー抜き出す。
+head -n 40000 Data/SRR315301_1.fastq &gt; Dataext/SRR315301_1.ext.fastq
+head -n 40000 Data/SRR315301_2.fastq &gt; Dataext/SRR315301_2.ext.fastq
+
+# リード1とリード2の逆鎖をそれぞれ変換して別のファイルにします。
+/toolDir/fastx_toolkit-0.0.13/bin/fastx_reverse_complement -i Dataext/SRR315301_2.ext.fastq -o Dataext/SRR315301_2.ext.revComp.fastq -Q 33
+/toolDir/fastx_toolkit-0.0.13/bin/fastx_reverse_complement -i Dataext/SRR315301_1.ext.fastq -o Dataext/SRR315301_1.ext.revComp.fastq -Q 33
+
+# ffの場合
+bowtie --ff /dataDir/hg19multi/bowtie-0.12.7/hg19.fa -1 Dataext/SRR315301_1.ext.fastq -2 Dataext/SRR315301_2.ext.fastq &gt; ff.12.bowtie
+bowtie --ff /dataDir/hg19multi/bowtie-0.12.7/hg19.fa -1 Dataext/SRR315301_1.ext.fastq -2 Dataext/SRR315301_2.ext.revComp.fastq &gt; ff.12rev.bowtie
+bowtie --ff /dataDir/hg19multi/bowtie-0.12.7/hg19.fa -1 Dataext/SRR315301_1.ext.revComp.fastq -2 Dataext/SRR315301_2.ext.fastq &gt; ff.1rev2.bowtie
+
+# frの場合
+bowtie --fr /dataDir/hg19multi/bowtie-0.12.7/hg19.fa -1 Dataext/SRR315301_1.ext.fastq -2 Dataext/SRR315301_2.ext.fastq &gt; fr.12.bowtie
+bowtie --fr /dataDir/hg19multi/bowtie-0.12.7/hg19.fa -1 Dataext/SRR315301_1.ext.fastq -2 Dataext/SRR315301_2.ext.revComp.fastq &gt; fr.12rev.bowtie
+bowtie --fr /dataDir/hg19multi/bowtie-0.12.7/hg19.fa -1 Dataext/SRR315301_1.ext.revComp.fastq -2 Dataext/SRR315301_2.ext.fastq &gt; fr.1rev2.bowtie
+
+# rfの場合
+bowtie --rf /dataDir/hg19multi/bowtie-0.12.7/hg19.fa -1 Dataext/SRR315301_1.ext.fastq -2 Dataext/SRR315301_2.ext.fastq &gt; rf.12.bowtie
+bowtie --rf /dataDir/hg19multi/bowtie-0.12.7/hg19.fa -1 Dataext/SRR315301_1.ext.fastq -2 Dataext/SRR315301_2.ext.revComp.fastq &gt; rf.12rev.bowtie
+bowtie --rf /dataDir/hg19multi/bowtie-0.12.7/hg19.fa -1 Dataext/SRR315301_1.ext.revComp.fastq -2 Dataext/SRR315301_2.ext.fastq &gt; rf.1rev2.bowtie
+
+#結果のサマリ
+$ wc -l *.bowtie
+     6 ff.12.bowtie
+  1494 ff.12rev.bowtie
+    14 ff.1rev2.bowtie
+  1584 fr.12.bowtie
+     2 fr.12rev.bowtie
+     0 fr.1rev2.bowtie
+    24 rf.12.bowtie
+     2 rf.12rev.bowtie
+     4 rf.1rev2.bowtie
+</code></pre>
+<p>上記の結果、まともにヒットしたペアリードのある組み合わせは以下の2つのみです。</p>
+<ol>
+<li>ff.12rev.bowtie</li>
+<li>fr.12.bowtie</li>
+</ol>
+<p>この内ff.12revと書いてある条件は、リード1はそのままに、リード2は逆鎖をとったデータに対して"ff"オプションを使用した際の
+結果であるはずなので、touranさんの当初の意図が達成されていることになるかと思います。
+以下、実際ヒットしたものを抜き出していますが、ffのペアは++で当っていることが分かるかと思います。</p>
+<pre><code>$ head -n 6 ff.12rev.bowtie
+SRR315301.653 JOHNLENNON_0014:1:1:4723:1141 length=76/1 +       chr13   39587153        GGCCGTTGAGCTAGGATGAGGGAGAGATGTGGAGGGGGCAGCGGTAGATGTGGTGGCGATTAATGACCAGGGGGGG      GGDGGDDGGGDDGGG&gt;AGCEECAC@###################################################      0       0:T&gt;G,35:T&gt;G,50:A&gt;T,57:T&gt;G,68:C&gt;A,69:T&gt;G,73:A&gt;G,75:A&gt;G
+SRR315301.653 JOHNLENNON_0014:1:1:4723:1141 length=76/2 +       chr13   39587320        TGGGAGTNGAGGAACCATGTGGTGGAAGGNNAATAGAGGAAAGAGGATTTGAACCATTTAAAGGAGTACTCAAGCT      &gt;??A@?=#A?AIEEDFHHIIH?==?=59@##GGGGGIIDHIGGGBEDGEGGEEGGGI=GIFIDGIIEGD&gt;DIGGGI      0       7:G&gt;N,29:G&gt;N,30:A&gt;N
+SRR315301.803 JOHNLENNON_0014:1:1:1949:1141 length=76/1 +       chr5    75537629        GTTTTCTCCACATCAATCCAGCTTTGGAGACATTCTATTAGTGACATATGCCCCTTCCCCCAAAAACAACAATGAA      GGBGGHHHB@GGGEGHH&lt;HBDAGGDEC&gt;&gt;A?=A??GDEBCC&lt;C&gt;@BEBCED:DCDEEEDAB@1:@;9325249823      0       41:C&gt;T
+SRR315301.803 JOHNLENNON_0014:1:1:1949:1141 length=76/2 +       chr5    75537797        TTCAAACNGGACAGTCACCAGAAGTACACNNTTATCAAAAATGCACACACTTCACTTGGCATCTCCAGCACCTTCA      ###########B:&gt;+B?CC??78353&lt;79##?:B?B?AAEA&lt;;?;B9@.A5AF;F@CCCFC=B;@BEFE&lt;FIGIII      0       7:T&gt;N,9:T&gt;G,29:A&gt;N,30:G&gt;N
+SRR315301.817 JOHNLENNON_0014:1:1:4676:1152 length=76/1 +       chr6    7287801 TGCGAGATCCATGCTTTATGAACACATTATTCTCACACATCCGGGGATAGGTTTGATACACAAGATCCTTAAAGTC      HHHHBHHGHHHHHHHHHHHHHHH&lt;HHHGHHHHHHHHHHHHHHGHHHHGHF@EHHHHHFGHHGDGDBDB&lt;B===A=A      0       0:A&gt;T
+SRR315301.817 JOHNLENNON_0014:1:1:4676:1152 length=76/2 +       chr6    7287964 AAACTTCATCCAAATATTTACATTTTAAAAAGACATTTAAAAAATAGGCTACTTATTAAGTGTGCTTGAACAAACC      EBBDB&gt;IIDGIHHIFFEEFDIIEECIIHIHIIGIIHIIIIFIIIFEIHIIIIIEGGGHIIHIIIIHIIIIIIIIII      0
+$ head -n 6 fr.12.bowtie
+SRR315301.653 JOHNLENNON_0014:1:1:4723:1141 length=76/1 +       chr13   39587153        GGCCGTTGAGCTAGGATGAGGGAGAGATGTGGAGGGGGCAGCGGTAGATGTGGTGGCGATTAATGACCAGGGGGGG      GGDGGDDGGGDDGGG&gt;AGCEECAC@###################################################      0       0:T&gt;G,35:T&gt;G,50:A&gt;T,57:T&gt;G,68:C&gt;A,69:T&gt;G,73:A&gt;G,75:A&gt;G
+SRR315301.653 JOHNLENNON_0014:1:1:4723:1141 length=76/2 -       chr13   39587320        TGGGAGTNGAGGAACCATGTGGTGGAAGGNNAATAGAGGAAAGAGGATTTGAACCATTTAAAGGAGTACTCAAGCT      &gt;??A@?=#A?AIEEDFHHIIH?==?=59@##GGGGGIIDHIGGGBEDGEGGEEGGGI=GIFIDGIIEGD&gt;DIGGGI      0       45:A&gt;N,46:G&gt;N,68:G&gt;N
+SRR315301.719 JOHNLENNON_0014:1:1:11792:1141 length=76/2        +       chr14   32625445  CACAGGTAAATTTCACTAGGTTATATTTTGTGTAGTAAAGAAAAANNNTATTTGGTCAATGTTATCNNNNTTCATA    IDFGIIF&gt;IGGGGGGEDDGDDGGGGGGGDGDGEFGEGFGGA&gt;&gt;==###:68888;BIEEIIDFEE###########      0       45:A&gt;N,46:A&gt;N,47:T&gt;N,66:T&gt;N,67:T&gt;N,68:A&gt;N,69:A&gt;N
+SRR315301.719 JOHNLENNON_0014:1:1:11792:1141 length=76/1        -       chr14   32625609  TCCTAAAATAAATATTGTCTCTCCCAACTGTTAAGTTCTAGGTATTGTACTTCCAATTTTAACTTCAGAACCAAGA    CCGCFCADD@DA2=8=&lt;BD8DBEBEE@GBDDHHBDHFG&gt;FGAECCCDEDGGDHHHHBBGGGGG@DGDGGGGHGHHD      0
+SRR315301.803 JOHNLENNON_0014:1:1:1949:1141 length=76/1 +       chr5    75537629        GTTTTCTCCACATCAATCCAGCTTTGGAGACATTCTATTAGTGACATATGCCCCTTCCCCCAAAAACAACAATGAA      GGBGGHHHB@GGGEGHH&lt;HBDAGGDEC&gt;&gt;A?=A??GDEBCC&lt;C&gt;@BEBCED:DCDEEEDAB@1:@;9325249823      0       41:C&gt;T
+SRR315301.803 JOHNLENNON_0014:1:1:1949:1141 length=76/2 -       chr5    75537797        TTCAAACNGGACAGTCACCAGAAGTACACNNTTATCAAAAATGCACACACTTCACTTGGCATCTCCAGCACCTTCA      ###########B:&gt;+B?CC??78353&lt;79##?:B?B?AAEA&lt;;?;B9@.A5AF;F@CCCFC=B;@BEFE&lt;FIGIII      0       45:G&gt;N,46:A&gt;N,66:T&gt;G,68:T&gt;N
+</code></pre>
+<p>可能性としては、ヒットの確認使っているビューワ等が、ffリードのペアに対応していないとか。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Apr 21 '12 at 02:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=32&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+    <p><a href="/users/23/nob_fj/">nob_fj ♦</a><br/>
+    <span class="score" title="507 徳">507</span><span title="8 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="16 バッジ"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="28 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">28</span></span></p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-601">
+    
+        <a name="602"></a>
+        <div class="comment" id="comment-602">
+            <div id="post-602-score" class="comment-score"></div>
+            <div class="comment-text"><p>nob_fjさま 回答ありがとうございます。
+--ffのpair-end mapping自体うまくいくようになりました。公開されているdataを使ってやってみる限りではうまくいきましたが、自分のdataではうまくmappingされていなかったのでdataとbowtieとの相性を調べていました。お恥ずかしい限りですが、自分のdataを使う限りbowtieでpair-endのmapping自体がうまくいっていないように見えるdataセットがあることにようやく気づきまして、原因がpair-endのライブラリーのインサートの長さであることがわかりました。IPしたライブラリーには長鎖の断片が優先的に濃縮されてくる性質があることを考慮してませんでした。以下のサイトでも議論されていますが、Bowtieのデフォルトのインサートサイズが250b?と短めなので、長めのライブラリーにはoptionが必要なのですね。
+http://www.biostars.org/post/show/9090/bowtie-pair-end-broken/
+-X 800などのインサートのサイズを大きめに設定してやるとR1&amp;R2の--frでもR1&amp;R2rvcompの--ffでもmappingがうまくいくようになりました。ご迷惑をお掛けいたしましたが、いろいろ親身になって回答頂き大変助かりました。ありがとうございました。</p></div>
+            <div class="comment-info" id="comment-602-info">
+                
+                
+                
+                <span class="comment-age">(Apr 23 '12 at 13:30)</span>
+                <a class="comment-user userinfo" href="/users/110/touran/">touran</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/3d1fd60002ba9e80972222bf3fce346e?s=18&amp;d=identicon&amp;r=g" alt="touran's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="603"></a>
+        <div class="comment" id="comment-603">
+            <div id="post-603-score" class="comment-score"></div>
+            <div class="comment-text"><p>こちらこそ、ChIPのノウハウは乏しいため、貴重な情報提供ありがとうございました。また、お役に立てて何よりです。</p></div>
+            <div class="comment-info" id="comment-603-info">
+                
+                
+                
+                <span class="comment-age">(Apr 23 '12 at 15:12)</span>
+                <a class="comment-user userinfo" href="/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="604"></a>
+        <div class="comment" id="comment-604">
+            <div id="post-604-score" class="comment-score"></div>
+            <div class="comment-text"><p>一応誤解のないように。IP(免疫沈降)といってもChIPではなくMeDIPやBrdU-IPのように抗体の抗原がDNA自体になる場合は、長いDNAの方が抗原となるものが多く含まれる率が高くなるため、飽和していない条件では長鎖の断片の方が優先的にIPされてくる性質があります。</p></div>
+            <div class="comment-info" id="comment-604-info">
+                
+                
+                
+                <span class="comment-age">(Apr 24 '12 at 13:23)</span>
+                <a class="comment-user userinfo" href="/users/110/touran/">touran</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/3d1fd60002ba9e80972222bf3fce346e?s=18&amp;d=identicon&amp;r=g" alt="touran's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="605"></a>
+        <div class="comment" id="comment-605">
+            <div id="post-605-score" class="comment-score"></div>
+            <div class="comment-text"><p>誤解しておりました。DNA自体を抗原にした場合のIP独自の問題だったのですね。大変参考になります。</p></div>
+            <div class="comment-info" id="comment-605-info">
+                
+                
+                
+                <span class="comment-age">(Apr 24 '12 at 16:41)</span>
+                <a class="comment-user userinfo" href="/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-601" class="comment-tools">
+    
+    
+</div>
+<div id="comment-601-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="594"></a>
+                    <div id="answer-container-594" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-594-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/594/up/" rel="nofollow"> </a>
+<div id="post-594-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-594-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/594/down/" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>直接の解答ではないですが、ご参考までにですが、
+入力ファイルの先頭10000エントリーとかを取り出して、小さいサブデータセットを作り、
+考えうる選択肢でマップしてみて、どれがうまくいくか試すのは、パラメータの検討や、確認でよくやります。
+たまに、マニュアルの記載の方が間違っている場合もあるらしいですし。コマンドでやるなら以下のようなかんじでしょうか。
+比較はSAMからBAMにして、IGVやら、samtoolsのtviewでやるなり、いろいろ考えられます。
+Galaxyで同じことやるやり方は良く知りません。</p>
+<pre><code>head -n 40000 file1.fastq &gt; file1.ext.fastq
+head -n 40000 file2.fastq &gt; file2.ext.fastq
+bowtie -fr index.fasta -1 file1.ext.fastq -2 file2.ext.fastq &gt; out.fr.bowtie
+bowtie -rf index.fasta -1 file1.ext.fastq -s file2.ext.fastq &gt; out.rf.bowtie
+bowtie -ff index.fasta -1 file1.ext.fastq -s file2.ext.fastq &gt; out.ff.bowtie
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Apr 16 '12 at 14:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=32&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+    <p><a href="/users/23/nob_fj/">nob_fj ♦</a><br/>
+    <span class="score" title="507 徳">507</span><span title="8 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="16 バッジ"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="28 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">28</span></span></p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-594">
+    
+        <a name="596"></a>
+        <div class="comment" id="comment-596">
+            <div id="post-596-score" class="comment-score"></div>
+            <div class="comment-text"><p>nob_fjさま
+アドバイスありがとうございました。小さいサブデータで試してみましたが、R_1とR_2のreverse complementの組み合わせの-ffはうまくいかないようでした（ほとんどがマップされない）。R_1とR_2のreverse complementを別々にsingle readでmapしたものはきちんとマップされますし、サブデータの中ではR_2とR2_revはきちんと同じ場所の相補鎖にほとんどすべてがmapされてますので、とりあえずread countを稼ぐためにsingle readとしてwetの実験自体がうまくいったかを検証しています。mappingのoptionの問題は時間をかけて解決したいと思います。貴重なアドバイスありがとうございました。</p></div>
+            <div class="comment-info" id="comment-596-info">
+                
+                
+                
+                <span class="comment-age">(Apr 20 '12 at 21:55)</span>
+                <a class="comment-user userinfo" href="/users/110/touran/">touran</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/3d1fd60002ba9e80972222bf3fce346e?s=18&amp;d=identicon&amp;r=g" alt="touran's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="597"></a>
+        <div class="comment" id="comment-597">
+            <div id="post-597-score" class="comment-score"></div>
+            <div class="comment-text"><p>こちらこそ、貴重な情報報告いただいて、大変参考になりました。上記のスクリプトを貼りつけた後に、よくよく考えると、40000では、少ないこともあるかもと思い、若干心配しておりましたが、わずかながらでもお役に立てて何よりです。</p></div>
+            <div class="comment-info" id="comment-597-info">
+                
+                
+                
+                <span class="comment-age">(Apr 20 '12 at 22:02)</span>
+                <a class="comment-user userinfo" href="/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-594" class="comment-tools">
+    
+    
+</div>
+<div id="comment-594-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="598"></a>
+                    <div id="answer-container-598" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-598-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/598/up/" rel="nofollow"> </a>
+<div id="post-598-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-598-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/598/down/" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>ちなみに、今更、質問内容を何となく理解しましたが、</p>
+<ul>
+<li>入力ファイルはリード1がforward, リード2がreverse</li>
+<li>シングルエンドでリード1をマップすると、forwardに貼りつく領域では、シングルエンドでリード2をマップするとその近傍の下流にreverseで貼りつく。</li>
+<li>-ffオプションを使用すると、リード1がforward、リード2もforwardに貼りつくペアしか有効なマップとみなされないため、ほとんどマップ結果が無い。</li>
+<li>-frオプションでは、リード1がforward、リード2がreverseに貼りつくペアが有効なマップとみなされるため、多数がマップされる。</li>
+</ul>
+<p>という理解であっておりますでしょうか。
+試していないので、確証はありませんが、リード2だけ予め配列のcomplementを取った上で"-ff"オプションでマップすれば、上記の状況と異なり</p>
+<ul>
+<li>入力ファイルはリード1がforward, リード2がforward</li>
+<li>シングルエンドでリード1をマップすると、forwardに貼りつく領域では、シングルエンドでリード2をマップするとその近傍の下流にforwardで貼りつく。</li>
+<li>-ffオプションを使用すると、リード1がforward、リード2もforwardに貼りつくペアが有効なマップとみなされるため、多数がマップされる。</li>
+</ul>
+<p>となるのでないでしょうか。</p>
+<p>逆鎖の取得は<a href="http://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=FASTX-Toolkit">fastx tool kit</a>などでもできますし、</p>
+<pre><code>$ /toolDir/fastx_toolkit-0.0.13/bin/fastx_reverse_complement -i file2.ext.fastq -o file2.ext.comp.fastq -Q 33
+</code></pre>
+<p>Illuminaのfastqであれば、以下のようなperlのワンライナーでも(多分問題なく)変換できます。</p>
+<pre><code>$ perl -lne 'if($. % 4==2){$_=reverse;tr/ATGC/TACG/;}elsif($. % 4 == 0){$_=reverse;};print;' file2.ext.fastq &gt; file2.ext.comp.fastq_
+</code></pre>
+<p>いちおう、上記の結果は私が試した限りでは、結果は一致しました。</p>
+<pre><code>$ diff file2.ext.comp.fastq file2.ext.comp.fastq_
+$
+</code></pre>
+<p>上記のいずれか、または他の適当な手段でリード2のファイルのみ相補鎖に変換した上で"-ff"でマップとかならうまくいくかもしれません。</p>
+<pre><code>bowtie -ff index.fasta -1 file1.ext.fastq -s file2.ext.comp.fastq &gt; out.ff.2comp.bowtie
+</code></pre>
+<p>※余談ですが、fastx tool kitを使う場合は、最近の配列は-Q 33が必要だと思いますが、そのオプションをつけないとエラーが出るときだけつけて下さい。tool kitのバージョンや、配列のバージョンによって、いらない場合もあるかもしれません。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Apr 20 '12 at 22:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=32&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+    <p><a href="/users/23/nob_fj/">nob_fj ♦</a><br/>
+    <span class="score" title="507 徳">507</span><span title="8 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="16 バッジ"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="28 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">28</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="/revisions/598/">
+                edited
+                <strong>Apr 20 '12 at 22:57</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-598">
+    
+        <a name="599"></a>
+        <div class="comment" id="comment-599">
+            <div id="post-599-score" class="comment-score"></div>
+            <div class="comment-text"><p>nob_fjさま
+回答ありがとうございます。これまで質問の意図がうまく伝わっていなかったようですみません。”・・・となるのでないでしょうか。”とおっしゃるとおりの質問でした。Fw-Rvの組み合わせのreadなら-fr、Rvのreadをrv-compにしてやってFwに変えてやりFw-Fw'の組み合わせにすれば-ffでmappingされると思っていたのですが、なぜかうまくいっていません。
+当方toolのインストールなど不慣れですので、FASTXなどはGalaxyなどを使ってR_2のreverse complementをおっしゃるとおりつくり、fwのR_１とfwの向きになおしたR_2(R_2rv-comp)を使って-ffのmappingをやってみましたがほとんどmappingされませんでした（GalaxyのBowtieでも私のMacのBowtieでも）。なにか途中でミスをしてるのか、他のオプションの設定があるのか、何かがまちがっているのか理解不能な状況に陥っています。</p>
+<p>P.S. -Q 33とは何のことでしょうか？（初心者質問ですみません）</p></div>
+            <div class="comment-info" id="comment-599-info">
+                
+                
+                
+                <span class="comment-age">(Apr 20 '12 at 23:31)</span>
+                <a class="comment-user userinfo" href="/users/110/touran/">touran</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/3d1fd60002ba9e80972222bf3fce346e?s=18&amp;d=identicon&amp;r=g" alt="touran's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="600"></a>
+        <div class="comment" id="comment-600">
+            <div id="post-600-score" class="comment-score"></div>
+            <div class="comment-text"><p>理解しました。理解できておらず、こちらこそお手数おかけしました。何某かのBowtieの仕様なのでしょうね。気になるようなら開発者に連絡してみるのも一つの手かもしれませんね。
+-Q 33は、fastx toolkitの使用時のオプションで、galaxy経由で実行する場合は、関係ない気がします。上のスクリプトの隠れた部分に書いてあります。質問自体には直接関係ないので、忘れて下さい。</p></div>
+            <div class="comment-info" id="comment-600-info">
+                
+                
+                
+                <span class="comment-age">(Apr 20 '12 at 23:41)</span>
+                <a class="comment-user userinfo" href="/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-598" class="comment-tools">
+    
+    
+</div>
+<div id="comment-598-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/593/answer/" method="post">
+            <div style="clear:both">
+            </div>
+            
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            あなたの回答
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea rows="10" cols="40" name="text" id="editor"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="リアルタイムMarkdown編集プレビューをトグルする">
+                                            プレビューをトグルする
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input type="checkbox" name="wiki" id="id_wiki" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="コミュニティー wikiオプションを選択した場合、質問と回答はポイントを生成せず、作者名は表示されない">
+                                            <label for="id_wiki">コミュニティー wiki</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+                        
+                        </table>  
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>                    
+                </div>
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">この質問をフォローする</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="/questions/593/bowtie%E3%81%AEpair-end-mapping%E3%81%AE%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6?type=rss" title="subscribe to answers"></a>
+    回答
+</p><p><a class="feed-icon" style="background-image:url('/m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="/questions/593/bowtie%E3%81%AEpair-end-mapping%E3%81%AE%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    回答とコメント
+</p>
+
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>ただいまベータテスト運用中です。そのために通知無くコンテンツの変更やサービスの停止変更されることがあります。</h2>
+<p>質問するなら<a href="http://qa.lifesciencedb.jp">ライフサイエンスQA</a>。</p>
+<p>このページの<a href="?type=rss">RSSフィード</a></p>
+<p><a href="http://twitter.com/lsqa_all">@lsqa_all</a>・<a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a></p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <p>
+		タグ:
+    </p>
+    <p class="tags" >
+        
+        	<a href="/tags/bowtie/" 
+			title="タグ付けされた質問をみる'bowtie'タグを利用している" 
+			rel="tag">bowtie</a> <span class="tag-number">&#215;6</span><br/>
+        
+        	<a href="/tags/illumina/" 
+			title="タグ付けされた質問をみる'illumina'タグを利用している" 
+			rel="tag">illumina</a> <span class="tag-number">&#215;3</span><br/>
+        
+        	<a href="/tags/pair-end/" 
+			title="タグ付けされた質問をみる'pair-end'タグを利用している" 
+			rel="tag">pair-end</a> <span class="tag-number">&#215;1</span><br/>
+        
+        	<a href="/tags/strand/" 
+			title="タグ付けされた質問をみる'strand'タグを利用している" 
+			rel="tag">strand</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        質問日: <strong title="2012-04-14 15:22:26.739268">Apr 14 '12 at 15:22</strong>
+    </p>
+    <p> 
+     	閲覧数: <strong>9,449 回</strong>
+    </p>
+    <p> 
+        最終更新日: <strong title="2012-04-24 16:41:56.489451">Apr 24 '12 at 16:41</strong>
+    </p>
+</div>
+
+
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>世界に広がるQAサイト</h2>
+<p><a href="http://biostar.stackexchange.com">バイオインフォマティクスのBioStar</a>・ <a href="http://I.SEQanswers.com">新型シーケンサーのSEQanswers</a>・ <a href="http://blueobelisk.shapado.com">オープンデータのBlueObelisk</a>・<a href="http://stackoverflow.com">プログラミングのstackoverflow</a>・ <a href="http://www.semanticoverflow.com">Semantic Overflow</a>・ <a href="http://stats.stackexchange.com/">Statistical Analysis</a>・ <a href="http://cstheory.stackexchange.com/">Theoretical Computer Science</a>・ <a href="http://chiebukuro.yahoo.co.jp/">Yahoo!知恵袋</a>・ <a href="http://okwave.jp/">OKWave</a> <a href="http://ja.wikipedia.org/wiki/Category:Q%26Aサイト">などなど</a></p>
+     </div>
+</div>
+
+<div class="boxC">
+    <h3 class="subtitle">関係した質問</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/255/bowtie-samtools%E3%81%BE%E3%81%A7%E3%82%92grid%E5%8C%96">bowtie &gt; samtoolsまでをgrid化</a>
+        </p>
+        
+        <p>
+            <a href="/questions/308/bowtie%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E5%85%A5%E5%8A%9B%E3%81%AE%E4%BB%95%E6%96%B9">Bowtieのコマンド入力の仕方</a>
+        </p>
+        
+        <p>
+            <a href="/questions/751/rna-seq-%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%AE%9A%E9%87%8F%E3%81%A8%E5%8F%AF%E8%A6%96%E5%8C%96%E3%81%AE-%E3%83%84%E3%83%BC%E3%83%AB%E3%81%AE%E7%B5%84%E3%81%BF%E5%90%88%E3%82%8F%E3%81%9B">RNA-seq データの定量と可視化の、ツールの組み合わせ</a>
+        </p>
+        
+        <p>
+            <a href="/questions/426/chip-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%9E%E3%83%AB%E3%83%81%E3%83%92%E3%83%83%E3%83%88-%E3%83%9F%E3%82%B9%E3%83%9E%E3%83%83%E3%83%81%E3%81%AE%E6%89%B1%E3%81%84">Chip-seqデータのマッピングにおけるマルチヒット/ミスマッチの扱い</a>
+        </p>
+        
+        <p>
+            <a href="/questions/702/%E9%AB%98%E9%80%9F%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%81%AE%E5%87%BA%E5%8A%9B%E3%83%87%E3%83%BC%E3%82%BF%E5%AE%B9%E9%87%8F%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">高速シーケンサの出力データ容量について</a>
+        </p>
+        
+        <p>
+            <a href="/questions/323/solid-pair-end-%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92bowtie%E3%81%A7%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88">SOLID pair end データをbowtieでアライメント</a>
+        </p>
+        
+        <p>
+            <a href="/questions/229/illumina%E9%85%8D%E5%88%97%E3%81%8B%E3%82%89%E3%81%AEpaired-end-mate-pair%E8%AD%98%E5%88%A5%E6%96%B9%E6%B3%95">illumina配列からのpaired-end,mate-pair識別方法</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >概要</a> <span class="link-separator"> |</span> <a href="/faq/" >よくある質問</a> <span class="link-separator"> |</span> <a href="/privacy/" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="/m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

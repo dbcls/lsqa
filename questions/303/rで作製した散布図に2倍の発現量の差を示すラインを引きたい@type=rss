@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: Rで作製した散布図に2倍の発現量の差を示すラインを引きたい</title><link>http://qa.lifesciencedb.jp/questions/303/r%E3%81%A7%E4%BD%9C%E8%A3%BD%E3%81%97%E3%81%9F%E6%95%A3%E5%B8%83%E5%9B%B3%E3%81%AB2%E5%80%8D%E3%81%AE%E7%99%BA%E7%8F%BE%E9%87%8F%E3%81%AE%E5%B7%AE%E3%82%92%E7%A4%BA%E3%81%99%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%92%E5%BC%95%E3%81%8D%E3%81%9F%E3%81%84</link><description>&lt;p&gt;Rで作製した散布図に、サンプル間で２倍の発現量の差を示す
+ラインを引きたいと思いますが、どうしても方法がわかりません。
+（論文などで散布図上に×2.0と書いてあるライン）
+どうぞ宜しくお願い致します。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/303/r%E3%81%A7%E4%BD%9C%E8%A3%BD%E3%81%97%E3%81%9F%E6%95%A3%E5%B8%83%E5%9B%B3%E3%81%AB2%E5%80%8D%E3%81%AE%E7%99%BA%E7%8F%BE%E9%87%8F%E3%81%AE%E5%B7%AE%E3%82%92%E7%A4%BA%E3%81%99%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%92%E5%BC%95%E3%81%8D%E3%81%9F%E3%81%84" rel="self"></atom:link><language>ja</language><lastBuildDate>Wed, 16 Feb 2011 18:42:45 +0900</lastBuildDate><item><title>Answer by かどた</title><link>http://qa.lifesciencedb.jp/questions/303/r%E3%81%A7%E4%BD%9C%E8%A3%BD%E3%81%97%E3%81%9F%E6%95%A3%E5%B8%83%E5%9B%B3%E3%81%AB2%E5%80%8D%E3%81%AE%E7%99%BA%E7%8F%BE%E9%87%8F%E3%81%AE%E5%B7%AE%E3%82%92%E7%A4%BA%E3%81%99%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%92%E5%BC%95%E3%81%8D%E3%81%9F%E3%81%84/318</link><description>&lt;p&gt;私のウェブページ上にやり方を載せておきました。
+&lt;a href="http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html#figure_maplot"&gt;http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html#figure_maplot&lt;/a&gt;
+の最初の例題です。&lt;/p&gt;
+&lt;p&gt;散布図が具体的にどのようなものかはわかりませんが、おそらく下記のコマンドでいいです。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;
+abline(h=1, col="red", lwd=1)
+&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">かどた</dc:creator><pubDate>Wed, 16 Feb 2011 18:42:45 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/303/r%E3%81%A7%E4%BD%9C%E8%A3%BD%E3%81%97%E3%81%9F%E6%95%A3%E5%B8%83%E5%9B%B3%E3%81%AB2%E5%80%8D%E3%81%AE%E7%99%BA%E7%8F%BE%E9%87%8F%E3%81%AE%E5%B7%AE%E3%82%92%E7%A4%BA%E3%81%99%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%92%E5%BC%95%E3%81%8D%E3%81%9F%E3%81%84/318</guid></item></channel></rss>

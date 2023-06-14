@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: cuffmergeの結果について</title><link>http://qa.lifesciencedb.jp/questions/859/cuffmerge%E3%81%AE%E7%B5%90%E6%9E%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;御世話になります．
+初心者なので、DDBJ Sequence Read Archive (DRA) から取得したRNA-seqのヒトサンプルデータ数名分を解析しております．&lt;/p&gt;
+&lt;p&gt;cufflinksのcuffmergeを実行しました．
+群内における発現量のばらつきを知りたいのですが、mergedファイル内のgenes.fpkm_tracking（isoforms.fpkm_trackingとどちらが適切かわかりませんが）の結果をみると、FPKM_conf_loとFPKM_conf_hiは同じ値になっています．&lt;/p&gt;
+&lt;p&gt;これは、うまくmergeできなかったと解釈すればよいでしょうか．&lt;/p&gt;
+&lt;p&gt;実行コマンドは、cuffmerge -o merged -p 4 -g Homo_sapiens.GRCh38.87.gtf transcripts.gtf.txt　です．&lt;/p&gt;
+&lt;p&gt;どうぞよろしくお願い致します．&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/859/cuffmerge%E3%81%AE%E7%B5%90%E6%9E%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 22 May 2023 17:50:35 -0000</lastBuildDate></channel></rss>

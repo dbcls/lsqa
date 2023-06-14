@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: 次世代シークエンサーの使い道</title><link>http://qa.lifesciencedb.jp/questions/642/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%AF%E3%82%A8%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E4%BD%BF%E3%81%84%E9%81%93</link><description>&lt;p&gt;いつもお世話になっております。
+最近、次世代シークエンサーを使ったMegacloningという方法を知ったのですが、この他にも単純にDNA配列を読む以外に次世代シークエンサーの使い道はありますか？知っている方がいらっしゃれば教えてください。
+よろしくお願いします。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/642/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%AF%E3%82%A8%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E4%BD%BF%E3%81%84%E9%81%93" rel="self"></atom:link><language>ja</language><lastBuildDate>Wed, 27 Mar 2013 10:08:46 +0900</lastBuildDate><item><title>Answer by dritoshi</title><link>http://qa.lifesciencedb.jp/questions/642/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%AF%E3%82%A8%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E4%BD%BF%E3%81%84%E9%81%93/664</link><description>&lt;p&gt;スクリーニングならば、エンハンサー活性を直接測定する STARR-seq は如何でしょうか?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/STARR-seq"&gt;http://en.wikipedia.org/wiki/STARR-seq&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.sciencemag.org/content/339/6123/1074.abstract"&gt;http://www.sciencemag.org/content/339/6123/1074.abstract&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ここにシーケンス技術のまとめを作成しています。参考まで。もし面白いアプリケーションがあれば自由に以下に追記して頂けると嬉しいです。&lt;/p&gt;
+&lt;p&gt;シーケンス技術まとめ: &lt;a href="https://docs.google.com/spreadsheet/ccc?key=0AiSVNQsLkXVXdGlPVTl3dlRoYllRckhtQmxOQm1Mbmc#gid=0"&gt;*-Seq&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">dritoshi</dc:creator><pubDate>Wed, 27 Mar 2013 10:08:46 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/642/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%AF%E3%82%A8%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E4%BD%BF%E3%81%84%E9%81%93/664</guid></item></channel></rss>

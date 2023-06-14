@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: SRA や DRA からのおすすめダウンロード法は?</title><link>http://qa.lifesciencedb.jp/questions/230/sra-%E3%82%84-dra-%E3%81%8B%E3%82%89%E3%81%AE%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E6%B3%95%E3%81%AF</link><description>&lt;p&gt;ずっとミーティング中でなかなか調べられないのですが、SRA からのダウンロードでオススメの方法はありますでしょうか?&lt;br&gt;
+普段は&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd /Applications/Aspera\ Connect.app/Contents/Resources/ # Mac 環境
+./ascp -QT -i asperaweb_id_dsa.putty anonftp@ftp-private.ncbi.nlm.nih.gov:/sra/sra-instant/reads/ByExp/sra/SRX/SRX026/SRX026379/SRR065068/SRR065068.sra ~/SRA_SeqCapV2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;のようにコマンドラインでダウンロードしていますが、以下の点で不満があります。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;URLを多少手打ちしないといけないこと (どこかに上記の URL がダイレクトに得られるページがあるのでしょうか…)&lt;/li&gt;
+&lt;li&gt;ascpは途中切断・復帰が出来ないっぽい (screen との併用では出来なさそうでした…) =&amp;gt; ウソでした、-k1 で resume です&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;みなさん、どのようにダウンロードされたりしているのでしょうか。オススメの方法とかありますか?&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/230/sra-%E3%82%84-dra-%E3%81%8B%E3%82%89%E3%81%AE%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E6%B3%95%E3%81%AF" rel="self"></atom:link><language>ja</language><lastBuildDate>Wed, 02 Feb 2011 19:10:52 +0900</lastBuildDate><item><title>Comment by ma_ko on mn3's 回答</title><link>http://qa.lifesciencedb.jp/questions/230/sra-%E3%82%84-dra-%E3%81%8B%E3%82%89%E3%81%AE%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E6%B3%95%E3%81%AF#307</link><description>&lt;p&gt;リンク紹介で有益な情報が揃いました。ありがとうございます!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ma_ko</dc:creator><pubDate>Wed, 02 Feb 2011 19:10:52 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/230/sra-%E3%82%84-dra-%E3%81%8B%E3%82%89%E3%81%AE%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E6%B3%95%E3%81%AF#307</guid></item><item><title>Answer by mn3</title><link>http://qa.lifesciencedb.jp/questions/230/sra-%E3%82%84-dra-%E3%81%8B%E3%82%89%E3%81%AE%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E6%B3%95%E3%81%AF/306</link><description>&lt;p&gt;参考までに&lt;a href="http://www.ncbi.nlm.nih.gov/books/NBK47540/"&gt;Download Guide - SRA Handbook - NCBI Bookshelf&lt;/a&gt; を紹介します。ウェブサイトとツールキットによるダウンロード方法を解説しています。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mn3</dc:creator><pubDate>Wed, 02 Feb 2011 18:55:02 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/230/sra-%E3%82%84-dra-%E3%81%8B%E3%82%89%E3%81%AE%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E6%B3%95%E3%81%AF/306</guid></item><item><title>Answer by DDBJ</title><link>http://qa.lifesciencedb.jp/questions/230/sra-%E3%82%84-dra-%E3%81%8B%E3%82%89%E3%81%AE%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E6%B3%95%E3%81%AF/281</link><description>&lt;p&gt;日本からのダウンロードでしたら、DDBJ から ftp でダウンロードすることをおすすめいたします。&lt;br&gt;
+アクセスが集中していない限り、NCBI から aspera で落とすのと同等以上の速度がでると思います。&lt;br&gt;
+また、ftp の方が通信の安定性や使い勝手の面でも扱いやすいと思います。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;DDBJ では sra_lite と fastq を提供しています。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt; ・&lt;a href="ftp://ftp.ddbj.nig.ac.jp/ddbj_database/dra/sralite/ByExp/litesra/"&gt;sra_lite&lt;/a&gt;&lt;br&gt;
+ ・&lt;a href="ftp://ftp.ddbj.nig.ac.jp/ddbj_database/dra/fastq/"&gt;fastq&lt;/a&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;また、対象のアクセッション番号が分かっている場合、&lt;a href="http://trace.ddbj.nig.ac.jp/DRASearch/"&gt;DRA Search&lt;/a&gt; で検索していただくと ftp へのリンクが有ります。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;例）&lt;br&gt;
+  http://trace.ddbj.nig.ac.jp/DRASearch/getExperimentDetail?query=DRX000001&lt;br&gt;
+  http://trace.ddbj.nig.ac.jp/DRASearch/getRunDetail?query=DRR000001&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;linux もしくは mac をお使いで、転送速度がそれほど出ない場合、簡単なパラメータの変更で速度のチューニングが出来ます。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;rootユーザにて（sudo bash)&lt;br&gt;
+  echo "1048576" &amp;gt; /proc/sys/net/core/rmem_default&lt;br&gt;
+  echo "1048576" &amp;gt; /proc/sys/net/core/rmem_max&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;とコマンドを打てばチューニング完了です。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;再起動すれば上記で変更した値は元に戻ります。&lt;br&gt;
+もしご心配の場合には、変更前に既存の値を保存しておいてください。&lt;br&gt;
+  cat /proc/sys/net/core/rmem_default&lt;br&gt;
+  cat /proc/sys/net/core/rmem_max&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;上書きすれば元に戻ります。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;windows7, vista をお使いの場合には、チューニングする必要はありません。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;もし速度がでない等ありましたら状況を確認しますので　trace@ddbj.nig.ac.jp までご連絡ください。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">DDBJ</dc:creator><pubDate>Fri, 21 Jan 2011 16:38:48 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/230/sra-%E3%82%84-dra-%E3%81%8B%E3%82%89%E3%81%AE%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E6%B3%95%E3%81%AF/281</guid></item><item><title>Answer by ma_ko</title><link>http://qa.lifesciencedb.jp/questions/230/sra-%E3%82%84-dra-%E3%81%8B%E3%82%89%E3%81%AE%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E6%B3%95%E3%81%AF/248</link><description>&lt;p&gt;CUI でもう少し便利やれるだろうと調べてました。&lt;br&gt;
+以下のやり方では &lt;br&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;-k1 でレジューム&lt;/li&gt;
+&lt;li&gt;-l(数値)M で転送速度調整&lt;/li&gt;
+&lt;li&gt;SRX026379以下にある2つの .lite.sra ファイルをダウンロード&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;が出来たようです。&lt;br&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;./ascp -l200M -k1 -QT -i asperaweb_id_dsa.putty anonftp@ftp-private.ncbi.nlm.nih.gov:/sra/sra-instant/reads/ByExp/litesra/SRX/SRX026/SRX026379/ ~/SRA_SeqCapV2/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;オプションはここを参考にしました (ただし、文中で -l200m となっているが -l200M の間違いと思われる)。&lt;br&gt;
+&lt;a href="http://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?study=SRP003451-"&gt;Studies : Browse : Sequence Read Archive : NCBI/NLM/NIH&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ma_ko</dc:creator><pubDate>Wed, 29 Dec 2010 18:54:42 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/230/sra-%E3%82%84-dra-%E3%81%8B%E3%82%89%E3%81%AE%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E6%B3%95%E3%81%AF/248</guid></item><item><title>Comment by ma_ko on yag_ays's 回答</title><link>http://qa.lifesciencedb.jp/questions/230/sra-%E3%82%84-dra-%E3%81%8B%E3%82%89%E3%81%AE%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E6%B3%95%E3%81%AF#232</link><description>&lt;p&gt;Aspera Connect (GUI) だと途中切断・復帰があるんですね。CUI だと ftp + fastq フォーマット、も参考になります。ありがとうございます:)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ma_ko</dc:creator><pubDate>Fri, 24 Dec 2010 12:33:47 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/230/sra-%E3%82%84-dra-%E3%81%8B%E3%82%89%E3%81%AE%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E6%B3%95%E3%81%AF#232</guid></item><item><title>Answer by yag_ays</title><link>http://qa.lifesciencedb.jp/questions/230/sra-%E3%82%84-dra-%E3%81%8B%E3%82%89%E3%81%AE%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E6%B3%95%E3%81%AF/231</link><description>&lt;p&gt;個人的には「&lt;strong&gt;Aspera Connect(GUI)を使ってブラウザからDLする&lt;/strong&gt;」という方法が一番良いのではないかと思っています．
+ウェブブラウザからSRAを開いて目的のファイルをダウンロードすればURLを手打ちせずに済みますし，Aspera ConnectのGUI版では途中切断・復帰が可能です．GUI環境に限られるといった制限もありますが，この方法が一番安定していると思います．&lt;/p&gt;
+&lt;p&gt;CUI環境に限られるのであれば，「ftpを使ってDLする」という方法が良いと思います．私自身もリモートの計算機ではこの方法を使っています．ftpならばコマンドライン上でファイルサイズの確認もできますし，複数のファイルを一度にDLすることもできます，確かSRAではasperaが推奨されていたように記憶していますが，現状のところCUIのascpは少し使いにくいというのが私の感想です．&lt;/p&gt;
+&lt;p&gt;この質問の内容からは少し逸れますが，DRA(DDBJ Sequence Read Archive)もSRAと同様にシーケンスデータをアーカイブしているので，そちらを利用するのも手だと思います．現在のところ，ファイルサイズの小さいfastqフォーマットで配布されていますし転送速度も早いと思います．&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">yag_ays</dc:creator><pubDate>Fri, 24 Dec 2010 12:21:17 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/230/sra-%E3%82%84-dra-%E3%81%8B%E3%82%89%E3%81%AE%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E6%B3%95%E3%81%AF/231</guid></item></channel></rss>

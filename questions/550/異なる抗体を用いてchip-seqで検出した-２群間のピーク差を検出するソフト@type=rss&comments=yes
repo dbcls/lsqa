@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: 異なる抗体を用いてChIP-seqで検出した、２群間のピーク差を検出するソフト</title><link>http://qa.lifesciencedb.jp/questions/550/%E7%95%B0%E3%81%AA%E3%82%8B%E6%8A%97%E4%BD%93%E3%82%92%E7%94%A8%E3%81%84%E3%81%A6chip-seq%E3%81%A7%E6%A4%9C%E5%87%BA%E3%81%97%E3%81%9F-%EF%BC%92%E7%BE%A4%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E5%B7%AE%E3%82%92%E6%A4%9C%E5%87%BA%E3%81%99%E3%82%8B%E3%82%BD%E3%83%95%E3%83%88</link><description>&lt;p&gt;windows上で、次の操作ができるソフトを探しています。&lt;/p&gt;
+&lt;p&gt;異なる抗体を用いてChIP-seqで検出したリードの、２群間のピークの差を検出することができるソフトウエアー&lt;/p&gt;
+&lt;p&gt;コントロールにはIgG抗体を用いています。　実験バックグラウンドは抗体以外は、コントロールも含めて同じ（細胞種、クロスリンク、ソニケーション、PCR条件）です。&lt;/p&gt;
+&lt;p&gt;よろしくお願いします。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/550/%E7%95%B0%E3%81%AA%E3%82%8B%E6%8A%97%E4%BD%93%E3%82%92%E7%94%A8%E3%81%84%E3%81%A6chip-seq%E3%81%A7%E6%A4%9C%E5%87%BA%E3%81%97%E3%81%9F-%EF%BC%92%E7%BE%A4%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E5%B7%AE%E3%82%92%E6%A4%9C%E5%87%BA%E3%81%99%E3%82%8B%E3%82%BD%E3%83%95%E3%83%88" rel="self"></atom:link><language>ja</language><lastBuildDate>Wed, 28 Mar 2012 05:02:53 +0900</lastBuildDate><item><title>Comment by pon on nob_fj's 回答</title><link>http://qa.lifesciencedb.jp/questions/550/%E7%95%B0%E3%81%AA%E3%82%8B%E6%8A%97%E4%BD%93%E3%82%92%E7%94%A8%E3%81%84%E3%81%A6chip-seq%E3%81%A7%E6%A4%9C%E5%87%BA%E3%81%97%E3%81%9F-%EF%BC%92%E7%BE%A4%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E5%B7%AE%E3%82%92%E6%A4%9C%E5%87%BA%E3%81%99%E3%82%8B%E3%82%BD%E3%83%95%E3%83%88#580</link><description>&lt;p&gt;以前の質問にもかかわらず、御教授いただき、ありがとうございます。
+その後も、苦労していたところでしたので、大変助かります。
+抗体の特異度を確認した後、抗体の違いで生じるマッピングデータの差を確認したかったため、早速試してみたいと思います。&lt;/p&gt;
+&lt;p&gt;今後ともよろしくお願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pon</dc:creator><pubDate>Wed, 28 Mar 2012 05:02:53 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/550/%E7%95%B0%E3%81%AA%E3%82%8B%E6%8A%97%E4%BD%93%E3%82%92%E7%94%A8%E3%81%84%E3%81%A6chip-seq%E3%81%A7%E6%A4%9C%E5%87%BA%E3%81%97%E3%81%9F-%EF%BC%92%E7%BE%A4%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E5%B7%AE%E3%82%92%E6%A4%9C%E5%87%BA%E3%81%99%E3%82%8B%E3%82%BD%E3%83%95%E3%83%88#580</guid></item><item><title>Answer by nob_fj</title><link>http://qa.lifesciencedb.jp/questions/550/%E7%95%B0%E3%81%AA%E3%82%8B%E6%8A%97%E4%BD%93%E3%82%92%E7%94%A8%E3%81%84%E3%81%A6chip-seq%E3%81%A7%E6%A4%9C%E5%87%BA%E3%81%97%E3%81%9F-%EF%BC%92%E7%BE%A4%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E5%B7%AE%E3%82%92%E6%A4%9C%E5%87%BA%E3%81%99%E3%82%8B%E3%82%BD%E3%83%95%E3%83%88/579</link><description>&lt;p&gt;いまさらですが、私の過去の解答、"異なる抗体"の部分見逃しておりました。
+同じ抗体で2サンプル比較する際を想定して書いていました。&lt;/p&gt;
+&lt;p&gt;もうご存知かもしれませんが、
+異なる抗体の比較の場合、二階堂さんのブログからも
+辿れる講義資料が、本質問に大変参考になるような気がします。
+36ページ、37ページ参照&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://blog.hackingisbelieving.org/2012/02/chip-seq.html"&gt;http://blog.hackingisbelieving.org/2012/02/chip-seq.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Rのパッケージはwin環境でも殆ど動くような気はしますが、
+MACS2他、その辺りのツールが動くかは試してないので知りません。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Tue, 27 Mar 2012 11:45:40 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/550/%E7%95%B0%E3%81%AA%E3%82%8B%E6%8A%97%E4%BD%93%E3%82%92%E7%94%A8%E3%81%84%E3%81%A6chip-seq%E3%81%A7%E6%A4%9C%E5%87%BA%E3%81%97%E3%81%9F-%EF%BC%92%E7%BE%A4%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E5%B7%AE%E3%82%92%E6%A4%9C%E5%87%BA%E3%81%99%E3%82%8B%E3%82%BD%E3%83%95%E3%83%88/579</guid></item><item><title>Comment by pon on nob_fj's 回答</title><link>http://qa.lifesciencedb.jp/questions/550/%E7%95%B0%E3%81%AA%E3%82%8B%E6%8A%97%E4%BD%93%E3%82%92%E7%94%A8%E3%81%84%E3%81%A6chip-seq%E3%81%A7%E6%A4%9C%E5%87%BA%E3%81%97%E3%81%9F-%EF%BC%92%E7%BE%A4%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E5%B7%AE%E3%82%92%E6%A4%9C%E5%87%BA%E3%81%99%E3%82%8B%E3%82%BD%E3%83%95%E3%83%88#559</link><description>&lt;p&gt;丁寧なご教授、大変ありがとうございます。　もう一通のメールとともに、大変参考になりました。CSARも、もっと私自身もweb上をくまなく探すべきでした。ただ、初心者だけでは、なかなか探し出すのも大変でしたので、“NGS現場の会”での御指導は大変助かりました。
+今後ともどうぞよろしくお願い申し上げます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pon</dc:creator><pubDate>Wed, 04 Jan 2012 02:34:43 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/550/%E7%95%B0%E3%81%AA%E3%82%8B%E6%8A%97%E4%BD%93%E3%82%92%E7%94%A8%E3%81%84%E3%81%A6chip-seq%E3%81%A7%E6%A4%9C%E5%87%BA%E3%81%97%E3%81%9F-%EF%BC%92%E7%BE%A4%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E5%B7%AE%E3%82%92%E6%A4%9C%E5%87%BA%E3%81%99%E3%82%8B%E3%82%BD%E3%83%95%E3%83%88#559</guid></item><item><title>Answer by nob_fj</title><link>http://qa.lifesciencedb.jp/questions/550/%E7%95%B0%E3%81%AA%E3%82%8B%E6%8A%97%E4%BD%93%E3%82%92%E7%94%A8%E3%81%84%E3%81%A6chip-seq%E3%81%A7%E6%A4%9C%E5%87%BA%E3%81%97%E3%81%9F-%EF%BC%92%E7%BE%A4%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E5%B7%AE%E3%82%92%E6%A4%9C%E5%87%BA%E3%81%99%E3%82%8B%E3%82%BD%E3%83%95%E3%83%88/558</link><description>&lt;p&gt;よくよく調べるとこちらのにかいどうさんのブログにある
+CSARが、まさにそれじゃないでしょうか。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://blog.hackingisbelieving.org/2011/10/r-bioconductor-chip-seq.html"&gt;http://blog.hackingisbelieving.org/2011/10/r-bioconductor-chip-seq.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Rのパッケージならwindows環境で動くことも多いような。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Tue, 03 Jan 2012 23:08:56 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/550/%E7%95%B0%E3%81%AA%E3%82%8B%E6%8A%97%E4%BD%93%E3%82%92%E7%94%A8%E3%81%84%E3%81%A6chip-seq%E3%81%A7%E6%A4%9C%E5%87%BA%E3%81%97%E3%81%9F-%EF%BC%92%E7%BE%A4%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E5%B7%AE%E3%82%92%E6%A4%9C%E5%87%BA%E3%81%99%E3%82%8B%E3%82%BD%E3%83%95%E3%83%88/558</guid></item><item><title>Answer by nob_fj</title><link>http://qa.lifesciencedb.jp/questions/550/%E7%95%B0%E3%81%AA%E3%82%8B%E6%8A%97%E4%BD%93%E3%82%92%E7%94%A8%E3%81%84%E3%81%A6chip-seq%E3%81%A7%E6%A4%9C%E5%87%BA%E3%81%97%E3%81%9F-%EF%BC%92%E7%BE%A4%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E5%B7%AE%E3%82%92%E6%A4%9C%E5%87%BA%E3%81%99%E3%82%8B%E3%82%BD%E3%83%95%E3%83%88/557</link><description>&lt;p&gt;お返事が遅くなりました。
+詳細なご返信に対して、大した情報提供ではありませんが、&lt;/p&gt;
+&lt;p&gt;質問者様の質問が&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;2サンプルのピークの対応付け&lt;/li&gt;
+&lt;li&gt;対応付け後のピークの高さや形状等の数値の数学的／統計学的差の検出方法&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;のどちらが主眼かは分かりませんので、1についての1例を記載します。&lt;/p&gt;
+&lt;p&gt;また、本回答について、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;BEDToolsのコンパイルはやっぱり必要。(一応cygwin上でmakeはうまくいっているようですので、win環境で全くNGなわけではないようです。)&lt;/li&gt;
+&lt;li&gt;結構、泥臭い作業になる&lt;/li&gt;
+&lt;li&gt;網羅的なサーベイや、数学的／統計学的に妥当性を検討された方法論ではない(と思います)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;が、それなりにうまくいっているように見えるレベルの解答です。
+私自身、もっとスマートな方法や、R/Bioconductorのパッケージがあるのであれば、ご教授いただきたいと思っております。&lt;/p&gt;
+&lt;p&gt;作業前提として、ピークコールした領域情報がBEDフォーマットで出力されているか、BEDに変換済みであるとします。
+(出力書式をupいただければ簡単な変換であればcygwin環境を用いた方法であればお教えできるかもしれません。)
+また、ピークコール前のマップしたbamかbedを必要とします。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;2サンプルのピークの領域の和集合を取得するため、2つのBEDの和を取ります。&lt;/p&gt;
+&lt;p&gt;cat data/sample1peak.bed data/sample2peak.bed |  ./BEDTools-Version-2.14.3/bin/mergeBed.exe &amp;gt; data/tmpMerged.bed&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;1'. 場合によっては次の操作のリード数の計測範囲を広げる為、BEDの上流、下流に数塩基追加します。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;./BEDTools-Version-2.14.3/bin//slopBed.exe -i data/tmpMerged.bed -g data/chromosomeInf.txt -b 20 &amp;gt; data/tmpMerged.withUpDown20.bed
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;各サンプルでピーク領域(あるいはその周辺も含む領域)のタグ数を計測。&lt;/p&gt;
+&lt;p&gt;./BEDTools-Version-2.14.3/bin/coverageBed.exe -abam data/sample1out.bam -b data/tmpMerged.withUpDown20.bed &amp;gt; sample1coverage.txt&lt;/p&gt;
+&lt;p&gt;./BEDTools-Version-2.14.3/bin/coverageBed.exe -abam data/sample2out.bam -b data/tmpMerged.withUpDown20.bed &amp;gt; sample2coverage.txt&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;sample1とsample2のcoverageをマージして不要な情報を除去
+　(unix系コマンドを使用しています。cygwinがなければ、Excelで開いて繋げてもいいでしょう。)&lt;/p&gt;
+&lt;p&gt;paste data/sample1coverage.txt data/sample2coverage.txt | cut -f 1,2,3,4,11 &amp;gt; 2sample.tagCounts&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;あとは、&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;タグ数の比でfoldChangeを取るとか、&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;2サンプルの総タグ数が一定との前提をおいて総タグ数からの差を検定するとか、&lt;/li&gt;
+&lt;li&gt;1群3データ以上用意して適当な検定するとか、&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;煮るなり焼くなりといったところですが、こちらは詳しくありません。&lt;/p&gt;
+&lt;p&gt;BEDToolsの使い方はこちら&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=BEDtools"&gt;https://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=BEDtools&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;この辺りの情報(IntersectRegions)も使えるかも知れませんが、使ったことありません。 &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://useq.sourceforge.net/usage.html"&gt;http://useq.sourceforge.net/usage.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;コメントの件は、open_idでログインしないと、
+どうやらできなさそうですね。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Tue, 03 Jan 2012 22:55:34 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/550/%E7%95%B0%E3%81%AA%E3%82%8B%E6%8A%97%E4%BD%93%E3%82%92%E7%94%A8%E3%81%84%E3%81%A6chip-seq%E3%81%A7%E6%A4%9C%E5%87%BA%E3%81%97%E3%81%9F-%EF%BC%92%E7%BE%A4%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E5%B7%AE%E3%82%92%E6%A4%9C%E5%87%BA%E3%81%99%E3%82%8B%E3%82%BD%E3%83%95%E3%83%88/557</guid></item><item><title>Answer by hub</title><link>http://qa.lifesciencedb.jp/questions/550/%E7%95%B0%E3%81%AA%E3%82%8B%E6%8A%97%E4%BD%93%E3%82%92%E7%94%A8%E3%81%84%E3%81%A6chip-seq%E3%81%A7%E6%A4%9C%E5%87%BA%E3%81%97%E3%81%9F-%EF%BC%92%E7%BE%A4%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E5%B7%AE%E3%82%92%E6%A4%9C%E5%87%BA%E3%81%99%E3%82%8B%E3%82%BD%E3%83%95%E3%83%88/556</link><description>&lt;p&gt;書き込めないそうなので、代理で書き込んでおきます。
+--
+nob_fj　様&lt;/p&gt;
+&lt;p&gt;拝復
+　年末のお忙しい中にも関わらず、ご教示いただき、大変ありがとうございます。　また、この度私の質問に正確性、具体性に欠ける点があったことをお詫び申し上げます。&lt;/p&gt;
+&lt;p&gt;ライフサイエンスQ&amp;amp;A上に「コメントを追加する」のタグを見つけられませんでしたので、下記に、返答させていただきます。　なお、今回の返信内容を、ライフサイエンスQ&amp;amp;Awebページ上に掲載することは、全く問題ございません。　私の質問事項が、私のような、NGS初心者のお役に立てれば幸いです。&lt;/p&gt;
+&lt;p&gt;１．ピークコールは済んでいるか。　→　はい。ピークは検出しております。　ただし、私が用いた解析ソフトでは、抗体Aと抗体Bをサンプルとし、IgGをコントロールとして登録すると、抗体Aと抗体Bで捕まえたピークを、一緒に報告してしまいます。　このため、抗体Aと、抗体Bのピークの違いを検出できません。　市販の解析ソフトの会社に伺いましたが、二つのサンプル間の違いを検出する時計処理は出来ないそうです。&lt;/p&gt;
+&lt;p&gt;２．windows環境といっても、cygwinやvmware上でlinuxなどを入れてコンパイルが必要なプログラム等をインストールすることもできると思いますが、想定されておりますでしょうか。　→　御教示ありがとうございます。　実は私も一度考えたのですが、１）コンピューターが共用のものであること（なので、勝手に変更しずらい）　２）私自身が、コンピューターに強くなく（ユーザーとしては問題ないと思いますが、設定は恥ずかしながら苦手です。）、コンパイルの仕方をwebで検索して読んでも、よくわかりませんでした。　このため、Windows上で、解析できるものがあれば、使用したく、相談いたしました。　マッピング、ピークディテクションに市販のものを用いたのは、コマンドの入力が容易だから、ということもありました。&lt;/p&gt;
+&lt;p&gt;ご教示いただければ、甚幸に存じます。&lt;/p&gt;
+&lt;p&gt;敬具&lt;/p&gt;
+&lt;p&gt;pon&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">hub</dc:creator><pubDate>Wed, 28 Dec 2011 11:43:15 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/550/%E7%95%B0%E3%81%AA%E3%82%8B%E6%8A%97%E4%BD%93%E3%82%92%E7%94%A8%E3%81%84%E3%81%A6chip-seq%E3%81%A7%E6%A4%9C%E5%87%BA%E3%81%97%E3%81%9F-%EF%BC%92%E7%BE%A4%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E5%B7%AE%E3%82%92%E6%A4%9C%E5%87%BA%E3%81%99%E3%82%8B%E3%82%BD%E3%83%95%E3%83%88/556</guid></item><item><title>Comment by nob_fj on pon's 質問</title><link>http://qa.lifesciencedb.jp/questions/550/%E7%95%B0%E3%81%AA%E3%82%8B%E6%8A%97%E4%BD%93%E3%82%92%E7%94%A8%E3%81%84%E3%81%A6chip-seq%E3%81%A7%E6%A4%9C%E5%87%BA%E3%81%97%E3%81%9F-%EF%BC%92%E7%BE%A4%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E5%B7%AE%E3%82%92%E6%A4%9C%E5%87%BA%E3%81%99%E3%82%8B%E3%82%BD%E3%83%95%E3%83%88#551</link><description>&lt;p&gt;ピークコールは既に済んでおりますか？また、windows環境といっても、cygwinやvmware上でlinuxなどを入れてコンパイルが必要なプログラム等をインストールすることもできると思いますが、想定されておりますでしょうか。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Sat, 24 Dec 2011 22:22:20 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/550/%E7%95%B0%E3%81%AA%E3%82%8B%E6%8A%97%E4%BD%93%E3%82%92%E7%94%A8%E3%81%84%E3%81%A6chip-seq%E3%81%A7%E6%A4%9C%E5%87%BA%E3%81%97%E3%81%9F-%EF%BC%92%E7%BE%A4%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E5%B7%AE%E3%82%92%E6%A4%9C%E5%87%BA%E3%81%99%E3%82%8B%E3%82%BD%E3%83%95%E3%83%88#551</guid></item></channel></rss>

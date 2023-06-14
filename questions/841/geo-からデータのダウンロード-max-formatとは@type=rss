@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: GEO からデータのダウンロード：MAX formatとは？</title><link>http://qa.lifesciencedb.jp/questions/841/geo-%E3%81%8B%E3%82%89%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89-max-format%E3%81%A8%E3%81%AF</link><description>&lt;p&gt;平素お世話になっております。浅学のため記入内容および語彙の不備があるかと思いますが、
+どうか御容赦頂ければと思います。&lt;/p&gt;
+&lt;p&gt;●背景：GEOからRNA-seqのデータを取得&lt;/p&gt;
+&lt;p&gt;NCBI が運営するGEOからRNA-seqのデータを取得したいと考えております。目的とするデータのアクセッション番号はGSE20116です。 配列データとしては6ファイルあるようです（例えばGSM515513）。&lt;/p&gt;
+&lt;p&gt;●質問：MAX formatとは？&lt;/p&gt;
+&lt;p&gt;サンプル GSM515513を見ますと、以下のような記述がありました。&lt;/p&gt;
+&lt;p&gt;Data processing 
+AB WT Pipeline. The reads were aligned to the human hg18 (NCBI Build 36) genome. Alignments are provided in MAX format. A MAX specification file is available on the Series GSE20116 record.&lt;/p&gt;
+&lt;p&gt;上記のMAX formatとは何でしょうか？いろいろ検索してみましたが判然としませんでした。&lt;/p&gt;
+&lt;p&gt;●困っている現状&lt;/p&gt;
+&lt;p&gt;実は背景として、DDBJのftpサーバーから上記サンプルに相当するfastqファイルを取得し、tophatにてhg19へのアライメントを試みた経緯があります。ところが、accepted_hits.bamが 1 MB未満となってしまい、明らかに結果がおかしかったです。海外の掲示板も参照し、似たような事例が散見されましたが、解決できず往生しております。GEO のサイトから、マッピング済みのファイルが得られるなら、取得したいと考えています。MAX format なるものが、tophat に適用出来るかはわかりませんが、そもそもMAX formatがなんなのかすら分からない現状です。&lt;/p&gt;
+&lt;p&gt;些細な点でも構いませんので、どうか御教授頂けないでしょうか？
+お手数をおかけ致しますが、何卒宜しくお願い致します。&lt;/p&gt;
+&lt;p&gt;敬具&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/841/geo-%E3%81%8B%E3%82%89%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89-max-format%E3%81%A8%E3%81%AF" rel="self"></atom:link><language>ja</language><lastBuildDate>Thu, 22 Oct 2015 19:35:42 +0900</lastBuildDate><item><title>Answer by kh</title><link>http://qa.lifesciencedb.jp/questions/841/geo-%E3%81%8B%E3%82%89%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89-max-format%E3%81%A8%E3%81%AF/843</link><description>&lt;p&gt;GSM515513のダウンロードできるファイルに、MAX formatの説明がありましたが、それではだめなのですか？&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">kh</dc:creator><pubDate>Thu, 22 Oct 2015 19:35:42 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/841/geo-%E3%81%8B%E3%82%89%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89-max-format%E3%81%A8%E3%81%AF/843</guid></item></channel></rss>

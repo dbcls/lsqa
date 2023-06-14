@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: Cufflinks (binary)が実行できない</title><link>http://qa.lifesciencedb.jp/questions/740/cufflinks-binary-%E3%81%8C%E5%AE%9F%E8%A1%8C%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84</link><description>&lt;p&gt;お世話になっております。&lt;/p&gt;
+&lt;p&gt;Mac OSX10.8 のターミナルをNGS解析に使っている初心者です。&lt;/p&gt;
+&lt;p&gt;Bowtie を使ってReference genomeにマッピング、SAM ファイルやBAM ファイルの作成、IGVによる可視化はなんとか出来るレベルです。現在、リード数の定量をするために、Cufflinks のバイナリ版をダウンロード、解凍しました。ところが実行しようとしても、&lt;/p&gt;
+&lt;p&gt;-bash: cufflinks: command not found&lt;/p&gt;
+&lt;p&gt;となってしまい実行できません。いろんなサイトを参考に調べ、バイナリ版を入手するのが簡単、と書いてありましたが、
+なぜうまく実行できないのか分からず、往生しております。&lt;/p&gt;
+&lt;p&gt;この質問をさせて頂くにあたり、細かい環境を記すべきかと思いますが、
+何をお示しすれば良いのかも分からない初心者レベルです。
+ご迷惑をおかけすると思いますが何か打開策をご教授頂けないでしょうか？
+どうかよろしくお願い致します。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/740/cufflinks-binary-%E3%81%8C%E5%AE%9F%E8%A1%8C%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 08 Apr 2014 13:28:09 +0900</lastBuildDate><item><title>Answer by megu</title><link>http://qa.lifesciencedb.jp/questions/740/cufflinks-binary-%E3%81%8C%E5%AE%9F%E8%A1%8C%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/747</link><description>&lt;p&gt;dritoshi 様、gatapishi 様&lt;/p&gt;
+&lt;p&gt;早速のお返事を頂き、誠にありがとうございました。
+おかげさまで、Cufflinks のPATHを通し、実行することが出来ました。&lt;/p&gt;
+&lt;p&gt;あ、すみません、書き途中に投稿してしまいました。&lt;/p&gt;
+&lt;p&gt;とにかく前進出来て本当にうれしいです。
+Linux は、出来るようになる喜びが原動力になる、感じです。
+これからも頑張ります。
+本当にありがとうございました。&lt;/p&gt;
+&lt;p&gt;敬具&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">megu</dc:creator><pubDate>Tue, 08 Apr 2014 13:28:09 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/740/cufflinks-binary-%E3%81%8C%E5%AE%9F%E8%A1%8C%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/747</guid></item><item><title>Answer by gatapishi</title><link>http://qa.lifesciencedb.jp/questions/740/cufflinks-binary-%E3%81%8C%E5%AE%9F%E8%A1%8C%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/742</link><description>&lt;p&gt;とりあえず、解凍したフォルダの中で、&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;./cufflinks&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;で実行できるかどうか確認。
+できるならば、PATHが通っていないだけなので&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;pwd&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;で出てくる文字列を HOGE とすると、それを、.bashrc の中で一番下にでも、&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;PATH=HOGE:$PATH&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;export PATH&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;とする。&lt;/p&gt;
+&lt;p&gt;最初の&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;./cufflinks&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;でだめならまた聞いてください。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">gatapishi</dc:creator><pubDate>Tue, 08 Apr 2014 00:16:40 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/740/cufflinks-binary-%E3%81%8C%E5%AE%9F%E8%A1%8C%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/742</guid></item><item><title>Answer by dritoshi</title><link>http://qa.lifesciencedb.jp/questions/740/cufflinks-binary-%E3%81%8C%E5%AE%9F%E8%A1%8C%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/741</link><description>&lt;p&gt;ターミナル.app を起動して、以下のコマンドを入力します。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ echo $PATH
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;表示されるディレクトリに、cufflinks のコマンドが入っているかを確認してみてください。&lt;/p&gt;
+&lt;p&gt;もしこれが原因ならば、Unix/Linux のシェルとパスという概念を理解すると良いでしょう。
+OS Xも Unix です。以下の教科書の3.2, 3.5が参考になるはずです。フリーです。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.lpi.or.jp/linuxtext/text.shtml"&gt;Linux標準教科書（Ver2.0.0)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;もしコマンドパスに cufflinks コマンドが入っているなら別な問題ですので、
+いちからどのように操作したのか、説明してもらえると原因がわかるかも
+しれません。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">dritoshi</dc:creator><pubDate>Mon, 07 Apr 2014 23:26:13 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/740/cufflinks-binary-%E3%81%8C%E5%AE%9F%E8%A1%8C%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/741</guid></item></channel></rss>

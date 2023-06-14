@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With pipeline</title><link>http://qa.lifesciencedb.jp/tags/pipeline/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;pipeline&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/pipeline/" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 01 Apr 2014 15:45:44 +0900</lastBuildDate><item><title>DDBJ pipeline のFTP接続後、queryフォルダが表示されない</title><link>http://qa.lifesciencedb.jp/questions/737/ddbj-pipeline-%E3%81%AEftp%E6%8E%A5%E7%B6%9A%E5%BE%8C-query%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84</link><description>&lt;p&gt;お世話になっております。&lt;/p&gt;
+&lt;p&gt;DDBJ pipeline において、FTPを使ってfastqファイルをuploadするのを目的としています。&lt;/p&gt;
+&lt;p&gt;私はマックを使用しているので、Cyberduckによって接続しました。&lt;/p&gt;
+&lt;p&gt;Pipeline tutorial によりますと、接続後に query フォルダが表示されるようですが、&lt;/p&gt;
+&lt;p&gt;そのようなフォルダが表示されません。&lt;/p&gt;
+&lt;p&gt;このqueryフォルダは、fastqをuploadする場所であるようなので、現在、往生しております。&lt;/p&gt;
+&lt;p&gt;稚拙な質問かも知れませんが、ここ数日困っております。どなたか解決策をご教示頂けないでしょうか。&lt;/p&gt;
+&lt;p&gt;どうか宜しくお願い致します。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">megu</dc:creator><pubDate>Tue, 01 Apr 2014 15:45:44 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/737/ddbj-pipeline-%E3%81%AEftp%E6%8E%A5%E7%B6%9A%E5%BE%8C-query%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84</guid><category>ddbj</category><category>query</category><category>pipeline</category></item></channel></rss>

@@ -1,0 +1,929 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>リード長の長いRNA-Seqのタグカウント - #LSQA</title>
+        <meta name="description" content="もしかしたら、常識かもしれないので、
+情報お持ちのかたがおられたら、お願いします。
+topHatやmapSpliceなど、splicingを考慮したマッパーの結果から、
+遺伝子レベルのタグカウントを計算するうまいやり方など、
+情報お持ちのかたがおられましたら、
+お知らせいただけますと助かります。
+以下背景
+topHat-cufflinks-cuffdiffや、それに類似のフローが
+デファクトスタンダード的解析であると知りつつ、
+リード長の長いRNA-SeqにedgeR等をかけるやりかたを考えています。
+edgeRなどのDEG検出用のRパッケージ等は、
+fpkm/rpkmは使わないように推奨して">
+        <meta name="keywords" content="tophat,ngs,rna-seq,long,splicing-junction">
+        
+        <link rel="canonical" href="../../612/down/index.html" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="../../../questions/581/リード長の長いrna-seqのタグカウント@type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="../../../upfiles/favicon.ico" />
+        <link href="../../../m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="../../../cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='../../../m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        
+        <script type='text/javascript' src='../../../m/qa.lifesciencedb.jp/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='../../../m/qa.lifesciencedb.jp/media/js/wmd/wmd.js'></script>
+        <link rel="stylesheet" type="text/css" href="../../../m/qa.lifesciencedb.jp/media/js/wmd/wmd.css" />
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[プレビューを隠す]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[プレビューを表示する]" : "[プレビューを隠す]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="../../../opensearch.xml.html" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="../../../index.html">
+				<img src="../../../upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="../../../account/yahoo/signin/index.html" >ログイン</a>  <a href="../../../about/index.html" >概要</a>  <a href="../../../faq/index.html" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="../../../questions/index.html" >質問</a><a id="nav_tags" href="../../../tags/index.html" >タグ</a><a id="nav_users" href="http://qa.lifesciencedb.jp/users/" >ユーザー</a><a id="nav_badges" href="../../../badges/index.html" >バッジ</a><a id="nav_unanswered" href="../../../questions/unanswered/index.html" >未回答</a>
+        <a id="nav_ask" href="../../../questions/ask/index.html" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="http://qa.lifesciencedb.jp/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="../../612/down/index.html">リード長の長いRNA-Seqのタグカウント</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-581-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../581/up/index.html" rel="nofollow"> </a>
+<div id="post-581-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-581-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../581/down/index.html" rel="nofollow"> </a>
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="../../../mark_favorite/581/index.html" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>もしかしたら、常識かもしれないので、
+情報お持ちのかたがおられたら、お願いします。</p>
+<p>topHatやmapSpliceなど、splicingを考慮したマッパーの結果から、
+遺伝子レベルのタグカウントを計算するうまいやり方など、
+情報お持ちのかたがおられましたら、
+お知らせいただけますと助かります。</p>
+<h2>以下背景</h2>
+<p>topHat-cufflinks-cuffdiffや、それに類似のフローが
+デファクトスタンダード的解析であると知りつつ、
+リード長の長いRNA-SeqにedgeR等をかけるやりかたを考えています。</p>
+<p>edgeRなどのDEG検出用のRパッケージ等は、
+fpkm/rpkmは使わないように推奨しているかと思います。</p>
+<p>EdgeRのedgeRUsersGuide.pdfより引用
+http://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
+"There are good reasons
+why the NB model is appropriate for the raw count data, but transforming the data using
+RPKM (or FPKM or similar) renders our distributional assumptions invalid and we cannot
+guarantee that our methods will be reliable for such transformed data."</p>
+<p>35塩基や、50塩基程度であれば、
+BWAやBowtieなどで、splicingを考慮せずに、
+マップしたものを、
+DEGseqパッケージ中のgetGeneExpや、
+BEDtoolsのcoverageBEDなどで、タグカウントすればよかったのですが、
+最近リード長が伸び、150塩基のRNA-Seqなども
+よく見かけるようになったかと思います。
+リード長が伸びるとexon長を超えてしまう場合も
+多々あるので、junctionをまたぐタグの数を無視するには、
+支障が出てきているように思います。</p>
+<p>topHatが出力するaccepted_hits.bamに対して、</p>
+<h3>選択肢1</h3>
+<ul>
+<li>Step1 BEDtoolsのbamToBedに"-bed12"オプション付でかけBAMをBEDに変換</li>
+<li>Step2 BEDを入力とするDEGseqのgetGeneExpでタグカウント</li>
+<li>アノテーション情報は、refFlat.txt</li>
+<li>=&gt; イントロン領域のタグは計上されない。</li>
+<li>=&gt; splicing-junctionをまたぐタグがタグカウントに計上されないため、難あり。</li>
+</ul>
+<h3>選択肢2</h3>
+<ul>
+<li>Step1 coverageBEDに対して、"-abam"でBAM入力で"-splice"オプションを付けて実行。</li>
+<li>アノテーション情報はrefFlat.bed</li>
+<li>=&gt; splicing-junctionをまたぐタグはタグカウントに計上されるので良し。</li>
+<li>=&gt; イントロン領域のタグ(第一イントロンの制御ノンコーディングRNAなど)もカウントされるので難あり。</li>
+</ul>
+<p>一応、BioStarやSeqAnswersで上記難点の解決策も探しては見たのですが、
+自分では見つけられませんでした。</p>
+<p>coverageBEDで、イントロンも含めてカウントした後に、
+全イントロンのタグ数を引くとか、</p>
+<p>小賢しい手も考えられますが、
+境界のリードなどの扱いで、厳密では無くなる点に難があります。</p>
+<p>もし、うまい手やら、既存のスクリプトでこんなものがある等、
+関係する情報お知らせいただけますと幸いです。
+直接の解答でなくとも、ご助言ありましたら、お願いします。</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="../../../tags/tophat/index.html" class="post-tag"
+                                        title="'tophat'タグのついた質問をみる" rel="tag">tophat</a>
+                                
+                                    <a href="../../../tags/ngs/index.html" class="post-tag"
+                                        title="'ngs'タグのついた質問をみる" rel="tag">ngs</a>
+                                
+                                    <a href="../../../tags/rna-seq/index.html" class="post-tag"
+                                        title="'rna-seq'タグのついた質問をみる" rel="tag">rna-seq</a>
+                                
+                                    <a href="../../../tags/long/index.html" class="post-tag"
+                                        title="'long'タグのついた質問をみる" rel="tag">long</a>
+                                
+                                    <a href="../../../tags/splicing-junction/index.html" class="post-tag"
+                                        title="'splicing-junction'タグのついた質問をみる" rel="tag">splicing-junction</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">                            
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        質問日
+        <strong>Apr 03 '12 at 16:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=32&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a><br/>
+    <span class="score" title="507 徳">507</span><span title="8 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="16 バッジ"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="28 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">28</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="http://qa.lifesciencedb.jp/revisions/581/">
+                edited
+                <strong>Apr 04 '12 at 01:08</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+<div class="comments-container" id="comments-container-581">
+    
+</div>
+<div id="comment-tools-581" class="comment-tools">
+    
+    
+</div>
+<div id="comment-581-form-container" class="comment-form-container">
+    
+</div>
+    
+                        </div>
+                        
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="../../../questions/581/リード長の長いrna-seqのタグカウント@sort=登録順.html" title="最古の回答が最初に表示されます">回答順</a><a href="../../../questions/581/リード長の長いrna-seqのタグカウント@sort=最新.html" title="最新の回答が最初に表示されます">最新</a><a href="../../../questions/581/リード長の長いrna-seqのタグカウント@sort=投票.html" class="on" title="もっとも投票された回答が最初に表示されます">支持されている順</a></div>
+                </div>
+                
+  
+                
+                    <a name="613"></a>
+                    <div id="answer-container-613" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-613-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../613/up/index.html" rel="nofollow"> </a>
+<div id="post-613-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-613-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../613/down/index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+        <a class="accept-answer on"></a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>こんばんは。<br>
+僕は、nob_fjさんが箇条書きなされている方法の中で、５番の方法を使っています。<br>
+Cufflinksを使えば解決すると思うのですが、間違っていたらご指摘していただければと思います。<br> 
+なお、下記は、cuffdiffをつかうため、比較データAとBを仮定します。<br> 
+また、オプションは、pair-end directionalの例を書いていますが、気にしないでください。<br></p>
+<hr>
+<ol>
+<li>
+<p>tophatをつかってgenome mappingとjunction mappingをする <br>
+eval tophat --library-type fr-secondstrand -o ./dataA -r 800 -p 10 -G $mouse_ref $mouse_index1 dataA.fastq_1 dataA.fastq_2 
+<br>
+eval tophat --library-type fr-secondstrand -o ./dataB -r 800 -p 10 -G $mouse_ref $mouse_index1 dataB.fastq_1 dataB.fastq_2 
+<br></p>
+</li>
+<li>
+<p>フォルダ内にある transcripts.gtfファイル(転写産物ごとのexon intron情報のファイル)をcuffmergeを用いて、統一したjunctionのreference用gtfにする。<br>
+cuffmerge -s $mm9genome assembly.txt <br>
+(assembly.txt内は以下です。) <br>
+[suimye@Brahms testdata]$ cat assembly.txt 
+<br>
+./dataA/transcripts.gtf <br>
+./dataB/transcripts.gtf <br></p>
+</li>
+</ol>
+<p>cuffmergeの結果、merged.gtfというA、Bのデータに基づく新しいjunction情報がえられますので、<br> こいつにcountingしてやれば、intronデータを過大評価するようにはならないと思います。
+<br>
+<br></p>
+<ol>
+<li>merged.gtfを用いて、merged.gtfに対するカウンティングをしてやる。<br>
+ cuffdiff  -p 10 --library-type fr-secondstrand  -o ./resCufdiff ./merged.gtf  ./dataA/dataA.bam ./dataB/dataB.bam</li>
+</ol>
+<p>すると、cuffdiffでは、FPKM値を算出しますが、FPKM値は無視して<br>
+read数だけの行列をcutコマンドで作ってやって、最後は、cuffcompareを<br>
+merged.gtfにかけたやつでannotationしてedgeRやれば大丈夫だと思いますが、<br>
+いかがでしょうか。間違ってたらごめんなさい。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Jul 13 '12 at 20:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/f763b758228ce9395b960221fbf54594?s=32&amp;d=identicon&amp;r=g" alt="suimye's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/28/suimye/">suimye</a><br/>
+    <span class="score" title="296 徳">296</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="8 バッジ"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="15 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">15</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="http://qa.lifesciencedb.jp/revisions/613/">
+                edited
+                <strong>Jul 13 '12 at 20:37</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-613">
+    
+        <a name="614"></a>
+        <div class="comment" id="comment-614">
+            <div id="post-614-score" class="comment-score"></div>
+            <div class="comment-text"><p>お返事遅れました。以前来ていたスパム的投稿の影響でメーラがLSQAの通知メールを迷惑行きにしてしまっておりました。
+また詳細な情報大変ありがとうございます。お知らせいただいたやりかた、試してみます。
+cuffdiffのタグカウントのjunction readの比率や割り振り方が気になるので、HTSeqをカスタムしたやり方と比べて評価しようと思っています。(大分先になりそうですが)</p></div>
+            <div class="comment-info" id="comment-614-info">
+                
+                
+                
+                <span class="comment-age">(Jul 19 '12 at 21:52)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-613" class="comment-tools">
+    
+    
+</div>
+<div id="comment-613-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="582"></a>
+                    <div id="answer-container-582" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-582-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../up/index.html" rel="nofollow"> </a>
+<div id="post-582-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-582-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>同bamをcoverageBEDで"-splice"オプションを付けても、 イントロン領域のタグも含めてカウントしてしまいます。</p>
+</blockquote>
+<p>coverageBedの -b オプションには遺伝子アノテーションのファイルを指定しているのでしょうか？
+bam を bamToBed -split でBEDに変換してからcoverageBedをかけたら、うまくいきそうな気がします。</p>
+<p>それでもダメなら、イントロン領域にあるタグ（の部分）を intersectBedで削るとうまく行くかもしれません。
+- mergeBed -i annotation.gff &gt; annotation.merge.bed
+- bamToBed -split -i accepted_hits.bam &gt; accepted_hits.bed
+- intersectBed -a accepted_hits.bed -b annotation.merge.bed &gt; accepted_hits.exon.bed
+- accepted_hits.exon.bed にcoverageBedをかける</p>
+<p>試してないので、うまく動くか分かりませんが、</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Apr 03 '12 at 20:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/49dc9f45c94314c14946e7dcf281d83d?s=32&amp;d=identicon&amp;r=g" alt="yuifu's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/66/yuifu/">yuifu</a><br/>
+    <span class="score" title="51 徳">51</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 バッジ"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span></p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-582">
+    
+        <a name="583"></a>
+        <div class="comment" id="comment-583">
+            <div id="post-583-score" class="comment-score"></div>
+            <div class="comment-text"><p>試してみました。
+以下の条件全て結果は同一で、intron領域もカウントされてしまいました。
+結果のカウントは全て同じで、lengthのカラムのみ、-splitオプションが有効な、
+2と6の条件のみ、intronを除外した値が表示されていました。</p>
+<ol>
+<li>リードの入力BAM -splitなしcoverageBED</li>
+<li>リードの入力BAM -splitありcoverageBED</li>
+<li>リードの入力BED(-bed12オプションなしbamToBed変換後) -splitなしcoverageBED</li>
+<li>リードの入力BED(-bed12オプションなしbamToBed変換後) -splitありcoverageBED</li>
+<li>リードの入力BED(-bed12オプションありbamToBed変換後) -splitなしcoverageBED</li>
+<li>リードの入力BED(-bed12オプションありbamToBed変換後) -splitありcoverageBED</li>
+</ol>
+<p>intersectBedを使う件についてですが、intron領域に別の遺伝子が含まれる場合等、根こそぎ削ってしまったりしまいませんでしょうか。アノテーションにも依るような気がしますが、refFlatなんかはnonCodingなども含まれていたような気がするので、削られてしまいそうな気はします。それらは別にやるのも手ですが。</p></div>
+            <div class="comment-info" id="comment-583-info">
+                
+                
+                
+                <span class="comment-age">(Apr 03 '12 at 22:47)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="584"></a>
+        <div class="comment" id="comment-584">
+            <div id="post-584-score" class="comment-score"></div>
+            <div class="comment-text"><p>補足ですが、-bには、BED形式でダウンロードしたrefFlatが入っています。上記の、入力BAMと書いてあるのは"-abam"で渡し、入力BEDと書いてあるのが"-a"で渡したものです。</p></div>
+            <div class="comment-info" id="comment-584-info">
+                
+                
+                
+                <span class="comment-age">(Apr 03 '12 at 23:55)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-582" class="comment-tools">
+    
+    
+</div>
+<div id="comment-582-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="612"></a>
+                    <div id="answer-container-612" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-612-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../612/up/index.html" rel="nofollow"> </a>
+<div id="post-612-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-612-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../612/down/index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>自己レスですが、現在までに分かったことを記載します。</p>
+<ol>
+<li>coverageBEDはRNA-Seqのタグカウントには、極めて不向きです。 理由としては、exonと非転写領域、exonとintronの境界のリードをカウントしてしまいます。intron領域のリードもカウントする他、splicing junctionのリードもカウントします。最初にexon+intronをcoverageBEDで数えたあとに、intron領域に張り付いたリードを引くことを試しましたが、intron領域のタグカウント時に、splicing junctionをまたぐ単一リードが複数回カウントされる可能性がある上、この影響は、junctionの数や、exon長などいろいろな要素に影響を受ける為、このカウントのしかたは、厳密性に問題がありすぎます。</li>
+<li>getGeneExpについて 遺伝子単位での計測には、ほぼ問題ないものの、ゲノム上で重複する遺伝子(例えばAPITD1とAPITD1-CORT)の重複領域のタグを"保守的"に数えないので、解析の目的によっては支障があるかもしれません。無理やり、splicing valiantに別IDをふってカウントすると、variantのある遺伝子の殆どのタグが0になってしまったりします。</li>
+<li>DESeqのマニュアルで、お勧めされているHTSeqは、splicing junctionをまたぐリードを計上してくれます。しかし、exonをskipするjunctionなども、領域に内に含まれていれば計上されるので、cufflinksのような、splicing junctionに特化した厳密性はないことを考慮する必要がありそうです。また、ゲノム中で重複する遺伝子のカウントは、getGeneExp同様、カウントしてくれません。splicing variant用のカウントには不向きかと。</li>
+<li>cufflinks2でタグカウント値を出してくれます。まだ詳しく把握できていませんが、ばらつきの情報などもあるようです。これを使うのがやはり最も素直でしょうか。ただ、小数のjunctionをまたぐリードの比率で、比率が大きく変わってしまう点が、検定する側のプログラム(edgeRやらDEseqやら)の前提を満たしているのかが気になります。もし、どこそこにその辺の議論が書いてあるなどの情報ありましたら、お知らせいただけると幸いです。</li>
+<li>cufflinksなどで、予測されたトランスクリプトや、既知トランスクリプトの領域情報から配列を切り出し、bowtie等でリードをトランスクリプト配列に再マップしてカウントする方法を知人に示唆されました。この方法では、splicing-junctionにマップされずらいなどのバイアスを考えなくても良いので、再マップの実行時間(それほど大したことはないですが)を抜きにすれば一番シンプルかもしれません。トランスクリプトの情報に依存する点と、マッピング時のマルチヒットの扱いには留意が必要だとは思います。</li>
+</ol>
+<p>もし、間違っていたり、関連情報ありましたらコメント等引き続きお願いします。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Jul 11 '12 at 21:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=32&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a><br/>
+    <span class="score" title="507 徳">507</span><span title="8 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="16 バッジ"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="28 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">28</span></span></p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-612">
+    
+</div>
+<div id="comment-tools-612" class="comment-tools">
+    
+    
+</div>
+<div id="comment-612-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="http://qa.lifesciencedb.jp/questions/581/answer/" method="post">
+            <div style="clear:both">
+            </div>
+            
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            あなたの回答
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea rows="10" cols="40" name="text" id="editor"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="リアルタイムMarkdown編集プレビューをトグルする">
+                                            プレビューをトグルする
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input type="checkbox" name="wiki" id="id_wiki" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="コミュニティー wikiオプションを選択した場合、質問と回答はポイントを生成せず、作者名は表示されない">
+                                            <label for="id_wiki">コミュニティー wiki</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+                        
+                        </table>  
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>                    
+                </div>
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">この質問をフォローする</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('../../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="../../../questions/581/リード長の長いrna-seqのタグカウント@type=rss" title="subscribe to answers"></a>
+    回答
+</p><p><a class="feed-icon" style="background-image:url('../../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="../../../questions/581/リード長の長いrna-seqのタグカウント@type=rss&amp;comments=yes" title="subscribe to comments and answers"></a>
+    回答とコメント
+</p>
+
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>ただいまベータテスト運用中です。そのために通知無くコンテンツの変更やサービスの停止変更されることがあります。</h2>
+<p>質問するなら<a href="../../../index.html">ライフサイエンスQA</a>。</p>
+<p>このページの<a href="../../../questions/581/リード長の長いrna-seqのタグカウント@type=rss">RSSフィード</a></p>
+<p><a href="http://twitter.com/lsqa_all">@lsqa_all</a>・<a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a></p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <p>
+		タグ:
+    </p>
+    <p class="tags" >
+        
+        	<a href="../../../tags/ngs/index.html" 
+			title="タグ付けされた質問をみる'ngs'タグを利用している" 
+			rel="tag">ngs</a> <span class="tag-number">&#215;47</span><br/>
+        
+        	<a href="../../../tags/rna-seq/index.html" 
+			title="タグ付けされた質問をみる'rna-seq'タグを利用している" 
+			rel="tag">rna-seq</a> <span class="tag-number">&#215;13</span><br/>
+        
+        	<a href="../../../tags/tophat/index.html" 
+			title="タグ付けされた質問をみる'tophat'タグを利用している" 
+			rel="tag">tophat</a> <span class="tag-number">&#215;6</span><br/>
+        
+        	<a href="../../../tags/splicing-junction/index.html" 
+			title="タグ付けされた質問をみる'splicing-junction'タグを利用している" 
+			rel="tag">splicing-junction</a> <span class="tag-number">&#215;2</span><br/>
+        
+        	<a href="../../../tags/long/index.html" 
+			title="タグ付けされた質問をみる'long'タグを利用している" 
+			rel="tag">long</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        質問日: <strong title="2012-04-03 16:59:13.712735">Apr 03 '12 at 16:59</strong>
+    </p>
+    <p> 
+     	閲覧数: <strong>10,054 回</strong>
+    </p>
+    <p> 
+        最終更新日: <strong title="2012-07-19 21:52:09.096286">Jul 19 '12 at 21:52</strong>
+    </p>
+</div>
+
+
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>世界に広がるQAサイト</h2>
+<p><a href="http://biostar.stackexchange.com">バイオインフォマティクスのBioStar</a>・ <a href="http://I.SEQanswers.com">新型シーケンサーのSEQanswers</a>・ <a href="http://blueobelisk.shapado.com">オープンデータのBlueObelisk</a>・<a href="http://stackoverflow.com">プログラミングのstackoverflow</a>・ <a href="http://www.semanticoverflow.com">Semantic Overflow</a>・ <a href="http://stats.stackexchange.com/">Statistical Analysis</a>・ <a href="http://cstheory.stackexchange.com/">Theoretical Computer Science</a>・ <a href="http://chiebukuro.yahoo.co.jp/">Yahoo!知恵袋</a>・ <a href="http://okwave.jp/">OKWave</a> <a href="http://ja.wikipedia.org/wiki/Category:Q%26Aサイト">などなど</a></p>
+     </div>
+</div>
+
+<div class="boxC">
+    <h3 class="subtitle">関係した質問</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="../../541/down/index.html">Tophatのbutterflyオプションについて</a>
+        </p>
+        
+        <p>
+            <a href="../../434/down/index.html">strand specific RNA-Seqデータ解析におけるtophatの利用について</a>
+        </p>
+        
+        <p>
+            <a href="../../810/down/index.html">Trinityのアセンブリ結果の見方</a>
+        </p>
+        
+        <p>
+            <a href="../../133/down/index.html">RNA-SeqのrRNAの除去</a>
+        </p>
+        
+        <p>
+            <a href="../../../mark_favorite/824/index.html">TopHatのreferenceデータについて</a>
+        </p>
+        
+        <p>
+            <a href="../../139/down/index.html">BMB2010 のNGS関連の発表</a>
+        </p>
+        
+        <p>
+            <a href="../../314/down/index.html">FindPeaksの使い方</a>
+        </p>
+        
+        <p>
+            <a href="../../../mark_favorite/227/index.html">C-value からゲノムサイズを推定する</a>
+        </p>
+        
+        <p>
+            <a href="../../499/down/index.html">Celera WGA Assembler(CABOG)のインストールと使い方</a>
+        </p>
+        
+        <p>
+            <a href="../../508/down/index.html">NGSライブラリのPCR増幅</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="../../../about/index.html" >概要</a> <span class="link-separator"> |</span> <a href="../../../faq/index.html" >よくある質問</a> <span class="link-separator"> |</span> <a href="../../../privacy/index.html" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="../../../m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

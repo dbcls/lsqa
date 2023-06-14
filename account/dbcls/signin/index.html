@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>DBCLS OpenID Service</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="https://openid.dbcls.jp/stylesheets/common.css?1275897662" media="screen" rel="stylesheet" type="text/css" />
+<link href="https://openid.dbcls.jp/stylesheets/application.css?1275897662" media="screen" rel="stylesheet" type="text/css" />
+
+    <script src="https://openid.dbcls.jp/javascripts/prototype.js?1275897662" type="text/javascript"></script>
+<script src="https://openid.dbcls.jp/javascripts/effects.js?1275897662" type="text/javascript"></script>
+<script src="https://openid.dbcls.jp/javascripts/dragdrop.js?1275897662" type="text/javascript"></script>
+<script src="https://openid.dbcls.jp/javascripts/controls.js?1275897662" type="text/javascript"></script>
+<script src="https://openid.dbcls.jp/javascripts/application.js?1275897662" type="text/javascript"></script>
+    <script src="https://openid.dbcls.jp/javascripts/rounded_corners_lite.js?1275897662" type="text/javascript"></script>
+
+    
+  </head>
+  <body>
+    <!-- start Header -->
+    <div id="logo">
+      <h1>
+        <a href="https://openid.dbcls.jp/">DBCLS OpenID Service</a>
+      </h1>
+    </div>
+
+    <div id="tab">
+      <ul>
+        <li class="current">
+          <a href="https://openid.dbcls.jp/">Home</a>
+        </li>
+        <li><a href="https://openid.dbcls.jp/help">Help</a></li>
+        <li><a href="https://openid.dbcls.jp/contactus">Contact Us</a></li>
+      </ul>
+    </div>
+    <!-- end Header -->
+
+    <!-- Page -->
+    <!-- start page -->
+<div id="page">
+  <!-- start content -->
+  <div id="content">
+
+    
+
+    <div class="section">
+      <h1 class="title">
+        Sign In
+      </h1>
+      <p class="byline" />
+      <div class="entry">
+        <p class="desc">
+          Please input login id and password
+        </p>
+        <form action="index.html" method="post"><div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="82c4a1f102c37d2066900e2b2d5303bcb1de5a7f" /></div>        <table class="detail">
+          <tbody>
+            <tr>
+              <th>
+                <label for="login">
+                  Login ID
+                </label>
+              </th>
+              <td>
+                <input id="login" name="login" size="45" type="text" />
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <label for="password">
+                  Password
+                </label>
+              </th>
+              <td>
+                <input class="text" id="password" name="password" size="45" type="password" value="" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          <label for="remember_me">Keep me signed in</label>
+          <input id="remember_me" name="remember_me" type="checkbox" value="1" />
+        </p>
+        <p><input name="commit" type="submit" value="Sign In" /></p>
+        </form>      </div>
+    </div>
+  </div>
+
+  <!-- start sidebars -->
+  <div class="sidebar">
+    <ul>
+      <li>
+                <div class="identityArea">
+          <h2>YOUR OPENID:</h2>
+          <p>
+            
+          </p>
+        </div>
+
+      </li>
+      <li id="menu">
+        <h2>Menu</h2>
+        <ul style="font-size: 70%;">
+          <li>
+            <a href="https://openid.dbcls.jp/account/forgot_password">Do you forget your password?</a>
+          </li>
+          <li>
+            <a href="https://openid.dbcls.jp/account/reactivate">Reactivate Your Account</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- end sidebars -->
+  <div style="clear: both;">&nbsp;</div>
+</div>
+<!-- end page -->
+
+
+    <div id="footer">
+      <p>
+         <a href="http://dbcls.rois.ac.jp">DBCLS</a> |&nbsp; 
+         <a href="http://openid.dbcls.jp/terms.html">Terms of Service</a>
+         <!-- %= _("&copy;2008 DBCLS All Rights Reserved.") % -->
+     </p>
+    </div>
+
+<script type="text/JavaScript">
+
+  window.onload = function()
+  {
+    settings = {
+      tl: { radius: 5 },
+      tr: { radius: 5 },
+      bl: { radius: 5 },
+      br: { radius: 5 },
+      antiAlias: true,
+      autoPad: false,
+      validTags: ["div"]
+    }
+
+    var cornersObj = new curvyCorners(settings, "rounded");
+    cornersObj.applyCornersToAll();
+  }
+  </script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: indelを配列に反映させる</title><link>http://qa.lifesciencedb.jp/questions/328/indel%E3%82%92%E9%85%8D%E5%88%97%E3%81%AB%E5%8F%8D%E6%98%A0%E3%81%95%E3%81%9B%E3%82%8B</link><description>&lt;p&gt;現在、ある染色体の配列をfasta形式で持っているのですが、
+これにindelを反映させたいと考えています。&lt;/p&gt;
+&lt;p&gt;indelは、例えば、&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1239000base　　ATGGA　　insertion
+1240000base      GT　  deletion
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;という状態で、エクセル上に保存してあります。&lt;/p&gt;
+&lt;p&gt;最終的にfasta形式を変えないまま、数百個のindelを挿入あるいは欠失させたいのですが、
+どのような手段をとったらいいのでしょうか？&lt;/p&gt;
+&lt;p&gt;ソフト等の購入費用はありません。。。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/328/indel%E3%82%92%E9%85%8D%E5%88%97%E3%81%AB%E5%8F%8D%E6%98%A0%E3%81%95%E3%81%9B%E3%82%8B" rel="self"></atom:link><language>ja</language><lastBuildDate>Sat, 26 Feb 2011 05:22:51 +0900</lastBuildDate><item><title>Comment by yag_ays on kenken's 回答</title><link>http://qa.lifesciencedb.jp/questions/328/indel%E3%82%92%E9%85%8D%E5%88%97%E3%81%AB%E5%8F%8D%E6%98%A0%E3%81%95%E3%81%9B%E3%82%8B#366</link><description>&lt;p&gt;BioRubyを使わなくても良いように，スクリプトを書き換えました．単独で動くので，上記の使い方の項目1.は必要ありません．&lt;/p&gt;
+&lt;p&gt;ソースコード　：　&lt;a href="https://gist.github.com/840281"&gt;https://gist.github.com/840281&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;使用例　：　&lt;a href="https://skitch.com/yagays/rt2ma/indel"&gt;https://skitch.com/yagays/rt2ma/indel&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;(ruby 1.8.7とruby 1.9.2p136で動作確認しています)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">yag_ays</dc:creator><pubDate>Sat, 26 Feb 2011 05:22:51 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/328/indel%E3%82%92%E9%85%8D%E5%88%97%E3%81%AB%E5%8F%8D%E6%98%A0%E3%81%95%E3%81%9B%E3%82%8B#366</guid></item><item><title>Answer by kenken</title><link>http://qa.lifesciencedb.jp/questions/328/indel%E3%82%92%E9%85%8D%E5%88%97%E3%81%AB%E5%8F%8D%E6%98%A0%E3%81%95%E3%81%9B%E3%82%8B/347</link><description>&lt;p&gt;わざわざありがとうございます。
+感謝いたします。
+プログラムは初心者なのでよくわからないのですが、
+biorubyは以下のホームページの通りにダウンロードしたらいいんでしょうか。
+過去に何回かcygwinで解析したことがあるのですが、今回は、いまいちよくわかりません。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dev.bioruby.org/ja/?install"&gt;http://dev.bioruby.org/ja/?install&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">kenken</dc:creator><pubDate>Thu, 24 Feb 2011 19:58:41 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/328/indel%E3%82%92%E9%85%8D%E5%88%97%E3%81%AB%E5%8F%8D%E6%98%A0%E3%81%95%E3%81%9B%E3%82%8B/347</guid></item><item><title>Answer by yag_ays</title><link>http://qa.lifesciencedb.jp/questions/328/indel%E3%82%92%E9%85%8D%E5%88%97%E3%81%AB%E5%8F%8D%E6%98%A0%E3%81%95%E3%81%9B%E3%82%8B/338</link><description>&lt;p&gt;Biostarに似たような質問があったので，リンクを貼っておきます．&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://biostar.stackexchange.com/questions/2529/how-to-insert-or-delete-nucleoties-at-various-locations-in-large-dna-file"&gt;http://biostar.stackexchange.com/questions/2529/how-to-insert-or-delete-nucleoties-at-various-locations-in-large-dna-file&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">yag_ays</dc:creator><pubDate>Thu, 24 Feb 2011 09:52:43 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/328/indel%E3%82%92%E9%85%8D%E5%88%97%E3%81%AB%E5%8F%8D%E6%98%A0%E3%81%95%E3%81%9B%E3%82%8B/338</guid></item><item><title>Comment by yag_ays on kenken's 回答</title><link>http://qa.lifesciencedb.jp/questions/328/indel%E3%82%92%E9%85%8D%E5%88%97%E3%81%AB%E5%8F%8D%E6%98%A0%E3%81%95%E3%81%9B%E3%82%8B#337</link><description>&lt;p&gt;取り敢えずは上のような感じで良さそうですね．スクリプトを少し書き換えたので，使い方を含めて補足します．&lt;/p&gt;
+&lt;h3&gt;1．BioRubyというパッケージをインストールします&lt;/h3&gt;
+&lt;p&gt;以下のコマンドを実行してください．&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  $ gem install bio
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;(うまく行かない場合は行頭にsudoを付けて管理者権限になってください)&lt;/p&gt;
+&lt;h3&gt;2．以下の3つのファイルを同じフォルダに入れてください&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;indel.rb&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;これは &lt;a href="https://gist.github.com/840281"&gt;gist: 840281&lt;/a&gt; をコピペしたファイル&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;indels.txt&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;indelの情報が入ったファイルです．タブ区切りのファイルで保存してください（もし違う形式だった場合はExcelの「別名で保存」からtsv形式で保存）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;fasta.fasta&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;対象となるFASTAファイルです．&lt;/p&gt;
+&lt;h3&gt;3．スクリプトを実行します&lt;/h3&gt;
+&lt;p&gt;先ほどファイルを置いたフォルダに移動し，以下のコマンドを実行してください．&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; $ ruby indel.rb indels.txt fasta.fasta
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;もし成功すれば，フォルダ内に「output.fasta」というファルが生成されているハズです．中身を見て，書き換えがうまくいっているか確かめてください．&lt;/p&gt;
+&lt;p&gt;以上です．&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">yag_ays</dc:creator><pubDate>Thu, 24 Feb 2011 04:11:40 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/328/indel%E3%82%92%E9%85%8D%E5%88%97%E3%81%AB%E5%8F%8D%E6%98%A0%E3%81%95%E3%81%9B%E3%82%8B#337</guid></item><item><title>Answer by kenken</title><link>http://qa.lifesciencedb.jp/questions/328/indel%E3%82%92%E9%85%8D%E5%88%97%E3%81%AB%E5%8F%8D%E6%98%A0%E3%81%95%E3%81%9B%E3%82%8B/336</link><description>&lt;p&gt;参考になるアドバイスありがとうございます。
+使い方と結果と全く同じことを
+cygwin上で行ってみました。
+エラーが出てしまうのですが、私のやり方の問題でしょうか。。。&lt;/p&gt;
+&lt;pre&gt;$ ruby indel.rb indels.txt fasta.fasta
+indel.rb:3:in `require': no such file to load -- bio (LoadError)
+        from indel.rb:3
+&lt;/pre&gt;
+
+&lt;p&gt;とのことです。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">kenken</dc:creator><pubDate>Thu, 24 Feb 2011 00:22:08 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/328/indel%E3%82%92%E9%85%8D%E5%88%97%E3%81%AB%E5%8F%8D%E6%98%A0%E3%81%95%E3%81%9B%E3%82%8B/336</guid></item><item><title>Answer by yag_ays</title><link>http://qa.lifesciencedb.jp/questions/328/indel%E3%82%92%E9%85%8D%E5%88%97%E3%81%AB%E5%8F%8D%E6%98%A0%E3%81%95%E3%81%9B%E3%82%8B/335</link><description>&lt;p&gt;塩基配列を弄る系のソフトを簡単に見てみた限りだとkenkenさんの要求する操作ができるものがなかったので，適当にスクリプト書いてみました．こんなものが欲しいという理解でよろしいでしょうか．&lt;/p&gt;
+&lt;p&gt;ソースコード　：　&lt;a href="https://gist.github.com/840281"&gt;https://gist.github.com/840281&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;使い方と結果　：　&lt;a href="http://gyazo.com/d055680402948cd245eeaba2b60a373e.png"&gt;http://gyazo.com/d055680402948cd245eeaba2b60a373e.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;久しぶりにruby書いたので，ちょっとバグがあるかもしれません．&lt;del&gt;動作保証もできないですが，要望があれば直します．&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;追記(2011/03/04)：取り敢えず解決された(?)のでしょうか．特に要望も無さそうなので，これで一端終わりにします．ソースコード等は自由に使ってもらって構いませんが，スクリプトの保守管理やbug fixは今後やりません．&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">yag_ays</dc:creator><pubDate>Wed, 23 Feb 2011 20:04:59 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/328/indel%E3%82%92%E9%85%8D%E5%88%97%E3%81%AB%E5%8F%8D%E6%98%A0%E3%81%95%E3%81%9B%E3%82%8B/335</guid></item><item><title>Comment by mn3 on kenken's 質問</title><link>http://qa.lifesciencedb.jp/questions/328/indel%E3%82%92%E9%85%8D%E5%88%97%E3%81%AB%E5%8F%8D%E6%98%A0%E3%81%95%E3%81%9B%E3%82%8B#332</link><description>&lt;p&gt;真面目な話として、数百個分の操作なら、手でやるのも検討するといいかもしれません。&lt;/p&gt;
+&lt;p&gt;その操作が今回一回きりで、プログラミングの手間やソフトウェアの購入が難しいなら、決して悪くない方法だと思います。今後も同様の操作が繰り返される場合は、プログラミングすることを検討するべきだと思います。&lt;/p&gt;
+&lt;p&gt;もしくは、質問として求めている処理をより正確に記述して、これを見た方にプログラミングしてもらうという手があります。その場合は、正確に入力ファイルやパラメータや条件を定義し、出力として期待する型式を定義すると回答が得られる確率が向上します。たとえば、上記の質問では、&lt;code&gt;1239000base&lt;/code&gt;がなにを意味しているのか不明なので、期待されている回答が得られにくいかなとおもいます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mn3</dc:creator><pubDate>Wed, 23 Feb 2011 18:55:02 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/328/indel%E3%82%92%E9%85%8D%E5%88%97%E3%81%AB%E5%8F%8D%E6%98%A0%E3%81%95%E3%81%9B%E3%82%8B#332</guid></item></channel></rss>

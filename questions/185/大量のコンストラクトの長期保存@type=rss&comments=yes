@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: 大量のコンストラクトの長期保存</title><link>http://qa.lifesciencedb.jp/questions/185/%E5%A4%A7%E9%87%8F%E3%81%AE%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%83%88%E3%81%AE%E9%95%B7%E6%9C%9F%E4%BF%9D%E5%AD%98</link><description>&lt;p&gt;数千種類のプラスミドを長期保存するにはどのような方法が適しているでしょうか。&lt;br&gt;
+とりあえず下記の３つの方法のメリット・デメリットを書き出してみました。&lt;br&gt;
+（なお、２の大腸菌スタブについては、１のグリセロールストックよりも&lt;br&gt;
+良さそうに思えますが、実際に作製したことがないのでよくわかりません。）&lt;br&gt;
+よい方法やノウハウ等をご教示いただければありがたいです。&lt;/p&gt;
+&lt;p&gt;１）大腸菌グリセロールストック&lt;br&gt;
+○簡単につくれる&lt;br&gt;
+○融解しなければ数年間保存可能&lt;br&gt;
+△-80℃で保存しなければならない&lt;br&gt;
+△凍結融解に弱い&lt;/p&gt;
+&lt;p&gt;２）大腸菌スタブ&lt;br&gt;
+◎室温で保存可&lt;br&gt;
+○簡単につくれる（？）&lt;br&gt;
+△密閉しないといけない？（96穴プレートは使えるのか？？）&lt;br&gt;
+？保存期間は大腸菌グリセロールストックと同等以上か&lt;/p&gt;
+&lt;p&gt;３）プラスミドDNAを抽出して保存&lt;br&gt;
+◎-30℃で安定して保存可能&lt;br&gt;
+×プラスミド抽出のコストと手間がかかる&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/185/%E5%A4%A7%E9%87%8F%E3%81%AE%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%83%88%E3%81%AE%E9%95%B7%E6%9C%9F%E4%BF%9D%E5%AD%98" rel="self"></atom:link><language>ja</language><lastBuildDate>Thu, 17 Mar 2011 15:59:08 +0900</lastBuildDate><item><title>Answer by okubo</title><link>http://qa.lifesciencedb.jp/questions/185/%E5%A4%A7%E9%87%8F%E3%81%AE%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%83%88%E3%81%AE%E9%95%B7%E6%9C%9F%E4%BF%9D%E5%AD%98/402</link><description>&lt;p&gt;スタブやストックはシーケンスができないでトランスフォームも大変な時代の名残だと思います。
+数万のコンストラクトを20年前に保存してましたが
+NaI等でミニプレしてeluteを凍結乾燥後　シールして棚におく
+このとき９６穴など使うと　かなりの頻度で　クロスコンタミしてますので
+必ず　使う前にシーケンスを。　したくなければ　横着しないで　エッペンで。　&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">okubo</dc:creator><pubDate>Thu, 17 Mar 2011 15:59:08 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/185/%E5%A4%A7%E9%87%8F%E3%81%AE%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%83%88%E3%81%AE%E9%95%B7%E6%9C%9F%E4%BF%9D%E5%AD%98/402</guid></item><item><title>Answer by Tau</title><link>http://qa.lifesciencedb.jp/questions/185/%E5%A4%A7%E9%87%8F%E3%81%AE%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%83%88%E3%81%AE%E9%95%B7%E6%9C%9F%E4%BF%9D%E5%AD%98/368</link><description>&lt;p&gt;FTA card は？　&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tau</dc:creator><pubDate>Sun, 27 Feb 2011 21:11:29 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/185/%E5%A4%A7%E9%87%8F%E3%81%AE%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%83%88%E3%81%AE%E9%95%B7%E6%9C%9F%E4%BF%9D%E5%AD%98/368</guid></item><item><title>Answer by suimye</title><link>http://qa.lifesciencedb.jp/questions/185/%E5%A4%A7%E9%87%8F%E3%81%AE%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%83%88%E3%81%AE%E9%95%B7%E6%9C%9F%E4%BF%9D%E5%AD%98/194</link><description>&lt;p&gt;こんばんは。
+私は、３つの方法全部使ったこともありますが、実際のところ他のラボに供与するためにとか、ものすごく大量に保存したことはありませんし、その他の方法についてアイディアはありませんがゆるり書いておきます。&lt;/p&gt;
+&lt;p&gt;ご存知なのではと存じますが、ご質問の内容が長期保存ということでその点では圧倒的に３番です。私の経験では、スタブやグリセロルストックというのは、一種の応急措置であり、両方とも起きない時は、どんなに上手にしても無理ということがあります。それに比べ、DNAは融解を繰り返さない限りは半永久とまではいいませんが長期保存することが可能です。
+簡便さといういみでグリセロールストックをなされる方は結構いますが、私見では、トランスフォーメーションなど毎日ルーチンでやるのですから全く手間に感じません。むしろおきなかったり株を間違ったりすることを考えるよりも、濃度から自由に扱える精製DNAの方が遥かに効率的ですし、numbering missやラベルがはがれた場合でも、中身が分からなければDNAシーケンシングしてしまえばすぐさまhard evidenceが得られます。
+また、プラスミドDNA抽出のコストについてですが、精製キットはQIAGENのmidi prepなどを利用しているのであれば、私はカラムを高塩バッファで洗いreuseしています。トランスフェクション用には、エンドトキシンフリーにするように精製度をあげますが、サブクロにはこれで十分です。
+保存方法は、 TE、1mg/mlの高濃度にして、利用する分を100ulほどアリコートして、後は凍結融解しないストックとして-30度遮光保存しています。DNA自身はエタノール溶液下でもさらに安定に保存できるという話を聞いたことがありますが、私はやりません。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">suimye</dc:creator><pubDate>Fri, 17 Dec 2010 01:11:29 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/185/%E5%A4%A7%E9%87%8F%E3%81%AE%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%83%88%E3%81%AE%E9%95%B7%E6%9C%9F%E4%BF%9D%E5%AD%98/194</guid></item></channel></rss>

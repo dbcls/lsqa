@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: Local BLASTのデータベース</title><link>http://qa.lifesciencedb.jp/questions/813/local-blast%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9</link><description>&lt;p&gt;お世話になります。
+Local BLASTを導入するために統合TVのLocal BLASTの使い方（&lt;a href="http://togotv.dbcls.jp/20110420.html"&gt;http://togotv.dbcls.jp/20110420.html&lt;/a&gt;）を参考にさせていただいております。
+ご紹介の通りの手順で作業を進めていましたが、データベースを作成できずに困っております。&lt;/p&gt;
+&lt;p&gt;まず、データベースとして、&lt;a href="ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/"&gt;ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/&lt;/a&gt; からnr.gzをダウンロードし、解凍しました。
+解凍したファイル（nr）をデータベースにするために、&lt;code&gt;makeblastdb -in nr -dbtype prot -hash_index&lt;/code&gt;を実行しました。
+すると、以下に記した文が表示されました。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Building a new DB, current time: 11/27/2014 11:30:45
+New DB name:   nr
+New DB title:  nr
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;しばらくすると、以下の文が何度も繰り返し出現し、最後にvolume: 以下の文が表示され、データベースの作成に失敗しました。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Error: (1431.1) FASTA-Reader: Warning: FASTA-Reader: Ignoring FASTA modifier(s) found because the input was not expected to have any.
+
+volume: nr.00
+volume: nr.01
+
+file: nr.00.pin
+file: nr.00.phr
+file: nr.00.psq
+file: nr.00.psi
+file: nr.00.psd
+file: nr.00.phi
+file: nr.00.phd
+file: nr.00.pog
+file: nr.01.pin
+file: nr.01.phr
+file: nr.01.psq
+file: nr.01.psi
+file: nr.01.psd
+file: nr.01.phi
+file: nr.01.phd
+file: nr.01.pog
+file: nr.pal
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;解決策がお分かりになる方がいらっしゃいましたら、ご教授いただければ幸いです。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/813/local-blast%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 01 Dec 2014 11:17:00 +0900</lastBuildDate><item><title>Answer by aki</title><link>http://qa.lifesciencedb.jp/questions/813/local-blast%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9/814</link><description>&lt;p&gt;エラーの原因はわかりませんが、&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ftp://ftp.ncbi.nih.gov/blast/db/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;にそのまま利用可能なnrがあるので、それをダウンロード、展開して使用されてみてはどうですか。&lt;/p&gt;
+&lt;p&gt;wget・md5sum・tar・gzipがあり、httpプロキシとか通していないなら以下のコマンドでダウンロードと展開ができるはずです。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#download
+wget -c ftp://ftp.ncbi.nih.gov/blast/db/nr.??.tar.gz
+wget -c ftp://ftp.ncbi.nih.gov/blast/db/nr.??.tar.gz.md5
+#check files
+for f in nr.??.tar.gz.md5; do md5sum -c $f; done
+#extract files
+for f in nr.??.tar.gz; do tar -xzf $f; done
+#delete files
+rm nr.??.tar.gz nr.??.tar.gz.md5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;では。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">aki</dc:creator><pubDate>Mon, 01 Dec 2014 11:17:00 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/813/local-blast%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9/814</guid></item></channel></rss>

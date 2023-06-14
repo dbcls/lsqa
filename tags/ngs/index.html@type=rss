@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With ngs</title><link>http://qa.lifesciencedb.jp/tags/ngs/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;ngs&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/ngs/" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 09 Dec 2014 23:48:24 +0900</lastBuildDate><item><title>TopHatのreferenceデータについて</title><link>http://qa.lifesciencedb.jp/questions/824/tophat%E3%81%AEreference%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;今回はTophat2 (bowtie2)に使用するgenome indexについて質問があり利用させていただきました。&lt;/p&gt;
+&lt;p&gt;現在TopHat2およびCufflinksを用いたNGSデータ解析を計画しています。&lt;br&gt;
+他のツールの出力と比較する為、annotation及びindexデータは"Ensembl release 72"を使用したいと考えています。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+Q1) そこで質問ですが、旧バージョンのannotation及びgenome indexをiGenome等でDLすることは可能でしょうか？&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+不可能であればEnsembl archiveのFTPサイトよりDLし、bowtie2でbuildしようかとも考えています。&lt;br&gt;
+annotationデータは、FTP内のGTFファイルを、indexデータはDNAのFASTAファイルをbuildして用いようと考えます。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+Q2) そこでさらに質問ですが、indexデータのbuildに当たり、全ゲノムのfaファイルは存在しないのでしょうか。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+今回の目的は全ゲノムを対象とするのですが、FTPサイトを見た所、各染色体別のfaファイルしか準備されていません。&lt;br&gt;
+これらを必要数つなぎ合わせてgenome indexを作成しても良いものでしょうか。&lt;/p&gt;
+&lt;p&gt;基本的な質問となり申し訳ありません。どちらか片方でもお答えくだされば幸いです。&lt;br&gt;
+どうぞよろしくお願い致します。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kent_allow</dc:creator><pubDate>Tue, 09 Dec 2014 23:48:24 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/824/tophat%E3%81%AEreference%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>tophat</category><category>fasta</category><category>reference</category><category>ngs</category></item><item><title>Trinityのアセンブリ結果の見方</title><link>http://qa.lifesciencedb.jp/questions/809/trinity%E3%81%AE%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E7%B5%90%E6%9E%9C%E3%81%AE%E8%A6%8B%E6%96%B9</link><description>&lt;p&gt;初心者です。ご助言お願いいたします。
+Trinityを用いてHiseqのペアエンドデータのde novo アセンブリを行いました。
+コンティグ数やN50やコンティグ長頻度分布をみるとまずまずのコンティグが作成されたように思います。
+しかし、各コンティグが作成されるのに用いられたリード数やcoverage dapthの情報が、出力された複数のファイルのどこにあるかわかりません（パッと見では見当たりません）。
+どうすれば上記の情報を知ることができますでしょうか？
+お助け下さい。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">TNSI_HD</dc:creator><pubDate>Tue, 11 Nov 2014 19:12:18 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/809/trinity%E3%81%AE%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E7%B5%90%E6%9E%9C%E3%81%AE%E8%A6%8B%E6%96%B9</guid><category>rna-seq</category><category>assembly</category><category>ngs</category></item><item><title>exome解析で使うソフト</title><link>http://qa.lifesciencedb.jp/questions/794/exome%E8%A7%A3%E6%9E%90%E3%81%A7%E4%BD%BF%E3%81%86%E3%82%BD%E3%83%95%E3%83%88</link><description>&lt;p&gt;ある個人のexome解析を行い、変異のリストアップと報告された疾患遺伝子を一覧として出そうと思います。
+この解析を行うのに最適なソフトを教えていただけないでしょうか？
+可能であればフリーがいいのですが、なければ安価ですむもので。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">kenken</dc:creator><pubDate>Wed, 08 Oct 2014 00:47:29 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/794/exome%E8%A7%A3%E6%9E%90%E3%81%A7%E4%BD%BF%E3%81%86%E3%82%BD%E3%83%95%E3%83%88</guid><category>ngs</category></item><item><title>DNA解析ソフトについて</title><link>http://qa.lifesciencedb.jp/questions/765/dna%E8%A7%A3%E6%9E%90%E3%82%BD%E3%83%95%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;流域で採取した河川底生動物を次世代シーケンシング解析し，GMYCモデルを用いたDNA種分類法によって種数を評価したいと考えています．&lt;/p&gt;
+&lt;p&gt;シーケンシング解析したのはミトコンドリアDNAのCOI領域で，HCOプライマー側からの一方向のみをシーケンシングしました．
+その結果，合計16万配列（平均塩基長330bp）が得られました．&lt;/p&gt;
+&lt;p&gt;DNA解析を以下の手順で行いたいと考えています．
+クオリティスコアに基づいたフィルタリング，
+リファレンス配列（国際DNAデータベース上の既知の配列）に対するグローバルアライメント，
+進化距離が時間に比例している進化系統樹の作成，
+GMYCモデルによって種の境界年代を推定　→　種数の決定&lt;/p&gt;
+&lt;p&gt;一致度の高い塩基配列をクラスタリングし，OTU数を種多様度の指標とする方法があると思いますが，私の研究ではクラスタリングではなく，種分化する年代を塩基配列の違いから推定するGMYCモデルを用いて種数を推定したいと考えています．&lt;/p&gt;
+&lt;p&gt;現在，クエリの挿入欠損を修正するために，リファレンスに対するアライメントを行っているのですが，ローカルアライメントではなくグローバルアライメントを選択している理由としては，アラインされた配列の5’末端が揃うからです．&lt;/p&gt;
+&lt;p&gt;ソフトウェア「Bowtie」によって，クエリに挿入欠損がうまく入っているのですが，アラインされる配列が16万配列の1割未満と少ないのが現状です．&lt;/p&gt;
+&lt;p&gt;そこで，グローバルアライメントを行うソフトウェアで，リファレンスとクエリ間での最小類似度のパラメータ設定が変更でき，リファレンスを複数インプットしてアライメントできるソフトウェアをご教授いただきたくお願いします．&lt;/p&gt;
+&lt;p&gt;また，OTUクラスタリングの際に配列がアライメントされてから類似度の計算が行われていると思うのですが，そのアライメント結果がファイルとして出力できるかを教えていただきたいです．
+よろしくお願いします．&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">izumi</dc:creator><pubDate>Tue, 13 May 2014 16:31:02 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/765/dna%E8%A7%A3%E6%9E%90%E3%82%BD%E3%83%95%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>ngs</category></item><item><title>アライメントについて</title><link>http://qa.lifesciencedb.jp/questions/745/%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;流域の河川底生動物を採取し，形態同定とDNA解析の2つのアプローチで種数を評価したいと思っています．&lt;/p&gt;
+&lt;p&gt;形態同定で特定された分類群に基づいて，DNAデータベースから各分類群のDNA配列を持ってきました．
+その配列からコンセンサス配列を作り，これをリファレンス配列としました．&lt;/p&gt;
+&lt;p&gt;クエリ配列は河川底生動物のサンプルDNA（16万配列）とし，リファレンス配列に対してglobal alignmentをしました．
+この時のalignmentソフトはBowtieを使いました．&lt;/p&gt;
+&lt;p&gt;しかし，クエリ配列の16万配列の内，リファレンス配列に対してalignmentされた配列が1割にも満たない結果となりました．&lt;/p&gt;
+&lt;p&gt;alignmentされる配列の割合を増やしたいと考えていまして，
+クエリとリファレンス間の塩基一致割合(identity)の条件を下げる方法を取りたいのですが，global alignmentができて，かつidentityの条件を変更できるalignmentソフトをご教授頂いてよろしいでしょうか&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">izumi</dc:creator><pubDate>Tue, 08 Apr 2014 13:13:34 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/745/%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>ngs</category></item><item><title>大量の配列のアライメントについて</title><link>http://qa.lifesciencedb.jp/questions/716/%E5%A4%A7%E9%87%8F%E3%81%AE%E9%85%8D%E5%88%97%E3%81%AE%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;お世話になっております．&lt;/p&gt;
+&lt;p&gt;表題の内容について質問があります．&lt;/p&gt;
+&lt;p&gt;次世代シークエンサーによって得られた大量の配列をアライメントしたいと考えています．
+以下のようなサンプルを用いました．&lt;/p&gt;
+&lt;p&gt;河川底生動物群集サンプル&lt;/p&gt;
+&lt;p&gt;個体数：8,921個体&lt;/p&gt;
+&lt;p&gt;対象とするDNA領域：ミトコンドリアDNAのCOI領域（658塩基長）&lt;/p&gt;
+&lt;p&gt;次世代シークエンサー：GS FLX&lt;/p&gt;
+&lt;p&gt;配列数：165,508配列&lt;/p&gt;
+&lt;p&gt;配列長：40～630塩基長（平均328塩基長）&lt;/p&gt;
+&lt;p&gt;シングルエンドの配列のみです&lt;/p&gt;
+&lt;p&gt;8,921個体を形態同定することによって，流域に生息する底生動物は34分類群（30科，3目，1綱）に分類されました．&lt;/p&gt;
+&lt;p&gt;次に，各分類群から3～10配列ずつを，国際DNAデータベースから無作為にダウンロードしたのち（658塩基長の配列のみ，計180配列），180配列からコンセンサス配列を作成しました．&lt;/p&gt;
+&lt;p&gt;この時，次世代シークエンサーで解析された16万配列にはプライマー配列が含まれているのに対し，DNAデータベースからダウンロードした配列には含まれていなかったので，逆相補鎖になっていないことを確認したあと，作成したコンセンサス配列の5'末端上流側にプライマー配列を加えて，これをリファレンス配列として用いました．&lt;/p&gt;
+&lt;p&gt;次世代シークエンサーで解析された16万配列（クエリ配列）とコンセンサス配列（リファレンス配列）はともにCOI領域であり，底生動物間では遺伝的にあまり離れていないため，マッピングをすることによってアライメントができるものと考えていたのですが，どうも上手くいきません．&lt;/p&gt;
+&lt;p&gt;マッピングソフトはBWAを用い，bwa mem コマンドによってアライメントを行いました．&lt;/p&gt;
+&lt;p&gt;クエリ配列とリファレンス配列はともにプライマー配列を含んでいるので，5'末端が揃ってアライメントされるのが理想なのですが，マッピングの開始位置が揃いません．&lt;/p&gt;
+&lt;p&gt;この時の問題点はもう一つありまして，マッピングされた配列の内いくつかが，リファレンスと一致度の高い一部のみマッピングされているということです．&lt;/p&gt;
+&lt;p&gt;改善策や，16万配列をリファレンス配列に対しアライメントできるソフト等ご存知でしたらご教授ください．
+よろしくお願いします．&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">izumi</dc:creator><pubDate>Mon, 03 Feb 2014 11:52:15 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/716/%E5%A4%A7%E9%87%8F%E3%81%AE%E9%85%8D%E5%88%97%E3%81%AE%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>mapping</category><category>alignment</category><category>ngs</category></item><item><title>SAMファイルのFASTAファイルへの変換について</title><link>http://qa.lifesciencedb.jp/questions/708/sam%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AEfasta%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E5%A4%89%E6%8F%9B%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;お世話になっております．&lt;/p&gt;
+&lt;p&gt;表題の内容についてお聞きしたいことがあります．&lt;/p&gt;
+&lt;p&gt;454GS FLXで得られた底生動物のCOI領域のロングリード（平均300bp・合計16万配列）を，国際DNAデータバンクからダウンロードしたCOI領域（658bp）の配列に対しマッピングを行いました．&lt;/p&gt;
+&lt;p&gt;マッピングツールはBWAを用い，出力されたSAMファイルをFASTA形式のファイルに変換したいと考えています．&lt;/p&gt;
+&lt;p&gt;例）&lt;/p&gt;
+&lt;p&gt;リファレンス配列　 ACGTAAACGTTTACGT &lt;/p&gt;
+&lt;p&gt;クエリ配列　　　　 ACGTAA－CGTT&lt;/p&gt;
+&lt;p&gt;クエリ配列　　　　　 CGTAAACGTT－A&lt;/p&gt;
+&lt;p&gt;クエリ配列　　　　　　 GTAA－CG&lt;/p&gt;
+&lt;p&gt;このようにマッピングされた時，マッピングされた配列の開始位置やギャップ等の情報が反映された下のようなFASTAファイルへの変換は可能でしょうか．&lt;/p&gt;
+&lt;p&gt;＞Query1&lt;/p&gt;
+&lt;p&gt;ACGTAA－CGTT&lt;/p&gt;
+&lt;p&gt;＞Query2&lt;/p&gt;
+&lt;p&gt;－CGTAAACGTT－A&lt;/p&gt;
+&lt;p&gt;＞Query3&lt;/p&gt;
+&lt;p&gt;－－GTAA－CG&lt;/p&gt;
+&lt;p&gt;FASTA形式への変換を行った後，Collapseを行いハプロタイプ数を出し，進化系統樹を作りたいと考えています．&lt;/p&gt;
+&lt;p&gt;SAMをFASTAファイルに変換するソフト，もしくはSAMファイルを用いてCollapse→進化系統樹作成が行えるソフトをご存知でしたらご教授ください．&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">izumi</dc:creator><pubDate>Mon, 27 Jan 2014 14:54:32 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/708/sam%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AEfasta%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E5%A4%89%E6%8F%9B%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>fasta</category><category>fastq</category><category>sam</category><category>ngs</category></item><item><title>NGSデータ解析のためにMacにUbuntuをインストールする</title><link>http://qa.lifesciencedb.jp/questions/690/ngs%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90%E3%81%AE%E3%81%9F%E3%82%81%E3%81%ABmac%E3%81%ABubuntu%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B</link><description>&lt;p&gt;NGSデータ解析についてご教授いただけると幸いです。
+目的としましては、NGSデータを用いたゲノム解析のために、 Mac 64bits のPC をセットアップし、Linux OS Ubuntuをインストールする予定にしています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;どこのサイトからダウンロードが可能でしょうか？&lt;/li&gt;
+&lt;li&gt;またUbuntu64bits用は不具合が生じるとのうわさを耳にしましたが、動作状況
+   など、32bitsの方が良いなど、教えていただけると幸いです&lt;/li&gt;
+&lt;li&gt;もし不具合がある場合、64bitsマシンでも32bits用が動作するのでしょうか？&lt;/li&gt;
+&lt;li&gt;もしくはその他、お薦めを教えていただけると助かります。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;どうぞ宜しくお願いいたします。 &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">tomonari</dc:creator><pubDate>Wed, 18 Sep 2013 14:51:36 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/690/ngs%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90%E3%81%AE%E3%81%9F%E3%82%81%E3%81%ABmac%E3%81%ABubuntu%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B</guid><category>linux</category><category>mac</category><category>ngs</category><category>ubuntu</category></item><item><title>次世代シークエンサーの使い道</title><link>http://qa.lifesciencedb.jp/questions/642/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%AF%E3%82%A8%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E4%BD%BF%E3%81%84%E9%81%93</link><description>&lt;p&gt;いつもお世話になっております。
+最近、次世代シークエンサーを使ったMegacloningという方法を知ったのですが、この他にも単純にDNA配列を読む以外に次世代シークエンサーの使い道はありますか？知っている方がいらっしゃれば教えてください。
+よろしくお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">DEF</dc:creator><pubDate>Sun, 18 Nov 2012 20:45:40 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/642/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%AF%E3%82%A8%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E4%BD%BF%E3%81%84%E9%81%93</guid><category>次世代シークエンサー</category><category>使い道</category><category>ngs</category></item><item><title>Excel fileからBEDフォーマットのfileを作るには？</title><link>http://qa.lifesciencedb.jp/questions/586/excel-file%E3%81%8B%E3%82%89bed%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%E3%81%AEfile%E3%82%92%E4%BD%9C%E3%82%8B%E3%81%AB%E3%81%AF</link><description>&lt;p&gt;NGSのdataやUnixコマンドなどほとんど触ったことがなかった初心者です。
+Excel fileで持っているゲノム領域の情報をBEDフォーマットのfileにしたいのですが、やり方がわかりません。アドバイスいただけましたら幸甚です。&lt;/p&gt;
+&lt;p&gt;今、BEDToolsのcoverageBedのスクリプトを実行しようとしているのですが、read countを知りたい領域のBED fileがうまく出来ないために白紙の結果が得られてしまいます。具体的には、chrom　chromStart　chromEnd　name　score　strandの順に並んだExcel fileをタブ区切りテキスト(.txt)で保存して名前を.bedに変えて領域のBED fileとして使ってみたのですが、BED fileとして認識されていないようでした。UCSCからとってきた遺伝子領域のBED fileではきちんとcoverageの結果が返ってくるので、.txt fileからBED fileをつくる方法がありそうなのは感じるのですが、どのようにしたらいいかわかりません。
+助けて頂けたら幸いです。&lt;/p&gt;
+&lt;p&gt;ちなみに、以下の内容で領域を設定した場合を例に試しています。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;chrVI    0  270148  NC_001138   0   +
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;よろしくお願いいたします。&lt;/p&gt;
+&lt;p&gt;touran&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">touran</dc:creator><pubDate>Fri, 13 Apr 2012 12:24:00 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/586/excel-file%E3%81%8B%E3%82%89bed%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%E3%81%AEfile%E3%82%92%E4%BD%9C%E3%82%8B%E3%81%AB%E3%81%AF</guid><category>bedtools</category><category>excel</category><category>file</category><category>bed</category><category>ngs</category></item><item><title>リード長の長いRNA-Seqのタグカウント</title><link>http://qa.lifesciencedb.jp/questions/581/%E3%83%AA%E3%83%BC%E3%83%89%E9%95%B7%E3%81%AE%E9%95%B7%E3%81%84rna-seq%E3%81%AE%E3%82%BF%E3%82%B0%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88</link><description>&lt;p&gt;もしかしたら、常識かもしれないので、
+情報お持ちのかたがおられたら、お願いします。&lt;/p&gt;
+&lt;p&gt;topHatやmapSpliceなど、splicingを考慮したマッパーの結果から、
+遺伝子レベルのタグカウントを計算するうまいやり方など、
+情報お持ちのかたがおられましたら、
+お知らせいただけますと助かります。&lt;/p&gt;
+&lt;h2&gt;以下背景&lt;/h2&gt;
+&lt;p&gt;topHat-cufflinks-cuffdiffや、それに類似のフローが
+デファクトスタンダード的解析であると知りつつ、
+リード長の長いRNA-SeqにedgeR等をかけるやりかたを考えています。&lt;/p&gt;
+&lt;p&gt;edgeRなどのDEG検出用のRパッケージ等は、
+fpkm/rpkmは使わないように推奨しているかと思います。&lt;/p&gt;
+&lt;p&gt;EdgeRのedgeRUsersGuide.pdfより引用
+http://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
+"There are good reasons
+why the NB model is appropriate for the raw count data, but transforming the data using
+RPKM (or FPKM or similar) renders our distributional assumptions invalid and we cannot
+guarantee that our methods will be reliable for such transformed data."&lt;/p&gt;
+&lt;p&gt;35塩基や、50塩基程度であれば、
+BWAやBowtieなどで、splicingを考慮せずに、
+マップしたものを、
+DEGseqパッケージ中のgetGeneExpや、
+BEDtoolsのcoverageBEDなどで、タグカウントすればよかったのですが、
+最近リード長が伸び、150塩基のRNA-Seqなども
+よく見かけるようになったかと思います。
+リード長が伸びるとexon長を超えてしまう場合も
+多々あるので、junctionをまたぐタグの数を無視するには、
+支障が出てきているように思います。&lt;/p&gt;
+&lt;p&gt;topHatが出力するaccepted_hits.bamに対して、&lt;/p&gt;
+&lt;h3&gt;選択肢1&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Step1 BEDtoolsのbamToBedに"-bed12"オプション付でかけBAMをBEDに変換&lt;/li&gt;
+&lt;li&gt;Step2 BEDを入力とするDEGseqのgetGeneExpでタグカウント&lt;/li&gt;
+&lt;li&gt;アノテーション情報は、refFlat.txt&lt;/li&gt;
+&lt;li&gt;=&amp;gt; イントロン領域のタグは計上されない。&lt;/li&gt;
+&lt;li&gt;=&amp;gt; splicing-junctionをまたぐタグがタグカウントに計上されないため、難あり。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;選択肢2&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Step1 coverageBEDに対して、"-abam"でBAM入力で"-splice"オプションを付けて実行。&lt;/li&gt;
+&lt;li&gt;アノテーション情報はrefFlat.bed&lt;/li&gt;
+&lt;li&gt;=&amp;gt; splicing-junctionをまたぐタグはタグカウントに計上されるので良し。&lt;/li&gt;
+&lt;li&gt;=&amp;gt; イントロン領域のタグ(第一イントロンの制御ノンコーディングRNAなど)もカウントされるので難あり。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一応、BioStarやSeqAnswersで上記難点の解決策も探しては見たのですが、
+自分では見つけられませんでした。&lt;/p&gt;
+&lt;p&gt;coverageBEDで、イントロンも含めてカウントした後に、
+全イントロンのタグ数を引くとか、&lt;/p&gt;
+&lt;p&gt;小賢しい手も考えられますが、
+境界のリードなどの扱いで、厳密では無くなる点に難があります。&lt;/p&gt;
+&lt;p&gt;もし、うまい手やら、既存のスクリプトでこんなものがある等、
+関係する情報お知らせいただけますと幸いです。
+直接の解答でなくとも、ご助言ありましたら、お願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Tue, 03 Apr 2012 16:59:13 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/581/%E3%83%AA%E3%83%BC%E3%83%89%E9%95%B7%E3%81%AE%E9%95%B7%E3%81%84rna-seq%E3%81%AE%E3%82%BF%E3%82%B0%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88</guid><category>tophat</category><category>ngs</category><category>rna-seq</category><category>long</category><category>splicing-junction</category></item><item><title>Tophatのbutterflyオプションについて</title><link>http://qa.lifesciencedb.jp/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;36bpのシングルエンドRNA-seqデータを使って解析をしようとしているのですが、
+バージョン1.0.12から追加された--butterfly-searchというオプションを使ったことの
+ある方、または使った時と使わなかった時の比較をされた方はいらっしゃいませんでしょうか？
+36bpなので--segment-length 18でジャンクション同定してもノイズが多くなりそうで、
+そのままbowtieでマッピングしてしまおうと考えていたのですが、Tophatのマニュアルを
+見ていて、このオプションがあることを知ってどうしようか迷っています。
+Tophatの論文にはこのbutterflyのアルゴリズムに関する記述はなく、&lt;a href="http://seqanswers.com/forums/showthread.php?t=7254"&gt;SEQanswersでは
+数百GBものoutputを出すとの報告があり&lt;/a&gt;
+、ラボに大型サーバーがない私では自分で
+このオプションをテストするのが難しい状況です。
+もしお試しになった方がいらっしゃれば、ご教授お願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tanakky</dc:creator><pubDate>Fri, 18 Nov 2011 23:07:36 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>butterfly</category><category>tophat</category><category>rna-seq</category><category>ngs</category></item><item><title>NGSライブラリのPCR増幅</title><link>http://qa.lifesciencedb.jp/questions/507/ngs%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%81%AEpcr%E5%A2%97%E5%B9%85</link><description>&lt;p&gt;いつも拝見させて頂いています。
+早速質問なのですが、NGS(例えばillumina)でsequenceを読む前にライブラリをPCR増幅していますがそれは何のためにやっているのでしょうか？Alignmentするタグの数を増やしているからなのでしょうか？&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">DEF</dc:creator><pubDate>Thu, 30 Jun 2011 02:17:06 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/507/ngs%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%81%AEpcr%E5%A2%97%E5%B9%85</guid><category>pcr増幅</category><category>ライブラリ</category><category>ngs</category></item><item><title>Celera WGA Assembler(CABOG)のインストールと使い方</title><link>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9</link><description>&lt;p&gt;ある生物のゲノムをde novo assemblのために454で委託して読みました。&lt;/p&gt;
+&lt;p&gt;CABOGでアセンブルしようとインストールしようとしたのですが、最初にpythonは見つかるがpython.hがないといわれました。
+現在macOS X10.6.7でpython2.7が入っています。&lt;/p&gt;
+&lt;p&gt;Finkを用いてpython2.7-devをインストールしようと思うのですが、Finkをインストールし、
+[sudo apt-get install python2.7-dev]とterminalで打っても[E: Couldn't find package python2.7-dev]
+と出てしまい、完了しません。調べてもわからないので、よろしくお願いします。&lt;/p&gt;
+&lt;p&gt;また使い方に関しても少しREADMEを読みましたが、わからなくなるのは目に見えているので、簡単に教えて頂けると助かります。
+委託業者からは.qual .sff .sff.gz .fastが送られてきています。&lt;/p&gt;
+&lt;p&gt;質問が多くて申し訳ありませんが、よろしくお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pan</dc:creator><pubDate>Fri, 17 Jun 2011 12:33:34 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9</guid><category>cabog</category><category>ngs</category></item><item><title>trans-abyssのインストール</title><link>http://qa.lifesciencedb.jp/questions/478/trans-abyss%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB</link><description>&lt;p&gt;ド素人の質問申し訳ありません。&lt;/p&gt;
+&lt;p&gt;manualを読みながらtrans-ABySSをインストールしようとしているのですが、
+setupするまでがよくわかりません。&lt;/p&gt;
+&lt;p&gt;pythonは最新ver.をインストールして、Perlはmacなのかv5.10.0がもともと入ってPATHも加えてありました。&lt;/p&gt;
+&lt;p&gt;そこでmanual通り&lt;/p&gt;
+&lt;p&gt;export TRANSABYSS_PATH=/home/user/Desktop/trans-ABySS &lt;/p&gt;
+&lt;p&gt;export PYTHONPATH=.:$PYTHONPATH:$TRANSABYSS_PATH &lt;/p&gt;
+&lt;p&gt;export PERL5LIB=.:$PERL5LIB:$TRANSABYSS_PATH/wrappers&lt;/p&gt;
+&lt;p&gt;をやった後にsetupしたのですがPermission deniedとなってしまいます。&lt;/p&gt;
+&lt;p&gt;どなたかご助言いただけると、幸いです。&lt;/p&gt;
+&lt;p&gt;よろしくお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pan</dc:creator><pubDate>Sun, 12 Jun 2011 18:37:00 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/478/trans-abyss%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB</guid><category>trans-abyss</category><category>ngs</category></item><item><title>長い配列と短い配列をアセンブルするには？</title><link>http://qa.lifesciencedb.jp/questions/477/%E9%95%B7%E3%81%84%E9%85%8D%E5%88%97%E3%81%A8%E7%9F%AD%E3%81%84%E9%85%8D%E5%88%97%E3%82%92%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AB%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF</link><description>&lt;p&gt;今ある菌のde novo assemblを行っています。&lt;/p&gt;
+&lt;p&gt;先日454で読んだ配列をABySSでアセンブルして、コンタミのDNAを除きました。&lt;/p&gt;
+&lt;p&gt;その後コンソーシアムのある454で読んだESTやSangerで読んだDNA配列と一緒にアセンブルしたいのですがどうしたらよいですか？長さは40bpのもあれば、長くて100kのもあります。平均700bpぐらいだと思います。&lt;/p&gt;
+&lt;p&gt;試しにSOAP denovoを使ったところ&lt;/p&gt;
+&lt;p&gt;Floating point exceptionとかsegmentation faultのエラーで止まってしまいます。&lt;/p&gt;
+&lt;p&gt;ABySS使っても&lt;/p&gt;
+&lt;p&gt;Colour-space assembly&lt;/p&gt;
+&lt;p&gt;Assertion failed: (isdigit(seq[0])), function loadSequences, file AssemblyAlgorithms.cpp, line 79.&lt;/p&gt;
+&lt;p&gt;Abort trap
+で止まってしまいます。&lt;/p&gt;
+&lt;p&gt;違う原因で止まってしまっているのかも知れませんが、そこも踏まえてご助言いただけると助かります。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pan</dc:creator><pubDate>Fri, 10 Jun 2011 19:38:52 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/477/%E9%95%B7%E3%81%84%E9%85%8D%E5%88%97%E3%81%A8%E7%9F%AD%E3%81%84%E9%85%8D%E5%88%97%E3%82%92%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AB%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF</guid><category>アセンブル</category><category>ngs</category></item><item><title>fasta2fastq</title><link>http://qa.lifesciencedb.jp/questions/472/fasta2fastq</link><description>&lt;p&gt;初めて質問します。
+solexaのreadをde novo assembleして出来たcontigをbwaもしくはbwa-swを用いてmappingしたいと考えています。
+bwaにinputするためには、contigの.fastaファイルを.fastqに変換する必要があると思いますが、そのような変換ツールを知っている方がおられたら教えていただけないでしょうか。調べたのですが調べ方が悪いのか見つかりませんでした。&lt;/p&gt;
+&lt;h1&gt;具体例&lt;/h1&gt;
+&lt;p&gt;【変換前（.fasta）】&lt;/p&gt;
+&lt;p&gt;＞SEQ_ID&lt;/p&gt;
+&lt;p&gt;GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT&lt;/p&gt;
+&lt;p&gt;【変換後（.fastq）】&lt;/p&gt;
+&lt;p&gt;＠SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT&lt;/p&gt;
+&lt;p&gt;＋&lt;/p&gt;
+&lt;p&gt;IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII&lt;/p&gt;
+&lt;p&gt;qualityはphred_score(Phred+33)=40(I)で固定で構いません。&lt;/p&gt;
+&lt;p&gt;ご存知の方がいたら、教えていただけると助かります。
+よろしくお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">yasugoyasu</dc:creator><pubDate>Sat, 04 Jun 2011 02:35:40 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/472/fasta2fastq</guid><category>fasta</category><category>fastq</category><category>ngs</category></item><item><title>ABySSのインストール</title><link>http://qa.lifesciencedb.jp/questions/465/abyss%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB</link><description>&lt;p&gt;ABySSをインストールしようとしたところエラーが生じました。調べたところgccのバージョンを4.3以上にしなければならず、gmp、mpfr、mpcをインストールしようとしました。gmpとmpfrは多分うまくインストールできたのですが、mpcがうまくインストールできません。&lt;/p&gt;
+&lt;p&gt;cd　mpc-0.9 &lt;br&gt;
+./configure --with-mpfr=/Users/------------/Desktop/mpfr-3.0.1&lt;br&gt;
+make&lt;br&gt;
+make check&lt;br&gt;
+すると&lt;br&gt;
+&lt;/p&gt;
+&lt;p&gt;5 of 60 tests failed&lt;/p&gt;
+&lt;p&gt;make[2]: &lt;strong&gt;&lt;em&gt; [check-TESTS] Error 1&lt;br&gt;
+make[1]: &lt;/em&gt;&lt;/strong&gt; [check-am] Error 2&lt;br&gt;
+make: *** [check-recursive] Error 1&lt;/p&gt;
+&lt;p&gt;というようにエラーが生じてしまいます。&lt;/p&gt;
+&lt;p&gt;またこの方法で進んでいってよいのでしょうか？
+ご助言いただけると幸いです。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pan</dc:creator><pubDate>Wed, 01 Jun 2011 19:26:11 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/465/abyss%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB</guid><category>ngs</category></item><item><title>samtoolsの使い方</title><link>http://qa.lifesciencedb.jp/questions/458/samtools%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9</link><description>&lt;p&gt;先日からsamtoolsを使い始めて、わからない点が２つあったので教えて下さい。&lt;/p&gt;
+&lt;p&gt;1、リファレンスゲノム用のindexが作成できない
+samtools faidx ref.fastaとやると
+[fai_build_core] different line length in sequence '(null)'.
+Segmentation fault
+となってしまい作成できない。&lt;/p&gt;
+&lt;p&gt;2、samtools viewのオプションの使い方がわからない。
+mappingされたものとmappingされてないものを
+Samtools view -f p -F P
+で抽出できるようですが、pやPの意味がわからない。また他にもよく使うオプションがあったら教えて下さい。&lt;/p&gt;
+&lt;p&gt;ずっとwetな研究をしてきたので、わかりやすく教えて頂けると幸いです。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pan</dc:creator><pubDate>Tue, 31 May 2011 19:45:22 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/458/samtools%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9</guid><category>使い方</category><category>samtools</category><category>ngs</category></item><item><title>strand specific RNA-Seqデータ解析におけるtophatの利用について</title><link>http://qa.lifesciencedb.jp/questions/432/strand-specific-rna-seq%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Btophat%E3%81%AE%E5%88%A9%E7%94%A8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;strand specific RNA-Seqデータ解析におけるtophatの利用について質問させてください。
+現在SOLiD™ Whole Transcriptome Analysis Kitで得られたstrand specific RNA-Seqのデータを解析しております。&lt;/p&gt;
+&lt;p&gt;tophatとcufflinksを用いて発現量について観ようとしているのですが、
+tophatのlibrary-typeをtophatのマニュアル通りに
+&lt;code&gt;--library-type fr-secondstrand&lt;/code&gt;
+と指定すると
+その後cuffcompareをかけたときのClass Codesが
+cが3765
+eが122
+xが10668
+とあまりにもxが多い結果となっています。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;--library-type fr-firststrand&lt;/code&gt;
+で行ってみると
+cが9739
+eが6870
+xが33
+となります。&lt;/p&gt;
+&lt;p&gt;この結果から本当に &lt;code&gt;--library-type fr-secondstrand&lt;/code&gt; をつかっていいものかと思っています。&lt;/p&gt;
+&lt;p&gt;tophatのマニュアルにをよく読むと
+&lt;code&gt;fr-firststrand&lt;/code&gt;はdUTP, NSR, NNSR
+&lt;code&gt;fr-secondstrand&lt;/code&gt;    はLigation, Standard SOLiD
+に適していると書かれています。&lt;/p&gt;
+&lt;p&gt;私は一般的なRNA ligationを用いたstrand specificなRNA-Seqはfirst strandを
+dUTPやNNSRはsecond strandをシーケンスすると思っていたのでが違うのでしょうか？
+それともtophatのマニュアルがまちがえているのでしょうか。&lt;/p&gt;
+&lt;p&gt;以上長文となってしまいましたが質問させていただければと思います。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">snk_u</dc:creator><pubDate>Sat, 30 Apr 2011 02:16:26 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/432/strand-specific-rna-seq%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Btophat%E3%81%AE%E5%88%A9%E7%94%A8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>solid</category><category>tophat</category><category>ngs</category></item><item><title>ノンモデル生物のmRNA精製でrRNAのコンタミをなるべく下げたい</title><link>http://qa.lifesciencedb.jp/questions/429/%E3%83%8E%E3%83%B3%E3%83%A2%E3%83%87%E3%83%AB%E7%94%9F%E7%89%A9%E3%81%AEmrna%E7%B2%BE%E8%A3%BD%E3%81%A7rrna%E3%81%AE%E3%82%B3%E3%83%B3%E3%82%BF%E3%83%9F%E3%82%92%E3%81%AA%E3%82%8B%E3%81%B9%E3%81%8F%E4%B8%8B%E3%81%92%E3%81%9F%E3%81%84</link><description>&lt;p&gt;ノンモデル脊椎動物の次世代シーケンサーを用いたトランスクリプトーム解析を計画しています。現在、totalRNAからmRNAの精製に取り組んでいますが、標準的なI社のoligo-dTセルロースを用いたキットで精製したところ、rRNAのコンタミが38%も出てきてしまいました。同じキットを使って2回精製しても33%で、ほとんど下がりませんでした。他のキットで、rRNAの混入を下げる工夫をしたキットが出ているようですが、お勧めなものを教えていただけませんでしょうか？よろしくお願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">sghr</dc:creator><pubDate>Thu, 28 Apr 2011 14:22:53 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/429/%E3%83%8E%E3%83%B3%E3%83%A2%E3%83%87%E3%83%AB%E7%94%9F%E7%89%A9%E3%81%AEmrna%E7%B2%BE%E8%A3%BD%E3%81%A7rrna%E3%81%AE%E3%82%B3%E3%83%B3%E3%82%BF%E3%83%9F%E3%82%92%E3%81%AA%E3%82%8B%E3%81%B9%E3%81%8F%E4%B8%8B%E3%81%92%E3%81%9F%E3%81%84</guid><category>ngs</category></item><item><title>Chip-seqデータのマッピングにおけるマルチヒット/ミスマッチの扱い</title><link>http://qa.lifesciencedb.jp/questions/426/chip-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%9E%E3%83%AB%E3%83%81%E3%83%92%E3%83%83%E3%83%88-%E3%83%9F%E3%82%B9%E3%83%9E%E3%83%83%E3%83%81%E3%81%AE%E6%89%B1%E3%81%84</link><description>&lt;p&gt;Chip-seqデータのマッピングにつきまして質問があります。現在主にBowtieを使用してChip-seqデータのマッピングをしておりますが、オプション設定についてどのようなものが一番いいのか迷っております。&lt;br&gt;&lt;br&gt;
+一つはマルチヒットの扱いで、全部レポートするから、レポートするデータを限定したり、ランダムにマッピングしたりする設定があるかと思いますが一般的にどのような設定が一番いいのでしょうか？自分ではあえてそれらをマッピングしなくても、本当にChip陽性の領域ならば他のリードがマッピングされるはずなのでレポートしなくてもいいような気もします。でも、せっかく一致するなら一つくらいランダムに割り当ててもとかも思います・・・&lt;br&gt;&lt;br&gt;
+ミスマッチに関しましては少ない方が正確だと思いますが、自分では根拠無く、まあこれくらいかとデフォルトのまま2で実行しております。&lt;br&gt;&lt;br&gt;
+&lt;code&gt;-a --best --strata&lt;/code&gt;　の設定などもよさそうという理由で使用しておりますがあまり根拠はありません。結局はマッピング率がそれなりになるように設定してマッピングしているという状況です。
+&lt;br&gt;&lt;br&gt;
+もし、一般的によいとされているような設定がございましたら、ぜひご指導いただきたいと思います。よろしくお願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">gatapishi</dc:creator><pubDate>Sun, 24 Apr 2011 22:45:38 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/426/chip-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%9E%E3%83%AB%E3%83%81%E3%83%92%E3%83%83%E3%83%88-%E3%83%9F%E3%82%B9%E3%83%9E%E3%83%83%E3%83%81%E3%81%AE%E6%89%B1%E3%81%84</guid><category>bowtie</category><category>ngs</category></item><item><title>次世代シーケンサーのデータ解析に用いるプログラミング言語</title><link>http://qa.lifesciencedb.jp/questions/423/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90%E3%81%AB%E7%94%A8%E3%81%84%E3%82%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E</link><description>&lt;p&gt;これから次世代シーケンサを用いて得られたデータの解析をどんどん進めて行こうと思っています。そこで、マッピングソフトやピーク検出ソフトを使用する以外にそのデータを用いてゲノムワイドな解析ができたらとスクリプト言語の習得を考えております。今まで主にPerlを利用してそれっぽいことを試していました。同じような解析をしている方々が利用しているのをみてPythonやRubyも簡単な本で勉強をしてみたのですがやはり最終的には一つの言語を深く使えることが重要であると考え、質問させていただきたいと思います。どの言語が一番バイオインフォマティクス、特に次世代シーケンサのデータを用いた解析に適しているのでしょうか？どれでも一緒と言われてしまうのを承知ですがぜひお聞きしたいと思いました。もし複数の言語を理解した方がよいという意見やJAVAやC++くらいはやっとけとか意外な意見もお聞きしたいです。よろしくお願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">gatapishi</dc:creator><pubDate>Sun, 24 Apr 2011 00:13:04 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/423/%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90%E3%81%AB%E7%94%A8%E3%81%84%E3%82%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E</guid><category>プログラミング言語</category><category>ngs</category></item><item><title>Monte Calro FDRとLanderWaterman FDRの違い</title><link>http://qa.lifesciencedb.jp/questions/412/monte-calro-fdr%E3%81%A8landerwaterman-fdr%E3%81%AE%E9%81%95%E3%81%84</link><description>&lt;p&gt;次世代シークエンサーのデータを解析ソフトウェア(FindPeaks 4)で解析しています。ピークのFDR解析のオプションとしてMonte Calro FDRとLanderWaterman FDRがあるのですが、そもそもこの二つが通常のFDRと何が違うのか分かりません。ご存知の方いましたら、よろしければ御教授願います。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">DEF</dc:creator><pubDate>Fri, 15 Apr 2011 12:31:28 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/412/monte-calro-fdr%E3%81%A8landerwaterman-fdr%E3%81%AE%E9%81%95%E3%81%84</guid><category>統計</category><category>fdr</category><category>chipseq</category><category>ngs</category></item><item><title>新型シーケンサー生データアーカイブはFASTQ形式だけでは困りますか？</title><link>http://qa.lifesciencedb.jp/questions/356/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%81%AFfastq%E5%BD%A2%E5%BC%8F%E3%81%A0%E3%81%91%E3%81%A7%E3%81%AF%E5%9B%B0%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B</link><description>&lt;p&gt;Native vendor file の情報を画像以外すべて保存したSRA-full形式にくらべFastQファイルだけならDDBJ調査で総サイズは29%ですみます。
+コストを考えるとFastQじゃできないことがないといけません。&lt;/p&gt;
+&lt;p&gt;＜補足:DDBJ＞この質問の意図は、DRA継続に際してサイズダウンで良いかをユーザの皆様に問う事です。
+現在SRA-Lite形式もサポートしておりますが、FASTQ形式だけで問題ないでしょうか？(でしたらコスト安で済みます)。
+DRAの運営に際して、次世代シークエンサ利用者の皆様から御意見を頂けますと助かります。宜しくお願い致します。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">okubo</dc:creator><pubDate>Fri, 25 Feb 2011 15:40:16 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/356/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%81%AFfastq%E5%BD%A2%E5%BC%8F%E3%81%A0%E3%81%91%E3%81%A7%E3%81%AF%E5%9B%B0%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B</guid><category>ddbj</category><category>dra</category><category>sra</category><category>ngs</category></item><item><title>新型シーケンサデータ保存にどんな形式がありますか？サイズと欠点を</title><link>http://qa.lifesciencedb.jp/questions/355/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%87%E3%83%BC%E3%82%BF%E4%BF%9D%E5%AD%98%E3%81%AB%E3%81%A9%E3%82%93%E3%81%AA%E5%BD%A2%E5%BC%8F%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B-%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%A8%E6%AC%A0%E7%82%B9%E3%82%92</link><description>&lt;p&gt;DDBJでは native vendor fileから 画像を落とした 標準形 SRAはあまりかさばるので intensityを落としたSRA-liteでミラーしてます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">okubo</dc:creator><pubDate>Fri, 25 Feb 2011 15:13:10 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/355/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%87%E3%83%BC%E3%82%BF%E4%BF%9D%E5%AD%98%E3%81%AB%E3%81%A9%E3%82%93%E3%81%AA%E5%BD%A2%E5%BC%8F%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B-%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%A8%E6%AC%A0%E7%82%B9%E3%82%92</guid><category>ddbj</category><category>dra</category><category>sra</category><category>ngs</category></item><item><title>シーケンサー出力の伸びの予測ってどのくらいわかってますか？</title><link>http://qa.lifesciencedb.jp/questions/353/%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E5%87%BA%E5%8A%9B%E3%81%AE%E4%BC%B8%E3%81%B3%E3%81%AE%E4%BA%88%E6%B8%AC%E3%81%A3%E3%81%A6%E3%81%A9%E3%81%AE%E3%81%8F%E3%82%89%E3%81%84%E3%82%8F%E3%81%8B%E3%81%A3%E3%81%A6%E3%81%BE%E3%81%99%E3%81%8B</link><description>&lt;p&gt;過去の進歩の歴史を後程アップしておきます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">okubo</dc:creator><pubDate>Fri, 25 Feb 2011 15:05:57 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/353/%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E5%87%BA%E5%8A%9B%E3%81%AE%E4%BC%B8%E3%81%B3%E3%81%AE%E4%BA%88%E6%B8%AC%E3%81%A3%E3%81%A6%E3%81%A9%E3%81%AE%E3%81%8F%E3%82%89%E3%81%84%E3%82%8F%E3%81%8B%E3%81%A3%E3%81%A6%E3%81%BE%E3%81%99%E3%81%8B</guid><category>ddbj</category><category>sra</category><category>ngs</category></item><item><title>新型シーケンサーの生データサイズはどんな風ですか？</title><link>http://qa.lifesciencedb.jp/questions/349/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%AF%E3%81%A9%E3%82%93%E3%81%AA%E9%A2%A8%E3%81%A7%E3%81%99%E3%81%8B</link><description>&lt;p&gt;&lt;img alt="alt text" src="http://farm6.static.flickr.com/5253/5475238349_f91dd0c290_z.jpg"&gt;
+[http://www.flickr.com/photos/59261391@N05/5475238349/][2]
+はしばらく前の議論に使った目安です。　現状はどうなんでしょうか？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Kato Kikuya&lt;/strong&gt; &lt;strong&gt;Impact of the next generation DNA sequencers&lt;/strong&gt; . Int J Clin Exp Med. 2009; 2(2): 193–202.
+Published online 2009 July 8. 
+Comparison of sequencers (January, 2009). It should be noted that the throughput of each sequencer is improving rapidly&lt;/p&gt;
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+
+&lt;/th&gt;
+            &lt;th&gt;
+                ABI 3730xI
+            &lt;/th&gt;
+            &lt;th&gt;
+                Roche GS FLX
+            &lt;/th&gt;
+            &lt;th&gt;
+                Illumina GA
+            &lt;/th&gt;
+            &lt;th&gt;
+                ABI SOLiD
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                Bases/template
+            &lt;/th&gt;
+            &lt;td&gt;
+                ∼1100
+            &lt;/td&gt;
+            &lt;td&gt;
+                ∼400
+            &lt;/td&gt;
+            &lt;td&gt;
+                ∼75
+            &lt;/td&gt;
+            &lt;td&gt;
+                50
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                Templates/run
+            &lt;/th&gt;
+            &lt;td&gt;
+                96
+            &lt;/td&gt;
+            &lt;td&gt;
+                1,000,000
+            &lt;/td&gt;
+            &lt;td&gt;
+                40,000,000
+            &lt;/td&gt;
+            &lt;td&gt;
+                85,000,000
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                Data production/day
+            &lt;/th&gt;
+            &lt;td&gt;
+                1 MB/day
+            &lt;/td&gt;
+            &lt;td&gt;
+                400MB/run/7.5hr
+            &lt;/td&gt;
+            &lt;td&gt;
+                3,000MB/run/6.5 days
+            &lt;/td&gt;
+            &lt;td&gt;
+                4,000MB/run/6 days
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                Maximum samples
+            &lt;/th&gt;
+            &lt;td&gt;
+                96
+            &lt;/td&gt;
+            &lt;td&gt;
+                16 regions/plate
+            &lt;/td&gt;
+            &lt;td&gt;
+                8 channels/flowcell
+            &lt;/td&gt;
+            &lt;td&gt;
+                16chambers/2 slides
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                Sequence reaction
+            &lt;/th&gt;
+            &lt;td&gt;
+                Sanger method
+            &lt;/td&gt;
+            &lt;td&gt;
+                pyrosequencing
+            &lt;/td&gt;
+            &lt;td&gt;
+                Reverse terminator
+            &lt;/td&gt;
+            &lt;td&gt;
+                ligation sequencing
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">okubo</dc:creator><pubDate>Fri, 25 Feb 2011 14:48:49 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/349/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%AF%E3%81%A9%E3%82%93%E3%81%AA%E9%A2%A8%E3%81%A7%E3%81%99%E3%81%8B</guid><category>ddbj</category><category>sra</category><category>ngs</category></item><item><title>新型シーケンサーの生データをアーカイブする目的は？</title><link>http://qa.lifesciencedb.jp/questions/348/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%81%99%E3%82%8B%E7%9B%AE%E7%9A%84%E3%81%AF</link><description>&lt;p&gt;新型シーケンサーの&lt;a href="http://www.ddbj.nig.ac.jp/whatsnew/2011/DRA20110222.html"&gt;生データアーカイブ&lt;/a&gt;は現在NCBI/EBI/DDBJで行っています。NCBIの&lt;a href="http://www.ncbi.nlm.nih.gov/About/news/16feb2011"&gt;ファンドレイズ失敗&lt;/a&gt;で各国で再議論が始まりました。　コストと価値のバランスを考えるために　再利用の目論見　見込み　アーカイブの目的を共有したいと思います。
+現在のアーカイブの様子は&lt;a href="http://sra.dbcls.jp/"&gt;仲里's SRA目次&lt;/a&gt;でよくわかります。
+&lt;a href="http://pathogenomics.bham.ac.uk/hts/hts/stats"&gt;世界中のシーケンサの分布は&lt;/a&gt;James Hadfield (Cancer Research UK, Cambridge) &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">okubo</dc:creator><pubDate>Fri, 25 Feb 2011 14:45:28 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/348/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%81%99%E3%82%8B%E7%9B%AE%E7%9A%84%E3%81%AF</guid><category>ddbj</category><category>sra</category><category>ngs</category></item><item><title>SOLID pair end データをbowtieでアライメント</title><link>http://qa.lifesciencedb.jp/questions/323/solid-pair-end-%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92bowtie%E3%81%A7%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88</link><description>&lt;p&gt;頭の中がこんがらがってきました。
+SOLIDのpair end シークエンス（カラーデータ）をbowtieでアラインしたいのですが
+&lt;code&gt;bowtie -p 22 --chunkmbs 1024 -a -C  -S  --ff path/to/index -1 path/to/F5.csfasta -2 path/to/F3.csfasta -Q1 path/to/F5.qual -Q2 path/to/F3.qual /path/to/result.sam&lt;/code&gt;
+といった感じでコマンドをたたいたのですが
+&lt;/p&gt;&lt;pre&gt;Extra parameter(s) specified:　”path/to/F3.qual”, ”path/to/index”, "/path/to/result.sam"
+Note that if &amp;lt;mates&amp;gt; files are specified using -1/-2, a &amp;lt;singles&amp;gt; file cannot
+also be specified.  Please run bowtie separately for mates and singles.
+&lt;/pre&gt;
+どこが悪いのでしょうか？
+F５とF３のpair endなのです。&lt;p&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">fumumumu</dc:creator><pubDate>Tue, 22 Feb 2011 14:11:32 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/323/solid-pair-end-%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92bowtie%E3%81%A7%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88</guid><category>bowtie</category><category>solid</category><category>ngs</category></item></channel></rss>

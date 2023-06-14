@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With ddd</title><link>http://qa.lifesciencedb.jp/tags/ddd/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;ddd&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/ddd/" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 19 Apr 2011 11:47:27 +0900</lastBuildDate><item><title>NCBIのDigital Differential Display（mouse）のEST libraryの出し方</title><link>http://qa.lifesciencedb.jp/questions/420/ncbi%E3%81%AEdigital-differential-display-mouse-%E3%81%AEest-library%E3%81%AE%E5%87%BA%E3%81%97%E6%96%B9</link><description>&lt;p&gt;NCBIのDigital Differential Display（DDD）を使って、
+マウスの肝臓特異的に発現している遺伝子を探したいのですが、
+EST libraryが出て来ません。
+先週の金曜日にはじめて試してできず、先程もできませんでした。
+ちなみに、ヒトだとちゃんと出て来ます。&lt;/p&gt;
+&lt;p&gt;Species→マウス→continue→Pool Aが表示される、
+という流れで操作しております。
+continueの後の画面に、マウスの場合のみEST libraryが出ません。
+NCBIにメールしてみましたが、今のところお返事がありません。
+解決策をご存知の方がいらっしゃいましたら（あるいはメンテナンス中など）
+教えて頂けますと助かります。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">porcine</dc:creator><pubDate>Tue, 19 Apr 2011 11:47:27 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/420/ncbi%E3%81%AEdigital-differential-display-mouse-%E3%81%AEest-library%E3%81%AE%E5%87%BA%E3%81%97%E6%96%B9</guid><category>ncbi</category><category>ddd</category></item></channel></rss>

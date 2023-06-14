@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With trans-abyss</title><link>http://qa.lifesciencedb.jp/tags/trans-abyss/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;trans-abyss&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/trans-abyss/" rel="self"></atom:link><language>ja</language><lastBuildDate>Sun, 12 Jun 2011 18:37:00 +0900</lastBuildDate><item><title>trans-abyssのインストール</title><link>http://qa.lifesciencedb.jp/questions/478/trans-abyss%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB</link><description>&lt;p&gt;ド素人の質問申し訳ありません。&lt;/p&gt;
+&lt;p&gt;manualを読みながらtrans-ABySSをインストールしようとしているのですが、
+setupするまでがよくわかりません。&lt;/p&gt;
+&lt;p&gt;pythonは最新ver.をインストールして、Perlはmacなのかv5.10.0がもともと入ってPATHも加えてありました。&lt;/p&gt;
+&lt;p&gt;そこでmanual通り&lt;/p&gt;
+&lt;p&gt;export TRANSABYSS_PATH=/home/user/Desktop/trans-ABySS &lt;/p&gt;
+&lt;p&gt;export PYTHONPATH=.:$PYTHONPATH:$TRANSABYSS_PATH &lt;/p&gt;
+&lt;p&gt;export PERL5LIB=.:$PERL5LIB:$TRANSABYSS_PATH/wrappers&lt;/p&gt;
+&lt;p&gt;をやった後にsetupしたのですがPermission deniedとなってしまいます。&lt;/p&gt;
+&lt;p&gt;どなたかご助言いただけると、幸いです。&lt;/p&gt;
+&lt;p&gt;よろしくお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pan</dc:creator><pubDate>Sun, 12 Jun 2011 18:37:00 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/478/trans-abyss%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB</guid><category>trans-abyss</category><category>ngs</category></item><item><title>trans-ABySSのエラー（おそらくBlatのところ）</title><link>http://qa.lifesciencedb.jp/questions/316/trans-abyss%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC-%E3%81%8A%E3%81%9D%E3%82%89%E3%81%8Fblat%E3%81%AE%E3%81%A8%E3%81%93%E3%82%8D</link><description>&lt;p&gt;de novo transcriptome assemblyプログラムの一つにtrans-ABySSというのがあり、このプログラムの実行時にエラーが出て計算が止まってしまう問題を抱えています。
+trans-ABySSのGoogleディスカッショングループに質問を投げたところ、Blatのところが問題なんじゃないかというコメントがありましたが、このような問題に遭遇した方がもしいらっしゃったら解決法についてご指南いただければ幸いです。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">かどた</dc:creator><pubDate>Wed, 16 Feb 2011 18:21:58 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/316/trans-abyss%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC-%E3%81%8A%E3%81%9D%E3%82%89%E3%81%8Fblat%E3%81%AE%E3%81%A8%E3%81%93%E3%82%8D</guid><category>assembly</category><category>blat</category><category>trans-abyss</category><category>ngs</category></item></channel></rss>

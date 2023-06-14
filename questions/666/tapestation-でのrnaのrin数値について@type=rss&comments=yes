@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: TapeStation でのRNAのRIN数値について</title><link>http://qa.lifesciencedb.jp/questions/666/tapestation-%E3%81%A7%E3%81%AErna%E3%81%AErin%E6%95%B0%E5%80%A4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;いつも参考にさせてもらっています。&lt;/p&gt;
+&lt;p&gt;今までAgilentのBioAnalyzerを使って、RNA-seqライブラリ調製前のTotal RNAを流していました。
+今回初めてTapeStationのR6Kで、Total RNAを流してみました。&lt;/p&gt;
+&lt;p&gt;ヒトの全血からかなりキレイに取ったはずのTotal RNAが、RINの値が低め（6ぐらい）
+に出ています。以前、BioAanalyzerとTapeStationのRINの計算方法が異なると聞いた
+ことがありますが、実際にTapeStationを使われている方は、どう判断されているのでしょうか？&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/666/tapestation-%E3%81%A7%E3%81%AErna%E3%81%AErin%E6%95%B0%E5%80%A4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Wed, 24 Apr 2013 09:56:50 +0900</lastBuildDate><item><title>Comment by だいこん on いきものや's 回答</title><link>http://qa.lifesciencedb.jp/questions/666/tapestation-%E3%81%A7%E3%81%AErna%E3%81%AErin%E6%95%B0%E5%80%A4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#668</link><description>&lt;p&gt;いきものやさん、ご回答ありがとうございます。
+確かに、GenomeDNAなどの混入の有無は、他の手段ではまだ確認しておりませんでした。
+分解産物の混入についても調べてみます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">だいこん</dc:creator><pubDate>Wed, 24 Apr 2013 09:56:50 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/666/tapestation-%E3%81%A7%E3%81%AErna%E3%81%AErin%E6%95%B0%E5%80%A4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#668</guid></item><item><title>Answer by いきものや</title><link>http://qa.lifesciencedb.jp/questions/666/tapestation-%E3%81%A7%E3%81%AErna%E3%81%AErin%E6%95%B0%E5%80%A4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/667</link><description>&lt;p&gt;TapeStationのユーザーではないですが、気になったので調べてみたところ、
+リンク先にあるように、TapeStationは18sまでのFast領域でのシグナルを基にRIN値を計算しているようです。
+この資料には相関があると書かれているので、理論上ではありますが（かなりキレイにというものがどういう意味かにもよりますが）
+18s、28sのピークが安定しているようであれば、"だいこん"さんのサンプルでは
+GenomicDNAなどのRNA以外の分解産物の混入を疑ってみてはいかがでしょう？
+　
+&lt;a href="http://www.chem-agilent.com/pdf/5990-9613EN_RINe.pdf"&gt;http://www.chem-agilent.com/pdf/5990-9613EN_RINe.pdf&lt;/a&gt;
+　&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">いきものや</dc:creator><pubDate>Tue, 23 Apr 2013 20:39:31 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/666/tapestation-%E3%81%A7%E3%81%AErna%E3%81%AErin%E6%95%B0%E5%80%A4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/667</guid></item></channel></rss>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With rna-seq</title><link>http://qa.lifesciencedb.jp/tags/rna-seq/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;rna-seq&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/rna-seq/" rel="self"></atom:link><language>ja</language><lastBuildDate>Fri, 12 Jan 2018 18:25:33 +0900</lastBuildDate><item><title>公共のChIP-seqデータのデータセット間のピーク比較について</title><link>http://qa.lifesciencedb.jp/questions/876/%E5%85%AC%E5%85%B1%E3%81%AEchip-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E6%AF%94%E8%BC%83%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;ここ数ヶ月でNGSデータ解析について学んでいます。
+現在は主に公共データのChIP-Seqデータのピーク検出や比較を行っています。
+今回新たに利用したいデータセットがあるのですが，その利用について少々悩んでおりますので本サイトに投稿しています。
+詳しい先生方がいらっしゃいましたらご助言頂けると幸いです。&lt;/p&gt;
+&lt;p&gt;質問内容は以下の通りです。&lt;/p&gt;
+&lt;p&gt;異なる機種のIllumina HiSeqを用いて得たSRAデータは互いにデータとして比較することができるのでしょうか。&lt;/p&gt;
+&lt;p&gt;たとえば，公共ゲノムデータベースGEOに公開されている，
+&lt;a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE86164"&gt;GSE86164&lt;/a&gt;：Illumina HiSeq 2500を用いて得たChIP-Seqデータ
+&lt;a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76655"&gt;GSE76655&lt;/a&gt;：Illumina HiSeq 2000を用いて得たChIP-Seqデータ
+&lt;a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE47043"&gt;GSE47043&lt;/a&gt;：Illumina HiSeq 2000を用いて得たChIP-SeqデータとRNA-Seqデータ
+は，FASTQ変換，マッピング，ピーク検出などの処理をした後，ピークコールの違いとして互いのデータを比較できるのでしょうか。
+このように公共ゲノムデータベースのデータセット間での比較について悩んでおります。&lt;/p&gt;
+&lt;p&gt;どうぞよろしくお願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">takebo</dc:creator><pubDate>Fri, 12 Jan 2018 18:25:33 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/876/%E5%85%AC%E5%85%B1%E3%81%AEchip-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88%E9%96%93%E3%81%AE%E3%83%94%E3%83%BC%E3%82%AF%E6%AF%94%E8%BC%83%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>rna-seq</category><category>chip-seq</category></item><item><title>TMM正規化法について</title><link>http://qa.lifesciencedb.jp/questions/864/tmm%E6%AD%A3%E8%A6%8F%E5%8C%96%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;次世代シーケンサーからのデータを解析し，発現差異解析を行いたいと思っています。
+Aligned BAMという形式のデータをTMM正規化し，発現差の解析をする場合，データに含まれる遺伝子数がTMM正規化により減ってしまうことはありますか？&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">abcde2017</dc:creator><pubDate>Mon, 11 Sep 2017 15:13:55 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/864/tmm%E6%AD%A3%E8%A6%8F%E5%8C%96%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>rna-seq</category></item><item><title>RNA-seqデータを用いたエンリッチメント解析について</title><link>http://qa.lifesciencedb.jp/questions/851/rna-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E3%82%A8%E3%83%B3%E3%83%AA%E3%83%83%E3%83%81%E3%83%A1%E3%83%B3%E3%83%88%E8%A7%A3%E6%9E%90%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;DAVIDを用いてエンリッチメント解析を行いたいのですが、UploadしたIDが上手く認識されず困っています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自分が持っているID&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;RNA-seqにより得られた発現遺伝子のデータに対して、BLASTXを用いて相同性検索を行い、「GI number」と「RefSeq ID」を得ています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;行った動作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;「GI number」や「RefSeq ID」を用いてDAVIDによるエンリッチメント解析を行いました。『Select Identifier』の項目ではそれぞれ「PROTEIN_GI_ACCESSION」と「REFSEQ_PROTEIN」を選んでいます。2300のIDを用いて調べた結果、認識されるのは232と非常に少ない結果しか得られませんでした。DAVIDに用意されている「Gene ID conversion」を用い、「AFFYMETRIX」のIDに変換を試みましたが、変換されるIDの数が少なく未だ解析できずにいます。BioMartを用いてIDを変換しようとしましたが、現在一時的にサイトが使えなくなっていました。&lt;/p&gt;
+&lt;p&gt;みなさんはRNA-seqから得られたデータを用いてエンリッチメント解析を行う際、どのようにしているのでしょうか？また、自分が行った行動の中で不適切な点があれば、ご教授をお願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lonicera</dc:creator><pubDate>Mon, 15 Aug 2016 10:54:15 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/851/rna-seq%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E3%82%A8%E3%83%B3%E3%83%AA%E3%83%83%E3%83%81%E3%83%A1%E3%83%B3%E3%83%88%E8%A7%A3%E6%9E%90%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>rna-seq</category><category>エンリッチメント解析</category></item><item><title>ホモログの検出について</title><link>http://qa.lifesciencedb.jp/questions/849/%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B0%E3%81%AE%E6%A4%9C%E5%87%BA%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;RNA-seqを用いて研究を行い始めたものです。
+右も左もわからない中、ここでの回答は非常助かっております。&lt;/p&gt;
+&lt;p&gt;現在得られたRNA-seqの発現遺伝子データセットに対して、既存遺伝子のホモログが存在するのかどうかを調べたいと考えています。
+データセットの量が膨大で、どう調べればよいかが分かりません。&lt;/p&gt;
+&lt;p&gt;初歩的な質問ではありますが、ご教授して頂けないでしょうか。
+何卒よろしくお願いいたします。&lt;/p&gt;
+&lt;p&gt;【追記1】他の生物の遺伝子を対象とし、私の対象とする生物の発達過程でどのような発現をしているかを調査したいと考えています。&lt;/p&gt;
+&lt;p&gt;回答ありがとうございました。データセットのアノテーション情報を参考にして遺伝子を絞り、調査してきたいと思います。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lonicera</dc:creator><pubDate>Thu, 14 Jul 2016 18:05:18 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/849/%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B0%E3%81%AE%E6%A4%9C%E5%87%BA%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>rna-seq</category><category>homolog</category></item><item><title>IGVの結果とFPKM値の違いについて</title><link>http://qa.lifesciencedb.jp/questions/845/igv%E3%81%AE%E7%B5%90%E6%9E%9C%E3%81%A8fpkm%E5%80%A4%E3%81%AE%E9%81%95%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;NGSデータ解析の初心者です。
+現在、RNA-seq解析を行っているのですが、Mapping結果をIGVで可視化するとある遺伝子に対してMappingされていることを確認したのですが、その遺伝子の発現量をCuffdiffで計算したところ、FPKM値が0となりました(gene tracking)。
+リードがMappingされているのにFPKM値がなぜ0となるのかわからず困っています。
+何か知見があればご教授ください。よろしくお願い致します。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">K_Yamashita</dc:creator><pubDate>Wed, 25 Nov 2015 23:31:59 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/845/igv%E3%81%AE%E7%B5%90%E6%9E%9C%E3%81%A8fpkm%E5%80%A4%E3%81%AE%E9%81%95%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>rna-seq</category></item><item><title>RNA seqにおけるRを用いたマッピング時のエラーについて</title><link>http://qa.lifesciencedb.jp/questions/835/rna-seq%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Br%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E6%99%82%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;「Rで塩基配列解析」をみながら、RNAseq解析をしようとしています。Rは初心者で、試しに適当なリファレンス配列とクエリー配列（共にfasta形式）を用いてmappingを試みています。リストファイルを作成後、以下のコマンドによりQuasRを起動してマッピングを行おうとしましたが、以下のようにbowtieにおいて、”引数の長さが 0 です　sh: line 1:  9966 Segmentation fault: 11”というエラーが出てしまい困っております。このような場合の解決策をご存知の方はいらっしゃいますか？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;in_f1 &amp;lt;- "mapping1.txt"&lt;/p&gt;
+&lt;p&gt;in_f2 &amp;lt;- "Ala2.fa"&lt;/p&gt;
+&lt;p&gt;library(QuasR)&lt;/p&gt;
+&lt;p&gt;out &amp;lt;- qAlign(in_f1, in_f2)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Creating .fai file for: /Users/ka/Desktop/te/Ala2.fa&lt;/p&gt;
+&lt;p&gt;alignment files missing - need to:
+    create alignment index for the genome
+    create 1 genomic alignment(s)
+will start in ..9s..8s..7s..6s..5s..4s..3s..2s..1s&lt;/p&gt;
+&lt;p&gt;Creating an Rbowtie index for /Users/ka/Desktop/te/Ala2.fa&lt;/p&gt;
+&lt;p&gt;Finished creating index
+Testing the compute nodes...OK
+Loading QuasR on the compute nodes...OK&lt;/p&gt;
+&lt;p&gt;Available cores:
+nodeNames
+ka.biol.sci.u.ac.jp 
+                            1 &lt;/p&gt;
+&lt;p&gt;Performing genomic alignments for 1 samples. 
+See progress in the log file:
+/Users/ka/Desktop/te/QuasR_log_1d53f48759d.txt&lt;/p&gt;
+&lt;p&gt;以下にエラー checkForRemoteErrors(val) : &lt;/p&gt;
+&lt;p&gt;one node produced an error: Error on ka.biol.sci.u.ac.jp processing sample /Users/ka/Desktop/te/Ala1.fa :  引数の長さが 0 です 
+sh: line 1:  9966 Segmentation fault: 11&lt;br&gt;
+&lt;/p&gt;
+&lt;p&gt;'/Library/Frameworks/R.framework/Versions/3.1/Resources/library/Rbowtie/bowtie' &lt;/p&gt;
+&lt;p&gt;'/Users/ka/Desktop/te/Ala2.fa.Rbowtie/bowtieIndex' '/Users/ka/Desktop/te/Ala1.fa' -m 1 --best --strata -v 2 -f -S -p 1 '/var/folders/kg/hrs2ndkn029f978fs1_18s140000gn/T//RtmpF7YdOB/Ala1.fa26e25902bc72.sam' 2&amp;gt;&amp;amp;1&lt;/p&gt;
+&lt;p&gt;下記にsessionInfo()  による情報と使用Macのスペックを示します。どうぞよろしくお願い致します。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;sessionInfo()
+R version 3.1.3 (2015-03-09)
+Platform: x86_64-apple-darwin10.8.0 (64-bit)
+Running under: OS X 10.8.5 (Mountain Lion)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;locale:
+[1] ja_JP.UTF-8/ja_JP.UTF-8/ja_JP.UTF-8/C/ja_JP.UTF-8/ja_JP.UTF-8&lt;/p&gt;
+&lt;p&gt;attached base packages:
+[1] stats4    parallel  stats     graphics  grDevices utils     datasets 
+[8] methods   base   &lt;br&gt;
+&lt;/p&gt;
+&lt;p&gt;other attached packages:
+ [1] GenomicAlignments_1.2.2 Rsamtools_1.18.3     &lt;br&gt;
+ [3] Biostrings_2.34.1       XVector_0.6.0        &lt;br&gt;
+ [5] QuasR_1.6.2             Rbowtie_1.6.0        &lt;br&gt;
+ [7] GenomicRanges_1.18.4    GenomeInfoDb_1.2.4   &lt;br&gt;
+ [9] IRanges_2.0.1           S4Vectors_0.4.0      &lt;br&gt;
+[11] BiocGenerics_0.12.1     BiocInstaller_1.16.2 &lt;br&gt;
+&lt;/p&gt;
+&lt;p&gt;loaded via a namespace (and not attached):
+ [1] AnnotationDbi_1.28.2   base64enc_0.1-2        BatchJobs_1.6       &lt;br&gt;
+ [4] BBmisc_1.9             Biobase_2.26.0         BiocParallel_1.0.3  &lt;br&gt;
+ [7] biomaRt_2.22.0         bitops_1.0-6           brew_1.0-6          &lt;br&gt;
+[10] BSgenome_1.34.1        checkmate_1.5.2        codetools_0.2-11    &lt;br&gt;
+[13] DBI_0.3.1              digest_0.6.8           fail_1.2            &lt;br&gt;
+[16] foreach_1.4.2          GenomicFeatures_1.18.6 grid_3.1.3          &lt;br&gt;
+[19] hwriter_1.3.2          iterators_1.0.7        lattice_0.20-31     &lt;br&gt;
+[22] latticeExtra_0.6-26    RColorBrewer_1.1-2     RCurl_1.95-4.5      &lt;br&gt;
+[25] RSQLite_1.0.0          rtracklayer_1.26.3     sendmailR_1.2-1     &lt;br&gt;
+[28] ShortRead_1.24.0       stringr_0.6.2          tools_3.1.3         &lt;br&gt;
+[31] XML_3.98-1.1           zlibbioc_1.12.0 &lt;/p&gt;
+&lt;p&gt;Mac Proスペック
+プロセッサ  2 x 2.66 GHz 6-Core Intel Xeon
+メモリ  32 GB 1333 MHz DDR3 ECC
+ソフトウェア  OS X 10.8.5（12F45）&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">brown</dc:creator><pubDate>Mon, 06 Apr 2015 17:58:56 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/835/rna-seq%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Br%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E6%99%82%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>r</category><category>rna-seq</category><category>mapping</category></item><item><title>RNA-seqのAT bias</title><link>http://qa.lifesciencedb.jp/questions/834/rna-seq%E3%81%AEat-bias</link><description>&lt;p&gt;MiSeqを使ってmouse macrophage系細胞のRNA-seqを始めたのですが、出てきたデータの塩基組成がA,T＝32%、G,C＝18%と偏ります。
+原因に心当たりのある方、アドバイス頂けないでしょうか？&lt;/p&gt;
+&lt;p&gt;実験系の概略は以下のとおりです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Total RNA 1 ugを精製&lt;/li&gt;
+&lt;li&gt;TruSeq Stranded mRNA Sample Prep
+   Kitでlibrary構築&lt;/li&gt;
+&lt;li&gt;Sequencing Kit V3
+   (150cycle)でpaired-end readsを取得&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;よろしくお願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">junya</dc:creator><pubDate>Mon, 06 Apr 2015 17:38:15 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/834/rna-seq%E3%81%AEat-bias</guid><category>stranded</category><category>rna-seq</category><category>miseq</category></item><item><title>Trinityのアセンブリ結果の見方</title><link>http://qa.lifesciencedb.jp/questions/809/trinity%E3%81%AE%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E7%B5%90%E6%9E%9C%E3%81%AE%E8%A6%8B%E6%96%B9</link><description>&lt;p&gt;初心者です。ご助言お願いいたします。
+Trinityを用いてHiseqのペアエンドデータのde novo アセンブリを行いました。
+コンティグ数やN50やコンティグ長頻度分布をみるとまずまずのコンティグが作成されたように思います。
+しかし、各コンティグが作成されるのに用いられたリード数やcoverage dapthの情報が、出力された複数のファイルのどこにあるかわかりません（パッと見では見当たりません）。
+どうすれば上記の情報を知ることができますでしょうか？
+お助け下さい。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">TNSI_HD</dc:creator><pubDate>Tue, 11 Nov 2014 19:12:18 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/809/trinity%E3%81%AE%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E7%B5%90%E6%9E%9C%E3%81%AE%E8%A6%8B%E6%96%B9</guid><category>rna-seq</category><category>assembly</category><category>ngs</category></item><item><title>発現変動遺伝子の検定</title><link>http://qa.lifesciencedb.jp/questions/780/%E7%99%BA%E7%8F%BE%E5%A4%89%E5%8B%95%E9%81%BA%E4%BC%9D%E5%AD%90%E3%81%AE%E6%A4%9C%E5%AE%9A</link><description>&lt;p&gt;複製無しの2サンプル間のRPKMの統計処理によって、発現変動遺伝子を検出したいと考えています。
+文献を検索し、Fisher's exact testをしたいと思っているのですが、エクセルでは計算能力の限界を超えてしまうため
+計算に適したソフトなどを教えて頂けないでしょうか。&lt;/p&gt;
+&lt;p&gt;また他のRPKMの比較に適した検定があればそちらのほうも宜しくお願い致します。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshow</dc:creator><pubDate>Sat, 13 Sep 2014 16:52:19 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/780/%E7%99%BA%E7%8F%BE%E5%A4%89%E5%8B%95%E9%81%BA%E4%BC%9D%E5%AD%90%E3%81%AE%E6%A4%9C%E5%AE%9A</guid><category>rna-seq</category></item><item><title>リード長の長いRNA-Seqのタグカウント</title><link>http://qa.lifesciencedb.jp/questions/581/%E3%83%AA%E3%83%BC%E3%83%89%E9%95%B7%E3%81%AE%E9%95%B7%E3%81%84rna-seq%E3%81%AE%E3%82%BF%E3%82%B0%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88</link><description>&lt;p&gt;もしかしたら、常識かもしれないので、
+情報お持ちのかたがおられたら、お願いします。&lt;/p&gt;
+&lt;p&gt;topHatやmapSpliceなど、splicingを考慮したマッパーの結果から、
+遺伝子レベルのタグカウントを計算するうまいやり方など、
+情報お持ちのかたがおられましたら、
+お知らせいただけますと助かります。&lt;/p&gt;
+&lt;h2&gt;以下背景&lt;/h2&gt;
+&lt;p&gt;topHat-cufflinks-cuffdiffや、それに類似のフローが
+デファクトスタンダード的解析であると知りつつ、
+リード長の長いRNA-SeqにedgeR等をかけるやりかたを考えています。&lt;/p&gt;
+&lt;p&gt;edgeRなどのDEG検出用のRパッケージ等は、
+fpkm/rpkmは使わないように推奨しているかと思います。&lt;/p&gt;
+&lt;p&gt;EdgeRのedgeRUsersGuide.pdfより引用
+http://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
+"There are good reasons
+why the NB model is appropriate for the raw count data, but transforming the data using
+RPKM (or FPKM or similar) renders our distributional assumptions invalid and we cannot
+guarantee that our methods will be reliable for such transformed data."&lt;/p&gt;
+&lt;p&gt;35塩基や、50塩基程度であれば、
+BWAやBowtieなどで、splicingを考慮せずに、
+マップしたものを、
+DEGseqパッケージ中のgetGeneExpや、
+BEDtoolsのcoverageBEDなどで、タグカウントすればよかったのですが、
+最近リード長が伸び、150塩基のRNA-Seqなども
+よく見かけるようになったかと思います。
+リード長が伸びるとexon長を超えてしまう場合も
+多々あるので、junctionをまたぐタグの数を無視するには、
+支障が出てきているように思います。&lt;/p&gt;
+&lt;p&gt;topHatが出力するaccepted_hits.bamに対して、&lt;/p&gt;
+&lt;h3&gt;選択肢1&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Step1 BEDtoolsのbamToBedに"-bed12"オプション付でかけBAMをBEDに変換&lt;/li&gt;
+&lt;li&gt;Step2 BEDを入力とするDEGseqのgetGeneExpでタグカウント&lt;/li&gt;
+&lt;li&gt;アノテーション情報は、refFlat.txt&lt;/li&gt;
+&lt;li&gt;=&amp;gt; イントロン領域のタグは計上されない。&lt;/li&gt;
+&lt;li&gt;=&amp;gt; splicing-junctionをまたぐタグがタグカウントに計上されないため、難あり。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;選択肢2&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Step1 coverageBEDに対して、"-abam"でBAM入力で"-splice"オプションを付けて実行。&lt;/li&gt;
+&lt;li&gt;アノテーション情報はrefFlat.bed&lt;/li&gt;
+&lt;li&gt;=&amp;gt; splicing-junctionをまたぐタグはタグカウントに計上されるので良し。&lt;/li&gt;
+&lt;li&gt;=&amp;gt; イントロン領域のタグ(第一イントロンの制御ノンコーディングRNAなど)もカウントされるので難あり。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一応、BioStarやSeqAnswersで上記難点の解決策も探しては見たのですが、
+自分では見つけられませんでした。&lt;/p&gt;
+&lt;p&gt;coverageBEDで、イントロンも含めてカウントした後に、
+全イントロンのタグ数を引くとか、&lt;/p&gt;
+&lt;p&gt;小賢しい手も考えられますが、
+境界のリードなどの扱いで、厳密では無くなる点に難があります。&lt;/p&gt;
+&lt;p&gt;もし、うまい手やら、既存のスクリプトでこんなものがある等、
+関係する情報お知らせいただけますと幸いです。
+直接の解答でなくとも、ご助言ありましたら、お願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Tue, 03 Apr 2012 16:59:13 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/581/%E3%83%AA%E3%83%BC%E3%83%89%E9%95%B7%E3%81%AE%E9%95%B7%E3%81%84rna-seq%E3%81%AE%E3%82%BF%E3%82%B0%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88</guid><category>tophat</category><category>ngs</category><category>rna-seq</category><category>long</category><category>splicing-junction</category></item><item><title>Tophatのbutterflyオプションについて</title><link>http://qa.lifesciencedb.jp/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;36bpのシングルエンドRNA-seqデータを使って解析をしようとしているのですが、
+バージョン1.0.12から追加された--butterfly-searchというオプションを使ったことの
+ある方、または使った時と使わなかった時の比較をされた方はいらっしゃいませんでしょうか？
+36bpなので--segment-length 18でジャンクション同定してもノイズが多くなりそうで、
+そのままbowtieでマッピングしてしまおうと考えていたのですが、Tophatのマニュアルを
+見ていて、このオプションがあることを知ってどうしようか迷っています。
+Tophatの論文にはこのbutterflyのアルゴリズムに関する記述はなく、&lt;a href="http://seqanswers.com/forums/showthread.php?t=7254"&gt;SEQanswersでは
+数百GBものoutputを出すとの報告があり&lt;/a&gt;
+、ラボに大型サーバーがない私では自分で
+このオプションをテストするのが難しい状況です。
+もしお試しになった方がいらっしゃれば、ご教授お願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tanakky</dc:creator><pubDate>Fri, 18 Nov 2011 23:07:36 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>butterfly</category><category>tophat</category><category>rna-seq</category><category>ngs</category></item><item><title>Balb/cとC57BL/6Jとmm9</title><link>http://qa.lifesciencedb.jp/questions/340/balb-c%E3%81%A8c57bl-6j%E3%81%A8mm9</link><description>&lt;p&gt;今後免疫分野でChip-seqやRNA-seqを施行していく予定にしています。免疫分野ではC57BL/6Jに加えてBlab/cも表現型をみていく上で重要です。そこで質問させていただきたいのですが、Chip-seqやRNA-seqをBalb/cでデータをとった後、リファレンス配列mm9にマッピングすることになると思うのですが、mm9は主にC57BL/6Jから作られているようです。論文によってはC57BL/6JとC57BL/6nでも結構違いがあるようなことを指摘されているくらいですので、実際balb/cとC57BL/6Jではかなり違うような気がするのですが、マッピングはどの程度できるのでしょうか？　それとも、balb/c用のリファレンス配列を別に作成する等のステップを踏まないと意味のあるデータを得るのは難しいのでしょうか？　なかなか周囲にBalb/cを用いてNGSを使用した実験をされている方がおらず、判断しかねております。よろしくお願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">gatapishi</dc:creator><pubDate>Thu, 24 Feb 2011 15:54:21 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/340/balb-c%E3%81%A8c57bl-6j%E3%81%A8mm9</guid><category>rna-seq</category><category>chip-seq</category><category>マウス</category></item><item><title>RNA-SeqのrRNAの除去</title><link>http://qa.lifesciencedb.jp/questions/125/rna-seq%E3%81%AErrna%E3%81%AE%E9%99%A4%E5%8E%BB</link><description>&lt;p&gt;mRNA-Seqの情報解析で、なぜかrRNAが混入することが多いようですが、
+これを除去するのに使用するrRNA、tRNAの情報はどこから入手するのが一般的でしょうか。
+もし自前で除去スクリプトを作成する必要がある場合は、rRNA、tRNAの座標情報を&lt;a href="http://genome.ucsc.edu/"&gt;UCSC&lt;/a&gt;のどこかから入手し、
+マッピング結果中のrRNA、tRNAにヒットした結果レコードを除外するなどの
+対応を考えていますが、もっと効率的なツール・方法があったら教えてください。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Thu, 02 Dec 2010 21:42:56 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/125/rna-seq%E3%81%AErrna%E3%81%AE%E9%99%A4%E5%8E%BB</guid><category>trna</category><category>rrna</category><category>filtering</category><category>rna-seq</category><category>ngs</category></item></channel></rss>

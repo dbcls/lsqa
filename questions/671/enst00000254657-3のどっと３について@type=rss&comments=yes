@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: ENST00000254657.3のどっと３について</title><link>http://qa.lifesciencedb.jp/questions/671/enst00000254657-3%E3%81%AE%E3%81%A9%E3%81%A3%E3%81%A8%EF%BC%93%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;いつも大変お世話になっております。&lt;br&gt;
+Ensemblのtranscripts idについてお伺いしたいのですが、&lt;br&gt;
+ENST00000254657.3のようにドット３が付いているのは、&lt;br&gt;
+&lt;strong&gt;isoformのtranscriptsが何らかの要因で3回情報が更新されている、&lt;/strong&gt;&lt;br&gt;
+といった意味だとうろ覚えの記憶があるのですがお詳しいかたいらっしゃいますでしょうか。&lt;br&gt;
+ご回答、どうぞよろしくお願い申し上げます。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;suimye&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/671/enst00000254657-3%E3%81%AE%E3%81%A9%E3%81%A3%E3%81%A8%EF%BC%93%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Sun, 12 May 2013 10:32:55 +0900</lastBuildDate><item><title>Comment by suimye on mn3's 回答</title><link>http://qa.lifesciencedb.jp/questions/671/enst00000254657-3%E3%81%AE%E3%81%A9%E3%81%A3%E3%81%A8%EF%BC%93%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#673</link><description>&lt;p&gt;mn3様&lt;br&gt;
+ご回答ありがとうございました。&lt;br&gt;
+さっそくTranscript Histroyを拝見いたしました&lt;br&gt;
+面白い！ シリアルがどうなったのかが&lt;br&gt;
+assemblyのバージョンに従って、時系列的に分かるんですね!&lt;br&gt;
+また、自分が扱ってるAnnotation dataが古い場合、シリアルが最新かどうかなどの&lt;br&gt;
+確認にも使えそうです。とても参考になりました。ありがとうございました。&lt;br&gt;
+Suimye&lt;br&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">suimye</dc:creator><pubDate>Sun, 12 May 2013 10:32:55 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/671/enst00000254657-3%E3%81%AE%E3%81%A9%E3%81%A3%E3%81%A8%EF%BC%93%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#673</guid></item><item><title>Answer by mn3</title><link>http://qa.lifesciencedb.jp/questions/671/enst00000254657-3%E3%81%AE%E3%81%A9%E3%81%A3%E3%81%A8%EF%BC%93%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/672</link><description>&lt;p&gt;&lt;a href="http://asia.ensembl.org/Homo_sapiens/Transcript/Summary?g=ENSG00000132326;r=2:239152679-239197250;t=ENST00000254657"&gt;ENST00000254657&lt;/a&gt; ページの&lt;a href="http://asia.ensembl.org/Homo_sapiens/Transcript/Idhistory?g=ENSG00000132326;r=2:239152679-239197250;t=ENST00000254657"&gt;Transcript Hitosy&lt;/a&gt;に過去のバージョンから変遷のヒストリがあります。これをみると、ドット以下の数値はシリアルになっているようです。アセンブルの変化に伴って、三つのトランスクリプトが関係していることがわかります。Transcript HistoryページのID Historyの&lt;a href="http://asia.ensembl.org/Help/View?id=181"&gt;ヘルプのリンク&lt;/a&gt;に直接的ではありませんが解説がありました。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="alt text" src="/upfiles/スクリーンショット_2013_05_11_13_04_1.png"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mn3</dc:creator><pubDate>Sat, 11 May 2013 13:17:45 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/671/enst00000254657-3%E3%81%AE%E3%81%A9%E3%81%A3%E3%81%A8%EF%BC%93%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/672</guid></item></channel></rss>

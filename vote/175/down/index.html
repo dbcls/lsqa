@@ -1,0 +1,1018 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>転写因子結合配列のデータベースについて - #LSQA</title>
+        <meta name="description" content="各種転写因子結合配列を（主にヒト、マウスで）ゲノムワイドに調べる方法を教えてください。
+以前、少しだけTRANSFACを見てみたのですが、web上では１箇所ずつしか調べられないこと、各パラメーターをどの程度重要視すべきかという点がわからず、結局データベース全体を利用するのは有料であることから、利用は保留にしていました。
+利用可能な転写因子結合配列のデータベースの実践的な使用方法、データベース以外を用いた方法（あれば）、またそれらが効果的に使用されている参考文献などありましたら指摘していただけると幸いです。どうぞよろしくお願い致します。">
+        <meta name="keywords" content="転写因子,ゲノム,データベース">
+        
+        <link rel="canonical" href="../../169/down/index.html" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="../../../questions/165/転写因子結合配列のデータベースについて@type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="../../../upfiles/favicon.ico" />
+        <link href="../../../m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="../../../cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='../../../m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        
+        <script type='text/javascript' src='../../../m/qa.lifesciencedb.jp/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='../../../m/qa.lifesciencedb.jp/media/js/wmd/wmd.js'></script>
+        <link rel="stylesheet" type="text/css" href="../../../m/qa.lifesciencedb.jp/media/js/wmd/wmd.css" />
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[プレビューを隠す]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[プレビューを表示する]" : "[プレビューを隠す]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="../../../opensearch.xml.html" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="../../../index.html">
+				<img src="../../../upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="../../../account/yahoo/signin/index.html" >ログイン</a>  <a href="../../../about/index.html" >概要</a>  <a href="../../../faq/index.html" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="../../../questions/index.html" >質問</a><a id="nav_tags" href="../../../tags/index.html" >タグ</a><a id="nav_users" href="http://qa.lifesciencedb.jp/users/" >ユーザー</a><a id="nav_badges" href="../../../badges/index.html" >バッジ</a><a id="nav_unanswered" href="../../../questions/unanswered/index.html" >未回答</a>
+        <a id="nav_ask" href="../../../questions/ask/index.html" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="http://qa.lifesciencedb.jp/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="../../169/down/index.html">転写因子結合配列のデータベースについて</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-165-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../165/up/index.html" rel="nofollow"> </a>
+<div id="post-165-score" class="post-score"
+    title="現在の投票数">
+    2
+</div>
+<a id="post-165-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../165/down/index.html" rel="nofollow"> </a>
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="../../../mark_favorite/165/index.html" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>各種転写因子結合配列を（主にヒト、マウスで）ゲノムワイドに調べる方法を教えてください。
+以前、少しだけTRANSFACを見てみたのですが、web上では１箇所ずつしか調べられないこと、各パラメーターをどの程度重要視すべきかという点がわからず、結局データベース全体を利用するのは有料であることから、利用は保留にしていました。</p>
+<p>利用可能な転写因子結合配列のデータベースの実践的な使用方法、データベース以外を用いた方法（あれば）、またそれらが効果的に使用されている参考文献などありましたら指摘していただけると幸いです。どうぞよろしくお願い致します。</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="../../../tags/転写因子/index.html" class="post-tag"
+                                        title="'転写因子'タグのついた質問をみる" rel="tag">転写因子</a>
+                                
+                                    <a href="../../../tags/ゲノム/index.html" class="post-tag"
+                                        title="'ゲノム'タグのついた質問をみる" rel="tag">ゲノム</a>
+                                
+                                    <a href="../../../tags/データベース/index.html" class="post-tag"
+                                        title="'データベース'タグのついた質問をみる" rel="tag">データベース</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">                            
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        質問日
+        <strong>Dec 12 '10 at 12:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/a44f06007deed23a28b60037b2107ae9?s=32&amp;d=identicon&amp;r=g" alt="odamame's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/42/odamame/">odamame</a><br/>
+    <span class="score" title="111 徳">111</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 バッジ"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="7 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span></p>
+</div>
+
+
+                            </div>
+                            
+
+
+<div class="comments-container" id="comments-container-165">
+    
+</div>
+<div id="comment-tools-165" class="comment-tools">
+    
+    
+</div>
+<div id="comment-165-form-container" class="comment-form-container">
+    
+</div>
+    
+                        </div>
+                        
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    5 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="../../../questions/165/転写因子結合配列のデータベースについて@sort=登録順.html" title="最古の回答が最初に表示されます">回答順</a><a href="../../../questions/165/転写因子結合配列のデータベースについて@sort=最新.html" title="最新の回答が最初に表示されます">最新</a><a href="../../../questions/165/転写因子結合配列のデータベースについて@sort=投票.html" class="on" title="もっとも投票された回答が最初に表示されます">支持されている順</a></div>
+                </div>
+                
+  
+                
+                    <a name="176"></a>
+                    <div id="answer-container-176" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-176-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../176/up/index.html" rel="nofollow"> </a>
+<div id="post-176-score" class="post-score"
+    title="現在の投票数">
+    2
+</div>
+<a id="post-176-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../176/down/index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+        <a class="accept-answer on"></a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>直接的な答えになっていないかもしれませんが、cisRED (cis-regulatory element database)というものがあります。冒頭の説明では、</p>
+<p>The cisRED database holds conserved sequence motifs identified by genome scale motif discovery, similarity, clustering, co-occurrence and coexpression calculations. Sequence inputs include low-coverage genome sequence data and ENCODE data.</p>
+<p>となっていて、保存されたモチーフについて、TRANSFACやJASPAR, ORegAnnoのアノテーションがつけられています。TRANSFAC, JASPAR, ORegAnnoは既出ですね。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Dec 13 '10 at 16:20</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/4fffce2223dfb273276b10e935bea9ef?s=32&amp;d=identicon&amp;r=g" alt="ogishima's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/39/ogishima/">ogishima</a><br/>
+    <span class="score" title="56 徳">56</span><span title="1 バッジ"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span></p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-176">
+    
+        <a name="178"></a>
+        <div class="comment" id="comment-178">
+            <div id="post-178-score" class="comment-score"></div>
+            <div class="comment-text"><p>回答ありがとうございます。今までで一番使えそう…な気がする（笑）ので、不慣れなmysqlを何とかして、使ってみようと思います（できるか不安ですが…w）。
+どうもありがとうございます！</p></div>
+            <div class="comment-info" id="comment-178-info">
+                
+                
+                
+                <span class="comment-age">(Dec 13 '10 at 19:52)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/42/odamame/">odamame</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/a44f06007deed23a28b60037b2107ae9?s=18&amp;d=identicon&amp;r=g" alt="odamame's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-176" class="comment-tools">
+    
+    
+</div>
+<div id="comment-176-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="166"></a>
+                    <div id="answer-container-166" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-166-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../166/up/index.html" rel="nofollow"> </a>
+<div id="post-166-score" class="post-score"
+    title="現在の投票数">
+    2
+</div>
+<a id="post-166-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../166/down/index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>全く同じ質問をBMB2010でも受けました(w
+転写因子予測結合配列のデータベースでよく使われているTRANSFACって有料なんですよ。</p>
+<p>大昔のフリーだったころのTRANSFACを元に計算した結果がUCSC Genome BrowserのTrack（アノテーショントラック）
+として利用可能なゲノムのバージョンもあるので、それ('Regulation'の'TFBS Conserved')を追加してみるとよいかと。
+<a href="http://genome.ucsc.edu/cgi-bin/hgTrackUi?hgsid=175468335&amp;c=chrX&amp;g=tfbsConsSites">http://genome.ucsc.edu/cgi-bin/hgTrackUi?hgsid=175468335&amp;c=chrX&amp;g=tfbsConsSites</a>
+＃ゲノムのバージョン、種によっては利用可能でないものも多々あるようです。</p>
+<p>アノテーショントラックって何という方は、こちらの統合TVを
+<a href="http://togotv.dbcls.jp/20100722.html">http://togotv.dbcls.jp/20100722.html</a></p>
+<p>フリーの転写因子予測結合配列のデータベースの<a href="http://jaspar.genereg.net/">JASPAR</a>とかもありますけど、それほど頻繁には更新されていない
+ようですし、最近使っていないからよく知りません。知っている方教えてください。
+<a href="http://jaspar.genereg.net/">http://jaspar.genereg.net/</a></p>
+<p>この種の計算を自分でやるためのパイプラインとして前職時代にSayaMatcherというのをつくっておりました。
+その際は特定の転写因子の結合配列を自分たちで論文からデータを集めてきて、それを元に「パターン」を作成して
+計算させてその結果を眺めてターゲットを絞っておりました。そういった個別に作られた「パターン」を集めて
+データベース化していくと「知のめぐり」がよくなっていいのになあ、と思っていますが、未だ果たせずにいます。
+もちろん、上記のデータベースがそれになっていってくれるのが一番いいのですが。ないのなら、できるところから
+始めないといけないのかなとも思っています。蛇足でした。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Dec 12 '10 at 13:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/0dced23c24106d8aad9b6879a6f93d80?s=32&amp;d=identicon&amp;r=g" alt="hub's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/5/hub/">hub ♦♦</a><br/>
+    <span class="score" title="303 徳">303</span><span title="5 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="9 バッジ"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="16 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">16</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="http://qa.lifesciencedb.jp/revisions/166/">
+                edited
+                <strong>Dec 12 '10 at 20:13</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-166">
+    
+        <a name="167"></a>
+        <div class="comment" id="comment-167">
+            <div id="post-167-score" class="comment-score"></div>
+            <div class="comment-text"><p>回答ありがとうございます。Trackにはマウスのものもあるのでしょうか？また、UCSCのアノテーショントラックに何が含まれているのかをまとめてチェックするにはどこを見たらいいかご助言お願いします。</p></div>
+            <div class="comment-info" id="comment-167-info">
+                
+                
+                
+                <span class="comment-age">(Dec 12 '10 at 13:22)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/42/odamame/">odamame</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/a44f06007deed23a28b60037b2107ae9?s=18&amp;d=identicon&amp;r=g" alt="odamame's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="168"></a>
+        <div class="comment" id="comment-168">
+            <div id="post-168-score" class="comment-score"></div>
+            <div class="comment-text"><p>マウス(July 2007 (NCBI37/mm9) Assembly)では'Expression and Regulation'のなかの'ORegAnno'というのがそれのようですけど</p>
+<p><a href="http://genome.ucsc.edu/cgi-bin/hgTrackUi?hgsid=175468867&amp;c=chr12&amp;g=oreganno">http://genome.ucsc.edu/cgi-bin/hgTrackUi?hgsid=175468867&amp;c=chr12&amp;g=oreganno</a></p>
+<p>別に私も前から知っているわけじゃなくて今調べてここに書いているだけですけど…</p></div>
+            <div class="comment-info" id="comment-168-info">
+                
+                
+                
+                <span class="comment-age">(Dec 12 '10 at 13:29)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/5/hub/">hub ♦♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/0dced23c24106d8aad9b6879a6f93d80?s=18&amp;d=identicon&amp;r=g" alt="hub's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="173"></a>
+        <div class="comment" id="comment-173">
+            <div id="post-173-score" class="comment-score"></div>
+            <div class="comment-text"><p>ありがとうございます！探してみたのですが、自分で見つけられませんでした。Trackの名前だけでなくて内容もチェックするべきなんですね。内容をよく確かめて利用してみようと思います。本当にありがとうございます！</p></div>
+            <div class="comment-info" id="comment-173-info">
+                
+                
+                
+                <span class="comment-age">(Dec 12 '10 at 23:35)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/42/odamame/">odamame</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/a44f06007deed23a28b60037b2107ae9?s=18&amp;d=identicon&amp;r=g" alt="odamame's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-166" class="comment-tools">
+    
+    
+</div>
+<div id="comment-166-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="175"></a>
+                    <div id="answer-container-175" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-175-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../up/index.html" rel="nofollow"> </a>
+<div id="post-175-score" class="post-score"
+    title="現在の投票数">
+    2
+</div>
+<a id="post-175-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>私も転写屋なので、よくこの手の調べものをよくやります。</p>
+<p>「転写因子の結合配列のデータベース」とあったので、結合予測結果のデータベース（もしくは解析パイプライン）
+ではないと勘違いしていました。結合予測ということでしたら最もリファレンスが多いのは、残念ながら有料の
+TRANSFACとGenomatixだと思います。
+また、JASPARはmatrixそのものが古いので（TRANSFACのmatrixの古いもの）、
+それが嫌ならば有料を選ぶか自分で作るしか他ないのが現状です。</p>
+<p>下記は余談ですが。。</p>
+<p><strong>マイクロアレイ解析結果に基づくgenome wideの場合</strong>
+JASPARを使った解析パイプラインは色々ありますが、co-expressionしているgene setの中から共通のTFBS matrixをみつけてくる<a href="http://www.cisreg.ca/oPOSSUM/">oPOSSUM</a>や、TFBS予測に基づく遺伝子セット(C3)が既にある<a href="http://www.broadinstitute.org/gsea/index.jsp">GSEA</a>を使うのも手です。</p>
+<p><strong>予測ではなく、実験結果に基づく場合</strong>
+ChIP-Seq or ChIP-on-Chip のpublic dataに基づいて、<a href="http://amp.pharm.mssm.edu/chea/case_studies.htm">ChEA</a>は、上記と同様に特定の遺伝子セットのproxymal promoterにenrichする転写因子を探してくれます。データ数がまだまだ少ないので個人的にはあまり面白くなかったのですが、使えるようでしたら。リンクはusecaseなので、見たら使い方がわかるとおもいます。</p>
+<p>あ、literature baseのデータベースが抜けてますが、これはよく知らないのでだれか補間してくれるかな。。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Dec 13 '10 at 16:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/f763b758228ce9395b960221fbf54594?s=32&amp;d=identicon&amp;r=g" alt="suimye's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/28/suimye/">suimye</a><br/>
+    <span class="score" title="296 徳">296</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="8 バッジ"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="15 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">15</span></span></p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-175">
+    
+        <a name="177"></a>
+        <div class="comment" id="comment-177">
+            <div id="post-177-score" class="comment-score"></div>
+            <div class="comment-text"><p>ありがとうございます。私自身はゲノムワイドエピゲノム解析を行っているので、必要なのは結合予測の結果である候補配列がどのようにゲノム上にmapされるか、という情報になります…もしそういったものがまとまって利用出来るのであれば利用したい、と考えていました。とりあえず、見てみたい転写因子候補を絞って自作してみて、意味がありそうだったら有料のもので確かめる、（または、自作で済ませる？）という方向を考えてみようかなと思います。ご指摘いただいて、具体的に必要な情報の現状が把握できました。oPOSSOUM、GSEAについては、当初考えていたのと少し違う方向からこちらも利用できそうな気がします。検討してみます！ありがとうございました！</p></div>
+            <div class="comment-info" id="comment-177-info">
+                
+                
+                
+                <span class="comment-age">(Dec 13 '10 at 16:29)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/42/odamame/">odamame</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/a44f06007deed23a28b60037b2107ae9?s=18&amp;d=identicon&amp;r=g" alt="odamame's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-175" class="comment-tools">
+    
+    
+</div>
+<div id="comment-175-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="206"></a>
+                    <div id="answer-container-206" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-206-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../206/up/index.html" rel="nofollow"> </a>
+<div id="post-206-score" class="post-score"
+    title="現在の投票数">
+    2
+</div>
+<a id="post-206-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../206/down/index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>参考までに BioStar にあった<br>
+<a href="http://biostar.stackexchange.com/questions/2949/transcription-factor-enrichment">Transcription Factor Enrichment - BioStar</a> <br>
+をリンクしておきます。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Dec 20 '10 at 11:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/3f71cb20d14a9690f0c72cdc2370eb6e?s=32&amp;d=identicon&amp;r=g" alt="ma_ko's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/12/ma_ko/">ma_ko ♦♦</a><br/>
+    <span class="score" title="371 徳">371</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="3 バッジ"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="12 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">12</span></span></p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-206">
+    
+        <a name="207"></a>
+        <div class="comment" id="comment-207">
+            <div id="post-207-score" class="comment-score"></div>
+            <div class="comment-text"><p>情報ありがとうございます！海外での状況が把握できて良いですね。こちらもチェックしながら各データベースの妥当と思われる利用法を検討してみます。どうもありがとうございました！</p></div>
+            <div class="comment-info" id="comment-207-info">
+                
+                
+                
+                <span class="comment-age">(Dec 20 '10 at 11:20)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/42/odamame/">odamame</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/a44f06007deed23a28b60037b2107ae9?s=18&amp;d=identicon&amp;r=g" alt="odamame's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-206" class="comment-tools">
+    
+    
+</div>
+<div id="comment-206-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="169"></a>
+                    <div id="answer-container-169" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-169-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../169/up/index.html" rel="nofollow"> </a>
+<div id="post-169-score" class="post-score"
+    title="現在の投票数">
+    1
+</div>
+<a id="post-169-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../169/down/index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>なかなか思い出せなかったのですが、transfacの他にJASPARというTFBS matrix DB(リポジトリ?)があります...
+昨年一度DLして、今年になって更新されていたので再度DLした記憶がありますので、更新が再開されていると期待したいです。
+DLしたtfbs matrixは、EMBOSSパッケージのjaspscan <a href="http://emboss.sourceforge.net/apps/release/6.0/emboss/apps/jaspscan.html">http://emboss.sourceforge.net/apps/release/6.0/emboss/apps/jaspscan.html</a>  で扱えたおぼろげな記憶があります。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Dec 12 '10 at 18:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/2b5f64db47fd865af87e90a82c390a32?s=32&amp;d=identicon&amp;r=g" alt="bak_a_mono's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/44/bak_a_mono/">bak_a_mono</a><br/>
+    <span class="score" title="16 徳">16</span><span title="1 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="http://qa.lifesciencedb.jp/revisions/169/">
+                edited
+                <strong>Dec 12 '10 at 23:07</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/e585686707fd3a61b7096451ebf13012?s=32&amp;d=identicon&amp;r=g" alt="mn3's gravatar image" />
+            <p><a href="http://qa.lifesciencedb.jp/users/2/mn3/">mn3 ♦♦</a><br/>
+            <span class="score" title="515 徳">515</span><span title="4 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="9 バッジ"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="22 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-169">
+    
+        <a name="174"></a>
+        <div class="comment" id="comment-174">
+            <div id="post-174-score" class="comment-score"></div>
+            <div class="comment-text"><p>ありがとうございます。まだ理解してないですが、ちょっと良く読んで使ってみるようにしてみます。ありがとうございました！</p></div>
+            <div class="comment-info" id="comment-174-info">
+                
+                
+                
+                <span class="comment-age">(Dec 13 '10 at 01:00)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/42/odamame/">odamame</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/a44f06007deed23a28b60037b2107ae9?s=18&amp;d=identicon&amp;r=g" alt="odamame's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-169" class="comment-tools">
+    
+    
+</div>
+<div id="comment-169-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="http://qa.lifesciencedb.jp/questions/165/answer/" method="post">
+            <div style="clear:both">
+            </div>
+            
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            あなたの回答
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea rows="10" cols="40" name="text" id="editor"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="リアルタイムMarkdown編集プレビューをトグルする">
+                                            プレビューをトグルする
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input type="checkbox" name="wiki" id="id_wiki" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="コミュニティー wikiオプションを選択した場合、質問と回答はポイントを生成せず、作者名は表示されない">
+                                            <label for="id_wiki">コミュニティー wiki</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+                        
+                        </table>  
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>                    
+                </div>
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">この質問をフォローする</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('../../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="../../../questions/165/転写因子結合配列のデータベースについて@type=rss" title="subscribe to answers"></a>
+    回答
+</p><p><a class="feed-icon" style="background-image:url('../../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="../../../questions/165/転写因子結合配列のデータベースについて@type=rss&amp;comments=yes" title="subscribe to comments and answers"></a>
+    回答とコメント
+</p>
+
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>ただいまベータテスト運用中です。そのために通知無くコンテンツの変更やサービスの停止変更されることがあります。</h2>
+<p>質問するなら<a href="../../../index.html">ライフサイエンスQA</a>。</p>
+<p>このページの<a href="../../../questions/165/転写因子結合配列のデータベースについて@type=rss">RSSフィード</a></p>
+<p><a href="http://twitter.com/lsqa_all">@lsqa_all</a>・<a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a></p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <p>
+		タグ:
+    </p>
+    <p class="tags" >
+        
+        	<a href="../../../tags/データベース/index.html" 
+			title="タグ付けされた質問をみる'データベース'タグを利用している" 
+			rel="tag">データベース</a> <span class="tag-number">&#215;6</span><br/>
+        
+        	<a href="../../../tags/転写因子/index.html" 
+			title="タグ付けされた質問をみる'転写因子'タグを利用している" 
+			rel="tag">転写因子</a> <span class="tag-number">&#215;3</span><br/>
+        
+        	<a href="../../../tags/ゲノム/index.html" 
+			title="タグ付けされた質問をみる'ゲノム'タグを利用している" 
+			rel="tag">ゲノム</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        質問日: <strong title="2010-12-12 12:43:41.950713">Dec 12 '10 at 12:43</strong>
+    </p>
+    <p> 
+     	閲覧数: <strong>40,689 回</strong>
+    </p>
+    <p> 
+        最終更新日: <strong title="2010-12-20 11:20:15.393821">Dec 20 '10 at 11:20</strong>
+    </p>
+</div>
+
+
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>世界に広がるQAサイト</h2>
+<p><a href="http://biostar.stackexchange.com">バイオインフォマティクスのBioStar</a>・ <a href="http://I.SEQanswers.com">新型シーケンサーのSEQanswers</a>・ <a href="http://blueobelisk.shapado.com">オープンデータのBlueObelisk</a>・<a href="http://stackoverflow.com">プログラミングのstackoverflow</a>・ <a href="http://www.semanticoverflow.com">Semantic Overflow</a>・ <a href="http://stats.stackexchange.com/">Statistical Analysis</a>・ <a href="http://cstheory.stackexchange.com/">Theoretical Computer Science</a>・ <a href="http://chiebukuro.yahoo.co.jp/">Yahoo!知恵袋</a>・ <a href="http://okwave.jp/">OKWave</a> <a href="http://ja.wikipedia.org/wiki/Category:Q%26Aサイト">などなど</a></p>
+     </div>
+</div>
+
+<div class="boxC">
+    <h3 class="subtitle">関係した質問</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="../../214/down/index.html">マイクロアレイデータの在り処？</a>
+        </p>
+        
+        <p>
+            <a href="../../519/down/index.html">TogoDBで画像を含むデータベースを作るにはどうしたら良いですか？</a>
+        </p>
+        
+        <p>
+            <a href="../../415/down/index.html">マウスの転写因子の探し方とダウンロード</a>
+        </p>
+        
+        <p>
+            <a href="../../770/down/index.html">データベースにあるデータの再解析</a>
+        </p>
+        
+        <p>
+            <a href="../../289/down/index.html">次世代シーケンサのオープンなデータ</a>
+        </p>
+        
+        <p>
+            <a href="../../608/down/index.html">プロモーター関連転写因子の抽出</a>
+        </p>
+        
+        <p>
+            <a href="../../638/down/index.html">セントロメア配列を知りたい</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="../../../about/index.html" >概要</a> <span class="link-separator"> |</span> <a href="../../../faq/index.html" >よくある質問</a> <span class="link-separator"> |</span> <a href="../../../privacy/index.html" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="../../../m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

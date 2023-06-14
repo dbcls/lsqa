@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: Transcriptome analysisとRNASeqの違いについて</title><link>http://qa.lifesciencedb.jp/questions/269/transcriptome-analysis%E3%81%A8rnaseq%E3%81%AE%E9%81%95%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;&lt;a href="http://sra.dbcls.jp/"&gt;SRAs: Survey of Read Archives&lt;/a&gt;を利用していて、思ったことです。&lt;/p&gt;
+&lt;p&gt;世代シーケンサのデータを公共データベース ( SRA [NCBI], ENA [EBI], DRA [DDBJ] ) に登録する際、プロジェクトごとにStudy Typesを書いているそうなのですが、Study Typesとして「Transcriptome Analysis」と「RNASeq」が別々に登録されていました。&lt;/p&gt;
+&lt;p&gt;自分にとって「&lt;a href="http://sra.dbcls.jp/cgi-bin/studylist.cgi?type=Transcriptome+Analysis"&gt;Transcriptome Analysis&lt;/a&gt;」と「&lt;a href="http://sra.dbcls.jp/cgi-bin/studylist.cgi?type=RNASeq"&gt;RNASeq&lt;/a&gt;」は同じような意味なのですが、実際に次世代シーケンサのプロジェクトに携わってる研究者にとっては、違う意味の言葉なのでしょうか？
+もし何かニュアンスの違いなどありましたら、教えていただきたく思います。&lt;/p&gt;
+&lt;p&gt;（それぞれのStudy type のプロジェクトのTITLEを眺めたのですが、あまり違いがないように思いました。）&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/269/transcriptome-analysis%E3%81%A8rnaseq%E3%81%AE%E9%81%95%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 24 Jan 2011 13:16:59 +0900</lastBuildDate><item><title>Comment by yuifu on DDBJ's 回答</title><link>http://qa.lifesciencedb.jp/questions/269/transcriptome-analysis%E3%81%A8rnaseq%E3%81%AE%E9%81%95%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#286</link><description>&lt;p&gt;ありがとうございます。&lt;/p&gt;
+&lt;p&gt;Transcriptome Analysisは、RNAを読むのに加えて、新規な転写産物がどのような配列によって制御されているのか、を調べるのに主眼をおいているのですね。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">yuifu</dc:creator><pubDate>Mon, 24 Jan 2011 13:16:59 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/269/transcriptome-analysis%E3%81%A8rnaseq%E3%81%AE%E9%81%95%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#286</guid></item><item><title>Answer by DDBJ</title><link>http://qa.lifesciencedb.jp/questions/269/transcriptome-analysis%E3%81%A8rnaseq%E3%81%AE%E9%81%95%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/279</link><description>&lt;p&gt;Transcriptome Analysis では RNASeq よりも characterization が意識されています。&lt;br&gt;
+例としては nanoCAGE による解析などが挙げられます。&lt;br&gt;
+下記の一覧をご参考ください。&lt;br&gt;
+なお、全てのデータでこの通りに使い分けられているわけではありませんので、ご承知おきください。&lt;br&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://trace.ddbj.nig.ac.jp/DRASearch/search?query_acc=&amp;amp;query_organism=&amp;amp;query_study_type=Transcriptome+Analysis&amp;amp;query_center_name=&amp;amp;query_platform=&amp;amp;view_count=20&amp;amp;sort_key=Study"&gt;Transcriptome Analysis &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://trace.ddbj.nig.ac.jp/DRASearch/search?query_acc=&amp;amp;query_organism=&amp;amp;query_study_type=RNASeq&amp;amp;query_center_name=&amp;amp;query_platform=&amp;amp;view_count=20&amp;amp;sort_key=Study"&gt;RNASeq&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">DDBJ</dc:creator><pubDate>Fri, 21 Jan 2011 11:59:32 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/269/transcriptome-analysis%E3%81%A8rnaseq%E3%81%AE%E9%81%95%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/279</guid></item><item><title>Comment by yuifu on mn3's 回答</title><link>http://qa.lifesciencedb.jp/questions/269/transcriptome-analysis%E3%81%A8rnaseq%E3%81%AE%E9%81%95%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#272</link><description>&lt;p&gt;素早い回答、ありがとうございます。&lt;/p&gt;
+&lt;p&gt;Transcriptome Analysisでは、characterizationが意識されているということでしょうか。
+浅学のためか、まだよく分かりません。すみません。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">yuifu</dc:creator><pubDate>Wed, 19 Jan 2011 15:21:36 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/269/transcriptome-analysis%E3%81%A8rnaseq%E3%81%AE%E9%81%95%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#272</guid></item><item><title>Answer by mn3</title><link>http://qa.lifesciencedb.jp/questions/269/transcriptome-analysis%E3%81%A8rnaseq%E3%81%AE%E9%81%95%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/270</link><description>&lt;p&gt;ftp://ftp.era.ebi.ac.uk/meta/doc/sra_1_1/SRA.study.pdf や &lt;a href="http://www.ncbi.nlm.nih.gov/viewvc/v1/trunk/sra/doc/SRA_1-2/SRA.study.xsd?view=markup"&gt; [v1] View of /trunk/sra/doc/SRA_1-2/SRA.study.xsd&lt;/a&gt; では、&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;  &amp;lt;xs:enumeration value = "Transcriptome Analysis"&amp;gt;
+    &amp;lt;xs:annotation&amp;gt;
+      &amp;lt;xs:documentation&amp;gt;
+         Sequencing and characterization of transcription elements.
+      &amp;lt;/xs:documentation&amp;gt;
+    &amp;lt;/xs:annotation&amp;gt;  
+  &amp;lt;/xs:enumeration&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;や&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;  &amp;lt;xs:enumeration value = "RNASeq"&amp;gt;
+    &amp;lt;xs:annotation&amp;gt;
+      &amp;lt;xs:documentation&amp;gt;
+        RNA sequencing study.
+      &amp;lt;/xs:documentation&amp;gt;
+    &amp;lt;/xs:annotation&amp;gt;   
+  &amp;lt;/xs:enumeration&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;とありました。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mn3</dc:creator><pubDate>Wed, 19 Jan 2011 02:09:37 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/269/transcriptome-analysis%E3%81%A8rnaseq%E3%81%AE%E9%81%95%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/270</guid></item></channel></rss>

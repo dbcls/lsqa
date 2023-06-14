@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: Local BLASTのデータベース</title><link>http://qa.lifesciencedb.jp/questions/813/local-blast%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9</link><description>&lt;p&gt;お世話になります。
+Local BLASTを導入するために統合TVのLocal BLASTの使い方（&lt;a href="http://togotv.dbcls.jp/20110420.html"&gt;http://togotv.dbcls.jp/20110420.html&lt;/a&gt;）を参考にさせていただいております。
+ご紹介の通りの手順で作業を進めていましたが、データベースを作成できずに困っております。&lt;/p&gt;
+&lt;p&gt;まず、データベースとして、&lt;a href="ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/"&gt;ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/&lt;/a&gt; からnr.gzをダウンロードし、解凍しました。
+解凍したファイル（nr）をデータベースにするために、&lt;code&gt;makeblastdb -in nr -dbtype prot -hash_index&lt;/code&gt;を実行しました。
+すると、以下に記した文が表示されました。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Building a new DB, current time: 11/27/2014 11:30:45
+New DB name:   nr
+New DB title:  nr
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;しばらくすると、以下の文が何度も繰り返し出現し、最後にvolume: 以下の文が表示され、データベースの作成に失敗しました。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Error: (1431.1) FASTA-Reader: Warning: FASTA-Reader: Ignoring FASTA modifier(s) found because the input was not expected to have any.
+
+volume: nr.00
+volume: nr.01
+
+file: nr.00.pin
+file: nr.00.phr
+file: nr.00.psq
+file: nr.00.psi
+file: nr.00.psd
+file: nr.00.phi
+file: nr.00.phd
+file: nr.00.pog
+file: nr.01.pin
+file: nr.01.phr
+file: nr.01.psq
+file: nr.01.psi
+file: nr.01.psd
+file: nr.01.phi
+file: nr.01.phd
+file: nr.01.pog
+file: nr.pal
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;解決策がお分かりになる方がいらっしゃいましたら、ご教授いただければ幸いです。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/813/local-blast%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9" rel="self"></atom:link><language>ja</language><lastBuildDate>Wed, 03 Dec 2014 16:00:14 +0900</lastBuildDate><item><title>Comment by aki on aki's 回答</title><link>http://qa.lifesciencedb.jp/questions/813/local-blast%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9#820</link><description>&lt;p&gt;見逃す確率が上がりますが、&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;-word_size
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;の値を大きくしてみて下さい。デフォルトはBLASTPなら3くらいだったと思います。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">aki</dc:creator><pubDate>Wed, 03 Dec 2014 16:00:14 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/813/local-blast%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9#820</guid></item><item><title>Comment by sulfuri on aki's 回答</title><link>http://qa.lifesciencedb.jp/questions/813/local-blast%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9#819</link><description>&lt;p&gt;aki様&lt;/p&gt;
+&lt;p&gt;ご指摘の通りにコマンドを変更した結果、2倍程早くなりました。&lt;/p&gt;
+&lt;p&gt;前回：blastp -db nr -query test.fasta -out test.out &lt;/p&gt;
+&lt;p&gt;今回：blastp -db nr -query test.fasta -out test.out -evalue 1e-50 -num_threads 2 -max_target_seqs 5 -outfmt 6 &lt;/p&gt;
+&lt;p&gt;aki様、大変お世話になりました。誠にありがとうございました。
+もし、この他にも高速化する方法をご存知の方がいらっしゃいましたらよろしくお願いいたします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">sulfuri</dc:creator><pubDate>Tue, 02 Dec 2014 12:12:59 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/813/local-blast%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9#819</guid></item><item><title>Comment by aki on aki's 回答</title><link>http://qa.lifesciencedb.jp/questions/813/local-blast%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9#818</link><description>&lt;pre&gt;&lt;code&gt;-evalue
+-max_target_seqs
+-num_threads
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;の値を適当に指定して下さい。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">aki</dc:creator><pubDate>Mon, 01 Dec 2014 21:21:23 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/813/local-blast%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9#818</guid></item><item><title>Comment by sulfuri on aki's 回答</title><link>http://qa.lifesciencedb.jp/questions/813/local-blast%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9#817</link><description>&lt;p&gt;aki様&lt;/p&gt;
+&lt;p&gt;ご指摘の通りでした。
+無事blastできるようになりました。誠にありがとうございます。
+ところで、結果が出るまでに7分程度は必要のようです。&lt;/p&gt;
+&lt;p&gt;高速化するための良い案がありましたら、お教えいただければ幸いです。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">sulfuri</dc:creator><pubDate>Mon, 01 Dec 2014 20:05:50 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/813/local-blast%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9#817</guid></item><item><title>Comment by aki on aki's 回答</title><link>http://qa.lifesciencedb.jp/questions/813/local-blast%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9#816</link><description>&lt;p&gt;nr.27.tar.gzのダウンロードと展開ができていないのではないですか。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">aki</dc:creator><pubDate>Mon, 01 Dec 2014 18:32:22 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/813/local-blast%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9#816</guid></item><item><title>Comment by sulfuri on aki's 回答</title><link>http://qa.lifesciencedb.jp/questions/813/local-blast%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9#815</link><description>&lt;p&gt;aki様
+ご回答ありがとうございます。ご指摘の通りフォーマット済みのものを利用しようと思います。
+しかし、別の問題で困っております。
+複数のnrデータベースに対してblastを実行したいのですが、結果が出ませんでした。
+複数のnrデータベースに対してblastを実行する方法がお分かりの方がいらっしゃいましたらご教授いただければ幸いです。
+以下に、問題が生じたまでの過程を説明させていただきます。&lt;/p&gt;
+&lt;p&gt;Macを使用しており、対応するコマンドが分からなかったので、コマンドを使用せずにnr.00からnr.26を全てダウンロード、解凍しました。
+展開されたファイルは
+nr.00.phd
+nr.00.phi
+nr.00.phr
+nr.00.pin
+nr.00.pnd
+nr.00.pni
+nr.00.pog
+nr.00.ppd
+nr.00.ppi
+nr.00.psd
+nr.00.psi
+nr.00.psq
+nr.pal
+でした。
+全てのファイルに対してblastを実行したいため、これらのファイルを全て同じフォルダにまとめました。
+最初は以下のコマンドで実行しましたが、
+blastp -db nr -query test.fasta -out test.out
+次のエラーがでました。
+BLAST Database error: Could not find volume or alias file (nr.27) referenced in alias file (/User/blast/db/nr).
+そこで、検索対象のデータベースを１つにして試したところ、成功しました（次のコマンド）。
+blastp -db nr.00 -query test.fasta -out test.out
+しかし、実際にはnr.26までの全てのファイルに対して検索をしたいので、次のコマンドを試しました。
+blastp -db "nr.00 nr.01 nr.02 nr.03 nr.04 nr.05 nr.06 nr.07 nr.08 nr.09 nr.10 nr.11 nr.12 nr.13 nr.14 nr.15 nr.16 nr.17 nr.18 nr.19 nr.20 nr.21 nr.22 nr.23 nr.24 nr.25 nr.26" -query test.fasta -out test.out
+すると、30分たっても結果は出ませんでした。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">sulfuri</dc:creator><pubDate>Mon, 01 Dec 2014 18:04:00 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/813/local-blast%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9#815</guid></item><item><title>Answer by aki</title><link>http://qa.lifesciencedb.jp/questions/813/local-blast%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9/814</link><description>&lt;p&gt;エラーの原因はわかりませんが、&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ftp://ftp.ncbi.nih.gov/blast/db/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;にそのまま利用可能なnrがあるので、それをダウンロード、展開して使用されてみてはどうですか。&lt;/p&gt;
+&lt;p&gt;wget・md5sum・tar・gzipがあり、httpプロキシとか通していないなら以下のコマンドでダウンロードと展開ができるはずです。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#download
+wget -c ftp://ftp.ncbi.nih.gov/blast/db/nr.??.tar.gz
+wget -c ftp://ftp.ncbi.nih.gov/blast/db/nr.??.tar.gz.md5
+#check files
+for f in nr.??.tar.gz.md5; do md5sum -c $f; done
+#extract files
+for f in nr.??.tar.gz; do tar -xzf $f; done
+#delete files
+rm nr.??.tar.gz nr.??.tar.gz.md5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;では。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">aki</dc:creator><pubDate>Mon, 01 Dec 2014 11:17:00 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/813/local-blast%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9/814</guid></item></channel></rss>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: Celera WGA Assembler(CABOG)のインストールと使い方</title><link>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9</link><description>&lt;p&gt;ある生物のゲノムをde novo assemblのために454で委託して読みました。&lt;/p&gt;
+&lt;p&gt;CABOGでアセンブルしようとインストールしようとしたのですが、最初にpythonは見つかるがpython.hがないといわれました。
+現在macOS X10.6.7でpython2.7が入っています。&lt;/p&gt;
+&lt;p&gt;Finkを用いてpython2.7-devをインストールしようと思うのですが、Finkをインストールし、
+[sudo apt-get install python2.7-dev]とterminalで打っても[E: Couldn't find package python2.7-dev]
+と出てしまい、完了しません。調べてもわからないので、よろしくお願いします。&lt;/p&gt;
+&lt;p&gt;また使い方に関しても少しREADMEを読みましたが、わからなくなるのは目に見えているので、簡単に教えて頂けると助かります。
+委託業者からは.qual .sff .sff.gz .fastが送られてきています。&lt;/p&gt;
+&lt;p&gt;質問が多くて申し訳ありませんが、よろしくお願いします。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 18 Jul 2011 16:00:05 +0900</lastBuildDate><item><title>Comment by mya_ on mya_'s 回答</title><link>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9#516</link><description>&lt;p&gt;実行できて何らかの結果が出ているのであれば、とりあえず良いと思います。
+メモリとスレッド周りは、実行しているマシンのスペックに合わせて増減可能、
+sgeが含まれている関連はクラスタマシンを使わないのであれば設定不要です。
+RunCA Examples - 454 + Sanger Hybrid Microbeと454 + Sanger Metagenomicのサンプルから、４５４関連の設定を引き出し、一度に変えるのではなく少しずつ設定変更して結果が返ってくるかトライアンドエラー、が結局成果出す道だと思います。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mya_</dc:creator><pubDate>Mon, 18 Jul 2011 16:00:05 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9#516</guid></item><item><title>Comment by pan on mya_'s 回答</title><link>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9#514</link><description>&lt;p&gt;遅くなりましたが、今日実行する事ができました。ありがとうございます。meryl -V　と入力すると
+version: CA $Id: AS_MER_meryl.cc,v 1.14 2009/06/10 18:05:13 brianwalenz Exp $ような
+表示ですが平気ですか。
+最後に一つだけお聞かせください。454だけでアセンブルする際皆さんはどのようなオプションを
+設定されてますか？454 only のRunCA Examplesが白紙になっていて参考にするものがないので
+よろしくお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pan</dc:creator><pubDate>Tue, 12 Jul 2011 18:35:50 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9#514</guid></item><item><title>Answer by mya_</title><link>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9/504</link><description>&lt;p&gt;runCAパイプラインに必要なプログラムは原則として(このケースの場合) /Users/pan/Desktop/wgs-6.1/Darwin-amd64/bin/に入ります。この中に存在するmerylプログラムで、&lt;br&gt;
+&lt;code&gt;meryl -V　と入力すると&lt;br&gt;
+meryl the Mighty Mer Counter version (no version)&lt;/code&gt;&lt;br&gt;
+という応答が返ってくればk-mer対応版です。&lt;/p&gt;
+&lt;p&gt;別の反応であるか、そもそもそういうプログラムが見当たらないのであれば、コンパイルが失敗しています。　&lt;a href="http://www.q-eng.imat.eng.osaka-cu.ac.jp/~ippei/unix-tips/command.html#l26"&gt;make cleanしてコンパイルをやりなおす&lt;/a&gt;か、違うディレクトリにソース展開して&lt;a href="http://sourceforge.net/apps/mediawiki/wgs-assembler/index.php?title=Version_6.1_Release_Notes"&gt;最初から構築しなおす&lt;/a&gt;のが早いかと思います。
+PATHの設定はしなくてもrunCAは動くはずですが、&lt;a href="http://d.hatena.ne.jp/koseki2/20081201/macportPath"&gt;PATH設定しておけばなにかと便利&lt;/a&gt;でしょう。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mya_</dc:creator><pubDate>Sun, 26 Jun 2011 14:21:19 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9/504</guid></item><item><title>Comment by pan on pan's 回答</title><link>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9#503</link><description>&lt;p&gt;強引にmerCompression=0をオプションに加えましたが&lt;/p&gt;
+&lt;p&gt;WARNING!  auto picking a mer threshold not supported without installing kmer&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;      (http://sourceforge.net/projects/kmer/).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Using historical defaults.の後に&lt;/p&gt;
+&lt;p&gt;ERROR: Failed with signal HUP (1)&lt;/p&gt;
+&lt;p&gt;runCA failed.&lt;/p&gt;
+&lt;p&gt;Stack trace:&lt;/p&gt;
+&lt;p&gt;at /Users/pan/Desktop/wgs-6.1/Darwin-amd64/bin/runCA line 1118 main::caFailure('overlap store building failed', '/Users/pan/Desktop/celera/0-o......&lt;/p&gt;
+&lt;p&gt;Last few lines of the relevant log file (/Users/pan/Desktop/celera/0-overlaptrim-overlap/handa.merStore.err):&lt;/p&gt;
+&lt;p&gt;No input files?&lt;/p&gt;
+&lt;p&gt;Failure message:&lt;/p&gt;
+&lt;p&gt;overlap store building failed&lt;/p&gt;
+&lt;p&gt;のようなエラーです。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pan</dc:creator><pubDate>Wed, 22 Jun 2011 19:37:19 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9#503</guid></item><item><title>Comment by pan on pan's 回答</title><link>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9#501</link><description>&lt;p&gt;いつも返信ありがとうございます。'overmerry' program見つかって、実行したところ早速、以下のエラーがおきました。&lt;/p&gt;
+&lt;p&gt;ERROR!  merCompression not supported without installing kmer&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    (http://sourceforge.net/projects/kmer/).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you have installed kmer, then your build is broken, as I&lt;/p&gt;
+&lt;p&gt;did not find the correct 'meryl' (meryl -V should have said Mighty).&lt;/p&gt;
+&lt;p&gt;Died at /Users/pan/Desktop/wgs-6.1/Darwin-amd64/bin/runCA line 2617.&lt;/p&gt;
+&lt;p&gt;もちろんkmerはインストール済みです。いくつかのkmer（もともと入っていたやつ、ダウンロードしてきたやつ）のフォルダで試しましたが、すべて駄目でした。所内でアセンブルやっている方を聞いた事ありませんが、探してみます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pan</dc:creator><pubDate>Wed, 22 Jun 2011 14:10:25 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9#501</guid></item><item><title>Comment by mya_ on pan's 回答</title><link>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9#500</link><description>&lt;p&gt;CA6.1(version6)において、runCA-OBT.pl=runCAのaliasで、OS-X版の場合wgs-6.1/Darwin-i386/bin/の下にあります。overmerryもwgs-6.1/Darwin-i386/bin/の下です。おそらくファイルが正しく展開されていません。&lt;/p&gt;
+&lt;p&gt;OS-Xにおけるgmakeについては、「gmake make OS-X」　でgoogleしてください。&lt;/p&gt;
+&lt;p&gt;このアセンブラはパイプライン内でエラーが発生した場合、&lt;a href="http://sourceforge.net/apps/mediawiki/wgs-assembler/index.php?title=Unitig_Consensus_Failures_in_CA_6"&gt;自力でデータを操作して復旧処理&lt;/a&gt;を行う必要があります。wgsの内部データは当然扱っている配列の情報を含みますので、もし情報解析担当者もしくは共同研究者の方がいらっしゃるのでしたら一度ご相談される事をお勧めします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mya_</dc:creator><pubDate>Wed, 22 Jun 2011 12:32:25 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9#500</guid></item><item><title>Answer by pan</title><link>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9/499</link><description>&lt;p&gt;sffToCAでsample.frgと.log、.statsを作成しました。以下の様に実行しました。&lt;/p&gt;
+&lt;p&gt;sffToCA \&lt;/p&gt;
+&lt;p&gt;-libraryname sample \&lt;/p&gt;
+&lt;p&gt;-insertsize 3200 900 \&lt;/p&gt;
+&lt;p&gt;-linker flx \&lt;/p&gt;
+&lt;p&gt;-trim chop \&lt;/p&gt;
+&lt;p&gt;-output FJRUAFO.frg \&lt;/p&gt;
+&lt;p&gt;sample.sff.bz \&lt;/p&gt;
+&lt;p&gt;次にRunning WGS Assemblerしたいのですが、
+自分ではきちんとインストールしたつもりでしたが&lt;/p&gt;
+&lt;p&gt;'overmerry' programがみつからないとエラーがでました。
+どこがおかしいのでしょうか？？&lt;/p&gt;
+&lt;p&gt;また何か間違いなどありましたら指摘してください。
+見よう見まねでやってます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pan</dc:creator><pubDate>Tue, 21 Jun 2011 19:31:48 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9/499</guid></item><item><title>Answer by mya_</title><link>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9/494</link><description>&lt;p&gt;CABOG (Celera Assembler with the Best Overlap Graph)というのは独立したプログラムではなく、WGS assemblerに組み込まれている、４５４などのデータを混ぜてアセンブルするパイプラインの名称です。darwin版でうまくいっているのでしたら、wgsそのものをソースからコンパイルしなおす必要はありません。&lt;/p&gt;
+&lt;p&gt;http://bioinformatics.oxfordjournals.org/content/24/24/2818.full&lt;/p&gt;
+&lt;p&gt;４５４を混ぜたexampleは、前述のwgs-assemblerのホームページ内左下のsearchから探せますのでやってみて下さい。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mya_</dc:creator><pubDate>Sun, 19 Jun 2011 19:42:16 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9/494</guid></item><item><title>Comment by pan on pan's 質問</title><link>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9#493</link><description>&lt;p&gt;お返事ありがとうございました。うまくいきました。本当にありがとうございます。&lt;/p&gt;
+&lt;p&gt;まだCABOGインストールできてません。
+% bzip2 -dc wgs-6.1.tar.bz2 | tar -xf -&lt;/p&gt;
+&lt;p&gt;% cd wgs-6.1&lt;/p&gt;
+&lt;p&gt;% cd kmer&lt;/p&gt;
+&lt;p&gt;% sh configure.sh&lt;/p&gt;
+&lt;p&gt;とやると今までと違うエラーが出てしまいます&lt;/p&gt;
+&lt;p&gt;configure.sh: line 507: gmake: command not found&lt;/p&gt;
+&lt;p&gt;Configured.&lt;/p&gt;
+&lt;p&gt;ご存知でしたら、アドバイスお願いします。&lt;/p&gt;
+&lt;p&gt;GNU Make 3.81が入っています。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pan</dc:creator><pubDate>Sun, 19 Jun 2011 18:17:58 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9#493</guid></item><item><title>Comment by mya_ on pan's 質問</title><link>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9#490</link><description>&lt;p&gt;コンパイル済バーションが用意されていて、&lt;a href="http://e-words.jp/w/Darwin.html"&gt;Darwin&lt;/a&gt;≒MacOS-X　なので、まずdarwin版で動くか試されてみてはどうでしょうか。&lt;/p&gt;
+&lt;p&gt;http://sourceforge.net/apps/mediawiki/wgs-assembler/index.php?title=Main_Page&lt;/p&gt;
+&lt;p&gt;あとこのソフトはメモリ、ディスク領域、計算時間を食いますので稼働テスト用の小さめのデータセットを作っておくと良いかと思います。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mya_</dc:creator><pubDate>Sun, 19 Jun 2011 14:40:10 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/483/celera-wga-assembler-cabog-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9#490</guid></item></channel></rss>

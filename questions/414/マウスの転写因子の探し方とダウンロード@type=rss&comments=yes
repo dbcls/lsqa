@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: マウスの転写因子の探し方とダウンロード</title><link>http://qa.lifesciencedb.jp/questions/414/%E3%83%9E%E3%82%A6%E3%82%B9%E3%81%AE%E8%BB%A2%E5%86%99%E5%9B%A0%E5%AD%90%E3%81%AE%E6%8E%A2%E3%81%97%E6%96%B9%E3%81%A8%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89</link><description>&lt;p&gt;マウスの全遺伝子について、転写因子のみを探し出し、
+ダウンロードする方法を教えてください。&lt;/p&gt;
+&lt;p&gt;以前、PantherやEmsemblのbiomartを使って試してみましたが、
+思ったような結果が得られませんでした。
+転写因子名、モチーフ名など簡単な情報がわかれば大丈夫です。&lt;/p&gt;
+&lt;p&gt;よろしくお願い致します。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/414/%E3%83%9E%E3%82%A6%E3%82%B9%E3%81%AE%E8%BB%A2%E5%86%99%E5%9B%A0%E5%AD%90%E3%81%AE%E6%8E%A2%E3%81%97%E6%96%B9%E3%81%A8%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89" rel="self"></atom:link><language>ja</language><lastBuildDate>Fri, 15 Apr 2011 15:42:28 +0900</lastBuildDate><item><title>Comment by porcine on Tanakky's 回答</title><link>http://qa.lifesciencedb.jp/questions/414/%E3%83%9E%E3%82%A6%E3%82%B9%E3%81%AE%E8%BB%A2%E5%86%99%E5%9B%A0%E5%AD%90%E3%81%AE%E6%8E%A2%E3%81%97%E6%96%B9%E3%81%A8%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89#416</link><description>&lt;p&gt;教えてくださった通りにやりましたらできました。
+以前から困っていたのでとても助かりました。
+どうもありがとうございます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">porcine</dc:creator><pubDate>Fri, 15 Apr 2011 15:42:28 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/414/%E3%83%9E%E3%82%A6%E3%82%B9%E3%81%AE%E8%BB%A2%E5%86%99%E5%9B%A0%E5%AD%90%E3%81%AE%E6%8E%A2%E3%81%97%E6%96%B9%E3%81%A8%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89#416</guid></item><item><title>Answer by Tanakky</title><link>http://qa.lifesciencedb.jp/questions/414/%E3%83%9E%E3%82%A6%E3%82%B9%E3%81%AE%E8%BB%A2%E5%86%99%E5%9B%A0%E5%AD%90%E3%81%AE%E6%8E%A2%E3%81%97%E6%96%B9%E3%81%A8%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89/415</link><description>&lt;p&gt;&lt;a href="http://www.geneontology.org/"&gt;Gene Ontology Database&lt;/a&gt; を使うのはどうでしょう？
+トップページで"GO term or ID"を選択して、"transcription factor"とキーワードを入力してください。
+エンターを押すと転写因子に関連するGO termが表示され、その内のひとつ（"transcription factor binding"で
+いいと思います)を選びます。左上の方に"** gene products"とあるのでそこをクリックするとこのGO termを
+持つ遺伝子リストが表示されます。マウスデータのみを取り出す場合はspeciesでマウスを選択し、filterを
+かけることで得られます。ただこの方法ではモチーフ名まではわかりません。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tanakky</dc:creator><pubDate>Fri, 15 Apr 2011 14:37:15 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/414/%E3%83%9E%E3%82%A6%E3%82%B9%E3%81%AE%E8%BB%A2%E5%86%99%E5%9B%A0%E5%AD%90%E3%81%AE%E6%8E%A2%E3%81%97%E6%96%B9%E3%81%A8%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89/415</guid></item></channel></rss>

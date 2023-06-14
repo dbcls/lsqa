@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: DAVIDのannotation categories</title><link>http://qa.lifesciencedb.jp/questions/785/david%E3%81%AEannotation-categories</link><description>&lt;p&gt;こんにちは。はじめて質問させていただきます。
+NGSに直接に関してる質問ではありませんが、
+DAVIDを使ってGOtermをみるとき、UP_SEQ_FETUREやSP_PIR_KEYWORDSなどの functional categories があるんですけど、
+それぞれのcategoryが何を意味しているか、googleなどにうってみても分からなくて質問します。
+もしそれについての説明が書いてるウェブページなどを知っているかたはぜひ教えてください。
+どうもありがとうございます。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/785/david%E3%81%AEannotation-categories" rel="self"></atom:link><language>ja</language><lastBuildDate>Fri, 19 Sep 2014 09:55:22 +0900</lastBuildDate><item><title>Comment by christiario on hono's 回答</title><link>http://qa.lifesciencedb.jp/questions/785/david%E3%81%AEannotation-categories#788</link><description>&lt;p&gt;どうもありがとうございます！
+It helps me alot!!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">christiario</dc:creator><pubDate>Fri, 19 Sep 2014 09:55:22 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/785/david%E3%81%AEannotation-categories#788</guid></item><item><title>Answer by hono</title><link>http://qa.lifesciencedb.jp/questions/785/david%E3%81%AEannotation-categories/786</link><description>&lt;pre&gt;&lt;code&gt;UP_SEQ_FEATURE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;は　UniProt SEQuence FEATURE
+&lt;a href="http://www.uniprot.org/help/sequence_annotation"&gt;http://www.uniprot.org/help/sequence_annotation&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SP_PIR_KEYWORDS
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;は　SwissProt Protein Information Resource KEYWORD
+&lt;a href="http://www.uniprot.org/docs/keywlist"&gt;http://www.uniprot.org/docs/keywlist&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;だと思います。&lt;/p&gt;
+&lt;p&gt;元のキーワードに「 _ 」が入っていて、そのままGoogle検索してもうまくいかない場合は、
+「 _ 」を除いたキーワードで検索してみたりするとよいです。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">hono</dc:creator><pubDate>Thu, 18 Sep 2014 17:49:40 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/785/david%E3%81%AEannotation-categories/786</guid></item></channel></rss>

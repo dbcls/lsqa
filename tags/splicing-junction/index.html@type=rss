@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With splicing-junction</title><link>http://qa.lifesciencedb.jp/tags/splicing-junction/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;splicing-junction&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/splicing-junction/" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 17 Feb 2015 17:41:46 +0900</lastBuildDate><item><title>MISOアノテーションについて</title><link>http://qa.lifesciencedb.jp/questions/831/miso%E3%82%A2%E3%83%8E%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;質問させていただきます。&lt;/p&gt;
+&lt;p&gt;現在、選択的スプラシング解析ツール"MISO"を用いた解析を行なっております。&lt;br&gt;
+これについて数点問題があり、どなたかご教示いただければと思った次第です。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;1) &lt;br&gt;
+現在使用しているアノテーションおよびインデックスは、UCSC genome browserよりDLしたgtfファイルを、rnaseqlibに含まれる"gff make annotation.py"というスクリプトを用いて手前でビルドしています。&lt;br&gt;
+この中身を確認した所、過去にASが報告されているisoformに関するエキソンが入っておりませんでした。&lt;br&gt;
+UCSC genome browserよりDLしたgtfには、これらのisoformが含まれていることを確認しています。&lt;br&gt;
+この様な事例をご存知の方がいましたら、原因・対策について教えていただければ幸いです。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;2)&lt;br&gt;
+上記に関する可能性の一つとして、一部のisoformのevent typeによるものが考えられます。&lt;br&gt;
+報告分子のevent typeがALEである可能性があるのですが、gff make annotation.pyによりビルドされたアノテーションにはALE
+のものは含まれません。&lt;br&gt;
+そこで、(MISO Exon-centric annotation ver. 1のように)ALE、AFEを含めたアノテーションをビルドする方法をご存知の方がいましたらご教示いただければ幸いです。&lt;/p&gt;
+&lt;p&gt;以上ご存知の方がいましたら、どうぞよろしくお願い致します。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kent_allow</dc:creator><pubDate>Tue, 17 Feb 2015 17:41:46 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/831/miso%E3%82%A2%E3%83%8E%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>miso</category><category>as</category><category>splicing-junction</category></item><item><title>リード長の長いRNA-Seqのタグカウント</title><link>http://qa.lifesciencedb.jp/questions/581/%E3%83%AA%E3%83%BC%E3%83%89%E9%95%B7%E3%81%AE%E9%95%B7%E3%81%84rna-seq%E3%81%AE%E3%82%BF%E3%82%B0%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88</link><description>&lt;p&gt;もしかしたら、常識かもしれないので、
+情報お持ちのかたがおられたら、お願いします。&lt;/p&gt;
+&lt;p&gt;topHatやmapSpliceなど、splicingを考慮したマッパーの結果から、
+遺伝子レベルのタグカウントを計算するうまいやり方など、
+情報お持ちのかたがおられましたら、
+お知らせいただけますと助かります。&lt;/p&gt;
+&lt;h2&gt;以下背景&lt;/h2&gt;
+&lt;p&gt;topHat-cufflinks-cuffdiffや、それに類似のフローが
+デファクトスタンダード的解析であると知りつつ、
+リード長の長いRNA-SeqにedgeR等をかけるやりかたを考えています。&lt;/p&gt;
+&lt;p&gt;edgeRなどのDEG検出用のRパッケージ等は、
+fpkm/rpkmは使わないように推奨しているかと思います。&lt;/p&gt;
+&lt;p&gt;EdgeRのedgeRUsersGuide.pdfより引用
+http://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
+"There are good reasons
+why the NB model is appropriate for the raw count data, but transforming the data using
+RPKM (or FPKM or similar) renders our distributional assumptions invalid and we cannot
+guarantee that our methods will be reliable for such transformed data."&lt;/p&gt;
+&lt;p&gt;35塩基や、50塩基程度であれば、
+BWAやBowtieなどで、splicingを考慮せずに、
+マップしたものを、
+DEGseqパッケージ中のgetGeneExpや、
+BEDtoolsのcoverageBEDなどで、タグカウントすればよかったのですが、
+最近リード長が伸び、150塩基のRNA-Seqなども
+よく見かけるようになったかと思います。
+リード長が伸びるとexon長を超えてしまう場合も
+多々あるので、junctionをまたぐタグの数を無視するには、
+支障が出てきているように思います。&lt;/p&gt;
+&lt;p&gt;topHatが出力するaccepted_hits.bamに対して、&lt;/p&gt;
+&lt;h3&gt;選択肢1&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Step1 BEDtoolsのbamToBedに"-bed12"オプション付でかけBAMをBEDに変換&lt;/li&gt;
+&lt;li&gt;Step2 BEDを入力とするDEGseqのgetGeneExpでタグカウント&lt;/li&gt;
+&lt;li&gt;アノテーション情報は、refFlat.txt&lt;/li&gt;
+&lt;li&gt;=&amp;gt; イントロン領域のタグは計上されない。&lt;/li&gt;
+&lt;li&gt;=&amp;gt; splicing-junctionをまたぐタグがタグカウントに計上されないため、難あり。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;選択肢2&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Step1 coverageBEDに対して、"-abam"でBAM入力で"-splice"オプションを付けて実行。&lt;/li&gt;
+&lt;li&gt;アノテーション情報はrefFlat.bed&lt;/li&gt;
+&lt;li&gt;=&amp;gt; splicing-junctionをまたぐタグはタグカウントに計上されるので良し。&lt;/li&gt;
+&lt;li&gt;=&amp;gt; イントロン領域のタグ(第一イントロンの制御ノンコーディングRNAなど)もカウントされるので難あり。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一応、BioStarやSeqAnswersで上記難点の解決策も探しては見たのですが、
+自分では見つけられませんでした。&lt;/p&gt;
+&lt;p&gt;coverageBEDで、イントロンも含めてカウントした後に、
+全イントロンのタグ数を引くとか、&lt;/p&gt;
+&lt;p&gt;小賢しい手も考えられますが、
+境界のリードなどの扱いで、厳密では無くなる点に難があります。&lt;/p&gt;
+&lt;p&gt;もし、うまい手やら、既存のスクリプトでこんなものがある等、
+関係する情報お知らせいただけますと幸いです。
+直接の解答でなくとも、ご助言ありましたら、お願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Tue, 03 Apr 2012 16:59:13 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/581/%E3%83%AA%E3%83%BC%E3%83%89%E9%95%B7%E3%81%AE%E9%95%B7%E3%81%84rna-seq%E3%81%AE%E3%82%BF%E3%82%B0%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88</guid><category>tophat</category><category>ngs</category><category>rna-seq</category><category>long</category><category>splicing-junction</category></item></channel></rss>

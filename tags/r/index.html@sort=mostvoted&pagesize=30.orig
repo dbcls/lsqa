@@ -1,0 +1,576 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Questions Tagged With r - #LSQA</title>
+        <meta name="description" content="質問と回答と私">
+        <meta name="keywords" content="OSQA,CNPROG,forum,community,lifesciencedb.jp,DDBJ,PDBj,DBCLS,Cytoscape,NGS,ngs-field">
+        
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/tags/r/?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon.ico" />
+        <link href="/m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='/m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >ログイン</a>  <a href="/about/" >概要</a>  <a href="/faq/" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >質問</a><a id="nav_tags" href="/tags/" >タグ</a><a id="nav_users" href="/users/" >ユーザー</a><a id="nav_badges" href="/badges/" >バッジ</a><a id="nav_unanswered" href="/questions/unanswered/" >未回答</a>
+        <a id="nav_ask" href="/questions/ask/" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+
+<div class="tabBar">
+    
+
+<div class="headQuestions">
+    
+        
+            
+                
+                    Questions Tagged With r
+                
+            
+        
+    
+</div>
+    <a class="feed-icon" style="background-image:url('/m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');" href="/tags/r/?type=rss" title="subscribe to question RSS feed"></a>
+    
+<div class="tabsA"><a href="/tags/r/?sort=有効" title="最近更新された質問">有効</a><a href="/tags/r/?sort=最新" title="最近尋ねられた質問">最新</a><a href="/tags/r/?sort=ホット" title="最近２４時間でもっとも活発な質問">ホット</a><a href="/tags/r/?sort=mostvoted" class="on" title="もっとも投票された質問">注目の質問</a></div>
+</div>
+<div id="listA">
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">2</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">9.7k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="マイクロアレイのデータをRを用いて散布図にしました。
+行いたいことは2つあります。
+①点を選択すると、その点の情報が出るようにしたい（遺伝子名など）
+②その選択した点にラベルをつけたい
+上記のことはGeneSpringなど有料ソフトを使えばできると聞きましたが、
+Rを使わなければならない状況にあります。
+また、全ての点にラベルをつける方法はあることは把握しておりますが、
+選択した点のみにしたいのです。
+どうぞ宜しくお願い申し上げます。" href="/questions/293/r%E3%81%A7%E4%BD%9C%E8%A3%BD%E3%81%97%E3%81%9F%E6%95%A3%E5%B8%83%E5%9B%B3%E3%81%A7%E7%8F%BE%E5%9C%A8%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E7%82%B9%E3%81%A0%E3%81%91%E3%81%AB%E3%83%A9%E3%83%99%E3%83%AB%E3%82%92%E3%81%A4%E3%81%91%E3%81%9F%E3%81%84">Rで作製した散布図で現在選択している点だけにラベルをつけたい</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-01-27 14:08:15.502301">Jan 27 '11 at 14:08</span>
+            <a href="/users/69/beans/">Beans</a><span class="score" title="31 信用度">31</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/api/" title="タグ付けされた質問をみる 'api' タグを利用している" rel="tag">api</a>
+            <a href="/tags/r/" title="タグ付けされた質問をみる 'r' タグを利用している" rel="tag">r</a>
+            <a href="/tags/%E5%8F%AF%E8%A6%96%E5%8C%96/" title="タグ付けされた質問をみる '可視化' タグを利用している" rel="tag">可視化</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">4.2k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="Rで作製した散布図に、サンプル間で２倍の発現量の差を示す
+ラインを引きたいと思いますが、どうしても方法がわかりません。
+（論文などで散布図上に×2.0と書いてあるライン）
+どうぞ宜しくお願い致します。" href="/questions/303/r%E3%81%A7%E4%BD%9C%E8%A3%BD%E3%81%97%E3%81%9F%E6%95%A3%E5%B8%83%E5%9B%B3%E3%81%AB2%E5%80%8D%E3%81%AE%E7%99%BA%E7%8F%BE%E9%87%8F%E3%81%AE%E5%B7%AE%E3%82%92%E7%A4%BA%E3%81%99%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%92%E5%BC%95%E3%81%8D%E3%81%9F%E3%81%84">Rで作製した散布図に2倍の発現量の差を示すラインを引きたい</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-02-17 02:08:31.220355">Feb 17 '11 at 02:08</span>
+            <a href="/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/r/" title="タグ付けされた質問をみる 'r' タグを利用している" rel="tag">r</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">16k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="パソコンにRをインストールしました。
+バイオインフォマティクスに役に立つパッケージを追加(インストール)
+しようと思うのですが、どのパッケージをインストールしたら
+よいのかわかりません。
+どこかWeb siteなどに、バイオインフォマティクスをするのなら
+これはインストールしておくとよい、というようなパッケージの
+リストはないでしょうか。
+どうぞよろしくお願い致します。" href="/questions/451/%E3%83%90%E3%82%A4%E3%82%AA%E3%82%A4%E3%83%B3%E3%83%95%E3%82%A9%E3%83%9E%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%81%AB%E6%9C%89%E7%94%A8%E3%81%AAr%E3%81%AE%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E3%83%AA%E3%82%B9%E3%83%88">バイオインフォマティクスに有用なRのパッケージのリスト</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2011-05-27 17:36:39.520730">May 27 '11 at 17:36</span>
+            <a href="/users/41/redgrapefruit/">redgrapefruit</a><span class="score" title="60 信用度">60</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/r/" title="タグ付けされた質問をみる 'r' タグを利用している" rel="tag">r</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">1</div>
+            <div>投票</div>
+        </div >
+        <div title="this question has an accepted answer" class="status answered-accepted answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">3.8k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="あるGEO SeriesがSuperSeries（いくつかのSeriesがまとまったSeries）である場合には，SOFTファイルのSeries_summaryにSuperSeriesであることが記述されます．
+R/BioConductorにはGEOデータを扱うGEOqueryライブラリがあり，getGEO(gse_id)とすると，そのIDのSOFTファイルを読み込みます．
+library(GEOquery)
+gse &amp;lt;- getGEO(&quot;GSE20861&quot;)
+
+このgseの中にSeries_summaryが入っていると思うのですが，どのように探せば良いのでしょうか？
+（GSE20861" href="/questions/560/%E3%81%82%E3%82%8Bgeo-series%E3%81%8Csuperseries%E3%81%8B%E5%90%A6%E3%81%8B%E3%82%92geoquery%E3%81%A7%E5%88%A4%E5%88%A5%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95">あるGEO SeriesがSuperSeriesか否かをGEOqueryで判別する方法</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2012-01-17 21:31:51.177955">Jan 17 '12 at 21:31</span>
+            <a href="/users/106/dancing_infobio/">dancing_infobio</a><span class="score" title="23 信用度">23</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/bioconductor/" title="タグ付けされた質問をみる 'bioconductor' タグを利用している" rel="tag">bioconductor</a>
+            <a href="/tags/r/" title="タグ付けされた質問をみる 'r' タグを利用している" rel="tag">r</a>
+            <a href="/tags/geo/" title="タグ付けされた質問をみる 'geo' タグを利用している" rel="tag">geo</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">34k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="Rでfastaファイルを読み込む方法としてGeneRパッケージのreadFasta関数がありますが、
+BiostringsパッケージのreadFASTA関数、seqinrパッケージのread.fasta関数などもあり、
+どれを使えばよいのかわかりません。他にも読み込む方法があるかと思いますが、
+Rでfastaファイルを読み込む際におすすめのパッケージ・関数はありますでしょうか？
+追記
+http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html#read_fasta
+Biostringsパッケージにはread.DNAStringSet関数というものもあり、メ" href="/questions/512/r%E3%81%A7fasta%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80%E9%9A%9B%E3%81%AB%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%81%AE%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B">Rでfastaファイルを読み込む際におすすめのパッケージはありますか？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2014-05-04 21:38:14.783997">May 04 '14 at 21:38</span>
+            <a href="/users/72/%E3%81%8B%E3%81%A9%E3%81%9F/">かどた</a><span class="score" title="186 信用度">186</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/fasta/" title="タグ付けされた質問をみる 'fasta' タグを利用している" rel="tag">fasta</a>
+            <a href="/tags/r/" title="タグ付けされた質問をみる 'r' タグを利用している" rel="tag">r</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  unanswered">
+            <div class="item-count">0</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">7.6k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="The R journal や R News は雑誌スタイルの PDF で発行されていて価値があるものです。これらをオンラインで全文検索する方法はどこかにあるのでしょうか？
+Google で site;journal.r-project.org にキーワードを加えて検索しましたが、それでPDF内部もちゃんともれなく検索できているのかやや不安でした。" href="/questions/654/the-r-journal-%E3%81%AE%E8%A8%98%E4%BA%8B%E3%82%92%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%97%E3%81%AA%E3%81%84%E3%81%A7%E5%85%A8%E6%96%87%E6%A4%9C%E7%B4%A2%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B">The R journal の記事をダウンロードしないで全文検索する方法はありますか？</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2012-12-07 00:45:36.350006">Dec 07 '12 at 00:45</span>
+            <a href="/users/2/mn3/">mn3 ♦♦</a><span class="score" title="515 信用度">515</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/r/" title="タグ付けされた質問をみる 'r' タグを利用している" rel="tag">r</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  answered">
+            <div class="item-count">1</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">5.5k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="植物の研究に携わっております。R-TipsによるGO解析のパッケージがありましたら、お教えいただきたく質問させて頂いております。現在の自分のGO解析の方法は、(1)TAIRの最新のデータベースより、GO番号とそこに帰属（？）されているATH遺伝子を入手して、エクセル表に入れます。(2)自分の研究材料はアラビドプシスではないので、解析したい遺伝子群の予測アミノ酸配列をBLASTPでATH遺伝子に対応をつけます（トップ・ホモロジーの1遺伝子に対応させています。ホモロジーの低いものはスコアーを指標に切っています）。(3)エクセル表中のGO-ATH遺伝子を、自分の遺伝子群（対応がついたATH遺伝子群）" href="/questions/678/r-tips%E3%81%AB%E3%82%88%E3%82%8Bgo%E8%A7%A3%E6%9E%90-%E9%81%BA%E4%BC%9D%E5%AD%90%E6%95%B0%E3%81%AE%E6%95%B0%E3%81%88%E4%B8%8A%E3%81%92">R-TipsによるGO解析（遺伝子数の数え上げ）</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2013-07-31 00:06:03.367826">Jul 31 '13 at 00:06</span>
+            <a href="/users/66/yuifu/">yuifu</a><span class="score" title="51 信用度">51</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/go/" title="タグ付けされた質問をみる 'go' タグを利用している" rel="tag">go</a>
+            <a href="/tags/tair/" title="タグ付けされた質問をみる 'tair' タグを利用している" rel="tag">tair</a>
+            <a href="/tags/r/" title="タグ付けされた質問をみる 'r' タグを利用している" rel="tag">r</a>
+            <a href="/tags/%E6%A4%9C%E5%AE%9A/" title="タグ付けされた質問をみる '検定' タグを利用している" rel="tag">検定</a>
+        </div>
+    </div>
+
+</div>
+
+    
+<div class="short-summary">
+    <div class="counts">
+        <div class="votes">
+            <div class="item-count">0</div>
+            <div>投票</div>
+        </div >
+        <div  class="status  unanswered">
+            <div class="item-count">0</div>
+            <div>回答</div>
+        </div>
+        <div class="views">
+             <div class="item-count"><span class="thousand">6.5k</span></div>
+             <div>閲覧</div>
+        </div>
+    </div>
+
+    <div class="question-summary-wrapper">
+        <h2><a title="「Rで塩基配列解析」をみながら、RNAseq解析をしようとしています。Rは初心者で、試しに適当なリファレンス配列とクエリー配列（共にfasta形式）を用いてmappingを試みています。リストファイルを作成後、以下のコマンドによりQuasRを起動してマッピングを行おうとしましたが、以下のようにbowtieにおいて、”引数の長さが 0 です　sh: line 1:  9966 Segmentation fault: 11”というエラーが出てしまい困っております。このような場合の解決策をご存知の方はいらっしゃいますか？
+
+in_f1 &amp;lt;- &quot;mapping1.txt&quot;
+in_f2 &amp;lt;-" href="/questions/835/rna-seq%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Br%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E6%99%82%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">RNA seqにおけるRを用いたマッピング時のエラーについて</a></h2>
+        <div class="userinfo">
+            <span class="relativetime" title="2015-04-06 17:58:56.571592">Apr 06 '15 at 17:58</span>
+            <a href="/users/162/brown/">brown</a><span class="score" title="1 信用度">1</span>
+
+        </div>
+
+        <div class="tags">
+            <a href="/tags/r/" title="タグ付けされた質問をみる 'r' タグを利用している" rel="tag">r</a>
+            <a href="/tags/rna-seq/" title="タグ付けされた質問をみる 'rna-seq' タグを利用している" rel="tag">rna-seq</a>
+            <a href="/tags/mapping/" title="タグ付けされた質問をみる 'mapping' タグを利用している" rel="tag">mapping</a>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+    <div class="boxC"><div class="questions-count">
+        8<span style="color:black;font-size:14px;margin-left:5px">questions tagged <span class="tag">r</span></span></div><div class="questions-count">
+        7<span style="color:black;font-size:14px;margin-left:5px">回答</span></div><div><p class="nomargin">
+            もっとも<strong>投票された</strong>質問
+        </p></div></div>
+    
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>ただいまベータテスト運用中です。そのために通知無くコンテンツの変更やサービスの停止変更されることがあります。</h2>
+<p>質問するなら<a href="http://qa.lifesciencedb.jp">ライフサイエンスQA</a>。</p>
+<p>このページの<a href="?type=rss">RSSフィード</a></p>
+<p><a href="http://twitter.com/lsqa_all">@lsqa_all</a>・<a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a></p>
+     </div>
+</div>
+
+    
+
+
+
+
+    
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>世界に広がるQAサイト</h2>
+<p><a href="http://biostar.stackexchange.com">バイオインフォマティクスのBioStar</a>・ <a href="http://I.SEQanswers.com">新型シーケンサーのSEQanswers</a>・ <a href="http://blueobelisk.shapado.com">オープンデータのBlueObelisk</a>・<a href="http://stackoverflow.com">プログラミングのstackoverflow</a>・ <a href="http://www.semanticoverflow.com">Semantic Overflow</a>・ <a href="http://stats.stackexchange.com/">Statistical Analysis</a>・ <a href="http://cstheory.stackexchange.com/">Theoretical Computer Science</a>・ <a href="http://chiebukuro.yahoo.co.jp/">Yahoo!知恵袋</a>・ <a href="http://okwave.jp/">OKWave</a> <a href="http://ja.wikipedia.org/wiki/Category:Q%26Aサイト">などなど</a></p>
+     </div>
+</div>
+
+    
+
+
+
+    <div class="boxC">
+        <h3 class="subtitle">タグ</h3>
+        <div class="tags" id="recent-tags">
+            
+                <a rel="tag" title="'rna-seq'タグづけられた質問をみる"  href="/tags/rna-seq/">rna-seq</a>
+                <span class="tag-number">&#215; 13</span>
+                <br />
+            
+                <a rel="tag" title="'r'タグづけられた質問をみる"  href="/tags/r/">r</a>
+                <span class="tag-number">&#215; 8</span>
+                <br />
+            
+                <a rel="tag" title="'geo'タグづけられた質問をみる"  href="/tags/geo/">geo</a>
+                <span class="tag-number">&#215; 6</span>
+                <br />
+            
+                <a rel="tag" title="'fasta'タグづけられた質問をみる"  href="/tags/fasta/">fasta</a>
+                <span class="tag-number">&#215; 4</span>
+                <br />
+            
+                <a rel="tag" title="'api'タグづけられた質問をみる"  href="/tags/api/">api</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'bioconductor'タグづけられた質問をみる"  href="/tags/bioconductor/">bioconductor</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'mapping'タグづけられた質問をみる"  href="/tags/mapping/">mapping</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'可視化'タグづけられた質問をみる"  href="/tags/%E5%8F%AF%E8%A6%96%E5%8C%96/">可視化</a>
+                <span class="tag-number">&#215; 2</span>
+                <br />
+            
+                <a rel="tag" title="'go'タグづけられた質問をみる"  href="/tags/go/">go</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'tair'タグづけられた質問をみる"  href="/tags/tair/">tair</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+                <a rel="tag" title="'検定'タグづけられた質問をみる"  href="/tags/%E6%A4%9C%E5%AE%9A/">検定</a>
+                <span class="tag-number">&#215; 1</span>
+                <br />
+            
+        </div>
+    </div>
+
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+    <div class="pager"></div>
+    <div class="pagesize"><div class="paginator"><span class="text">ページあたりの投稿数</span><span class="page"><a href="/tags/r/?sort=mostvoted&pagesize=15">15</a></span><span class="curr">30</span><span class="page"><a href="/tags/r/?sort=mostvoted&pagesize=50">50</a></span></div></div>
+
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >概要</a> <span class="link-separator"> |</span> <a href="/faq/" >よくある質問</a> <span class="link-separator"> |</span> <a href="/privacy/" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="/m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+        
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

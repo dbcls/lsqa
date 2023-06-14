@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: DNAメチル化の同定方法の違い</title><link>http://qa.lifesciencedb.jp/questions/234/dna%E3%83%A1%E3%83%81%E3%83%AB%E5%8C%96%E3%81%AE%E5%90%8C%E5%AE%9A%E6%96%B9%E6%B3%95%E3%81%AE%E9%81%95%E3%81%84</link><description>&lt;p&gt;最近DNAメチル化に関する論文をよく目にしたり、実際にSRAの登録データを触ったりします。
+そこで少し気になったのですが、ハイスループットなDNAメチル化同定には大まかに3つの方法が
+あると思うのですが、&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;バイサルファイトを使う方法 (例：Bisulfite-Seq)&lt;/li&gt;
+&lt;li&gt;免疫沈降を使う方法(例：MeDIP-Seq)&lt;/li&gt;
+&lt;li&gt;制限酵素を使う方法(例：HELP-Seq)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;これらの方法の違い（長所・短所）はどういったところでしょうか？
+例えばバイサルファイトは非メチル化CpGをUpGに変換するのでBisulfite-Seqは個々のCpGの
+メチル化を同定できるなど(マッピングがちょっと大変そうですが・・・)。
+私はWet実験のラボに属していないため、サンプル調整や費用などの点に特に興味があります。
+ご教授お願いいたします。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/234/dna%E3%83%A1%E3%83%81%E3%83%AB%E5%8C%96%E3%81%AE%E5%90%8C%E5%AE%9A%E6%96%B9%E6%B3%95%E3%81%AE%E9%81%95%E3%81%84" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 27 Dec 2010 12:07:24 +0900</lastBuildDate><item><title>Answer by MasakoSuzuki</title><link>http://qa.lifesciencedb.jp/questions/234/dna%E3%83%A1%E3%83%81%E3%83%AB%E5%8C%96%E3%81%AE%E5%90%8C%E5%AE%9A%E6%96%B9%E6%B3%95%E3%81%AE%E9%81%95%E3%81%84/238</link><description>&lt;p&gt;Odamameさん、詳しい説明ありがとうございます。Odamameさんの回答に少し補足します。&lt;/p&gt;
+&lt;p&gt;HELP-seq(&lt;a href="http://genomebiology.com/2010/11/4/R36"&gt;Genome biology (2010) 4:R36&lt;/a&gt;)　（正確にはHELP-taggingと呼びます）は最小でそれぞれMspI ライブラリー約２０ミリオン（Reference)、HpaIIライブラリー約５ミリオン（test）のリード数で解析が可能です。また、referenceのMspIは純系マウスでは１系統で一つのデータを、ヒトではSNPs情報を無視できる場合は既存のreferenceを使用することが可能です。HiSeq2000ではインデクッスをつけて１レーンあたり４サンプルが可能です。
+詳しいプロトコールなどは&lt;a href="http://wasp.einstein.yu.edu/index.php/Protocol"&gt;こちらのサイト&lt;/a&gt;にありますので、参考にしてください。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">MasakoSuzuki</dc:creator><pubDate>Mon, 27 Dec 2010 12:07:24 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/234/dna%E3%83%A1%E3%83%81%E3%83%AB%E5%8C%96%E3%81%AE%E5%90%8C%E5%AE%9A%E6%96%B9%E6%B3%95%E3%81%AE%E9%81%95%E3%81%84/238</guid></item><item><title>Answer by odamame</title><link>http://qa.lifesciencedb.jp/questions/234/dna%E3%83%A1%E3%83%81%E3%83%AB%E5%8C%96%E3%81%AE%E5%90%8C%E5%AE%9A%E6%96%B9%E6%B3%95%E3%81%AE%E9%81%95%E3%81%84/235</link><description>&lt;p&gt;費用は"Bisul-seq &amp;gt; MeDIP-seq &amp;gt; HELP-seq"で、ほぼ、シークエンス解析＝リード数の必要量に依存すると考えます。
+HELP-seq(&lt;a href="http://genomebiology.com/2010/11/4/R36"&gt;Genome biology (2010) 4:R36&lt;/a&gt;)はシークエンスがうまくいけばGAIIxで1セルで6サンプル（ヒト、マウス：約150万箇所/3-4Gbpゲノム）の比較が可能です。
+直接解析していないので実践的な数値はわかりませんが、Bisul-seqなら単純計算で、
+ {3.3Gbp x 2（両strand）x [希望するリードdepth] } bp （ヒト）が必要になりますので、
+GAIIxなら数セルｘ希望リード数が必要かと思います（間違っていたら訂正してください）。
+サンプル調製法は、入り口が多少違いますが、大体３つとも操作および費用（シークエンス解析費用に比較しての違い）にそれほど大きな差はないと考えてよいかと思います。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;具体的な方法の違いについては以下に纏めました（すみません、長くなりました…）。
+どの方法が適しているかは、ゲノム配列のどの領域に注目するかに依存して変わってくると思いますので、参考までにゲノム全体を解析したい場合の比較について私見を述べました。各方法の中にもvariationがありますので。&lt;/p&gt;
+&lt;p&gt;１）バイサルファイトを使う方法：最も詳細なDNAメチル化率データが得られる。１サンプルあたりの解析費用は最も高い。
+長所）理論上すべてのC（CpG配列以外も含む）のメチル化状態を１塩基解像度で、表裏のstrandごとのメチル化状態を解析できる。SNPなどの多型を含む領域ではalleleごとのメチル化状態の違いもみることができる。
+短所）1サンプルを解析するのに必要なリード数が多い。データ量が大きい。リピート配列のマッピング等の問題がある。&lt;/p&gt;
+&lt;p&gt;２）免疫沈降を使う方法：全体のメチル化率を大まかにみる。control（Input）はすべてのシトシンがメチル化されている状態と仮定できる。
+長所）理論上すべてのCのメチル化状態を（数百bpの解像度で）解析できる。
+短所）解像度はDNA断片化と抗体による免疫沈降の効率によって数百bp程度。哺乳類ゲノムのCpG配列の偏りのバイアスを受けやすく、シグナル強度は近傍配列のメチルシトシン量の総和として得られる（normalizationが難しい）。mono-/bi-allelicなメチル化は識別できない。シトシンの少ない領域では感度が低い。&lt;/p&gt;
+&lt;p&gt;３）制限酵素を使う方法：抜粋された配列のメチル化率をみる。control(HELPの場合メチル化感受性酵素HpaIIに対するメチル化非感受性MspIによるreference)はすべて対象配列がメチル化されていない状態と仮定できる。
+長所）１サンプルあたりの解析に必要なリード数が少ないため、低費用で解析できる。解析対象配列のメチル化状態を認識配列ごとに独立に解析でき、シトシン頻度のバイアスを受けにくい。
+短所）使用する制限酵素配列の認識配列しか解析できない（最初に制限酵素認識配列により解析可能な配列は決まってくる）→数種の制限酵素を組み合わせてより多くのシトシンを解析する方法も提唱されている（controlはとれない）。mono-/bi-allelicなメチル化は識別できない。制限酵素の切断効率に依存。&lt;/p&gt;
+&lt;p&gt;私は実際に全行程を扱ったのはHELP-seqだけですし、機器の最新のupdateについていけてないので間違っているところがあったら誰か補完してください（笑）。宜しくお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">odamame</dc:creator><pubDate>Sat, 25 Dec 2010 23:37:00 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/234/dna%E3%83%A1%E3%83%81%E3%83%AB%E5%8C%96%E3%81%AE%E5%90%8C%E5%AE%9A%E6%96%B9%E6%B3%95%E3%81%AE%E9%81%95%E3%81%84/235</guid></item></channel></rss>

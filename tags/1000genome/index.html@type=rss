@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With 1000genome</title><link>http://qa.lifesciencedb.jp/tags/1000genome/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;1000genome&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/1000genome/" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 05 Jan 2016 17:17:41 +0900</lastBuildDate><item><title>1000人ゲノムデータのvcfファイルからのDAFの計算方法について</title><link>http://qa.lifesciencedb.jp/questions/847/1000%E4%BA%BA%E3%82%B2%E3%83%8E%E3%83%A0%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AEvcf%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8B%E3%82%89%E3%81%AEdaf%E3%81%AE%E8%A8%88%E7%AE%97%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;suimyeです。こんにちは。&lt;br&gt;
+表題の件について、ご存知の方是非ご教授いただきたくpostいたしました。&lt;br&gt;
+1000人ゲノムデータのVCFファイルを使ってDerived Allele Freq.（以後DAF）を計算したいのですが、調べた結果がどうも納得がいかなくてpostしております。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;DAFは、祖先アレル（以後AA）に対して、祖先アレルと一致しないアレルの頻度を計算するものと考えております。&lt;/p&gt;
+&lt;p&gt;例: &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;祖先アレル: G&lt;/p&gt;
+&lt;p&gt;Aさんのアレル: G&lt;/p&gt;
+&lt;p&gt;Bさんのアレル: A &lt;/p&gt;
+&lt;p&gt;Cさんのアレル: G&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Derived Allele: A&lt;/strong&gt; &lt;br&gt;&lt;/p&gt;
+&lt;p&gt;この場合のDAFは、1/3となる。簡単には以上のようなものと思います。&lt;/p&gt;
+&lt;p&gt;次に、1000人ゲノムのデータのVCFファイルを例にすると、&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1    10177    rs367896724    A    AC    100    PASS    AC=2130;AF=0.425319;AN=5008;N
+ S=2504;DP=103152;EAS_AF=0.3363;AMR_AF=0.3602;AFR_AF=0.4909;EUR_AF=0.4056;SAS_AF=0.49
+ 49;AA=A|||;VT=INDEL&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;このデータの場合は、AAがAなので、referenceと同じ塩基であり、Derived Alleleとして2塩基の"AC"がコールされています。ヒトの各地域集団ごとのアレル頻度や、ヒト全体でのアレル頻度はAFまたは~_AFで与えられていますが、これはAlternateであるACのアレル頻度なのでDAFはこの頻度をそのまま使えばよいと思っていました。ところが、&lt;a href="https://www.biostars.org/p/154668/"&gt;Biostar&lt;/a&gt;などの幾つかのpostを見ると、&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Please read the vcf spec first. AF is the alternate allele frequency. AA is the ancestral allele. If both present, you can use it to get the derived allele frequency by flipping AF.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;のようにアレル頻度をフリップして計算しろと書いてあります。このコメントは、そのvariantに祖先アレルがある場合はアレル頻度（AF）の逆、DAF = 1 - AFすれば良いとのことだと思いますが納得できずにいます。&lt;br&gt;
+私の拙い考えですと先にも書きましたように、AF値0.425319はreferenceに対するAlternateなので、variantとしてみつかった&lt;strong&gt;ACのアレル頻度&lt;/strong&gt;を示しており、&lt;strong&gt;DAF=0.425319&lt;/strong&gt;であるように思います。これは間違いなのでしょうか？くだんのBiostarでは、例にとられたVCFの行には祖先アレルはcallされていませんので、referenceとalternateのどちらが祖先アレルなのか分らず、回答者の「AFをフリップしたらDAF」という回答には釈然としない状況です。もしご存知の方いらっしゃいましたらご教示いただけますと幸甚です。&lt;/p&gt;
+&lt;p&gt;@suimye&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">suimye</dc:creator><pubDate>Tue, 05 Jan 2016 17:17:41 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/847/1000%E4%BA%BA%E3%82%B2%E3%83%8E%E3%83%A0%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AEvcf%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8B%E3%82%89%E3%81%AEdaf%E3%81%AE%E8%A8%88%E7%AE%97%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>1000genome</category><category>population_genetics</category><category>daf</category><category>vcf</category><category>af</category></item></channel></rss>

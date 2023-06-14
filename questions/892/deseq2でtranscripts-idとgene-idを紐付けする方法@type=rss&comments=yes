@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: DESeq2でtranscripts IDとGene IDを紐付けする方法</title><link>http://qa.lifesciencedb.jp/questions/892/deseq2%E3%81%A7transcripts-id%E3%81%A8gene-id%E3%82%92%E7%B4%90%E4%BB%98%E3%81%91%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95</link><description>&lt;p&gt;いつもお世話になっています。&lt;/p&gt;
+&lt;p&gt;おかげさまでhisat2 -&amp;gt; stiringTie -&amp;gt; DESeq2まで進みそれらしいデータも取れました。&lt;/p&gt;
+&lt;p&gt;DESeq2ではTranscript_IDでデータが出てきますが、これをGene_IDに紐付けすることができません。
+Mergeなど試してみましたが、data0(O obs)が返されます。解決策をご教示いただければ幸いです。&lt;/p&gt;
+&lt;p&gt;ーーーーー&lt;/p&gt;
+&lt;p&gt;たとえば部分的なファイルを切り出してmergeしてみるとうまく行きます。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;trancript_ID33 &amp;lt;- c("NR_131893","NR_131893")&lt;/p&gt;
+&lt;p&gt;gene_name33 &amp;lt;- c("Porcn", "Porcn")&lt;/p&gt;
+&lt;p&gt;gene_id33 &amp;lt;- c("MSTRG.71262","MSTRG.71262")&lt;/p&gt;
+&lt;p&gt;test33 &amp;lt;- data.frame(trancript_ID33,gene_name33,gene_id33)
+　
+baseMean &amp;lt;- c(53.33436)&lt;/p&gt;
+&lt;p&gt;log2FoldChange &amp;lt;- c(-0.431138)&lt;/p&gt;
+&lt;p&gt;pValue &amp;lt;- c(0.2859373)&lt;/p&gt;
+&lt;p&gt;gene_id_NR &amp;lt;- c("NR_131893")&lt;/p&gt;
+&lt;p&gt;test66 &amp;lt;- data.frame(baseMean,log2FoldChange,pValue,gene_id_NR)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;テスト材料作ってからmerge&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;merge99 &amp;lt;- merge(test33,test66)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;これはうまくできました。&lt;/p&gt;
+&lt;p&gt;全体でMergeするとうまくいかないところなのですが、なんとかする方法はありますでしょうか？
+バイオではなくてRの問題かもしれませんが、ご教示いただけますと幸いです。
+よろしくお願いします。（そもそも根本的に間違っているかもしれません。）&lt;/p&gt;
+&lt;h1&gt;追記：Rでの作業を書きます。&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;library("DESeq2")&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;公式ページに従って入力。transcritp_count_matrix.csvはstringtieで生成&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;countData &amp;lt;- as.matrix(read.csv("transcript_count_matrix.csv", row.names="transcript_id"))&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;合計6未満(N=3で２郡間の比較）の微弱発現を除去&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;countData1 &amp;lt;- countData[apply(countData,1,sum)&amp;gt;6,]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;PHENO_DATA.txtでサンプル割り当て。#PHENO_DATA.txtの中身&lt;/h1&gt;
+&lt;h1&gt;Genotype&lt;/h1&gt;
+&lt;h1&gt;1  WT&lt;/h1&gt;
+&lt;h1&gt;2  WT&lt;/h1&gt;
+&lt;h1&gt;3  WT&lt;/h1&gt;
+&lt;h1&gt;4  KO&lt;/h1&gt;
+&lt;h1&gt;5  KO&lt;/h1&gt;
+&lt;h1&gt;6  KO&lt;/h1&gt;
+&lt;p&gt;colData &amp;lt;- read.csv("PHENO_DATA.txt", sep="t", row.names=1)&lt;/p&gt;
+&lt;h1&gt;確認1&lt;/h1&gt;
+&lt;p&gt;all(rownames(colData) %in% colnames(countData1))&lt;/p&gt;
+&lt;h1&gt;[1] TRUE がでるのでOK&lt;/h1&gt;
+&lt;p&gt;all(rownames(colData) == colnames(countData1))&lt;/p&gt;
+&lt;h1&gt;[1] TRUE がでるのでOK&lt;/h1&gt;
+&lt;h1&gt;DEseq2に流し込み。&lt;/h1&gt;
+&lt;p&gt;dds &amp;lt;- DESeqDataSetFromMatrix(countData = countData1, 
+        colData = colData, design = ~ Genotype)
+dds &amp;lt;- DESeq(dds)
+res &amp;lt;- results(dds)
+res_gene_id$gene_id &amp;lt;- row.names(res)&lt;/p&gt;
+&lt;h1&gt;Gene IDをつけるためrtracklayarうごかす。&lt;/h1&gt;
+&lt;h1&gt;Stringtieでmergeしたファイルをいれる。&lt;/h1&gt;
+&lt;p&gt;library(rtracklayer)
+gtf &amp;lt;- readGFF("stringtie.merge.gtf")&lt;/p&gt;
+&lt;h1&gt;stringtieの場合はtypeがexonかtranscript のようなので、exonにする。&lt;/h1&gt;
+&lt;p&gt;gtf_gene &amp;lt;- subset(gtf, gtf$type == "exon") &lt;/p&gt;
+&lt;h1&gt;紐付けされたリストを取り出しておく。&lt;/h1&gt;
+&lt;p&gt;gtf_gene_1 &amp;lt;- gtf[,c("gene_id","gene_name","transcript_id")]
+colnames(gtf)&lt;/p&gt;
+&lt;p&gt;**#二つの票を合体することで、transcript_IDとgeneIDを紐付けする。ここがうまくいかない&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;DEseq2_result_ref &amp;lt;- merge(DEseq2_result,gtf_gene_1,all=T, sort=F)**&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;CSVへの書き出しで終わるはず。&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;write.csv(DEseq2_result_ref,"DEseq2_result_ref.csv", quote=FALSE, row.names=FALSE)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;参考ページ(どうもありがとうございます。）&lt;/h1&gt;
+&lt;h1&gt;https://ncrna.jp/blog/item/388-deseq2-ggplot2&lt;/h1&gt;
+&lt;h1&gt;http://ccb.jhu.edu/software/stringtie/index.shtml?t=manual&lt;/h1&gt;
+&lt;p&gt;＃https://qiita.com/rouninnomi/items/5441bef2f50780035127&lt;/p&gt;
+&lt;h1&gt;後半文字の大きさがみづらくなってすみません。修正法がわかりませんでした。&lt;/h1&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/892/deseq2%E3%81%A7transcripts-id%E3%81%A8gene-id%E3%82%92%E7%B4%90%E4%BB%98%E3%81%91%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 30 Jul 2018 09:38:49 +0900</lastBuildDate><item><title>Comment by mikan03 on mikan03's 質問</title><link>http://qa.lifesciencedb.jp/questions/892/deseq2%E3%81%A7transcripts-id%E3%81%A8gene-id%E3%82%92%E7%B4%90%E4%BB%98%E3%81%91%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95#894</link><description>&lt;p&gt;自己レスですみません。DAVIDに投げ込んだら変換できました。最後までRでできるのかと思っていましたが、あまりこだわらなくてよかったかもしれません。どうもありがとうございます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mikan03</dc:creator><pubDate>Mon, 30 Jul 2018 09:38:49 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/892/deseq2%E3%81%A7transcripts-id%E3%81%A8gene-id%E3%82%92%E7%B4%90%E4%BB%98%E3%81%91%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95#894</guid></item></channel></rss>

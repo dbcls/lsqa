@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: ライフサイエンス分野で最も綺麗なソースコード</title><link>http://qa.lifesciencedb.jp/questions/665/%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%82%B9%E5%88%86%E9%87%8E%E3%81%A7%E6%9C%80%E3%82%82%E7%B6%BA%E9%BA%97%E3%81%AA%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89</link><description>&lt;p&gt;こんにちは。&lt;/p&gt;
+&lt;p&gt;ライフサイエンス分野、とくにバイオインフォマティクス分野では、開発されるツールやソフトウェアの多くがオープンソースとなっていますが、「分野で最もソースコードが綺麗なソフトウェア」はなんでしょうか？&lt;/p&gt;
+&lt;p&gt;「綺麗なソースコード」の定義は人によって違うかもしれませんが、可読性、保守・改良のしやすさなどが挙げられるかと思います。&lt;/p&gt;
+&lt;p&gt;使用言語やソフトウェアの対象、ユーザ数や実用性を問わず、これぞというものがあれば教えていただきたいです。できれば、併せてポイントも。どうぞよろしくおねがいします。&lt;/p&gt;
+&lt;p&gt;*追記
+バイオインフォ界隈のコーディング文化みたいなものはあるのか、あればどれくらい共有されているのかなという好奇心からですので他意はございません。ねんのため。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/665/%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%82%B9%E5%88%86%E9%87%8E%E3%81%A7%E6%9C%80%E3%82%82%E7%B6%BA%E9%BA%97%E3%81%AA%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 22 May 2023 18:28:22 -0000</lastBuildDate></channel></rss>

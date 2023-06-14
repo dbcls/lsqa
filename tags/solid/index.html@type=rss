@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With solid</title><link>http://qa.lifesciencedb.jp/tags/solid/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;solid&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/solid/" rel="self"></atom:link><language>ja</language><lastBuildDate>Sat, 30 Apr 2011 02:16:26 +0900</lastBuildDate><item><title>strand specific RNA-Seqデータ解析におけるtophatの利用について</title><link>http://qa.lifesciencedb.jp/questions/432/strand-specific-rna-seq%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Btophat%E3%81%AE%E5%88%A9%E7%94%A8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;strand specific RNA-Seqデータ解析におけるtophatの利用について質問させてください。
+現在SOLiD™ Whole Transcriptome Analysis Kitで得られたstrand specific RNA-Seqのデータを解析しております。&lt;/p&gt;
+&lt;p&gt;tophatとcufflinksを用いて発現量について観ようとしているのですが、
+tophatのlibrary-typeをtophatのマニュアル通りに
+&lt;code&gt;--library-type fr-secondstrand&lt;/code&gt;
+と指定すると
+その後cuffcompareをかけたときのClass Codesが
+cが3765
+eが122
+xが10668
+とあまりにもxが多い結果となっています。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;--library-type fr-firststrand&lt;/code&gt;
+で行ってみると
+cが9739
+eが6870
+xが33
+となります。&lt;/p&gt;
+&lt;p&gt;この結果から本当に &lt;code&gt;--library-type fr-secondstrand&lt;/code&gt; をつかっていいものかと思っています。&lt;/p&gt;
+&lt;p&gt;tophatのマニュアルにをよく読むと
+&lt;code&gt;fr-firststrand&lt;/code&gt;はdUTP, NSR, NNSR
+&lt;code&gt;fr-secondstrand&lt;/code&gt;    はLigation, Standard SOLiD
+に適していると書かれています。&lt;/p&gt;
+&lt;p&gt;私は一般的なRNA ligationを用いたstrand specificなRNA-Seqはfirst strandを
+dUTPやNNSRはsecond strandをシーケンスすると思っていたのでが違うのでしょうか？
+それともtophatのマニュアルがまちがえているのでしょうか。&lt;/p&gt;
+&lt;p&gt;以上長文となってしまいましたが質問させていただければと思います。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">snk_u</dc:creator><pubDate>Sat, 30 Apr 2011 02:16:26 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/432/strand-specific-rna-seq%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Btophat%E3%81%AE%E5%88%A9%E7%94%A8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>solid</category><category>tophat</category><category>ngs</category></item><item><title>SOLID pair end データをbowtieでアライメント</title><link>http://qa.lifesciencedb.jp/questions/323/solid-pair-end-%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92bowtie%E3%81%A7%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88</link><description>&lt;p&gt;頭の中がこんがらがってきました。
+SOLIDのpair end シークエンス（カラーデータ）をbowtieでアラインしたいのですが
+&lt;code&gt;bowtie -p 22 --chunkmbs 1024 -a -C  -S  --ff path/to/index -1 path/to/F5.csfasta -2 path/to/F3.csfasta -Q1 path/to/F5.qual -Q2 path/to/F3.qual /path/to/result.sam&lt;/code&gt;
+といった感じでコマンドをたたいたのですが
+&lt;/p&gt;&lt;pre&gt;Extra parameter(s) specified:　”path/to/F3.qual”, ”path/to/index”, "/path/to/result.sam"
+Note that if &amp;lt;mates&amp;gt; files are specified using -1/-2, a &amp;lt;singles&amp;gt; file cannot
+also be specified.  Please run bowtie separately for mates and singles.
+&lt;/pre&gt;
+どこが悪いのでしょうか？
+F５とF３のpair endなのです。&lt;p&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">fumumumu</dc:creator><pubDate>Tue, 22 Feb 2011 14:11:32 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/323/solid-pair-end-%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92bowtie%E3%81%A7%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88</guid><category>bowtie</category><category>solid</category><category>ngs</category></item></channel></rss>

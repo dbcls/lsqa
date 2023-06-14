@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: アライメントについて</title><link>http://qa.lifesciencedb.jp/questions/745/%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;流域の河川底生動物を採取し，形態同定とDNA解析の2つのアプローチで種数を評価したいと思っています．&lt;/p&gt;
+&lt;p&gt;形態同定で特定された分類群に基づいて，DNAデータベースから各分類群のDNA配列を持ってきました．
+その配列からコンセンサス配列を作り，これをリファレンス配列としました．&lt;/p&gt;
+&lt;p&gt;クエリ配列は河川底生動物のサンプルDNA（16万配列）とし，リファレンス配列に対してglobal alignmentをしました．
+この時のalignmentソフトはBowtieを使いました．&lt;/p&gt;
+&lt;p&gt;しかし，クエリ配列の16万配列の内，リファレンス配列に対してalignmentされた配列が1割にも満たない結果となりました．&lt;/p&gt;
+&lt;p&gt;alignmentされる配列の割合を増やしたいと考えていまして，
+クエリとリファレンス間の塩基一致割合(identity)の条件を下げる方法を取りたいのですが，global alignmentができて，かつidentityの条件を変更できるalignmentソフトをご教授頂いてよろしいでしょうか&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/745/%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Wed, 16 Apr 2014 11:38:34 +0900</lastBuildDate><item><title>Comment by izumi on aki's 回答</title><link>http://qa.lifesciencedb.jp/questions/745/%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#759</link><description>&lt;p&gt;丁寧な回答ありがとうございます．あまりにも不勉強でした．教えていただいた論文を読んで研究の参考にしたいと思います&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">izumi</dc:creator><pubDate>Wed, 16 Apr 2014 11:38:34 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/745/%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#759</guid></item><item><title>Answer by aki</title><link>http://qa.lifesciencedb.jp/questions/745/%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/754</link><description>&lt;p&gt;検出される生物相の違いを見たいのであれば、そもそもmultiple (global) alignmentは必要ないのでは?
+わけのわからないコンセンサス配列も必要ないでしょう。&lt;/p&gt;
+&lt;p&gt;その前に、GS FLXは読み間違いがたくさんあるので、通常はデノイジングと呼ばれる処理を行います。
+これは、ベースコール前の生データ(flowgram)のクラスタリングを用いるものと、ベースコール後の塩基配列のクラスタリングを用いるものがあります。&lt;/p&gt;
+&lt;p&gt;その上で、非常に類似した塩基配列は同種由来とみなし、95～100%一致する塩基配列はクラスタリングを行って(各クラスタをOTUと呼び、この処理をOTU clusteringとかOTU pickingと呼ぶ)、代表配列だけを抜き出します。
+100%一致する配列もあるでしょうから、そのような配列を一々別個に処理するのは時間の無駄です。
+この処理で、そのようなデータの冗長性を除きます。
+これで、残る配列は数百から数千程度になるでしょうから、もし必要だと考えるのであれば、multiple alignmentすればいいでしょうし、BLASTなり何なりで同定してもいいでしょう。&lt;/p&gt;
+&lt;p&gt;ただ、形態で同定された全種は登録されていないでしょう。
+分子同定では、リファレンスデータベースに登録されていない種は絶対に同定できませんので、検出されません。
+したがって、検出できた種数は十中八九NGSの方が少なくなるでしょうね。
+NGSデータの種同定は行わずに、NGSデータではOTU数を、形態データでは種数を多様度の指標とし、地点間の多様度を比較すれば、(多様度の値ではなく)地点間の比較結果が類似したものになるか、そうでないかは調べられるかと思います。&lt;/p&gt;
+&lt;p&gt;ちなみに、昨年のEcology Letters誌に以下の論文が出ていますので、お読みになることをおすすめします。
+http://dx.doi.org/10.1111/ele.12162&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">aki</dc:creator><pubDate>Sat, 12 Apr 2014 01:52:23 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/745/%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/754</guid></item><item><title>Comment by izumi on aki's 回答</title><link>http://qa.lifesciencedb.jp/questions/745/%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#753</link><description>&lt;p&gt;回答ありがとうございます．
+流域で採取された8,921個体は，形態同定によって34分類群（30科，3目，1綱）に分類されました．
+次に，各分類群から3～10配列ずつを，国際DNAデータベースから無作為にダウンロードしたのち（658塩基長の配列のみ，計180配列），180配列からコンセンサス配列を作成し使用しています．今後，この180配列をリファレンスにしてアライメントを行うことで改善されるか試したいと思います．アライメントをする前の処理等に，こうしたら良いという案がありましたらご教授よろしくお願いします&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">izumi</dc:creator><pubDate>Fri, 11 Apr 2014 18:50:29 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/745/%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#753</guid></item><item><title>Answer by aki</title><link>http://qa.lifesciencedb.jp/questions/745/%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/750</link><description>&lt;p&gt;それって、リファレンスが全然足りていないのでは?
+形態同定した個体をシーケンスしてリファレンスを網羅する程度のことはやってますか?
+河川の底生動物なら節足動物が多そうですが、節足動物はINSDではまだまだ不十分ですし、COIだと変異も激しいので、同種が登録されていてもalignできないこともありそうに思います。
+そんな状況では、条件をゆるめてalignできても、そのリファレンスと同種ではないでしょうから、種数を比較できそうに思えませんが。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">aki</dc:creator><pubDate>Wed, 09 Apr 2014 18:35:34 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/745/%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/750</guid></item><item><title>Answer by yamagu</title><link>http://qa.lifesciencedb.jp/questions/745/%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/748</link><description>&lt;p&gt;過去の経験では、とにかく一部データ(数万read)だけでもmegablastでNR等にかけてみると、
+コンタミ(ホストの生物やキャリーオーバー)しているサンプルが判明したり、アダプターや
+インデックスが取り除けていなかったり、といった状況が見えてくるといったことがありました。&lt;/p&gt;
+&lt;p&gt;global alignmentでなければならない理由が分かりませんが、一部だけでも
+(mega)blast等でまずは検索した結果を分類してみると、
+対策が立てやすくならないでしょうか？&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">yamagu</dc:creator><pubDate>Tue, 08 Apr 2014 14:05:14 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/745/%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/748</guid></item></channel></rss>

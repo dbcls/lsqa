@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With cuffdiff</title><link>http://qa.lifesciencedb.jp/tags/cuffdiff/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;cuffdiff&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/cuffdiff/" rel="self"></atom:link><language>ja</language><lastBuildDate>Fri, 07 Nov 2014 10:51:18 +0900</lastBuildDate><item><title>Cuffdiff を実行すると、Segmentation fault: 11</title><link>http://qa.lifesciencedb.jp/questions/802/cuffdiff-%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E3%81%A8-segmentation-fault-11</link><description>&lt;p&gt;たびたび畏れ入ります。Cuffdiff を実行すると、Segmentation fault: 11 と表示され往生しております。 BAM file をsort したものでも同じ結果でした。何か解決するためのコメント、試すべき方法をご教授頂けないでしょうか？&lt;/p&gt;
+&lt;p&gt;①以下のコマンドを実行しました。テストのため、2サンプルの比較を試みています。&lt;/p&gt;
+&lt;p&gt;$ cuffdiff -p 4 mm10.gtf -L MPH1,MPH2 -o results MPH1mm10.bam MPH2mm10.bam&lt;/p&gt;
+&lt;p&gt;②その後に表示される内容をそのまま記します。&lt;/p&gt;
+&lt;p&gt;Warning: Could not connect to update server to verify current version. Please check at the Cufflinks website (http://cufflinks.cbcb.umd.edu).&lt;/p&gt;
+&lt;p&gt;[10:25:40] Loading reference annotation.
+Warning: No conditions are replicated, switching to 'blind' dispersion method&lt;/p&gt;
+&lt;p&gt;[10:25:44] Inspecting maps and determining fragment length distributions.&lt;/p&gt;
+&lt;p&gt;Segmentation fault: 11&lt;/p&gt;
+&lt;p&gt;③ 参考&lt;/p&gt;
+&lt;p&gt;gtf ファイルはUCSC から自ら取得したもので、Cufflinks, Cuffcompare で得られる結果には遺伝子名が表示されました。なお、iGenome のAnnotation フォルダはなぜか空っぽで、gtf ファイルがありませんでした。また、使用している iMac の性能は以下の通りです。&lt;/p&gt;
+&lt;p&gt;3.4GHzクアッドコアIntel Core i5, NVIDIA GeForce GTX 775M 2GB GDDR5, &lt;/p&gt;
+&lt;p&gt;32GB 1600 MHz DDR3 SDRAM - 4x8 GB, 1TB フラッシュストレージ。&lt;/p&gt;
+&lt;p&gt;そもそも何か根本的な理解が足りないのでしょうか？周りの方々はNGSって何？という感じなので、書籍とネットの先生方だけが頼りです。御多忙のところ申し訳有りませんが、どうか宜しくお願い致します。&lt;/p&gt;
+&lt;p&gt;敬具&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ara</dc:creator><pubDate>Fri, 07 Nov 2014 10:51:18 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/802/cuffdiff-%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E3%81%A8-segmentation-fault-11</guid><category>cuffdiff</category></item></channel></rss>

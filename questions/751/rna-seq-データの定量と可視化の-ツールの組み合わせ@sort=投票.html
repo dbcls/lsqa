@@ -1,0 +1,736 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>RNA-seq データの定量と可視化の、ツールの組み合わせ - #LSQA</title>
+        <meta name="description" content="たびたび畏れ入ります。
+このサイトのご親切な先生方のおかげで、少しずつ解析方法も学習できましたが、煮詰まってしまいました。質問として不備があるかと思いますが、ご助言を頂けましたら幸いです。
+Single end reads (length = 50 nt) のRNA-seq data を、mouse genome (GRCm38)にマッピングし、
+mRNAについて定量（rpkm）と可視化（IGVを使用予定）を目的として取り組んでおります。
+IGVによる可視化はなんとかできそうです。ですが、定量に難儀しております。効率化をはかるため、上記の定量と可視化の両方に使えるアウトプットを作成できればと思">
+        <meta name="keywords" content="bowtie,rpkm,express,cufflinks,rna-star">
+        
+        <link rel="canonical" href="../../vote/755/down/index.html" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="rna-seq-データの定量と可視化の-ツールの組み合わせ@type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="../../upfiles/favicon.ico" />
+        <link href="../../m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="../../cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='../../m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+        
+        <script type='text/javascript' src='../../m/qa.lifesciencedb.jp/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='../../m/qa.lifesciencedb.jp/media/js/wmd/wmd.js'></script>
+        <link rel="stylesheet" type="text/css" href="../../m/qa.lifesciencedb.jp/media/js/wmd/wmd.css" />
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[プレビューを隠す]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[プレビューを表示する]" : "[プレビューを隠す]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml.html" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="../../index.html">
+				<img src="../../upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="../../account/yahoo/signin/index.html" >ログイン</a>  <a href="../../about/index.html" >概要</a>  <a href="../../faq/index.html" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="../index.html" >質問</a><a id="nav_tags" href="../../tags/index.html" >タグ</a><a id="nav_users" href="http://qa.lifesciencedb.jp/users/" >ユーザー</a><a id="nav_badges" href="../../badges/index.html" >バッジ</a><a id="nav_unanswered" href="../unanswered/index.html" >未回答</a>
+        <a id="nav_ask" href="../ask/index.html" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="http://qa.lifesciencedb.jp/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="../../vote/755/down/index.html">RNA-seq データの定量と可視化の、ツールの組み合わせ</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-751-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../vote/751/up/index.html" rel="nofollow"> </a>
+<div id="post-751-score" class="post-score"
+    title="現在の投票数">
+    0
+</div>
+<a id="post-751-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../vote/751/down/index.html" rel="nofollow"> </a>
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="../../mark_favorite/751/index.html" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>たびたび畏れ入ります。
+このサイトのご親切な先生方のおかげで、少しずつ解析方法も学習できましたが、煮詰まってしまいました。質問として不備があるかと思いますが、ご助言を頂けましたら幸いです。</p>
+<p>Single end reads (length = 50 nt) のRNA-seq data を、mouse genome (GRCm38)にマッピングし、
+mRNAについて定量（rpkm）と可視化（IGVを使用予定）を目的として取り組んでおります。</p>
+<p>IGVによる可視化はなんとかできそうです。ですが、定量に難儀しております。効率化をはかるため、上記の定量と可視化の両方に使えるアウトプットを作成できればと思います。</p>
+<p>そこで、考えている解析フローは以下の4つです。どれが良いか、何かご助言を頂戴できませんでしょうか？　</p>
+<p>① Bowtie  &gt; Cufflinks</p>
+<p>② TopHat &gt; Cufflinks</p>
+<p>③ Bowtie  &gt; eXpress</p>
+<p>④ Bowtie  &gt; RNA-STAR</p>
+<p>恥ずかしながら、にわか勉強のため、ありえない組み合わせがあるかもしれません。どうかご容赦ください。個人的には①が出来たら嬉しいですが、ツールの組み合わせが適切か自信がありません。ネット上では②の組み合わせを多く拝見し、試しましたが、TopHatの時点でものすごく時間がかかり、事情により途中で断念しました。③と④の組み合わせは英語のサイトで見つけました。③が速そうで期待しておりますが、eXpressはあまり聞いたことがないツールで心配です。</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="../../tags/bowtie/index.html" class="post-tag"
+                                        title="'bowtie'タグのついた質問をみる" rel="tag">bowtie</a>
+                                
+                                    <a href="../../tags/rpkm/index.html" class="post-tag"
+                                        title="'rpkm'タグのついた質問をみる" rel="tag">rpkm</a>
+                                
+                                    <a href="../../tags/express/index.html" class="post-tag"
+                                        title="'express'タグのついた質問をみる" rel="tag">express</a>
+                                
+                                    <a href="../../tags/cufflinks/index.html" class="post-tag"
+                                        title="'cufflinks'タグのついた質問をみる" rel="tag">cufflinks</a>
+                                
+                                    <a href="../../tags/rna-star/index.html" class="post-tag"
+                                        title="'rna-star'タグのついた質問をみる" rel="tag">rna-star</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">                            
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        質問日
+        <strong>Apr 10 '14 at 19:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/aac40d1f97c13fbf02903400592555ff?s=32&amp;d=identicon&amp;r=g" alt="megu's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/139/megu/">megu</a><br/>
+    <span class="score" title="1 徳">1</span><span title="1 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="4 バッジ"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="4 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span></p>
+</div>
+
+
+                            </div>
+                            
+
+
+<div class="comments-container" id="comments-container-751">
+    
+</div>
+<div id="comment-tools-751" class="comment-tools">
+    
+    
+</div>
+<div id="comment-751-form-container" class="comment-form-container">
+    
+</div>
+    
+                        </div>
+                        
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="rna-seq-データの定量と可視化の-ツールの組み合わせ@sort=登録順.html" title="最古の回答が最初に表示されます">回答順</a><a href="rna-seq-データの定量と可視化の-ツールの組み合わせ@sort=最新.html" title="最新の回答が最初に表示されます">最新</a><a href="rna-seq-データの定量と可視化の-ツールの組み合わせ@sort=投票.html" class="on" title="もっとも投票された回答が最初に表示されます">支持されている順</a></div>
+                </div>
+                
+  
+                
+                    <a name="755"></a>
+                    <div id="answer-container-755" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-755-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="../../vote/755/up/index.html" rel="nofollow"> </a>
+<div id="post-755-score" class="post-score"
+    title="現在の投票数">
+    1
+</div>
+<a id="post-755-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="../../vote/755/down/index.html" rel="nofollow"> </a>
+                                        
+
+
+    
+        <a class="accept-answer on"></a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>いくつか私の誤解があるかもしれない前提で回答します。
+(つまり鵜呑みにされても責任は持てませんという前提です。
+私は一介の技術者で研究者ではありません。)</p>
+<p>結論から言えば</p>
+<ul>
+<li>(1) このようなフローは王道ではないので考えない方が良いのでは。</li>
+<li>(2) 王道の一つ</li>
+<li>(3) 転写物配列に bowtieマッピング後定量する方法ではよく使われる部類。</li>
+<li>(4) 個人的によく知らないからノーコメント。(最近よく聞く程度の認識)</li>
+</ul>
+<p><a href="http://www.broadinstitute.org/igv/home">IGV</a>で可視化することを予定しておられるのであれば、
+ゲノムにマッピングすることを暗黙的に想定しておられるのかなと
+思いますが、</p>
+<p>RNA-seqの定量には、以下の大きく2系統が存在します。</p>
+<ul>
+<li>A.ゲノム配列にマッピングする手法と</li>
+<li>B.既知または予測トランスクリプト配列にマッピングする手法</li>
+</ul>
+<p>更に、Aには、以下などがあり</p>
+<ul>
+<li>A1:比較検定の厳密性に重きを置く1群多サンプルをとることの多い主に遺伝子単位でのRでの定量と群間比較 </li>
+<li>A2:遺伝子単位、転写物(isoform)単位、TSS単位、CDS単位等の多様な単位で比較可能な、tophat-cufflinksでの定量比較 (2)</li>
+</ul>
+<p>Bには以下があります。</p>
+<ul>
+<li>B1:既知遺伝子アノテーションを用いるもの (3)</li>
+<li>B2:de novo予測転写物をベースとして定量を行うもの (3)</li>
+</ul>
+<p>マウスであれば癌とか実験系統から余程分化しているにしてもB2は精度の問題で第一選択肢にはならないと思います。</p>
+<p>あとは、isoformレベルでの解析を重視しないのであれば
+マシンリソースを食う<a href="http://tophat.cbcb.umd.edu/">tophat</a>は必ずしも必須ではないと個人的には思います。</p>
+<p>最もマシンリソースを必要としないのは、おそらく(3)ではないかと思います。
+(少なくともマッピングはかなりメモリ容量も計算時間も少ないはず)</p>
+<p>しかし、私の現在の理解が正しければ<a href="http://bio.math.berkeley.edu/eXpress/overview.html">eXpress</a>は
+ゲノムにマッピングした結果を使わなかったと記憶していますので、
+IGVでのゲノムへのマッピング結果とは別々に転写物へのマッピングが必要に
+なる気がします。</p>
+<p>私個人の経験では、50塩基長程度の短鎖RNA-seqであれば
+splicing junctionを考慮するマッピングプログラムの<a href="http://tophat.cbcb.umd.edu/">tophat</a>でも
+junctionを考慮しない<a href="http://bowtie-bio.sourceforge.net/index.shtml">bowtie</a>や<a href="http://bio-bwa.sourceforge.net/">BWA</a>でも
+ゲノム配列に対するマップ率は数パーセント程度しか違いが無いので、</p>
+<p>研究の目的が、新規のsplicing variantの探索等でなく、
+遺伝子の発現定量や、複雑な転写制御を伴わないnon-coding RNAの探索等
+なのであれば、ゲノムにbowtieであてて、
+<a href="http://www-huber.embl.de/users/anders/HTSeq/doc/count.html">HTSeq count</a>やRの<a href="http://www.bioconductor.org/packages/release/bioc/html/DEGseq.html">DEGseq</a>パッケージのgetGeneExp関数などで
+定量してしまっても支障はないように思います。</p>
+<p>つまり、以下の別の選択肢です。</p>
+<ul>
+<li>(5)BowtieまたはBWA-HTSeq-DESeq</li>
+<li>(6)BowtieまたはBWA-DEGseq(getGeneExp)-DEGseq(DEGexp)</li>
+</ul>
+<p>また、宣伝ですが、meguさんが受託解析をされている企業の社員などでなく、
+研究所の研究員や、大学等の研究関係者、企業等の非営利研究関係者であれば
+利用可能な選択肢の一つとして、ご参考までにお知らせしますが、</p>
+<p>昨年度まで文科省予算で動いていたセルイノベーションプログラムの
+公開された解析パイプラインでTopHat-cufflinks-cuffdiffによる
+発現比較までを遺伝研内にあるサーバリソースで実行できるものが
+現在でも稼働しています。</p>
+<p>http://cell-innovation.nig.ac.jp/wiki2/tiki-index.php?page=1.+RNA-seq</p>
+<p>(2)(5)(6)は確実にできますが、</p>
+<p>リンク先のリストにはありませんが(3)も確かできたような気がします。</p>
+<p>解析対象のデータを遺伝研内サーバにアップロード可能であればご検討ください。</p>
+<p>また、上のサービスとは直接の関係はありませんが、
+DDBJなどの<a href="http://galaxyproject.org/">galaxy</a>でもtophat/tophat2は実行できるかと思います。</p>
+<p>https://p-galaxy.ddbj.nig.ac.jp/</p>
+<p>私は詳しくはありませんが、マシンリソースの問題であれば、
+<a href="https://aws.amazon.com/jp/">AWS</a>等のクラウド上で計算するという選択などもあるとは
+思いますので、ご参考までに。</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info'>
+    <p style="line-height:12px;">
+        回答日
+        <strong>Apr 14 '14 at 00:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=32&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+    <p><a href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a><br/>
+    <span class="score" title="507 徳">507</span><span title="8 バッジ"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="16 バッジ"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="28 バッジ"><span class="bronze">&#9679;</span><span class="badgecount">28</span></span></p>
+</div>
+
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a href="http://qa.lifesciencedb.jp/revisions/755/">
+                edited
+                <strong>Apr 16 '14 at 05:05</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+<div class="comments-container" id="comments-container-755">
+    
+        <a name="756"></a>
+        <div class="comment" id="comment-756">
+            <div id="post-756-score" class="comment-score"></div>
+            <div class="comment-text"><p>nob_fj 先生</p>
+<p>お忙しい中、このようなご丁寧なご回答を頂戴し本当にありがとうございました。
+基礎的な質問をしてしまったと、ここ数日落ち込んでおりましたが、
+nob_fj 先生の分かりやすいご説明を何回も拝読し、蒙が啓かれるとはまさにこのことかと思い至りました。
+各ツールの特徴を体系的に理解することの重要性を痛感しております。</p>
+<p>TopHat ＞ Cufflinksが王道ではあるものの、私の条件（IGVの利用、length=50、既知遺伝子の定量）ならば、より高速の組み合わせである Bowtie &gt; HTSeq-DESeq でも良さそうだ、とのことかと思います。
+恥ずかしながら、HTSeq、DESeqについてはまだ勉強しておりません。
+ぜひ勉強して、出来るだけ速い定量と可視化を実現したいと思います。</p>
+<p>NGS解析の勉強を始めて以来、ライフサイエンスQAの先生方にはたくさん助けられております。
+これ以上「教えて君」にならないよう、逆に回答を寄せられるように頑張りたいと思います。</p>
+<p>本当にありがとうございました。</p>
+<p>敬具</p></div>
+            <div class="comment-info" id="comment-756-info">
+                
+                
+                
+                <span class="comment-age">(Apr 14 '14 at 18:51)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/139/megu/">megu</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/aac40d1f97c13fbf02903400592555ff?s=18&amp;d=identicon&amp;r=g" alt="megu's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="757"></a>
+        <div class="comment" id="comment-757">
+            <div id="post-757-score" class="comment-score"></div>
+            <div class="comment-text"><p>補足です。超が付くほど有名なのでご存知かと思いますが、門田先生はじめアグリバイオインフォマティクス教育研究プログラムのサイトで
+RのQuasRを使ったマッピング(内部的にはbowtieを使用している模様)から発現量定量まで行っている手法も懇切丁寧に紹介されておりますので、
+念のためお知らせしておきます。国内で発現比較検定手法の解説でこのサイトの右に出るものはないかと思います。
+私はbowtieも基本sam形式で出力しますが、bowtie出力形式や、SAMからBAMに変換後、BAM形式のマッピング結果ファイルから始める方法も解説があります。
+<a href="http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html#about_postmapping_count">(Rで)塩基配列解析(マップ後 | カウント情報取得 | について)</a></p></div>
+            <div class="comment-info" id="comment-757-info">
+                
+                
+                
+                <span class="comment-age">(Apr 16 '14 at 04:43)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+        <a name="758"></a>
+        <div class="comment" id="comment-758">
+            <div id="post-758-score" class="comment-score"></div>
+            <div class="comment-text"><p>加えて上記の(B1)の手法の一つに転写物配列へのマッピング結果からタグカウントを集計する方法がありますが、以下の文章に方法が懇切丁寧に書かれています。
+Linux操作のトレーニングにも最適ではないかと思います。Macでなので、マシンリソースはそれほど要求しないと思いますし、ほぼ同じ方法がcygwin等を使えばwindows上でもできるはずです。
+<a href="http://www.ipad-zine.com/f/201203302245022a0d3443fcfec546b320d0c35441f08a/%E3%81%8A%E5%AE%B6%E3%81%A7%E3%81%A7%E3%81%8D%E3%82%8BMac_Book%E3%81%A7%E3%82%84%E3%82%8B%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B9%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90.pdf">お家でできるMac Bookでやる 次世代シーケンスデータ解析</a></p></div>
+            <div class="comment-info" id="comment-758-info">
+                
+                
+                
+                <span class="comment-age">(Apr 16 '14 at 04:46)</span>
+                <a class="comment-user userinfo" href="http://qa.lifesciencedb.jp/users/23/nob_fj/">nob_fj ♦</a>
+                <img class="gravatar" width="18" height="18" src="http://www.gravatar.com/avatar/48f6195a4e2e1631fca7ad67206d2c32?s=18&amp;d=identicon&amp;r=g" alt="nob_fj's gravatar image" />
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-755" class="comment-tools">
+    
+    
+</div>
+<div id="comment-755-form-container" class="comment-form-container">
+    
+</div>
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="http://qa.lifesciencedb.jp/questions/751/answer/" method="post">
+            <div style="clear:both">
+            </div>
+            
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            あなたの回答
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea rows="10" cols="40" name="text" id="editor"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="リアルタイムMarkdown編集プレビューをトグルする">
+                                            プレビューをトグルする
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input type="checkbox" name="wiki" id="id_wiki" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="コミュニティー wikiオプションを選択した場合、質問と回答はポイントを生成せず、作者名は表示されない">
+                                            <label for="id_wiki">コミュニティー wiki</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+                        
+                        </table>  
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>                    
+                </div>
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">この質問をフォローする</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="rna-seq-データの定量と可視化の-ツールの組み合わせ@type=rss" title="subscribe to answers"></a>
+    回答
+</p><p><a class="feed-icon" style="background-image:url('../../m/qa.lifesciencedb.jp/media/images/feed-icon-small.png');"
+        href="rna-seq-データの定量と可視化の-ツールの組み合わせ@type=rss&amp;comments=yes" title="subscribe to comments and answers"></a>
+    回答とコメント
+</p>
+
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>ただいまベータテスト運用中です。そのために通知無くコンテンツの変更やサービスの停止変更されることがあります。</h2>
+<p>質問するなら<a href="../../index.html">ライフサイエンスQA</a>。</p>
+<p>このページの<a href="rna-seq-データの定量と可視化の-ツールの組み合わせ@type=rss">RSSフィード</a></p>
+<p><a href="http://twitter.com/lsqa_all">@lsqa_all</a>・<a href="http://twitter.com/lsqa_ngs">@lsqa_ngs</a></p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <p>
+		タグ:
+    </p>
+    <p class="tags" >
+        
+        	<a href="../../tags/bowtie/index.html" 
+			title="タグ付けされた質問をみる'bowtie'タグを利用している" 
+			rel="tag">bowtie</a> <span class="tag-number">&#215;6</span><br/>
+        
+        	<a href="../../tags/cufflinks/index.html" 
+			title="タグ付けされた質問をみる'cufflinks'タグを利用している" 
+			rel="tag">cufflinks</a> <span class="tag-number">&#215;3</span><br/>
+        
+        	<a href="../../tags/express/index.html" 
+			title="タグ付けされた質問をみる'express'タグを利用している" 
+			rel="tag">express</a> <span class="tag-number">&#215;2</span><br/>
+        
+        	<a href="../../tags/rna-star/index.html" 
+			title="タグ付けされた質問をみる'rna-star'タグを利用している" 
+			rel="tag">rna-star</a> <span class="tag-number">&#215;1</span><br/>
+        
+        	<a href="../../tags/rpkm/index.html" 
+			title="タグ付けされた質問をみる'rpkm'タグを利用している" 
+			rel="tag">rpkm</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        質問日: <strong title="2014-04-10 19:06:57.125307">Apr 10 '14 at 19:06</strong>
+    </p>
+    <p> 
+     	閲覧数: <strong>11,812 回</strong>
+    </p>
+    <p> 
+        最終更新日: <strong title="2014-04-16 05:06:12.065303">Apr 16 '14 at 05:06</strong>
+    </p>
+</div>
+
+
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>世界に広がるQAサイト</h2>
+<p><a href="http://biostar.stackexchange.com">バイオインフォマティクスのBioStar</a>・ <a href="http://I.SEQanswers.com">新型シーケンサーのSEQanswers</a>・ <a href="http://blueobelisk.shapado.com">オープンデータのBlueObelisk</a>・<a href="http://stackoverflow.com">プログラミングのstackoverflow</a>・ <a href="http://www.semanticoverflow.com">Semantic Overflow</a>・ <a href="http://stats.stackexchange.com/">Statistical Analysis</a>・ <a href="http://cstheory.stackexchange.com/">Theoretical Computer Science</a>・ <a href="http://chiebukuro.yahoo.co.jp/">Yahoo!知恵袋</a>・ <a href="http://okwave.jp/">OKWave</a> <a href="http://ja.wikipedia.org/wiki/Category:Q%26Aサイト">などなど</a></p>
+     </div>
+</div>
+
+<div class="boxC">
+    <h3 class="subtitle">関係した質問</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="../../vote/256/down/index.html">bowtie &gt; samtoolsまでをgrid化</a>
+        </p>
+        
+        <p>
+            <a href="../../vote/598/down/index.html">Bowtieのpair-end mappingのオプションについて</a>
+        </p>
+        
+        <p>
+            <a href="../../vote/312/down/index.html">Bowtieのコマンド入力の仕方</a>
+        </p>
+        
+        <p>
+            <a href="../../vote/427/down/index.html">Chip-seqデータのマッピングにおけるマルチヒット/ミスマッチの扱い</a>
+        </p>
+        
+        <p>
+            <a href="../../vote/875/down/index.html">非モデル動物におけるtranscriptome referenceを用いた発現量解析</a>
+        </p>
+        
+        <p>
+            <a href="../../vote/747/down/index.html">Cufflinks (binary)が実行できない</a>
+        </p>
+        
+        <p>
+            <a href="../../vote/324/down/index.html">SOLID pair end データをbowtieでアライメント</a>
+        </p>
+        
+        <p>
+            <a href="../../mark_favorite/859/index.html">cuffmergeの結果について</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="../../about/index.html" >概要</a> <span class="link-separator"> |</span> <a href="../../faq/index.html" >よくある質問</a> <span class="link-separator"> |</span> <a href="../../privacy/index.html" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="../../m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

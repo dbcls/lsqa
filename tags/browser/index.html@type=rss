@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With browser</title><link>http://qa.lifesciencedb.jp/tags/browser/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;browser&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/browser/" rel="self"></atom:link><language>ja</language><lastBuildDate>Fri, 07 Mar 2014 10:06:59 +0900</lastBuildDate><item><title>UCSC Genome Browserからのファイルアクセスに対応したBAM置き場</title><link>http://qa.lifesciencedb.jp/questions/723/ucsc-genome-browser%E3%81%8B%E3%82%89%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E5%AF%BE%E5%BF%9C%E3%81%97%E3%81%9Fbam%E7%BD%AE%E3%81%8D%E5%A0%B4</link><description>&lt;p&gt;すでに既出の質問になるのですが、私の場合うまくいかなかったので、再度質問させていただきたく思います。以前に質問されていた内容は以下です。
+&lt;a href="http://qa.lifesciencedb.jp/questions/390/ucsc-genome-browser%E3%81%8B%E3%82%89%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E5%AF%BE%E5%BF%9C%E3%81%97%E3%81%9F%E3%83%95%E3%83%AA%E3%83%BC%E3%81%BE%E3%81%9F%E3%81%AF%E5%BB%89%E4%BE%A1%E3%81%AAbam%E7%BD%AE%E3%81%8D%E5%A0%B4%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B"&gt;以前されていた質問&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Dorpbox の公開アクセスフォルダと、Galaxy の公開ヒストリを試しているのですが、どちらもうまくいきません。具体的には、今回はじめてDropboxを利用するためにフリーのアカウント2GBを作り、そこからカメラアップロード等のフリー容量追加の方法で約3GBの容量を確保しました。
+&lt;a href="https://www.dropbox.com/help/287/ja"&gt;カメラアップロードでの容量追加&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;以下のように2.7GBのBAMファイルを置きました。左クリックして[共有]を使った場合のURLです。
+&lt;a href="https://www.dropbox.com/s/4vn1w95rmqk1521/GRC13290252-48725-D1_post.bam"&gt;左クリックから共有&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;これをUCSC Browserの”Paste URLs or data:”に以下のように貼り付けて[Submit]をクリックしました。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;track type=bam name="MyBAM1" bigDataUrl="https://www.dropbox.com/s/4vn1w95rmqk1521/GRC13290252-48725-D1_post.bam"&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;しかし、以下のエラーが返ってくるだけです。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Error : No Content-Length: returned in header for https://www.dropbox.com/s/4vn1w95rmqk1521/GRC13290252-48725-D1_post.bam, can't proceed, sorry&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;少し方法を変えて、右クリック、[公開リンクをコピー]から以下のURLを得ました。
+&lt;a href="https://dl.dropboxusercontent.com/u/274315667/GRC13290252-48725-D1_post.bam"&gt;右クリックから公開リンクをコピー&lt;/a&gt;
+すると今度は別のエラーメッセージとなりました。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Error : unable to fetch 8192 bytes from https://dl.dropboxusercontent.com/u/274315667/GRC13290252-48725-D1_post.bam @0 (got 1 bytes)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;情報を求めてUCSC公式の記述を探したところ、以下のように記述がありました。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Problem: I see that Dropbox accepts byte-range requests, but I can't get my data to display. Why?
+（中略）
+Paid Dropbox accounts may not experience this problem.
+&lt;a href="https://genome.ucsc.edu/goldenPath/help/customTrack.html"&gt;UCSC公式&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;しかし、思い切って支払ったところで、"may not"と記されているということは、確実にうまくいくとは限らないので、先にGalaxyの方を試みました。先ほどと同じBAMファイルをGalaxyの公開ヒストリに以下のようにアップロードしました。
+&lt;a href="http://galaxy.dbcls.jp/u/ksfk/h/unnamed-history"&gt;公開ヒストリ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;すでに[display at UCSC main]というリンクが張られているので、それをクリックすると、以下のエラーメッセージが表示されます。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Byte-range request was ignored by server. Expected Partial Content 206&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;その一方で、Add Custom Tracksに書き込むためのURLは、どうやれば取得できるのか分かりませんでした。もしかするとGoogle Chromeではなく、他のブラウザを使った方がいいのでしょうか？&lt;/p&gt;
+&lt;p&gt;大変素人な質問で申し訳ありません。個人で作業をしているもので、環境にもめぐまれておりません。皆様のお知恵をお貸しいただきたく思っております。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;追記で詳しい事情をご説明いたします。nob_fj様からコメントいただいたのですが、BAIファイルの生成の仕方が分からないという問題があって、これについても教えていただきたく思っております。今回のデータは、患者である私自身のexomeシーケンシングの結果です。以下の遺伝子検査会社が、おそらく現在のところ世界で唯一、患者自身からのサンプルを受け取ってシーケンシングしてくれるので、そこからVCF、BAM、FASTA形式のファイルを受けとりました。
+&lt;a href="http://www.dnadtc.com/#exomeTopMargin"&gt;DNADTC&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;このような事情でファイル形式についても勉強しながら作業しているところで、とりあえずテキストファイルとして見ることができる&lt;a href="https://dl.dropboxusercontent.com/u/274315667/GRC13290252-48725-D1_exome.vcf"&gt;VCF&lt;/a&gt;の中に、私が以前の遺伝子検査で見つかったSCN4Aのc.5468C&amp;gt;G、P1823Rという変異があるかどうかを確認したところ、どうもその付近にそういうcallは含まれていないようなので慌てることになりました。検査会社に問い合わせたところ、BAMファイルをUCSC Genome Browserで見て、coverageが足りているかどうか確認して下さいとのことなので、それに従おうとしている次第です。&lt;/p&gt;
+&lt;p&gt;このような事情で、BAIファイルを提供してもらっていないのですが、これはどのようにして生成すればいいのでしょうか？ BAMファイルから生成できるものなのでしょうか？ 個人で使うような低スペックのWindows7上の作業でできるものなのでしょうか？ どの文献を読めばそういう情報が書いてあるかも分からず、書いてあるウェブページを紹介いただくだけでも大変助かります。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;さらに追記いたします。samtoolsというプログラムでBAMからBAIを生成できることを知ったので、Windows版バイナリを探したところ、見つかりました。&lt;a href="http://sourceforge.net/p/samtools/mailman/samtools-help/thread/4DC6AC2D.2060409@integromics.com/"&gt;i386 samtools&lt;/a&gt; これを用いてBAIファイルを作ることができたので、Galaxy、Dropboxともにもう一度試したのですが、やはり両方うまくいきません。Galaxyの方は、BAIファイルだけを追加でアップロードする際に、ファイル形式にBAIという選択肢がないことが気になったので、念のためBAMファイルを再度アップロードしたのですが、それもうまくいきません。具体的にはBAMのファイル名に_withBAIと追加して、samtools indexを実行し、BAIファイルの生成後に、BAMファイルをアップロードしました。BAIファイルのファイル形式がないということは、BAMファイルをアップロードする際に、指定しなくとも同時にアップロードされるのではないかと思ったからです。&lt;/p&gt;
+&lt;p&gt;BAIファイルをアップロードする他の手順があるのでしょうか？&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ksfk</dc:creator><pubDate>Fri, 07 Mar 2014 10:06:59 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/723/ucsc-genome-browser%E3%81%8B%E3%82%89%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E5%AF%BE%E5%BF%9C%E3%81%97%E3%81%9Fbam%E7%BD%AE%E3%81%8D%E5%A0%B4</guid><category>ucsc</category><category>bam</category><category>ストレージ</category><category>genome</category><category>browser</category></item><item><title>UCSC Genome Browserからのファイルアクセスに対応したフリーまたは廉価なBAM置き場はありますか</title><link>http://qa.lifesciencedb.jp/questions/390/ucsc-genome-browser%E3%81%8B%E3%82%89%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E5%AF%BE%E5%BF%9C%E3%81%97%E3%81%9F%E3%83%95%E3%83%AA%E3%83%BC%E3%81%BE%E3%81%9F%E3%81%AF%E5%BB%89%E4%BE%A1%E3%81%AAbam%E7%BD%AE%E3%81%8D%E5%A0%B4%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B</link><description>&lt;p&gt;現在、&lt;a href="http://ngs-field.org/"&gt;NGS現場の会&lt;/a&gt;内の有志と協調して、次世代シーケンサーのチュートリアルをwikiにまとめたりしており、&lt;/p&gt;
+&lt;p&gt;その一環でマッピング結果の可視化などを行うために、BAMファイルをUCSC Genome Browserでカスタムトラックとして追加する方法について&lt;a href="https://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=UCSC+Genome+Browser%E3%81%A7BAM%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80&amp;amp;no_bl=y#a0ee2b4c4486502a65447fff580d4eadd"&gt;こちら&lt;/a&gt;に記載しているのですが、私の理解が正しければ、BAMファイルや、bigBEDファイルをカスタムトラックとして追加するためには、UCSCのサーバからアクセス可能な場所に
+BAMファイルとBAIファイルをアップロードしなければならず、特に自由に使用可能な公開ファイルサーバなど手元にないwet系の研究者の方などには敷居が高いように思っております。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://genome.ucsc.edu/goldenPath/help/bigBed.html"&gt;UCSC BAMアップロード説明ページ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://genome.ucsc.edu/goldenPath/help/bam.html"&gt;UCSC bigBEDアップロード説明ページ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最近では、クラウドサービスの普及で、google等、廉価に数ギガバイトのストレージを提供するサービスも多々見受けられます。&lt;/p&gt;
+&lt;p&gt;もしどなたか、気軽に使用可能でUCSCからのサーバアクセスに対応している(BASIC認証対応のHTTPS経由でURIを指定してファイル単位アクセス可能な)フリー、あるいは廉価なストレージサービスをご存知の方はおられますでしょうか。&lt;/p&gt;
+&lt;p&gt;ちなみに、MSNのSkyDriveを試してみましたが、ファイルのアクセス時にjavascriptを経由するようなので、無理そうでした。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;これ以降は、参考情報です&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;検証用のデータ&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;以下に検証用の小さいデータを配置しました。
+マウスのデータSRRデータをランダムに1000本取り出したデータをBWAデフォルトオプションでmm9にマッピングしたもので"chr1:24,537,471-24,777,916"に張り付きます。
+以下からダウンロード可能です。bamとbaiを両方ストレージにアップロードする必要があります。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;http://cell-innovation.nig.ac.jp/export/public/ucsc_101201/SRX000350_SRR001356_1000.bam&lt;/li&gt;
+&lt;li&gt;http://cell-innovation.nig.ac.jp/export/public/ucsc_101201/SRX000350_SRR001356_1000.bam.bai&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;サイズはbamが52KB、baiが1,2MBです。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;検証方法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;UCSC genome browserにadd trackする場合は、以下の文字列を参考にしてください。bigDataUrlの部分だけ、
+ストレージサービスの対応する公開URLに置き換えると、UCSCサーバからそのストレージに参照に行くはずです。&lt;/p&gt;
+&lt;p&gt;track type=bam bigDataUrl="http://cell-innovation.nig.ac.jp/export/public/ucsc_101201/SRX000350_SRR001356_1000.bam" visibility="squish" db="mm9"
+browser position chr1:24,537,471-24,777,916&lt;/p&gt;
+&lt;p&gt;認証付きの場合は、add custom tracksの際にUCSCに接続する際にhttpでなくhttpsを指定するようにして、
+add tracksする文字列としては以下のように"user:password@"を付加するようにして下さい。
+httpsにしないと、ID、パスワードが漏洩しますのでご注意ください。&lt;/p&gt;
+&lt;p&gt;track type=bam bigDataUrl="https://user:password@server.com/somepath/SRX000350_SRR001356_1000.bam" visibility="squish" db="mm9"
+browser position chr1:24,537,471-24,777,916&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;いただいた情報は記載していただいた方のattributionが分かる形でwikiの方に引用させていただきたいと考えておりますので、ご了承いただけますと幸いです。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;背景&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;他にフリーのBAM対応ゲノムビューワがあることは存じておりますが、UCSCには以下のメリットがあると考えています。&lt;/li&gt;
+&lt;li&gt;UCSCの既存アノテーショントラックの多さのメリット&lt;/li&gt;
+&lt;li&gt;ローカルに大きなメモリを搭載したPCを用いる必要がないメリット&lt;/li&gt;
+&lt;li&gt;BAMをBED等に変換すれば、サーバの確保問題は発生しないことも存じておりますが、BAMには以下のメリットがあると考えています。&lt;/li&gt;
+&lt;li&gt;ミスマッチ、InDel等の情報量の豊富さのメリット。&lt;/li&gt;
+&lt;li&gt;BAM,bigBEDはランダムアクセス可能なので、トラック追加に時間がかからず、多くのトラックを同時に追加可能であるメリット&lt;/li&gt;
+&lt;li&gt;参考：&lt;a href="https://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=UCSC+Genome+Browser%E3%81%A7BED%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80#a8c5b44526aa98b3cd465a57f242a80bc"&gt;BEDの追加方法&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;その他、リンク先のwikiでお気づきの点へのコメント等もよろしくお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Wed, 02 Mar 2011 21:08:51 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/390/ucsc-genome-browser%E3%81%8B%E3%82%89%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E5%AF%BE%E5%BF%9C%E3%81%97%E3%81%9F%E3%83%95%E3%83%AA%E3%83%BC%E3%81%BE%E3%81%9F%E3%81%AF%E5%BB%89%E4%BE%A1%E3%81%AAbam%E7%BD%AE%E3%81%8D%E5%A0%B4%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B</guid><category>ucsc</category><category>bam</category><category>ストレージ</category><category>genome</category><category>browser</category></item></channel></rss>

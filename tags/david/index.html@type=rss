@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With david</title><link>http://qa.lifesciencedb.jp/tags/david/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;david&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/david/" rel="self"></atom:link><language>ja</language><lastBuildDate>Thu, 18 Sep 2014 17:18:19 +0900</lastBuildDate><item><title>DAVIDのannotation categories</title><link>http://qa.lifesciencedb.jp/questions/785/david%E3%81%AEannotation-categories</link><description>&lt;p&gt;こんにちは。はじめて質問させていただきます。
+NGSに直接に関してる質問ではありませんが、
+DAVIDを使ってGOtermをみるとき、UP_SEQ_FETUREやSP_PIR_KEYWORDSなどの functional categories があるんですけど、
+それぞれのcategoryが何を意味しているか、googleなどにうってみても分からなくて質問します。
+もしそれについての説明が書いてるウェブページなどを知っているかたはぜひ教えてください。
+どうもありがとうございます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">christiario</dc:creator><pubDate>Thu, 18 Sep 2014 17:18:19 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/785/david%E3%81%AEannotation-categories</guid><category>goterm</category><category>david</category></item></channel></rss>

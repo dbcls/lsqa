@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: galaxyと同じサーバー上にあるファイルを指定して解析をする方法</title><link>http://qa.lifesciencedb.jp/questions/208/galaxy%E3%81%A8%E5%90%8C%E3%81%98%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E4%B8%8A%E3%81%AB%E3%81%82%E3%82%8B%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%97%E3%81%A6%E8%A7%A3%E6%9E%90%E3%82%92%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95</link><description>&lt;p&gt;&lt;a href="http://usegalaxy.org"&gt;galaxy&lt;/a&gt;にファイルをuploadするには、既存の機能として"Get Data: Upload File"がありますが、これは、httpもしくはftp経由なので非常に時間が掛かります。
+それを改善する為に、galaxyと同じサーバーにファイルを置いて、そのファイルを指定して解析したいのですが、何かいい方法はありますでしょうか？&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/208/galaxy%E3%81%A8%E5%90%8C%E3%81%98%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E4%B8%8A%E3%81%AB%E3%81%82%E3%82%8B%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%97%E3%81%A6%E8%A7%A3%E6%9E%90%E3%82%92%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 21 Dec 2010 01:16:43 +0900</lastBuildDate><item><title>Answer by mn3</title><link>http://qa.lifesciencedb.jp/questions/208/galaxy%E3%81%A8%E5%90%8C%E3%81%98%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E4%B8%8A%E3%81%AB%E3%81%82%E3%82%8B%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%97%E3%81%A6%E8%A7%A3%E6%9E%90%E3%82%92%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/211</link><description>&lt;p&gt;&lt;a href="https://bitbucket.org/galaxy/galaxy-central/wiki/DataLibraries/UploadingFiles"&gt;galaxy / galaxy-central / wiki / DataLibraries/UploadingFiles – Bitbucket&lt;/a&gt; に管理ユーザー（Admin user）がデータのファイルをアップロードする４つの方法を解説しています。アップロードしたファイルは、Shared DataのData Libraryのひとつになります。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ファイルをアップロードする（Upload files）&lt;/li&gt;
+&lt;li&gt;ファイルのディレクトリをアップロードする（Upload directory of files）&lt;/li&gt;
+&lt;li&gt;ファイルシステムパスからのファイルをアップロードする（Upload files form filesystem paths）&lt;/li&gt;
+&lt;li&gt;ヒストリーからのデータセットをインポートする（Import datasets form your current history）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;すべての手順は、Adminメニューの &lt;strong&gt;Manage data libraries&lt;/strong&gt; のなかの Upload files to a data library ツールのUpload option:オプションとして選択できます。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="alt text" src="/upfiles/Galaxy_System.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. ファイルをアップロードする（Upload files）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;ファイルをアップロードしたり、URLを登録してデータファイルをサーバにアップロードすることができます。アップロードされたファイルは、既定では database/files に格納されます。この質問では、この手順では大きなファイルのときに時間がかかると指摘されているものです。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. ファイルのディレクトリをアップロードする（Upload directory of files）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;指定したディレクトリに格納したファイルをGet Data→Upload File ツールからパス指定でヒストリにアップロードすることができます。
+ディレクトリの指定には、設定ファイル（universe_wsgi.ini）に &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;library_import_dir = /some_local_directory_of_files &lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;を追加します。指定したディレクトリにあるファイルの一覧からファイルを選択することができます。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. ファイルシステムパスからのファイルをアップロードする（Upload files form filesystem paths）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一連のファイルや多数のファイルをアップロードするために、ファイル指定のテキストエリアに複数のファイルパスを一度に指定することができます。&lt;/p&gt;
+&lt;p&gt;設定ファイル（universe_wsgi.ini）に、次の変更が必要です。 &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;allow_library_path_paste = True&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;4. ヒストリーからのデータセットをインポートする（Import datasets form your current history）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;多数のファイルをアップロードする場合に、ヒストリをファイルのリストとして指定することができます。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mn3</dc:creator><pubDate>Tue, 21 Dec 2010 01:16:43 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/208/galaxy%E3%81%A8%E5%90%8C%E3%81%98%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E4%B8%8A%E3%81%AB%E3%81%82%E3%82%8B%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%97%E3%81%A6%E8%A7%A3%E6%9E%90%E3%82%92%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/211</guid></item></channel></rss>

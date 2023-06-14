@@ -1,0 +1,371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>ログイン - #LSQA</title>
+        <meta name="description" content="質問と回答と私">
+        <meta name="keywords" content="OSQA,CNPROG,forum,community,lifesciencedb.jp,DDBJ,PDBj,DBCLS,Cytoscape,NGS,ngs-field">
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="../../../upfiles/favicon.ico" />
+        <link href="../../../m/qa.lifesciencedb.jp/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="../../../cstyle.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">google.load("jquery", "1.4.2");</script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var i18nLang = 'ja';
+            var scriptUrl = '/'
+            var osqaSkin = 'qa.lifesciencedb.jp';
+
+            var messages = {
+                username: '',
+                confirm: "よろしいですか？",
+                yes: "はい",
+                no: "いいえ",
+                message: "Message:",
+                cancel: "キャンセル",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /* ]] */
+        </script>
+        <script type='text/javascript' src='../../../m/qa.lifesciencedb.jp/media/js/osqa.main.js'></script>
+        
+        
+        
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../m/qa.lifesciencedb.jp/media/style/auth.css"/>
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        <link rel="search" type="application/opensearchdescription+xml" href="../../../opensearch.xml.html" title="#LSQA Search" />
+        
+    </head>
+    <body>
+        <div class="notify" style="display:none">
+            
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
+        
+            <div id="custom_header">
+                <div id='global-header' style='background:#224;color:white;padding:1px;'>
+</div>    
+            </div>
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="../../../index.html">
+				<img src="../../../upfiles/qa-logo_5.png" title="ホームに戻る" alt="ライフサイエンスQA（β） logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="../../yahoo/signin/index.html" >ログイン</a>  <a href="../../../about/index.html" >概要</a>  <a href="../../../faq/index.html" >よくある質問</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" href="../../../questions/index.html" >質問</a><a id="nav_tags" href="../../../tags/index.html" >タグ</a><a id="nav_users" href="http://qa.lifesciencedb.jp/users/" >ユーザー</a><a id="nav_badges" href="../../../badges/index.html" >バッジ</a><a id="nav_unanswered" href="../../../questions/unanswered/index.html" >未回答</a>
+        <a id="nav_ask" href="../../../questions/ask/index.html" class="special">質問する</a>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="http://qa.lifesciencedb.jp/search/" method="get">
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="検索する" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">質問</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">タグ</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">ユーザー</label>
+        </div>
+    </form>	
+	</div>
+
+	
+
+<!-- end template header.html -->
+        
+<div id="wrapper">
+    <div id="room">
+        <div id="CALeft">
+            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    <div class="headNormal">
+	    ユーザーログイン
+    </div>
+    
+    
+    
+    <div style="width:600px;float:left;margin-bottom:5px;">
+    
+        External login services use <b><a href="http://openid.net/">OpenID</a></b> technology, where your password always stays confidential between
+        you and your login provider and you don't have to remember another one.
+    
+    </div>
+    
+        <div style="width:600px;float:left;margin-bottom:5px;">
+            <input type="checkbox" checked="checked" id="validate_email" />
+            Validate my email after I login.
+        </div>
+    
+    <div id="bigicon_providers">
+        
+            <div class="provider_logo big" name="dbcls">
+                <div class="inner">
+                    
+                        <a class="provider_direct" href="../../dbcls/signin/index.html">
+                            <img src="../../../m/qa.lifesciencedb.jp/media/images/dbcls_logo_small.jpg" />
+                        </a>
+                    
+                    
+                    
+                </div>
+            </div>
+        
+            <div class="provider_logo big" name="google">
+                <div class="inner">
+                    
+                        <a class="provider_direct" href="../../yahoo/signin/index.html">
+                            <img src="../../../m/qa.lifesciencedb.jp/media/images/openid/google.gif" />
+                        </a>
+                    
+                    
+                    
+                </div>
+            </div>
+        
+            <div class="provider_logo big" name="yahoo">
+                <div class="inner">
+                    
+                        <a class="provider_direct" href="../../yahoo/signin/index.html">
+                            <img src="../../../m/qa.lifesciencedb.jp/media/images/openid/yahoo.gif" />
+                        </a>
+                    
+                    
+                    
+                </div>
+            </div>
+        
+            <div class="provider_logo big" name="myopenid">
+                <div class="inner">
+                    
+                    
+                    
+                        <img alt="MyOpenID user name" class="simple_form_provider" src="../../../m/qa.lifesciencedb.jp/media/images/openid/myopenid_big.png" />
+                    
+                </div>
+            </div>
+        
+    </div>
+    <div id="smallicon_providers">
+        
+    </div>
+    <form name="signin_form" id="signin_form" class="signin_form" method="POST" action="../../yahoo/signin/index.html">
+        <div id="signin_form_slot"></div>
+        <input type="hidden" class="validate_email" name="validate_email" value="yes" />
+    </form>
+    
+        <h3 class="or_label">Or...</h3>
+        <form class="signin_form" method="POST" action="http://qa.lifesciencedb.jp/account/openidurl/signin/" accept-charset="utf-8">
+            
+
+
+<fieldset>
+    <table>
+    <tr>
+        <td><p id="provider_name_slot">あなたのOpenID URLを入力してください</p></td>
+    </tr>
+    <tr>
+        <td>
+            <input id="openid_identifier" class="icon_input" name="openid_identifier" type="text"
+            style="width: 500px; background: url('../../../m/qa.lifesciencedb.jp/media/images/openid/openid-inputicon.gif') no-repeat left center" />
+        </td>
+        <td>
+            <input type="submit" name="ssignin" value="ログイン" />
+        </td>
+    </tr>
+    </table>
+</fieldset>
+
+
+            <input type="hidden" class="validate_email" name="validate_email" value="yes" />
+        </form>
+    
+    <h3 class="or_label">Or...</h3>
+    <form name="signin_form" id="dummy_form_unused" class="signin_form" method="POST" action="../../yahoo/signin/index.html">
+        <fieldset>
+            Click <a href="../../tempsignin/index.html">here</a> if you're having troubles signing in.
+        </fieldset>
+    </form>
+    <script type="text/html" id="simple_form_template">
+        <fieldset id="slot_form">
+              <p id="provider_name_slot">入力してください、%%YOUR_WHAT%%</p>
+              <div><p><span></span>
+                    <input id="input_field" type="text" name="input_field" /><span></span>
+                    <input id="ssignin" name="ssignin" type="submit" value="Login" />
+              </p></div>
+              <input type="hidden" class="validate_email" name="validate_email" value="yes" />
+          </fieldset>
+    </script>
+    <script type="text/javascript">
+        $(function() {
+            var signin_url = "/account/PROVIDER/signin/";
+
+            function set_validate_email() {
+                var validate = $('#validate_email').attr('checked') ? 'yes' : 'no';
+                $('.validate_email').attr('value', validate);
+
+                $('.provider_direct').each(function() {
+                    var current_url = $(this).attr('href');
+                    if (!/\?validate_email\=(yes|no)$/.test(current_url)) {
+                        current_url += ('?validate_email=' + validate);
+                    } else {
+                        current_url = current_url.replace(/(yes|no)$/, validate);
+                    }
+
+                    $(this).attr('href', current_url);
+                })
+            }
+
+            $('#validate_email').change(set_validate_email);
+
+            function set_form_action(el) {
+                var provider = el.parents('.provider_logo').attr('name');
+                $('#signin_form').attr('action', signin_url.replace('PROVIDER', provider));
+            }
+
+            $('.provider_logo').click(function() {
+                $('.provider_logo').removeClass('selected');
+                $(this).addClass('selected');
+            });
+
+            $('.simple_form_provider').click(function() {
+                $('#signin_form_slot').html('');
+                var new_html = $('#simple_form_template').html()
+                    .replace('%%YOUR_WHAT%%', $(this).attr('alt'));
+                $('#signin_form_slot').html(new_html);
+                set_form_action($(this));
+                set_validate_email();
+            })
+
+            set_validate_email();
+        });
+    </script>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC">
+    <h3 class="subtitle">なぜOpenIDをつかうのか？</h3>
+    <ul class="list-item">
+        <li>
+		OpenIDをつかうと、あらたにユーザ名とパスワードを作る必要がありません。
+        </li>
+        <li>
+		すべてのOpenID対応ウェブサイトでおなじログインを安全に再利用できます。
+        </li>
+        <li>
+		すでに多数のウェブサイトでOpenIDアカウントが利用されています。
+        </li>
+        <li>
+		OpenIDは、多くの組織がサポートしているオープンスタンダードに基づいています。
+        </li>
+
+    </ul>
+    <p class="info-box-follow-up-links">
+        <a href="http://openid.net/what/" target="_blank">より詳しく知るには </a><br/>
+        <a href="http://openid.net/get/" target="_blank">OpenIDを取得する </a>
+    </p>
+</div>
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="../../../about/index.html" >概要</a> <span class="link-separator"> |</span> <a href="../../../faq/index.html" >よくある質問</a> <span class="link-separator"> |</span> <a href="../../../privacy/index.html" >プライバシーポリシー</a> <span class="link-separator"> |</span> <a href="http://dbcls.rois.ac.jp/contact" >お問い合わせ</a> 
+    </div>
+  <p>
+     <a href="http://osqa.net" target="_blank" title="OSQA Development Build (SVN-611)">
+        powered by OSQA
+     </a>
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a href="http://creativecommons.org/licenses/by/3.0/">
+            <img src="../../../m/qa.lifesciencedb.jp/media/images/cc-wiki.png" title="Creative Commons: Attribution - Share Alike" alt="cc-wiki" width="50" height="68" />
+  </a>
+ </div>
+
+
+                
+            </div>
+            
+                <div id="custom_footer">
+                    <div id='global-footer' style='text-align:center'>
+<a href="http://dbcls.rois.ac.jp"><img src="http://dbcls.rois.ac.jp/wp-content/uploads/2014/11/logo_en_c.png" alt="ライフサイエンス統合データベースセンター（DBCLS）" height='36'></a>
+</div>
+                </div>
+            
+        
+        
+        
+        
+    </body>
+</html>
+<!-- end template base_content.html -->

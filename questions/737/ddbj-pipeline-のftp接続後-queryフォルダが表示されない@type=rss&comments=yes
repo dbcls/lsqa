@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: DDBJ pipeline のFTP接続後、queryフォルダが表示されない</title><link>http://qa.lifesciencedb.jp/questions/737/ddbj-pipeline-%E3%81%AEftp%E6%8E%A5%E7%B6%9A%E5%BE%8C-query%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84</link><description>&lt;p&gt;お世話になっております。&lt;/p&gt;
+&lt;p&gt;DDBJ pipeline において、FTPを使ってfastqファイルをuploadするのを目的としています。&lt;/p&gt;
+&lt;p&gt;私はマックを使用しているので、Cyberduckによって接続しました。&lt;/p&gt;
+&lt;p&gt;Pipeline tutorial によりますと、接続後に query フォルダが表示されるようですが、&lt;/p&gt;
+&lt;p&gt;そのようなフォルダが表示されません。&lt;/p&gt;
+&lt;p&gt;このqueryフォルダは、fastqをuploadする場所であるようなので、現在、往生しております。&lt;/p&gt;
+&lt;p&gt;稚拙な質問かも知れませんが、ここ数日困っております。どなたか解決策をご教示頂けないでしょうか。&lt;/p&gt;
+&lt;p&gt;どうか宜しくお願い致します。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/737/ddbj-pipeline-%E3%81%AEftp%E6%8E%A5%E7%B6%9A%E5%BE%8C-query%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 01 Apr 2014 16:15:44 +0900</lastBuildDate><item><title>Answer by megu</title><link>http://qa.lifesciencedb.jp/questions/737/ddbj-pipeline-%E3%81%AEftp%E6%8E%A5%E7%B6%9A%E5%BE%8C-query%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/739</link><description>&lt;p&gt;迅速な御回答を頂戴し誠にありがとうございます。&lt;/p&gt;
+&lt;p&gt;原因がわかりとても安心しました。&lt;/p&gt;
+&lt;p&gt;今後ともどうか宜しくお願い致します。&lt;/p&gt;
+&lt;p&gt;敬具&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">megu</dc:creator><pubDate>Tue, 01 Apr 2014 16:15:44 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/737/ddbj-pipeline-%E3%81%AEftp%E6%8E%A5%E7%B6%9A%E5%BE%8C-query%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/739</guid></item><item><title>Answer by Eli Kaminuma</title><link>http://qa.lifesciencedb.jp/questions/737/ddbj-pipeline-%E3%81%AEftp%E6%8E%A5%E7%B6%9A%E5%BE%8C-query%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/738</link><description>&lt;p&gt;いつも御利用をありがとうございます。FTP転送の件で御迷惑をおかけしております。
+停電後にFTPサーバのトラブルがあり、転送サービスを一旦停止しております。
+復旧作業が終わりましたら、https://twitter.com/pipeline_info（pipelineのトップ画面http://p.ddbj.nig.ac.jp/からも参照可能です）でアナウンス致しますので、暫くお待ち頂ければ幸いです。&lt;/p&gt;
+&lt;p&gt;＃復帰時期は確定しておりませんが、今週中の復旧を目途に作業を進めております。
+＃同様の連絡をpipelineのメールアドレスにも頂いております。皆様、お問い合わせをありがとうございました&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Eli Kaminuma</dc:creator><pubDate>Tue, 01 Apr 2014 16:13:31 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/737/ddbj-pipeline-%E3%81%AEftp%E6%8E%A5%E7%B6%9A%E5%BE%8C-query%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/738</guid></item></channel></rss>

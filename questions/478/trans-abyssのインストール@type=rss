@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: trans-abyssのインストール</title><link>http://qa.lifesciencedb.jp/questions/478/trans-abyss%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB</link><description>&lt;p&gt;ド素人の質問申し訳ありません。&lt;/p&gt;
+&lt;p&gt;manualを読みながらtrans-ABySSをインストールしようとしているのですが、
+setupするまでがよくわかりません。&lt;/p&gt;
+&lt;p&gt;pythonは最新ver.をインストールして、Perlはmacなのかv5.10.0がもともと入ってPATHも加えてありました。&lt;/p&gt;
+&lt;p&gt;そこでmanual通り&lt;/p&gt;
+&lt;p&gt;export TRANSABYSS_PATH=/home/user/Desktop/trans-ABySS &lt;/p&gt;
+&lt;p&gt;export PYTHONPATH=.:$PYTHONPATH:$TRANSABYSS_PATH &lt;/p&gt;
+&lt;p&gt;export PERL5LIB=.:$PERL5LIB:$TRANSABYSS_PATH/wrappers&lt;/p&gt;
+&lt;p&gt;をやった後にsetupしたのですがPermission deniedとなってしまいます。&lt;/p&gt;
+&lt;p&gt;どなたかご助言いただけると、幸いです。&lt;/p&gt;
+&lt;p&gt;よろしくお願いします。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/478/trans-abyss%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 14 Jun 2011 13:09:27 +0900</lastBuildDate><item><title>Answer by nob_fj</title><link>http://qa.lifesciencedb.jp/questions/478/trans-abyss%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/479</link><description>&lt;p&gt;macユーザでないので確証はありませんが、
+permission deniedは権限の無いユーザーでコマンドを実行した際に出るUNIX/LINUX系の
+メッセージと同じだと思うので、権限のあるユーザ(rootとか)で再実行するか、
+sudo export..
+としてはどうでしょう。"mac permission denied"でgoogle検索などすれば、
+関係ありそうな文章はたくさん出てくる気がします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Tue, 14 Jun 2011 13:09:27 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/478/trans-abyss%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/479</guid></item></channel></rss>

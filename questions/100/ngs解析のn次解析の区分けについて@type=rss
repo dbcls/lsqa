@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: NGS解析のn次解析の区分けについて</title><link>http://qa.lifesciencedb.jp/questions/100/ngs%E8%A7%A3%E6%9E%90%E3%81%AEn%E6%AC%A1%E8%A7%A3%E6%9E%90%E3%81%AE%E5%8C%BA%E5%88%86%E3%81%91%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;第二世代シーケンサー(いわゆる次世代シーケンサー=NGS(Next Generation Sequencer))のデータ解析について、&lt;br&gt;
+LifeTechnologies社のセミナーでは&lt;br&gt;
+1次解析:ベースコール&lt;br&gt;
+2次解析:マッピングまたはアセンブル&lt;br&gt;
+3次解析:それ以降&lt;br&gt;
+という区分けでした。&lt;br&gt;
+&lt;a href="http://www.maze.co.jp/works/bio/sq_point.html"&gt;メイズ社のサイト&lt;/a&gt;でも同様の区分けを行っているようです。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.mss.co.jp/businessfield/bioinformatics/ngs/index.html"&gt;三菱スペース・ソフトウェア株式会社のサイト&lt;/a&gt;では&lt;br&gt;
+1次解析:マッピング  &lt;br&gt;
+2次解析:RNA-Seq,ChIP-Seqなどアプリケーションごとの解析&lt;br&gt;
+という区分けでした。&lt;br&gt;
+国際的に、あるいは国内で
+これらの呼称を統一しようという動きはあるのでしょうか。&lt;br&gt;
+また、使い分けの基準などはあったりするのでしょうか。&lt;br&gt;
+現状認識の情報蓄積の意味でも、上記以外の区分けの例の情報があればご回答いただけると参考になるように思います。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/100/ngs%E8%A7%A3%E6%9E%90%E3%81%AEn%E6%AC%A1%E8%A7%A3%E6%9E%90%E3%81%AE%E5%8C%BA%E5%88%86%E3%81%91%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Thu, 02 Dec 2010 21:58:27 +0900</lastBuildDate><item><title>Answer by Eli Kaminuma</title><link>http://qa.lifesciencedb.jp/questions/100/ngs%E8%A7%A3%E6%9E%90%E3%81%AEn%E6%AC%A1%E8%A7%A3%E6%9E%90%E3%81%AE%E5%8C%BA%E5%88%86%E3%81%91%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/126</link><description>&lt;p&gt;現時点では、学術的に普及している呼称ではないと思います。理由は、次世代シークエンサ関連bioinformaticsの研究発表会「ISMB HiTSeq 2010」では、1次解析,2次解析,(続)・・という区分呼称を使う様子が見られなかったからです。以下私見です。LifeTech社さんはシーケンサベンダーである為に、ベースコール処理を含む解析全体を3段階に規定。一方、三菱スペース・ソフトウェア株式会社さんは、ベースコール処理後スタートの受託解析が中心である為に、2段階を規定。つまり各社のサービス取扱範囲で処理段階数の定義が異なり、番号付けの混乱は現状避けられないのでは、と考えています。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Eli Kaminuma</dc:creator><pubDate>Thu, 02 Dec 2010 21:58:27 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/100/ngs%E8%A7%A3%E6%9E%90%E3%81%AEn%E6%AC%A1%E8%A7%A3%E6%9E%90%E3%81%AE%E5%8C%BA%E5%88%86%E3%81%91%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/126</guid></item><item><title>Answer by mya_</title><link>http://qa.lifesciencedb.jp/questions/100/ngs%E8%A7%A3%E6%9E%90%E3%81%AEn%E6%AC%A1%E8%A7%A3%E6%9E%90%E3%81%AE%E5%8C%BA%E5%88%86%E3%81%91%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/107</link><description>&lt;p&gt;私見ですが、生データだけ出します、素組までやります、こまかい解析まで行います、という感じで
+解析の次数は企業が解析料金としてお金を貰う段階によって便宜的に区切られているのではないでしょうか。&lt;/p&gt;
+&lt;p&gt;具体的な手法はともかく、&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;シーケンサから出た生画像データからシーケンスファイルを生成。まず配列を得なければ何もできないのでどの解析でも行わなければいけないステップ。&lt;/li&gt;
+&lt;li&gt;(raw なシーケンスから、何らかの条件をつけて配列のフィルタリング、トリミングを行うのであれば追加処理)&lt;/li&gt;
+&lt;li&gt;委託元が、計算資源が足りないなどで取得した数百万から数億のバラ配列を処理しきれないのであれば、シーケンスをとりまとめる処理。リファレンスに対するmappingなり、denovo assembleを行う。(１つのソフトウェア単体でフィルタリング、トリミング機能が含まれているのであれば、前述2と3が同じステップになる。)&lt;/li&gt;
+&lt;li&gt;(アウトプットを解釈しやすい形式に変換する。グラフィカルビューア対応や、サマリ出力などの処理)&lt;/li&gt;
+&lt;li&gt;出てきたデータに対して、マッピング分布の偏りや特異点検出、配列比較などするのであれば、各アプリケーションで追加解析&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;というような流れになり、それぞれオーバーラップしたり解析段数が変わったりするでしょうから、個人的にはn次の数字に意味があるような印象は受けていません。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mya_</dc:creator><pubDate>Tue, 30 Nov 2010 16:30:26 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/100/ngs%E8%A7%A3%E6%9E%90%E3%81%AEn%E6%AC%A1%E8%A7%A3%E6%9E%90%E3%81%AE%E5%8C%BA%E5%88%86%E3%81%91%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/107</guid></item></channel></rss>

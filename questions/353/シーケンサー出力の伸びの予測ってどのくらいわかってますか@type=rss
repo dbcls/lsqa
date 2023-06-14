@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: シーケンサー出力の伸びの予測ってどのくらいわかってますか？</title><link>http://qa.lifesciencedb.jp/questions/353/%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E5%87%BA%E5%8A%9B%E3%81%AE%E4%BC%B8%E3%81%B3%E3%81%AE%E4%BA%88%E6%B8%AC%E3%81%A3%E3%81%A6%E3%81%A9%E3%81%AE%E3%81%8F%E3%82%89%E3%81%84%E3%82%8F%E3%81%8B%E3%81%A3%E3%81%A6%E3%81%BE%E3%81%99%E3%81%8B</link><description>&lt;p&gt;過去の進歩の歴史を後程アップしておきます。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/353/%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E5%87%BA%E5%8A%9B%E3%81%AE%E4%BC%B8%E3%81%B3%E3%81%AE%E4%BA%88%E6%B8%AC%E3%81%A3%E3%81%A6%E3%81%A9%E3%81%AE%E3%81%8F%E3%82%89%E3%81%84%E3%82%8F%E3%81%8B%E3%81%A3%E3%81%A6%E3%81%BE%E3%81%99%E3%81%8B" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 01 Mar 2011 00:38:04 +0900</lastBuildDate><item><title>Answer by okubo</title><link>http://qa.lifesciencedb.jp/questions/353/%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E5%87%BA%E5%8A%9B%E3%81%AE%E4%BC%B8%E3%81%B3%E3%81%AE%E4%BA%88%E6%B8%AC%E3%81%A3%E3%81%A6%E3%81%A9%E3%81%AE%E3%81%8F%E3%82%89%E3%81%84%E3%82%8F%E3%81%8B%E3%81%A3%E3%81%A6%E3%81%BE%E3%81%99%E3%81%8B/377</link><description>&lt;p&gt;http://seqanswers.com/forums/archive/index.php&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Single-Molecule DNA Sequencing of a Viral Genome&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Timothy D. Harris,1* Phillip R. Buzby,1 Hazen Babcock,1 Eric Beer,1 Jayson Bowers,1 Ido Braslavsky,2 Marie Causey,1 Jennifer Colonell,1 James DiMeo,1 J. William Efcavitch,1 Eldar Giladi,1 Jaime Gill,1 John Healy,1 Mirna Jarosz,1 Dan Lapen,1 Keith Moulton,1 Stephen R. Quake,3 Kathleen Steinmann,1 Edward Thayer,1 Anastasia Tyurina,1 Rebecca Ward,1 Howard Weiss,1 Zheng Xie1&lt;/p&gt;
+&lt;p&gt;The full promise of human genomics will be realized only when the genomes of thousands of individuals can be sequenced for comparative analysis. A reference sequence enables the use of short read length. We report an amplification-free method for determining the nucleotide sequence of more than 280,000 individual DNA molecules simultaneously. A DNA polymerase adds labeled nucleotides to surface-immobilized primer-template duplexes in stepwise fashion, and the asynchronous growth of individual DNA molecules was monitored by fluorescence imaging. Read lengths of &amp;gt;25 bases and equivalent phred software program quality scores approaching 30 were achieved. We used this method to sequence the M13 virus to an average depth of &amp;gt;150x and with 100% coverage; thus, we resequenced the M13 genome with high-sensitivity mutation detection. This demonstrates a strategy for high-throughput low-cost resequencing.&lt;/p&gt;
+&lt;p&gt;1 Helicos BioSciences Corporation, One Kendall Square, Cambridge, MA 02139, USA.
+2 Department of Physics and Astronomy, Ohio University, Athens, OH 45701, USA.
+3 Department of Bioengineering, Stanford University, and Howard Hughes Medical Institute, Stanford, CA 94305, USA.
+The paper abstract and full text (for subscribers) is located here:
+http://www.sciencemag.org/cgi/content/abstract/320/5872/106&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">okubo</dc:creator><pubDate>Tue, 01 Mar 2011 00:38:04 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/353/%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E5%87%BA%E5%8A%9B%E3%81%AE%E4%BC%B8%E3%81%B3%E3%81%AE%E4%BA%88%E6%B8%AC%E3%81%A3%E3%81%A6%E3%81%A9%E3%81%AE%E3%81%8F%E3%82%89%E3%81%84%E3%82%8F%E3%81%8B%E3%81%A3%E3%81%A6%E3%81%BE%E3%81%99%E3%81%8B/377</guid></item><item><title>Answer by okubo</title><link>http://qa.lifesciencedb.jp/questions/353/%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E5%87%BA%E5%8A%9B%E3%81%AE%E4%BC%B8%E3%81%B3%E3%81%AE%E4%BA%88%E6%B8%AC%E3%81%A3%E3%81%A6%E3%81%A9%E3%81%AE%E3%81%8F%E3%82%89%E3%81%84%E3%82%8F%E3%81%8B%E3%81%A3%E3%81%A6%E3%81%BE%E3%81%99%E3%81%8B/376</link><description>&lt;p&gt;Here's a list George Church uses, I think.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Illumina-GA        SbP Fluorescent read-length 2*110 bp&lt;/li&gt;
+&lt;li&gt;AB-SOLiD           SbL Longest ligation reads&lt;/li&gt;
+&lt;li&gt;CGI                SbL $2000 genome, rolony grid, 100Kb haplotypes&lt;/li&gt;
+&lt;li&gt;Polonator          SbL/P Open-source, $170K device, 100Mb haplotypes&lt;/li&gt;
+&lt;li&gt;Roche-454          SbP Long reads (&amp;gt;0.4 kb)&lt;/li&gt;
+&lt;li&gt;Helicos            SbP-sm Hi h parallelism &amp;amp; quantitation&lt;/li&gt;
+&lt;li&gt;Ion Torrent        SbP $50K, small device&lt;/li&gt;
+&lt;li&gt;Pacific Bio        SbP-sm Long reads (&amp;gt;2.0 kb)
+9 Intelligent Bio     SbP hexagonal grid&lt;/li&gt;
+&lt;li&gt;Halcyon           EM-sm Long reads (&amp;gt;Mb), $100 genome&lt;/li&gt;
+&lt;li&gt;Genizon BioSci    SbH in situ sequencing&lt;/li&gt;
+&lt;li&gt;LightSpeed        SbL 16X higher density &amp;gt;10X speed&lt;/li&gt;
+&lt;li&gt;Bionanomatrix     SbP-sm Fluorescent mapping&lt;/li&gt;
+&lt;li&gt;OxfordNanopore    Pore-protein-sm small device&lt;/li&gt;
+&lt;li&gt;Visigen               SbP-sm Pol &amp;lt;&amp;gt; dNTP FRET&lt;/li&gt;
+&lt;li&gt;ZS Genetics       EM-sm Iodine labels&lt;/li&gt;
+&lt;li&gt;Nabsys            Pore-SbH-sm small device&lt;/li&gt;
+&lt;li&gt;GE Global         SbP-sm&lt;/li&gt;
+&lt;li&gt;IBM               Pore Si-sm small device&lt;/li&gt;
+&lt;li&gt;Electronic Biosci Pore-protein-sm&lt;/li&gt;
+&lt;li&gt;GnuBio            SbP-picoliter droplets&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The few additions are:
+&lt;em&gt; CGI
+&lt;/em&gt; Polonator (it's a company?)
+&lt;em&gt; Roche-454
+&lt;/em&gt; Ion Torrent
+&lt;em&gt; GeniZon BioSci
+&lt;/em&gt; GE Global
+&lt;em&gt; IBM
+&lt;/em&gt; Electroni Biosci &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">okubo</dc:creator><pubDate>Tue, 01 Mar 2011 00:34:01 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/353/%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E5%87%BA%E5%8A%9B%E3%81%AE%E4%BC%B8%E3%81%B3%E3%81%AE%E4%BA%88%E6%B8%AC%E3%81%A3%E3%81%A6%E3%81%A9%E3%81%AE%E3%81%8F%E3%82%89%E3%81%84%E3%82%8F%E3%81%8B%E3%81%A3%E3%81%A6%E3%81%BE%E3%81%99%E3%81%8B/376</guid></item></channel></rss>

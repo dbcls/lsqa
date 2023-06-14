@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With dyld</title><link>http://qa.lifesciencedb.jp/tags/dyld/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;dyld&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/dyld/" rel="self"></atom:link><language>ja</language><lastBuildDate>Sat, 21 Jul 2018 15:14:13 +0900</lastBuildDate><item><title>Hisat2がerror</title><link>http://qa.lifesciencedb.jp/questions/885/hisat2%E3%81%8Cerror</link><description>&lt;p&gt;Hisat2のindexを作る作業が動きません。
+このようなエラーがでます。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;$ hisat2-build /Mus_musculus/UCSC/mm10/Sequence/WholeGenomeFasta/genome.fa
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;genome_index&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dyld: Symbol not found:
+__ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Referenced from:
+/usr/local/Cellar/hisat2/2.1.0/bin/hisat2-build-s
+Expected in:
+/usr/lib/libstdc++.6.0.9.dylib  in
+/usr/local/Cellar/hisat2/2.1.0/bin/hisat2-build-s
+Abort trap: 6&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;いろいろ調べて試しましたが、意味がわかりませんでした。問題解決のヒントをご教示いただければ幸いです。
+Brew update doctor upgradeは問題なかったです。&lt;/p&gt;
+&lt;p&gt;configです。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;$ brew config
+HOMEBREW_VERSION: 1.7.0
+ORIGIN: https://github.com/Homebrew/brew
+HEAD: 7e8fb9a0f8ab5e841763ec6c7fefa72a8462b594
+Last commit: 5 days ago
+Core tap ORIGIN: https://github.com/Homebrew/homebrew-core
+Core tap HEAD: fa5253faa1d416851bbd3d957f67f5ccbcb15441
+Core tap last commit: 6 hours ago
+HOMEBREW_PREFIX: /usr/local
+CPU: quad-core 64-bit skylake
+Homebrew Ruby: 2.3.7 =&amp;gt; /usr/local/Homebrew/Library/Homebrew/vendor/portable-ruby/2.3.7/bin/ruby
+Clang: 9.1 build 902
+Git: 2.18.0 =&amp;gt; /usr/local/bin/git
+Curl: 7.54.0 =&amp;gt; /usr/bin/curl
+Java: 10.0.2, 1.8.0_121
+macOS: 10.13.6-x86_64
+CLT: 9.4.1.0.1.1528165917
+Xcode: 9.4.1
+XQuartz: 2.7.11 =&amp;gt; /opt/X11
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;どうぞよろしくお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mikan03</dc:creator><pubDate>Sat, 21 Jul 2018 15:14:13 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/885/hisat2%E3%81%8Cerror</guid><category>hisat2</category><category>dyld</category><category>index</category></item></channel></rss>

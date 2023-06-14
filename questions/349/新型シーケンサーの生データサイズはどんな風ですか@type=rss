@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: 新型シーケンサーの生データサイズはどんな風ですか？</title><link>http://qa.lifesciencedb.jp/questions/349/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%AF%E3%81%A9%E3%82%93%E3%81%AA%E9%A2%A8%E3%81%A7%E3%81%99%E3%81%8B</link><description>&lt;p&gt;&lt;img alt="alt text" src="http://farm6.static.flickr.com/5253/5475238349_f91dd0c290_z.jpg"&gt;
+[http://www.flickr.com/photos/59261391@N05/5475238349/][2]
+はしばらく前の議論に使った目安です。　現状はどうなんでしょうか？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Kato Kikuya&lt;/strong&gt; &lt;strong&gt;Impact of the next generation DNA sequencers&lt;/strong&gt; . Int J Clin Exp Med. 2009; 2(2): 193–202.
+Published online 2009 July 8. 
+Comparison of sequencers (January, 2009). It should be noted that the throughput of each sequencer is improving rapidly&lt;/p&gt;
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+
+&lt;/th&gt;
+            &lt;th&gt;
+                ABI 3730xI
+            &lt;/th&gt;
+            &lt;th&gt;
+                Roche GS FLX
+            &lt;/th&gt;
+            &lt;th&gt;
+                Illumina GA
+            &lt;/th&gt;
+            &lt;th&gt;
+                ABI SOLiD
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                Bases/template
+            &lt;/th&gt;
+            &lt;td&gt;
+                ∼1100
+            &lt;/td&gt;
+            &lt;td&gt;
+                ∼400
+            &lt;/td&gt;
+            &lt;td&gt;
+                ∼75
+            &lt;/td&gt;
+            &lt;td&gt;
+                50
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                Templates/run
+            &lt;/th&gt;
+            &lt;td&gt;
+                96
+            &lt;/td&gt;
+            &lt;td&gt;
+                1,000,000
+            &lt;/td&gt;
+            &lt;td&gt;
+                40,000,000
+            &lt;/td&gt;
+            &lt;td&gt;
+                85,000,000
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                Data production/day
+            &lt;/th&gt;
+            &lt;td&gt;
+                1 MB/day
+            &lt;/td&gt;
+            &lt;td&gt;
+                400MB/run/7.5hr
+            &lt;/td&gt;
+            &lt;td&gt;
+                3,000MB/run/6.5 days
+            &lt;/td&gt;
+            &lt;td&gt;
+                4,000MB/run/6 days
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                Maximum samples
+            &lt;/th&gt;
+            &lt;td&gt;
+                96
+            &lt;/td&gt;
+            &lt;td&gt;
+                16 regions/plate
+            &lt;/td&gt;
+            &lt;td&gt;
+                8 channels/flowcell
+            &lt;/td&gt;
+            &lt;td&gt;
+                16chambers/2 slides
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                Sequence reaction
+            &lt;/th&gt;
+            &lt;td&gt;
+                Sanger method
+            &lt;/td&gt;
+            &lt;td&gt;
+                pyrosequencing
+            &lt;/td&gt;
+            &lt;td&gt;
+                Reverse terminator
+            &lt;/td&gt;
+            &lt;td&gt;
+                ligation sequencing
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/349/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%AF%E3%81%A9%E3%82%93%E3%81%AA%E9%A2%A8%E3%81%A7%E3%81%99%E3%81%8B" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 28 Feb 2011 22:20:49 +0900</lastBuildDate><item><title>Answer by okubo</title><link>http://qa.lifesciencedb.jp/questions/349/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%AF%E3%81%A9%E3%82%93%E3%81%AA%E9%A2%A8%E3%81%A7%E3%81%99%E3%81%8B/375</link><description>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                Method
+            &lt;/th&gt;
+            &lt;th&gt;
+                Amplification
+            &lt;/th&gt;
+            &lt;th&gt;
+                Read length (base pairs)
+            &lt;/th&gt;
+            &lt;th&gt;
+                Templates per run
+            &lt;/th&gt;
+            &lt;th&gt;
+                Data production/day
+            &lt;/th&gt;
+            &lt;th&gt;
+                Sequence reaction
+            &lt;/th&gt;
+            &lt;th&gt;
+                Reference
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                     ABI 3730xI
+            &lt;/th&gt;
+            &lt;td&gt;
+                PCR
+            &lt;/td&gt;
+            &lt;td&gt;
+                ~900 to 1,100
+            &lt;/td&gt;
+            &lt;td&gt;
+                96
+            &lt;/td&gt;
+            &lt;td&gt;
+                1 Mb/day
+            &lt;/td&gt;
+            &lt;td&gt;
+                Sanger method
+            &lt;/td&gt;
+            &lt;td&gt;
+                http://www.appliedbyosystems.com
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                     454 FLX Roche
+            &lt;/th&gt;
+            &lt;td&gt;
+                Emulsion PCR
+            &lt;/td&gt;
+            &lt;td&gt;
+                ~400
+            &lt;/td&gt;
+            &lt;td&gt;
+                1,000,000
+            &lt;/td&gt;
+            &lt;td&gt;
+                400 Mb/run/7.5 to 8 hours
+            &lt;/td&gt;
+            &lt;td&gt;
+                Pyrosequencing
+            &lt;/td&gt;
+            &lt;td&gt;
+                http://www.rocheapplied-science.com
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                     Illumina (Solexa) Genome Analyzer
+            &lt;/th&gt;
+            &lt;td&gt;
+                Bridge PCR
+            &lt;/td&gt;
+            &lt;td&gt;
+                36 to 175
+            &lt;/td&gt;
+            &lt;td&gt;
+                40,000,000
+            &lt;/td&gt;
+            &lt;td&gt;
+                &amp;gt;17 Gb/run/3 to 6 days
+            &lt;/td&gt;
+            &lt;td&gt;
+                Reverse terminator
+            &lt;/td&gt;
+            &lt;td&gt;
+                http://www.illumina.com
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                     ABI SOLiD
+            &lt;/th&gt;
+            &lt;td&gt;
+                Emulsion PCR
+            &lt;/td&gt;
+            &lt;td&gt;
+                ~50
+            &lt;/td&gt;
+            &lt;td&gt;
+                85,000,000
+            &lt;/td&gt;
+            &lt;td&gt;
+                10 to 15 Gb/run/6 days
+            &lt;/td&gt;
+            &lt;td&gt;
+                Ligation sequencing
+            &lt;/td&gt;
+            &lt;td&gt;
+                http://www.appliedbyosystems.com
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                     Helicos Heliscope
+            &lt;/th&gt;
+            &lt;td&gt;
+                None
+            &lt;/td&gt;
+            &lt;td&gt;
+                30 to 35
+            &lt;/td&gt;
+            &lt;td&gt;
+                800,000,000
+            &lt;/td&gt;
+            &lt;td&gt;
+                21 to 28 Gb/run/8 days
+            &lt;/td&gt;
+            &lt;td&gt;
+                Single molecule sequence by synthesis
+            &lt;/td&gt;
+            &lt;td&gt;
+                http://www.helicosbio.com
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;Next-generation sequencing,  breast-cancer-research.comJ Reis-Filho - Breast Cancer Research, 2009&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th colspan="7"&gt;
+                Technologies in development
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                     Pacific Biosciences
+            &lt;/th&gt;
+            &lt;td&gt;
+                None
+            &lt;/td&gt;
+            &lt;td&gt;
+                &amp;gt;1,000
+            &lt;/td&gt;
+            &lt;td&gt;
+                NA
+            &lt;/td&gt;
+            &lt;td&gt;
+                NA
+            &lt;/td&gt;
+            &lt;td&gt;
+                Single molecule real-time DNA sequencing
+            &lt;/td&gt;
+            &lt;td&gt;
+                http://www.pacificbiosciences.com
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                     Intelligent Biosciences
+            &lt;/th&gt;
+            &lt;td&gt;
+                Yesa
+            &lt;/td&gt;
+            &lt;td&gt;
+                NA
+            &lt;/td&gt;
+            &lt;td&gt;
+                NA
+            &lt;/td&gt;
+            &lt;td&gt;
+                NA
+            &lt;/td&gt;
+            &lt;td&gt;
+                Sequence by synthesis
+            &lt;/td&gt;
+            &lt;td&gt;
+                http://www.intelligentbiosystems.com
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                     Visigen Biotechnologies
+            &lt;/th&gt;
+            &lt;td&gt;
+                None
+            &lt;/td&gt;
+            &lt;td&gt;
+                NA
+            &lt;/td&gt;
+            &lt;td&gt;
+                NA
+            &lt;/td&gt;
+            &lt;td&gt;
+                NA
+            &lt;/td&gt;
+            &lt;td&gt;
+                Base-specific FRET emission
+            &lt;/td&gt;
+            &lt;td&gt;
+                http://www.visigenbio.com
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                     ZS Genetics
+            &lt;/th&gt;
+            &lt;td&gt;
+                None
+            &lt;/td&gt;
+            &lt;td&gt;
+                NA
+            &lt;/td&gt;
+            &lt;td&gt;
+                NA
+            &lt;/td&gt;
+            &lt;td&gt;
+                NA
+            &lt;/td&gt;
+            &lt;td&gt;
+                ZSG atomic labelling and electron microscopy
+            &lt;/td&gt;
+            &lt;td&gt;
+                http://www.zsgenetics.com
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">okubo</dc:creator><pubDate>Mon, 28 Feb 2011 22:20:49 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/349/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%AF%E3%81%A9%E3%82%93%E3%81%AA%E9%A2%A8%E3%81%A7%E3%81%99%E3%81%8B/375</guid></item><item><title>Answer by okubo</title><link>http://qa.lifesciencedb.jp/questions/349/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%AF%E3%81%A9%E3%82%93%E3%81%AA%E9%A2%A8%E3%81%A7%E3%81%99%E3%81%8B/374</link><description>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                Platform 
+            &lt;/th&gt;
+            &lt;th&gt;
+                Company 
+            &lt;/th&gt;
+            &lt;th&gt;
+                Sequencing data per run (single read) 
+            &lt;/th&gt;
+            &lt;th&gt;
+                2 Kb – calculated multiplexing for50x coverage  
+            &lt;/th&gt;
+            &lt;th&gt;
+                1 Mb – calculatedmultiplexing for 50x coverage
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                GS Junior 
+            &lt;/th&gt;
+            &lt;td&gt;
+                454 Sequencing 
+            &lt;/td&gt;
+            &lt;td&gt;
+                40 MB 
+            &lt;/td&gt;
+            &lt;td&gt;
+                400
+            &lt;/td&gt;
+            &lt;td&gt;
+                approx. 1
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                GS FLX 
+            &lt;/th&gt;
+            &lt;td&gt;
+                454 Sequencing 
+            &lt;/td&gt;
+            &lt;td&gt;
+                540 MB 
+            &lt;/td&gt;
+            &lt;td&gt;
+                5,400
+            &lt;/td&gt;
+            &lt;td&gt;
+                11
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                MiSeq 
+            &lt;/th&gt;
+            &lt;td&gt;
+                Illumina 
+            &lt;/td&gt;
+            &lt;td&gt;
+                510 MB 
+            &lt;/td&gt;
+            &lt;td&gt;
+                5,100
+            &lt;/td&gt;
+            &lt;td&gt;
+                10
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                GA IIx 
+            &lt;/th&gt;
+            &lt;td&gt;
+                Illumina 
+            &lt;/td&gt;
+            &lt;td&gt;
+                48,000 MB 
+            &lt;/td&gt;
+            &lt;td&gt;
+                480,000
+            &lt;/td&gt;
+            &lt;td&gt;
+                960
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                HiSeq2000 
+            &lt;/th&gt;
+            &lt;td&gt;
+                Illumina 
+            &lt;/td&gt;
+            &lt;td&gt;
+                100,000 MB 
+            &lt;/td&gt;
+            &lt;td&gt;
+                1,000,000
+            &lt;/td&gt;
+            &lt;td&gt;
+                2,000
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                SOLiD4 
+            &lt;/th&gt;
+            &lt;td&gt;
+                Life Technologies
+            &lt;/td&gt;
+            &lt;td&gt;
+                150,000 MB
+            &lt;/td&gt;
+            &lt;td&gt;
+                1,500,000
+            &lt;/td&gt;
+            &lt;td&gt;
+                3,000
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                AB3730xl 
+            &lt;/th&gt;
+            &lt;td&gt;
+                Life Technologies 
+            &lt;/td&gt;
+            &lt;td&gt;
+                0.08 MB 
+            &lt;/td&gt;
+            &lt;td&gt;
+                – 
+            &lt;/td&gt;
+            &lt;td&gt;
+                –
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Table 1: Overview of the amount of data generated from currently available NGS platforms from the three largest competitors (based on manufacturer’s specifications) along with an estimate of thenumber of samples that could theoretically be analyzed during a single sequencing run.   Next-generation Sequencing, Application in Molecular Diagnostics, M.Sc Stefan Kotschote et al., IMGM Laboratories 2011 - imgm.com&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">okubo</dc:creator><pubDate>Mon, 28 Feb 2011 22:10:05 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/349/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%AF%E3%81%A9%E3%82%93%E3%81%AA%E9%A2%A8%E3%81%A7%E3%81%99%E3%81%8B/374</guid></item><item><title>Answer by okubo</title><link>http://qa.lifesciencedb.jp/questions/349/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%AF%E3%81%A9%E3%82%93%E3%81%AA%E9%A2%A8%E3%81%A7%E3%81%99%E3%81%8B/367</link><description>&lt;p&gt;&lt;a href="http://"&gt;仲里　SRA 目次&lt;/a&gt;をみると　次世代といってもいろいろあるのがよくわかります。数値は実験数です。　経時展開できるともっといいんですけどね
+&lt;/p&gt;&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                Illumina Genome Analyzer II 
+            &lt;/th&gt;
+            &lt;th&gt;
+                19786
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                454 GS FLX 
+            &lt;/th&gt;
+            &lt;td&gt;
+                5815
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                Illumina Genome Analyzer 
+            &lt;/th&gt;
+            &lt;td&gt;
+                5191
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                Illumina HiSeq 2000 
+            &lt;/th&gt;
+            &lt;td&gt;
+                2873
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                454 Titanium 
+            &lt;/th&gt;
+            &lt;td&gt;
+                2799
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                GS FLX 
+            &lt;/th&gt;
+            &lt;td&gt;
+                709
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                unspecified 
+            &lt;/th&gt;
+            &lt;td&gt;
+                577
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                Illumina Genome Analyzer IIx 
+            &lt;/th&gt;
+            &lt;td&gt;
+                344
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                AB SOLiD System 3.0 
+            &lt;/th&gt;
+            &lt;td&gt;
+                339
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                454 GS FLX Titanium 
+            &lt;/th&gt;
+            &lt;td&gt;
+                309
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                Solexa 1G Genome Analyzer 
+            &lt;/th&gt;
+            &lt;td&gt;
+                268
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                AB SOLiD 4 System 
+            &lt;/th&gt;
+            &lt;td&gt;
+                265
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                AB SOLiD System 2.0 
+            &lt;/th&gt;
+            &lt;td&gt;
+                198
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                GS 20 
+            &lt;/th&gt;
+            &lt;td&gt;
+                164
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                AB SOLiD System 
+            &lt;/th&gt;
+            &lt;td&gt;
+                118
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                454 GS 20 
+            &lt;/th&gt;
+            &lt;td&gt;
+                118
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                Helicos HeliScope 
+            &lt;/th&gt;
+            &lt;td&gt;
+                16
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                454 GS 
+            &lt;/th&gt;
+            &lt;td&gt;
+                11
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                none 
+            &lt;/th&gt;
+            &lt;td&gt;
+                5
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                UNKNOWN 
+            &lt;/th&gt;
+            &lt;td&gt;
+                5
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                Total 
+            &lt;/th&gt;
+            &lt;td&gt;
+                39910
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                (experiments)
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;&lt;p&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">okubo</dc:creator><pubDate>Sun, 27 Feb 2011 13:32:30 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/349/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%AF%E3%81%A9%E3%82%93%E3%81%AA%E9%A2%A8%E3%81%A7%E3%81%99%E3%81%8B/367</guid></item><item><title>Answer by na</title><link>http://qa.lifesciencedb.jp/questions/349/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%AF%E3%81%A9%E3%82%93%E3%81%AA%E9%A2%A8%E3%81%A7%E3%81%99%E3%81%8B/351</link><description>&lt;p&gt;HiSeq約100bpくらいのリードの1レーンシングル分(1ファイル)で25~30GB、ペアエンド分(2ファイル)だとその2倍くらいです。1ラン8レーンなので400~480GBくらいでしょうか。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">na</dc:creator><pubDate>Fri, 25 Feb 2011 14:57:45 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/349/%E6%96%B0%E5%9E%8B%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC%E3%81%AE%E7%94%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B5%E3%82%A4%E3%82%BA%E3%81%AF%E3%81%A9%E3%82%93%E3%81%AA%E9%A2%A8%E3%81%A7%E3%81%99%E3%81%8B/351</guid></item></channel></rss>

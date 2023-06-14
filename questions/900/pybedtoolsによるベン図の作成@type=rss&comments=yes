@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: pyBedtoolsによるベン図の作成</title><link>http://qa.lifesciencedb.jp/questions/900/pybedtools%E3%81%AB%E3%82%88%E3%82%8B%E3%83%99%E3%83%B3%E5%9B%B3%E3%81%AE%E4%BD%9C%E6%88%90</link><description>&lt;p&gt;またお願いします、DRY解析教本にてChip seqの解析を勉強している者です。&lt;/p&gt;
+&lt;p&gt;venn_mpl.py~コマンドを使用してベン図を作成しようとしておりますが、”matplotlib is required to make a Venn diagram with venn_mpl.py”と表示され解析できません。
+Homebrewでmatplotlibをインストールしても同じ結果です。&lt;/p&gt;
+&lt;p&gt;お知恵をお貸し下さい、よろしくお願いいたします。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/900/pybedtools%E3%81%AB%E3%82%88%E3%82%8B%E3%83%99%E3%83%B3%E5%9B%B3%E3%81%AE%E4%BD%9C%E6%88%90" rel="self"></atom:link><language>ja</language><lastBuildDate>Mon, 22 May 2023 17:46:32 -0000</lastBuildDate></channel></rss>

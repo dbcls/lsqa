@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: Tophatのbutterflyオプションについて</title><link>http://qa.lifesciencedb.jp/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;36bpのシングルエンドRNA-seqデータを使って解析をしようとしているのですが、
+バージョン1.0.12から追加された--butterfly-searchというオプションを使ったことの
+ある方、または使った時と使わなかった時の比較をされた方はいらっしゃいませんでしょうか？
+36bpなので--segment-length 18でジャンクション同定してもノイズが多くなりそうで、
+そのままbowtieでマッピングしてしまおうと考えていたのですが、Tophatのマニュアルを
+見ていて、このオプションがあることを知ってどうしようか迷っています。
+Tophatの論文にはこのbutterflyのアルゴリズムに関する記述はなく、&lt;a href="http://seqanswers.com/forums/showthread.php?t=7254"&gt;SEQanswersでは
+数百GBものoutputを出すとの報告があり&lt;/a&gt;
+、ラボに大型サーバーがない私では自分で
+このオプションをテストするのが難しい状況です。
+もしお試しになった方がいらっしゃれば、ご教授お願いいたします。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 22 Nov 2011 22:52:46 +0900</lastBuildDate><item><title>Answer by nob_fj</title><link>http://qa.lifesciencedb.jp/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/541</link><description>&lt;p&gt;&lt;a href="http://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=tophat+butterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E6%AF%94%E8%BC%83&amp;amp;no_bl=y"&gt;NGS Sufer's Wiki(tophat butterflyオプションの比較)&lt;/a&gt; にオプションを変えた結果をアップしてみました。&lt;/p&gt;
+&lt;p&gt;butterflyオプションになじみが無いため、オプションの渡し方がおかしいか、入力データ依存とは思いますが、
+試したデータではbutterflyオプションとno-buttterflyに違いはありませんでした。&lt;/p&gt;
+&lt;p&gt;試した選択肢は以下&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;--butterfly-search&lt;/li&gt;
+&lt;li&gt;--no-butterfly-search&lt;/li&gt;
+&lt;li&gt;--segment-length 17&lt;/li&gt;
+&lt;li&gt;--segment-length 10&lt;/li&gt;
+&lt;li&gt;--segment-length 15&lt;/li&gt;
+&lt;li&gt;--segment-length 17 --butterfly-search &lt;/li&gt;
+&lt;li&gt;--segment-length 10 --butterfly-search &lt;/li&gt;
+&lt;li&gt;--segment-length 15 --butterfly-search &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;junctionの数は以下&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;0&lt;/li&gt;
+&lt;li&gt;0&lt;/li&gt;
+&lt;li&gt;308&lt;/li&gt;
+&lt;li&gt;0&lt;/li&gt;
+&lt;li&gt;3&lt;/li&gt;
+&lt;li&gt;306&lt;/li&gt;
+&lt;li&gt;0&lt;/li&gt;
+&lt;li&gt;323&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;詳しくはページをご覧ください。
+使用データは&lt;a href="http://trace.ddbj.nig.ac.jp/DRASearch/run?acc=SRR031811"&gt;SRR031811&lt;/a&gt;。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Tue, 22 Nov 2011 22:52:46 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/536/tophat%E3%81%AEbutterfly%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/541</guid></item></channel></rss>

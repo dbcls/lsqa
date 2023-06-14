@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Questions Tagged With fasta</title><link>http://qa.lifesciencedb.jp/tags/fasta/&amp;type=rss</link><description>questions tagged &lt;span class="tag"&gt;fasta&lt;/span&gt;</description><atom:link href="http://qa.lifesciencedb.jp/tags/fasta/" rel="self"></atom:link><language>ja</language><lastBuildDate>Tue, 09 Dec 2014 23:48:24 +0900</lastBuildDate><item><title>TopHatのreferenceデータについて</title><link>http://qa.lifesciencedb.jp/questions/824/tophat%E3%81%AEreference%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;今回はTophat2 (bowtie2)に使用するgenome indexについて質問があり利用させていただきました。&lt;/p&gt;
+&lt;p&gt;現在TopHat2およびCufflinksを用いたNGSデータ解析を計画しています。&lt;br&gt;
+他のツールの出力と比較する為、annotation及びindexデータは"Ensembl release 72"を使用したいと考えています。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+Q1) そこで質問ですが、旧バージョンのannotation及びgenome indexをiGenome等でDLすることは可能でしょうか？&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+不可能であればEnsembl archiveのFTPサイトよりDLし、bowtie2でbuildしようかとも考えています。&lt;br&gt;
+annotationデータは、FTP内のGTFファイルを、indexデータはDNAのFASTAファイルをbuildして用いようと考えます。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+Q2) そこでさらに質問ですが、indexデータのbuildに当たり、全ゲノムのfaファイルは存在しないのでしょうか。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+今回の目的は全ゲノムを対象とするのですが、FTPサイトを見た所、各染色体別のfaファイルしか準備されていません。&lt;br&gt;
+これらを必要数つなぎ合わせてgenome indexを作成しても良いものでしょうか。&lt;/p&gt;
+&lt;p&gt;基本的な質問となり申し訳ありません。どちらか片方でもお答えくだされば幸いです。&lt;br&gt;
+どうぞよろしくお願い致します。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kent_allow</dc:creator><pubDate>Tue, 09 Dec 2014 23:48:24 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/824/tophat%E3%81%AEreference%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>tophat</category><category>fasta</category><category>reference</category><category>ngs</category></item><item><title>SAMファイルのFASTAファイルへの変換について</title><link>http://qa.lifesciencedb.jp/questions/708/sam%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AEfasta%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E5%A4%89%E6%8F%9B%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;お世話になっております．&lt;/p&gt;
+&lt;p&gt;表題の内容についてお聞きしたいことがあります．&lt;/p&gt;
+&lt;p&gt;454GS FLXで得られた底生動物のCOI領域のロングリード（平均300bp・合計16万配列）を，国際DNAデータバンクからダウンロードしたCOI領域（658bp）の配列に対しマッピングを行いました．&lt;/p&gt;
+&lt;p&gt;マッピングツールはBWAを用い，出力されたSAMファイルをFASTA形式のファイルに変換したいと考えています．&lt;/p&gt;
+&lt;p&gt;例）&lt;/p&gt;
+&lt;p&gt;リファレンス配列　 ACGTAAACGTTTACGT &lt;/p&gt;
+&lt;p&gt;クエリ配列　　　　 ACGTAA－CGTT&lt;/p&gt;
+&lt;p&gt;クエリ配列　　　　　 CGTAAACGTT－A&lt;/p&gt;
+&lt;p&gt;クエリ配列　　　　　　 GTAA－CG&lt;/p&gt;
+&lt;p&gt;このようにマッピングされた時，マッピングされた配列の開始位置やギャップ等の情報が反映された下のようなFASTAファイルへの変換は可能でしょうか．&lt;/p&gt;
+&lt;p&gt;＞Query1&lt;/p&gt;
+&lt;p&gt;ACGTAA－CGTT&lt;/p&gt;
+&lt;p&gt;＞Query2&lt;/p&gt;
+&lt;p&gt;－CGTAAACGTT－A&lt;/p&gt;
+&lt;p&gt;＞Query3&lt;/p&gt;
+&lt;p&gt;－－GTAA－CG&lt;/p&gt;
+&lt;p&gt;FASTA形式への変換を行った後，Collapseを行いハプロタイプ数を出し，進化系統樹を作りたいと考えています．&lt;/p&gt;
+&lt;p&gt;SAMをFASTAファイルに変換するソフト，もしくはSAMファイルを用いてCollapse→進化系統樹作成が行えるソフトをご存知でしたらご教授ください．&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">izumi</dc:creator><pubDate>Mon, 27 Jan 2014 14:54:32 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/708/sam%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AEfasta%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E5%A4%89%E6%8F%9B%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</guid><category>fasta</category><category>fastq</category><category>sam</category><category>ngs</category></item><item><title>Rでfastaファイルを読み込む際におすすめのパッケージはありますか？</title><link>http://qa.lifesciencedb.jp/questions/512/r%E3%81%A7fasta%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80%E9%9A%9B%E3%81%AB%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%81%AE%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B</link><description>&lt;p&gt;Rでfastaファイルを読み込む方法としてGeneRパッケージのreadFasta関数がありますが、
+BiostringsパッケージのreadFASTA関数、seqinrパッケージのread.fasta関数などもあり、
+どれを使えばよいのかわかりません。他にも読み込む方法があるかと思いますが、
+Rでfastaファイルを読み込む際におすすめのパッケージ・関数はありますでしょうか？&lt;/p&gt;
+&lt;p&gt;追記
+&lt;a href="http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html#read_fasta"&gt;http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html#read_fasta&lt;/a&gt;
+Biostringsパッケージにはread.DNAStringSet関数というものもあり、メモリ消費量が少ないとの記述がありました。
+やや脱線してしまいますが、メモリ消費量は読み込みの前後でgc()を実行すればよさそうです。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">wakuteka</dc:creator><pubDate>Sun, 10 Jul 2011 19:49:50 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/512/r%E3%81%A7fasta%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80%E9%9A%9B%E3%81%AB%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%81%AE%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B</guid><category>fasta</category><category>r</category></item><item><title>fasta2fastq</title><link>http://qa.lifesciencedb.jp/questions/472/fasta2fastq</link><description>&lt;p&gt;初めて質問します。
+solexaのreadをde novo assembleして出来たcontigをbwaもしくはbwa-swを用いてmappingしたいと考えています。
+bwaにinputするためには、contigの.fastaファイルを.fastqに変換する必要があると思いますが、そのような変換ツールを知っている方がおられたら教えていただけないでしょうか。調べたのですが調べ方が悪いのか見つかりませんでした。&lt;/p&gt;
+&lt;h1&gt;具体例&lt;/h1&gt;
+&lt;p&gt;【変換前（.fasta）】&lt;/p&gt;
+&lt;p&gt;＞SEQ_ID&lt;/p&gt;
+&lt;p&gt;GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT&lt;/p&gt;
+&lt;p&gt;【変換後（.fastq）】&lt;/p&gt;
+&lt;p&gt;＠SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT&lt;/p&gt;
+&lt;p&gt;＋&lt;/p&gt;
+&lt;p&gt;IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII&lt;/p&gt;
+&lt;p&gt;qualityはphred_score(Phred+33)=40(I)で固定で構いません。&lt;/p&gt;
+&lt;p&gt;ご存知の方がいたら、教えていただけると助かります。
+よろしくお願いします。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">yasugoyasu</dc:creator><pubDate>Sat, 04 Jun 2011 02:35:40 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/472/fasta2fastq</guid><category>fasta</category><category>fastq</category><category>ngs</category></item></channel></rss>

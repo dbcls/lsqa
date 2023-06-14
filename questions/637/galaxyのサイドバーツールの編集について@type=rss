@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: Galaxyのサイドバーツールの編集について</title><link>http://qa.lifesciencedb.jp/questions/637/galaxy%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%89%E3%83%90%E3%83%BC%E3%83%84%E3%83%BC%E3%83%AB%E3%81%AE%E7%B7%A8%E9%9B%86%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;表題の件で、詳しい方におうかがいしたいのですが、&lt;br&gt;
+自前のGalaxyサーバーのサイドバーにあるツールの項目が多くて、&lt;br&gt;
+特に必要としない項目は隠しておこうと思っています。&lt;br&gt;
+この場合は、どのファイルを編集すればよいでしょうか。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;ご存知のかた、いらっしゃいましたらどうぞよろしくお願い申し上げます。 &lt;br&gt;
+&lt;img alt="サイドバー" src="/upfiles/galaxy_hensyu.png"&gt;&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/637/galaxy%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%89%E3%83%90%E3%83%BC%E3%83%84%E3%83%BC%E3%83%AB%E3%81%AE%E7%B7%A8%E9%9B%86%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Wed, 24 Oct 2012 19:20:48 +0900</lastBuildDate><item><title>Answer by atsuko</title><link>http://qa.lifesciencedb.jp/questions/637/galaxy%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%89%E3%83%90%E3%83%BC%E3%83%84%E3%83%BC%E3%83%AB%E3%81%AE%E7%B7%A8%E9%9B%86%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/639</link><description>&lt;p&gt;tool_conf.xml というファイル内の当該行をコメントアウト(&amp;lt;!-- ～ --&amp;gt;)して再起動すれば隠せます．&lt;/p&gt;
+&lt;p&gt;例えば，セクションごと隠すときは
+&amp;lt;section name ="foo" id="foo"&amp;gt;～&amp;lt;/section&amp;gt; を &amp;lt;!-- section name="foo" id="foo"&amp;gt;～&amp;lt;/section --&amp;gt; にすればいいです．
+同様にツールごとコメントアウトすればツールごとに隠せます．&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">atsuko</dc:creator><pubDate>Wed, 24 Oct 2012 19:20:48 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/637/galaxy%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%89%E3%83%90%E3%83%BC%E3%83%84%E3%83%BC%E3%83%AB%E3%81%AE%E7%B7%A8%E9%9B%86%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/639</guid></item></channel></rss>

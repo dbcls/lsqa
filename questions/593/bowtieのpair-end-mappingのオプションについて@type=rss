@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: Bowtieのpair-end mappingのオプションについて</title><link>http://qa.lifesciencedb.jp/questions/593/bowtie%E3%81%AEpair-end-mapping%E3%81%AE%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</link><description>&lt;p&gt;NGSのdata解析の全くの初心者です。
+一本鎖DNA由来のライブラリーをpair-endで読んだ後のBowtieによるMapping時のoptionについて質問です。
+MeDIP-seqの要領で、Illumina Truseqのライブラリーから一本鎖を選択的に精製したライブラリーをPCRで増幅後pair-endのsequenceingを行いました。BowtieでMappingする際、精製したライブラリーのstrandの情報を維持した状態でmappingの結果を得るためには、一つ目（-1）を"Read1"、二つ目 （-2）を ”Read2のreverse complement”として、pair-endのoptionを"--ff"とすれば、Read1とRead2が同じstrandにmapされた結果が得られるのでしょうか？
+Galaxyでは、--ffはSOLID用のoptionとして扱われているような気がしますが、IlluminaのR1とR2rev-compを用いても結果は問題ないのでしょうか？
+ご存知の方で、アドバイス頂けましたら幸甚です。&lt;/p&gt;
+&lt;p&gt;よろしくお願い致します。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/593/bowtie%E3%81%AEpair-end-mapping%E3%81%AE%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" rel="self"></atom:link><language>ja</language><lastBuildDate>Sat, 21 Apr 2012 02:16:36 +0900</lastBuildDate><item><title>Answer by nob_fj</title><link>http://qa.lifesciencedb.jp/questions/593/bowtie%E3%81%AEpair-end-mapping%E3%81%AE%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/601</link><description>&lt;p&gt;適当な解答の罪滅ぼしに、自分でも同じことしてみました。結果、ffは機能しているように見えます。
+何か、別の原因があるのではないでしょうか？&lt;/p&gt;
+&lt;p&gt;以下の処理で実行しているのは、この場合はRNA-Seqの公開ペアデータを使用していますが、
+本質的にはtouran様のデータと変わらないように思います。&lt;/p&gt;
+&lt;p&gt;やったことは、以下の3データセットそれぞれに対し&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;"リード1そのまま"-"リード2そのまま"のペア&lt;/li&gt;
+&lt;li&gt;"リード1そのまま"-"リード2の逆鎖"のペア&lt;/li&gt;
+&lt;li&gt;"リード1逆鎖"-"リード2そのまま"のペア&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;それぞれ、fr/rf/ffの各オプションを試しています。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 頭から10,000エントリー抜き出す。
+head -n 40000 Data/SRR315301_1.fastq &amp;gt; Dataext/SRR315301_1.ext.fastq
+head -n 40000 Data/SRR315301_2.fastq &amp;gt; Dataext/SRR315301_2.ext.fastq
+
+# リード1とリード2の逆鎖をそれぞれ変換して別のファイルにします。
+/toolDir/fastx_toolkit-0.0.13/bin/fastx_reverse_complement -i Dataext/SRR315301_2.ext.fastq -o Dataext/SRR315301_2.ext.revComp.fastq -Q 33
+/toolDir/fastx_toolkit-0.0.13/bin/fastx_reverse_complement -i Dataext/SRR315301_1.ext.fastq -o Dataext/SRR315301_1.ext.revComp.fastq -Q 33
+
+# ffの場合
+bowtie --ff /dataDir/hg19multi/bowtie-0.12.7/hg19.fa -1 Dataext/SRR315301_1.ext.fastq -2 Dataext/SRR315301_2.ext.fastq &amp;gt; ff.12.bowtie
+bowtie --ff /dataDir/hg19multi/bowtie-0.12.7/hg19.fa -1 Dataext/SRR315301_1.ext.fastq -2 Dataext/SRR315301_2.ext.revComp.fastq &amp;gt; ff.12rev.bowtie
+bowtie --ff /dataDir/hg19multi/bowtie-0.12.7/hg19.fa -1 Dataext/SRR315301_1.ext.revComp.fastq -2 Dataext/SRR315301_2.ext.fastq &amp;gt; ff.1rev2.bowtie
+
+# frの場合
+bowtie --fr /dataDir/hg19multi/bowtie-0.12.7/hg19.fa -1 Dataext/SRR315301_1.ext.fastq -2 Dataext/SRR315301_2.ext.fastq &amp;gt; fr.12.bowtie
+bowtie --fr /dataDir/hg19multi/bowtie-0.12.7/hg19.fa -1 Dataext/SRR315301_1.ext.fastq -2 Dataext/SRR315301_2.ext.revComp.fastq &amp;gt; fr.12rev.bowtie
+bowtie --fr /dataDir/hg19multi/bowtie-0.12.7/hg19.fa -1 Dataext/SRR315301_1.ext.revComp.fastq -2 Dataext/SRR315301_2.ext.fastq &amp;gt; fr.1rev2.bowtie
+
+# rfの場合
+bowtie --rf /dataDir/hg19multi/bowtie-0.12.7/hg19.fa -1 Dataext/SRR315301_1.ext.fastq -2 Dataext/SRR315301_2.ext.fastq &amp;gt; rf.12.bowtie
+bowtie --rf /dataDir/hg19multi/bowtie-0.12.7/hg19.fa -1 Dataext/SRR315301_1.ext.fastq -2 Dataext/SRR315301_2.ext.revComp.fastq &amp;gt; rf.12rev.bowtie
+bowtie --rf /dataDir/hg19multi/bowtie-0.12.7/hg19.fa -1 Dataext/SRR315301_1.ext.revComp.fastq -2 Dataext/SRR315301_2.ext.fastq &amp;gt; rf.1rev2.bowtie
+
+#結果のサマリ
+$ wc -l *.bowtie
+     6 ff.12.bowtie
+  1494 ff.12rev.bowtie
+    14 ff.1rev2.bowtie
+  1584 fr.12.bowtie
+     2 fr.12rev.bowtie
+     0 fr.1rev2.bowtie
+    24 rf.12.bowtie
+     2 rf.12rev.bowtie
+     4 rf.1rev2.bowtie
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;上記の結果、まともにヒットしたペアリードのある組み合わせは以下の2つのみです。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ff.12rev.bowtie&lt;/li&gt;
+&lt;li&gt;fr.12.bowtie&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;この内ff.12revと書いてある条件は、リード1はそのままに、リード2は逆鎖をとったデータに対して"ff"オプションを使用した際の
+結果であるはずなので、touranさんの当初の意図が達成されていることになるかと思います。
+以下、実際ヒットしたものを抜き出していますが、ffのペアは++で当っていることが分かるかと思います。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ head -n 6 ff.12rev.bowtie
+SRR315301.653 JOHNLENNON_0014:1:1:4723:1141 length=76/1 +       chr13   39587153        GGCCGTTGAGCTAGGATGAGGGAGAGATGTGGAGGGGGCAGCGGTAGATGTGGTGGCGATTAATGACCAGGGGGGG      GGDGGDDGGGDDGGG&amp;gt;AGCEECAC@###################################################      0       0:T&amp;gt;G,35:T&amp;gt;G,50:A&amp;gt;T,57:T&amp;gt;G,68:C&amp;gt;A,69:T&amp;gt;G,73:A&amp;gt;G,75:A&amp;gt;G
+SRR315301.653 JOHNLENNON_0014:1:1:4723:1141 length=76/2 +       chr13   39587320        TGGGAGTNGAGGAACCATGTGGTGGAAGGNNAATAGAGGAAAGAGGATTTGAACCATTTAAAGGAGTACTCAAGCT      &amp;gt;??A@?=#A?AIEEDFHHIIH?==?=59@##GGGGGIIDHIGGGBEDGEGGEEGGGI=GIFIDGIIEGD&amp;gt;DIGGGI      0       7:G&amp;gt;N,29:G&amp;gt;N,30:A&amp;gt;N
+SRR315301.803 JOHNLENNON_0014:1:1:1949:1141 length=76/1 +       chr5    75537629        GTTTTCTCCACATCAATCCAGCTTTGGAGACATTCTATTAGTGACATATGCCCCTTCCCCCAAAAACAACAATGAA      GGBGGHHHB@GGGEGHH&amp;lt;HBDAGGDEC&amp;gt;&amp;gt;A?=A??GDEBCC&amp;lt;C&amp;gt;@BEBCED:DCDEEEDAB@1:@;9325249823      0       41:C&amp;gt;T
+SRR315301.803 JOHNLENNON_0014:1:1:1949:1141 length=76/2 +       chr5    75537797        TTCAAACNGGACAGTCACCAGAAGTACACNNTTATCAAAAATGCACACACTTCACTTGGCATCTCCAGCACCTTCA      ###########B:&amp;gt;+B?CC??78353&amp;lt;79##?:B?B?AAEA&amp;lt;;?;B9@.A5AF;F@CCCFC=B;@BEFE&amp;lt;FIGIII      0       7:T&amp;gt;N,9:T&amp;gt;G,29:A&amp;gt;N,30:G&amp;gt;N
+SRR315301.817 JOHNLENNON_0014:1:1:4676:1152 length=76/1 +       chr6    7287801 TGCGAGATCCATGCTTTATGAACACATTATTCTCACACATCCGGGGATAGGTTTGATACACAAGATCCTTAAAGTC      HHHHBHHGHHHHHHHHHHHHHHH&amp;lt;HHHGHHHHHHHHHHHHHHGHHHHGHF@EHHHHHFGHHGDGDBDB&amp;lt;B===A=A      0       0:A&amp;gt;T
+SRR315301.817 JOHNLENNON_0014:1:1:4676:1152 length=76/2 +       chr6    7287964 AAACTTCATCCAAATATTTACATTTTAAAAAGACATTTAAAAAATAGGCTACTTATTAAGTGTGCTTGAACAAACC      EBBDB&amp;gt;IIDGIHHIFFEEFDIIEECIIHIHIIGIIHIIIIFIIIFEIHIIIIIEGGGHIIHIIIIHIIIIIIIIII      0
+$ head -n 6 fr.12.bowtie
+SRR315301.653 JOHNLENNON_0014:1:1:4723:1141 length=76/1 +       chr13   39587153        GGCCGTTGAGCTAGGATGAGGGAGAGATGTGGAGGGGGCAGCGGTAGATGTGGTGGCGATTAATGACCAGGGGGGG      GGDGGDDGGGDDGGG&amp;gt;AGCEECAC@###################################################      0       0:T&amp;gt;G,35:T&amp;gt;G,50:A&amp;gt;T,57:T&amp;gt;G,68:C&amp;gt;A,69:T&amp;gt;G,73:A&amp;gt;G,75:A&amp;gt;G
+SRR315301.653 JOHNLENNON_0014:1:1:4723:1141 length=76/2 -       chr13   39587320        TGGGAGTNGAGGAACCATGTGGTGGAAGGNNAATAGAGGAAAGAGGATTTGAACCATTTAAAGGAGTACTCAAGCT      &amp;gt;??A@?=#A?AIEEDFHHIIH?==?=59@##GGGGGIIDHIGGGBEDGEGGEEGGGI=GIFIDGIIEGD&amp;gt;DIGGGI      0       45:A&amp;gt;N,46:G&amp;gt;N,68:G&amp;gt;N
+SRR315301.719 JOHNLENNON_0014:1:1:11792:1141 length=76/2        +       chr14   32625445  CACAGGTAAATTTCACTAGGTTATATTTTGTGTAGTAAAGAAAAANNNTATTTGGTCAATGTTATCNNNNTTCATA    IDFGIIF&amp;gt;IGGGGGGEDDGDDGGGGGGGDGDGEFGEGFGGA&amp;gt;&amp;gt;==###:68888;BIEEIIDFEE###########      0       45:A&amp;gt;N,46:A&amp;gt;N,47:T&amp;gt;N,66:T&amp;gt;N,67:T&amp;gt;N,68:A&amp;gt;N,69:A&amp;gt;N
+SRR315301.719 JOHNLENNON_0014:1:1:11792:1141 length=76/1        -       chr14   32625609  TCCTAAAATAAATATTGTCTCTCCCAACTGTTAAGTTCTAGGTATTGTACTTCCAATTTTAACTTCAGAACCAAGA    CCGCFCADD@DA2=8=&amp;lt;BD8DBEBEE@GBDDHHBDHFG&amp;gt;FGAECCCDEDGGDHHHHBBGGGGG@DGDGGGGHGHHD      0
+SRR315301.803 JOHNLENNON_0014:1:1:1949:1141 length=76/1 +       chr5    75537629        GTTTTCTCCACATCAATCCAGCTTTGGAGACATTCTATTAGTGACATATGCCCCTTCCCCCAAAAACAACAATGAA      GGBGGHHHB@GGGEGHH&amp;lt;HBDAGGDEC&amp;gt;&amp;gt;A?=A??GDEBCC&amp;lt;C&amp;gt;@BEBCED:DCDEEEDAB@1:@;9325249823      0       41:C&amp;gt;T
+SRR315301.803 JOHNLENNON_0014:1:1:1949:1141 length=76/2 -       chr5    75537797        TTCAAACNGGACAGTCACCAGAAGTACACNNTTATCAAAAATGCACACACTTCACTTGGCATCTCCAGCACCTTCA      ###########B:&amp;gt;+B?CC??78353&amp;lt;79##?:B?B?AAEA&amp;lt;;?;B9@.A5AF;F@CCCFC=B;@BEFE&amp;lt;FIGIII      0       45:G&amp;gt;N,46:A&amp;gt;N,66:T&amp;gt;G,68:T&amp;gt;N
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可能性としては、ヒットの確認使っているビューワ等が、ffリードのペアに対応していないとか。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Sat, 21 Apr 2012 02:16:36 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/593/bowtie%E3%81%AEpair-end-mapping%E3%81%AE%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/601</guid></item><item><title>Answer by nob_fj</title><link>http://qa.lifesciencedb.jp/questions/593/bowtie%E3%81%AEpair-end-mapping%E3%81%AE%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/598</link><description>&lt;p&gt;ちなみに、今更、質問内容を何となく理解しましたが、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;入力ファイルはリード1がforward, リード2がreverse&lt;/li&gt;
+&lt;li&gt;シングルエンドでリード1をマップすると、forwardに貼りつく領域では、シングルエンドでリード2をマップするとその近傍の下流にreverseで貼りつく。&lt;/li&gt;
+&lt;li&gt;-ffオプションを使用すると、リード1がforward、リード2もforwardに貼りつくペアしか有効なマップとみなされないため、ほとんどマップ結果が無い。&lt;/li&gt;
+&lt;li&gt;-frオプションでは、リード1がforward、リード2がreverseに貼りつくペアが有効なマップとみなされるため、多数がマップされる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;という理解であっておりますでしょうか。
+試していないので、確証はありませんが、リード2だけ予め配列のcomplementを取った上で"-ff"オプションでマップすれば、上記の状況と異なり&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;入力ファイルはリード1がforward, リード2がforward&lt;/li&gt;
+&lt;li&gt;シングルエンドでリード1をマップすると、forwardに貼りつく領域では、シングルエンドでリード2をマップするとその近傍の下流にforwardで貼りつく。&lt;/li&gt;
+&lt;li&gt;-ffオプションを使用すると、リード1がforward、リード2もforwardに貼りつくペアが有効なマップとみなされるため、多数がマップされる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;となるのでないでしょうか。&lt;/p&gt;
+&lt;p&gt;逆鎖の取得は&lt;a href="http://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=FASTX-Toolkit"&gt;fastx tool kit&lt;/a&gt;などでもできますし、&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ /toolDir/fastx_toolkit-0.0.13/bin/fastx_reverse_complement -i file2.ext.fastq -o file2.ext.comp.fastq -Q 33
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Illuminaのfastqであれば、以下のようなperlのワンライナーでも(多分問題なく)変換できます。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ perl -lne 'if($. % 4==2){$_=reverse;tr/ATGC/TACG/;}elsif($. % 4 == 0){$_=reverse;};print;' file2.ext.fastq &amp;gt; file2.ext.comp.fastq_
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;いちおう、上記の結果は私が試した限りでは、結果は一致しました。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ diff file2.ext.comp.fastq file2.ext.comp.fastq_
+$
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;上記のいずれか、または他の適当な手段でリード2のファイルのみ相補鎖に変換した上で"-ff"でマップとかならうまくいくかもしれません。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;bowtie -ff index.fasta -1 file1.ext.fastq -s file2.ext.comp.fastq &amp;gt; out.ff.2comp.bowtie
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;※余談ですが、fastx tool kitを使う場合は、最近の配列は-Q 33が必要だと思いますが、そのオプションをつけないとエラーが出るときだけつけて下さい。tool kitのバージョンや、配列のバージョンによって、いらない場合もあるかもしれません。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Fri, 20 Apr 2012 22:51:11 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/593/bowtie%E3%81%AEpair-end-mapping%E3%81%AE%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/598</guid></item><item><title>Answer by nob_fj</title><link>http://qa.lifesciencedb.jp/questions/593/bowtie%E3%81%AEpair-end-mapping%E3%81%AE%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/594</link><description>&lt;p&gt;直接の解答ではないですが、ご参考までにですが、
+入力ファイルの先頭10000エントリーとかを取り出して、小さいサブデータセットを作り、
+考えうる選択肢でマップしてみて、どれがうまくいくか試すのは、パラメータの検討や、確認でよくやります。
+たまに、マニュアルの記載の方が間違っている場合もあるらしいですし。コマンドでやるなら以下のようなかんじでしょうか。
+比較はSAMからBAMにして、IGVやら、samtoolsのtviewでやるなり、いろいろ考えられます。
+Galaxyで同じことやるやり方は良く知りません。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;head -n 40000 file1.fastq &amp;gt; file1.ext.fastq
+head -n 40000 file2.fastq &amp;gt; file2.ext.fastq
+bowtie -fr index.fasta -1 file1.ext.fastq -2 file2.ext.fastq &amp;gt; out.fr.bowtie
+bowtie -rf index.fasta -1 file1.ext.fastq -s file2.ext.fastq &amp;gt; out.rf.bowtie
+bowtie -ff index.fasta -1 file1.ext.fastq -s file2.ext.fastq &amp;gt; out.ff.bowtie
+&lt;/code&gt;&lt;/pre&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Mon, 16 Apr 2012 14:22:38 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/593/bowtie%E3%81%AEpair-end-mapping%E3%81%AE%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/594</guid></item></channel></rss>

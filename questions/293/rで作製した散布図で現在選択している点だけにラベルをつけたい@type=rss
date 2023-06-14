@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: Rで作製した散布図で現在選択している点だけにラベルをつけたい</title><link>http://qa.lifesciencedb.jp/questions/293/r%E3%81%A7%E4%BD%9C%E8%A3%BD%E3%81%97%E3%81%9F%E6%95%A3%E5%B8%83%E5%9B%B3%E3%81%A7%E7%8F%BE%E5%9C%A8%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E7%82%B9%E3%81%A0%E3%81%91%E3%81%AB%E3%83%A9%E3%83%99%E3%83%AB%E3%82%92%E3%81%A4%E3%81%91%E3%81%9F%E3%81%84</link><description>&lt;p&gt;マイクロアレイのデータをRを用いて散布図にしました。
+行いたいことは2つあります。&lt;/p&gt;
+&lt;p&gt;①点を選択すると、その点の情報が出るようにしたい（遺伝子名など）
+②その選択した点にラベルをつけたい&lt;/p&gt;
+&lt;p&gt;上記のことはGeneSpringなど有料ソフトを使えばできると聞きましたが、
+Rを使わなければならない状況にあります。
+また、全ての点にラベルをつける方法はあることは把握しておりますが、
+選択した点のみにしたいのです。
+どうぞ宜しくお願い申し上げます。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/293/r%E3%81%A7%E4%BD%9C%E8%A3%BD%E3%81%97%E3%81%9F%E6%95%A3%E5%B8%83%E5%9B%B3%E3%81%A7%E7%8F%BE%E5%9C%A8%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E7%82%B9%E3%81%A0%E3%81%91%E3%81%AB%E3%83%A9%E3%83%99%E3%83%AB%E3%82%92%E3%81%A4%E3%81%91%E3%81%9F%E3%81%84" rel="self"></atom:link><language>ja</language><lastBuildDate>Thu, 27 Jan 2011 11:43:46 +0900</lastBuildDate><item><title>Answer by mn3</title><link>http://qa.lifesciencedb.jp/questions/293/r%E3%81%A7%E4%BD%9C%E8%A3%BD%E3%81%97%E3%81%9F%E6%95%A3%E5%B8%83%E5%9B%B3%E3%81%A7%E7%8F%BE%E5%9C%A8%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E7%82%B9%E3%81%A0%E3%81%91%E3%81%AB%E3%83%A9%E3%83%99%E3%83%AB%E3%82%92%E3%81%A4%E3%81%91%E3%81%9F%E3%81%84/295</link><description>&lt;p&gt;もう一つ、似たようなことをやる方法として、R のデータを &lt;a href="http://code.google.com/intl/ja-JP/apis/visualization/interactive_charts.html"&gt;Google Visualization API&lt;/a&gt; をつかって表示することができます。&lt;/p&gt;
+&lt;p&gt;くわしくは、&lt;a href="http://code.google.com/p/google-motion-charts-with-r/"&gt;google-motion-charts-with-r&lt;/a&gt; のデモをご覧下さい。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mn3</dc:creator><pubDate>Thu, 27 Jan 2011 11:43:46 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/293/r%E3%81%A7%E4%BD%9C%E8%A3%BD%E3%81%97%E3%81%9F%E6%95%A3%E5%B8%83%E5%9B%B3%E3%81%A7%E7%8F%BE%E5%9C%A8%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E7%82%B9%E3%81%A0%E3%81%91%E3%81%AB%E3%83%A9%E3%83%99%E3%83%AB%E3%82%92%E3%81%A4%E3%81%91%E3%81%9F%E3%81%84/295</guid></item><item><title>Answer by mn3</title><link>http://qa.lifesciencedb.jp/questions/293/r%E3%81%A7%E4%BD%9C%E8%A3%BD%E3%81%97%E3%81%9F%E6%95%A3%E5%B8%83%E5%9B%B3%E3%81%A7%E7%8F%BE%E5%9C%A8%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E7%82%B9%E3%81%A0%E3%81%91%E3%81%AB%E3%83%A9%E3%83%99%E3%83%AB%E3%82%92%E3%81%A4%E3%81%91%E3%81%9F%E3%81%84/294</link><description>&lt;p&gt;お望みの事を直接できる訳ではありませんが、identify {graphics} によって任意のラベル表示の方法を説明します。&lt;/p&gt;
+&lt;p&gt;コード例：
+&lt;/p&gt;&lt;pre&gt;x &amp;lt;- rnorm(1000)
+y &amp;lt;- rnorm(1000)
+plot(x,y)
+identify(x,y)
+&lt;/pre&gt;
+ここで、散布図の点をクリックするとラベルが表示されます。identifyのlabels引数に表示したい名前をあたえることができます。
+くわしくは、&lt;a href="http://stat.ethz.ch/R-manual/R-patched/library/graphics/html/identify.html"&gt;help(identify)&lt;/a&gt; をご覧ください。&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;参照：&lt;a href="http://www.statmethods.net/advgraphs/interactive.html"&gt;http://www.statmethods.net/advgraphs/interactive.html&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mn3</dc:creator><pubDate>Wed, 26 Jan 2011 23:38:32 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/293/r%E3%81%A7%E4%BD%9C%E8%A3%BD%E3%81%97%E3%81%9F%E6%95%A3%E5%B8%83%E5%9B%B3%E3%81%A7%E7%8F%BE%E5%9C%A8%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E7%82%B9%E3%81%A0%E3%81%91%E3%81%AB%E3%83%A9%E3%83%99%E3%83%AB%E3%82%92%E3%81%A4%E3%81%91%E3%81%9F%E3%81%84/294</guid></item></channel></rss>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: SRAへの間違いの訂正from第三者</title><link>http://qa.lifesciencedb.jp/questions/686/sra%E3%81%B8%E3%81%AE%E9%96%93%E9%81%95%E3%81%84%E3%81%AE%E8%A8%82%E6%AD%A3from%E7%AC%AC%E4%B8%89%E8%80%85</link><description>&lt;p&gt;SRAやDRAへの登録エントリー情報などで、明らかな間違いを見つけた場合、
+どこかに訂正依頼を連絡した方が良いのでしょうか。&lt;/p&gt;
+&lt;p&gt;直接NCBIやDDBJに聞け！と言われそうな気もしますが、
+同じように間違いを見つけて「まぁ、いいか」と
+してしまう場合も多そうな気がしたので、
+敢えてこちらで質問させていただきました。&lt;/p&gt;
+&lt;p&gt;※一応SRA handbookで"correction"を探してみましたが特に記載はありませんでした。&lt;/p&gt;
+&lt;p&gt;一例として、&lt;a href="http://cell-innovation.nig.ac.jp/wiki/tiki-view_forum_thread.php?comments_parentId=957&amp;amp;forumId=15"&gt;こちら&lt;/a&gt;にも詳細を記載していますが、&lt;/p&gt;
+&lt;p&gt;SRA012435　UCSD-CpgMIP-targeted-bisulfite-sequencing-paired&lt;/p&gt;
+&lt;p&gt;DRA Search
+&lt;a href="http://trace.ddbj.nig.ac.jp/DRASearch/study?acc=SRP002280"&gt;http://trace.ddbj.nig.ac.jp/DRASearch/study?acc=SRP002280&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;NCBI SRA
+http://www.ncbi.nlm.nih.gov/sra/SRX019000&lt;/p&gt;
+&lt;p&gt;鎖鋸
+&lt;a href="http://g86.dbcls.jp/kusarinoko/result#SRA012435"&gt;http://g86.dbcls.jp/kusarinoko/result#SRA012435&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;などにある、当該シーケンスを使った元論文のPubMed IDへのリンク&lt;/p&gt;
+&lt;p&gt;Population genomic sequencing of Coccidioides fungi reveals recent hybridization and transposon control.
+&lt;a href="http://www.ncbi.nlm.nih.gov/pubmed/20516208"&gt;http://www.ncbi.nlm.nih.gov/pubmed/20516208&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;が間違いで、&lt;/p&gt;
+&lt;p&gt;Allele-specific methylation is prevalent and is contributed by CpG-SNPs in the human genome.
+&lt;a href="http://www.ncbi.nlm.nih.gov/pubmed/20418490"&gt;http://www.ncbi.nlm.nih.gov/pubmed/20418490&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;が正解なように見えます。&lt;/p&gt;</description><atom:link href="http://qa.lifesciencedb.jp/questions/686/sra%E3%81%B8%E3%81%AE%E9%96%93%E9%81%95%E3%81%84%E3%81%AE%E8%A8%82%E6%AD%A3from%E7%AC%AC%E4%B8%89%E8%80%85" rel="self"></atom:link><language>ja</language><lastBuildDate>Wed, 31 Jul 2013 15:12:11 +0900</lastBuildDate><item><title>Comment by nob_fj on mtothen's 回答</title><link>http://qa.lifesciencedb.jp/questions/686/sra%E3%81%B8%E3%81%AE%E9%96%93%E9%81%95%E3%81%84%E3%81%AE%E8%A8%82%E6%AD%A3from%E7%AC%AC%E4%B8%89%E8%80%85#689</link><description>&lt;p&gt;NCBIにご連絡までいただいたようで、ありがとうございます。もう対応されており、驚いております!! 意外とすぐに対応されるようで、今後は見つけたらhelp deskまで問合せしたいと思います。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nob_fj</dc:creator><pubDate>Wed, 31 Jul 2013 15:12:11 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/686/sra%E3%81%B8%E3%81%AE%E9%96%93%E9%81%95%E3%81%84%E3%81%AE%E8%A8%82%E6%AD%A3from%E7%AC%AC%E4%B8%89%E8%80%85#689</guid></item><item><title>Answer by mtothen</title><link>http://qa.lifesciencedb.jp/questions/686/sra%E3%81%B8%E3%81%AE%E9%96%93%E9%81%95%E3%81%84%E3%81%AE%E8%A8%82%E6%AD%A3from%E7%AC%AC%E4%B8%89%E8%80%85/688</link><description>&lt;p&gt;こういうのがありましたら、どんどんHelp desk に聞いてみるのがよいと思います。
+(以下のリンクでは、左下に Write to the Help Desk とある。)
+&lt;a href="http://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP002280"&gt;http://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP002280&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;SRAの登録に関しては sra at ncbi.nlm.nih.gov、
+GEOの登録に関しては、geo　at    ncbi.nlm.nih.gov　です。
+論文が公開されたのに、データがロックされている場合など、
+メールを書くとすぐに対応してくれています。
+こちらからもメールを出しておきました。
+(30minほどで修正がはいりました。)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">mtothen</dc:creator><pubDate>Wed, 31 Jul 2013 00:40:55 +0900</pubDate><guid>http://qa.lifesciencedb.jp/questions/686/sra%E3%81%B8%E3%81%AE%E9%96%93%E9%81%95%E3%81%84%E3%81%AE%E8%A8%82%E6%AD%A3from%E7%AC%AC%E4%B8%89%E8%80%85/688</guid></item></channel></rss>
